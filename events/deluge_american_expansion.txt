@@ -1,0 +1,644 @@
+﻿
+# America is on the war path and news events inform everyone
+
+add_namespace = american_expansion
+
+# Quebec
+
+news_event = {
+	id = american_expansion.1
+	title = american_expansion1title
+	desc = american_expansion1desc
+	
+	picture = GFX_news_event_056
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion1opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion1optb
+		trigger = { original_tag = CAN }
+	}
+	option = {
+		name = american_expansion1optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = USA
+					original_tag = CAN
+				}
+			}
+		}
+	}
+}
+
+# Louisiana
+
+news_event = {
+	id = american_expansion.2
+	title = american_expansion2title
+	desc = american_expansion2desc
+	
+	picture = GFX_news_event_056
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion2opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion2optb
+		trigger = { original_tag = LOU }
+	}
+	option = {
+		name = american_expansion2optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = USA
+					original_tag = LOU
+				}
+			}
+		}
+	}
+}
+
+
+# Deseret
+
+news_event = {
+	id = american_expansion.3
+	title = american_expansion3title
+	desc = american_expansion3desc
+	
+	picture = GFX_news_event_056
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion3opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion3optb
+		trigger = { original_tag = DES }
+	}
+	option = {
+		name = american_expansion3optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = USA
+					original_tag = DES
+				}
+			}
+		}
+	}
+}
+
+
+# Algonquin and Alaska
+
+news_event = {
+	id = american_expansion.4
+	title = american_expansion4title
+	desc = american_expansion4desc
+	
+	picture = GFX_news_event_056
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion4opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion4optb
+		trigger = { original_tag = AQN }
+	}
+	option = {
+		name = american_expansion4optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = USA
+					original_tag = AQN
+				}
+			}
+		}
+	}
+}
+
+# America has created a republic and deposed the king (communism version)
+
+news_event = {
+	id = american_expansion.5
+	title = american_expansion5title
+	desc = american_expansion5desc
+	
+	picture = GFX_deluge_mussolini_parade
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion5opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion5optb
+		trigger = {
+			NOT = { original_tag = USA }
+			has_government = communism
+		}
+	}
+	option = {
+		name = american_expansion5optc
+		trigger = {
+			has_government = democratic
+		}
+	}
+	option = {
+		name = american_expansion5optc
+		trigger = {
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = american_expansion5optd
+		trigger = {
+			has_government = fascism
+		}
+	}
+}
+
+# America has created a republic and deposed the king (democratic version)
+
+news_event = {
+	id = american_expansion.6
+	title = american_expansion6title
+	desc = american_expansion6desc
+	
+	picture = GFX_deluge_mussolini_parade
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion6opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion6optb
+		trigger = {
+			has_government = communism
+		}
+	}
+	option = {
+		name = american_expansion6optc
+		trigger = {
+			NOT = { original_tag = USA }
+			has_government = democratic
+		}
+	}
+	option = {
+		name = american_expansion6optc
+		trigger = {
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = american_expansion6optd
+		trigger = {
+			has_government = fascism
+		}
+	}
+}
+
+# America has created a republic and deposed the king (fascism version)
+
+news_event = {
+	id = american_expansion.7
+	title = american_expansion7title
+	desc = american_expansion7desc
+	
+	picture = GFX_deluge_mussolini_parade
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion7opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion7optb
+		trigger = {
+			has_government = communism
+		}
+	}
+	option = {
+		name = american_expansion7optc
+		trigger = {
+			has_government = democratic
+		}
+	}
+	option = {
+		name = american_expansion7optc
+		trigger = {
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = american_expansion7optd
+		trigger = {
+			NOT = { original_tag = USA }
+			has_government = fascism
+		}
+	}
+}
+
+# America enforces Jim Crow Laws. Black radicals rise up in response.
+# Event makes the player wait a day before attacking so that divisions are forced into exile
+
+country_event = {
+	id = american_expansion.8
+	title = american_expansion8title
+	desc = american_expansion8desc
+	
+	picture = GFX_report_event_swedish_soldier
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		NOT = {
+			country_exists = CSA
+		}
+		has_idea = deluge_jim_crow_laws
+		is_subject = no
+		has_war = yes
+		owns_state = 363
+		owns_state = 364
+		owns_state = 365
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+		
+		modifier = {
+			factor = 0.2
+			any_enemy_country = {
+				is_major = yes
+			}
+		}
+		modifier = {
+			factor = 2
+			has_government = communism
+		}
+	}
+
+	immediate = {
+		hidden_effect = {
+			set_equipment_fraction = 0.8
+			
+			CSA = {
+				transfer_state = 363
+				transfer_state = 364
+				transfer_state = 365
+				
+				set_politics = {
+					ruling_party = communism
+					last_election = "1936.3.5"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+				
+				set_popularities = {
+					communism = 60
+					fascism = 20
+					democratic = 15
+					neutrality = 5
+				}
+				
+				set_cosmetic_tag = CSA_CONGAREE
+
+				add_ideas = {
+					war_economy
+					free_trade
+					limited_conscription
+					universal
+					welfare_state
+					printing
+					deluge_native_independence_idea
+				}
+				
+				load_oob = black_radical_reinforcements
+				load_focus_tree = radical_focus
+				
+				create_field_marshal = {
+					name = "Paul Robeson"
+					portrait_path = "gfx/leaders/deluge/paul_robeson.dds"
+					traits = {  }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				create_field_marshal = {
+					name = "Cassius Madison"
+					portrait_path = "gfx/leaders/SAF/Portrait_South_Africa_Army_Generic_2.dds"
+					traits = {  }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Scipio"
+					portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_2.dds"
+					traits = {  }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Agamemnon"
+					portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+					traits = {  }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				create_corps_commander = {
+					name = "Xerxes"
+					portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_1.dds"
+					traits = {  }
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = american_expansion8opt
+		
+		add_stability = -0.05
+		add_war_support = -0.05
+		country_event = { days = 1 id = american_expansion.9 }
+	}
+}
+
+# Black radicals present their demands: either end Jim Crow Laws or face civil war
+
+country_event = {
+	id = american_expansion.9
+	title = american_expansion9title
+	desc = american_expansion9desc
+	
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	is_triggered_only = yes
+
+	option = {
+		name = american_expansion9opta
+		
+		add_stability = 0.05
+		
+		hidden_effect = {
+			CSA = {
+				delete_unit_template_and_units = { division_template = "Revolutionary Infantry" }
+				
+				load_focus_tree = generic_focus
+				
+				drop_cosmetic_tag = yes
+				
+				add_ideas = {
+					civilian_economy
+					restricted
+					labour_camps
+					gold_standard
+				}
+				
+				remove_ideas = deluge_native_independence_idea
+				
+				set_politics = {
+					ruling_party = democratic
+					last_election = "1936.3.5"
+					election_frequency = 48
+					elections_allowed = yes
+				}
+				
+				set_popularities = {
+					democratic = 60
+					fascism = 20
+					communism = 15
+					neutrality = 5
+				}
+			}
+		}
+		
+		remove_ideas = deluge_jim_crow_laws
+		
+		annex_country = {
+			target = CSA
+			transfer_troops = no
+		}
+		
+		hidden_effect = {
+			news_event = { days = 1 id = american_expansion.10 }
+		}
+		
+		ai_chance = {
+			factor = 2
+		}
+	}
+	
+	option = {
+		name = american_expansion9optb
+		
+		add_war_support = 0.05
+		
+		declare_war_on = {
+			target = CSA
+			type = annex_everything
+		}
+		
+		hidden_effect = {
+			news_event = { days = 1 id = american_expansion.11 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = american_expansion9optc
+				
+		hidden_effect = {
+			declare_war_on = {
+				target = CSA
+				type = annex_everything
+			}
+		}
+		
+		CSA = { change_tag_from = USA }
+		
+		hidden_effect = {
+			news_event = { days = 1 id = american_expansion.11 }
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# News event for America accepting the demands
+
+news_event = {
+	id = american_expansion.10
+	title = american_expansion10title
+	desc = american_expansion10desc
+	
+	picture = GFX_deluge_protest
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion10opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion10optb
+		trigger = {
+			NOT = { original_tag = USA }
+			has_government = communism
+		}
+	}
+	option = {
+		name = american_expansion10optc
+		trigger = {
+			NOT = { original_tag = USA }
+			has_government = democratic
+		}
+	}
+	option = {
+		name = american_expansion10optc
+		trigger = {
+			NOT = { original_tag = USA }
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = american_expansion10optd
+		trigger = {
+			NOT = { original_tag = USA }
+			has_government = fascism
+		}
+	}
+}
+
+# News event for America refusing the demands
+
+news_event = {
+	id = american_expansion.11
+	title = american_expansion11title
+	desc = american_expansion11desc
+	
+	picture = GFX_news_event_chinese_soldiers_city_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = american_expansion11opta
+		trigger = {
+			original_tag = USA
+		}
+	}
+	option = {
+		name = american_expansion11optb
+		trigger = {
+			original_tag = CSA
+		}
+	}
+	option = {
+		name = american_expansion11optc
+		trigger = {
+			NOT = { original_tag = USA }
+			NOT = { original_tag = CSA }
+			has_government = communism
+		}
+	}
+	option = {
+		name = american_expansion11optd
+		trigger = {
+			NOT = { original_tag = USA }
+			NOT = { original_tag = CSA }
+			has_government = democratic
+		}
+	}
+	option = {
+		name = american_expansion11opte
+		trigger = {
+			NOT = { original_tag = USA }
+			NOT = { original_tag = CSA }
+			has_government = neutrality
+		}
+	}
+	option = {
+		name = american_expansion11optf
+		trigger = {
+			NOT = { original_tag = USA }
+			NOT = { original_tag = CSA }
+			has_government = fascism
+		}
+	}
+}
+

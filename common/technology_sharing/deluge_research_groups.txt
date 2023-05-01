@@ -1,0 +1,40 @@
+technology_sharing_group = {
+
+	id = deluge_league_of_nations_tech_group
+	name = deluge_league_of_nations_research
+	desc = deluge_league_of_nations_research_desc
+	
+	picture = GFX_league_programme_icon
+    
+	research_sharing_per_country_bonus = 0.01
+
+	categories = { electronics industry }
+}
+
+technology_sharing_group = {
+
+	id = deluge_comecon_tech_group
+	name = deluge_comecon_research
+	desc = deluge_comecon_research_desc
+	
+	picture = GFX_comecon_icon
+    
+	research_sharing_per_country_bonus = 0.1
+
+
+    available = {
+    	has_government = communism
+    }
+}
+
+technology_sharing_group = {
+
+	id = deluge_visegrad_tech_group
+	name = deluge_visegrad_research
+	desc = deluge_visegrad_research_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.1
+    available = {
+    	is_in_faction_with = POL
+    }
+}

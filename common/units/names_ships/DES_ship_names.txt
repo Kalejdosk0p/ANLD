@@ -1,0 +1,259 @@
+﻿
+DES_SS = {
+	name = NAME_THEME_SUBMARINES
+
+	for_countries = { DES }
+	
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	fallback_name = "S-%d"
+	
+	ordered = {
+		1 = {"S-%d"}
+		2 = {"S-%d"} 
+		3 = {"S-%d"} 
+		4 = {"S-%d"} 
+		5 = {"S-%d"} 
+		6 = {"S-%d"} 
+		7 = {"S-%d"} 
+		8 = {"S-%d"} 
+		9 = {"S-%d"} 
+		10 = {"S-%d"}
+		11 = {"S-%d"} 
+		12 = {"S-%d"}
+		13 = {"S-%d"}
+		14 = {"S-%d"}
+		15 = {"S-%d"}
+		16 = {"S-%d"}
+		17 = {"S-%d"}
+		18 = {"S-%d"}
+		19 = {"S-%d"}
+		20 = {"S-%d"}
+		21 = {"S-%d"}
+		22 = {"S-%d"}
+		23 = {"S-%d"}
+		24 = {"S-%d"}
+		25 = {"S-%d"}
+		26 = {"S-%d"}
+	}
+}
+
+DES_TRIBES = {
+	name = NAME_THEME_DESERET_TRIBES
+
+	for_countries = { DES }
+	
+	prefix = "RDS "
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+	
+	fallback_name = "Deseret Ship %d"
+	
+	ordered = {
+		1 = {"Tsuu Tina"}
+		2 = {"Wichita"}
+		3 = {"Kichai"}
+		4 = {"Rayados"}
+		5 = {"Taovayas"}
+		6 = {"Tawakoni"}
+		7 = {"Sihasapa"}
+		8 = {"Oohenunpa"}
+		9 = {"Nakoda"}
+		10 = {"Assiniboine"}
+		11 = {"Tonkawa"}
+		12 = {"Waco"}
+		13 = {"Sichangu"}
+		14 = {"Brule"}
+		15 = {"Oglala"}
+		16 = {"Itazipcho"}
+		17 = {"Hunkpapha"}
+		18 = {"Mnikhowozu"}
+		19 = {"Pitahawirata"}
+		20 = {"Skidi"}
+		21 = {"Ponca"}
+		22 = {"Quapaw"}
+		23 = {"Santee"}
+		24 = {"Yankton"}
+		25 = {"Kiowa"}
+		26 = {"Mandan"}
+		27 = {"Osage"}
+		28 = {"Otoe"}
+		29 = {"Pawnee"}
+		30 = {"Chaui"}
+		31 = {"Kitkehakhi"}
+		32 = {"Comanche"}
+		33 = {"Cree"}
+		34 = {"Crow"}
+		35 = {"Escanjaques"}
+		36 = {"Hidatsa"}
+		37 = {"Ioway"}
+		38 = {"Kaw"}
+		39 = {"Querecho"}
+		40 = {"Lipan"}
+		41 = {"Kainai"}
+		42 = {"Peigan"}
+		43 = {"Siksika"}
+		44 = {"Cheyenne"}
+		45 = {"Suhtai"}
+		46 = {"Sioux"}
+		47 = {"Blackfoot"}
+		48 = {"Arikara"}
+		49 = {"Arapaho"}
+	}
+}
+
+DES_RIVERS = {
+	name = NAME_THEME_RIVERS
+
+	for_countries = { DES }
+	
+	prefix = "RDS "
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser light_cruiser}
+	
+	fallback_name = "Deseret Ship %d"
+
+	ordered = {
+		1 = {"Umatilla"}
+		2 = {"Spillmacheen"}
+		3 = {"Beaver"}
+		4 = {"Kootenay"}
+		5 = {"Pend Oreille"}
+		6 = {"Snake"}
+		7 = {"Deschutes"}
+		8 = {"Kicking Horse"}
+		9 = {"Canoe"}
+		10 = {"Sanpoil"}
+		11 = {"Okanogan"}
+		12 = {"Entiat"}
+		13 = {"Wenatchee"}
+		14 = {"Yakima"}
+		15 = {"Cowlitz"}
+		16 = {"Nehalem"}
+		17 = {"Umpqua"}
+		18 = {"Siuslaw"}
+		19 = {"Owyhee"}
+		20 = {"Sprague"}
+		21 = {"Tualatin"}
+		22 = {"Yaquina"}
+		23 = {"Yamhill"}
+		24 = {"Luckiamute"}
+		25 = {"Santiam"}
+		26 = {"Nestucca"}
+		27 = {"Chewaucan"}
+		28 = {"Molalla"}
+		29 = {"Hebo"}
+	}
+}
+
+DES_CITIES = {
+	name = NAME_THEME_CITIES
+
+	for_countries = { DES }
+	
+	prefix = "RDS "
+	type = ship
+	ship_types = { capital_ship ship_hull_heavy battleship battle_cruiser }
+	
+	fallback_name = "Deseret Ship %d"
+	
+	ordered = {
+		1 = {"Phoenix"}
+		2 = {"Salt Lake City"} 
+		3 = {"Seattle"} 
+		4 = {"Tuba City"} 
+		5 = {"Washoe City"} 
+		6 = {"Portland"} 
+		7 = {"Great Falls"} 
+		8 = {"Boise"} 
+		9 = {"Rock Springs"} 
+		10 = {"Denver"} 
+		11 = {"Ogden"}
+		12 = {"La Grande"}
+		13 = {"Provo"}
+		14 = {"Magna"}
+		15 = {"Layton"}
+	}
+}
+
+DES_STATES = {
+	name = NAME_THEME_STATE
+
+	for_countries = { DES }
+	
+	prefix = "RDS "
+	type = ship
+	ship_types = { capital_ship ship_hull_heavy battleship battle_cruiser }
+	
+	fallback_name = "Deseret Ship %d"
+	
+	ordered = {
+		1 = {"Apache"}
+		2 = {"Navajo"} 
+		3 = {"Colorado"} 
+		4 = {"Wyoming"} 
+		5 = {"Montana"} 
+		6 = {"Utah"} 
+		7 = {"Vancouver"} 
+		8 = {"Spokane"} 
+		9 = {"Idaho"} 
+		10 = {"Klamath"} 
+		11 = {"Oregon"}
+		12 = {"Chinook"}
+		13 = {"Squamish"}
+	}
+}
+
+DES_STATESMEN = {
+	name = NAME_THEME_STATESMEN
+
+	for_countries = { DES }
+	
+	prefix = "RDS "
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	fallback_name = "Deseret Ship %d"
+	
+	ordered = {
+		1 = {"Wilford Woodruff"}
+		2 = {"Brigham Young"} 
+		3 = {"Joseph Smith"} 
+		4 = {"John Taylor"} 
+		5 = {"Lorenzo Snow"} 
+		6 = {"Heber Grant"} 
+		7 = {"David McKay"} 
+		8 = {"Orson Hyde"} 
+		9 = {"Franklin Richards"} 
+		10 = {"Francis Lyman"} 
+		11 = {"Anthon Lund"}
+		12 = {"Rudger Clawson"}
+		13 = {"George Richards"}
+	}
+}
+
+DES_ARCHANGELS = {
+	name = NAME_THEME_ARCHANGELS
+
+	for_countries = { DES }
+	
+	prefix = "RDS "
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	fallback_name = "Deseret Ship %d"
+	
+	ordered = {
+		1 = {"Archangel Gabriel"}
+		2 = {"Archangel Michael"} 
+		3 = {"Archangel Raphael"} 
+		4 = {"Archangel Uriel"} 
+		5 = {"Archangel Selaphiel"} 
+		6 = {"Archangel Jegudiel"} 
+		7 = {"Archangel Barachiel"} 
+		8 = {"Archangel Jeremiel"} 
+		9 = {"Archangel Apollyon"} 
+	}
+}

@@ -1,0 +1,45 @@
+﻿l_english:
+ #events:
+ deluge_greece.1.t:0 "Metaxism on the rise!"
+ deluge_greece.1.d:0 "After defeat in the Great War nationalist tendencies were growing in our country. Metaxist Movement is far-right movement created and led by Ioannis Metaxas. Now with support of population they are demanding power. What should we do?"
+ deluge_greece.1.a:0 "Create Metaxist government under control of the king!"
+ deluge_greece.1.b:0 "Create Metaxist government without control of the king!"
+ deluge_greece.1.c:0 "Kill them all!"
+ ##ideas:
+ GRE_metaxism_on_the_rise:0 "Metaxism on the Rise"
+ GRE_metaxism_on_the_rise_desc:0 "After defeat in the Great War nationalist tendencies were growing in our country. Metaxist Movement is far-right movement created and led by Ioannis Metaxas."
+ GRE_metaxism_embraced:0 "Metaxism Embraced"
+ GRE_metaxism_embraced_desc:0 "After defeat in the Great War nationalist tendencies were growing in our country. Metaxist Movement is far-right movement created and led by Ioannis Metaxas. They are now in the government!"
+ GRE_george_ii_idea:0 "George II"
+ ##GRE_george_ii_idea_desc:0 ""
+ #party names:
+ GRE_communism_party:0 "Jacobin Party"
+ GRE_communism_party_long:0 "Greek Jacobin Party"
+ GRE_neutrality_party:0 "Glücksburg Loyalists"
+ GRE_neutrality_party_long:0 "House Glücksburg Loyalists"
+ GRE_democratic_party:0 "People's Party"
+ GRE_democratic_party_long:0 "Greek People's Party"
+ GRE_fascism_party:0 "Metaxists"
+ GRE_fascism_party_long:0 "Metaxist Movement"
+ ##decisions' categories
+ form_greater_greece_category:0 "Form Greater Hellas"
+ form_greater_greece_category_desc:0 "We lost many territories after the Great War. We need to take them back and form country that is greater than it ever was!"
+ GRE_provinces_needed:0 "Provinces needed to form Greater Hellas!"
+ GRE_provinces_cored:0 "All core provinces after forming Greater Hellas!"
+ ##decisions
+ form_greater_greece:0 "Form Greater Hellas"
+ form_greater_greece_desc:0 "We lost many territories after the Great War. We need to take them back and form Hellas that is greater than it ever was!"
+ ##cosmetic tags:
+ GRE_GREATER_GREECE_fascism:0 "Hellenic Empire"
+ GRE_GREATER_GREECE_fascism_ADJ:0 "Hellenic"
+ GRE_GREATER_GREECE_fascism_DEF:0 "the Hellenic Empire"
+ GRE_GREATER_GREECE_neutrality:0 "Hellenic Kingdom"
+ GRE_GREATER_GREECE_neutrality_ADJ:0 "Hellenic"
+ GRE_GREATER_GREECE_neutrality_DEF:0 "the Hellenic Kingdom"
+ GRE_GREATER_GREECE_democratic:0 "Federative Hellenic Republic"
+ GRE_GREATER_GREECE_democratic_ADJ:0 "Hellenic"
+ GRE_GREATER_GREECE_democratic_DEF:0 "the Federative Hellenic Republic"
+ GRE_GREATER_GREECE_communism:0 "United Hellenic Communes"
+ GRE_GREATER_GREECE_communism_ADJ:0 "Hellenic"
+ GRE_GREATER_GREECE_communism_DEF:0 "the United Hellenic Communes"
+ 

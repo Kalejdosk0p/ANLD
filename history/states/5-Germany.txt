@@ -1,0 +1,43 @@
+
+state={
+	id=5
+	name="STATE_5"
+	resources={
+		oil=1.000
+		steel=2.000
+	}
+
+	history={
+		owner = POL
+		controller = POL
+		victory_points = {
+			6332 20 
+		}
+		victory_points = {
+			6375 1 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 6
+			anti_air_building = 1
+			6332 = {
+				naval_base = 5
+
+			}
+			air_base = 6
+
+		}
+		add_core_of = POL
+
+	}
+
+	provinces={
+		266 395 3351 6332 6347 6375 6402 9346 9372 9398 11245 11265 
+	}
+	manpower=2878108
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

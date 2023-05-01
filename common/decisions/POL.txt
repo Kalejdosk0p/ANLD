@@ -1,0 +1,8545 @@
+expand_ozn_category = {
+	create_zmp = {
+		icon = GFX_decision_generic_military
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 35
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_to_variable = { POL_ozn_conscription = 0.03 }
+			add_to_variable = { POL_ozn_fascism_drift = 0.05 }
+			custom_effect_tooltip = POL_custom_effect_tooltip_11
+		}
+	}
+	teach_about_etatism = {
+		icon = GFX_decision_generic_political_discourse
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 50
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+			political_power_gain = -0.1
+		}
+		cost = 30
+		remove_effect =  {
+			add_to_variable = { POL_ozn_consumer_goods_factor = -0.05}
+			add_to_variable = { POL_ozn_industrial_capacity_factory = 0.05 }
+			custom_effect_tooltip = POL_custom_effect_tooltip_12
+		}
+	}
+	anti_jewish_propaganda = {
+		icon = GFX_decision_oppression
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+			has_completed_focus = POL_purge_undersirables
+		}
+		fire_only_once = yes
+		visible = {}
+		cost = 35
+		days_remove = 45
+		modifier = {
+			civilian_factory_use = 2
+			political_power_gain = -0.1
+		}
+		remove_effect =  {
+			add_to_variable = { POL_ozn_stability_factor = 0.1}
+			add_to_variable = { POL_ozn_political_power_gain = 0.1 }
+			subtract_from_variable = { POL_ozn_conscription = 0.01 }
+			custom_effect_tooltip = POL_custom_effect_tooltip_15
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	create_opw = {
+		icon = GFX_decision_onmap_recruit_operative
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				has_intelligence_agency = yes
+			}
+		}
+		fire_only_once = yes
+		visible = {}
+		cost = 40
+		days_remove = 30
+		modifier = {
+			civilian_factory_use = 5
+		}
+		remove_effect =  {
+			add_to_variable = { POL_ozn_resistance_damage_to_garrison = -0.2}
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				hidden_effect = {
+					set_variable = { POL_ozn_operative_slot = 1 }
+					upgrade_intelligence_agency = upgrade_decryption_boost_2
+				}
+				custom_effect_tooltip = POL_custom_effect_tooltip_13
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "La Resistance"
+					}
+				}
+				custom_effect_tooltip = POL_custom_effect_tooltip_25
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+	advertise_ozn = {
+		icon = GFX_decision_generic_speech
+		available = {
+			num_of_civilian_factories_available_for_projects > 2
+		}
+		fire_only_once = yes
+		visible = {}
+		cost = 30
+		days_remove = 50
+		modifier = {
+			civilian_factory_use = 2
+		}
+		remove_effect =  {
+			add_to_variable = { POL_ozn_war_support_factor = 0.1}
+			add_to_variable = { POL_ozn_conscription = 0.015 }
+			custom_effect_tooltip = POL_custom_effect_tooltip_14
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
+}
+integration_category = {
+	integrate_lit = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			#POL = {
+			#	has_completed_focus = POL_keep_friends_from_above_baltic
+			#}
+			has_manpower > 2000
+			has_equipment = { infantry_equipment > 1999 }
+			owns_state = 188
+			controls_state = 188
+			owns_state = 814
+			controls_state = 814
+			owns_state = 11
+			controls_state = 11
+			owns_state = 815
+			controls_state = 815
+			owns_state = 189
+			controls_state = 189
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				NOT = {
+					POL = {
+						has_completed_focus = POL_torch_for_all_slavs
+					}
+				}
+				OR = {
+					188 = { NOT = { is_core_of = POL } } 
+					814 = { NOT = { is_core_of = POL } } 
+					11 = { NOT = { is_core_of = POL } } 
+					815 = { NOT = { is_core_of = POL } } 
+					189 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			188 = { add_core_of = POL } 
+			814 = { add_core_of = POL } 
+			11 = { add_core_of = POL } 
+			815 = { add_core_of = POL } 
+			189 = { add_core_of = POL }  
+			#set_province_name = { id = 9499 name = "Kłajpeda" }#doesnt work for some reason, says that id is invalid or no city there despite it exists
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_lat = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			#POL = {
+			#	has_completed_focus = POL_keep_friends_from_above_baltic
+			#}
+			has_manpower > 2000
+			has_equipment = { infantry_equipment > 1999 }
+			owns_state = 12
+			controls_state = 12
+			owns_state = 810
+			controls_state = 810
+			owns_state = 808
+			controls_state = 808
+			owns_state = 809
+			controls_state = 809
+			owns_state = 190
+			controls_state = 190
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				NOT = {
+					POL = {
+						has_completed_focus = POL_torch_for_all_slavs
+					}
+				}
+				OR = {
+					12 = { NOT = { is_core_of = POL } } 
+					810 = { NOT = { is_core_of = POL } } 
+					808 = { NOT = { is_core_of = POL } } 
+					809 = { NOT = { is_core_of = POL } } 
+					190 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			12 = { add_core_of = POL } 
+			810 = { add_core_of = POL } 
+			808 = { add_core_of = POL } 
+			809 = { add_core_of = POL } 
+			190 = { add_core_of = POL }  
+			188 = { add_core_of = POL } 
+			814 = { add_core_of = POL } 
+			11 = { add_core_of = POL } 
+			815 = { add_core_of = POL } 
+			189 = { add_core_of = POL }  
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_cze = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 2500
+			has_equipment = { infantry_equipment > 2499 }
+			owns_state = 74
+			controls_state = 74
+			owns_state = 75
+			controls_state = 75
+			owns_state = 72
+			controls_state = 72
+			owns_state = 9
+			controls_state = 9
+			owns_state = 69
+			controls_state = 69
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				74 = { NOT = { is_core_of = POL } } 
+				75 = { NOT = { is_core_of = POL } } 
+				72 = { NOT = { is_core_of = POL } } 
+				9 = { NOT = { is_core_of = POL } } 
+				69 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -2500
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2500
+			}
+			74 = { add_core_of = POL } 
+			75 = { add_core_of = POL } 
+			72 = { add_core_of = POL } 
+			9 = { add_core_of = POL } 
+			69 = { add_core_of = POL }  
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_south_ukr = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 3000
+			has_equipment = { infantry_equipment > 2999 }
+			owns_state = 834
+			controls_state = 834
+			owns_state = 197
+			controls_state = 197
+			owns_state = 192
+			controls_state = 192
+			owns_state = 203
+			controls_state = 203
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				834 = { NOT = { is_core_of = POL } } 
+				203 = { NOT = { is_core_of = POL } } 
+				197 = { NOT = { is_core_of = POL } } 
+				192 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -3000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -3000
+			}
+			834 = { add_core_of = POL } 
+			203 = { add_core_of = POL } 
+			197 = { add_core_of = POL } 
+			192 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_west_ukr = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 3000
+			has_equipment = { infantry_equipment > 2999 }
+			owns_state = 202
+			controls_state = 202
+			owns_state = 201
+			controls_state = 201
+			owns_state = 199
+			controls_state = 199
+			owns_state = 198
+			controls_state = 198
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				202 = { NOT = { is_core_of = POL } } 
+				201 = { NOT = { is_core_of = POL } } 
+				199 = { NOT = { is_core_of = POL } } 
+				198 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -3000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -3000
+			}
+			202 = { add_core_of = POL } 
+			201 = { add_core_of = POL } 
+			199 = { add_core_of = POL } 
+			198 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_east_ukr = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 3000
+			has_equipment = { infantry_equipment > 2999 }
+			owns_state = 193
+			controls_state = 193
+			owns_state = 225
+			controls_state = 225
+			owns_state = 259
+			controls_state = 259
+			owns_state = 221
+			controls_state = 221
+			owns_state = 226
+			controls_state = 226
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				193 = { NOT = { is_core_of = POL } } 
+				225 = { NOT = { is_core_of = POL } } 
+				259 = { NOT = { is_core_of = POL } } 
+				221 = { NOT = { is_core_of = POL } } 
+				226 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -3000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -3000
+			}
+			193 = { add_core_of = POL } 
+			225 = { add_core_of = POL } 
+			259 = { add_core_of = POL } 
+			221 = { add_core_of = POL } 
+			226 = { add_core_of = POL } 		
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_crim = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 3000
+			has_equipment = { infantry_equipment > 2999 }
+			owns_state = 137
+			controls_state = 137
+			owns_state = 196
+			controls_state = 196
+			owns_state = 200
+			controls_state = 200
+			owns_state = 227
+			controls_state = 227
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				NOT = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					137 = { NOT = { is_core_of = POL } } 
+					196 = { NOT = { is_core_of = POL } } 
+					200 = { NOT = { is_core_of = POL } } 
+					227 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -3000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -3000
+			}
+			137 = { add_core_of = POL } 
+			196 = { add_core_of = POL } 
+			200 = { add_core_of = POL } 
+			227 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_pom = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 2000
+			has_equipment = { infantry_equipment > 1999 }
+			owns_state = 807
+			controls_state = 807
+			owns_state = 85
+			controls_state = 85
+			owns_state = 63
+			controls_state = 63
+			owns_state = 62
+			controls_state = 62
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				62 = { NOT = { is_core_of = POL } } 
+				63 = { NOT = { is_core_of = POL } } 
+				807 = { NOT = { is_core_of = POL } } 
+				85 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			62 = { add_core_of = POL } 
+			63 = { add_core_of = POL } 
+			807 = { add_core_of = POL } 
+			85 = { add_core_of = POL }		
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_east_ger = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 3000
+			has_equipment = { infantry_equipment > 2999 }
+			owns_state = 68
+			controls_state = 68
+			owns_state = 65
+			controls_state = 65
+			owns_state = 64
+			controls_state = 64
+			owns_state = 61
+			controls_state = 61
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				68 = { NOT = { is_core_of = POL } } 
+				65 = { NOT = { is_core_of = POL } } 
+				64 = { NOT = { is_core_of = POL } } 
+				61 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -3000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -3000
+			}
+			68 = { add_core_of = POL } 
+			65 = { add_core_of = POL } 
+			64 = { add_core_of = POL } 
+			61 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_south_west_blr = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 2000
+			has_equipment = { infantry_equipment > 1999 }
+			owns_state = 96
+			controls_state = 96
+			owns_state = 95
+			controls_state = 95
+			owns_state = 204
+			controls_state = 204
+			owns_state = 194
+			controls_state = 194
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				96 = { NOT = { is_core_of = POL } } 
+				95 = { NOT = { is_core_of = POL } } 
+				204 = { NOT = { is_core_of = POL } } 
+				194 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			96 = { add_core_of = POL } 
+			95 = { add_core_of = POL } 
+			204 = { add_core_of = POL } 
+			194 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_north_east_blr = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 2000
+			has_equipment = { infantry_equipment > 1999 }
+			owns_state = 241
+			controls_state = 241
+			owns_state = 764
+			controls_state = 764
+			owns_state = 207
+			controls_state = 207
+			owns_state = 206
+			controls_state = 206
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				241 = { NOT = { is_core_of = POL } } 
+				764 = { NOT = { is_core_of = POL } } 
+				207 = { NOT = { is_core_of = POL } } 
+				206 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			241 = { add_core_of = POL } 
+			764 = { add_core_of = POL } 
+			207 = { add_core_of = POL } 
+			206 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_mol = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 2000
+			has_equipment = { infantry_equipment > 1999 }
+			owns_state = 79
+			controls_state = 79
+			owns_state = 78
+			controls_state = 78
+			owns_state = 80
+			controls_state = 80
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				79 = { NOT = { is_core_of = POL } } 
+				78 = { NOT = { is_core_of = POL } } 
+				80 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			80 = { add_core_of = POL } 
+			79 = { add_core_of = POL } 
+			78 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_slovenia_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 102
+			controls_state = 102
+			owns_state = 736
+			controls_state = 736
+			owns_state = 853
+			controls_state = 853
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				102 = { NOT = { is_core_of = POL } } 
+				736 = { NOT = { is_core_of = POL } } 
+				853 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			102 = { add_core_of = POL } 
+			736 = { add_core_of = POL } 
+			853 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_west_ger_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 58
+			controls_state = 58
+			owns_state = 59
+			controls_state = 59
+			owns_state = 60
+			controls_state = 60
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				60 = { NOT = { is_core_of = POL } } 
+				59 = { NOT = { is_core_of = POL } } 
+				58 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			60 = { add_core_of = POL } 
+			59 = { add_core_of = POL } 
+			58 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_bav_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 54
+			controls_state = 54
+			owns_state = 53
+			controls_state = 53
+			owns_state = 52
+			controls_state = 52
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				54 = { NOT = { is_core_of = POL } } 
+				53 = { NOT = { is_core_of = POL } } 
+				52 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			54 = { add_core_of = POL } 
+			53 = { add_core_of = POL } 
+			52 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_aus_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 4
+			controls_state = 4
+			owns_state = 152
+			controls_state = 152
+			owns_state = 153
+			controls_state = 153
+			owns_state = 848
+			controls_state = 848
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				152 = { NOT = { is_core_of = POL } } 
+				153 = { NOT = { is_core_of = POL } } 
+				4 = { NOT = { is_core_of = POL } } 
+				849 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			4 = { add_core_of = POL } 
+			152 = { add_core_of = POL } 
+			153 = { add_core_of = POL } 
+			848 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_north_ita_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 160
+			controls_state = 160
+			owns_state = 159
+			controls_state = 159
+			owns_state = 39
+			controls_state = 39
+			owns_state = 850
+			controls_state = 850
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				39 = { NOT = { is_core_of = POL } } 
+				159 = { NOT = { is_core_of = POL } } 
+				160 = { NOT = { is_core_of = POL } } 
+				850 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			160 = { add_core_of = POL } 
+			159 = { add_core_of = POL } 
+			39 = { add_core_of = POL } 
+			850 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_cro_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 109
+			controls_state = 109
+			owns_state = 103
+			controls_state = 103
+			owns_state = 104
+			controls_state = 104
+			owns_state = 852
+			controls_state = 852
+			owns_state = 151
+			controls_state = 151
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				103 = { NOT = { is_core_of = POL } } 
+				109 = { NOT = { is_core_of = POL } } 
+				104 = { NOT = { is_core_of = POL } } 
+				852 = { NOT = { is_core_of = POL } } 
+				151 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			109 = { add_core_of = POL } 
+			104 = { add_core_of = POL } 
+			103 = { add_core_of = POL } 
+			852 = { add_core_of = POL } 
+			151 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_ser_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 45
+			controls_state = 45
+			owns_state = 107
+			controls_state = 107
+			owns_state = 108
+			controls_state = 108
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				108 = { NOT = { is_core_of = POL } } 
+				107 = { NOT = { is_core_of = POL } } 
+				45 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			45 = { add_core_of = POL } 
+			107 = { add_core_of = POL } 
+			108 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_north_alb_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 801
+			controls_state = 801
+			owns_state = 105
+			controls_state = 105
+			owns_state = 44
+			controls_state = 44
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				44 = { NOT = { is_core_of = POL } } 
+				105 = { NOT = { is_core_of = POL } } 
+				801 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			801 = { add_core_of = POL } 
+			105 = { add_core_of = POL } 
+			44 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_bul_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 106
+			controls_state = 106
+			owns_state = 48
+			controls_state = 48
+			owns_state = 212
+			controls_state = 212
+			owns_state = 211
+			controls_state = 211
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				212 = { NOT = { is_core_of = POL } } 
+				211 = { NOT = { is_core_of = POL } } 
+				48 = { NOT = { is_core_of = POL } } 
+				106 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			106 = { add_core_of = POL } 
+			48 = { add_core_of = POL } 
+			211 = { add_core_of = POL } 
+			212 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_wal_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 77
+			controls_state = 77
+			owns_state = 46
+			controls_state = 46
+			owns_state = 81
+			controls_state = 81
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				81 = { NOT = { is_core_of = POL } } 
+				46 = { NOT = { is_core_of = POL } } 
+				77 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			77 = { add_core_of = POL } 
+			46 = { add_core_of = POL } 
+			81 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_mol_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 78
+			controls_state = 78
+			owns_state = 79
+			controls_state = 79
+			owns_state = 80
+			controls_state = 80
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				78 = { NOT = { is_core_of = POL } } 
+				79 = { NOT = { is_core_of = POL } } 
+				80 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			78 = { add_core_of = POL } 
+			79 = { add_core_of = POL } 
+			80 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_hun_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 155
+			controls_state = 155
+			owns_state = 43
+			controls_state = 43
+			owns_state = 154
+			controls_state = 154
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				155 = { NOT = { is_core_of = POL } } 
+				43 = { NOT = { is_core_of = POL } } 
+				154 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			155 = { add_core_of = POL } 
+			43 = { add_core_of = POL } 
+			154 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_trans_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 76
+			controls_state = 76
+			owns_state = 84
+			controls_state = 84
+			owns_state = 83
+			controls_state = 83
+			owns_state = 82
+			controls_state = 82
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				76 = { NOT = { is_core_of = POL } } 
+				84 = { NOT = { is_core_of = POL } } 
+				83 = { NOT = { is_core_of = POL } } 
+				82 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			76 = { add_core_of = POL } 
+			84 = { add_core_of = POL } 
+			83 = { add_core_of = POL } 
+			82 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_novo_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 195
+			controls_state = 195
+			owns_state = 244
+			controls_state = 244
+			owns_state = 263
+			controls_state = 263
+			owns_state = 210
+			controls_state = 210
+			owns_state = 209
+			controls_state = 209
+			owns_state = 208
+			controls_state = 208
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				195 = { NOT = { is_core_of = POL } } 
+				244 = { NOT = { is_core_of = POL } } 
+				263 = { NOT = { is_core_of = POL } } 
+				210 = { NOT = { is_core_of = POL } } 
+				209 = { NOT = { is_core_of = POL } } 
+				208 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			195 = { add_core_of = POL } 
+			263 = { add_core_of = POL } 
+			244 = { add_core_of = POL } 
+			210 = { add_core_of = POL } 
+			209 = { add_core_of = POL } 
+			208 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_south_rus_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 228
+			controls_state = 228
+			owns_state = 240
+			controls_state = 240
+			owns_state = 220
+			controls_state = 220
+			owns_state = 222
+			controls_state = 222
+			owns_state = 224
+			controls_state = 224
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				228 = { NOT = { is_core_of = POL } } 
+				240 = { NOT = { is_core_of = POL } } 
+				220 = { NOT = { is_core_of = POL } } 
+				222 = { NOT = { is_core_of = POL } } 
+				224 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			228 = { add_core_of = POL } 
+			240 = { add_core_of = POL } 
+			220 = { add_core_of = POL } 
+			222 = { add_core_of = POL } 
+			224 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_mid_rus_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 223
+			controls_state = 223
+			owns_state = 205
+			controls_state = 205
+			owns_state = 243
+			controls_state = 243
+			owns_state = 242
+			controls_state = 242
+			owns_state = 246
+			controls_state = 246
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				223 = { NOT = { is_core_of = POL } } 
+				205 = { NOT = { is_core_of = POL } } 
+				243 = { NOT = { is_core_of = POL } } 
+				242 = { NOT = { is_core_of = POL } } 
+				246 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			223 = { add_core_of = POL } 
+			205 = { add_core_of = POL } 
+			243 = { add_core_of = POL } 
+			242 = { add_core_of = POL } 
+			246 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_est_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 191
+			controls_state = 191
+			owns_state = 813
+			controls_state = 813
+			owns_state = 13
+			controls_state = 13
+			owns_state = 812
+			controls_state = 812
+			owns_state = 811
+			controls_state = 811
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				191 = { NOT = { is_core_of = POL } } 
+				13 = { NOT = { is_core_of = POL } } 
+				813 = { NOT = { is_core_of = POL } } 
+				812 = { NOT = { is_core_of = POL } } 
+				811 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			811 = { add_core_of = POL } 
+			812 = { add_core_of = POL } 
+			813 = { add_core_of = POL } 
+			191 = { add_core_of = POL } 
+			13 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_north_gre_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 805
+			controls_state = 805
+			owns_state = 185
+			controls_state = 185
+			owns_state = 731
+			controls_state = 731
+			owns_state = 184
+			controls_state = 184
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				184 = { NOT = { is_core_of = POL } } 
+				731 = { NOT = { is_core_of = POL } } 
+				185 = { NOT = { is_core_of = POL } } 
+				805 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			805 = { add_core_of = POL } 
+			185 = { add_core_of = POL } 
+			731 = { add_core_of = POL } 
+			184 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_south_gre_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 47
+			controls_state = 47
+			owns_state = 186
+			controls_state = 186
+			owns_state = 182
+			controls_state = 182
+			owns_state = 187
+			controls_state = 187
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				187 = { NOT = { is_core_of = POL } } 
+				182 = { NOT = { is_core_of = POL } } 
+				186 = { NOT = { is_core_of = POL } } 
+				47 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			47 = { add_core_of = POL } 
+			186 = { add_core_of = POL } 
+			182 = { add_core_of = POL } 
+			187 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_east_tur_lech = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_country_flag = POL_created_lechia
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 341
+			controls_state = 341
+			owns_state = 340
+			controls_state = 340
+			owns_state = 339
+			controls_state = 339
+			owns_state = 347
+			controls_state = 347
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+			OR = {
+				347 = { NOT = { is_core_of = POL } } 
+				339 = { NOT = { is_core_of = POL } } 
+				340 = { NOT = { is_core_of = POL } } 
+				341 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			341 = { add_core_of = POL } 
+			340 = { add_core_of = POL } 
+			339 = { add_core_of = POL } 
+			347 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_fin_slav = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 111
+			controls_state = 111
+			owns_state = 149
+			controls_state = 149
+			owns_state = 150
+			controls_state = 150
+			owns_state = 146
+			controls_state = 146
+			owns_state = 148
+			controls_state = 148
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_torch_for_all_slavs
+			OR = {
+				148 = { NOT = { is_core_of = POL } } 
+				146 = { NOT = { is_core_of = POL } } 
+				150 = { NOT = { is_core_of = POL } } 
+				149 = { NOT = { is_core_of = POL } } 
+				111 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			111 = { add_core_of = POL } 
+			149 = { add_core_of = POL } 
+			150 = { add_core_of = POL } 
+			146 = { add_core_of = POL } 
+			148 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_bal_slav = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_completed_focus = POL_keep_friends_from_above_baltic
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 814
+			controls_state = 814
+			owns_state = 188
+			controls_state = 188
+			owns_state = 11
+			controls_state = 11
+			owns_state = 189
+			controls_state = 189
+			owns_state = 815
+			controls_state = 815
+			owns_state = 809
+			controls_state = 809
+			owns_state = 190
+			controls_state = 190
+			owns_state = 808
+			controls_state = 808
+			owns_state = 12
+			controls_state = 12
+			owns_state = 810
+			controls_state = 810
+			owns_state = 191
+			controls_state = 191
+			owns_state = 13
+			controls_state = 13
+			owns_state = 813
+			controls_state = 813
+			owns_state = 812
+			controls_state = 812
+			owns_state = 811
+			controls_state = 811
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			has_completed_focus = POL_torch_for_all_slavs
+			OR = {
+				814 = { NOT = { is_core_of = POL } } 
+				188 = { NOT = { is_core_of = POL } } 
+				11 = { NOT = { is_core_of = POL } } 
+				189 = { NOT = { is_core_of = POL } } 
+				815 = { NOT = { is_core_of = POL } } 
+				809 = { NOT = { is_core_of = POL } } 
+				190 = { NOT = { is_core_of = POL } } 
+				808 = { NOT = { is_core_of = POL } } 
+				12 = { NOT = { is_core_of = POL } } 
+				810 = { NOT = { is_core_of = POL } } 
+				191 = { NOT = { is_core_of = POL } } 
+				13 = { NOT = { is_core_of = POL } } 
+				813 = { NOT = { is_core_of = POL } } 
+				812 = { NOT = { is_core_of = POL } } 
+				811 = { NOT = { is_core_of = POL } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			814 = { add_core_of = POL } 
+			188 = { add_core_of = POL } 
+			11 = { add_core_of = POL } 
+			189 = { add_core_of = POL } 
+			815 = { add_core_of = POL } 
+			809 = { add_core_of = POL } 
+			190 = { add_core_of = POL } 
+			808 = { add_core_of = POL } 
+			12 = { add_core_of = POL } 
+			810 = { add_core_of = POL } 
+			191 = { add_core_of = POL } 
+			13 = { add_core_of = POL } 
+			813 = { add_core_of = POL } 
+			812 = { add_core_of = POL } 
+			811 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_slovakia_slavia = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			OR = {
+				has_global_flag = POL_formed_slavic_union
+				has_global_flag = POL_zapadoslavia_created
+			}
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 70
+			controls_state = 70
+			owns_state = 664
+			controls_state = 664
+			owns_state = 71
+			controls_state = 71
+			owns_state = 73
+			controls_state = 73
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				POL = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					73 = { NOT = { is_core_of = POL } } 
+					71 = { NOT = { is_core_of = POL } } 
+					664 = { NOT = { is_core_of = POL } } 
+					70 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			73 = { add_core_of = POL } 
+			71 = { add_core_of = POL } 
+			664 = { add_core_of = POL } 
+			70 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_hungary_slavia = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 155
+			controls_state = 155
+			owns_state = 43
+			controls_state = 43
+			owns_state = 154
+			controls_state = 154
+			owns_state = 83
+			controls_state = 83
+			owns_state = 76
+			controls_state = 76
+			owns_state = 84
+			controls_state = 84
+			owns_state = 82
+			controls_state = 82
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				POL = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					155 = { NOT = { is_core_of = POL } } 
+					43 = { NOT = { is_core_of = POL } } 
+					154 = { NOT = { is_core_of = POL } } 
+					83 = { NOT = { is_core_of = POL } } 
+					76 = { NOT = { is_core_of = POL } } 
+					84 = { NOT = { is_core_of = POL } } 
+					82 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			155 = { add_core_of = POL } 
+			43 = { add_core_of = POL } 
+			154 = { add_core_of = POL } 
+			83 = { add_core_of = POL } 
+			76 = { add_core_of = POL } 
+			84 = { add_core_of = POL } 
+			82 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_romania_slavia = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 80
+			controls_state = 80
+			owns_state = 79
+			controls_state = 79
+			owns_state = 78
+			controls_state = 78
+			owns_state = 46
+			controls_state = 46
+			owns_state = 81
+			controls_state = 81
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				POL = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					80 = { NOT = { is_core_of = POL } } 
+					79 = { NOT = { is_core_of = POL } } 
+					78 = { NOT = { is_core_of = POL } } 
+					46 = { NOT = { is_core_of = POL } } 
+					81 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			80 = { add_core_of = POL } 
+			79 = { add_core_of = POL } 
+			78 = { add_core_of = POL } 
+			46 = { add_core_of = POL } 
+			81 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_caucas_slavia = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_completed_focus = POL_incorporate_beauty_of_east
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 311
+			controls_state = 311
+			owns_state = 827
+			controls_state = 827
+			owns_state = 828
+			controls_state = 828
+			owns_state = 821
+			controls_state = 821
+			owns_state = 269
+			controls_state = 269
+			owns_state = 229
+			controls_state = 229
+			owns_state = 230
+			controls_state = 230
+			owns_state = 231
+			controls_state = 231
+			owns_state = 233
+			controls_state = 233
+			owns_state = 826
+			controls_state = 826
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				POL = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					311 = { NOT = { is_core_of = POL } } 
+					827 = { NOT = { is_core_of = POL } } 
+					828 = { NOT = { is_core_of = POL } } 
+					821 = { NOT = { is_core_of = POL } } 
+					269 = { NOT = { is_core_of = POL } } 
+					229 = { NOT = { is_core_of = POL } } 
+					230 = { NOT = { is_core_of = POL } } 
+					231 = { NOT = { is_core_of = POL } } 
+					233 = { NOT = { is_core_of = POL } } 
+					826 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			311 = { add_core_of = POL } 
+			827 = { add_core_of = POL } 
+			828 = { add_core_of = POL } 
+			821 = { add_core_of = POL } 
+			269 = { add_core_of = POL } 
+			229 = { add_core_of = POL } 
+			230 = { add_core_of = POL } 
+			231 = { add_core_of = POL } 
+			233 = { add_core_of = POL } 
+			826 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_south_balkans_slavia = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_completed_focus = POL_incorporate_beauty_of_east
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 341
+			controls_state = 341
+			owns_state = 184
+			controls_state = 184
+			owns_state = 731
+			controls_state = 731
+			owns_state = 44
+			controls_state = 44
+			owns_state = 805
+			controls_state = 805
+			owns_state = 185
+			controls_state = 185
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				POL = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					341 = { NOT = { is_core_of = POL } } 
+					184 = { NOT = { is_core_of = POL } } 
+					731 = { NOT = { is_core_of = POL } } 
+					44 = { NOT = { is_core_of = POL } } 
+					805 = { NOT = { is_core_of = POL } } 
+					185 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			341 = { add_core_of = POL } 
+			184 = { add_core_of = POL } 
+			731 = { add_core_of = POL } 
+			44 = { add_core_of = POL } 
+			805 = { add_core_of = POL } 
+			185 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_khanates_slavia = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_completed_focus = POL_incorporate_beauty_of_east
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 407
+			controls_state = 407
+			owns_state = 406
+			controls_state = 406
+			owns_state = 402
+			controls_state = 402
+			owns_state = 583
+			controls_state = 583
+			owns_state = 590
+			controls_state = 590
+			owns_state = 588
+			controls_state = 588
+			owns_state = 589
+			controls_state = 589
+			owns_state = 404
+			controls_state = 404
+			owns_state = 587
+			controls_state = 587
+			owns_state = 831
+			controls_state = 831
+			owns_state = 823
+			controls_state = 823
+			owns_state = 584
+			controls_state = 584
+			owns_state = 830
+			controls_state = 830
+			owns_state = 405
+			controls_state = 405
+			owns_state = 585
+			controls_state = 585
+			owns_state = 732
+			controls_state = 732
+			owns_state = 742
+			controls_state = 742
+			owns_state = 586
+			controls_state = 586
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				POL = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					407 = { NOT = { is_core_of = POL } } 
+					406 = { NOT = { is_core_of = POL } } 
+					402 = { NOT = { is_core_of = POL } } 
+					583 = { NOT = { is_core_of = POL } } 
+					590 = { NOT = { is_core_of = POL } } 
+					588 = { NOT = { is_core_of = POL } } 
+					589 = { NOT = { is_core_of = POL } } 
+					404 = { NOT = { is_core_of = POL } } 
+					587 = { NOT = { is_core_of = POL } } 
+					831 = { NOT = { is_core_of = POL } } 
+					823 = { NOT = { is_core_of = POL } } 
+					584 = { NOT = { is_core_of = POL } } 
+					830 = { NOT = { is_core_of = POL } } 
+					405 = { NOT = { is_core_of = POL } } 
+					585 = { NOT = { is_core_of = POL } } 
+					732 = { NOT = { is_core_of = POL } } 
+					742 = { NOT = { is_core_of = POL } } 
+					586 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			407 = { add_core_of = POL } 
+			406 = { add_core_of = POL } 
+			402 = { add_core_of = POL } 
+			583 = { add_core_of = POL } 
+			590 = { add_core_of = POL } 
+			588 = { add_core_of = POL } 
+			589 = { add_core_of = POL } 
+			404 = { add_core_of = POL } 
+			587 = { add_core_of = POL } 
+			831 = { add_core_of = POL } 
+			823 = { add_core_of = POL } 
+			584 = { add_core_of = POL } 
+			830 = { add_core_of = POL } 
+			405 = { add_core_of = POL } 
+			585 = { add_core_of = POL } 
+			732 = { add_core_of = POL } 
+			742 = { add_core_of = POL } 
+			586 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_mongols_slavia = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_completed_focus = POL_incorporate_beauty_of_east
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 329
+			controls_state = 329
+			owns_state = 818
+			controls_state = 818
+			owns_state = 820
+			controls_state = 820
+			owns_state = 330
+			controls_state = 330
+			owns_state = 817
+			controls_state = 817
+			owns_state = 819
+			controls_state = 819
+			owns_state = 618
+			controls_state = 618
+			owns_state = 617
+			controls_state = 617
+			owns_state = 287
+			controls_state = 287
+			owns_state = 619
+			controls_state = 619
+			owns_state = 759
+			controls_state = 759
+			owns_state = 760
+			controls_state = 760
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				POL = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					329 = { NOT = { is_core_of = POL } } 
+					818 = { NOT = { is_core_of = POL } } 
+					820 = { NOT = { is_core_of = POL } } 
+					330 = { NOT = { is_core_of = POL } } 
+					817 = { NOT = { is_core_of = POL } } 
+					819 = { NOT = { is_core_of = POL } } 
+					618 = { NOT = { is_core_of = POL } } 
+					617 = { NOT = { is_core_of = POL } } 
+					287 = { NOT = { is_core_of = POL } } 
+					619 = { NOT = { is_core_of = POL } } 
+					759 = { NOT = { is_core_of = POL } } 
+					760 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			329 = { add_core_of = POL } 
+			818 = { add_core_of = POL } 
+			820 = { add_core_of = POL } 
+			330 = { add_core_of = POL } 
+			817 = { add_core_of = POL } 
+			819 = { add_core_of = POL } 
+			618 = { add_core_of = POL } 
+			617 = { add_core_of = POL } 
+			287 = { add_core_of = POL } 
+			619 = { add_core_of = POL } 
+			759 = { add_core_of = POL } 
+			760 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	integrate_far_east_slavia = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_completed_focus = POL_incorporate_beauty_of_east
+			has_global_flag = POL_formed_slavic_union
+			has_manpower > 1000
+			has_equipment = { infantry_equipment > 999 }
+			owns_state = 561
+			controls_state = 561
+			owns_state = 657
+			controls_state = 657
+			owns_state = 560
+			controls_state = 560
+			owns_state = 409
+			controls_state = 409
+			owns_state = 408
+			controls_state = 408
+			owns_state = 537
+			controls_state = 537
+			owns_state = 555
+			controls_state = 555
+			owns_state = 612
+			controls_state = 612
+			owns_state = 715
+			controls_state = 715
+			owns_state = 328
+			controls_state = 328
+			owns_state = 717
+			controls_state = 717
+			owns_state = 714
+			controls_state = 714
+			owns_state = 761
+			controls_state = 761
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			AND = {
+				POL = {
+					has_completed_focus = POL_torch_for_all_slavs
+				}
+				OR = {
+					561 = { NOT = { is_core_of = POL } } 
+					657 = { NOT = { is_core_of = POL } } 
+					560 = { NOT = { is_core_of = POL } } 
+					409 = { NOT = { is_core_of = POL } } 
+					408 = { NOT = { is_core_of = POL } } 
+					537 = { NOT = { is_core_of = POL } } 
+					555 = { NOT = { is_core_of = POL } } 
+					612 = { NOT = { is_core_of = POL } } 
+					715 = { NOT = { is_core_of = POL } } 
+					328 = { NOT = { is_core_of = POL } } 
+					717 = { NOT = { is_core_of = POL } } 
+					714 = { NOT = { is_core_of = POL } } 
+					761 = { NOT = { is_core_of = POL } } 
+				}
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -1000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -1000
+			}
+			561 = { add_core_of = POL } 
+			657 = { add_core_of = POL } 
+			560 = { add_core_of = POL } 
+			409 = { add_core_of = POL } 
+			408 = { add_core_of = POL } 
+			537 = { add_core_of = POL } 
+			555 = { add_core_of = POL } 
+			612 = { add_core_of = POL } 
+			715 = { add_core_of = POL } 
+			328 = { add_core_of = POL } 
+			717 = { add_core_of = POL } 
+			714 = { add_core_of = POL } 
+			761 = { add_core_of = POL } 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+}
+seek_enemies_category = {
+	wojna_totalna = {
+		icon = GFX_decision_generic_prepare_civil_war
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					has_completed_focus = POL_mobilize_the_masses 
+					has_completed_focus = POL_allow_and_encourage_woman_in_military
+					has_completed_focus = POL_encourage_priests_in_military
+					has_completed_focus = POL_repair_polish_ideomatrix
+					has_completed_focus = POL_create_new_type_of_man
+				}
+			}
+			NOT = {POL = {has_idea = wojna_totalna_idea}}
+			surrender_progress > 0.65
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 5
+		complete_effect = {
+			POL = { add_ideas = wojna_totalna_idea }
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 100
+			}
+		}
+	}
+	send_ultimatum_to_austria = {
+		icon = GFX_decision_eng_trade_unions_support
+		visible = {has_completed_focus = POL_seek_enemies}
+		available = {
+			AUS = {owns_state = 74}
+			AUS = {owns_state = 75}
+			AUS = {owns_state = 72}
+			AUS = {owns_state = 9}
+			AUS = {owns_state = 69}
+			AUS = {owns_state = 664}
+			AUS = {owns_state = 70}
+			AUS = {owns_state = 71}
+			AUS = {owns_state = 73}
+			AUS = { NOT = { is_in_faction_with = POL } }
+		}
+		cost = 75
+		fire_only_once = yes
+		days_remove = 15
+		remove_effect = {
+			AUS = {country_event = { id = deluge_poland_foreign.30 hours = 10}}
+			set_global_flag = POL_invites_someone
+		}
+		ai_will_do = {
+			modifier = {
+				strength_ratio = { tag = AUS ratio > 2.0 }
+				factor = 10
+			}
+			modifier = {
+				strength_ratio = { tag = AUS ratio < 2.0 }
+				factor = 0.1
+			}
+		}
+	}
+	claim_cze = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					NOT = {owns_state = 74}
+					NOT = {owns_state = 75}
+					NOT = {owns_state = 72}
+					NOT = {owns_state = 9}
+					NOT = {owns_state = 69}
+				}
+			} 
+			OR = {
+				74 = { owner = { NOT = { is_in_faction_with = POL } } }
+				75 = { owner = { NOT = { is_in_faction_with = POL } } }
+				72 = { owner = { NOT = { is_in_faction_with = POL } } }
+				9 = { owner = { NOT = { is_in_faction_with = POL } } }
+				69 = { owner = { NOT = { is_in_faction_with = POL } } }
+			}
+			if = {
+				limit = {
+					AUS = {owns_state = 74}
+					AUS = {owns_state = 75}
+					AUS = {owns_state = 72}
+					AUS = {owns_state = 9}
+					AUS = {owns_state = 69}
+					AUS = {NOT = { is_in_faction_with = POL }}
+				}
+				has_global_flag = POL_sent_ultimatum_to_aus_and_refused
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { 
+				limit = { 
+					NOT = {
+						74 = { is_claimed_by = POL }
+						75 = { is_claimed_by = POL }
+						72 = { is_claimed_by = POL }
+						9 = { is_claimed_by = POL }
+						69 = { is_claimed_by = POL }
+					} 
+				}
+				add_state_claim = 74
+				add_state_claim = 75
+				add_state_claim = 72
+				add_state_claim = 9
+				add_state_claim = 69
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 74 
+					owns_state = 72
+					owns_state = 72
+					owns_state = 9
+					owns_state = 69
+				} }
+				every_country = {
+					limit = { 
+						OR = {
+							owns_state = 74 
+							owns_state = 72
+							owns_state = 72
+							owns_state = 9
+							owns_state = 69
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								74 75 72 9 69 
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	retake_mol = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					NOT = {owns_state = 80}
+					NOT = {owns_state = 79}
+					NOT = {owns_state = 78}
+				}
+			} 
+			OR = {
+				80 = { owner = { NOT = { is_in_faction_with = POL } } }
+				79 = { owner = { NOT = { is_in_faction_with = POL } } }
+				78 = { owner = { NOT = { is_in_faction_with = POL } } }
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { limit = { NOT = {
+				80 = { is_claimed_by = POL }
+				79 = { is_claimed_by = POL }
+				78 = { is_claimed_by = POL }
+				} }
+				add_state_claim = 78
+				add_state_claim = 79
+				add_state_claim = 80
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 78
+					owns_state = 79
+					owns_state = 80
+				} }
+				every_country = {
+					limit = { 
+						OR = {
+							owns_state = 80
+							owns_state = 79
+							owns_state = 78
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								80 79 78
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	retake_polabian_lands = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			has_global_flag = german_civil_war_ended
+			POL = { 
+				OR = {
+					NOT = {owns_state = 61}
+					NOT = {owns_state = 64}
+					NOT = {owns_state = 68}
+					NOT = {owns_state = 65}
+				}
+			} 
+			OR = {
+				61 = { owner = { NOT = { is_in_faction_with = POL } } }
+				64 = { owner = { NOT = { is_in_faction_with = POL } } }
+				68 = { owner = { NOT = { is_in_faction_with = POL } } }
+				65 = { owner = { NOT = { is_in_faction_with = POL } } }
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { limit = { NOT = {
+				61 = { is_claimed_by = POL }
+				68 = { is_claimed_by = POL }
+				65 = { is_claimed_by = POL }
+				64 = { is_claimed_by = POL }
+				} }
+				add_state_claim = 64
+				add_state_claim = 65
+				add_state_claim = 68
+				add_state_claim = 61
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 64
+					owns_state = 65
+					owns_state = 68
+					owns_state = 61
+				} }
+				random_country = {
+					limit = { 
+						owns_state = 64
+						owns_state = 65
+						owns_state = 68
+						owns_state = 61
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								64 65 68 61 
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	retake_crimea = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					NOT = {owns_state = 137}
+					NOT = {owns_state = 200}
+					NOT = {owns_state = 227}
+					NOT = {owns_state = 196}
+				}
+			} 
+			OR = {
+				137 = { owner = { NOT = { is_in_faction_with = POL } } }
+				196 = { owner = { NOT = { is_in_faction_with = POL } } }
+				200 = { owner = { NOT = { is_in_faction_with = POL } } }
+				227 = { owner = { NOT = { is_in_faction_with = POL } } }
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { limit = { NOT = {
+				227 = { is_claimed_by = POL }
+				137 = { is_claimed_by = POL }
+				196 = { is_claimed_by = POL }
+				200 = { is_claimed_by = POL }
+				} }
+				add_state_claim = 227
+				add_state_claim = 137
+				add_state_claim = 196
+				add_state_claim = 200
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 227
+					owns_state = 137
+					owns_state = 196
+					owns_state = 200
+				} }
+				every_country = {
+					limit = { 
+						OR = {
+							owns_state = 196
+							owns_state = 137
+							owns_state = 227
+							owns_state = 200
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								196 227 200 137
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	conquer_ukr = {
+		icon = GFX_decision_generic_operation 
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					NOT = {owns_state = 193}
+					NOT = {owns_state = 225}
+					NOT = {owns_state = 259}
+					NOT = {owns_state = 221}
+					NOT = {owns_state = 834}
+					NOT = {owns_state = 203}
+					NOT = {owns_state = 197}
+					NOT = {owns_state = 192}
+					NOT = {owns_state = 226}
+					NOT = {owns_state = 202}
+					NOT = {owns_state = 201}
+					NOT = {owns_state = 199}
+					NOT = {owns_state = 198}
+				}
+			} 
+			OR = {
+				193 = { owner = { NOT = { is_in_faction_with = POL } } }
+				225 = { owner = { NOT = { is_in_faction_with = POL } } }
+				259 = { owner = { NOT = { is_in_faction_with = POL } } }
+				221 = { owner = { NOT = { is_in_faction_with = POL } } }
+				834 = { owner = { NOT = { is_in_faction_with = POL } } }
+				203 = { owner = { NOT = { is_in_faction_with = POL } } }
+				197 = { owner = { NOT = { is_in_faction_with = POL } } }
+				192 = { owner = { NOT = { is_in_faction_with = POL } } }
+				226 = { owner = { NOT = { is_in_faction_with = POL } } }
+				202 = { owner = { NOT = { is_in_faction_with = POL } } }
+				201 = { owner = { NOT = { is_in_faction_with = POL } } }
+				199 = { owner = { NOT = { is_in_faction_with = POL } } }
+				198 = { owner = { NOT = { is_in_faction_with = POL } } }
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { limit = { NOT = {
+				193 = { is_claimed_by = POL }
+				225 = { is_claimed_by = POL }
+				259 = { is_claimed_by = POL }
+				221 = { is_claimed_by = POL }
+				834 = { is_claimed_by = POL }
+				203 = { is_claimed_by = POL }
+				197 = { is_claimed_by = POL }
+				192 = { is_claimed_by = POL }
+				226 = { is_claimed_by = POL }
+				202 = { is_claimed_by = POL }
+				201 = { is_claimed_by = POL }
+				199 = { is_claimed_by = POL }
+				198 = { is_claimed_by = POL }
+				} }
+				add_state_claim = 193
+				add_state_claim = 225
+				add_state_claim = 259
+				add_state_claim = 221
+				add_state_claim = 834
+				add_state_claim = 203
+				add_state_claim = 197
+				add_state_claim = 192
+				add_state_claim = 226
+				add_state_claim = 202
+				add_state_claim = 201
+				add_state_claim = 199
+				add_state_claim = 198
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 193
+					owns_state = 225
+					owns_state = 259
+					owns_state = 221
+					owns_state = 834
+					owns_state = 203
+					owns_state = 197
+					owns_state = 192
+					owns_state = 226
+					owns_state = 202
+					owns_state = 201
+					owns_state = 199
+					owns_state = 198
+				} }
+				every_country = {
+					limit = { 
+						OR = {
+							owns_state = 193
+							owns_state = 225
+							owns_state = 259
+							owns_state = 221
+							owns_state = 834
+							owns_state = 203
+							owns_state = 197
+							owns_state = 192
+							owns_state = 226
+							owns_state = 202
+							owns_state = 201
+							owns_state = 199
+							owns_state = 198
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								193 225 259 221 834 203 197 192 226 202 201 199 198
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	conquer_bal = {
+		icon = GFX_decision_generic_operation 
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					NOT = {owns_state = 12}
+					NOT = {owns_state = 810}
+					NOT = {owns_state = 808}
+					NOT = {owns_state = 809}
+					NOT = {owns_state = 190}
+					NOT = {owns_state = 189}
+					NOT = {owns_state = 815}
+					NOT = {owns_state = 11}
+					NOT = {owns_state = 188}
+					NOT = {owns_state = 814}
+				}
+			} 
+			OR = {
+				12 = { owner = { NOT = { is_in_faction_with = POL } } }
+				810 = { owner = { NOT = { is_in_faction_with = POL } } }
+				809 = { owner = { NOT = { is_in_faction_with = POL } } }
+				808 = { owner = { NOT = { is_in_faction_with = POL } } }
+				190 = { owner = { NOT = { is_in_faction_with = POL } } }
+				189 = { owner = { NOT = { is_in_faction_with = POL } } }
+				815 = { owner = { NOT = { is_in_faction_with = POL } } }
+				11 = { owner = { NOT = { is_in_faction_with = POL } } }
+				188 = { owner = { NOT = { is_in_faction_with = POL } } }
+				814 = { owner = { NOT = { is_in_faction_with = POL } } }
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { limit = { NOT = {
+				12 = { is_claimed_by = POL }
+				810 = { is_claimed_by = POL }
+				809 = { is_claimed_by = POL }
+				808 = { is_claimed_by = POL }
+				190 = { is_claimed_by = POL }
+				189 = { is_claimed_by = POL }
+				815 = { is_claimed_by = POL }
+				11 = { is_claimed_by = POL }
+				188 = { is_claimed_by = POL }
+				814 = { is_claimed_by = POL }
+				} }
+				add_state_claim = 12
+				add_state_claim = 810
+				add_state_claim = 809
+				add_state_claim = 808
+				add_state_claim = 190
+				add_state_claim = 189
+				add_state_claim = 815
+				add_state_claim = 11
+				add_state_claim = 188
+				add_state_claim = 814
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 12
+					owns_state = 810
+					owns_state = 809
+					owns_state = 808
+					owns_state = 190
+					owns_state = 189
+					owns_state = 815
+					owns_state = 11
+					owns_state = 188
+					owns_state = 814
+				} }
+				every_country = {
+					limit = { 
+						OR = {
+							owns_state = 12
+							owns_state = 810
+							owns_state = 809
+							owns_state = 808
+							owns_state = 190
+							owns_state = 189
+							owns_state = 815
+							owns_state = 11
+							owns_state = 188
+							owns_state = 814
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								193 225 259 221 834 203 197 192 226 202 201 199 198
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	conquer_blr = {
+		icon = GFX_decision_generic_operation 
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					NOT = {owns_state = 241}
+					NOT = {owns_state = 764}
+					NOT = {owns_state = 207}
+					NOT = {owns_state = 206}
+					NOT = {owns_state = 194}
+					NOT = {owns_state = 204}
+					NOT = {owns_state = 95}
+					NOT = {owns_state = 96}
+				}
+			} 
+			OR = {
+				241 = { owner = { NOT = { is_in_faction_with = POL } } }
+				764 = { owner = { NOT = { is_in_faction_with = POL } } }
+				207 = { owner = { NOT = { is_in_faction_with = POL } } }
+				206 = { owner = { NOT = { is_in_faction_with = POL } } }
+				194 = { owner = { NOT = { is_in_faction_with = POL } } }
+				204 = { owner = { NOT = { is_in_faction_with = POL } } }
+				95 = { owner = { NOT = { is_in_faction_with = POL } } }
+				96 = { owner = { NOT = { is_in_faction_with = POL } } }
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { limit = { NOT = {
+				241 = { is_claimed_by = POL }
+				764 = { is_claimed_by = POL }
+				207 = { is_claimed_by = POL }
+				206 = { is_claimed_by = POL }
+				194 = { is_claimed_by = POL }
+				204 = { is_claimed_by = POL }
+				195 = { is_claimed_by = POL }
+				196 = { is_claimed_by = POL }
+				} }
+				add_state_claim = 241
+				add_state_claim = 764
+				add_state_claim = 207
+				add_state_claim = 206
+				add_state_claim = 204
+				add_state_claim = 194
+				add_state_claim = 95
+				add_state_claim = 96
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 241
+					owns_state = 764
+					owns_state = 207
+					owns_state = 206
+					owns_state = 204
+					owns_state = 194
+					owns_state = 95
+					owns_state = 96
+				} }
+				every_country = {
+					limit = { 
+						OR = {
+							owns_state = 241
+							owns_state = 764
+							owns_state = 207
+							owns_state = 206
+							owns_state = 204
+							owns_state = 194
+							owns_state = 95
+							owns_state = 96
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								241 764 207 206 194 204 95 96
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	avenge_swedish_deluge = {
+		icon = GFX_decision_generic_operation 
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					country_exists = SWE
+					country_exists = SWD
+				}
+				OR = {
+					NOT = {is_in_faction_with = SWE}
+					NOT = {is_in_faction_with = SWD}
+				}
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { 
+				limit = { country_exists = SWE }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SWE
+				}
+			}
+			if = { 
+				limit = { country_exists = SWD }
+				create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SWD
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	russia_once_again = {
+		icon = GFX_decision_generic_operation 
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+					country_exists = SOV
+					NOT = {is_in_faction_with = SOV}
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { 
+				limit = { country_exists = SOV }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = SOV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	repetition_of_battle_of_vienna = {
+		icon = GFX_decision_generic_operation 
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+					country_exists = TUR
+					NOT = {is_in_faction_with = TUR}
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { 
+				limit = { country_exists = TUR }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = TUR
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	revenge_for_versailles = {
+		icon = GFX_decision_generic_operation 
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+					country_exists = FRA
+					NOT = {is_in_faction_with = FRA}
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { 
+				limit = { country_exists = FRA }
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FRA
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+}
+seek_collaboration_category = {
+	take_manpower = {
+		icon = GFX_decision_generic_military 
+		visible = {
+			POL = { has_completed_focus = POL_seek_collaboration }
+		}
+		target_trigger = {
+			FROM = { is_subject_of = POL }
+		}
+		available = {
+			POL = { num_subjects > 0 }
+			FROM = { has_manpower > 10000 }
+		}
+		cost = 30
+		days_remove = 7
+		fire_only_once = no
+		days_re_enable = 140
+		remove_effect = {
+			POL = { add_manpower = 10000 }
+			FROM = { add_manpower = -10000 }
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 0.01
+			}
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+	}
+	take_military_industry = {
+		icon = GFX_decision_generic_merge_plant_tank
+		visible = {
+			POL = { has_completed_focus = POL_seek_collaboration }
+		}
+		target_trigger = {
+			FROM = { is_subject_of = POL }
+		}
+		available = {
+			POL = { num_subjects > 0 }
+			FROM = {num_of_military_factories > 3}
+		}
+		cost = 30
+		days_remove = 120
+		fire_only_once = no
+		days_re_enable = 140
+		complete_effect = {
+			POL = { add_offsite_building = { type = arms_factory level = 3 } }
+			FROM = { add_offsite_building = { type = arms_factory level = -3 } }
+		}
+		remove_effect = {
+			POL = { add_offsite_building = { type = arms_factory level = -3 } }
+			FROM = { add_offsite_building = { type = arms_factory level = 3 } }
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 0.01
+			}
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+	}
+	take_civilian_industry = {
+		icon = GFX_decision_generic_factory 
+		visible = {
+			POL = { has_completed_focus = POL_seek_collaboration }
+		}
+		target_trigger = {
+			FROM = { is_subject_of = POL }
+		}
+		available = {
+			POL = { num_subjects > 0 }
+			FROM = {num_of_civilian_factories > 3}
+		}
+		cost = 30
+		days_remove = 120
+		fire_only_once = no
+		days_re_enable = 140
+		complete_effect = {
+			POL = { add_offsite_building = { type = industrial_complex level = 3 } }
+			FROM = { add_offsite_building = { type = industrial_complex level = -3 } }
+		}
+		remove_effect = {
+			POL = { add_offsite_building = { type = industrial_complex level = -3 } }
+			FROM = { add_offsite_building = { type = industrial_complex level = 3 } }
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	take_naval_industry = {
+		icon = GFX_decision_generic_merge_plant_ship
+		visible = {
+			POL = { has_completed_focus = POL_seek_collaboration }
+		}
+		target_trigger = {
+			FROM = { is_subject_of = POL }
+		}
+		available = {
+			POL = { num_subjects > 0 }
+			FROM = { num_of_naval_factories > 3}
+		}
+		cost = 30
+		days_remove = 120
+		fire_only_once = no
+		days_re_enable = 140
+		complete_effect = {
+			POL = { add_offsite_building = { type = dockyard level = 3 } }
+			FROM = { add_offsite_building = { type = dockyard level = -3 } }
+		}
+		remove_effect = {
+			POL = { add_offsite_building = { type = dockyard level = -3 } }
+			FROM = { add_offsite_building = { type = dockyard level = 3 } }
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 0.01
+			}
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+	}
+	take_scientists = {
+		icon = GFX_decision_generic_research 
+		visible = {
+			POL = { has_completed_focus = POL_seek_collaboration }
+		}
+		target_trigger = {
+			FROM = { is_subject_of = POL }
+		}
+		available = {
+			POL = { num_subjects > 0 }
+		}
+		cost = 30
+		days_remove = 120
+		fire_only_once = no
+		days_re_enable = 140
+		modifier = {
+			research_speed_factor = 0.05 
+		}
+		complete_effect = {
+			FROM = { add_ideas = taken_scientists }
+		}
+		remove_effect = {
+			FROM = { remove_ideas = taken_scientists }
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+}
+seek_empire_category = {
+	create_empire_rydz = {
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		visible = {
+			has_completed_focus = POL_smigly_wins
+		}
+		available = {
+			POL = {is_faction_leader = yes}
+			POL = {is_major = yes}
+			POL = {is_subject = no}
+			219 = {
+				OR = {
+					owner = {tag = POL}
+					owner = {is_in_faction_with = POL}
+					owner = {is_subject_of = POL}
+				}
+			}
+			64 = {
+				OR = {
+					owner = {tag = POL}
+					owner = {is_in_faction_with = POL}
+					owner = {is_subject_of = POL}
+				}
+			}
+			341 = {
+				OR = {
+					owner = {tag = POL}
+					owner = {is_in_faction_with = POL}
+					owner = {is_subject_of = POL}
+				}
+			}
+			16 = {
+				OR = {
+					owner = {tag = POL}
+					owner = {is_in_faction_with = POL}
+					owner = {is_subject_of = POL}
+				}
+			}
+			4 = {
+				OR = {
+					owner = {tag = POL}
+					owner = {is_in_faction_with = POL}
+					owner = {is_subject_of = POL}
+				}
+			}
+		}
+		complete_effect = {
+			set_cosmetic_tag = POL_empire
+			add_ideas = glory_restored
+			hidden_effect = {
+				news_event = { id = deluge_poland.17 hours = 6 } 
+			}
+		}
+	}
+	create_empire_sikor = {
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		visible = {
+			has_completed_focus = POL_sikorski_wins
+		}
+		available = {
+			POL = {is_faction_leader = yes}
+			POL = {is_major = yes}
+			POL = {is_subject = no}
+			num_of_factories > 200
+			amount_research_slots > 4
+			has_stability > 0.8
+		}
+		complete_effect = {
+			set_cosmetic_tag = POL_rzeczpospolita
+			add_ideas = glory_restored
+			hidden_effect = {
+				news_event = { id = deluge_poland.18 hours = 6 } 
+			}
+		}
+	}
+	create_empire_lechia = {
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		visible = {
+			has_completed_focus = POL_lechitic_legacy
+		}
+		available = {
+			POL = {is_faction_leader = yes}
+			POL = {is_major = yes}
+			POL = {is_subject = no}
+			custom_trigger_tooltip = {##Poland
+				tooltip = POL_custom_trigger_tooltip_POL
+				controls_state = 5
+				owns_state = 5
+				controls_state = 98 
+				owns_state = 98
+				controls_state = 87 
+				owns_state = 87
+				controls_state = 10 
+				owns_state = 10
+				controls_state = 90
+				owns_state = 90
+				controls_state = 88
+				owns_state = 88
+				controls_state = 67 
+				owns_state = 67
+				controls_state = 66 
+				owns_state = 66
+				controls_state = 86 
+				owns_state = 86
+				controls_state = 92 
+				owns_state = 92
+				controls_state = 97 
+				owns_state = 97
+				controls_state = 94 
+				owns_state = 94
+				controls_state = 93 
+				owns_state = 93
+				controls_state = 91 
+				owns_state = 91
+				controls_state = 89 
+				owns_state = 89
+				controls_state = 762 
+				owns_state = 762
+			}
+			custom_trigger_tooltip = {##Pomerania
+				tooltip = POL_custom_trigger_tooltip_4
+				controls_state = 807
+				owns_state = 807
+				controls_state = 85 
+				owns_state = 85
+				controls_state = 63 
+				owns_state = 63
+				controls_state = 62 
+				owns_state = 62
+			}
+			custom_trigger_tooltip = {##Eastern Germany
+				tooltip = POL_custom_trigger_tooltip_5
+				controls_state = 61
+				owns_state = 61
+				controls_state = 64
+				owns_state = 64
+				controls_state = 68 
+				owns_state = 68
+				controls_state = 65 
+				owns_state = 65
+			}
+			custom_trigger_tooltip = {##Czechia
+				tooltip = POL_custom_trigger_tooltip_6
+				controls_state = 9
+				owns_state = 9
+				controls_state = 69
+				owns_state = 69
+				controls_state = 72 
+				owns_state = 72
+				controls_state = 75 
+				owns_state = 75
+				controls_state = 74 
+				owns_state = 74
+			}
+			custom_trigger_tooltip = {###Slovakia
+				tooltip = POL_custom_trigger_tooltip_7
+				controls_state = 70
+				owns_state = 70
+				controls_state = 71
+				owns_state = 71
+				controls_state = 73 
+				owns_state = 73
+				controls_state = 664 
+				owns_state = 664
+			}
+			custom_trigger_tooltip = {###Austria
+				tooltip = POL_custom_trigger_tooltip_8
+				controls_state = 4
+				owns_state = 4
+				controls_state = 152
+				owns_state = 152
+				controls_state = 153 
+				owns_state = 153
+				controls_state = 848 
+				owns_state = 848
+			}
+			custom_trigger_tooltip = {##Slovenia
+				tooltip = POL_custom_trigger_tooltip_9
+				controls_state = 102
+				owns_state = 102
+				controls_state = 736
+				owns_state = 736
+				controls_state = 853
+				owns_state = 853
+			}
+			custom_trigger_tooltip = {##Croatia
+				tooltip = POL_custom_trigger_tooltip_10
+				controls_state = 109
+				owns_state = 109
+				controls_state = 103
+				owns_state = 103
+				controls_state = 104
+				owns_state = 104
+				controls_state = 852
+				owns_state = 852
+				controls_state = 151
+				owns_state = 151
+			}
+			custom_trigger_tooltip = {##Serbia
+				tooltip = POL_custom_trigger_tooltip_11
+				controls_state = 45
+				owns_state = 45
+				controls_state = 107
+				owns_state = 107
+				controls_state = 108
+				owns_state = 108
+			}
+			custom_trigger_tooltip = {##Albania
+				tooltip = POL_custom_trigger_tooltip_12
+				controls_state = 44
+				owns_state = 44
+				controls_state = 105
+				owns_state = 105
+				controls_state = 801
+				owns_state = 801
+			}
+			custom_trigger_tooltip = {##Bulgaria
+				tooltip = POL_custom_trigger_tooltip_13
+				controls_state = 106
+				owns_state = 106
+				controls_state = 48
+				owns_state = 48
+				controls_state = 212
+				owns_state = 212
+				controls_state = 211
+				owns_state = 211
+			}
+			custom_trigger_tooltip = {##Wallachia
+				tooltip = POL_custom_trigger_tooltip_14
+				controls_state = 46
+				owns_state = 46
+				controls_state = 81
+				owns_state = 81
+				controls_state = 77
+				owns_state = 77
+			}
+			custom_trigger_tooltip = {##Moldavia
+				tooltip = POL_custom_trigger_tooltip_15
+				controls_state = 78
+				owns_state = 78
+				controls_state = 79
+				owns_state = 79
+				controls_state = 80
+				owns_state = 80
+			}
+			custom_trigger_tooltip = {##Transylvania
+				tooltip = POL_custom_trigger_tooltip_16
+				controls_state = 76
+				owns_state = 76
+				controls_state = 84
+				owns_state = 84
+				controls_state = 82
+				owns_state = 82
+				controls_state = 83
+				owns_state = 83
+			}
+			custom_trigger_tooltip = {##Hungary 
+				tooltip = POL_custom_trigger_tooltip_17
+				controls_state = 154
+				owns_state = 154
+				controls_state = 43
+				owns_state = 43
+				controls_state = 155
+				owns_state = 155
+			}
+			custom_trigger_tooltip = {##Bavaria
+				tooltip = POL_custom_trigger_tooltip_18
+				controls_state = 54
+				owns_state = 54
+				controls_state = 53
+				owns_state = 53
+				controls_state = 52
+				owns_state = 52
+			}
+			custom_trigger_tooltip = {##Thuringen, Hannover, Schelswig-Holstein
+				tooltip = POL_custom_trigger_tooltip_19
+				controls_state = 60
+				owns_state = 60
+				controls_state = 59
+				owns_state = 59
+				controls_state = 58
+				owns_state = 58
+			}
+			custom_trigger_tooltip = {##Lithuania
+				tooltip = POL_custom_trigger_tooltip_20
+				controls_state = 11
+				owns_state = 11
+				controls_state = 814
+				owns_state = 814
+				controls_state = 188
+				owns_state = 188
+				controls_state = 189
+				owns_state = 189
+				controls_state = 815
+				owns_state = 815
+			}
+			custom_trigger_tooltip = {##Latvia
+				tooltip = POL_custom_trigger_tooltip_21
+				controls_state = 190
+				owns_state = 190
+				controls_state = 809
+				owns_state = 809
+				controls_state = 810
+				owns_state = 810
+				controls_state = 808
+				owns_state = 808
+				controls_state = 12
+				owns_state = 12
+			}
+			custom_trigger_tooltip = {##Estonia
+				tooltip = POL_custom_trigger_tooltip_22
+				controls_state = 191
+				owns_state = 191
+				controls_state = 813
+				owns_state = 813
+				controls_state = 13
+				owns_state = 13
+				controls_state = 812
+				owns_state = 812
+				controls_state = 811
+				owns_state = 811
+			}
+			custom_trigger_tooltip = {##Belarus
+				tooltip = POL_custom_trigger_tooltip_23
+				controls_state = 96
+				owns_state = 96
+				controls_state = 95
+				owns_state = 95
+				controls_state = 194
+				owns_state = 194
+				controls_state = 204
+				owns_state = 204
+				controls_state = 206
+				owns_state = 206
+				controls_state = 241
+				owns_state = 241
+				controls_state = 764
+				owns_state = 764
+				controls_state = 207
+				owns_state = 207
+			}
+			custom_trigger_tooltip = {##Ukraine
+				tooltip = POL_custom_trigger_tooltip_24
+				controls_state = 199
+				owns_state = 199
+				controls_state = 201
+				owns_state = 201
+				controls_state = 198
+				owns_state = 198
+				controls_state = 202
+				owns_state = 202
+				controls_state = 203
+				owns_state = 203
+				controls_state = 834
+				owns_state = 834
+				controls_state = 192
+				owns_state = 192
+				controls_state = 197
+				owns_state = 197
+				controls_state = 226
+				owns_state = 226
+				controls_state = 221
+				owns_state = 221
+				controls_state = 259
+				owns_state = 259
+				controls_state = 225
+				owns_state = 225
+				controls_state = 193
+				owns_state = 193
+			}
+			custom_trigger_tooltip = {##Crimea and Donetsk
+				tooltip = POL_custom_trigger_tooltip_25
+				controls_state = 137
+				owns_state = 137
+				controls_state = 196
+				owns_state = 196
+				controls_state = 200
+				owns_state = 200
+				controls_state = 227
+				owns_state = 227
+			}
+			custom_trigger_tooltip = {##Petersburg and rest
+				tooltip = POL_custom_trigger_tooltip_26
+				controls_state = 195
+				owns_state = 195
+				controls_state = 208
+				owns_state = 208
+				controls_state = 209
+				owns_state = 209
+				controls_state = 210
+				owns_state = 210
+				controls_state = 263
+				owns_state = 263
+				controls_state = 244
+				owns_state = 244
+			}
+			custom_trigger_tooltip = {##southern Russia
+				tooltip = POL_custom_trigger_tooltip_27
+				controls_state = 228
+				owns_state = 228
+				controls_state = 240
+				owns_state = 240
+				controls_state = 220
+				owns_state = 220
+				controls_state = 222
+				owns_state = 222
+				controls_state = 224
+				owns_state = 224
+			}
+			custom_trigger_tooltip = {##middle Russia
+				tooltip = POL_custom_trigger_tooltip_28
+				controls_state = 205
+				owns_state = 205
+				controls_state = 243
+				owns_state = 243
+				controls_state = 242
+				owns_state = 242
+				controls_state = 246
+				owns_state = 246
+				controls_state = 223
+				owns_state = 223
+			}
+		}
+		complete_effect = {
+			set_cosmetic_tag = POL_lechitic
+			add_ideas = glory_restored
+			set_country_flag = POL_created_lechia
+			hidden_effect = {
+				news_event = { id = deluge_poland.27 hours = 6 } 
+			}
+		}
+	}
+	create_empire_slavia = {
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		visible = {
+			has_completed_focus = POL_torch_for_all_slavs
+		}
+		available = {
+			POL = {is_faction_leader = yes}
+			POL = {is_major = yes}
+			POL = {is_subject = no}
+			custom_trigger_tooltip = {##Poland
+				tooltip = POL_custom_trigger_tooltip_POL
+				controls_state = 5
+				owns_state = 5
+				controls_state = 98 
+				owns_state = 98
+				controls_state = 87 
+				owns_state = 87
+				controls_state = 10 
+				owns_state = 10
+				controls_state = 90
+				owns_state = 90
+				controls_state = 88
+				owns_state = 88
+				controls_state = 67 
+				owns_state = 67
+				controls_state = 66 
+				owns_state = 66
+				controls_state = 86 
+				owns_state = 86
+				controls_state = 92 
+				owns_state = 92
+				controls_state = 97 
+				owns_state = 97
+				controls_state = 94 
+				owns_state = 94
+				controls_state = 93 
+				owns_state = 93
+				controls_state = 91 
+				owns_state = 91
+				controls_state = 89 
+				owns_state = 89
+				controls_state = 762 
+				owns_state = 762
+			}
+			custom_trigger_tooltip = {##Pomerania
+				tooltip = POL_custom_trigger_tooltip_4
+				controls_state = 807
+				owns_state = 807
+				controls_state = 85 
+				owns_state = 85
+				controls_state = 63 
+				owns_state = 63
+				controls_state = 62 
+				owns_state = 62
+			}
+			custom_trigger_tooltip = {##Czechia
+				tooltip = POL_custom_trigger_tooltip_6
+				controls_state = 9
+				owns_state = 9
+				controls_state = 69
+				owns_state = 69
+				controls_state = 72 
+				owns_state = 72
+				controls_state = 75 
+				owns_state = 75
+				controls_state = 74 
+				owns_state = 74
+			}
+			custom_trigger_tooltip = {###Slovakia
+				tooltip = POL_custom_trigger_tooltip_7
+				controls_state = 70
+				owns_state = 70
+				controls_state = 71
+				owns_state = 71
+				controls_state = 73 
+				owns_state = 73
+				controls_state = 664 
+				owns_state = 664
+			}
+			custom_trigger_tooltip = {##Slovenia
+				tooltip = POL_custom_trigger_tooltip_9
+				controls_state = 102
+				owns_state = 102
+				controls_state = 736
+				owns_state = 736
+				controls_state = 853
+				owns_state = 853
+			}
+			custom_trigger_tooltip = {##Croatia
+				tooltip = POL_custom_trigger_tooltip_10
+				controls_state = 109
+				owns_state = 109
+				controls_state = 103
+				owns_state = 103
+				controls_state = 104
+				owns_state = 104
+				controls_state = 852
+				owns_state = 852
+				controls_state = 151
+				owns_state = 151
+			}
+			custom_trigger_tooltip = {##Serbia
+				tooltip = POL_custom_trigger_tooltip_11
+				controls_state = 45
+				owns_state = 45
+				controls_state = 107
+				owns_state = 107
+				controls_state = 108
+				owns_state = 108
+			}
+			custom_trigger_tooltip = {##Bulgaria
+				tooltip = POL_custom_trigger_tooltip_13
+				controls_state = 106
+				owns_state = 106
+				controls_state = 48
+				owns_state = 48
+				controls_state = 212
+				owns_state = 212
+				controls_state = 211
+				owns_state = 211
+			}
+			custom_trigger_tooltip = {##Belarus
+				tooltip = POL_custom_trigger_tooltip_23
+				controls_state = 96
+				owns_state = 96
+				controls_state = 95
+				owns_state = 95
+				controls_state = 194
+				owns_state = 194
+				controls_state = 204
+				owns_state = 204
+				controls_state = 206
+				owns_state = 206
+				controls_state = 241
+				owns_state = 241
+				controls_state = 764
+				owns_state = 764
+				controls_state = 207
+				owns_state = 207
+			}
+			custom_trigger_tooltip = {##Ukraine
+				tooltip = POL_custom_trigger_tooltip_24
+				controls_state = 199
+				owns_state = 199
+				controls_state = 201
+				owns_state = 201
+				controls_state = 198
+				owns_state = 198
+				controls_state = 202
+				owns_state = 202
+				controls_state = 203
+				owns_state = 203
+				controls_state = 834
+				owns_state = 834
+				controls_state = 192
+				owns_state = 192
+				controls_state = 197
+				owns_state = 197
+				controls_state = 226
+				owns_state = 226
+				controls_state = 221
+				owns_state = 221
+				controls_state = 259
+				owns_state = 259
+				controls_state = 225
+				owns_state = 225
+				controls_state = 193
+				owns_state = 193
+			}
+			owns_state = 105
+			controls_state = 105
+			owns_state = 801
+			controls_state = 801
+			custom_trigger_tooltip = {##Russia
+				tooltip = POL_custom_trigger_tooltip_29
+				controls_state = 137
+				owns_state = 137
+				controls_state = 196 
+				owns_state = 196
+				controls_state = 200 
+				owns_state = 200
+				controls_state = 227 
+				owns_state = 227
+				controls_state = 228
+				owns_state = 228
+				controls_state = 218
+				owns_state = 218
+				controls_state = 234 
+				owns_state = 234
+				controls_state = 235 
+				owns_state = 235
+				controls_state = 237 
+				owns_state = 237
+				controls_state = 232 
+				owns_state = 232
+				controls_state = 238 
+				owns_state = 238
+				controls_state = 245 
+				owns_state = 245
+				controls_state = 829 
+				owns_state = 829
+				controls_state = 217 
+				owns_state = 217
+				controls_state = 236 
+				owns_state = 236
+				controls_state = 401 
+				owns_state = 401
+				controls_state = 652 
+				owns_state = 652
+				controls_state = 251 
+				owns_state = 251
+				controls_state = 265 
+				owns_state = 265
+				controls_state = 239 
+				owns_state = 239
+				controls_state = 260 
+				owns_state = 260
+				controls_state = 240 
+				owns_state = 240
+				controls_state = 220 
+				owns_state = 220
+				controls_state = 224 
+				owns_state = 224
+				controls_state = 222 
+				owns_state = 222
+				controls_state = 223 
+				owns_state = 223
+				controls_state = 258 
+				owns_state = 258
+				controls_state = 257 
+				owns_state = 257
+				controls_state = 255 
+				owns_state = 255
+				controls_state = 250 
+				owns_state = 250
+				controls_state = 252 
+				owns_state = 252
+				controls_state = 254 
+				owns_state = 254
+				controls_state = 253 
+				owns_state = 253
+				controls_state = 219 
+				owns_state = 219
+				controls_state = 205 
+				owns_state = 205
+				controls_state = 242 
+				owns_state = 242
+				controls_state = 243 
+				owns_state = 243
+				controls_state = 246 
+				owns_state = 246
+				controls_state = 210 
+				owns_state = 210
+				controls_state = 263 
+				owns_state = 263
+				controls_state = 208 
+				owns_state = 208
+				controls_state = 209 
+				owns_state = 209
+				controls_state = 244 
+				owns_state = 244
+				controls_state = 195 
+				owns_state = 195
+				controls_state = 264 
+				owns_state = 264
+				controls_state = 247 
+				owns_state = 247
+				controls_state = 248 
+				owns_state = 248
+				controls_state = 351 
+				owns_state = 351
+				controls_state = 214 
+				owns_state = 214
+				controls_state = 216 
+				owns_state = 216
+				controls_state = 215 
+				owns_state = 215
+				controls_state = 213 
+				owns_state = 213
+				controls_state = 147 
+				owns_state = 147
+				controls_state = 722 
+				owns_state = 722
+				controls_state = 825 
+				owns_state = 825
+				controls_state = 262 
+				owns_state = 262
+				controls_state = 581 
+				owns_state = 581
+				controls_state = 397 
+				owns_state = 397
+				controls_state = 400 
+				owns_state = 400
+				controls_state = 249 
+				owns_state = 249
+				controls_state = 256 
+				owns_state = 256
+				controls_state = 833 
+				owns_state = 833
+				controls_state = 399 
+				owns_state = 399
+				controls_state = 398 
+				owns_state = 398
+				controls_state = 573 
+				owns_state = 573
+				controls_state = 651 
+				owns_state = 651
+				controls_state = 582 
+				owns_state = 582
+				controls_state = 572 
+				owns_state = 572
+				controls_state = 653 
+				owns_state = 653
+				controls_state = 580 
+				owns_state = 580
+				controls_state = 579 
+				owns_state = 579
+				controls_state = 403 
+				owns_state = 403
+				controls_state = 571 
+				owns_state = 571
+				controls_state = 654 
+				owns_state = 654
+				controls_state = 40 
+				owns_state = 40
+				controls_state = 570 
+				owns_state = 570
+				controls_state = 578 
+				owns_state = 578
+				controls_state = 577 
+				owns_state = 577
+				controls_state = 576 
+				owns_state = 576
+				controls_state = 824 
+				owns_state = 824
+				controls_state = 516 
+				owns_state = 516
+				controls_state = 568 
+				owns_state = 568
+				controls_state = 569 
+				owns_state = 569
+				controls_state = 567 
+				owns_state = 567
+				controls_state = 564 
+				owns_state = 564
+				controls_state = 566 
+				owns_state = 566
+				controls_state = 575 
+				owns_state = 575
+				controls_state = 565 
+				owns_state = 565
+				controls_state = 563 
+				owns_state = 563
+				controls_state = 574 
+				owns_state = 574
+				controls_state = 644 
+				owns_state = 644
+				controls_state = 562 
+				owns_state = 562
+				controls_state = 822 
+				owns_state = 822
+				controls_state = 637 
+				owns_state = 637
+				controls_state = 650 
+				owns_state = 650
+				controls_state = 463 
+				owns_state = 463
+				controls_state = 471 
+				owns_state = 471
+				controls_state = 739 
+				owns_state = 739
+				}
+		}
+		complete_effect = {
+			hidden_effect = {
+				137 = { add_core_of = POL } 
+				##137
+				196 = { add_core_of = POL } 
+				##196
+				200 = { add_core_of = POL } 
+				##200
+				227 = { add_core_of = POL } 
+				##227
+				228 = { add_core_of = POL } 
+				##228
+				218 = { add_core_of = POL } 
+				##218
+				234 = { add_core_of = POL } 
+				##234
+				235 = { add_core_of = POL } 
+				##235
+				237 = { add_core_of = POL } 
+				##237
+				232 = { add_core_of = POL } 
+				##232
+				238 = { add_core_of = POL } 
+				##238
+				245 = { add_core_of = POL } 
+				##245
+				829 = { add_core_of = POL } 
+				##829
+				217 = { add_core_of = POL } 
+				##217
+				236 = { add_core_of = POL } 
+				##236
+				401 = { add_core_of = POL } 
+				##401
+				652 = { add_core_of = POL } 
+				##652
+				251 = { add_core_of = POL } 
+				##251
+				265 = { add_core_of = POL } 
+				##265
+				239 = { add_core_of = POL } 
+				##239
+				260 = { add_core_of = POL } 
+				##260
+				240 = { add_core_of = POL } 
+				##240
+				220 = { add_core_of = POL } 
+				##220
+				224 = { add_core_of = POL } 
+				##224
+				222 = { add_core_of = POL } 
+				##222
+				223 = { add_core_of = POL } 
+				##223
+				258 = { add_core_of = POL } 
+				##258
+				257 = { add_core_of = POL } 
+				##257
+				255 = { add_core_of = POL } 
+				##255
+				250 = { add_core_of = POL } 
+				##250
+				252 = { add_core_of = POL } 
+				##252
+				254 = { add_core_of = POL } 
+				##254
+				253 = { add_core_of = POL } 
+				##253
+				219 = { add_core_of = POL } 
+				##219
+				205 = { add_core_of = POL } 
+				##205
+				242 = { add_core_of = POL } 
+				##242
+				243 = { add_core_of = POL } 
+				##243
+				246 = { add_core_of = POL } 
+				##246
+				210 = { add_core_of = POL } 
+				##210
+				263 = { add_core_of = POL } 
+				##263
+				208 = { add_core_of = POL } 
+				##208
+				209 = { add_core_of = POL } 
+				##209
+				244 = { add_core_of = POL } 
+				##244
+				195 = { add_core_of = POL } 
+				##195
+				264 = { add_core_of = POL } 
+				##264
+				247 = { add_core_of = POL } 
+				##247
+				248 = { add_core_of = POL } 
+				##248
+				351 = { add_core_of = POL } 
+				##351
+				214 = { add_core_of = POL } 
+				##214
+				216 = { add_core_of = POL } 
+				##216
+				215 = { add_core_of = POL } 
+				##215
+				213 = { add_core_of = POL } 
+				##213
+				147 = { add_core_of = POL } 
+				##147
+				722 = { add_core_of = POL } 
+				##722
+				825 = { add_core_of = POL } 
+				##825
+				262 = { add_core_of = POL } 
+				##262
+				581 = { add_core_of = POL } 
+				##581
+				397 = { add_core_of = POL } 
+				##397
+				400 = { add_core_of = POL } 
+				##400
+				249 = { add_core_of = POL } 
+				##249
+				256 = { add_core_of = POL } 
+				##256
+				833 = { add_core_of = POL } 
+				##833
+				399 = { add_core_of = POL } 
+				##399
+				398 = { add_core_of = POL } 
+				##398
+				573 = { add_core_of = POL } 
+				##573
+				651 = { add_core_of = POL } 
+				##651
+				582 = { add_core_of = POL } 
+				##582
+				572 = { add_core_of = POL } 
+				##572
+				653 = { add_core_of = POL } 
+				##653
+				580 = { add_core_of = POL } 
+				##580
+				579 = { add_core_of = POL } 
+				##579
+				403 = { add_core_of = POL } 
+				##403
+				571 = { add_core_of = POL } 
+				##571
+				654 = { add_core_of = POL } 
+				##654
+				40 = { add_core_of = POL } 
+				##40
+				570 = { add_core_of = POL } 
+				##570
+				578 = { add_core_of = POL } 
+				##578
+				577 = { add_core_of = POL } 
+				##577
+				576 = { add_core_of = POL } 
+				##576
+				824 = { add_core_of = POL } 
+				##824
+				516 = { add_core_of = POL } 
+				##516
+				568 = { add_core_of = POL } 
+				##568
+				569 = { add_core_of = POL } 
+				##569
+				567 = { add_core_of = POL } 
+				##567
+				564 = { add_core_of = POL } 
+				##564
+				566 = { add_core_of = POL } 
+				##566
+				575 = { add_core_of = POL } 
+				##575
+				565 = { add_core_of = POL } 
+				##565
+				563 = { add_core_of = POL } 
+				##563
+				574 = { add_core_of = POL } 
+				##574
+				644 = { add_core_of = POL } 
+				##644
+				562 = { add_core_of = POL } 
+				##562
+				822 = { add_core_of = POL } 
+				##822
+				637 = { add_core_of = POL } 
+				##637
+				650 = { add_core_of = POL } 
+				##650
+				463 = { add_core_of = POL } 
+				##463
+				471 = { add_core_of = POL } 
+				##471
+				739 = { add_core_of = POL } 
+				##739
+				736 = { add_core_of = POL } 
+				736 = { add_core_of = POL } 
+				102 = { add_core_of = POL } 
+				103 = { add_core_of = POL } 
+				104 = { add_core_of = POL } 
+				109 = { add_core_of = POL } 
+				45 = { add_core_of = POL } 
+				107 = { add_core_of = POL } 
+				108 = { add_core_of = POL } 
+				801 = { add_core_of = POL } 
+				105 = { add_core_of = POL } 
+				106 = { add_core_of = POL } 
+				48 = { add_core_of = POL } 
+				212 = { add_core_of = POL } 
+				211 = { add_core_of = POL } 
+				77 = { add_core_of = POL } 
+				807 = { add_core_of = POL } 
+				85 = { add_core_of = POL } 
+				63 = { add_core_of = POL } 
+				62 = { add_core_of = POL } 
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_82
+			set_cosmetic_tag = POL_slavic
+			add_ideas = glory_restored
+			set_global_flag = POL_formed_slavic_union
+			hidden_effect = {
+				news_event = { id = deluge_poland.29 hours = 6 } 
+			}
+		}
+	}
+	create_empire_zapadoslavia = {
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		visible = {
+			has_completed_focus = POL_torch_for_all_slavs
+		}
+		available = {
+			POL = {is_faction_leader = yes}
+			POL = {is_major = yes}
+			POL = {is_subject = no}
+			custom_trigger_tooltip = {##Poland
+				tooltip = POL_custom_trigger_tooltip_POL
+				controls_state = 5
+				owns_state = 5
+				controls_state = 98 
+				owns_state = 98
+				controls_state = 87 
+				owns_state = 87
+				controls_state = 10 
+				owns_state = 10
+				controls_state = 90
+				owns_state = 90
+				controls_state = 88
+				owns_state = 88
+				controls_state = 67 
+				owns_state = 67
+				controls_state = 66 
+				owns_state = 66
+				controls_state = 86 
+				owns_state = 86
+				controls_state = 92 
+				owns_state = 92
+				controls_state = 97 
+				owns_state = 97
+				controls_state = 94 
+				owns_state = 94
+				controls_state = 93 
+				owns_state = 93
+				controls_state = 91 
+				owns_state = 91
+				controls_state = 89 
+				owns_state = 89
+				controls_state = 762 
+				owns_state = 762
+			}
+			custom_trigger_tooltip = {##Pomerania
+				tooltip = POL_custom_trigger_tooltip_4
+				controls_state = 807
+				owns_state = 807
+				controls_state = 85 
+				owns_state = 85
+				controls_state = 63 
+				owns_state = 63
+				controls_state = 62 
+				owns_state = 62
+			}
+			custom_trigger_tooltip = {##Czechia
+				tooltip = POL_custom_trigger_tooltip_6
+				controls_state = 9
+				owns_state = 9
+				controls_state = 69
+				owns_state = 69
+				controls_state = 72 
+				owns_state = 72
+				controls_state = 75 
+				owns_state = 75
+				controls_state = 74 
+				owns_state = 74
+			}
+			custom_trigger_tooltip = {###Slovakia
+				tooltip = POL_custom_trigger_tooltip_7
+				controls_state = 70
+				owns_state = 70
+				controls_state = 71
+				owns_state = 71
+				controls_state = 73 
+				owns_state = 73
+				controls_state = 664 
+				owns_state = 664
+			}
+		}
+		complete_effect = {
+			set_cosmetic_tag = POL_zapadoslavia
+			set_global_flag = POL_zapadoslavia_created
+			add_ideas = western_slavs_united_idea
+			hidden_effect = {
+				news_event = { id = deluge_poland.28 hours = 6 } 
+			}
+		}
+	}
+}
+seek_cooperation_category = {
+	joint_army_exercises = {
+		icon =  GFX_decision_generic_army_support 
+		visible = {
+			POL = { num_faction_members > 0 }
+		}
+		available = {
+			POL = { has_war = no }
+		}
+		cost = 30
+		days_remove = 40
+		fire_only_once = no
+		days_re_enable = 120
+		modifier = {
+			
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_war = no
+				}
+				add_ideas = joint_army_exercises_idea
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_idea = joint_army_exercises_idea
+				}
+				remove_ideas = joint_army_exercises_idea
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_84
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	joint_air_exercises = {
+		icon =  GFX_decision_generic_air 
+		visible = {
+			POL = { num_faction_members > 0 }
+		}
+		available = {
+			POL = { has_war = no }
+		}
+		cost = 30
+		days_remove = 40
+		fire_only_once = no
+		days_re_enable = 120
+		modifier = {
+			
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_war = no
+				}
+				add_ideas = joint_air_exercises_idea
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_idea = joint_air_exercises_idea
+				}
+				remove_ideas = joint_air_exercises_idea
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_84
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	joint_naval_exercises = {
+		icon =  GFX_decision_generic_naval 
+		visible = {
+			POL = { num_faction_members > 0 }
+		}
+		available = {
+			POL = { has_war = no }
+		}
+		cost = 30
+		days_remove = 40
+		fire_only_once = no
+		days_re_enable = 120
+		modifier = {
+			
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_war = no
+				}
+				add_ideas = joint_naval_exercises_idea
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_84
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_idea = joint_naval_exercises_idea
+				}
+				remove_ideas = joint_naval_exercises_idea
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	economic_agreements = {
+		icon =  GFX_decision_gre_paying_ifc_debt
+		visible = {
+			POL = { num_faction_members > 0 }
+		}
+		available = {
+			
+		}
+		cost = 30
+		days_remove = 60
+		fire_only_once = no
+		days_re_enable = 120
+		modifier = {
+			
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+				}
+				add_ideas = economic_agreements_idea
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_84
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_idea = economic_agreements_idea
+				}
+				remove_ideas = economic_agreements_idea
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 20
+			}
+		}
+	}
+	international_propaganda_campaigns = {
+		icon =  GFX_decision_generic_speech 
+		visible = {
+			POL = { num_faction_members > 0 }
+		}
+		available = {
+			
+		}
+		cost = 30
+		days_remove = 70
+		fire_only_once = no
+		days_re_enable = 120
+		modifier = {
+			
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+				}
+				add_ideas = international_propaganda_campaigns_idea
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_idea = international_propaganda_campaigns_idea
+				}
+				remove_ideas = international_propaganda_campaigns_idea
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_84
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 20
+			}
+		}
+	}
+	scientific_cooperation = {
+		icon =  GFX_decision_generic_research 
+		visible = {
+			POL = { num_faction_members > 0 }
+		}
+		available = {
+			
+		}
+		cost = 25
+		days_remove = 85
+		fire_only_once = no
+		days_re_enable = 140
+		modifier = {
+			
+		}
+		complete_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+				}
+				add_ideas = scientific_cooperation_idea
+			}
+		}
+		remove_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = POL
+					has_idea = scientific_cooperation_idea
+				}
+				remove_ideas = scientific_cooperation_idea
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_84
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 20
+			}
+		}
+	}
+	establish_visegrad_research_group = {
+		icon =  GFX_decision_SOV_academy_of_sciences
+		visible = {
+			NOT = {
+				has_global_flag = POL_established_visegrad_tech_group
+			}
+			tag = POL
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		cost = 30
+		days_remove = 50
+		fire_only_once = yes
+		modifier = {
+			civilian_factory_use = 5
+		}
+		complete_effect = {
+			set_country_flag = joined_visegrad_tech_group
+		}
+		remove_effect = {
+			add_to_tech_sharing_group = deluge_visegrad_tech_group
+			set_global_flag = POL_established_visegrad_tech_group
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+seek_allies_category = {
+	invite_uk = {
+		icon =  GFX_decision_eng_install_government
+		visible = {
+			NOT = {POL = {has_idea = POL_ENG_defence_pact}}
+			NOT = {ENG = {has_idea = POL_ENG_defence_pact}}
+		}
+		available = {
+			NOT = {has_global_flag = POL_ENG_pact_once_signed}
+			NOT = { has_global_flag = POL_invites_someone }
+			NOT = {ENG = {is_in_faction_with = POL}}
+			country_exists = ENG
+			NOT = { has_war_with = ENG }
+			ENG = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			ENG = {country_event = { id = deluge_poland_foreign.1 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				ENG = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {ENG = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_italy = {
+		icon =  GFX_decision_SOV_place_hq
+		visible = {
+			NOT = {ITA = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = AUS}}
+			country_exists = ITA
+			NOT = { has_war_with = ITA }
+			ITA = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			ITA = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				ITA = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {ITA = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_austria = {
+		icon =  GFX_decision_ger_reichskommissariats
+		visible = {
+			NOT = {AUS = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = ITA}}
+			country_exists = AUS
+			NOT = { has_war_with = AUS }
+			AUS = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			AUS = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				AUS = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {AUS = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_serbia = {
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+		visible = {
+			NOT = {SER = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = CRO}}
+			NOT = {POL = {is_in_faction_with = ALB}}
+			country_exists = SER
+			NOT = { has_war_with = SER }
+			SER = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			SER = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				SER = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {SER = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_croatia = {
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+		visible = {
+			NOT = {CRO = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = SER}}
+			country_exists = CRO
+			NOT = { has_war_with = CRO }
+			CRO = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			CRO = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				CRO = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {CRO = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_albania = {
+		icon = GFX_decision_SWI_support_humanitarian_efforts
+		visible = {
+			NOT = {ALB = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = SER}}
+			NOT = {POL = {is_in_faction_with = GRE}}
+			country_exists = ALB
+			NOT = { has_war_with = ALB }
+			ALB = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			ALB = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				ALB = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {ALB = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_greece_new = {
+		icon =  GFX_decision_SWI_support_humanitarian_efforts
+		visible = {
+			NOT = {GRE = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = ALB}}
+			country_exists = GRE
+			NOT = { has_war_with = GRE }
+			GRE = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			GRE = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				GRE = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {GRE = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_bulgaria = {
+		icon =  GFX_decision_SWI_support_humanitarian_efforts
+		visible = {
+			NOT = {BUL = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = ROM}}
+			country_exists = BUL
+			NOT = { has_war_with = BUL }
+			BUL = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			BUL = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				BUL = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				BUL = {ALB = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_romania = {
+		icon =  GFX_decision_SWI_support_humanitarian_efforts
+		visible = {
+			NOT = {ROM = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = BUL}}
+			country_exists = ROM
+			NOT = { has_war_with = ROM }
+			ROM = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			ROM = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				ROM = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {ROM = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	invite_denmark_deluge = {
+		icon =  GFX_decision_SWI_support_humanitarian_efforts
+		visible = {
+			NOT = {DEN = {is_in_faction_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			POL = { is_faction_leader = yes }
+			NOT = {POL = {is_in_faction_with = SWE}}
+			country_exists = DEN
+			NOT = { has_war_with = DEN }
+			DEN = { is_subject = no }
+		}
+		cost = 30
+		days_remove = 14
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			DEN = {country_event = { id = deluge_poland_foreign.4 hours = 1 }}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				DEN = {has_government = POL}
+				factor = 30
+			}
+			modifier = {
+				NOT = {DEN = {has_government = POL}}
+				factor = 0.1
+			}
+		}
+	}
+	proclaim_eternal_friendship_with_hungary = {
+		icon =  GFX_decision_hol_exchange_intelligence_data
+		visible = {
+			tag = POL
+		}
+		available = {
+			NOT = {
+				has_war_with = HUN
+			}
+			is_in_faction_with = HUN
+		}
+		cost = 20
+		days_remove = 10
+		fire_only_once = no
+		days_re_enable = 10
+		modifier = {
+			
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			HUN = {
+				country_event = {
+					id = deluge_poland_foreign.15
+					hours = 5
+				}
+			}
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	pact_with_russia = {
+		icon = GFX_decision_SOV_exiles_state
+		visible = {
+			NOT = {SOV = {has_war_with = POL}}
+		}
+		available = {
+			NOT = { has_global_flag = POL_invites_someone }
+			NOT = {POL = {is_in_faction_with = SOV}}
+			OR = {
+				UKR = {has_government = communism}
+				BLR = {has_government = communism}
+				BAL = {has_government = communism}
+			}
+			country_exists = SOV
+			NOT = {SOV = {has_government = communism}}
+		}
+		cost = 50
+		days_remove = 15
+		fire_only_once = yes
+		modifier = {
+			
+		}
+		complete_effect = {
+			set_global_flag = POL_invites_someone
+		}
+		remove_effect = {
+			SOV = {country_event = { id = deluge_poland_foreign.49 hours = 3 }}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+	}
+	send_attache_to_japan = {
+		icon = GFX_decision_jap_pacific_guardian
+		visible = {}
+		available = {
+			NOT = {POL = {has_war_with = JAP}}
+			JAP = {has_war = yes}
+		}
+		cost = 30
+		fire_only_once = yes
+		modifier = {}
+		complete_effect = {
+			JAP = {country_event = {id = deluge_poland_foreign.45 hours = 20}}
+			set_global_flag = POL_invites_someone
+		}
+	}
+	visit_attache_in_japan = {
+		days_mission_timeout = 365
+		icon =  GFX_decision_jap_pacific_guardian
+		is_good = yes
+		selectable_mission = no
+		cancel_if_not_visible = yes
+		fire_only_once = yes
+		visible = {
+		}
+		available = {
+			always = no
+		}
+		activation = {
+			has_global_flag = POL_attache_is_in_JAP
+		}
+		timeout_effect = {
+			JAP = {remove_ideas = polish_attache_to_japan}
+			POL = {country_event = {id = deluge_poland_foreign.48 hours = 20}}
+			clr_global_flag = POL_attache_is_in_JAP
+			custom_effect_tooltip = POL_custom_effect_tooltip_30
+		}
+	}
+	help_finland_gain_independence = {
+		icon = GFX_decision_generic_ignite_civil_war
+		visible = {}
+		available = {
+			#NOT = {POL = {has_war_with = FIN}}
+			#any_country = {
+			#	is_in_faction_with = POL
+			#	NOT = {has_war_with = FIN}
+			#}
+			POL = {has_war_with = SOV}
+			FIN = {is_subject_of = SOV}
+			POL = {
+				has_equipment = { infantry_equipment > 4999 }
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = 20
+		modifier = {}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -5000
+			}
+		}
+		remove_effect = {
+			FIN = {country_event = {id = deluge_poland_foreign.37 hours = 3}}
+			set_global_flag = POL_invites_someone
+		}
+	}
+	support_teutonic_reich = {
+		icon = GFX_decision_eng_trade_unions_demand
+		visible = {
+			NOT = {has_global_flag = german_civil_war_ended}
+		}
+		available = {
+			NOT = {POL = {has_war_with = GER}}
+			GER = {
+				has_war_with = DDR
+				has_war_with = WGR
+			}
+			POL = {
+				has_equipment = { infantry_equipment > 7999 }
+			}
+		}
+		cost = 30
+		fire_only_once = yes
+		days_remove = 20
+		modifier = {}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -8000
+			}
+		}
+		remove_effect = {
+			GER = {country_event = {id = deluge_poland_foreign.53 hours = 3}}
+			set_global_flag = POL_invites_someone
+		}
+	}
+}
+army_reform_category = {
+	increase_WP = {
+		icon =  GFX_decision_generic_prepare_civil_war
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 10
+		days_remove = 15
+		fire_only_once = no
+		days_re_enable = 3
+		modifier = {
+			
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_to_variable = {POL_WP_strength = 5}
+			custom_effect_tooltip = POL_custom_effect_tooltip_19
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	increase_POW = {
+		icon =  GFX_decision_generic_prepare_civil_war
+		visible = {
+			
+		}
+		available = {
+			
+		}
+		cost = 10
+		days_remove = 15
+		fire_only_once = no
+		days_re_enable = 3
+		modifier = {
+			
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_to_variable = {POL_POW_strength = 5}
+			custom_effect_tooltip = POL_custom_effect_tooltip_20
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	dissolve_POW = {
+		icon =  GFX_decision_generic_army_support 
+		visible = {
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_custom_trigger_tooltip_1
+				check_variable = { POL_POW_strength < POL_WP_strength }	
+				check_variable = { POL_WP_strength > 25 }
+			}
+		}
+		cost = 0
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_to_variable = {POL_WPvsPOW_army_attack_factor = 0.1}
+			add_to_variable = {POL_WPvsPOW_army_org_factor = 0.15}
+			add_to_variable = {POL_WPvsPOW_army_defence_factor = 0.1}
+			add_to_variable = {POL_WPvsPOW_war_support_factor = 0.2}
+			#add_to_variable = {POL_WPvsPOW_supply_consumption_factor = -0.1}
+			#add_to_variable = {POL_WPvsPOW_army_fuel_consumption_factor = -0.1}
+			#add_to_variable = {POL_WPvsPOW_air_fuel_consumption_factor = -0.1}
+			#add_to_variable = {POL_WPvsPOW_navy_fuel_consumption_factor = -0.1}
+			add_to_variable = {POL_WPvsPOW_army_speed_factor = 0.05}
+			add_to_variable = {POL_WPvsPOW_max_planning_factor = 0.1}
+			#add_to_variable = {POL_WPvsPOW_org_loss_when_moving = -0.1}
+			clear_variable = POL_WP_strength
+			clear_variable = POL_POW_strength
+			set_country_flag = POL_army_problem_solved
+			clr_country_flag = POL_started_army_reform
+			custom_effect_tooltip = POL_custom_effect_tooltip_21
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	change_WP_high_command = {
+		icon =  GFX_decision_generic_army_support 
+		visible = {
+			
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = POL_custom_trigger_tooltip_2
+				check_variable = { POL_WP_strength < POL_POW_strength }
+				check_variable = {POL_POW_strength > 25}
+			}
+		}
+		cost = 0
+		days_remove = 30
+		fire_only_once = yes
+		modifier = {
+			
+		}
+		complete_effect = {
+			
+		}
+		remove_effect = {
+			add_to_variable = {POL_WPvsPOW_army_attack_factor = 0.1}
+			add_to_variable = {POL_WPvsPOW_army_org_factor = 0.1}
+			add_to_variable = {POL_WPvsPOW_army_defence_factor = 0.1}
+			add_to_variable = {POL_WPvsPOW_war_support_factor = 0.3}
+			#add_to_variable = {POL_WPvsPOW_max_dig_in_factor = 0.1}
+			add_to_variable = {POL_WPvsPOW_resistance_damage_to_garrison = -0.1}
+			add_to_variable = {POL_WPvsPOW_promote_cost_factor = -0.35}
+			#add_to_variable = {POL_WPvsPOW_army_morale = 0.1}
+			#add_to_variable = {POL_WPvsPOW_special_forces_cap = 0.2}
+			clear_variable = POL_WP_strength
+			clear_variable = POL_POW_strength
+			set_country_flag = POL_army_problem_solved
+			clr_country_flag = POL_started_army_reform
+			custom_effect_tooltip = POL_custom_effect_tooltip_22
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	internal_scuffles = {
+		days_mission_timeout = 30
+		icon = GFX_decision_generic_prepare_civil_war
+		is_good = no
+		selectable_mission = no
+		cancel_if_not_visible = yes
+		days_re_enable = 1
+		visible = {
+			#NOT = {has_country_flag = POL_army_problem_solved}
+		}
+		available = {
+			has_country_flag = POL_army_problem_solved
+		}
+		fire_only_once = no
+		#cancel_trigger = {
+		#	has_country_flag = POL_army_problem_solved
+		#}
+		activation = {
+			has_country_flag = POL_started_army_reform
+		} 
+		timeout_effect = {
+			random_list = {
+				50 = {
+					add_to_variable = {POL_WP_strength = 10}
+					custom_effect_tooltip = POL_custom_effect_tooltip_23
+				}
+				50 = {
+					add_to_variable = {POL_POW_strength = 10}
+					custom_effect_tooltip = POL_custom_effect_tooltip_24
+				}
+			}
+		}
+	}
+}
+economy_decisions = {
+	build_infrastructure_in_lublin_area = {
+		days_mission_timeout = 365
+		icon = GFX_decision_generic_construction
+		is_good = no
+		selectable_mission = no
+		cancel_if_not_visible = yes
+		visible = {
+			NOT = {
+				92 = {
+					infrastructure > 4
+				}
+			}
+		}
+		available = {
+			92 = {
+				infrastructure > 4
+			}
+		}
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = POL_start_construction_of_central_industrial_district
+		}
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+			add_political_power = -75
+		}
+		complete_effect = {
+			add_political_power = 100
+			add_stability = 0.025
+		}
+	}
+	build_infrastructure_in_radom_area = {
+		days_mission_timeout = 365
+		icon = GFX_decision_generic_construction
+		is_good = no
+		selectable_mission = no
+		cancel_if_not_visible = yes
+		visible = {
+			NOT = {
+				90 = {
+					infrastructure > 4
+				}
+			}
+		}
+		available = {
+			90 = {
+				infrastructure > 4
+			}
+		}
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = POL_start_construction_of_central_industrial_district
+		}
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+			add_political_power = -75
+		}
+		complete_effect = {
+			add_political_power = 100
+			add_stability = 0.025
+		}
+	}
+	build_infrastructure_in_przemysl_area = {
+		days_mission_timeout = 365
+		icon = GFX_decision_generic_construction
+		is_good = no
+		selectable_mission = no
+		cancel_if_not_visible = yes
+		visible = {
+			NOT = {
+				88 = {
+					infrastructure > 4
+				}
+			}
+		}
+		available = {
+			88 = {
+				infrastructure > 4
+			}
+		}
+		fire_only_once = yes
+		activation = {
+			has_completed_focus = POL_start_construction_of_central_industrial_district
+		}
+		cancel_trigger = {
+			
+		}
+		timeout_effect = {
+			add_political_power = -75
+		}
+		complete_effect = {
+			add_political_power = 100
+			add_stability = 0.025
+		}
+	}
+}
+##has_army_manpower = { size > 849999 }
+establish_honor_i_ojczyzna_category = {
+	#invite_general_to_H2O = {
+	#	icon =  GFX_decision_eng_blackshirt_march
+	#	visible = {
+	#		any_army_leader = {
+	#			NOT = {has_trait = }
+	#		}
+	#	}
+	#	available = {
+	#		
+	#	}
+	#	cost = 30
+	#	days_remove = 14
+	#	fire_only_once = no
+	#	days_re_enable = 10
+	#	modifier = {
+	#		
+	#	}
+	#	complete_effect = {
+	#	}
+	#	remove_effect = {
+	#	}
+	#	ai_will_do = {
+	#		factor = 5
+	#	}
+	#}
+	expand_training_camps = {
+		icon = GFX_decision_generic_military
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 70
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 4
+		}
+		cost = 30
+		remove_effect = {
+			add_to_variable = { POL_honor_i_ojczyzna_experience_gain_air_factor = 0.1 }
+			add_to_variable = { POL_honor_i_ojczyzna_experience_gain_army_factor = 0.1 }
+			add_to_variable = { POL_honor_i_ojczyzna_experience_gain_navy_factor = 0.1 }
+			custom_effect_tooltip = POL_custom_effect_tooltip_57
+		}
+	}
+	expand_high_command = {
+		icon = GFX_decision_generic_army_support
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 4
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 70
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 4
+		}
+		cost = 30
+		remove_effect = {
+			add_to_variable = { POL_honor_i_ojczyzna_max_planning_factor = 0.05 }
+			add_to_variable = { POL_honor_i_ojczyzna_planning_speed = 0.1 }
+			custom_effect_tooltip = POL_custom_effect_tooltip_58
+		}
+	}
+	establish_grom = {
+		icon = GFX_decision_generic_intelligence_operation
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+			has_completed_focus = POL_create_grom
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 85
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 30
+		remove_effect = {
+			add_to_variable = { POL_honor_i_ojczyzna_special_forces_out_of_supply_factor = -0.1 }
+			add_to_variable = { POL_honor_i_ojczyzna_special_forces_training_time_factor = 0.25 }
+			add_to_variable = { POL_honor_i_ojczyzna_special_forces_cap = 0.3 }
+			add_to_variable = { POL_honor_i_ojczyzna_special_forces_attack_factor = 0.05 }
+			add_to_variable = { POL_honor_i_ojczyzna_special_forces_defence_factor = 0.05 }
+			custom_effect_tooltip = POL_custom_effect_tooltip_59
+		}
+	}
+	expand_volounteer_corps = {
+		icon = GFX_decision_generic_air
+		fire_only_once = yes
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 85
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			add_to_variable = { POL_honor_i_ojczyzna_air_volunteer_cap = 200 }
+			add_to_variable = { POL_honor_i_ojczyzna_send_volunteers_tension = -0.1 }
+			add_to_variable = { POL_honor_i_ojczyzna_send_volunteer_size = 3 }
+			custom_effect_tooltip = POL_custom_effect_tooltip_60
+		}
+	}
+}
+expand_cities_category = {
+	develop_warsaw = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 10
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 10
+				controls_state = 10
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 3544
+				value = 20
+			}
+			10 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_poznan = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 86
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 86
+				controls_state = 86
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 6558
+				value = 20
+			}
+			86 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_lodz = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 87
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 87
+				controls_state = 87
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 9508
+				value = 20
+			}
+			87 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_wroclaw = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 66
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 66
+				controls_state = 66
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 9570
+				value = 20
+			}
+			66 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_katowice = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 67
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 67
+				controls_state = 67
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 6464
+				value = 30
+			}
+			67 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_krakow = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 88
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 88
+				controls_state = 88
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 9427
+				value = 30
+			}
+			88 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_lublin = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 92
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 92
+				controls_state = 92
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 11399
+				value = 30
+			}
+			92 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_lwow = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 91
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 91
+				controls_state = 91
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 11479
+				value = 25
+			}
+			91 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_stanislawow = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 89
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 89
+				controls_state = 89
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 11411
+				value = 20
+			}
+			89 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_brzesc = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 94
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 94
+				controls_state = 94
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 3392
+				value = 20
+			}
+			94 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_krolewiec = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 5
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 5
+				controls_state = 5
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 6332
+				value = 15
+			}
+			5 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 6332
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_tri_city = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 85
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 85
+				controls_state = 85
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 362
+				value = 10
+			}
+			add_victory_points = {
+				province = 9263
+				value = 20
+			}
+			85 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 362
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 9263
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_kijow = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 202
+				controls_state = 202
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 525
+				value = 20
+			}
+			202 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_wilno = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 96
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 96
+				controls_state = 96
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 3320
+				value = 30
+			}
+			96 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_kaunas = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 11
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 11
+				controls_state = 11
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 6296
+				value = 25
+			}
+			11 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_ryga = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 808
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 808
+				controls_state = 808
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 9340
+				value = 15
+			}
+			808 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 9340
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_minsk = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 206
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 206
+				controls_state = 206
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 11370
+				value = 25
+			}
+			206 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_odessa = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 192
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 192
+				controls_state = 192
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 11670
+				value = 30
+			}
+			192 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 11670
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_praga = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 9
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 9
+				controls_state = 9
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 11452
+				value = 20
+			}
+			9 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_brno = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 75
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 75
+				controls_state = 75
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 3569
+				value = 20
+			}
+			75 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_szczecin = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 62
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 62
+				controls_state = 62
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 6282
+				value = 20
+			}
+			62 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 6282
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_drezno_and_lipsk = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 65
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 65
+				controls_state = 65
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 514
+				value = 25
+			}
+			add_victory_points = {
+				province = 3535
+				value = 25
+			}
+			65 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	develop_branibor_and_dziewin = {
+		icon = GFX_decision_SOV_place_hq
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 64
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			POL = {
+				owns_state = 64
+				controls_state = 64
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		cost = 30
+		remove_effect = {
+			add_victory_points = {
+				province = 6521
+				value = 10
+			}
+			add_victory_points = {
+				province = 3522
+				value = 25
+			}
+			64 = {
+				if = {
+					limit = {
+						infrastructure < 5
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						anti_air_building < 4
+					}
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						radar_station < 5
+					}
+					add_building_construction = {
+						type = radar_station
+						level = 2
+						instant_build = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+}
+political_actions = {
+	Stachniuk_move_capital = {
+		icon = GFX_decision_generic_civil_support
+		fire_only_once = yes
+		available = {
+			has_completed_focus = POL_return_of_ancient_faith
+			POL = {
+				owns_state = 10
+				OR = {
+					owns_state = 202
+					owns_state = 88
+				}
+				OR = {
+					owns_state = 86
+					owns_state = 219
+				}
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		visible = {
+			has_completed_focus = POL_return_of_ancient_faith
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 0
+		complete_effect = {
+			POL = {country_event = {id = deluge_poland.30 hours = 0}}
+		}
+	}
+	training_in_iran = {
+		days_mission_timeout = 85
+		icon = GFX_decision_generic_reorganize_irregulars
+		is_good = yes
+		selectable_mission = no
+		#days_re_enable = 1
+		visible = {
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		fire_only_once = yes
+		activation = {
+			has_global_flag = POL_PER_agreed_to_POL_training
+		} 
+		timeout_effect = {
+			POL = {country_event ={id = deluge_poland.36 hours = 1}}
+		}
+	}
+	training_in_finland = {
+		days_mission_timeout = 85
+		icon = GFX_decision_generic_reorganize_irregulars
+		is_good = yes
+		selectable_mission = no
+		#days_re_enable = 1
+		visible = {
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		fire_only_once = yes
+		activation = {
+			has_global_flag = POL_FIN_agreed_to_POL_training
+		} 
+		timeout_effect = {
+			POL = {country_event ={id = deluge_poland.40 hours = 1}}
+		}
+	}
+	join_visegrad_research_group = {
+		icon = GFX_decision_generic_research
+		visible = {
+			has_global_flag = POL_established_visegrad_tech_group
+			is_in_faction_with = POL
+			NOT = {
+				is_in_tech_sharing_group = deluge_visegrad_tech_group
+			}
+		}
+		available = {
+			has_global_flag = POL_established_visegrad_tech_group
+		}
+		cost = 5
+		fire_only_once = no
+		days_re_enable = 10
+		#complete_effect = {
+		#	add_to_tech_sharing_group = deluge_visegrad_tech_group
+		#}
+		remove_effect = {
+			add_to_tech_sharing_group = deluge_visegrad_tech_group
+			#set_country_flag = joined_visegrad_tech_group
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+restore_holy_sites_category = {
+	restore_radagoszcz = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 61
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 10
+			POL = {
+				owns_state = 61
+				controls_state = 61
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 10
+		}
+		cost = 30
+		remove_effect = {
+			hidden_effect = {
+				add_victory_points = {
+					province = 3258
+					value = 15
+				}
+				set_province_name = { id = 3258 name = "Radogoszcz" }
+			}
+			61 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = supply_node
+					province = 3258
+					level = 1
+					instant_build = yes
+				}
+			}
+			build_railway = {
+				level = 2
+				path = { 3312 3258 268 11276}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_83
+		}
+	}
+	rebuild_temple_on_wolin = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 62
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				owns_state = 62
+				controls_state = 62
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			62 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {#Wolin
+					type = naval_base
+					province = 6334
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {#Szczecin
+					type = naval_base
+					province = 6282
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {#Wolin
+					type = coastal_bunker
+					province = 6334
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {#Wolin
+					type = bunker
+					province = 6334
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {#Szczecin
+					type = coastal_bunker
+					province = 6282
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {#Szczecin
+					type = bunker
+					province = 6282
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 6282
+				value = 5
+			}
+		}
+	}
+	rebuild_temple_rujana_island = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 62
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				owns_state = 62
+				controls_state = 62
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			62 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 9388
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9388
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9388
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 9388
+				value = 9
+			}
+		}
+	}
+	rebuild_temple_in_trzebiatow = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 63
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				owns_state = 63
+				controls_state = 63
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			63 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					province = 9361
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					province = 9361
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9361
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 9361
+				value = 12
+			}
+		}
+	}
+	rebuild_temple_in_plock = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 98
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				owns_state = 98
+				controls_state = 98
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			98 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 3230
+					level = 6
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 3230
+				value = 15
+			}
+		}
+	}
+	rebuild_temple_in_kijow = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 202
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				owns_state = 202
+				controls_state = 202
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			202 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 525
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 525
+				value = 5
+			}
+		}
+	}
+	rebuild_temple_in_nowogrod = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 263
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				owns_state = 263
+				controls_state = 263
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			263 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 117
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 117
+				value = 15
+			}
+		}
+	}
+	build_temple_on_lysa_gora = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 90
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				owns_state = 90
+				controls_state = 90
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			90 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 11430
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 11430
+				value = 15
+			}
+		}
+	}
+	build_temple_on_sleza_mountain = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		highlight_states = {
+			highlight_state_targets = {
+				state = 66
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 3
+			POL = {
+				owns_state = 66
+				controls_state = 66
+			}
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		modifier = {
+			civilian_factory_use = 3
+		}
+		cost = 30
+		remove_effect = {
+			66 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					province = 9570
+					level = 4
+					instant_build = yes
+				}
+			}
+			add_victory_points = {
+				province = 9570
+				value = 10
+			}
+		}
+	}
+}
+expand_urban_regions_category = {
+	urbanize_state_POL = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		state_target = yes
+		#on_map_mode = map_only
+		target_array = POL.owned_states
+		fire_only_once = no
+		days_remove = 100
+		cost = 75
+		days_re_enable = 50
+		modifier = {
+			civilian_factory_use = 5
+		}
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+				OR = {
+					has_state_category = rural
+					has_state_category = town
+					has_state_category = large_town
+					has_state_category = city
+					has_state_category = large_city
+					has_state_category = metropolis
+				}
+			}
+		}
+		visible = {
+			POL = {
+				has_completed_focus = POL_finish_land_reform
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+			ROOt = {
+				controls_state = FROM
+			}
+		}
+		remove_effect = {
+			FROM = {
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = wasteland
+						}
+					}
+					set_state_category = pastoral
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = tiny_island
+						}
+					}
+					set_state_category = pastoral
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = pastoral
+						}
+					}
+					set_state_category = rural
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = tiny_island
+						}
+					}
+					set_state_category = small_island
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = small_island
+						}
+					}
+					set_state_category = rural
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = rural
+						}
+					}
+					set_state_category = town
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = town
+						}
+					}
+					set_state_category = large_town
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = large_town
+						}
+					}
+					set_state_category = city
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = city
+						}
+					}
+					set_state_category = large_city
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = large_city
+						}
+					}
+					set_state_category = metropolis
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_state_category = metropolis
+						}
+					}
+					set_state_category = megalopolis
+				}
+			}
+		}	
+		ai_will_do = {
+			factor = 30
+		}
+	}
+}
+competition_on_free_market_category = {
+	invest_into_ursus = {
+		icon = GFX_decision_generic_fundraising
+		fire_only_once = no
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+		}
+		modifier = {
+			civilian_factory_use = 5
+		}
+		allowed = {
+			original_tag = POL
+		}
+		days_remove = 60
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		cost = 40
+		remove_effect = {
+			add_to_variable = {POL_Ursus_strength = 5}
+			custom_effect_tooltip = POL_custom_effect_tooltip_144
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_owned_by = POL
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}

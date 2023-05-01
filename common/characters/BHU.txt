@@ -1,0 +1,77 @@
+characters={
+	BHU_rajagopala_tondaiman={
+		name="Rajagopala Tondaiman"
+		portraits={
+			civilian={
+				large="gfx/leaders/BHU/mir_osman_ali_khan.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BHU_chithira_thirunal={
+		name="Chithira Thirunal"
+		portraits={
+			civilian={
+				large="gfx/leaders/BHU/chithira_thirunal_balarama_varma.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BHU_louis_alexis_Étienne_bonvin={
+		name="Louis Alexis Étienne Bonvin"
+		portraits={
+			civilian={
+				large="gfx/leaders/BHU/louis_faidherbe.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BHU_p._krishna_pillai={
+		name="P. Krishna Pillai"
+		portraits={
+			civilian={
+				large="gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_P_KRISHNA_PILLAI_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BHU_b._p._sitaramayya={
+		name="B. P. Sitaramayya"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_B_P_SITARAMAYYA_DESC"
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

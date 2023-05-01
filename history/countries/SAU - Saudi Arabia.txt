@@ -1,0 +1,38 @@
+﻿capital = 292
+
+oob = "SAU_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 5
+	fascism = 10
+	communism = 5
+	neutrality = 80
+}
+
+add_ideas = {
+	extensive_conscription
+	novote
+}
+
+recruit_character = SAU_abdulaziz_ibn_saud
+recruit_character = SAU_yusuf_ibn_fuad
+recruit_character = SAU_abd_almalik_ibn_hisham
+recruit_character = SAU_fawzi_ibn_ali

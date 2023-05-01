@@ -1,0 +1,136 @@
+characters={
+	SWI_federal_council={
+		name="Federal Council"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWI/federal_building.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_fritz_platten={
+		name="Fritz Platten"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FRITZ_PLATTEN_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_henri_guisan={
+		name="Henri Guisan"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWI/henri_guisan.dds"
+			}
+		}
+		field_marshal={
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_ernest_béuin={
+		name="Ernest Béuin"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_dr._max_leo_keller={
+		name="Dr. Max Leo Keller"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWI_stefano_franscini={
+		name="Stefano Franscini"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SWI_jules_borel={
+		name="Jules Borel"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SWI_josef_munzinger={
+		name="Josef Munzinger"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

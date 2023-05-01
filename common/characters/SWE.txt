@@ -1,0 +1,222 @@
+characters={
+	SWE_per_albin_hansson={
+		name="Per Albin Hansson"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWE/Portrait_Sweden_Per_Albin_Hansson.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWE_sven_linderot={
+		name="Sven Linderot"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWE_axel_pehrssonbramstorp={
+		name="Axel Pehrsson-Bramstorp"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWE_erik_af_edholm={
+		name="Erik af Edholm"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SWE_ivar_holmquist={
+		name="Ivar Holmquist"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/SWE/general_ivar_holmquist.dds"
+			}
+		}
+		field_marshal={
+			traits={ winter_specialist }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	SWE_gustav_v={
+		name="Gustav V"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWE/gustav_sweden.dds"
+			}
+		}
+		country_leader={
+			desc="swedish_king_desc"
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SWE_vidkun_quisling={
+		name="Vidkun Quisling"
+		portraits={
+			civilian={
+				large="gfx/leaders/SWE/vidkun_quisling.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	#DEN_thorvald_stauning={
+	#	name="Thorvald Stauning"
+	#	portraits={
+	#		civilian={
+	#			large="GFX_portrait_Thorvald_Stauning"
+	#		}
+	#	}
+	#	country_leader={
+	#		ideology=social_democratic_ideology
+	#		expire="1965.1.1.1"
+	#		desc = "POLITICS_THORVALD_STAUNING_DESC"
+	#		id=-1
+	#	}
+	#}
+	SWE_folke_högberg={
+		name="Folke Högberg"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ commando }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SWE_carl_gustav_fleischer={
+		name="Carl Gustav Fleischer"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster winter_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SWE_wilhelm_wain_prior={
+		name="Wilhelm Wain Prior"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	SWE_claes_lindström={
+		name="Claes Lindström"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SWE_elias_corneliussen={
+		name="Elias Corneliussen"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			}
+		}
+		navy_leader={
+			traits={ spotter }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}

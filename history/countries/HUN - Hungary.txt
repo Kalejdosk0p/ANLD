@@ -1,0 +1,101 @@
+﻿capital = 43
+
+oob = "HUN_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+set_convoys = 1
+
+add_opinion_modifier = { target = GER modifier = historic_friendship_modifier }
+add_opinion_modifier = { target = WGR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = SOV modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = POL modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = SER modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = ITA modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = USA modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = TUR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = FRA modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = SPR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = CAU modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = BAL modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = UKR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = BLR modifier = great_war_hostility_modifier }
+
+set_technology = {
+	infantry_weapons = 1
+
+	tech_support = 1		
+	tech_recon = 1
+	gw_artillery = 1
+	early_fighter = 1
+	CAS1 = 1
+	fuel_silos = 1
+}
+set_politics = {
+	ruling_party = fascism
+	last_election = "1935.3.31"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 50
+	communism = 10
+	neutrality = 20
+}	
+add_ideas = {
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+	novote
+}
+create_import = {
+	resource = steel
+	factories = 1
+	exporter = POL
+}
+create_import = {
+	resource = tungsten
+	factories = 1
+	exporter = SOV
+}
+
+recruit_character = HUN_deluge_emergency_cabinet
+recruit_character = HUN_lajos_veress
+recruit_character = HUN_ferenc_feketehalmyczeydner
+recruit_character = HUN_deluge_bethlen
+recruit_character = HUN_mátyás_rákosi
+recruit_character = HUN_deluge_andrassy_sandor
+recruit_character = HUN_géza_lakatos
+recruit_character = HUN_iván_hindy
+recruit_character = HUN_károly_beregfy
+recruit_character = HUN_deluge_esterhazy_moricz
+
+recruit_character = HUN_deluge_szechenyi
+recruit_character = HUN_deluge_mihaly
+recruit_character = HUN_deluge_tildy
+recruit_character = HUN_deluge_gombos
+recruit_character = HUN_miklós_horthy
+recruit_character = HUN_deluge_pronay_pal
+recruit_character = HUN_deluge_erno_gero
+recruit_character = HUN_deluge_tihamer_fabinyi
+recruit_character = HUN_gusztav_gratz
+recruit_character = HUN_ferenc_szombathelyi
+
+recruit_character = HUN_kalman_kanya
+recruit_character = HUN_hugo_sonyi
+recruit_character = HUN_bela_rakosi
+recruit_character = HUN_sandor_magyarossy
+recruit_character = HUN_istvan_shvoy
+recruit_character = HUN_edgar_keksz
+recruit_character = HUN_francois_deak
+recruit_character = HUN_reszo_kastner
+recruit_character = HUN_gusztav_jany
+recruit_character = HUN_dezso_laszlo
+
+recruit_character = HUN_gottfried_von_banfield
+recruit_character = HUN_henrik_werth
+recruit_character = HUN_szakasits_arpad
+recruit_character = HUN_szalasi_ferenc
+recruit_character = HUN_nopcsa_ferenc

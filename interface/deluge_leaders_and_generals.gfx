@@ -1,0 +1,369 @@
+spriteTypes = {	
+###POLAND HAPPENS
+	spriteType = {
+		name = "GFX_jozef_pilsudski"
+		texturefile = "gfx/leaders/deluge/poles/jozef_pilsudski.dds"
+	}
+	spriteType = {
+		name = "GFX_Smigly_picture"
+		texturefile = "gfx/leaders/deluge/poles/Rydz.dds"
+	}
+	spriteType = {
+		name = "GFX_Sikorski_picture"
+		texturefile = "gfx/leaders/deluge/poles/Sikorski_picture.dds"
+	}
+	spriteType = {
+		name = "GFX_SEC"
+		texturefile = "gfx/leaders/deluge/poles/portrait_POL_Sanation_Emergency_Council.dds"
+	}
+	spriteType = {
+		name = "GFX_Stachniuk_picture"
+		texturefile = "gfx/leaders/deluge/poles/Stachniuk_picture.dds"
+	}
+	spriteType = {
+		name = "GFX_Haller"
+		texturefile = "gfx/leaders/deluge/poles/Haller.dds"
+	}
+	spriteType = {
+		name = "GFX_Dmowski"
+		texturefile = "gfx/leaders/deluge/poles/Dmowski.dds"
+	}
+	spriteType = {
+		name = "GFX_Kleeberg"
+		texturefile = "gfx/leaders/deluge/poles/Kleeberg.dds"
+	}
+	spriteType = {
+		name = "GFX_Anders"
+		texturefile = "gfx/leaders/deluge/poles/wladyslaw_anders.dds"
+	}
+	spriteType = {
+		name = "GFX_Pilecki"
+		texturefile = "gfx/leaders/deluge/poles/Witold_Pilecki.dds"
+	}
+	spriteType = {
+		name = "GFX_dreszer"
+		texturefile = "gfx/leaders/deluge/poles/dreszer.dds"
+	}
+	spriteType = {
+		name = "GFX_bortnowski"
+		texturefile = "gfx/leaders/deluge/poles/bortnowski.dds"
+	}
+	spriteType = {
+		name = "GFX_kutrzeba"
+		texturefile = "gfx/leaders/deluge/poles/kutrzeba.dds"
+	}
+	spriteType = {
+		name = "GFX_maczek"
+		texturefile = "gfx/leaders/deluge/poles/maczek.dds"
+	}
+	spriteType = {
+		name = "GFX_sosabowski"
+		texturefile = "gfx/leaders/deluge/poles/sosabowski.dds"
+	}
+	spriteType = {
+		name = "GFX_wieniawa_dlugoszewski"
+		texturefile = "gfx/leaders/deluge/poles/wieniawa_dlugoszewski.dds"
+	}
+	spriteType = {
+		name = "GFX_zeligowski"
+		texturefile = "gfx/leaders/deluge/poles/zeligowski.dds"
+	}
+	spriteType = {
+		name = "GFX_piasecki_portrait"
+		texturefile = "gfx/leaders/deluge/poles/piasecki_portrait.dds"
+	}
+	spriteType = {
+		name = "GFX_slawek"
+		texturefile = "gfx/leaders/deluge/poles/slawek.dds"
+	}
+	spriteType = {
+		name = "GFX_sosnowski"
+		texturefile = "gfx/leaders/deluge/poles/sosnowski.dds"
+	}
+	spriteType = {
+		name = "GFX_thommee"
+		texturefile = "gfx/leaders/deluge/poles/thommee.dds"
+	}
+	spriteType = {
+		name = "GFX_rummel"
+		texturefile = "gfx/leaders/deluge/poles/rummel.dds"
+	}
+	spriteType = {
+		name = "GFX_rataj"
+		texturefile = "gfx/leaders/deluge/poles/rataj.dds"
+	}
+	spriteType = {
+		name = "GFX_waleron"
+		texturefile = "gfx/leaders/deluge/poles/waleron.dds"
+	}
+	spriteType = {
+		name = "GFX_kukiel"
+		texturefile = "gfx/leaders/deluge/poles/kukiel.dds"
+	}
+	spriteType = {
+		name = "GFX_krukowicz_przedrzymirski"
+		texturefile = "gfx/leaders/deluge/poles/krukowicz_przedrzymirski.dds"
+	}
+	spriteType = {
+		name = "GFX_kowalski"
+		texturefile = "gfx/leaders/deluge/poles/kowalski.dds"
+	}
+	spriteType = {
+		name = "GFX_marian_seyda"
+		texturefile = "gfx/leaders/deluge/poles/marian_seyda.dds"
+	}
+	spriteType = {
+		name = "GFX_abraham"
+		texturefile = "gfx/leaders/deluge/poles/abraham.dds"
+	}
+	spriteType = {
+		name = "GFX_bielecki"
+		texturefile = "gfx/leaders/deluge/poles/bielecki.dds"
+	}
+	spriteType = {
+		name = "GFX_dabski"
+		texturefile = "gfx/leaders/deluge/poles/dabski.dds"
+	}
+	spriteType = {
+		name = "GFX_grzmot_skotnicki"
+		texturefile = "gfx/leaders/deluge/poles/grzmot_skotnicki.dds"
+	}
+	spriteType = {
+		name = "GFX_kapciuk"
+		texturefile = "gfx/leaders/deluge/poles/kapciuk.dds"
+	}
+	spriteType = {
+		name = "GFX_kopanski"
+		texturefile = "gfx/leaders/deluge/poles/kopanski.dds"
+	}
+	spriteType = {
+		name = "GFX_mosdorf"
+		texturefile = "gfx/leaders/deluge/poles/mosdorf.dds"
+	}
+	spriteType = {
+		name = "GFX_orlik_ruckemann"
+		texturefile = "gfx/leaders/deluge/poles/orlik_ruckemann.dds"
+	}
+	spriteType = {
+		name = "GFX_polish_regency_council"
+		texturefile = "gfx/leaders/deluge/poles/polish_regency_council.dds"
+	}
+	spriteType = {
+		name = "GFX_Friedrich_August_III_of_Wettin"
+		texturefile = "gfx/leaders/deluge/poles/Friedrich_August_III_of_Wettin.dds"
+	}
+	spriteType = {
+		name = "GFX_Friedrich_Christian_Wettin"
+		texturefile = "gfx/leaders/deluge/poles/Friedrich_Christian_Wettin.dds"
+	}
+###HUNGARY HAPPENES###
+	spriteType = {
+		name = "GFX_sandor"
+		texturefile = "gfx/leaders/deluge/hungarians/sandor.dds"
+	}
+	spriteType = {
+		name = "GFX_szechenyi"
+		texturefile = "gfx/leaders/deluge/hungarians/szechenyi.dds"
+	}
+	spriteType = {
+		name = "GFX_esterhazy"
+		texturefile = "gfx/leaders/deluge/hungarians/esterhazy.dds"
+	}
+	spriteType = {
+		name = "GFX_gombos"
+		texturefile = "gfx/leaders/deluge/hungarians/gombos.dds"
+	}
+	spriteType = {
+		name = "GFX_horthy"
+		texturefile = "gfx/leaders/deluge/hungarians/horthy.dds"
+	}
+	spriteType = {
+		name = "GFX_bethlen"
+		texturefile = "gfx/leaders/deluge/hungarians/bethlen.dds"
+	}
+	spriteType = {
+		name = "GFX_mihaly"
+		texturefile = "gfx/leaders/deluge/hungarians/mihaly.dds"
+	}
+	spriteType = {
+		name = "GFX_tildy"
+		texturefile = "gfx/leaders/deluge/hungarians/tildy.dds"
+	}
+	spriteType = {
+		name = "GFX_veress_lajos"
+		texturefile = "gfx/leaders/deluge/hungarians/veress_lajos.dds"
+	}
+	spriteType = {
+		name = "GFX_matyas_rakosi"
+		texturefile = "gfx/leaders/deluge/hungarians/matyas_rakosi.dds"
+	}
+	spriteType = {
+		name = "GFX_geza_lakatos"
+		texturefile = "gfx/leaders/deluge/hungarians/geza_lakatos.dds"
+	}
+	spriteType = {
+		name = "GFX_hindy_ivan"
+		texturefile = "gfx/leaders/deluge/hungarians/hindy_ivan.dds"
+	}
+	spriteType = {
+		name = "GFX_feketehalmy_czeydner"
+		texturefile = "gfx/leaders/deluge/hungarians/feketehalmy_czeydner.dds"
+	}
+	spriteType = {
+		name = "GFX_beregfy_karolyi"
+		texturefile = "gfx/leaders/deluge/hungarians/beregfy_karolyi.dds"
+	}
+	spriteType = {
+		name = "GFX_hun_emergency_cabinet"
+		texturefile = "gfx/leaders/deluge/hungarians/hun_emergency_cabinet.dds"
+	}
+	###CROATIA HAPPENES###
+	spriteType = {
+		name = "GFX_maria_draskovic"
+		texturefile = "gfx/leaders/deluge/croats/maria_draskovic.dds"
+	}
+	spriteType = {
+		name = "GFX_albrecht_luitpold"
+		texturefile = "gfx/leaders/deluge/croats/albrecht_luitpold.dds"
+	}
+	spriteType = {
+		name = "GFX_paul_von_brlog"
+		texturefile = "gfx/leaders/deluge/croats/paul_von_brlog.dds"
+	}
+	spriteType = {
+		name = "GFX_ante_pavelic"
+		texturefile = "gfx/leaders/deluge/croats/ante_pavelic.dds"
+	}
+	spriteType = {
+		name = "GFX_josip_broz_tito"
+		texturefile = "gfx/leaders/deluge/croats/josip_broz_tito.dds"
+	}
+	spriteType = {
+		name = "GFX_janko_vukovic"
+		texturefile = "gfx/leaders/deluge/croats/janko_vukovic.dds"
+	}
+	spriteType = {
+		name = "GFX_stjepan_radic"
+		texturefile = "gfx/leaders/deluge/croats/stjepan_radic.dds"
+	}
+	spriteType = {
+		name = "GFX_pronay_pal"
+		texturefile = "gfx/leaders/deluge/hungarians/pronay_pal.dds"
+	}
+	spriteType = {
+		name = "GFX_bear_wojtek"
+		texturefile = "gfx/leaders/deluge/poles/bear_wojtek.dds"
+	}
+	spriteType = {
+		name = "GFX_bronislaw_prugar_ketling"
+		texturefile = "gfx/leaders/deluge/poles/bronislaw_prugar_ketling.dds"
+	}
+	spriteType = {
+		name = "GFX_czeslaw_mlot_fijalkowski"
+		texturefile = "gfx/leaders/deluge/poles/czeslaw_mlot_fijalkowski.dds"
+	}
+	spriteType = {
+		name = "GFX_edmund_knoll_kownacki"
+		texturefile = "gfx/leaders/deluge/poles/edmund_knoll_kownacki.dds"
+	}
+	spriteType = {
+		name = "GFX_franciszek_alter"
+		texturefile = "gfx/leaders/deluge/poles/franciszek_alter.dds"
+	}
+	spriteType = {
+		name = "GFX_franciszek_latinik"
+		texturefile = "gfx/leaders/deluge/poles/franciszek_latinik.dds"
+	}
+	spriteType = {
+		name = "GFX_franciszek_wlad"
+		texturefile = "gfx/leaders/deluge/poles/franciszek_wlad.dds"
+	}
+	spriteType = {
+		name = "GFX_juliusz_zulauf"
+		texturefile = "gfx/leaders/deluge/poles/juliusz_zulauf.dds"
+	}
+	spriteType = {
+		name = "GFX_karol_swierczewski"
+		texturefile = "gfx/leaders/deluge/poles/karol_swierczewski.dds"
+	}
+	spriteType = {
+		name = "GFX_kazimierz_dzierzanowski"
+		texturefile = "gfx/leaders/deluge/poles/kazimierz_dzierzanowski.dds"
+	}
+	spriteType = {
+		name = "GFX_kazimierz_fabrycy"
+		texturefile = "gfx/leaders/deluge/poles/kazimierz_fabrycy.dds"
+	}
+	spriteType = {
+		name = "GFX_leonard_skierski"
+		texturefile = "gfx/leaders/deluge/poles/leonard_skierski.dds"
+	}
+	spriteType = {
+		name = "GFX_michal_rola_zymierski"
+		texturefile = "gfx/leaders/deluge/poles/michal_rola_zymierski.dds"
+	}
+	spriteType = {
+		name = "GFX_michal_tokarzewski_karaszewicz"
+		texturefile = "gfx/leaders/deluge/poles/michal_tokarzewski_karaszewicz.dds"
+	}
+	spriteType = {
+		name = "GFX_mikolaj_boltuc"
+		texturefile = "gfx/leaders/deluge/poles/mikolaj_boltuc.dds"
+	}
+	spriteType = {
+		name = "GFX_rudolf_dreszer"
+		texturefile = "gfx/leaders/deluge/poles/rudolf_dreszer.dds"
+	}
+	spriteType = {
+		name = "GFX_radoslaw_dzierzykraj_stokalski"
+		texturefile = "gfx/leaders/deluge/poles/radoslaw_dzierzykraj_stokalski.dds"
+	}
+	spriteType = {
+		name = "GFX_rudolf_prich"
+		texturefile = "gfx/leaders/deluge/poles/rudolf_prich.dds"
+	}
+	spriteType = {
+		name = "GFX_stanislaw_haller"
+		texturefile = "gfx/leaders/deluge/poles/stanislaw_haller.dds"
+	}
+	spriteType = {
+		name = "GFX_stanislaw_poplawski"
+		texturefile = "gfx/leaders/deluge/poles/stanislaw_poplawski.dds"
+	}
+	spriteType = {
+		name = "GFX_stefan_dab_biernacki"
+		texturefile = "gfx/leaders/deluge/poles/stefan_dab_biernacki.dds"
+	}
+	spriteType = {
+		name = "GFX_tadeusz_piskor"
+		texturefile = "gfx/leaders/deluge/poles/tadeusz_piskor.dds"
+	}
+	spriteType = {
+		name = "GFX_stefan_rowecki"
+		texturefile = "gfx/leaders/deluge/poles/stefan_rowecki.dds"
+	}
+	spriteType = {
+		name = "GFX_waclaw_jan_przezdziecki"
+		texturefile = "gfx/leaders/deluge/poles/waclaw_jan_przezdziecki.dds"
+	}
+	spriteType = {
+		name = "GFX_walerian_czuma"
+		texturefile = "gfx/leaders/deluge/poles/walerian_czuma.dds"
+	}
+	spriteType = {
+		name = "GFX_wladyslaw_langner"
+		texturefile = "gfx/leaders/deluge/poles/wladyslaw_langner.dds"
+	}
+	spriteType = {
+		name = "GFX_wladyslaw_jung"
+		texturefile = "gfx/leaders/deluge/poles/wladyslaw_jung.dds"
+	}
+	spriteType = {
+		name = "GFX_zygmunt_berling"
+		texturefile = "gfx/leaders/deluge/poles/zygmunt_berling.dds"
+	}
+	spriteType = {
+		name = "GFX_mieczyslaw_boruta_spiechowicz"
+		texturefile = "gfx/leaders/deluge/poles/mieczyslaw_boruta_spiechowicz.dds"
+	}
+}

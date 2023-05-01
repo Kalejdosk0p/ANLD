@@ -1,0 +1,52 @@
+﻿
+units = {
+	fleet = {
+		name = "Marina de Guerra"
+		naval_base = 12810
+			
+		task_force = {
+			name = "Armada Nacional"				
+			location = 12810
+			
+			ship = { name = "Antonio López I" definition = battleship start_experience_factor = 0.1 equipment = { ship_hull_heavy_1 = { amount = 1 owner = MEX version_name = "Antonio López I Class" } } }
+			ship = { name = "Manuel I" definition = battleship start_experience_factor = 0.1 equipment = { ship_hull_heavy_1 = { amount = 1 owner = MEX version_name = "Antonio López I Class" } } }
+			
+			ship = { name = "Rio Grande" definition = light_cruiser start_experience_factor = 0.1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MEX version_name = "Rio Grande Class" } } }
+			ship = { name = "Agua Prieta" definition = light_cruiser start_experience_factor = 0.1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MEX version_name = "Agua Prieta Class" } } }
+			ship = { name = "Rio del Norte" definition = light_cruiser start_experience_factor = 0.1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MEX version_name = "Agua Prieta Class" } } }
+			ship = { name = "Rio Bravo" definition = light_cruiser start_experience_factor = 0.1 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = MEX version_name = "Agua Prieta Class" } } }
+			
+			ship = { name = "Ciudad de Mexico" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Ciudad de Mexico Class" } } }
+			ship = { name = "Ecatepec" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Ciudad de Mexico Class" } } }
+			ship = { name = "Guadalajara" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Ciudad de Mexico Class" } } }
+			ship = { name = "Puebla" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Ciudad de Mexico Class" } } }
+			ship = { name = "Juárez" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Ciudad de Mexico Class" } } }
+			ship = { name = "Los Angeles" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Los Angeles Class" } } }
+			ship = { name = "Monterrey" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Los Angeles Class" } } }
+			ship = { name = "San Francisco" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Los Angeles Class" } } }
+			ship = { name = "Tijuana" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Los Angeles Class" } } }
+			ship = { name = "León" definition = destroyer start_experience_factor = 0.1 equipment = { ship_hull_light_1 = { amount = 1 owner = MEX version_name = "Los Angeles Class" } } }
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_cruiser_1
+			creator = "MEX" 
+			version_name = "Rio Brazos Class"
+		}
+		requested_factories = 1
+		progress = 0.1
+	}
+	add_equipment_production = {
+		equipment = {
+			type = ship_hull_light_1
+			creator = "MEX" 
+			version_name = "Ciudad de Mexico Class"
+		}
+		requested_factories = 1
+		progress = 0.1
+	}
+}

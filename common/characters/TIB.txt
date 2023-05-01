@@ -1,0 +1,63 @@
+characters={
+	TIB_jamphel_yeshe_gyaltsen={
+		name="Jamphel Yeshe Gyaltsen"
+		portraits={
+			civilian={
+				large="gfx/leaders/TIB/Portrait_Tibet_Jamphel_Yeshe_Gyaltsen.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_JAMPHEL_YESHE_GYALTSEN_DESC"
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TIB_dalai_lama_thubten_gyatso={
+		name="Dalai Lama Thubten Gyatso"
+		portraits={
+			civilian={
+				large="gfx/leaders/TIB/13th_dalai_lama.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TIB_gendün_shatra={
+		name="Gendün Shatra"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/portrait_asia_generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1942.5.1.12"
+			id=-1
+		}
+	}
+	TIB_tsepon_chöphel={
+		name="Tsepon Chöphel"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1952.5.1.12"
+			id=-1
+		}
+	}
+}

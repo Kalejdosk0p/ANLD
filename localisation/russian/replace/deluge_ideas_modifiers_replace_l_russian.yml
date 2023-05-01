@@ -1,0 +1,12 @@
+﻿l_russian:
+ mobilization_laws_cost_factor: "Стоимость Законов о призыве"
+ political_advisor: "Кабинет министров"
+ political_advisor_cost_factor: "Стоимость кабинетов министров"
+ money_cost_factor: "Стоимость денежной политики"
+ franchise_cost_factor: "Стоимость права голоса"
+ social_order_cost_factor: "Стоимость социальных заказов"
+ economy: "Экономическая мобилизация"
+ economy_cost_factor: "Стоимость экономической мобилизации"
+ low_economic_mobilisation:0 "Ранняя мобилизация"
+ partial_economic_mobilisation:0 "Частичная мобилизация"
+ tot_economic_mobilisation:0 "Общая мобилизация"

@@ -1,0 +1,123 @@
+characters={
+	SAF_moses_kotane={
+		name="Moses Kotane"
+		portraits={
+			civilian={
+				large="GFX_SAF_moses_kotane"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MOSES_KOTANE_DESC"
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAF_pixley_ka_isaka_seme={
+		name="Pixley Ka Isaka Seme"
+		portraits={
+			civilian={
+				large="gfx/leaders/Africa/Portrait_Africa_Generic_3.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_PIXLEY_SEME_DESC"
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAF_jan_smuts={
+		name="Jan Smuts"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/Portrait_SouthAfrica_Jan_Smuts.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_JAN_SMUTS_DESC"
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAF_george_edwin_brink={
+		name="George Edwin Brink"
+		portraits={
+			army={
+				small="GFX_SAF_george_edwin_brink_small"
+			}
+			army={
+				large="GFX_SAF_george_edwin_brink"
+			}
+		}
+		corps_commander={
+			traits={ desert_fox }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	SAF_guy_hallifax={
+		name="Guy Hallifax"
+		portraits={
+			army={
+				small="GFX_SAF_guy_halifax_small"
+			}
+			army={
+				large="GFX_SAF_guy_halifax"
+			}
+		}
+		navy_leader={
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	SAF_j._b._m._hertzog={
+		name="J. B. M. Hertzog"
+		portraits={
+			civilian={
+				large="GFX_SAF_james_hertzog"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAF_d._f._malan={
+		name="D. F. Malan"
+		portraits={
+			civilian={
+				large="GFX_SAF_daniel_malan"
+			}
+		}
+		country_leader={
+			desc="POLITICS_DF_MALAN_DESC"
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAF_prince_arthur_of_connaught={
+		name="Prince Arthur of Connaught"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAF/prince_of_Connaught.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

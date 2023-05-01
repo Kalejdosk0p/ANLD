@@ -1,0 +1,30 @@
+
+state={
+	id=701
+	name="STATE_701"
+
+	history={
+		owner = TUR
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			10497 3 
+		}
+		victory_points = {
+			4512 10 
+		}
+		add_core_of = TUR
+		add_core_of = KUR
+
+	}
+
+	provinces={
+		4512 10497 11739 12387 12416 
+	}
+	manpower=145110
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

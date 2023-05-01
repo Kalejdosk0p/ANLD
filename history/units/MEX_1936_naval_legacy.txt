@@ -1,0 +1,24 @@
+﻿
+units = {
+	navy = {
+		name = "Imperial Navy"
+		base = 12810
+		location = 12810
+		
+		ship = { name = "Antonio López I" definition = battleship equipment = { battleship_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Manuel I" definition = battleship equipment = { battleship_1 = { amount = 1 owner = MEX } } }
+		
+		ship = { name = "Ciudad de México" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Veracruz" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Los Angeles" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "San Francisco" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = MEX } } }
+		
+		ship = { name = "Nicolás Bravo" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Guadalupe Victoria" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Vicente Guerrero" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Juan O'Donojú" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Antonio Pérez Martínez" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Anastasio Bustamante" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MEX } } }
+		ship = { name = "Manuel de la Barcéna" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = MEX } } }
+	}
+}

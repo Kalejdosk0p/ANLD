@@ -1,0 +1,67 @@
+characters={
+	URC_anastasio_somoza_garcía={
+		name="Anastasio Somoza García"
+		portraits={
+			civilian={
+				large="gfx/leaders/URC/anastasio_somoza.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	URC_juan_bautista_sacasa={
+		name="Juan Bautista Sacasa"
+		portraits={
+			civilian={
+				large="gfx/leaders/URC/juan_sacasa.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	URC_jorge_ubico={
+		name="Jorge Ubico"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	URC_maximiliano_hernández_martínez={
+		name="Maximiliano Hernández Martínez"
+		portraits={
+			civilian={
+				large="GFX_portrait_el_salvador_maximiliano_hernandez_martinez"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	URC_rafael_Ángel_calderón_guardia={
+		name="Rafael Ángel Calderón Guardia"
+		portraits={
+			civilian={
+				large="gfx/leaders/URC/rafael_calderon.dds"
+			}
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

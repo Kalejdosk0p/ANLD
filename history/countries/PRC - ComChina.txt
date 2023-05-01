@@ -1,0 +1,85 @@
+﻿capital = 613 # Nanjing
+
+oob = "PRC_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+set_convoys = 100
+
+add_opinion_modifier = { target = JAP modifier = historic_friendship_modifier }
+add_opinion_modifier = { target = CHI modifier = historic_rivalry_modifier }
+add_opinion_modifier = { target = FRA modifier = historic_rivalry_modifier }
+add_opinion_modifier = { target = ENG modifier = historic_friendship_modifier }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	mass_assault = 1
+	early_fighter = 1
+	early_bomber = 1
+	fuel_silos = 1
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_depth_charges = 1
+	}
+	#set_naval_oob = ""
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 10
+	fascism = 70
+	communism = 10
+	neutrality = 10
+}
+
+add_ideas = {
+	limited_exports
+	limited_conscription
+	low_economic_mobilisation
+	heavenly_king
+	deluge_chinese_sectarianism_idea
+	deluge_china_vestiges_feudalism
+	novote
+}
+
+recruit_character = PRC_mao_zedong
+recruit_character = PRC_hong_dakai
+recruit_character = PRC_qiu_jin
+recruit_character = PRC_yuan_shikai
+recruit_character = PRC_xiao_yunshan
+recruit_character = PRC_shi_changhui
+recruit_character = PRC_li_xiuqing
+recruit_character = PRC_chen_xiuqing
+recruit_character = PRC_yang_yucheng
+recruit_character = PRC_zhang_chun
+recruit_character = PRC_he_hongzhang

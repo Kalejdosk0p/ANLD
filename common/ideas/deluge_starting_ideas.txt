@@ -1,0 +1,294 @@
+ideas = {
+
+	country = {
+
+		deluge_great_war_horrors_idea = {
+			
+			allowed = {
+				always = yes
+				NOT = { original_tag = FRA }
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = ENG_the_war_to_end_all_wars
+
+			removal_cost = -1
+						
+			modifier = {
+				war_support_factor = -0.05
+				conscription_factor = -0.25
+				ai_get_ally_desire_factor = -10
+				join_faction_tension = 0.1
+				generate_wargoal_tension = 0.1
+				guarantee_tension = 0.1
+			}
+		}
+
+		deluge_chinese_sectarianism_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1
+						
+			modifier = {
+				conscription_factor = -0.5
+				ai_get_ally_desire_factor = -10
+				join_faction_tension = 0.1
+				send_volunteers_tension = 0.1
+			}
+		}
+
+		deluge_legacy_of_slavery = {
+			
+			allowed = {
+				NOT = { has_government = communism }
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = communism }
+			}
+			
+			picture = legacy_of_slavery
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.2
+			}
+		}
+
+		deluge_jim_crow_laws = {
+			
+			allowed = {
+				NOT = { has_government = communism }
+			}
+
+			allowed_civil_war = {
+				NOT = { has_government = communism }
+			}
+			
+			picture = saf_history_of_segregation
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.2
+				political_power_factor = 0.2
+				local_resources_factor = 0.10
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		deluge_german_civil_war_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = strategic_bombing_focus
+
+			removal_cost = -1
+			
+			modifier = {
+				ai_get_ally_desire_factor = -100
+				join_faction_tension = 1
+				surrender_limit = 0.5
+				war_support_factor = 0.25
+			}
+			rule = {
+				can_join_factions = no
+			}
+		}
+		
+		deluge_native_independence_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			available = {
+				is_subject = no
+			}
+			
+			picture = generic_volunteer_expedition_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				war_support_factor = 0.1
+				surrender_limit = 0.25
+			}
+		}
+		
+		deluge_revolutionary_republic_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			available = {
+				is_subject = no
+			}
+			
+			picture = generic_volunteer_expedition_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				war_support_factor = 0.1
+				surrender_limit = 0.25
+			}
+		}
+		
+		deluge_china_vestiges_feudalism = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = yin_and_yang
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = -0.1
+				political_power_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+		
+		deluge_china_vestiges_feudalism_2 = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = yin_and_yang
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				conscription_factor = -0.05
+				political_power_factor = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		
+		deluge_hawaii_march_idea = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_volunteer_expedition_bonus
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.01
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				autonomy_gain = 0.5
+				war_support_factor = 0.1
+				surrender_limit = 0.25
+			}
+		}
+		
+		deluge_russia_incompetent_military = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				original_tag = SOV
+			}
+			
+			picture = tfv_can_conscription_crisis
+			
+			modifier = {
+				max_planning = -0.2
+				land_reinforce_rate = -0.01
+			}
+		}
+		
+		deluge_russia_inefficient_military = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				original_tag = SOV
+			}
+			
+			picture = HUN_secret_rearmament
+			
+			modifier = {
+				max_planning = -0.1
+			}
+		}
+		
+		deluge_russia_effective_military = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				original_tag = SOV
+			}
+			
+			picture = saf_soviet_advisers
+			
+			modifier = {
+				max_planning = 0.1
+				land_reinforce_rate = 0.01
+			}
+		}
+		
+	}
+}

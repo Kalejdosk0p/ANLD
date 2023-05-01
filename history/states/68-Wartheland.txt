@@ -1,0 +1,34 @@
+state=
+{
+	id=68
+	name="STATE_68"
+	manpower = 1230000
+	
+	state_category = rural
+	
+	resources={
+		steel=1
+		aluminium=8
+	}
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = WGR
+		add_core_of = DDR
+		
+		victory_points = {
+			3473 1 
+		}
+		victory_points = {
+			11415 5
+		}
+
+	}
+	provinces=
+	{
+	3473 9496 11415 3572
+ 	}
+}

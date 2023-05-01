@@ -1,0 +1,37 @@
+
+state={
+	id=6
+	name="STATE_6" # Flanders
+	manpower = 4747700
+	resources={
+		steel=25
+	}
+	
+	state_category = city
+
+	history={
+		owner = HOL
+		victory_points = {
+			6598 10
+		}
+		victory_points = {
+			6560 5
+		}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 2
+			air_base = 3
+			6560 = {
+				naval_base = 3
+			}
+		}
+				
+		add_core_of = HOL
+	}
+
+	provinces={
+		6560 6598 11419 13068 480
+	}
+}

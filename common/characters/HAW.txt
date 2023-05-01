@@ -1,0 +1,64 @@
+characters={
+	HAW_kalākaua={
+		name="Kalākaua"
+		portraits={
+			civilian={
+				large="gfx/leaders/HAW/kalakaua.dds"
+			}
+		}
+		field_marshal={
+			skill=1
+			attack_skill=2
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HAW_kawelo_palaikiko={
+		name="Kawelo Palaikiko"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_europe_generic_7.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			traits={ financial_expert }
+			expire="1953.5.1.12"
+			id=-1
+		}
+	}
+	HAW_akamu_kapule={
+		name="Akamu Kapule"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_8.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			traits={ armaments_organizer ideological_crusader }
+			expire="1948.5.1.12"
+			id=-1
+		}
+	}
+	HAW_keoki_kapule={
+		name="Keoki Kapule"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			expire="1943.5.1.12"
+			id=-1
+		}
+	}
+}

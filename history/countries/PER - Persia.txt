@@ -1,0 +1,48 @@
+﻿capital = 266
+
+oob = "PER_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+set_convoys = 10
+
+add_opinion_modifier = { target = TUR modifier = historic_rivalry_modifier }
+add_opinion_modifier = { target = ENG modifier = historic_friendship_modifier }
+add_opinion_modifier = { target = FRA modifier = historic_friendship_modifier }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	CAS1 = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1932.5.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 20
+	fascism = 5
+	communism = 15
+	neutrality = 60
+}
+	
+add_ideas = {
+	limited_conscription
+	partial_economic_mobilisation
+	novote
+	neutrality_idea
+}
+
+recruit_character = PER_soleyman_mirza_eskandari
+recruit_character = PER_hasan_arfa
+recruit_character = PER_mozaffar_addin_shah_qajar
+recruit_character = PER_reza_pahlavi
+recruit_character = PER_ali_esfandiari

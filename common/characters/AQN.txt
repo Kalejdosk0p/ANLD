@@ -1,0 +1,54 @@
+characters={
+	AQN_shulamith_firestone={
+		name="Shulamith Firestone"
+		portraits={
+			civilian={
+				large="gfx/leaders/AQN/firestone.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	AQN_antoine_commanda={
+		name="Antoine Commanda"
+		portraits={
+			civilian={
+				large="gfx/leaders/AQN/commanda.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	AQN_patrick_whiteduck={
+		name="Patrick Whiteduck"
+		portraits={
+			civilian={
+				large="gfx/leaders/AQN/chief_dan_george.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	AQN_louizon_tenasco={
+		name="Louizon Tenasco"
+		portraits={
+			civilian={
+				large="gfx/leaders/AQN/first_nations.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

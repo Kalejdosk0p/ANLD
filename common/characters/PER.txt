@@ -1,0 +1,84 @@
+characters={
+	PER_soleyman_mirza_eskandari={
+		name="Soleyman Mirza Eskandari"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_SOLEYMAN_MIRZA_ESKANDARI_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	PER_hasan_arfa={
+		name="Hasan Arfa"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_5.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			}
+		}
+		corps_commander={
+			traits={ desert_fox }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	PER_mozaffar_addin_shah_qajar={
+		name="Mozaffar ad-Din Shah Qajar"
+		portraits={
+			civilian={
+				large="gfx/leaders/PER/persian_shah.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	PER_reza_pahlavi={
+		name="Reza Pahlavi"
+		portraits={
+			civilian={
+				large="gfx/leaders/PER/Portrait_Iran_Reza_Shah_Pahlavi.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	PER_ali_esfandiari={
+		name="Ali Esfandiari"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			traits={ smooth_talking_charmer silent_workhorse }
+			expire="1944.5.1.12"
+			id=-1
+		}
+	}
+}

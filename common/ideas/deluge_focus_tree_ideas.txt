@@ -1,0 +1,870 @@
+ideas = {
+
+	country = {
+
+		deluge_meritocracy_idea = {
+			
+			allowed = {
+				has_government = communism
+			}
+			
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			removal_cost = -1
+
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				communism_drift = 0.1
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				money_cost_factor = -0.25
+				social_order_cost_factor = -0.25
+			}
+		}
+
+		deluge_aristocracy_idea = {
+			
+			allowed = {
+				has_government = neutrality
+			}
+			
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = triumphant_will
+			
+			modifier = {
+				neutrality_drift = 0.1
+				political_power_factor = 0.15
+			}
+		}
+		
+		deluge_land_reform_idea = {
+			
+			allowed = {
+				has_government = communism
+			}
+			
+			allowed_civil_war = {
+				has_government = communism
+			}
+			
+			removal_cost = -1
+
+			picture = home_of_revolution
+			
+			modifier = {
+				communism_drift = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		deluge_manorialism_idea = {
+			
+			allowed = {
+				has_government = neutrality
+			}
+			
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = HUN_hungarian_monarchy
+			
+			modifier = {
+				neutrality_drift = 0.1
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.1
+			}
+		}
+		
+		deluge_individualism_idea = {
+			
+			allowed = {
+				has_government = democratic
+			}
+			
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = generic_victors_of_ww1
+			
+			modifier = {
+				democratic_drift = 0.05
+				research_speed_factor = 0.05
+			}
+		}
+		
+		deluge_corporatism_idea = {
+			
+			allowed = {
+				has_government = fascism
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = generic_manpower_bonus
+			
+			modifier = {
+				fascism_drift = 0.05
+				industrial_capacity_factory = 0.1
+			}
+		}
+		
+		deluge_pluralism_idea = {
+			
+			allowed = {
+				has_government = democratic
+			}
+			
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = generic_volunteer_expedition_bonus
+			
+			modifier = {
+				democratic_drift = 0.05
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.1
+			}
+		}
+		
+		deluge_leader_cult_idea = {
+			
+			allowed = {
+				has_government = fascism
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				fascism_drift = 0.05
+				conscription = 0.005
+			}
+		}
+		
+		deluge_judiciary_idea = {
+			
+			allowed = {
+				has_government = democratic
+			}
+			
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = neutrality_idea
+			
+			modifier = {
+				democratic_drift = 0.05
+				drift_defence_factor = 0.5
+			}
+		}
+		
+		deluge_state_terror_idea = {
+			
+			allowed = {
+				has_government = fascism
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = air_war_plans_division_focus
+			
+			modifier = {
+				fascism_drift = 0.05
+				drift_defence_factor = 0.5
+			}
+		}
+		
+		deluge_police_consent_idea = {
+			
+			allowed = {
+				has_government = democratic
+			}
+			
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				democratic_drift = 0.05
+				foreign_subversive_activites = -0.5
+				resistance_growth_on_our_occupied_states = 0.1 
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25 
+			}
+		}
+		
+		deluge_secret_police_idea = {
+			
+			allowed = {
+				has_government = fascism
+			}
+			
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				fascism_drift = 0.05
+				subversive_activites_upkeep = -0.5
+				justify_war_goal_time = -0.5
+				resistance_damage_to_garrison = -0.25
+			}
+		}
+		
+		deluge_youth_organisations_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				political_power_factor = 0.1
+				army_morale_factor = 0.1
+			}
+		}
+		
+		deluge_pomeranian_populism_idea = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = home_of_revolution
+			
+			modifier = {
+				communism_drift = 0.2
+			}
+		}
+
+		deluge_kashubian_nationalism_idea = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = triumphant_will
+			
+			modifier = {
+				fascism_drift = 0.2
+			}
+		}
+		
+		deluge_mandate_institutions_idea = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				democratic_drift = 0.2
+			}
+		}
+		
+		deluge_fascism_diplomacy = {
+			
+			allowed = {
+				has_government = fascism
+			}
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+			
+			modifier = {
+				fascism_drift = 0.2
+			}
+		}
+		
+		deluge_post-great_war_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_wall_line
+			
+			modifier = {
+				political_power_factor = -0.1
+				dig_in_speed_factor = 0.2
+				planning_speed = 0.2
+			}
+		}
+
+		deluge_nation-at-arms_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				communism_drift = 0.05
+				political_power_factor = -0.2
+				dig_in_speed_factor = 0.25
+				planning_speed = 0.25
+				conscription = 0.01
+				training_time_army_factor = -0.1
+				army_leader_start_logistics_level = 1
+			}
+		}
+		
+		deluge_standing_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				communism_drift = -0.05
+				political_power_factor = -0.2
+				dig_in_speed_factor = 0.25
+				planning_speed = 0.25
+				experience_gain_army_unit_factor = 0.25
+				army_leader_start_planning_level = 1
+			}
+		}
+		
+		deluge_offensive_nation-at-arms_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				communism_drift = 0.05
+				democratic_drift = -0.05
+				political_power_factor = -0.3
+				dig_in_speed_factor = 0.3
+				planning_speed = 0.3
+				conscription = 0.01
+				training_time_army_factor = -0.1
+				army_leader_start_logistics_level = 1
+				army_attack_factor = 0.1
+				army_leader_start_attack_level = 1
+			}
+		}
+		
+		deluge_defensive_nation-at-arms_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				communism_drift = 0.05
+				democratic_drift = 0.05
+				political_power_factor = -0.3
+				dig_in_speed_factor = 0.3
+				planning_speed = 0.3
+				conscription = 0.01
+				training_time_army_factor = -0.1
+				army_leader_start_logistics_level = 1
+				army_defence_factor = 0.1
+				army_leader_start_defense_level = 1
+			}
+		}
+		
+		deluge_offensive_standing_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				communism_drift = -0.05
+				democratic_drift = -0.05
+				political_power_factor = -0.3
+				dig_in_speed_factor = 0.3
+				planning_speed = 0.3
+				experience_gain_army_unit_factor = 0.25
+				army_leader_start_planning_level = 1
+				army_attack_factor = 0.1
+				army_leader_start_attack_level = 1
+			}
+		}
+		
+		deluge_defensive_standing_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				communism_drift = -0.05
+				democratic_drift = 0.05
+				political_power_factor = -0.3
+				dig_in_speed_factor = 0.3
+				planning_speed = 0.3
+				experience_gain_army_unit_factor = 0.25
+				army_leader_start_planning_level = 1
+				army_defence_factor = 0.1
+				army_leader_start_defense_level = 1
+			}
+		}
+		
+		deluge_offensive_army_tooltip_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				democratic_drift = -0.05
+				political_power_factor = -0.3
+				dig_in_speed_factor = 0.3
+				planning_speed = 0.3
+				army_attack_factor = 0.1
+				army_leader_start_attack_level = 1
+			}
+		}
+
+		deluge_defensive_army_tooltip_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				democratic_drift = 0.05
+				political_power_factor = -0.3
+				dig_in_speed_factor = 0.3
+				planning_speed = 0.3
+				army_defence_factor = 0.1
+				army_leader_start_defense_level = 1
+			}
+		}
+
+		deluge_modern_offensive_nation-at-arms_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				communism_drift = 0.05
+				democratic_drift = -0.05
+				political_power_factor = -0.4
+				dig_in_speed_factor = 0.35
+				planning_speed = 0.35
+				conscription = 0.01
+				training_time_army_factor = -0.1
+				army_leader_start_logistics_level = 1
+				army_attack_factor = 0.1
+				army_leader_start_attack_level = 1
+				experience_gain_factor = 0.25
+				land_reinforce_rate = 0.02
+				army_speed_factor = 0.05
+			}
+		}
+		
+		deluge_modern_defensive_nation-at-arms_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_reserve_divisions
+			
+			modifier = {
+				communism_drift = 0.05
+				democratic_drift = 0.05
+				political_power_factor = -0.4
+				dig_in_speed_factor = 0.35
+				planning_speed = 0.35
+				conscription = 0.01
+				training_time_army_factor = -0.1
+				army_leader_start_logistics_level = 1
+				army_defence_factor = 0.1
+				army_leader_start_defense_level = 1
+				experience_gain_factor = 0.25
+				land_reinforce_rate = 0.02
+				army_speed_factor = 0.05
+			}
+		}
+		
+		deluge_modern_offensive_standing_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				communism_drift = -0.05
+				democratic_drift = -0.05
+				political_power_factor = -0.4
+				dig_in_speed_factor = 0.35
+				planning_speed = 0.35
+				experience_gain_army_unit_factor = 0.25
+				army_leader_start_planning_level = 1
+				army_attack_factor = 0.1
+				army_leader_start_attack_level = 1
+				experience_gain_factor = 0.25
+				land_reinforce_rate = 0.02
+				army_speed_factor = 0.05
+			}
+		}
+		
+		deluge_modern_defensive_standing_army_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				communism_drift = -0.05
+				democratic_drift = 0.05
+				political_power_factor = -0.4
+				dig_in_speed_factor = 0.35
+				planning_speed = 0.35
+				experience_gain_army_unit_factor = 0.25
+				army_leader_start_planning_level = 1
+				army_defence_factor = 0.1
+				army_leader_start_defense_level = 1
+				experience_gain_factor = 0.25
+				land_reinforce_rate = 0.02
+				army_speed_factor = 0.05
+			}
+		}
+		
+		deluge_modern_nation-at-arms_tooltip_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				communism_drift = 0.05
+				political_power_factor = -0.4
+				dig_in_speed_factor = 0.35
+				planning_speed = 0.35
+				conscription = 0.01
+				training_time_army_factor = -0.1
+				army_leader_start_logistics_level = 1
+				experience_gain_factor = 0.25
+				land_reinforce_rate = 0.02
+				army_speed_factor = 0.05
+			}
+		}
+		
+		deluge_modern_standing_army_tooltip_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				communism_drift = -0.05
+				political_power_factor = -0.4
+				dig_in_speed_factor = 0.35
+				planning_speed = 0.35
+				experience_gain_army_unit_factor = 0.25
+				army_leader_start_planning_level = 1
+				experience_gain_factor = 0.25
+				land_reinforce_rate = 0.02
+				army_speed_factor = 0.05
+			}
+		}
+		
+		deluge_modern_army_tooltip_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_acquire_tanks
+			
+			modifier = {
+				political_power_factor = -0.4
+				dig_in_speed_factor = 0.35
+				planning_speed = 0.35
+				experience_gain_factor = 0.25
+				land_reinforce_rate = 0.02
+				army_speed_factor = 0.05
+			}
+		}
+		
+		deluge_production_management_agency_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_central_management
+			
+			modifier = {
+				political_power_factor = -0.1
+				line_change_production_efficiency_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.15
+			}
+		}
+		
+		deluge_land_management_agency_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = ast_all_in
+			
+			modifier = {
+				political_power_factor = -0.1
+				production_speed_infrastructure_factor = 0.1
+				local_resources_factor = 0.1
+			}
+		}
+		
+		deluge_public_works_agency_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				political_power_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		deluge_defence_research_agency_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+
+			picture = SOV_scientist_defect
+			
+			modifier = {
+				political_power_factor = -0.1
+			}
+			
+			research_bonus = {
+				electronics = 0.05
+				nuclear = 0.05
+				rocketry = 0.05
+				jet_technology = 0.05
+			}
+		}
+		
+		deluge_chinese_dare_to_die_corps_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = dare_to_die
+			
+			modifier = {
+				fascism_drift = 0.05
+				army_core_attack_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+		
+		deluge_chinese_protracted_peoples_war_idea = {
+			
+			allowed = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			picture = generic_communist_army
+			
+			modifier = {
+				communism_drift = 0.05
+				resistance_growth_on_our_occupied_states = 0.5
+				war_support_factor = 0.05
+			}
+		}
+		
+	}
+}

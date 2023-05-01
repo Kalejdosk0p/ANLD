@@ -1,0 +1,46 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ideology_anarchist_ideology"
+		texturefile = "gfx/interface/ideologies/anarchist_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_jacobin_ideology"
+		texturefile = "gfx/interface/ideologies/jacobin_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_marxist_ideology"
+		texturefile = "gfx/interface/ideologies/marxist_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_democratic_ideology"
+		texturefile = "gfx/interface/ideologies/social_democratic_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_liberal_republican_ideology"
+		texturefile = "gfx/interface/ideologies/liberal_republican_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_constitutionalist_ideology"
+		texturefile = "gfx/interface/ideologies/constitutionalist_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_bonapartist_ideology"
+		texturefile = "gfx/interface/ideologies/bonapartist_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_reactionary_ideology"
+		texturefile = "gfx/interface/ideologies/reactionary_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_corporatist_ideology"
+		texturefile = "gfx/interface/ideologies/corporatist_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_social_darwinist_ideology"
+		texturefile = "gfx/interface/ideologies/social_darwinist_ideology.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_religious_ideology"
+		texturefile = "gfx/interface/ideologies/religious_ideology.dds"
+	}
+}

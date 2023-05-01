@@ -1,0 +1,67 @@
+characters={
+	POM_stanislaw_germalowicz={
+		name="Stanisław Germałowicz"
+		portraits={
+			civilian={
+				large="gfx/leaders/POM/stanislaw_germalowicz.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POM_philippe_petain={
+		name="Philippe Pétain"
+		portraits={
+			civilian={
+				large=GFX_portrait_FRA_philippe_petain
+				small="GFX_philippe_petain_picture_small"
+			}
+			army={
+				large=GFX_portrait_FRA_philippe_petain
+				small="GFX_philippe_petain_picture_small"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			#desc = ""
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=2
+		}
+	}
+	POM_lech_bądkowski={
+		name="Lech Bądkowski"
+		portraits={
+			civilian={
+				large="gfx/leaders/POM/lech_dabkowski.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	POM_wilhelm_stuckart={
+		name="Wilhelm Stuckart"
+		portraits={
+			civilian={
+				large="gfx/leaders/POM/wilhelm_stuckart.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

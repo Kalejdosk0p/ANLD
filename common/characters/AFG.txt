@@ -1,0 +1,76 @@
+characters={
+	AFG_mohammed_zahir_shah={
+		name="Mohammed Zahir Shah"
+		portraits={
+			civilian={
+				large="gfx/leaders/AFG/zahir_shah.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	AFG_sardar_shah_wali_khan={
+		name="Sardar Shah Wali Khan"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SAU_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ desert_fox }
+			skill=4
+			attack_skill=5
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	AFG_mohammad_hashim_khan={
+		name="Mohammad Hashim Khan"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	AFG_akbar_sherkhanzai={
+		name="Akbar Sherkhanzai"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchist_ideology
+			traits={ quartermaster_general }
+			expire="1952.5.1.12"
+			id=-1
+		}
+	}
+	AFG_shahpur_nawabi={
+		name="Shahpur Nawabi"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			traits={ compassionate_gentleman }
+			expire="1944.5.1.12"
+			id=-1
+		}
+	}
+}

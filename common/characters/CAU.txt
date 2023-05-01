@@ -1,0 +1,469 @@
+characters={
+	CAU_ioseb_jughashvili={
+		name="Ioseb Jughashvili"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAU/joseph_stalin.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAU_anastas_mikoyan={
+		name="Anastas Mikoyan"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAU/anastas_mikoyan.dds"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAU_ivan_bagramyan={
+		name="Ivan Bagramyan"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAU/ivan_bagramyan.dds"
+			}
+		}
+		field_marshal={
+			traits={ politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAU_aleksandr_vasilevsky={
+		name="Aleksandr Vasilevsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_aleksandr_vasilevsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Aleksandr_Vasilevsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer politically_connected }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = CAU_aleksandr_vasilevsky
+			allowed = { tag = CAU }
+			visible = {
+				tag = CAU
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				army_regrouping_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	CAU_boris_shaposhnikov={
+		name="Boris Shaposhnikov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_boris_shaposhnikov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Boris_Shaposhnikov.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer trait_cautious }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	CAU_issa_pliyev={
+		name="Issa Pliyev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_issa_pliyev.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Issa_Pliyev.dds"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CAU_leonid_govorov={
+		name="Leonid Govorov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_leonid_govorov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Leonid_Govorov.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CAU_georgiy_zakharov={
+		name="Georgiy Zakharov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_georgiy_zakharov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Georgiy_Zakharov.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CAU_yakov_cherevichenko={
+		name="Yakov Cherevichenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_yakov_cherevichenko.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Yakov_Cherevichenko.dds"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CAU_andrei_grechko={
+		name="Andrei Grechko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_andrei_antonovich_grechko.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Andrei_Antonovich_Grechko.dds"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	CAU_vasily_chuikov={
+		name="Vasily Chuikov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_vasily_chuikov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Vasily_Chuikov.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CAU_sergey_gorshkov={
+		name="Sergey Gorshkov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_sergey_gorshkov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Sergey_Gorshkov.dds"
+			}
+		}
+		navy_leader={
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	CAU_kirill_surkov={
+		name="Kirill Surkov"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_5.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			traits={ war_industrialist financial_expert }
+			expire="1945.5.1.12"
+			id=-1
+		}
+	}
+	CAU_kirill_kuropatkin={
+		name="Kirill Kuropatkin"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_8.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1949.5.1.12"
+			id=-1
+		}
+	}
+	CAU_beria = {
+		name = "Lavrentiy Beria"
+		portraits = {
+			army = {
+				small = GFX_idea_SOV_lavrenty_beriya
+			}
+			civilian = {
+				small = GFX_idea_SOV_lavrenty_beriya
+			}
+		}
+		advisor={
+			slot = security_chief_slot
+			idea_token = CAU_beria
+			allowed = { tag = CAU }
+			visible = {
+				tag = CAU
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				prince_of_terror
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	CAU_yegerov = {
+		name = "Alexander Yegorov"
+		portraits = {
+			army = {
+				small = GFX_idea_generic_captain_of_industry_western_european_2d
+			}
+			civilian = {
+				small = GFX_idea_generic_captain_of_industry_western_european_2d
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = CAU_beria
+			allowed = { tag = CAU }
+			visible = {
+				tag = CAU
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	CAU_kuznetsov = {
+		name = "Nikolay Kuznetsov"
+		portraits = {
+			army = {
+				small = GFX_idea_nikolay_kuznetsov
+			}
+			civilian = {
+				small = GFX_idea_nikolay_kuznetsov
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = CAU_kuznetsov
+			allowed = { tag = CAU }
+			visible = {
+				tag = CAU
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	CAU_smushkevich = {
+		name = "Yakov Smushkevich"
+		portraits = {
+			army = {
+				small = GFX_idea_yakov_smushkevich
+			}
+			civilian = {
+				small = GFX_idea_yakov_smushkevich
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = CAU_smushkevich
+			allowed = { tag = CAU }
+			visible = {
+				tag = CAU
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				air_chief_safety_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	CAU_rychagov = {
+		name = "Pavel Rychagov"
+		portraits = {
+			army = {
+				small = GFX_idea_pavel_rychagov
+			}
+			civilian = {
+				small = GFX_idea_pavel_rychagov
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = CAU_rychagov
+			allowed = { tag = CAU }
+			visible = {
+				tag = CAU
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				air_chief_all_weather_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	CAU_zhigarev = {
+		name = "Pavel Zhigarev"
+		portraits = {
+			army = {
+				small = GFX_idea_pavel_zhigarev
+			}
+			civilian = {
+				small = GFX_idea_pavel_zhigarev
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CAU_zhigarev
+			allowed = { tag = CAU }
+			visible = {
+				tag = CAU
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				air_airborne_1
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	CAU_golovko = {#Also should be unit leader: 409
+		name = "Arseniy Golovko"
+		portraits = {
+			army = {
+				small = GFX_idea_arseniy_golovko
+			}
+			civilian = {
+				small = GFX_idea_arseniy_golovko
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = CAU_golovko
+			allowed = { tag = CAU }
+			visible = {
+				tag = CAU
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				navy_submarine_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+}

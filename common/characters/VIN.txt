@@ -1,0 +1,62 @@
+characters={
+	VIN_ho_chí_minh={
+		name="Ho Chí Minh"
+		portraits={
+			civilian={
+				large="gfx/leaders/VIN/ho_chi_min.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	VIN_ngô_Đình_diem={
+		name="Ngô Đình Diem"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	VIN_jules_davout_dauerstaedt={
+		name="Jules Davout d'Auerstaedt"
+		portraits={
+			civilian={
+				large="gfx/leaders/VIN/joseph_vinoy.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	VIN_phan_boi_châu={
+		name="Phan Boi Châu"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_warlord2.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+}

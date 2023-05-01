@@ -1,0 +1,24 @@
+
+state={
+	id=770
+	name="STATE_770"
+	resources={
+		rubber=1.000
+	}
+
+	history={
+		owner = FRA
+		add_core_of = MLI
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+
+	provinces={
+		4927 5045 8116 12794 			     
+	}
+	manpower=1610200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,224 @@
+ideas = {
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		NOR_marinens_flyvebaatfabrikk = {
+			
+			picture = generic_air_manufacturer_1
+
+			
+			allowed = {
+				OR = {
+					original_tag = NOR
+					original_tag = SWE
+				}
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			equipment_bonus = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		kjeller_flyfabrikk = {
+			
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				OR = {
+					original_tag = NOR
+					original_tag = SWE
+				}
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# licenced and built fokker C.V bombers
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = {
+		
+		designer = yes
+		
+		horten_naval_yard = {
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# mer research
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	guns_manufacturer_slot = {
+		
+		designer = yes
+		
+		kongsberg = {
+			
+			picture = generic_artillery_manufacturer_3
+
+			
+			allowed = {
+				OR = {
+					original_tag = NOR
+					original_tag = SWE
+				}
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			equipment_bonus = {
+				# rifles and pistols
+			}
+			
+			traits = { chemical_plant_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	small_arms_manufacturer_slot = {
+		
+		designer = yes
+		
+		raufoss_ammunisjonsfabrikker = {
+			
+			picture = generic_infantry_equipment_manufacturer_2
+
+			
+			allowed = {
+				OR = {
+					original_tag = NOR
+					original_tag = SWE
+				}
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			equipment_bonus = {
+				# rifles and pistols
+			}
+			
+			traits = { mass_producer_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	vehicle_manufacturer_slot = {
+		
+		designer = yes
+		
+		NOR_honefoss_karosserifabrikk = {
+			# technically not a military manufacturer. Remove if problem.
+			
+			picture = generic_motorized_equipment_manufacturer_2
+
+			
+			allowed = {
+				OR = {
+					original_tag = NOR
+					original_tag = SWE
+				}
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+			}
+			
+			traits = { truck_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	industrial_concern = {
+		
+		NOR_tandbergs_radiofabrikk = {
+			
+			allowed = {
+				original_tag = NOR
+			}
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NOR_norsk_hydro = {
+
+			picture = generic_refining_concern_1
+		
+			allowed = {
+				OR = {
+					original_tag = NOR
+					original_tag = SWE
+				}
+			}
+			
+			research_bonus = {
+				industry = 0.05
+				construction_tech = 0.10
+				synth_resources = 0.10
+			}
+			
+			traits = { refinery_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+}

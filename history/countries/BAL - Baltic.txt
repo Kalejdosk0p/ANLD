@@ -1,0 +1,116 @@
+﻿capital = 808
+
+oob = "BAL_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+add_opinion_modifier = { target = BLR modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = UKR modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = CAU modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = DDR modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = FRA modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = USA modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = TUR modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = SOV modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = POL modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = HUN modifier = great_war_hostility_modifier }
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	trade_interdiction = 1
+	mass_assault = 1
+	formation_flying = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		transport = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_depth_charges = 1
+	}
+	#set_naval_oob = ""
+}
+
+create_import = {
+	resource = steel
+	factories = 1
+	exporter = DDR
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1935.5.21"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 20
+	fascism = 15
+	communism = 60
+	neutrality = 5
+}
+
+set_convoys = 50
+
+add_ideas = {
+	limited_exports
+	service_by_requirement
+	partial_economic_mobilisation
+	universal
+	floating_exchange
+	welfare_state
+	deluge_revolutionary_republic_idea
+}
+recruit_character = BAL_vilis_lācis
+recruit_character = BAL_jonas_ii
+recruit_character = BAL_archbishop_eugenijus_ivanauskas
+recruit_character = BAL_arvids_woyna
+recruit_character = BAL_konstantin_rokossovsky
+recruit_character = BAL_nikolai_vatutin
+recruit_character = BAL_kliment_voroshilov
+recruit_character = BAL_mikhail_tukhachevsky
+recruit_character = BAL_ivan_chernyakhovsky
+recruit_character = BAL_grigory_kulik
+recruit_character = BAL_kirill_meretskov
+recruit_character = BAL_filipp_golikov
+recruit_character = BAL_max_reyter
+recruit_character = BAL_nikandr_chibisov
+recruit_character = BAL_vasily_kuznetsov
+recruit_character = BAL_dmitry_lelyushenko
+recruit_character = BAL_filipp_oktyabrskiy
+recruit_character = BAL_arseniy_golovko
+recruit_character = BAL_vladimir_kasatonov
+
+

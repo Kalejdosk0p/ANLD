@@ -1,0 +1,130 @@
+characters={
+	FIN_risto_heikki_ryti={
+		name="Risto Heikki Ryti"
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Finland_Risto_Heikki_Ryti.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIN_aimo_aaltonen={
+		name="Aimo Aaltonen"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIN_vilho_annala={
+		name="Vilho Annala"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIN_erik_heinrichs={
+		name="Erik Heinrichs"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ winter_specialist ranger }
+			skill=4
+			attack_skill=4
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FIN_vilho_petter_nenonen={
+		name="Vilho Petter Nenonen"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ commando winter_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	FIN_carl_gustaf_emil_mannerheim={
+		name="Carl Gustaf Emil Mannerheim"
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/gustav_mannerheim.dds"
+			}
+		}
+		field_marshal={
+			traits={ old_guard }
+			skill=2
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIN_kyösti_kallio={
+		name="Kyösti Kallio"
+		portraits={
+			civilian={
+				large="gfx/leaders/FIN/Portrait_Finland_Kyosti_Kallio.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KYÖSTI_KALLIO_DESC"
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	FIN_grand_duke_alexandrovich={
+		name="Grand Duke Alexandrovich"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/alexei_nikolayevich_romanov_in_his_20_s_by_cainisnotmyenemy.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

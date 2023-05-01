@@ -1,0 +1,37 @@
+state={
+	id=786
+	name="STATE_786" # 751
+
+	manpower=721468
+
+	state_category = town
+
+	resources={
+		steel=20
+		aluminium=4
+	}
+
+	history={
+		owner = BEL
+		
+		victory_points = {
+			11435 1
+		}
+		victory_points = {
+			3488 1
+		}
+		
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+
+		add_core_of = BEL
+	}
+
+	provinces={
+		3488 3547 11435 11470 11494
+	}
+	
+}

@@ -1,0 +1,75 @@
+characters={
+	BUR_thakin_nu={
+		name="Thakin Nu"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	BUR_taw_phaya={
+		name="Taw Phaya"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUR/rajadhirat.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	BUR_ne_win={
+		name="Ne Win"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	BUR_ba_maw={
+		name="Ba Maw"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_warlord1.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	BUR_viscount_gough={
+		name="Viscount Gough"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUR/viscount_gough.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+}

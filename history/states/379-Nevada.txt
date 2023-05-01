@@ -1,0 +1,30 @@
+
+state={
+	id=379
+	name="STATE_379"
+	manpower = 591057
+	
+	state_category = rural
+	
+	resources={
+		steel=60
+		tungsten=30
+		aluminium=20
+		oil=20
+	}
+
+	history={
+		owner = DES
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = DES
+		victory_points = {
+			4607 1
+		}
+	}
+
+	provinces={
+		 4521 4607 4736  4816  7827  10422   12399 12425    1651 10159 766 710 7667 1601 1432 11698
+	}
+}

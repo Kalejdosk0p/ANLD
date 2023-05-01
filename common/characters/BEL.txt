@@ -1,0 +1,97 @@
+characters={
+	BEL_joseph_jacquemotte={
+		name="Joseph Jacquemotte"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_JOSEPH_JACQUEMOTTE_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BEL_georges_timmermans={
+		name="Georges Timmermans"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			}
+		}
+		navy_leader={
+			traits={ seawolf }
+			skill=4
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	BEL_grand_duchess_marieadélaïde={
+		name="Grand Duchess Marie-Adélaïde"
+		portraits={
+			civilian={
+				large="gfx/leaders/BEL/duchess_luxembourg.dds"
+			}
+		}
+		country_leader={
+			desc="duchess_luxembourg_desc"
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BEL_léon_degrelle={
+		name="Léon Degrelle"
+		portraits={
+			civilian={
+				large="gfx/leaders/BEL/leon_degrelle.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_LEON_DEGRELLE_DESC"
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BEL_m.c.l._keyaerts={
+		name="M.C.L. Keyaerts"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer hill_fighter }
+			skill=4
+			attack_skill=3
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	BEL_fernand_de_pelichy={
+		name="Fernand de Pelichy"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1949.5.1.12"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,39 @@
+﻿#Hearts of Iron IV, Après Nous Le Déluge
+Discord tags are displayed
+
+#LEAD DEVELOPER
+CommGesen, 5165
+(Concept, French content, Coding, Graphics)
+
+#DEVELOPER ASSISTANT
+Szymon, 4996
+(Polish content, Coding)
+
+#CONTRIBUTORS
+Harry, 0677
+(Color portraits)
+ivan_the_grozdnyi, 1531
+(Portraits)
+
+#TESTERS
+Thoras, 7062
+Trollage, 7876
+Holly Blue Agate, 2182
+Dawidovski, 4609
+
+#ANLD THANKS
+General Runtime
+(Concept)
+RedOtaku
+(Graphics)
+JonathanH
+(Color portraits)
+Vinctories
+(Color portraits)
+Noremac2000
+(Color portraits)
+PoorBananaMan27
+(Color portraits)
+WalkerWerraOrchestra
+Paradox Interactive
+Paradox Development Studio

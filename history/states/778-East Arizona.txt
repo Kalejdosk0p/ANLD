@@ -1,0 +1,29 @@
+state={
+	id=778
+	name="STATE_778" # 743
+
+	manpower=621468
+
+	state_category = rural
+
+
+	history={
+		owner = DES
+		
+		buildings = {
+			infrastructure = 2
+ 		}
+		
+		add_core_of = DES
+		
+		victory_points = {
+			7821 3
+		}
+		
+	}
+
+	provinces={
+		10914 1972 12552 10645 4796 7747 6897 7821 10573 7818 7764 7684 7999 9792
+	}
+	
+}

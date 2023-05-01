@@ -1,0 +1,38 @@
+﻿capital = 286
+
+oob = "VIN_1936"
+
+set_cosmetic_tag = VIN_FR
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1933.2.16"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 30
+	fascism = 5
+	communism = 5
+	neutrality = 60
+}
+
+add_ideas = {
+	novote
+	fixed_exchange
+	labour_camps
+}
+
+recruit_character = VIN_ho_chí_minh
+recruit_character = VIN_ngô_Đình_diem
+recruit_character = VIN_jules_davout_dauerstaedt
+recruit_character = VIN_phan_boi_châu

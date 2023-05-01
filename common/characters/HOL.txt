@@ -1,0 +1,143 @@
+characters={
+	HOL_hendrikus_colijn={
+		name="Hendrikus Colijn"
+		portraits={
+			civilian={
+				large="GFX_portrait_holland_hendrikus_colijn"
+			}
+		}
+		country_leader={
+			desc="POLITICS_HENDRIKUS_COLJIN_DESC"
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HOL_anton_mussert={
+		name="Anton Mussert"
+		portraits={
+			civilian={
+				large="gfx/leaders/HOL/anton_mussert.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HOL_lou_de_visser={
+		name="Lou de Visser"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_LOU_DE_VISSER_DESC"
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HOL_dirk_jan_de_geer={
+		name="Dirk Jan de Geer"
+		portraits={
+			civilian={
+				large="gfx/leaders/HOL/Portrait_Netherlands_Dirk_Jan_de_Geer.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_DIRK_JAN_DE_GEER_DESC"
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HOL_petrus_wilhelmus_best={
+		name="Petrus Wilhelmus Best"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer fortress_buster }
+			skill=4
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	HOL_johannes_theodorus_furstner={
+		name="Johannes Theodorus Furstner"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner superior_tactician }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	HOL_alexander_idenburg={
+		name="Alexander Idenburg"
+		portraits={
+			civilian={
+				large="gfx/leaders/HOL/alexander_willem_frederik_idenburg.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HOL_alexander_i={
+		name="Alexander I"
+		portraits={
+			civilian={
+				large="gfx/leaders/HOL/king_william_iii_holland.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	HOL_georges_timmermans={
+		name="Georges Timmermans"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			}
+		}
+		navy_leader={
+			traits={ seawolf }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}

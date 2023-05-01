@@ -1,0 +1,38 @@
+
+state={
+	id=226
+	name="STATE_226" # Dnipropertovsk
+	manpower = 2391047
+	
+	state_category = town
+	
+	resources={
+		oil=4
+		steel=4
+	}
+
+	history={
+		owner = UKR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			11437 = {
+				bunker = 1
+			}
+		}
+		add_core_of = UKR
+		victory_points = {
+			11437 20
+		}
+		victory_points = {
+			11561 5
+		}
+		victory_points = {
+			11715 3
+		}
+	}
+
+	provinces={
+		453 472 486 6423 9419 9433 9463 9479 11422 11437 11452 11561 11715
+	}
+}

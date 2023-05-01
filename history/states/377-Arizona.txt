@@ -1,0 +1,37 @@
+
+state={
+	id=377
+	name="STATE_377"
+	manpower = 1935572
+	
+	state_category = large_town
+	
+	resources={
+		steel=20
+		oil=5
+		aluminium=8
+	}
+
+	history={
+		owner = DES
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			air_base = 1
+			853 = {
+				bunker = 3
+
+			}
+			
+		}
+		add_core_of = DES
+		victory_points = {
+			853 20
+		}
+
+	}
+
+	provinces={
+		850 853 1793 8115 11814 12765 4727 12303 4657 10387 4799 7879 12699 1740
+	}
+}

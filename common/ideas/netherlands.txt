@@ -1,0 +1,214 @@
+ideas = {
+	#TECHNOLOGUY
+
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		fokker = {
+			
+			picture = generic_air_manufacturer_3
+
+			
+			allowed = {
+				original_tag = HOL
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# fokker D.XXI fighter, not very effective vs armored aircraft but excellent otherwise
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		koolhoven = {
+			
+			picture = generic_air_manufacturer_2
+
+			
+			allowed = {
+				original_tag = HOL
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				# recon and fighter airplanes
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	naval_manufacturer = { 
+		
+		designer = yes
+		
+		nsm_amsterdam = {
+			
+			picture = generic_naval_manufacturer_1
+
+			
+			allowed = {
+				original_tag = HOL
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# fast ships! go go go
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		wilton_fijenoord = {
+			
+			picture = generic_naval_manufacturer_2
+		
+			
+			allowed = {
+				original_tag = HOL
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+				
+			modifier = {
+			}
+		}
+	}
+	
+	
+	vehicle_manufacturer_slot = {
+		
+		designer = yes
+
+		HOL_DAF_trucks = {
+			
+			picture = generic_motorized_equipment_manufacturer_2
+
+			allowed = {
+				tag = HOL
+			}
+			
+			cost = 150
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { truck_manufacturer }
+		}
+		
+	}
+		
+	guns_manufacturer_slot = {
+		
+		designer = yes
+
+		artillerie_inrichtingen = {
+			
+			picture = generic_artillery_manufacturer_2
+
+			
+			allowed = {
+				original_tag = HOL
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			equipment_bonus = {
+				# more research needed
+			}
+			
+			traits = { steelworks_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+	}
+	
+	small_arms_manufacturer_slot = {
+		
+		designer = yes
+
+		hih_siderius = {
+		
+			picture = generic_infantry_equipment_manufacturer_3
+		
+			
+			allowed = {
+				original_tag = HOL
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { military_ordnance_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	industrial_concern = {
+	
+		HOL_royal_dutch_shell = {
+			
+			allowed = {
+				original_tag = HOL
+			}
+
+			picture = generic_industrial_concern_1
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			
+			traits = { industrial_concern }
+		}
+
+		HOL_philips = {
+			
+			allowed = {
+				original_tag = HOL
+			}
+
+			picture = generic_electronics_concern_1
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+		}		
+	}
+}

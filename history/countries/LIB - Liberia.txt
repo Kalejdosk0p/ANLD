@@ -1,0 +1,37 @@
+﻿capital = 298
+
+oob = "LIB_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.6.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 30
+	fascism = 10
+	communism = 20
+	neutrality = 40
+}
+
+add_ideas = {
+	fixed_exchange
+}
+recruit_character = LIB_edwin_barclay
+recruit_character = LIB_siaka_i
+recruit_character = LIB_archbishop_michael_francis
+recruit_character = LIB_sam_bockarie
+

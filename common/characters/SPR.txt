@@ -1,0 +1,112 @@
+characters={
+	SPR_alejandro_lerroux={
+		name="Alejandro Lerroux"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ALEJANDRO_LERROUX_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SPR_alfonso_xiii={
+		name="Alfonso XIII"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/king_alfonso.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SPR_manuel_azana={
+		name="Manuel Azana"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Spain_Manuel_Azana.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MANUEL_AZANA_DESC"
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SPR_francisco_franco={
+		name="Francisco Franco"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Spain_Francisco_Franco.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+		country_leader={
+			desc="POLITICS_FRANCISCO_FRANCO_DESC"
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SPR_jose_antonio_primo_de_rivera={
+		name="Jose Antonio Primo de Rivera"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/Jose_Antonio_Primo_de_Rivera.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SPR_josé_díaz={
+		name="José Díaz"
+		portraits={
+			civilian={
+				large="gfx/leaders/SPR/Portrait_Spain_Jose_Diaz.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_JOSE_DIAZ_DESC"
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SPR_josé_asensio_torrado={
+		name="José Asensio Torrado"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+}

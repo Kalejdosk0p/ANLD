@@ -1,0 +1,57 @@
+characters={
+	PHI_manuel_luis_quezón={
+		name="Manuel Luis Quezón"
+		portraits={
+			civilian={
+				large="gfx/leaders/PHI/Portrait_Philippines_Manuel_Luis_Quezon.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MANUEL_LUIS_QUEZON_DESC"
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	PHI_pedro_p._baguisa={
+		name="Pedro P. Baguisa"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_PEDRO_BAGUISA_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	PHI_artemio_díaz={
+		name="Artemio Díaz"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			traits={ armaments_organizer }
+			expire="1953.5.1.12"
+			id=-1
+		}
+	}
+	PHI_antonio_jacinto={
+		name="Antonio Jacinto"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1950.5.1.12"
+			id=-1
+		}
+	}
+}

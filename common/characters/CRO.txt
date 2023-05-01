@@ -1,0 +1,136 @@
+characters={
+	CRO_deluge_maria_draskovic={
+		name=CRO_Character_deluge_maria_draskovic
+		portraits={
+			civilian={
+				large="gfx/leaders/CRO/maria_draskovic.dds"
+			}
+		}
+		country_leader={
+			desc = "deluge_maria_draskovic_desc"
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			traits = {
+				queen_of_illyrians
+			}
+		}
+	}
+	CRO_ante_pavelic={
+		name="Ante Pavelic"
+		portraits={
+			civilian={
+				large="gfx/leaders/CRO/ante_pavelic.dds"
+			}
+		}
+		country_leader={
+			desc="ANTE_PAVELIC_DESC"
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CRO_josip_broz_tito={
+		name="Josip Broz Tito"
+		portraits={
+			civilian={
+				large="gfx/leaders/CRO/josip_broz_tito.dds"
+				small = "GFX_josip_broz_tito_picture_small"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = CRO_josip_broz_tito
+			allowed = { tag = CRO }
+			visible = {
+				tag = CRO
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				communist_revolutionary
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	CRO_deluge_paul_von_brlog={
+		name=CRO_Character_deluge_paul_von_brlog
+		portraits={
+			army={
+				small = "GFX_paul_von_brlog_picture_small"
+				large="gfx/leaders/CRO/paul_von_brlog.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	CRO_deluge_albrecht_luitpold={
+		name=CRO_Character_deluge_albrecht_luitpold
+		portraits={
+			army={
+				large="gfx/leaders/CRO/albrecht_luitpold.dds"
+				small = "GFX_albrecht_luitpol_picture_small"
+			}
+		}
+		field_marshal={
+			skill=3
+			attack_skill=3
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+	CRO_deluge_radic={
+		name=CRO_Character_deluge_radic
+		portraits={
+			army = {
+				large="gfx/leaders/CRO/stjepan_radic.dds"
+			}
+			civilian = {
+				large="gfx/leaders/CRO/stjepan_radic.dds"
+			}
+		}
+		country_leader={
+			desc = "radic_desc"
+			ideology=social_democratic_ideology
+			expire="1945.5.1.12"
+			traits = {
+				
+			}
+		}
+	}
+	CRO_deluge_vukovic={
+		name = CRO_Character_deluge_vukovic
+		portraits={
+			army = {
+				small = "GFX_janko_vukovic_picture_small"
+				large="gfx/leaders/CRO/janko_vukovic.dds"
+			}
+			navy = {
+				small = "GFX_janko_vukovic_picture_small"
+				large="gfx/leaders/CRO/janko_vukovic.dds"
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner old_guard_navy }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=3
+			coordination_skill=3
+			legacy_id=102
+		}
+	}
+}

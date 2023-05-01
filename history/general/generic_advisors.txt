@@ -1,0 +1,1149 @@
+every_possible_country = {##Communist Revolutionary
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = communist_revolutionary characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_communist_revolutionary # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { communist_revolutionary }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 1
+					has_government = communism
+				}
+				modifier = {
+					factor = 0
+					has_government = democratic
+				}
+				modifier = {
+					factor = 0
+					has_government = neutrality
+				}
+				modifier = {
+					factor = 0
+					has_government = fascism
+				}
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_communist_revolutionary }
+		}
+	}
+}
+
+every_possible_country = {###Democratic Reformer
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = democratic_reformer characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_democratic_reformer # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { democratic_reformer }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					has_government = communism
+				}
+				modifier = {
+					factor = 1
+					has_government = democratic
+				}
+				modifier = {
+					factor = 0
+					has_government = neutrality
+				}
+				modifier = {
+					factor = 0
+					has_government = fascism
+				}
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_democratic_reformer }
+		}
+	}
+}
+
+every_possible_country = {##Fascist Demagouge
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = fascist_demagogue characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_fascist_demagogue # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { fascist_demagogue }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					has_government = communism
+				}
+				modifier = {
+					factor = 0
+					has_government = democratic
+				}
+				modifier = {
+					factor = 0
+					has_government = neutrality
+				}
+				modifier = {
+					factor = 1
+					has_government = fascism
+				}
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_fascist_demagogue }
+		}
+	}
+}
+
+every_possible_country = {###Monarchist Statesman
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = monarchist_statesman characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_monarchist_statesman # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { monarchist_statesman }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					has_government = communism
+				}
+				modifier = {
+					factor = 0
+					has_government = democratic
+				}
+				modifier = {
+					factor = 1
+					has_government = neutrality
+				}
+				modifier = {
+					factor = 0
+					has_government = fascism
+				}
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+}
+
+every_possible_country = {##Head of Intelligence
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		has_dlc = "La Resistance"
+		NOT = {
+			has_allowed_idea_with_traits = { idea = head_of_intelligence characters = yes }
+		}
+		is_dynamic_country = no
+	}
+	generate_character = {
+		token_base = generic_head_of_intelligence # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { head_of_intelligence }
+			available = {
+				has_intelligence_agency = yes
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					has_intelligence_agency = no
+					factor = 0
+				}
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_head_of_intelligence }
+		}
+	}
+}
+
+every_possible_country = {###Captain of Industry
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		NOT = {
+			has_allowed_idea_with_traits = { idea = captain_of_industry characters = yes }
+		}
+		is_dynamic_country = no
+	}
+	generate_character = {
+		token_base = generic_captain_of_industry # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { captain_of_industry }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+
+every_possible_country = {##Fortification Engineer
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		NOT = {
+			has_allowed_idea_with_traits = { idea = fortification_engineer characters = yes }
+		}
+		is_dynamic_country = no
+	}
+	generate_character = {
+		token_base = generic_fortification_engineer # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { fortification_engineer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_fortification_engineer }
+		}
+	}
+}
+
+every_possible_country = {##War Industrialist
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		NOT = {
+			has_allowed_idea_with_traits = { idea = war_industrialist characters = yes }
+		}
+		is_dynamic_country = no
+	}
+	generate_character = {
+		token_base = generic_war_industrialist # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { war_industrialist }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_war_industrialist }
+		}
+	}
+}
+
+every_possible_country = {###Smooth Talking Charmer
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		NOT = {
+			has_allowed_idea_with_traits = { idea = smooth_talking_charmer characters = yes }
+		}
+		is_dynamic_country = no
+	}
+	generate_character = {
+		token_base = generic_smooth_talking_charmer # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { smooth_talking_charmer }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_air_air_combat_trainer }
+			civilian = { small = GFX_idea_generic_air_air_combat_trainer }
+		}
+	}
+}
+
+every_possible_country = {##Compassionate Gentleman
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		NOT = {
+			has_allowed_idea_with_traits = { idea = compassionate_gentleman characters = yes }
+		}
+		is_dynamic_country = no
+	}
+	generate_character = {
+		token_base = generic_compassionate_gentleman # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { compassionate_gentleman }
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_chief_off}
+			civilian = { small =GFX_idea_generic_army_chief_off }
+		}
+	}
+}
+every_possible_country = {##Super Natural Mystic
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		NOT = {
+			has_allowed_idea_with_traits = { idea = supernatural_mystic characters = yes }
+		}
+		is_dynamic_country = no
+	}
+	generate_character = {
+		token_base = generic_supernatural_mystic # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { supernatural_mystic }
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			#on_add = {
+			#	custom_effect_tooltip = tooltip_supernatural_mystic_curse_protection
+			#}
+		}
+		portraits = { 
+			army = { small = gfx/interface/ideas/aleister_crowley.dds}
+			civilian = { small = gfx/interface/ideas/aleister_crowley.dds}
+		}
+	}
+}
+every_possible_country = {##Colonial Governor
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = colonial_governor characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_colonial_governor # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { colonial_governor }
+			allowed = {
+				has_dlc = "Together for Victory"
+				NOT = {
+					has_available_idea_with_traits = { idea = colonial_governor limit = 1 }
+				}
+			}
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+				num_subjects > 0
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_chief_decisive_bat}
+			civilian = { small =GFX_idea_generic_navy_chief_decisive_bat }
+		}
+	}
+}
+every_possible_country = {##International Secretary
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = international_secretary characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_international_secretary # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { international_secretary }
+			allowed = {
+				has_dlc = "Together for Victory"
+				NOT = {
+					has_available_idea_with_traits = { idea = international_secretary limit = 1 }
+				}
+			}
+			available = {
+				has_government = communism
+				num_subjects > 0
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_navy_anti_submarine}
+			civilian = { small =GFX_idea_generic_navy_anti_submarine }
+		}
+	}
+}
+every_possible_country = {##Independence Fighter
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = independence_fighter characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_independence_fighter # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { independence_fighter }
+			allowed = {
+				has_dlc = "Together for Victory"
+				NOT = {
+					has_available_idea_with_traits = { idea = independence_fighter limit = 1 }
+				}
+			}
+			available = {
+				is_subject = yes
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_air_close_air_sup}
+			civilian = { small =GFX_idea_generic_air_close_air_sup }
+		}
+	}
+}
+every_possible_country = {##Trades Unionist
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = trades_unionist characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_trades_unionist # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { trades_unionist }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Innovative Capitalist
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = innovative_capitalist characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_innovative_capitalist # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { innovative_capitalist }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_air_chief_all_weather}
+			civilian = { small =GFX_idea_generic_air_chief_all_weather }
+		}
+	}
+}
+every_possible_country = {##Landed Gentleman
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = landed_gentleman characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_landed_gentleman # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { landed_gentleman }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_army_art}
+			civilian = { small =GFX_idea_generic_army_art }
+		}
+	}
+}
+every_possible_country = {##Great War Hero
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = great_war_hero characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_great_war_hero # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { great_war_hero }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Cheif of Propaganda
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			has_allowed_idea_with_traits = { idea = chief_of_propaganda characters = yes }
+		}
+	}
+	generate_character = {
+		token_base = generic_chief_of_propaganda # token will be TAG_token_base
+		advisor = {
+			slot = political_advisor
+			traits = { chief_of_propaganda }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Cheif of Reform 1
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = army_chief_reform_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_reform_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_reform_3 characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_deluge_army_chief_reform # token will be TAG_token_base
+		advisor = {
+			slot = chief_of_staff_slot
+			traits = { army_chief_reform_1 }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Cheif of Drill 1
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = army_chief_drill_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_drill_3 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_chief_drill_1 characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_deluge_army_chief_drill # token will be TAG_token_base
+		advisor = {
+			slot = chief_of_staff_slot
+			traits = { army_chief_drill_1 }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Coast Guard
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = coast_guard characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_coast_guard # token will be TAG_token_base
+		advisor = {
+			slot = security_chief_slot
+			traits = { coast_guard }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Paramilitary Chief
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = paramilitary_chief characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_paramilitary_chief # token will be TAG_token_base
+		advisor = {
+			slot = security_chief_slot
+			traits = { paramilitary_chief }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##National Guard
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = national_guard characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_national_guard # token will be TAG_token_base
+		advisor = {
+			slot = security_chief_slot
+			traits = { national_guard }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Prince of Terror
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = prince_of_terror characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_prince_of_terror # token will be TAG_token_base
+		advisor = {
+			slot = security_chief_slot
+			traits = { prince_of_terror }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Spy Master
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = spy_master characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_spy_master # token will be TAG_token_base
+		advisor = {
+			slot = intelligence_chief_slot
+			traits = { spy_master }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Spy Catcher
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = spy_catcher characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_spy_catcher # token will be TAG_token_base
+		advisor = {
+			slot = intelligence_chief_slot
+			traits = { spy_catcher }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Infiltration Expert
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = infiltration_expert characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_infiltration_expert # token will be TAG_token_base
+		advisor = {
+			slot = intelligence_chief_slot
+			traits = { infiltration_expert }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Disinformation Expert
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = disinformation_expert characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_disinformation_expert # token will be TAG_token_base
+		advisor = {
+			slot = intelligence_chief_slot
+			traits = { disinformation_expert }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Army Infantry Leader
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = army_infantry_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_infantry_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_infantry_3 characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_army_infantry # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_infantry_1 }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Army Special Forces Leader
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = army_commando_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_commando_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_commando_3 characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_army_special_forces # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_commando_1 }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}
+every_possible_country = {##Army Regrouper
+	limit = {
+		NOT = {
+			OR = {
+				original_tag = POL
+				original_tag = FRA
+			}
+		}
+		is_dynamic_country = no
+		NOT = {
+			OR = {
+				has_allowed_idea_with_traits = { idea = army_regrouping_1 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_regrouping_2 characters = yes }
+				has_allowed_idea_with_traits = { idea = army_regrouping_3 characters = yes }
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_army_regrouper # token will be TAG_token_base
+		advisor = {
+			slot = high_command
+			traits = { army_regrouping_1 }
+			allowed = {
+				
+			}
+			available = {
+				
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		portraits = { 
+			army = { small = GFX_idea_generic_captain_of_industry}
+			civilian = { small =GFX_idea_generic_captain_of_industry }
+		}
+	}
+}

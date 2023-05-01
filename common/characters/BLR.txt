@@ -1,0 +1,108 @@
+characters={
+	BLR_lev_dovator={
+		name="Lev Dovator"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/lev_dovator.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BLR_piotr_miklashevich={
+		name="Piotr Miklashevich"
+		portraits={
+			civilian={
+				large="gfx/leaders/BLR/belarusian_judge.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BLR_leanard_zajac={
+		name="Leanard Zajac"
+		portraits={
+			civilian={
+				large="gfx/leaders/BLR/leanard_zajac.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BLR_raman_skirmut={
+		name="Raman Skirmut"
+		portraits={
+			civilian={
+				large="gfx/leaders/BLR/raman_skirmut.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BLR_exarch_paul_of_belarus={
+		name="Exarch Paul of Belarus"
+		portraits={
+			civilian={
+				large="gfx/leaders/BLR/belarusian_bishop.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BLR_stanisław_bułakbałachowicz={
+		name="Stanisław Bułak-Bałachowicz"
+		portraits={
+			civilian={
+				large="gfx/leaders/BLR/stanislaw_balachowicz.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BLR_vyacheslav_menzhinsky = {
+		name = "Vyacheslav Menzhinsky"
+		portraits={
+			civilian={
+				small = GFX_idea_generic_captain_of_industry_western_european_2d
+			}
+			army = {
+				small = GFX_idea_generic_captain_of_industry_western_european_2d
+			}
+		}
+		advisor={
+			slot = security_chief_slot
+			idea_token = BLR_vyacheslav_menzhinsky
+			allowed = { tag = BLR }
+			visible = {
+				tag = BLR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				prince_of_terror
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=783
+	name="STATE_783"
+	
+	impassable = yes
+
+	history={
+		owner = EGY
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = EGY
+		add_core_of = SUD
+
+	}
+
+	provinces={
+		7987 8103 10900 
+	}
+	manpower=16539
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

@@ -1,0 +1,75 @@
+﻿add_namespace = deluge_greece
+country_event = {
+	id = deluge_greece.1
+	title = deluge_greece.1.t
+	desc = deluge_greece.1.d
+	picture = GFX_report_event_gre_fascism
+	fire_only_once = yes
+	trigger = {
+		tag = GRE
+		has_idea = GRE_metaxism_on_the_rise
+		date > 1937.1.1
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = deluge_greece.1.a
+		swap_ideas = {
+			remove_idea = GRE_metaxism_on_the_rise
+			add_idea = GRE_metaxism_embraced
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.3
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = deluge_greece.1.b
+		swap_ideas = {
+			remove_idea = GRE_metaxism_on_the_rise
+			add_idea = GRE_metaxism_embraced
+		}
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+			last_election = "1935.12.17"
+			election_frequency = 48 
+		}
+		add_ideas = novote
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.3
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = deluge_greece.1.c
+		remove_ideas = GRE_metaxism_on_the_rise
+		add_manpower = -10000
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.3
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.3
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

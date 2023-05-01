@@ -1,0 +1,24 @@
+FRA_league_of_nations = {
+	icon = generic_formable_nations
+	allowed = {
+		original_tag = FRA
+	}
+	visible = {
+		OR = {
+			has_completed_focus = FRA_league_of_nations
+		}
+	}
+}
+
+FRA_economy_decisions = {
+	icon = generic_economy
+	allowed = {
+		original_tag = FRA
+	}
+	visible = {
+		OR = {
+			has_completed_focus = FRA_postroitvetvaviabaz
+		}
+	}
+
+}

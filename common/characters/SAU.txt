@@ -1,0 +1,56 @@
+characters={
+	SAU_abdulaziz_ibn_saud={
+		name="Abdulaziz Ibn Saud"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Saudi_Arabia_Abdulazis_Ibn_Saud.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SAU_yusuf_ibn_fuad={
+		name="Yusuf ibn Fuad"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			traits={ war_industrialist }
+			expire="1947.5.1.12"
+			id=-1
+		}
+	}
+	SAU_abd_almalik_ibn_hisham={
+		name="Abd al-Malik ibn Hisham"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=social_democratic_ideology
+			traits={ smooth_talking_charmer captain_of_industry }
+			expire="1950.5.1.12"
+			id=-1
+		}
+	}
+	SAU_fawzi_ibn_ali={
+		name="Fawzi ibn Ali"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1953.5.1.12"
+			id=-1
+		}
+	}
+}

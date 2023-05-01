@@ -1,0 +1,598 @@
+characters={
+	UKR_nestor_makhno={
+		name="Nestor Makhno"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/nestor_makhno.dds"
+			}
+		}
+		field_marshal={
+			traits={ trait_reckless cavalry_officer defensive_doctrine }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=anarchist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_hetman_grigoriev={
+		name="Hetman Grigoriev"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/cossack_general.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_dmytro_antonovych={
+		name="Dmytro Antonovych"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/cossack_officer.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_stepan_bandera={
+		name="Stepan Bandera"
+		portraits={
+			civilian={
+				large="gfx/leaders/UKR/Stepan_Bandera.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	UKR_andrey_yeryomenko={
+		name="Andrey Yeryomenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_andrey_yeryomenko.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Andrey_Yeryomenko.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless cavalry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_rodion_malinovsky={
+		name="Rodion Malinovsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_rodion_malinovsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Rodion_Malinovsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard career_officer trait_cautious politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_georgy_zhukov={
+		name="Georgy Zhukov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_gregory_zhukov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Gregory_Zhukov.dds"
+			}
+		}
+		corps_commander={
+			traits={ media_personality armor_officer war_hero winter_specialist }
+			skill=5
+			attack_skill=5
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=5
+			legacy_id=-1
+		}
+	}
+	UKR_fedir_shchus={
+		name="Fedir Shchus"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/SOV/russian_reenactor_2.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_ivan_konev={
+		name="Ivan Konev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_ivan_konev.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Ivan_Konev.dds"
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader armor_officer politically_connected }
+			skill=5
+			attack_skill=4
+			defense_skill=5
+			planning_skill=2
+			logistics_skill=5
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_ivan_konev
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				army_concealment_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	UKR_semyon_timoshenko={
+		name="Semyon Timoshenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_semyon_timoshenko.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Semyon_Timoshenko.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer cavalry_officer politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = UKR_semyon_timoshenko
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	UKR_semyon_budyonny={
+		name="Semyon Budyonny"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_semyon_budyonny.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Semyon_Budyonny.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard cavalry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_andrey_vlasov={
+		name="Andrey Vlasov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_andrey_vlasov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Andrey_Vlasov.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer winter_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	UKR_ivan_fedyuninsky={
+		name="Ivan Fedyuninsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_ivan_fedyuninsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Ivan_Fedyuninsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_maksim_purkayev={
+		name="Maksim Purkayev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_maksim_purkayev.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Maksim_Purkayev.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	UKR_alexander_gorbatov={
+		name="Alexander Gorbatov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_alexander_gorbatov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Alexander_Gorbatov.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer cavalry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	UKR_kirill_moskalenko={
+		name="Kirill Moskalenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kirill_moskalenko.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Kirill_Moskalenko.dds"
+			}
+		}
+		corps_commander={
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	UKR_kuzma_galitsky={
+		name="Kuzma Galitsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kuzma_galitsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Kuzma_Galitsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_markian_popov={
+		name="Markian Popov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_matkian_popov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Matkian_Popov.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist infantry_officer winter_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_nikolai_berzarin={
+		name="Nikolai Berzarin"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_nikolai_berzarin.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Nikolai_Berzarin.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	UKR_gordey_levchenko={
+		name="Gordey Levchenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_gordey_levchenko.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Gordey_Levchenko.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_gordey_levchenko
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				navy_submarine_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	UKR_stepan_krasovsky={
+		name="Stepan Krasovsky"
+		portraits={
+			army={
+				small = GFX_idea_stepan_krasovsky
+			}
+			army={
+				large = GFX_idea_stepan_krasovsky
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = UKR_stepan_krasovsky
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				air_air_combat_training_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	UKR_alexander_novikov={
+		name="Alexander Novikov"
+		portraits={
+			army={
+				small = GFX_idea_alexander_novikov
+			}
+			army={
+				large = GFX_idea_alexander_novikov
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = UKR_alexander_novikov
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				air_chief_safety_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	UKR_pyotr_smirnov={
+		name="Pyotr Smirnov"
+		portraits={
+			army={
+				small = GFX_idea_pyotr_smirnov
+			}
+			army={
+				large = GFX_idea_pyotr_smirnov
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = UKR_pyotr_smirnov
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	UKR_vasily_blucher={
+		name="Vasily Blucher"
+		portraits={
+			army={
+				small = GFX_idea_generic_captain_of_industry_western_european_2d
+			}
+			army={
+				large = GFX_idea_generic_captain_of_industry_western_european_2d
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = UKR_vasily_blucher
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				army_chief_offensive_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	UKR_genrikh_yagoda = {
+		name="Genrikh Yagoda"
+		portraits={
+			army={
+				small = GFX_idea_SOV_genrikh_yagoda
+			}
+			army={
+				large = GFX_idea_SOV_genrikh_yagoda
+			}
+		}
+		advisor={
+			slot = security_chief_slot
+			idea_token = UKR_genrikh_yagoda
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				prince_of_terror
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	UKR_nikolai_voznesensky = {
+		name="Nikolai Voznesensky"
+		portraits={
+			army={
+				small = GFX_idea_SOV_nikolay_voznesensky
+			}
+			army={
+				large = GFX_idea_SOV_nikolay_voznesensky
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = UKR_nikolai_voznesensky
+			allowed = { tag = UKR }
+			visible = {
+				tag = UKR
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				captain_of_industry
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+}

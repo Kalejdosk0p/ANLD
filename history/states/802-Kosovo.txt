@@ -1,0 +1,29 @@
+
+state={
+	id=802
+	name="STATE_802"
+	resources={
+		aluminium=6.000
+	}
+
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		add_core_of = SWI
+		add_core_of = FRA
+
+	}
+
+	provinces={
+		636 9618 9620 11590 
+	}
+	manpower=943689
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

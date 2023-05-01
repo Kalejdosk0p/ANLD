@@ -1,0 +1,30 @@
+state={
+	id=96
+	name="STATE_96"
+	manpower = 1226000
+	
+	state_category = town
+	
+	resources={
+		steel=4
+	}
+	history={
+		owner = BLR
+		victory_points = {
+			3320 20
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			air_base = 1
+		}
+		add_core_of = BLR
+		add_core_of = LIT
+		add_core_of = BAL
+	}
+
+	provinces={
+		233 277 358 406 3320 6340 9295 9341 11342 11391 
+	}
+}

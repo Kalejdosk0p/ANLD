@@ -1,0 +1,38 @@
+
+state={
+	id=311
+	name="STATE_311"
+	resources={
+		chromium=10.000
+		tungsten=8.000
+		oil=6.000
+	}
+
+	history={
+		owner = CAU
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			11664 = {
+				bunker = 1
+
+			}
+
+		}
+		add_core_of = SOV
+		add_core_of = CAU
+		victory_points = {
+			9663 1 
+		}
+
+	}
+
+	provinces={
+		685 3698 6674 6692 6721 9649 9663 9674 11664 
+	}
+	manpower=753970
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

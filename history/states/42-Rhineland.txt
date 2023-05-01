@@ -1,0 +1,57 @@
+
+state={
+	id=42
+	name="STATE_42"
+	manpower = 1998308
+	resources={
+		steel=15
+		aluminium=20
+	}
+	
+	state_category = city
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+
+			3558 = {
+				bunker = 1
+			}
+			
+			3423 = {
+				bunker = 1
+			}
+			
+			11560 = {
+				bunker = 1
+			}
+			
+		}
+		add_core_of = FRA
+		add_core_of = ALS
+	
+		victory_points = {
+			9575 5
+		}
+		victory_points = {
+			3423 5
+		}
+		victory_points = {
+			11531 10
+		}
+		victory_points = {
+			11560 5
+		}
+		victory_points = {
+			3558 3
+		}
+	}
+
+	provinces={
+		563 3423 3558 9575 11531 11547 11560
+	}
+	
+	
+}

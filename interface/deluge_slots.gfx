@@ -1,0 +1,33 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_slot_small_arms_manufacturer_slot"
+		textureFile = "gfx/interface/idea_slot_small_arms_manufacturer_slot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_chief_of_staff_slot"
+		textureFile = "gfx/interface/idea_slot_chief_of_staff_slot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_intelligence_chief_slot"
+		textureFile = "gfx/interface/idea_slot_intelligence_chief_slot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_security_chief_slot"
+		textureFile = "gfx/interface/idea_slot_security_chief_slot.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_slot_vehicle_manufacturer_slot"
+		textureFile = "gfx/interface/idea_slot_vehicle_manufacturer_slot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_guns_manufacturer_slot"
+		textureFile = "gfx/interface/idea_slot_guns_manufacturer_slot.dds"
+	}
+	
+}

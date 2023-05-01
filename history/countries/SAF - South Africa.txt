@@ -1,0 +1,87 @@
+﻿capital = 275
+
+oob = "SAF_1936"
+
+set_cosmetic_tag = SAF_GB
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	cv_early_fighter = 1
+	cv_naval_bomber1 = 1
+	naval_bomber1 = 1
+	early_bomber = 1
+	CAS1 = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_depth_charges = 1
+	}
+	#set_naval_oob = ""
+}
+
+set_convoys = 25
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 10
+	fascism = 30
+	communism = 20
+	neutrality = 40
+}
+
+add_ideas = {
+	robber_barons
+}
+
+recruit_character = SAF_moses_kotane
+recruit_character = SAF_pixley_ka_isaka_seme
+recruit_character = SAF_jan_smuts
+recruit_character = SAF_george_edwin_brink
+recruit_character = SAF_guy_hallifax
+recruit_character = SAF_j._b._m._hertzog
+recruit_character = SAF_d._f._malan
+recruit_character = SAF_prince_arthur_of_connaught

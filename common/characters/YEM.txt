@@ -1,0 +1,57 @@
+characters={
+	YEM_yahya_hamididdin={
+		name="Yahya Hamididdin"
+		portraits={
+			civilian={
+				large="GFX_portrait_yemen_imam_yahya"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	YEM_hasan_ibn_umar={
+		name="Hasan ibn Umar"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_communism1.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchist_ideology
+			traits={ compassionate_gentleman financial_expert }
+			expire="1948.5.1.12"
+			id=-1
+		}
+	}
+	YEM_chandler_ibn_yusuf={
+		name="Chandler ibn Yusuf"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=social_democratic_ideology
+			traits={ armaments_organizer }
+			expire="1955.5.1.12"
+			id=-1
+		}
+	}
+	YEM_uthman_ibn_mustafa={
+		name="Uthman ibn Mustafa"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			traits={ silent_workhorse war_industrialist }
+			expire="1947.5.1.12"
+			id=-1
+		}
+	}
+}

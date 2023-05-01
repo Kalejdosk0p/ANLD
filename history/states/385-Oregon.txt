@@ -1,0 +1,29 @@
+
+state={
+	id=385
+	name="STATE_385"
+	manpower = 2453785
+	
+	state_category = city
+
+	history={
+		owner = DES
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			12211 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = DES
+		victory_points = {
+			3513 5
+		}
+
+	}
+
+	provinces={
+		 528 1414  3513 4274 4328  4380  7398   10151 10183     12183 12211 12281  
+	}
+}

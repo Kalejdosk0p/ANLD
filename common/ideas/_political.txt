@@ -1,0 +1,384 @@
+ideas = {
+
+	country = {
+
+		deluge_changed_voting_law = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = voting_locked
+			
+			modifier = {
+			}
+		}
+		
+		deluge_changed_social_order = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			picture = order_locked
+			
+			modifier = {
+			}
+		}
+		
+	}
+			
+	franchise = {
+		law = yes
+		
+		universal = {
+			available = {
+				NOT = { has_idea = deluge_changed_voting_law }
+				has_elections = yes
+			}
+		
+			cost = 50
+			removal_cost = -1
+			
+			on_add = {
+				hidden_effect = {
+					add_timed_idea = { idea = deluge_changed_voting_law days = 180 }
+				}
+			}
+			
+			modifier = {
+				communism_drift = 0.05
+				stability_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = cant_change_voting_law
+					}
+				}
+			}
+
+			ai_will_do = {
+   				factor = 0.5
+				
+   				modifier = {
+					factor = 10 # don't switch back and forth
+					has_war = yes
+					has_idea = universal
+				}
+				
+   				modifier = {
+					factor = 5
+					surrender_progress > 0.1
+				}
+				
+   				modifier = {
+					factor = 3
+					has_government = communism
+				}
+   			}
+		}
+		
+		restricted = {
+			available = {
+				NOT = { has_idea = deluge_changed_voting_law }
+				has_elections = yes
+			}
+		
+			cost = 50
+			removal_cost = -1
+			
+			on_add = { 
+				hidden_effect = {
+					add_timed_idea = { idea = deluge_changed_voting_law days = 180 }
+				}
+			}
+			
+			modifier = {
+				democratic_drift = 0.05
+				stability_factor = 0.05
+				political_power_factor = 0.1
+			}
+			
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = cant_change_voting_law
+					}
+				}
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+				
+   				modifier = {
+					factor = 3
+					has_government = democratic
+					has_war = no
+				}
+   			}
+		}
+		
+		landed = {
+			available = {
+				NOT = { has_idea = deluge_changed_voting_law }
+				has_elections = yes
+			}
+		
+			default = yes
+
+			cost = 50
+			removal_cost = -1
+			
+			on_add = { 
+				hidden_effect = {
+					add_timed_idea = { idea = deluge_changed_voting_law days = 180 }
+				}
+			}
+			
+			modifier = {
+				neutrality_drift = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.1
+			}
+			
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = cant_change_voting_law
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0.5
+				
+   				modifier = {
+					factor = 3
+					has_government = neutrality
+					has_war = no
+				}
+				
+  				modifier = {
+					factor = 3
+					has_government = fascism
+					has_war = no
+				}				
+   			}
+		}
+		
+		novote = {
+			available = {
+				has_elections = no
+			}
+				
+			cost = 50
+			removal_cost = -1
+			
+			on_add = { 
+				hidden_effect = {
+					add_timed_idea = { idea = deluge_changed_voting_law days = 180 }
+				}
+			}
+			
+			modifier = {
+				fascism_drift = 0.05
+				war_support_factor = 0.1
+			}
+			
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = cant_change_voting_law
+					}
+				}
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0 # changes via event
+   			}
+		}	
+	}
+	
+	social_order = {
+		law = yes
+		
+		welfare_state = {
+			available = {
+				NOT = { has_idea = deluge_changed_social_order }
+			}
+		
+			cost = 50
+			removal_cost = -1
+			
+			on_add = { 
+				hidden_effect = {
+					add_timed_idea = { idea = deluge_changed_social_order days = 180 }
+				}
+			}
+			
+			modifier = {
+				drift_defence_factor = 0.25
+				stability_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = cant_change_social_order
+					}
+				}
+			}
+
+			ai_will_do = {
+   				factor = 0.5
+				
+   				modifier = {
+					factor = 10 # don't switch back and forth
+					has_war = yes
+					has_idea = welfare_state
+				}
+				
+   				modifier = {
+					factor = 5
+					surrender_progress > 0.1
+				}
+   			}
+		}
+		
+		labour_camps = {
+			available = {
+				NOT = { has_idea = deluge_changed_social_order }
+			}
+		
+			cost = 50
+			removal_cost = -1
+			
+			on_add = { 
+				hidden_effect = {
+					add_timed_idea = { idea = deluge_changed_social_order days = 180 }
+				}
+			}
+			
+			modifier = {
+				local_resources_factor = 0.10
+			}
+
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = cant_change_social_order
+					}
+				}
+			}
+
+			ai_will_do = {
+   				factor = 0.5
+   			}
+		}
+		
+		robber_barons = {
+			available = {
+				NOT = { has_idea = deluge_changed_social_order }
+			}
+		
+			cost = 50
+			removal_cost = -1
+			
+			on_add = { 
+				hidden_effect = {
+					add_timed_idea = { idea = deluge_changed_social_order days = 180 }
+				}
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+			
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = cant_change_social_order
+					}
+				}
+			}
+
+			ai_will_do = {
+   				factor = 0.5
+								
+   				modifier = {
+					factor = 2
+					has_government = neutrality
+					has_war = no
+					has_idea = welfare_state
+				}
+				
+   				modifier = {
+					factor = 0
+					has_government = communism
+				}
+   			}
+		}
+		
+		established_religion = {
+			available = {
+				NOT = { has_idea = deluge_changed_social_order }
+			}
+				
+			default = yes
+
+			cost = 50
+			removal_cost = -1
+			
+			on_add = { 
+				hidden_effect = {
+					add_timed_idea = { idea = deluge_changed_social_order days = 180 }
+				}
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.01
+				political_power_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+			
+			allowed_to_remove = {
+				hidden_trigger = {
+					NOT = {
+						has_country_flag = cant_change_social_order
+					}
+				}
+			}
+
+			ai_will_do = {
+   				factor = 0.5
+				
+   				modifier = {
+					factor = 2
+					has_government = fascism
+					has_war = no
+					has_idea = welfare_state
+				}
+   			}
+		}
+			
+	}
+}

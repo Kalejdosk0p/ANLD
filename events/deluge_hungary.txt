@@ -1,0 +1,242 @@
+add_namespace = deluge_hungary
+add_namespace = deluge_hungary_foreign
+country_event = {
+	id = deluge_hungary.1
+	title = deluge_hungary.1.t
+	desc = deluge_hungary.1.d
+	picture = GFX_polish_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		HUN = {
+			is_ai = yes
+		}
+		POL = {
+			has_completed_focus = POL_monarchists_take_power
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = { ##army proclaims Horthy royal regent
+		name = deluge_hungary.1.a
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "1935.3.31"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		promote_character = HUN_miklós_horthy
+		promote_character = HUN_deluge_gombos
+		###HUN = {country_event = {id = deluge_hungary.2}}
+		add_ideas = HUN_holy_crown_of_hungary
+		set_country_flag = HUN_horthy_monarchist_won
+		ai_chance = {factor = 1}
+	}
+	option = { #legitimist party wons snap elections
+		name = deluge_hungary.1.b
+		HUN = {country_event = {id = deluge_hungary.2}}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "1935.3.31"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		set_country_flag = HUN_king_monarchist_won
+		ai_chance = {factor = 1}
+	}
+}
+country_event = {##monarchist chooses king
+	id = deluge_hungary.2
+	title = deluge_hungary.2.t
+	desc = deluge_hungary.2.d
+	picture = GFX_polish_flag
+	is_triggered_only = yes
+	option = { ##Esterházy
+		name = deluge_hungary.2.a
+		set_party_name = { ideology = neutrality long_name = HUN_esterhazy_party_long name = HUN_esterhazy_party_short }
+		if = {
+			limit = {HUN = {has_country_flag = HUN_king_monarchist_won}}
+			promote_character = HUN_deluge_esterhazy_moricz
+		}
+		if = {
+			limit = {
+				HUN = {
+					OR = {
+						has_country_flag = HUN_gombos_prime_minister
+						has_country_flag = HUN_democracy_wins
+					}
+				}
+			}
+			add_ideas = HUN_esterhazy_national_spirit
+		}
+		set_global_flag = HUN_esterhazy_chosen
+		ai_chance = {factor = 1}
+	}
+	option = { #Széchenyi
+		name = deluge_hungary.2.b
+		set_party_name = { ideology = neutrality long_name = HUN_szechneyi_party_long name = HUN_szechneyi_party_short }
+		if = {
+			limit = {HUN = {has_country_flag = HUN_king_monarchist_won}}
+			promote_character = HUN_deluge_szechenyi
+		}
+		if = {
+			limit = {
+				HUN = {
+					OR = {
+						has_country_flag = HUN_gombos_prime_minister
+						has_country_flag = HUN_democracy_wins
+					}
+				}
+			}
+			add_ideas = HUN_szechenyi_national_spirit
+		}
+		set_global_flag = HUN_szechenyi_chosen
+		ai_chance = {factor = 1}
+	}
+	option = { #Andrássy 
+		name = deluge_hungary.2.c
+		if = {
+			limit = {HUN = {has_country_flag = HUN_king_monarchist_won}}
+			promote_character = HUN_deluge_andrassy_sandor
+		}
+		if = {
+			limit = {
+				HUN = {
+					OR = {
+						has_country_flag = HUN_gombos_prime_minister
+						has_country_flag = HUN_democracy_wins
+					}
+				}
+			}
+			add_ideas = HUN_andrassy_national_spirit
+		}
+		set_global_flag = HUN_andrassy_chosen
+		ai_chance = {factor = 1}
+	}
+}
+country_event = {##fascism Hungary
+	id = deluge_hungary.3
+	title = deluge_hungary.3.t
+	desc = deluge_hungary.3.d
+	picture = GFX_polish_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		HUN = {
+			is_ai = yes
+		}
+		POL = {
+			has_completed_focus = POL_continue_with_sanation
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = { ##Gömbös becomes prime minister
+		name = deluge_hungary.3.a
+		set_politics = {
+			ruling_party = fascism
+			last_election = "1935.3.31"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		promote_character = HUN_deluge_gombos
+		HUN = {country_event = {id = deluge_hungary.2}}
+		set_country_flag = HUN_gombos_prime_minister
+		ai_chance = {factor = 1}
+	}
+	option = { #Gömbös becomes royal regent
+		name = deluge_hungary.3.b
+		set_politics = {
+			ruling_party = fascism
+			last_election = "1935.3.31"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		remove_trait = {
+			character = HUN_deluge_gombos
+			ideology = social_darwinist_ideology
+			trait = ultranationalist_prime_minister
+		}
+		add_trait = {
+			character = HUN_deluge_gombos
+			ideology = social_darwinist_ideology
+			trait = holy_regent
+		}
+		promote_character = HUN_deluge_gombos
+		set_country_flag = HUN_gombos_royal_regent
+		add_ideas = HUN_holy_crown_of_hungary
+		ai_chance = {factor = 1}
+	}
+}
+country_event = {##democratic Hungary
+	id = deluge_hungary.4
+	title = deluge_hungary.4.t
+	desc = deluge_hungary.4.d
+	picture = GFX_polish_flag
+	fire_only_once = yes
+	trigger = {
+		tag = HUN
+		HUN = {
+			is_ai = yes
+		}
+		POL = {
+			has_completed_focus = POL_democracy_prevails
+		}
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = { ##István Bethlen
+		name = deluge_hungary.4.a
+		set_politics = {
+			ruling_party = democratic
+			last_election = "1935.3.31"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		HUN = {country_event = {id = deluge_hungary.2}}
+		set_country_flag = HUN_democracy_wins
+		if = {
+			limit = {
+				not = {
+					has_country_leader =  {
+						character = HUN_deluge_bethlen
+						ruling_only = yes
+					}
+				}
+			}
+			promote_character = HUN_deluge_bethlen
+		}
+		ai_chance = {factor = 1}
+	}
+	option = { ##Károlyi Mihály
+		name = deluge_hungary.4.b
+		HUN = {country_event = {id = deluge_hungary.2}}
+		set_country_flag = HUN_democracy_wins
+		set_politics = {
+			ruling_party = democratic
+			last_election = "1935.3.31"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		promote_character = HUN_deluge_mihaly
+		set_party_name = { ideology = democratic long_name = HUN_party_of_independence_long name = HUN_party_of_independence_short }
+		ai_chance = {factor = 1}
+	}
+	option = { ##Tildy Zoltán
+		name = deluge_hungary.4.b
+		HUN = {country_event = {id = deluge_hungary.2}}
+		set_country_flag = HUN_democracy_wins
+		set_politics = {
+			ruling_party = democratic
+			last_election = "1935.3.31"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		promote_character = HUN_deluge_tildy
+		set_party_name = { ideology = democratic long_name = HUN_fkgp_party_long name = HUN_fkgp_party_short }
+		ai_chance = {factor = 1}
+	}
+}

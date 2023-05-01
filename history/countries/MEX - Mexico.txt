@@ -1,0 +1,211 @@
+﻿capital = 277
+
+oob = "MEX_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+	marines = 1
+	motorised_infantry = 1
+	gwtank = 1
+	basic_light_tank = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+	set_naval_oob = "MEX_1936_naval_legacy"
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_depth_charges = 1
+	}
+	set_naval_oob = "MEX_1936_naval_mtg"
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.7.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 20
+	fascism = 10
+	communism = 15
+	neutrality = 55
+}
+	
+recruit_character = MEX_salvador_abascal
+recruit_character = MEX_heliodoro_charis
+recruit_character = MEX_luis_farell
+recruit_character = MEX_antonio_lópez_iv
+recruit_character = MEX_Álvaro_obregón
+recruit_character = MEX_pancho_villa
+recruit_character = MEX_gildardo_magaña
+recruit_character = MEX_manuel_pérez_treviño
+recruit_character = MEX_abelardo_l._rodríguez
+recruit_character = MEX_manuel_Ávila_camacho
+recruit_character = MEX_othón_p._blanco_núñez_de_cáceres
+recruit_character = MEX_heriberto_jara_corona
+
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	
+	create_equipment_variant = {
+		name = "Antonio López I Class"
+		type = ship_hull_heavy_1
+		name_group = MEX_STATES_IMPERIAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = ship_heavy_battery_1
+		}
+	}
+	
+	create_equipment_variant = {
+		name = "Rio Brazos Class"
+		type = ship_hull_cruiser_1
+		name_group = MEX_RIVERS_IMPERIAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_secondaries_1
+			rear_1_custom_slot = empty
+		}
+	}
+	
+	create_equipment_variant = {
+		name = "Agua Prieta Class"
+		type = ship_hull_cruiser_1
+		name_group = MEX_RIVERS_IMPERIAL
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+		}
+		obsolete = yes
+	}
+	
+	create_equipment_variant = {
+		name = "Rio Grande Class"
+		type = ship_hull_cruiser_1
+		name_group = MEX_RIVERS_IMPERIAL
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+	}
+	
+	# Destroyers
+	create_equipment_variant = {
+		name = "Ciudad de Mexico Class"
+		type = ship_hull_light_1
+		name_group = MEX_CITIES_IMPERIAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+	}
+	
+	create_equipment_variant = {
+		name = "Los Angeles Class"
+		type = ship_hull_light_1
+		name_group = MEX_CITIES_IMPERIAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	
+	create_equipment_variant = {
+		name = "Submarino 1"
+		type = ship_hull_submarine_1
+		name_group = MEX_SS_HISTORICAL_IMPERIAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+}

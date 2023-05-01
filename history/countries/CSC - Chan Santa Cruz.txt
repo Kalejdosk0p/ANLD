@@ -1,0 +1,55 @@
+﻿capital = 474
+
+oob = "CSC_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+set_convoys = 5
+
+add_opinion_modifier = { target = DES modifier = historic_friendship_modifier }
+add_opinion_modifier = { target = AQN modifier = historic_friendship_modifier }
+add_opinion_modifier = { target = CAN modifier = historic_friendship_modifier }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+create_import = {
+	resource = steel
+	factories = 1
+	exporter = MEX
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1932.6.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 30
+	fascism = 20
+	communism = 10
+	neutrality = 40
+}
+	
+add_ideas = {
+	deluge_native_independence_idea
+	extensive_conscription
+	partial_economic_mobilisation
+	floating_exchange
+}
+recruit_character = CSC_juan_josé_arévalo_bermejo
+recruit_character = CSC_emiliano_zapata
+recruit_character = CSC_josé_gonzález_beytia
+recruit_character = CSC_atanasio_ix
+recruit_character = CSC_jacinto_pat
+recruit_character = CSC_ah_puch
+recruit_character = CSC_ah_zab_kan
+
+

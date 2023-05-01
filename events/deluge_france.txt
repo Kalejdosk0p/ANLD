@@ -1,0 +1,1671 @@
+﻿add_namespace = deluge_france
+
+# France gets exposition and triggers news about May Day
+
+country_event = {
+	id = deluge_france.1
+	title = deluge_france1title
+	desc = deluge_france1desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france1opt
+		
+		add_stability = -0.05
+		
+		hidden_effect = {
+			news_event = { hours = 6 id = deluge_france.2 }
+		}
+	}
+}
+
+# Global coverage of May Day
+
+news_event = {
+	id = deluge_france.2
+	title = deluge_france2title
+	desc = deluge_france2desc
+	
+	picture = GFX_deluge_public_funeral
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france2opta
+		trigger = { has_government = communism }
+		
+		if = {
+			limit = {
+				num_of_factories > 10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	option = {
+		name = deluge_france2optb
+		trigger = { has_government = democratic }
+		
+		if = {
+			limit = {
+				num_of_factories > 10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	option = {
+		name = deluge_france2optc
+		trigger = { has_government = neutrality }
+
+		if = {
+			limit = {
+				num_of_factories > 10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+	option = {
+		name = deluge_france2optd
+		trigger = { has_government = fascism }
+		
+		if = {
+			limit = {
+				num_of_factories > 10
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
+	}
+}
+
+# France seeks to punish Britain
+
+news_event = {
+	id = deluge_france.3
+	title = deluge_france3title
+	
+	desc = {
+		text = deluge_france3desccommunism
+		trigger = { ENG = { has_government = communism } }
+	}
+	desc = {
+		text = deluge_france3descdemocratic
+		trigger = { ENG = { has_government = democratic } }
+	}
+	desc = {
+		text = deluge_france3descneutrality
+		trigger = { ENG = { has_government = neutrality } }
+	}
+	desc = {
+		text = deluge_france3descfascism
+		trigger = { ENG = { has_government = fascism } }
+	}
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france3opta
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = deluge_france3optb
+		trigger = { original_tag = ENG }
+	}
+	option = {
+		name = deluge_france3optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = FRA
+					original_tag = ENG
+				}
+			}
+		}
+	}
+}
+
+# France seeks to punish Poland
+
+news_event = {
+	id = deluge_france.4
+	title = deluge_france4title
+	
+	desc = {
+		text = deluge_france4desccommunism
+		trigger = { POL = { has_government = communism } }
+	}
+	desc = {
+		text = deluge_france4descdemocratic
+		trigger = { POL = { has_government = democratic } }
+	}
+	desc = {
+		text = deluge_france4descneutrality
+		trigger = { POL = { has_government = neutrality } }
+	}
+	desc = {
+		text = deluge_france4descfascism
+		trigger = { POL = { has_government = fascism } }
+	}
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france4opta
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = deluge_france4optb
+		trigger = { original_tag = POL }
+	}
+	option = {
+		name = deluge_france4optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = FRA
+					original_tag = POL
+				}
+			}
+		}
+	}
+}
+
+# France seeks to punish Russia
+
+news_event = {
+	id = deluge_france.5
+	title = deluge_france5title
+	
+	desc = {
+		text = deluge_france5desccommunism
+		trigger = { SOV = { has_government = communism } }
+	}
+	desc = {
+		text = deluge_france5descdemocratic
+		trigger = { SOV = { has_government = democratic } }
+	}
+	desc = {
+		text = deluge_france5descneutrality
+		trigger = { SOV = { has_government = neutrality } }
+	}
+	desc = {
+		text = deluge_france5descfascism
+		trigger = { SOV = { has_government = fascism } }
+	}
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france5opta
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = deluge_france5optb
+		trigger = { original_tag = SOV }
+	}
+	option = {
+		name = deluge_france5optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = FRA
+					original_tag = SOV
+				}
+			}
+		}
+	}
+}
+
+# France seeks to punish Japan
+
+news_event = {
+	id = deluge_france.6
+	title = deluge_france6title
+	
+	desc = {
+		text = deluge_france6desccommunism
+		trigger = { JAP = { has_government = communism } }
+	}
+	desc = {
+		text = deluge_france6descdemocratic
+		trigger = { JAP = { has_government = democratic } }
+	}
+	desc = {
+		text = deluge_france6descneutrality
+		trigger = { JAP = { has_government = neutrality } }
+	}
+	desc = {
+		text = deluge_france6descfascism
+		trigger = { JAP = { has_government = fascism } }
+	}
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france6opta
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = deluge_france6optb
+		trigger = { original_tag = JAP }
+	}
+	option = {
+		name = deluge_france6optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = FRA
+					original_tag = JAP
+				}
+			}
+		}
+	}
+}
+
+# France seeks to punish America
+
+news_event = {
+	id = deluge_france.7
+	title = deluge_france7title
+	
+	desc = {
+		text = deluge_france7desccommunism
+		trigger = { USA = { has_government = communism } }
+	}
+	desc = {
+		text = deluge_france7descdemocratic
+		trigger = { USA = { has_government = democratic } }
+	}
+	desc = {
+		text = deluge_france7descneutrality
+		trigger = { USA = { has_government = neutrality } }
+	}
+	desc = {
+		text = deluge_france7descfascism
+		trigger = { USA = { has_government = fascism } }
+	}
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france7opta
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = deluge_france7optb
+		trigger = { original_tag = USA }
+	}
+	option = {
+		name = deluge_france7optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = FRA
+					original_tag = USA
+				}
+			}
+		}
+	}
+}
+
+# France seeks to punish Turkey
+
+news_event = {
+	id = deluge_france.8
+	title = deluge_france8title
+	
+	desc = {
+		text = deluge_france8desccommunism
+		trigger = { TUR = { has_government = communism } }
+	}
+	desc = {
+		text = deluge_france8descdemocratic
+		trigger = { TUR = { has_government = democratic } }
+	}
+	desc = {
+		text = deluge_france8descneutrality
+		trigger = { TUR = { has_government = neutrality } }
+	}
+	desc = {
+		text = deluge_france8descfascism
+		trigger = { TUR = { has_government = fascism } }
+	}
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france8opta
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = deluge_france8optb
+		trigger = { original_tag = TUR }
+	}
+	option = {
+		name = deluge_france8optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = FRA
+					original_tag = TUR
+				}
+			}
+		}
+	}
+}
+
+# France seeks to punish Austria
+
+news_event = {
+	id = deluge_france.9
+	title = deluge_france9title
+	
+	desc = {
+		text = deluge_france9desccommunism
+		trigger = { AUS = { has_government = communism } }
+	}
+	desc = {
+		text = deluge_france9descdemocratic
+		trigger = { AUS = { has_government = democratic } }
+	}
+	desc = {
+		text = deluge_france9descneutrality
+		trigger = { AUS = { has_government = neutrality } }
+	}
+	desc = {
+		text = deluge_france9descfascism
+		trigger = { AUS = { has_government = fascism } }
+	}
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france9opta
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	option = {
+		name = deluge_france9optb
+		trigger = { original_tag = AUS }
+	}
+	option = {
+		name = deluge_france9optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = FRA
+					original_tag = AUS
+				}
+			}
+		}
+	}
+}
+
+# May Day 1937
+
+# Variant for France being at peace
+
+country_event = {
+	id = deluge_france.10
+	title = deluge_france10title
+	desc = deluge_france10desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = no
+		date > 1937.5.0
+		date < 1938.5.0
+		NOT = { has_global_flag = French_intervention_in_GCW_flag }
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1937 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1937
+	}
+	
+	option = {
+		name = deluge_france10opt
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+	}
+}
+
+# Variant for France being at war but not with DDR
+
+country_event = {
+	id = deluge_france.11
+	title = deluge_france11title
+	desc = deluge_france11desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = yes
+		has_civil_war = no
+		date > 1937.5.0
+		date < 1938.5.0
+		NOT = {
+			OR = {
+				has_global_flag = French_intervention_in_GCW_flag
+				has_war_with = DDR
+			}
+		}
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1937 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1937
+	}
+	
+	option = {
+		name = deluge_france11opt
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					communism > 0.25
+				}
+				set_global_flag = French_Civil_War_has_happened
+				country_event = { days = 1 id = deluge_france.19 }
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					set_country_flag = has_had_civil_war_d_v_r
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					set_country_flag = has_had_civil_war_m_v_r
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_country_flag = has_had_civil_war_u_v_r
+				}
+			}
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+	}
+}
+
+# Variant for France being at war with DDR (or having been at war and started a war with someone else)
+
+country_event = {
+	id = deluge_france.12
+	title = deluge_france12title
+	desc = deluge_france12desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = yes
+		has_civil_war = no
+		date > 1937.5.0
+		date < 1938.5.0
+		OR = {
+			has_global_flag = French_intervention_in_GCW_flag
+			has_war_with = DDR
+		}
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1937 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1937
+	}
+	
+	option = {
+		name = deluge_france12opt
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					communism > 0.25
+				}
+				set_global_flag = French_Civil_War_has_happened
+				country_event = { days = 1 id = deluge_france.19 }
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					set_country_flag = has_had_civil_war_d_v_r
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					set_country_flag = has_had_civil_war_m_v_r
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_country_flag = has_had_civil_war_u_v_r
+				}
+			}
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.15
+		}
+	}
+}
+
+# May Day 1938
+
+# Variant for France being at peace
+
+country_event = {
+	id = deluge_france.13
+	title = deluge_france13title
+	desc = deluge_france13desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = no
+		date > 1938.5.0
+		date < 1939.5.0
+		NOT = { has_global_flag = French_intervention_in_GCW_flag }
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1938 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1938
+	}
+	
+	option = {
+		name = deluge_france13opt
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+	}
+}
+
+# Variant for France being at war but not with DDR
+
+country_event = {
+	id = deluge_france.14
+	title = deluge_france14title
+	desc = deluge_france14desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = yes
+		has_civil_war = no
+		date > 1938.5.0
+		date < 1939.5.0
+		NOT = {
+			OR = {
+				has_global_flag = French_intervention_in_GCW_flag
+				has_war_with = DDR
+			}
+		}
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1938 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1938
+	}
+	
+	option = {
+		name = deluge_france14opt
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					communism > 0.25
+				}
+				set_global_flag = French_Civil_War_has_happened
+				country_event = { days = 1 id = deluge_france.19 }
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					set_country_flag = has_had_civil_war_d_v_r
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					set_country_flag = has_had_civil_war_m_v_r
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_country_flag = has_had_civil_war_u_v_r
+				}
+			}
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+	}
+}
+
+# Variant for France being at war with DDR (or having been at war and started a war with someone else)
+
+country_event = {
+	id = deluge_france.15
+	title = deluge_france15title
+	desc = deluge_france15desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = yes
+		has_civil_war = no
+		date > 1938.5.0
+		date < 1939.5.0
+		OR = {
+			has_global_flag = French_intervention_in_GCW_flag
+			has_war_with = DDR
+		}
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1938 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1938
+	}
+	
+	option = {
+		name = deluge_france15opt
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					communism > 0.25
+				}
+				set_global_flag = French_Civil_War_has_happened
+				country_event = { days = 1 id = deluge_france.19 }
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					set_country_flag = has_had_civil_war_d_v_r
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					set_country_flag = has_had_civil_war_m_v_r
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_country_flag = has_had_civil_war_u_v_r
+				}
+			}
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.1
+		}
+	}
+}
+
+# May Day 1939
+
+# Last opportunity to spark a French Civil War
+
+# Variant for France being at peace
+
+country_event = {
+	id = deluge_france.16
+	title = deluge_france16title
+	desc = deluge_france16desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = no
+		date > 1939.5.0
+		date < 1940.5.0
+		NOT = { has_global_flag = French_intervention_in_GCW_flag }
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1939 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1939
+	}
+	
+	option = {
+		name = deluge_france16opt
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+# Variant for France being at war but not with DDR
+
+country_event = {
+	id = deluge_france.17
+	title = deluge_france17title
+	desc = deluge_france17desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = yes
+		has_civil_war = no
+		date > 1939.5.0
+		date < 1940.5.0
+		NOT = {
+			OR = {
+				has_global_flag = French_intervention_in_GCW_flag
+				has_war_with = DDR
+			}
+		}
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1939 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1939
+	}
+	
+	option = {
+		name = deluge_france17opt
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					communism > 0.25
+				}
+				set_global_flag = French_Civil_War_has_happened
+				country_event = { days = 1 id = deluge_france.19 }
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					set_country_flag = has_had_civil_war_d_v_r
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					set_country_flag = has_had_civil_war_m_v_r
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_country_flag = has_had_civil_war_u_v_r
+				}
+			}
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+	}
+}
+
+# Variant for France being at war with DDR (or having been at war and started a war with someone else)
+
+country_event = {
+	id = deluge_france.18
+	title = deluge_france18title
+	desc = deluge_france18desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		NOT = { has_government = communism }
+		has_war = yes
+		has_civil_war = no
+		date > 1939.5.0
+		date < 1940.5.0
+		OR = {
+			has_global_flag = French_intervention_in_GCW_flag
+			has_war_with = DDR
+		}
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_global_flag = May_Day_1939 }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = May_Day_1939
+	}
+	
+	option = {
+		name = deluge_france18opt
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					communism > 0.25
+				}
+				set_global_flag = French_Civil_War_has_happened
+				country_event = { days = 1 id = deluge_france.19 }
+				if = {
+					limit = {
+						has_government = democratic
+					}
+					set_country_flag = has_had_civil_war_d_v_r
+				}
+				if = {
+					limit = {
+						has_government = neutrality
+					}
+					set_country_flag = has_had_civil_war_m_v_r
+				}
+				if = {
+					limit = {
+						has_government = fascism
+					}
+					set_country_flag = has_had_civil_war_u_v_r
+				}
+			}
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		
+	}
+}
+
+# Radicalism is very high and a French Civil War breaks out
+
+country_event = {
+	id = deluge_france.19
+	title = deluge_france19title
+	desc = deluge_france19desc
+	picture = GFX_deluge_paris_small
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = deluge_anti-war_sentiment_france_idea
+			add_popularity = {
+				ideology = communism
+				popularity = -1.0
+			}
+			every_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				add_core_of = FRR
+			}
+			every_state = {
+				limit = {
+					is_core_of = BEL
+				}
+				add_core_of = FRR
+			}
+			FRR = {
+				transfer_state = 23
+				transfer_state = 24
+				transfer_state = 33
+				transfer_state = 25
+				transfer_state = 26
+				transfer_state = 30
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { country_exists = DDR }
+						has_global_flag = communism_international_formed
+						DDR = {
+							NOT = { has_government = communism }
+						}
+					}
+				}
+				FRR = {
+				#	create_faction = "factionRevolutionaryBloc"
+				}
+			}
+			if = {
+				limit = {
+					FRR = {
+						is_in_faction = no
+					}
+					country_exists = DDR
+					NOT = { has_global_flag = communism_international_formed }
+					DDR = {
+						has_government = communism
+					}
+				}
+				DDR = {
+				#	create_faction = "factionRadicalInternational"
+				#	set_global_flag = communism_international_formed
+				#	add_to_faction = FRR
+				}
+			}
+			FRR = {
+				declare_war_on = {
+					target = FRA
+					type = annex_everything
+				}
+				load_oob = FRR_reinforcements
+			}			
+			set_equipment_fraction = 0.6
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				load_oob = FRA_reinforcements
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_france19opta
+		
+		hidden_effect = {
+			news_event = { days = 1 id = deluge_france.20 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = deluge_france19optb
+		
+		hidden_effect = {
+			load_oob = FRA_reinforcements
+			
+			FRR = { change_tag_from = FRA }
+			
+			news_event = { days = 1 id = deluge_france.20 }
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# News event for French Civil War
+
+news_event = {
+	id = deluge_france.20
+	title = deluge_france20title
+	desc = deluge_france20desc
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france20opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = deluge_france20optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = deluge_france20optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = deluge_france20optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# French Civil War ends in neutrality victory
+
+country_event = {
+	id = deluge_france.21
+	title = deluge_france21title
+	desc = deluge_france21desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_global_flag = French_Civil_War_has_happened
+		country_exists = FRA
+		has_government = neutrality
+		NOT = { has_war_with = FRR }
+		is_subject = no
+		OR = {
+			FRR = {
+				has_government = neutrality
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = FRA
+				}
+			}
+			FRR = {
+				is_subject_of = FRA
+			}
+			NOT = { country_exists = FRR }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = deluge_france21opt
+		
+		if = {
+			limit = { country_exists = FRR }
+			annex_country = { target = FRR transfer_troops = no }
+		}
+		every_state = {
+			limit = {
+				is_core_of = FRR
+			}
+			remove_core_of = FRR
+		}
+		set_capital = { state = 16 }
+	}
+}
+
+# French Civil War ends in communism victory
+
+country_event = {
+	id = deluge_france.22
+	title = deluge_france22title
+	desc = deluge_france22desc
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRR
+		has_global_flag = French_Civil_War_has_happened
+		country_exists = FRR
+		NOT = { has_government = neutrality }
+		NOT = { has_war_with = FRA }
+		is_subject = no
+		OR = {
+			FRA = {
+				NOT = { has_government = neutrality }
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = FRR
+				}
+			}
+			FRA = {
+				is_subject_of = FRR
+			}
+			NOT = { country_exists = FRA }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = deluge_france22opt
+		
+		if = {
+			limit = { country_exists = FRA }
+			annex_country = { target = FRA transfer_troops = no }
+		}
+		every_state = {
+			limit = {
+				is_core_of = FRA
+			}
+			remove_core_of = FRA
+		}
+		set_capital = { state = 16 }
+	}
+}
+
+# France seeks to punish Germany
+
+news_event = {
+	id = deluge_france.23
+	title = deluge_france23title
+	desc = deluge_france23desc
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france23opta
+		trigger = {
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+		}
+	}
+	option = {
+		name = deluge_france23optb
+		trigger = {
+			OR = {
+				original_tag = GER
+				is_in_faction_with = GER
+				original_tag = WGR
+				is_in_faction_with = WGR
+				original_tag = DDR
+				is_in_faction_with = DDR
+			}
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+	option = {
+		name = deluge_france23optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = GER
+					is_in_faction_with = GER
+					original_tag = WGR
+					is_in_faction_with = WGR
+					original_tag = DDR
+					is_in_faction_with = DDR
+					original_tag = FRA
+					is_in_faction_with = FRA
+				}
+			}
+		}
+	}
+}
+
+#Старые узы
+
+country_event = {
+	id = deluge_france.27
+	title = deluge_france.27.title
+	desc = deluge_france.27.desc
+	
+	picture = GFX_report_event_journalists_speech
+	
+	is_triggered_only = yes
+
+	option = {
+		name = deluge_france.27.a
+		
+		add_political_power = 25
+		
+		FROM = {
+			country_event = {
+				days = 1
+				id = deluge_france.28
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 10
+				FROM = {
+					has_government = ROOT
+				}
+			}
+			modifier = {
+				factor = 0.1
+				FROM = {
+					is_enemy_ideology = yes
+				}
+			}
+		}
+	}
+	option = {
+		name = deluge_france.27.b
+		
+		add_opinion_modifier = {
+			target = FROM
+			modifier = embargo
+		}
+		
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = embargo
+			}
+			country_event = {
+				days = 1
+				id = deluge_france.29
+			}
+		}
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				has_government = communism
+				FROM = {
+					has_government = communism
+				}
+			}
+		}
+	}
+	option = {
+		name = deluge_france.27.c
+		
+		add_stability = -0.1
+		add_war_support = -0.1
+		
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+		
+		add_opinion_modifier = {
+			target = FROM
+			modifier = embargo
+		}
+		
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = embargo
+			}
+			country_event = {
+				days = 1
+				id = deluge_france.30
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				has_stability < 0.4
+			}
+			modifier = {
+				factor = 0
+				has_war_support < 0.4
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 0
+				has_government = communism
+				FROM = {
+					has_government = communism
+				}
+			}
+		}
+	}
+}
+
+# Event for civil war happening outside of the May Day marches
+
+country_event = {
+	id = deluge_france.24
+	title = deluge_france24title
+	desc = deluge_france24desc
+	
+	picture = GFX_deluge_paris_small
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		OR = {
+			has_global_flag = French_intervention_in_GCW_flag
+			has_war_with = DDR
+		}
+		OR = {
+			AND = {
+				communism > 0.25
+				has_idea = deluge_great_war_horrors_idea
+			}
+			communism > 0.4
+		}
+		NOT = { has_government = communism }
+		has_war = yes
+		has_civil_war = no
+		NOT = { has_idea_with_trait = communist_revolutionary } # player does not want to become communist
+		NOT = { has_global_flag = French_Civil_War_has_happened }
+		NOT = { has_country_flag = has_had_civil_war_d_v_r }
+		NOT = { has_country_flag = has_had_civil_war_m_v_r }
+		NOT = { has_country_flag = has_had_civil_war_u_v_r }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = French_Civil_War_has_happened
+	}
+	
+	option = {
+		name = deluge_france24opt
+		
+		hidden_effect = {
+			country_event = { days = 1 id = deluge_france.25 }
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_country_flag = has_had_civil_war_d_v_r
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_country_flag = has_had_civil_war_m_v_r
+			}
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_country_flag = has_had_civil_war_u_v_r
+			}
+		}
+		
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05
+		}
+		
+	}
+}
+
+# Civil war event outside of May Day
+
+country_event = {
+	id = deluge_france.25
+	title = deluge_france25title
+	desc = deluge_france25desc
+	picture = GFX_deluge_paris_small
+	
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			remove_ideas = deluge_anti-war_sentiment_france_idea
+			add_popularity = {
+				ideology = communism
+				popularity = -1.0
+			}
+			every_state = {
+				limit = {
+					is_core_of = FRA
+				}
+				add_core_of = FRR
+			}
+			every_state = {
+				limit = {
+					is_core_of = BEL
+				}
+				add_core_of = FRR
+			}
+			FRR = {
+				transfer_state = 23
+				transfer_state = 24
+				transfer_state = 33
+				transfer_state = 25
+				transfer_state = 26
+				transfer_state = 30
+			}
+			if = {
+				limit = {
+					OR = {
+						NOT = { country_exists = DDR }
+						has_global_flag = communism_international_formed
+						DDR = {
+							NOT = { has_government = communism }
+						}
+					}
+				}
+				FRR = {
+				#	create_faction = "factionRevolutionaryBloc"
+				}
+			}
+			if = {
+				limit = {
+					FRR = {
+						is_in_faction = no
+					}
+					country_exists = DDR
+					NOT = { has_global_flag = communism_international_formed }
+					DDR = {
+						has_government = communism
+					}
+				}
+				DDR = {
+				#	create_faction = "factionRadicalInternational"
+				#	set_global_flag = communism_international_formed
+				#	add_to_faction = FRR
+				}
+			}
+			FRR = {
+				declare_war_on = {
+					target = FRA
+					type = annex_everything
+				}
+				load_oob = FRR_reinforcements
+			}			
+			set_equipment_fraction = 0.6
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				load_oob = FRA_reinforcements
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_france25opta
+		
+		hidden_effect = {
+			news_event = { days = 1 id = deluge_france.20 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = deluge_france25optb
+		
+		hidden_effect = {
+			load_oob = FRA_reinforcements
+			
+			news_event = { days = 1 id = deluge_france.20 }
+			
+			FRR = { change_tag_from = FRA }
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Civil war news event outside of May Day
+
+news_event = {
+	id = deluge_france.26
+	title = deluge_france26title
+	desc = deluge_france26desc
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_france26opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = deluge_france26optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = deluge_france26optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = deluge_france26optd
+		trigger = { has_government = fascism }
+	}
+}
+

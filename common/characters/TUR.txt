@@ -1,0 +1,232 @@
+characters={
+	TUR_cemil_cahit_toydemir={
+		name="Cemil Cahit Toydemir"
+		portraits={
+			army={
+				small="GFX_idea_tur_cemil_cahit_toydemir"
+			}
+			army={
+				large="GFX_portrait_tur_cemil_cahit_toydemir"
+			}
+		}
+		corps_commander={
+			traits={ desert_fox }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	TUR_rauf_orbay={
+		name="Rauf Orbay"
+		portraits={
+			army={
+				small="GFX_idea_tur_rauf_orbay"
+			}
+			army={
+				large="GFX_portrait_TUR_rauf_orbay"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	TUR_nazmi_solok={
+		name="Nazmi Solok"
+		portraits={
+			army={
+				small="GFX_portrait_TUR_nazmi_solok_small"
+			}
+			army={
+				large="GFX_portrait_TUR_nazmi_solok"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	TUR_sefik_hüsnü={
+		name="Sefik Hüsnü"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/Portrait_Turkey_Sefik_Husnu.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_SEFIK_HUSNU_DESC"
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_celâl_bayar={
+		name="Celâl Bayar"
+		portraits={
+			civilian={
+				large="GFX_portrait_tur_celal_bayar"
+			}
+		}
+		country_leader={
+			desc="POLITICS_CELAL_BAYAR_DESC"
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_ismet_inönü={
+		name="Ismet Inönü"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/Portrait_Turkey_Ismet_Inonu.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ISMET_INÖNÜ_DESC"
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_fevzi_Çakmak={
+		name="Fevzi Çakmak"
+		portraits={
+			civilian={
+				large="GFX_portrait_tur_fevzi_cakmak"
+			}
+		}
+		country_leader={
+			desc="POLITICS_OGUZ_REMZI_ARIK_DESC"
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_mehmet_cemaleddin_efendi={
+		name="Mehmet Cemaleddin Efendi"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/sheikh_ul-islam_huseinzadeh.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_abdulmejid_ii={
+		name="Abdulmejid II"
+		portraits={
+			civilian={
+				large="GFX_portrait_tur_abdulmejid_ii"
+			}
+		}
+		country_leader={
+			desc="abdulmejid_ii_desc"
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	TUR_osman_faud={
+		name="Şehzade Osman Fuad"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/osman_faud.dds"
+			}
+		}
+		country_leader={
+			desc="osman_faud_leader_desc"
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			traits = {
+				polite_sultan
+			}
+		}
+	}
+	TUR_sehzade_omer_faruk={
+		name="Şehzade Ömer Faruk"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/sehzade_omer_faruk.dds"
+			}
+		}
+		country_leader={
+			desc="sehzade_omer_faruk_leader_desc"
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			traits = {
+				sultan_of_glory
+			}
+		}
+	}
+	TUR_ahmed_nihad={
+		name="Ahmed IV Nihad"
+		portraits={
+			civilian={
+				large="gfx/leaders/TUR/ahmed_nihad.dds"
+			}
+		}
+		country_leader={
+			desc="ahmed_nihad_leader_desc"
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			traits = {
+				war_lover
+			}
+		}
+	}
+	TUR_mustafa_kemal_pasha={
+		name="Mustafa Kemal Pasha"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/TUR/ataturk_large.dds"
+			}
+		}
+		field_marshal={
+			traits={ offensive_doctrine defensive_doctrine }
+			skill=5
+			attack_skill=4
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=4
+			legacy_id=200
+		}
+	}
+	TUR_salih_omurtak={
+		name="Salih Omurtak"
+		portraits={
+			army={
+				small="GFX_idea_tur_salih_omurtak"
+			}
+			army={
+				large="GFX_portrait_tur_salih_omurtak"
+			}
+		}
+		corps_commander={
+			traits={ hill_fighter }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

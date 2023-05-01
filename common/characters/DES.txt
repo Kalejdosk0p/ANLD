@@ -1,0 +1,295 @@
+characters={
+	DES_upton_sinclair={
+		name="Upton Sinclair"
+		portraits={
+			civilian={
+				large="gfx/leaders/DES/upton_sinclair.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DES_israel_m._smith={
+		name="Israel M. Smith"
+		portraits={
+			civilian={
+				large="gfx/leaders/DES/wilford_woodruff.dds"
+			}
+		}
+		country_leader={
+			desc="mormon_prophet_desc"
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DES_lorenzo_benson={
+		name="Lorenzo Benson"
+		portraits={
+			civilian={
+				large="gfx/leaders/DES/ezra_taft_benson.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DES_albert_mckay={
+		name="Albert McKay"
+		portraits={
+			civilian={
+				large="gfx/leaders/DES/david_mckay.dds"
+			}
+		}
+		country_leader={
+			desc="mormon_president_desc"
+			ideology=religious_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	DES_george_s._patton={
+		name="George S. Patton"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_george_s_patton.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_George_S_Patton.dds"
+			}
+		}
+		field_marshal={
+			traits={ trait_reckless armor_officer war_hero trickster panzer_leader }
+			skill=5
+			attack_skill=7
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+	DES_oscar_griswold={
+		name="Oscar Griswold"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_oscar_griswold.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Oscar_Griswold.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	DES_geoffrey_keyes={
+		name="Geoffrey Keyes"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_geoffrey_keyes.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Geoffrey_Keyes.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	DES_j._lawton_collins={
+		name="J. Lawton Collins"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_lawton_collins.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Lawton_Collins.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer trickster }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	DES_xavier_mcmahon={
+		name="Xavier McMahon"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	DES_lloyd_fredendall={
+		name="Lloyd Fredendall"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_lloyd_fredendall.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Lloyd_Fredendall.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard inflexible_strategist infantry_officer }
+			skill=2
+			attack_skill=3
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	DES_leslie_mcnair={
+		name="Leslie McNair"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_lesley_mcnair.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Lesley_McNair.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard career_officer armor_officer }
+			skill=3
+			attack_skill=1
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	DES_maurice_rose={
+		name="Maurice Rose"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_maurice_rose.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Maurice_Rose.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist trait_reckless armor_officer }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	DES_clarence_huebner={
+		name="Clarence Huebner"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_clarence_huebner.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Clarence_Huebner.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard harsh_leader }
+			skill=2
+			attack_skill=1
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	DES_lucian_truscott={
+		name="Lucian Truscott"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_lucian_truscott.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Lucian_Truscott.dds"
+			}
+		}
+		corps_commander={
+			traits={ cavalry_officer trait_engineer commando }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	DES_william_simpson={
+		name="William Simpson"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_william_hood_simpson.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_William_Hood_Simpson.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	DES_harold_rainsford_stark={
+		name="Harold Rainsford Stark"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_USA_harold_rainsford_stark.dds"
+			}
+			army={
+				large="gfx/leaders/USA/Portrait_USA_Harold_Rainsford_Stark.dds"
+			}
+		}
+		navy_leader={
+			traits={ blockade_runner spotter }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+}

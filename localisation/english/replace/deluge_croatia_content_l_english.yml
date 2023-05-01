@@ -1,0 +1,29 @@
+﻿l_english:
+ ###CROATIAN THINGS###
+ ###CHARACTERS#########################
+ CRO_Character_deluge_maria_draskovic:0 "Maria Drašković of Trakošćan"
+ deluge_maria_draskovic_desc:0 "The 4th Queen and 6th Ban of Croatia since the Napoleonic Wars. Maria born as a member of House Drašković, an old and ancient croatian magnate family dating back it's origins to the First Kingdom of Croatia in the 10th century. House Drašković received the role of Governor of Illyria due to their close relationship with Napoleon's wife and after the fall of french influence in the Balkans, Juraj Drašković seized the throne for himself in 1848, defeating the Bonaparte-loyalist general, Josip Jelačić. Through her mother, Maria was a descendant of Archduchess Marie Louise of Austria, by her second marriage to Adam Albert, Count von Neipperg; Marie Louise was the Empress consort of Napoleon I of France. Through her father, she was a descendant of the infamous Hungarian Countess Elizabeth Bathory. Maria inherited the throne as the sole heir to his father, Dionys Drašković in 1917. She is married to the son of the current bavarian and jacobite pretender, Albrecht von Wittelsbach."
+ CRO_Character_deluge_paul_von_brlog:0 "Paul von Brlog"
+ CRO_Character_deluge_albrecht_luitpold:0 "Albrecht Luitpold von Wittelsbach"
+ CRO_Character_deluge_radic:0 "Stjepan Radić"
+ radic_desc:0 ""
+ CRO_Character_deluge_vukovic:0 "Janko Vuković"
+ ###PARTY NAMES###
+ CRO_communism_party:0 "Jacobin-Socialist Party"
+ CRO_communism_party_long:0 "Illyrian Jacobin-Socialist Party"
+ CRO_neutrality_party:0 "Drašković Loyalists"
+ CRO_neutrality_party_long:0 "House of Drašković"
+ CRO_democratic_party:0 "HPSS"
+ CRO_democratic_party_long:0 "Illyrian People's Peasant Party"
+ CRO_fascism_party:0 "Catholic Party"
+ CRO_fascism_party_long:0 "Illyrian Catholic Party"
+ ###COSMETIC TAGS###
+ CRO_neutrality_subject:0 "Principality of Illyria"
+ CRO_neutrality_subject_DEF:0 "the Principality of Illyria"
+ CRO_neutrality_subject_ADJ:0 "Illyrian"
+ ##TRAITS##############################
+ queen_of_illyrians:0 "Queen of Illyrians"
+ ###IDEAS####
+ marida_draskovic_spirit:0 "Maria Drašković of Trakošćan"
+ marida_draskovic_spirit_desc:0 "The 4th Queen and 6th Ban of Croatia since the Napoleonic Wars. Maria born as a member of House Drašković, an old and ancient croatian magnate family dating back it's origins to the First Kingdom of Croatia in the 10th century. House Drašković received the role of Governor of Illyria due to their close relationship with Napoleon's wife and after the fall of french influence in the Balkans, Juraj Drašković seized the throne for himself in 1848, defeating the Bonaparte-loyalist general, Josip Jelačić. Through her mother, Maria was a descendant of Archduchess Marie Louise of Austria, by her second marriage to Adam Albert, Count von Neipperg; Marie Louise was the Empress consort of Napoleon I of France. Through her father, she was a descendant of the infamous Hungarian Countess Elizabeth Bathory. Maria inherited the throne as the sole heir to his father, Dionys Drašković in 1917. She is married to the son of the current bavarian and jacobite pretender, Albrecht von Wittelsbach."
+ 

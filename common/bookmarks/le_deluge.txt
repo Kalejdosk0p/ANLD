@@ -1,0 +1,211 @@
+bookmarks = {
+	bookmark = {
+		name = "LE_DELUGE"
+		desc = "LE_DELUGE_DESC"
+		date = 1936.5.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "FRA"
+		default = yes
+		
+		"USA"={
+			history = "USA_DELUGE_DESC"
+			ideas = {
+				american_king
+				deluge_legacy_of_slavery
+				deluge_great_war_horrors_idea
+			}
+			focuses = {
+				america_manifest_destiny
+				america_claim_quebec
+				america_deluge_race_relations
+			}
+		}
+		"ENG"={
+			history = "ENG_DELUGE_DESC"
+			ideas = {
+				fighting_king
+				deluge_great_war_horrors_idea
+			}
+			focuses = {
+				great_britain_depose_monarch
+				great_britain_befriend_spain
+				great_britain_claim_canada
+			}
+		}
+		"AUS"={
+			history = "AUS_DELUGE_DESC"
+			ideas = {
+				habsburg_emperor
+				deluge_great_war_horrors_idea
+			}
+			focuses = {
+				austria_appoint_hitler
+				austria_claim_hungary
+				austria_unify_germany
+			}
+		}
+		"FRA"={
+			history = "FRA_DELUGE_DESC"
+			ideas = {
+				deluge_great_war_horrors_idea
+				FRA_le_deluge
+				FRA_the_financial_collapse
+			}
+			focuses = {
+				FRA_freedom_equality_fraternity_or_death
+				FRA_the_brown_alliance
+				FRA_league_of_nations
+			}
+		}
+		"POL"={
+			history = "POL_DELUGE_DESC"
+			ideas={
+				old_wettyn_king
+				POL_current_state_of_development_fake
+				POL_Polish_National_Army_fake
+			}
+			focuses = {
+				POL_rising_of_central_powers
+				POL_start_army_reform
+				POL_death_of_marshal
+			}
+		}
+		"SOV"={
+			history = "SOV_DELUGE_DESC"
+			ideas = {
+				emperor_russia
+				deluge_great_war_horrors_idea
+				deluge_russia_incompetent_military
+			}
+			focuses = {
+				russia_deluge_form_soviet_union
+				russia_deluge_defeat_rasputins_influence
+				russia_deluge_embrace_black_hundreds
+			}
+		}
+		"JAP"={
+			history = "JAP_DELUGE_DESC"
+			ideas = {
+				state_shintoism
+			}
+			focuses = {
+				japan_befriend_taiping
+				japan_deluge_divine_right
+				japan_claim_china
+			}
+		}
+		
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		"DDR"={
+			minor = yes
+			history = "DDR_DELUGE_DESC"
+			ideas = {
+				sohn_seiner_klasse
+				deluge_german_civil_war_idea
+			}
+			focuses = {
+				germany_radical_deluge_women_in_the_workforce
+				germany_radical_deluge_great_leap_forwards
+				germany_radical_deluge_tech_sharing
+			}
+		}
+		"WGR" = {
+			minor = yes
+			history = "WGR_DELUGE_DESC"
+			ideas = {
+				westphalian_king
+				deluge_german_civil_war_idea
+			}
+			focuses = {
+				germany_create_faction
+				germany_deluge_manorialism
+				germany_claim_poland
+			}
+		}
+		"GER" = {
+			minor = yes
+			history = "GER_DELUGE_DESC"
+			ideas = {
+				life_hussar
+				deluge_german_civil_war_idea
+			}
+			focuses = {
+				germany_deluge_state_terror
+				germany_claim_france
+				deluge_armoured_warfare
+			}
+		}
+		"TUR"={
+			minor = yes
+			history = "TUR_DELUGE_DESC"
+			ideas = {
+				ottoman_emperor
+				TUR_ataturk
+			}
+			focuses = {
+				turkey_depose_monarch
+				turkey_call_to_arms
+				turkey_claim_egypt
+			}
+		}
+		"SWE"={
+			minor = yes
+			history = "SWE_DELUGE_DESC"
+			ideas = {
+				swedish_king
+			}
+			focuses = {
+				sweden_depose_monarch
+				sweden_deluge_police_consent
+				sweden_claim_baltic
+			}
+		}
+		"LOU"={
+			minor = yes
+			history = "LOU_DELUGE_DESC"
+			ideas = {
+				bourbon_king
+				deluge_legacy_of_slavery
+			}
+			focuses = {
+				louisiana_deluge_kkk
+				louisiana_capital_to_paris
+				louisiana_claim_deseret
+			}
+		}
+		"ITA"={
+			minor = yes
+			history = "ITA_DELUGE_DESC"
+			ideas = {
+				italian_king
+			}
+			focuses = {
+				italy_claim_greece
+				italy_restore_rome
+				italy_claim_ethiopia
+			}
+		}
+		"CHI"={
+			minor = yes
+			history = "CHI_DELUGE_DESC"
+			ideology = democratic
+			ideas = {
+				emperor_puyi
+				deluge_chinese_sectarianism_idea
+				deluge_china_vestiges_feudalism
+			}
+			focuses = {
+				china_deluge_self-strengthening
+				china_deluge_war_with_japan
+				china_deluge_cultural_reform
+			}
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

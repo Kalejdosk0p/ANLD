@@ -1,0 +1,254 @@
+characters={
+	LOU_louis_iii={
+		name="Louis III"
+		portraits={
+			civilian={
+				large="gfx/leaders/LOU/earl_of_wessex.dds"
+			}
+		}
+		country_leader={
+			desc="bourbon_king_desc"
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LOU_bishop_alphonselouis_du_st_maurice={
+		name="Bishop Alphonse-Louis du St Maurice"
+		portraits={
+			civilian={
+				large="gfx/leaders/LOU/cardinal_newman.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LOU_henri_s._truman={
+		name="Henri S. Truman"
+		portraits={
+			civilian={
+				large="gfx/leaders/LOU/harry_truman.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	LOU_simone_girard={
+		name="Simone Girard"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_maxime_weygand.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/Portrait_France_Maxime_Weygand.dds"
+			}
+		}
+		field_marshal={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	LOU_guillaume_laurent={
+		name="Guillaume Laurent"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_philippe_leclerc.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/portrait_france_philippe_leclerc.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	LOU_lucien_garcia={
+		name="Lucien Garcia"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_maurice_gamelin.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/Portrait_France_Maurice_Gamelin.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trait_engineer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	LOU_claude_roux={
+		name="Claude Roux"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_jean_de_lattre_de_tassigny.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/Portrait_France_Jean_de_Lattre_de_Tassigny.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	LOU_maurice_dupont={
+		name="Maurice Dupont"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_henri_giraud.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/portrait_france_henri_giraud.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	LOU_libert_fournier={
+		name="Libert Fournier"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_charles_huntziger.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/portrait_france_charles_huntziger.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	LOU_leslie_moreau={
+		name="Leslie Moreau"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_alphonse_joseph_georges.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/Portrait_France_Alphonse_Joseph_Georges.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	LOU_russell_durand={
+		name="Russell Durand"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_alphonse_juin.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/Portrait_France_Alphonse_Juin.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	LOU_raimont_thomas={
+		name="Raimont Thomas"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_jean_de_laborde.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/Portrait_France_Jean_de_Laborde.dds"
+			}
+		}
+		navy_leader={
+			traits={ superior_tactician }
+			skill=3
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	LOU_jean_martin={
+		name="Jean Martin"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_FRA_jean-marie_charles_abrial.dds"
+			}
+			army={
+				large="gfx/leaders/FRA/Portrait_France_Jean-Marie_Charles_Abrial.dds"
+			}
+		}
+		navy_leader={
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	LOU_august_de_saint_arnaud={
+		name="August de Saint Arnaud"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1950.5.1.12"
+			id=-1
+		}
+	}
+}

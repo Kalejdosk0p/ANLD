@@ -1,0 +1,193 @@
+POL_power_balance = {
+	initial_value = 0.00
+	left_side = POL_mow_side
+	right_side = POL_synarchist_group_side	
+	decision_category = POL_balance_of_power_monarchist_decisions_category
+
+	### Neutral status
+	range = {
+		id = POL_balance_range
+		min = -0.05
+		max = 0.05
+		modifier = {
+			industrial_capacity_factory = 0.03
+			industrial_capacity_dockyard = 0.03
+			monthly_population = 0.02
+			consumer_goods_factor = -0.02
+			research_speed_factor = 0.02
+		}
+		on_activate = {
+		}
+		on_deactivate = {	
+		}
+	}
+
+	### MOW - Monarchistyczna Organizacja Wszechstanowa (monarchist all-state organization)
+	side = {
+		id = POL_mow_side
+		icon = GFX_bop_ITA_grand_council_side
+
+		range = {
+			id = POL_mow_low_control_range
+			min = -0.25
+			max = -0.05
+			modifier = {
+				monthly_population = 0.03
+				political_advisor_cost_factor = -0.05
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.03
+				war_support_factor = 0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = POL_mow_medium_control_range
+			min = -0.55
+			max = -0.25
+			modifier = {
+				monthly_population = 0.05
+				political_advisor_cost_factor = -0.1
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.05
+				war_support_factor = 0.1
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = POL_mow_high_control_range
+			min = -0.85
+			max = -0.55
+			modifier = {
+				monthly_population = 0.08
+				political_advisor_cost_factor = -0.15
+				political_power_factor = 0.15
+				consumer_goods_factor = 0.08
+				war_support_factor = 0.15
+				war_support_factor = -0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = POL_mow_total_control_range
+			min = -1
+			max = -0.85
+			modifier = {
+				monthly_population = 0.1
+				political_advisor_cost_factor = -0.2
+				political_power_factor = 0.15
+				consumer_goods_factor = 0.1
+				war_support_factor = 0.15
+				stability_factor = -0.1
+				research_speed_factor = -0.03
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+	}
+
+	### Synarchist Group
+	side = {
+		id = POL_synarchist_group_side
+		icon = GFX_bop_ITA_mussolini_side
+
+		range = {
+			id = POL_synarchist_group_low_control_range
+			min = 0.05
+			max = 0.25
+			modifier = {
+				political_advisor_cost_factor = 0.05
+				research_speed_factor = 0.03
+				stability_factor = 0.05
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.03
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = POL_synarchist_group_medium_control_range
+			min = 0.25
+			max = 0.55
+			modifier = {
+				political_advisor_cost_factor = 0.1
+				research_speed_factor = 0.05
+				stability_factor = 0.1
+				political_power_factor = -0.1
+				consumer_goods_factor = -0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = POL_synarchist_group_high_control_range
+			min = 0.55
+			max = 0.85
+			modifier = {
+				political_advisor_cost_factor = 0.15
+				research_speed_factor = 0.08
+				stability_factor = 0.15
+				political_power_factor = -0.15
+				consumer_goods_factor = -0.08
+				war_support_factor = -0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = POL_synarchist_group_total_control_range
+			min = 0.85
+			max = 1
+			modifier = {
+				political_advisor_cost_factor = 0.15
+				research_speed_factor = 0.08
+				stability_factor = 0.15
+				political_power_factor = -0.15
+				consumer_goods_factor = -0.1
+				war_support_factor = -0.1
+				monthly_population = -0.03
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+	}

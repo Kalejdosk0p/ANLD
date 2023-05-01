@@ -1,0 +1,26 @@
+
+state={
+	id=890
+	name="STATE_890"
+	resources={
+		rubber=3.000
+	}
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = COG
+
+	}
+
+	provinces={
+		1181 1950 2220 4941 7161 9962 10766 12783 12847 
+	}
+	manpower=710035
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

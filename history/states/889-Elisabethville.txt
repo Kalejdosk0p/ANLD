@@ -1,0 +1,26 @@
+
+state={
+	id=889
+	name="STATE_889"
+	resources={
+		tungsten=2.000
+	}
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = COG
+
+	}
+
+	provinces={
+		191 1817 4515 12907 
+	}
+	manpower=708190
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

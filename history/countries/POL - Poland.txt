@@ -1,0 +1,438 @@
+﻿capital = 10
+
+### OOB ###
+oob = "POL_1936"
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "POL_1936_naval_mtg"
+	else = {
+		set_naval_oob = "POL_1936_naval_legacy"
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "POL_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			engines_1 = 1
+			early_bombs = 1
+		}
+	else = {
+		set_air_oob = "POL_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			early_bomber = 1
+			CAS1 = 1
+		}
+	}
+}
+
+### TECHNOLOGIES ###
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+	basic_train = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1	
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+}
+
+### VARIANTS ###
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "By Blood Alone"
+		}
+	}
+	create_equipment_variant = {
+		name = "PZL P.24"
+		type = fighter_equipment_0
+		upgrades = {
+			plane_gun_upgrade = 3
+			plane_range_upgrade = 0  
+			plane_engine_upgrade = 1
+			plane_reliability_upgrade = 3
+		}
+	}
+}
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
+	create_equipment_variant = {
+		name = "PZL P.11"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "PZL P.24"
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = aircraft_cannon_1_2x
+			fixed_auxiliary_weapon_slot_1 = light_mg_2x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "PZL P.23"
+		type = small_plane_cas_airframe_1
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = lmg_defense_turret
+		}
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "TKS"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_fixed_superstructure_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 1
+			tank_nsb_engine_upgrade = 1
+		}
+		obsolete = yes #used for oob
+		icon = "GFX_POL_basic_light_tank"
+	}
+	create_equipment_variant = {
+		name = "7TP dw"
+		type = light_tank_chassis_0
+		parent_version = 1
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = secondary_turret_hmg
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 2
+			tank_nsb_engine_upgrade = 2
+		}
+		icon = "GFX_POL_imp_light_tank"
+	}
+	create_equipment_variant = {
+		name = "7TP jw"
+		type = light_tank_chassis_0
+		parent_version = 2
+		modules = {
+			main_armament_slot = tank_high_velocity_cannon
+			turret_type_slot = tank_light_two_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = empty
+		}
+		upgrades = {
+			tank_nsb_armor_upgrade = 2
+			tank_nsb_engine_upgrade = 2
+		}
+		icon = "GFX_POL_imp_light_tank"
+	}
+#	add_equipment_to_stockpile = {
+#		type = light_tank_chassis_0
+#		amount = 550
+#		variant_name = "TKS"
+#	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Wilk Class"				
+		type = ship_hull_submarine_2
+		name_group = POL_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Wicher Class"				
+		type = ship_hull_light_1
+		name_group = POL_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+}
+
+### IMPORTANT THINGS ###
+set_research_slots = 4
+set_stability = 0.5
+set_war_support = 0.5
+set_convoys = 200
+
+diplomatic_relation = { country = SOV relation = non_aggression_pact }
+
+add_opinion_modifier = { target = WGR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = WGR modifier = historic_rivalry_modifier }
+add_opinion_modifier = { target = DDR modifier = historic_rivalry_modifier }
+add_opinion_modifier = { target = GER modifier = historic_rivalry_modifier }
+add_opinion_modifier = { target = SOV modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = HUN modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = SER modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = ITA modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = USA modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = TUR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = FRA modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = SPR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = CAU modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = BAL modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = UKR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = BLR modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = ENG modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = AUS modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = AUS modifier = historic_rivalry_modifier }
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1935.9.8"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 20
+	fascism = 55
+	communism = 10
+	neutrality = 15
+}
+### FUNNY THINGS ###
+add_ideas = {
+	labour_camps
+	export_focus
+	limited_conscription
+	civilian_economy
+	novote
+	old_wettyn_king
+	POL_idea_ending_depression
+}
+
+set_variable = {POL_WPvsPOW_army_attack_factor = -0.1 }
+set_variable = {POL_WPvsPOW_army_org_factor = -0.1 }
+set_variable = {POL_WPvsPOW_army_defence_factor = -0.1 }
+set_variable = {POL_WPvsPOW_war_support_factor = -0.2 }
+add_dynamic_modifier = { modifier = POL_rivalry_between_POW_and_WP_dynamic_modifier }
+
+set_variable = {POL_development_consumer_goods_factor = 0.1}
+set_variable = {POL_development_industrial_capacity_factory = -0.15}
+set_variable = {POL_development_production_speed_buildings_factor = -0.1}
+add_dynamic_modifier = { modifier = POL_current_state_of_development }
+
+create_faction = Visegrad_Group
+add_to_faction = POL
+add_to_faction = HUN
+
+recruit_character = POL_Pilsudski
+recruit_character = POL_deluge_Dmowski
+recruit_character = POL_Sanation_Emergency_Council 
+recruit_character = POL_deluge_Stachniuk
+recruit_character = POL_Smigly
+recruit_character = POL_deluge_Sikorski
+recruit_character = POL_Piasecki
+recruit_character = POL_deluge_rataj
+recruit_character = POL_deluge_dabski
+recruit_character = POL_deluge_waleron
+
+recruit_character = POL_deluge_slawek
+recruit_character = POL_deluge_bielecki
+recruit_character = POL_deluge_mosdorf
+recruit_character = POL_deluge_marian_seyda
+recruit_character = POL_deluge_augustus_wettin
+recruit_character = POL_deluge_monarchist_consul
+recruit_character = POL_deluge_christian_wettin
+recruit_character = POL_deluge_izabella_roza_radziwillowna
+recruit_character = POL_deluge_augustyn_czartoryski
+recruit_character = POL_deluge_pawel_salwator_piast_riedelski
+
+recruit_character = POL_deluge_andrzej_walewski
+recruit_character = POL_deluge_aleksander_tyszkiewicz
+recruit_character = POL_deluge_zygumnt_marek
+recruit_character = POL_deluge_antoni_ciszak
+recruit_character = POL_deluge_waclaw_kozielski
+recruit_character = POL_deluge_Kleeberg
+recruit_character = POL_deluge_Haller
+recruit_character = POL_deluge_Kukiel
+recruit_character = POL_deluge_Maczek
+recruit_character = POL_deluge_Anders
+
+recruit_character = POL_deluge_Orlicz_Dreszer
+recruit_character = POL_deluge_Rummel
+recruit_character = POL_deluge_Zeligowski
+recruit_character = POL_deluge_Pilecki
+recruit_character = POL_deluge_Sosabowski
+recruit_character = POL_deluge_abraham
+recruit_character = POL_deluge_kowalski
+recruit_character = POL_deluge_thommee
+recruit_character = POL_deluge_Kapciuk
+recruit_character = POL_deluge_Grzmot_Skotnicki
+
+recruit_character = POL_deluge_kopanski
+recruit_character = POL_deluge_Kutrzeba
+recruit_character = POL_deluge_sosnowski
+recruit_character = POL_deluge_orlik_ruckemann
+recruit_character = POL_deluge_krukowicz_przedrzymirski
+recruit_character = POL_deluge_wieniawa_dlugoszewski
+recruit_character = POL_deluge_bortnowski
+recruit_character = POL_deluge_folyar_rajchman
+recruit_character = POL_deluge_kozlowski
+recruit_character = POL_deluge_zdziechowski
+
+recruit_character = POL_deluge_grabski
+recruit_character = POL_deluge_kwiatkowski
+recruit_character = POL_deluge_Moscicki
+recruit_character = POL_deluge_janusz_korczak
+recruit_character = POL_deluge_aleksander_kaminski
+recruit_character = POL_deluge_kazimiera_illakowiczowna
+recruit_character = POL_deluge_julian_tuwin
+recruit_character = POL_deluge_bartel
+recruit_character = POL_deluge_ulam
+recruit_character = POL_deluge_raczkiewicz
+
+recruit_character = POL_deluge_romer
+recruit_character = POL_deluge_zygalski
+recruit_character = POL_deluge_kowalewski
+recruit_character = POL_deluge_ujejski
+recruit_character = POL_deluge_zajac
+recruit_character = POL_deluge_rayski
+recruit_character = POL_deluge_urbanowicz
+recruit_character = POL_deluge_pawluc
+recruit_character = POL_deluge_macewicz
+recruit_character = POL_deluge_gundlach
+
+recruit_character = POL_deluge_zygmunt_seyda
+recruit_character = POL_deluge_niewiadomski
+recruit_character = POL_deluge_adam_stefan_sapieha
+recruit_character = POL_deluge_august_hlond
+recruit_character = POL_deluge_kazimierz_lutoslawski
+recruit_character = POL_deluge_jozef_panas
+recruit_character = POL_deluge_jozef_beck
+recruit_character = POL_deluge_switalski
+recruit_character = POL_deluge_stanislaw_piasecki
+recruit_character = POL_deluge_rutkowski
+
+recruit_character = POL_deluge_szpakowski
+recruit_character = POL_deluge_swietlicki
+recruit_character = POL_deluge_koc
+recruit_character = POL_deluge_zyndram_koscialkowski
+recruit_character = POL_deluge_sujkowski
+recruit_character = POL_deluge_tanski
+recruit_character = POL_deluge_michalowicz
+recruit_character = POL_deluge_szukalski
+recruit_character = POL_deluge_skoczylas
+recruit_character = POL_deluge_klopocka
+
+recruit_character = POL_deluge_stepinski
+recruit_character = POL_deluge_tadeusz_then
+recruit_character = POL_deluge_przytakiewicz
+recruit_character = POL_deluge_aleksander_wat
+recruit_character = POL_deluge_jasienski
+recruit_character = POL_deluge_tytus_czyzewski
+recruit_character = POL_deluge_anatol_stern
+recruit_character = POL_deluge_jedrzej_giertych
+recruit_character = POL_deluge_widy_wirski
+recruit_character = POL_deluge_edward_osobka_morawski
+
+recruit_character = POL_deluge_stanislaw_mroz
+recruit_character = POL_deluge_karol_radek
+recruit_character = POL_deluge_dagnan
+recruit_character = POL_deluge_adam_doboszynski
+recruit_character = POL_deluge_artur_sliwinski
+recruit_character = POL_deluge_stanislaw_mackiewicz
+recruit_character = POL_deluge_aleksy_cwiakowski
+recruit_character = POL_deluge_leszek_gembarzewski
+recruit_character = POL_deluge_jan_moszynski
+
+recruit_character = POL_deluge_tarlo_mazinski
+recruit_character = POL_deluge_stanislaw_gaszynski
+recruit_character = POL_deluge_jozef_jankowski
+recruit_character = POL_deluge_edward_saryusz_stokowski
+recruit_character = POL_deluge_eustachy_sapieha
+recruit_character = POL_deluge_waclaw_niemojowski
+recruit_character = POL_deluge_jan_kochanowski
+recruit_character = POL_deluge_ludwik_waszkiewicz
+recruit_character = POL_deluge_tomasz_pilarski
+recruit_character = POL_deluge_stanislaw_mikolajczyk
+
+#recruit_character = 

@@ -1,0 +1,592 @@
+characters={
+	BAL_vilis_lācis={
+		name="Vilis Lācis"
+		portraits={
+			civilian={
+				large="gfx/leaders/BAL/vilis_lacis.dds"
+			}
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BAL_jonas_ii={
+		name="Jonas II"
+		portraits={
+			civilian={
+				large="gfx/leaders/BAL/duke_urach.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BAL_archbishop_eugenijus_ivanauskas={
+		name="Archbishop Eugenijus Ivanauskas"
+		portraits={
+			civilian={
+				large="gfx/leaders/BAL/archbishop_daniel_pilarczyk.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BAL_arvids_woyna={
+		name="Arvids Woyna"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			desc="arvids_woyna_desc"
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BAL_konstantin_rokossovsky={
+		name="Konstantin Rokossovsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_konstantin_rokossovsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Konstantin_Rokossovsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist trait_cautious armor_officer }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=4
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = BAL_konstantin_rokossovsky
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				army_armored_3
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	BAL_nikolai_vatutin={
+		name="Nikolai Vatutin"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_nikolai_fyodorovich_vatutin.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Nikolai_Fyodorovich_Vatutin.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	BAL_kliment_voroshilov={
+		name="Kliment Voroshilov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kliment_voroshilov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Kliment_Voroshilov.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard inflexible_strategist politically_connected }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		advisor={
+			slot = army_chief
+			idea_token = BAL_kliment_voroshilov
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				army_chief_defensive_3
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	BAL_mikhail_tukhachevsky={
+		name="Mikhail Tukhachevsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_mikhail_tukhachevsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Mikhail_Tukhachevsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist career_officer trait_reckless infantry_officer offensive_doctrine }
+			skill=4
+			attack_skill=3
+			defense_skill=4
+			planning_skill=4
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	BAL_ivan_chernyakhovsky={
+		name="Ivan Chernyakhovsky"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_ivan_chernyakhovsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Ivan_Chernyakhovsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	BAL_grigory_kulik={
+		name="Grigory Kulik"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_grigory_kulik.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Grigory_Kulik.dds"
+			}
+		}
+		corps_commander={
+			traits={ old_guard harsh_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	BAL_kirill_meretskov={
+		name="Kirill Meretskov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kirill_meretskov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Kirill_Meretskov.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless infantry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	BAL_filipp_golikov={
+		name="Filipp Golikov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_filipp_golikov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Filipp_Golikov.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	BAL_max_reyter={
+		name="Max Reyter"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_max_andreyevich.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Max_Andreyevich.dds"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	BAL_nikandr_chibisov={
+		name="Nikandr Chibisov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_nikandr_yevlampyevich_chibisov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Nikandr_Yevlampyevich_Chibisov.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	BAL_vasily_kuznetsov={
+		name="Vasily Kuznetsov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_vasily_kuznetsov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Vasily_Kuznetsov.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer commando }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	BAL_dmitry_lelyushenko={
+		name="Dmitry Lelyushenko"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_dmitri_danilovich_lelyushenko.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Dmitri_Danilovich_Lelyushenko.dds"
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless armor_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	BAL_filipp_oktyabrskiy={
+		name="Filipp Oktyabrskiy"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_filipp_oktyabrsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Filipp_Oktyabrsky.dds"
+			}
+		}
+		navy_leader={
+			traits={ ironside }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	BAL_arseniy_golovko={
+		name="Arseniy Golovko"
+		portraits={
+			army={
+				small=""
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Arseniy_Golovko.dds"
+			}
+		}
+		navy_leader={
+			traits={ spotter }
+			skill=4
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+	}
+	BAL_vladimir_kasatonov={
+		name="Vladimir Kasatonov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_vladimir_kasatonov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Vladimir_Kasatonov.dds"
+			}
+		}
+		navy_leader={
+			traits={ seawolf }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=-1
+		}
+		advisor={
+			slot = high_command
+			idea_token = BAL_vladimir_kasatonov
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				navy_submarine_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	BAL_mikhail_kalinin = {
+		name = "Mikhail Kalinin"
+		portraits={
+			civilian={
+				small = GFX_idea_mikhail_kalinin
+			}
+			army = {
+				small = GFX_idea_mikhail_kalinin
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BAL_mikhail_kalinin
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				popular_figurehead
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	BAL_vyacheslav_molotov = {
+		name = "Vyacheslav Molotov"
+		portraits={
+			civilian={
+				small = GFX_idea_SOV_vyacheslav_molotov
+			}
+			army = {
+				small = GFX_idea_SOV_vyacheslav_molotov
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = BAL_vyacheslav_molotov
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	BAL_nikolai_yezhov = {
+		name = "Nikolai Yezhov"
+		portraits={
+			civilian={
+				small = GFX_idea_SOV_nikolay_yezhov
+			}
+			army = {
+				small = GFX_idea_SOV_nikolay_yezhov
+			}
+		}
+		advisor={
+			slot = security_chief_slot
+			idea_token = BAL_nikolai_yezhov
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				prince_of_terror
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	BAL_mikhail_frinovsky = {
+		name = "Mikhail Frinovsky"
+		portraits={
+			civilian={
+				small = GFX_idea_mikhail_frinovsky
+			}
+			army = {
+				small = GFX_idea_mikhail_frinovsky
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = BAL_mikhail_frinovsky
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	BAL_ivan_yumashev = {
+		name = "Ivan Yumashev"
+		portraits={
+			civilian={
+				small = GFX_idea_ivan_yumashev
+			}
+			army = {
+				small = GFX_idea_ivan_yumashev
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = BAL_ivan_yumashev
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	BAL_konstantin_vershinin = {
+		name = "Konstantin Vershinin"
+		portraits={
+			civilian={
+				small = GFX_idea_konstantin_vershinin
+			}
+			army = {
+				small = GFX_idea_konstantin_vershinin
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = BAL_konstantin_vershinin
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+	BAL_sergei_khudyakov = {
+		name = "Sergei Khudyakov"
+		portraits={
+			civilian={
+				small = GFX_idea_sergei_khudyakov
+			}
+			army = {
+				small = GFX_idea_sergei_khudyakov
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = BAL_sergei_khudyakov
+			allowed = { tag = BAL }
+			visible = {
+				tag = BAL
+			}
+			cost = 150
+			available = { 
+			}
+			traits = {
+				air_close_air_support_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = army
+		}
+	}
+}

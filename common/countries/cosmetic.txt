@@ -1,0 +1,245 @@
+NEP_KP = {
+	color = rgb { 50  200  50 }
+	color_ui = rgb { 70 220 70 }
+}
+
+VIN_FR = {
+	color = rgb { 50  50  250 }
+	color_ui = rgb { 70 70 255 }
+}
+
+BHU_FR = {
+	color = rgb { 50  50  250 }
+	color_ui = rgb { 70 70 255 }
+}
+
+RAJ_UK = {
+	color = rgb { 250  50  50 }
+	color_ui = rgb { 255 70 70 }
+}
+
+RAJ_GB = {
+	color = rgb { 250  50  50 }
+	color_ui = rgb { 255 70 70 }
+}
+
+MAL_UK = {
+    color = rgb { 225 50 70 }
+    color_ui = rgb { 255 73 100 }
+}
+
+MAL_GB = {
+    color = rgb { 225 50 70 }
+    color_ui = rgb { 255 73 100 }
+}
+
+BUR_UK = {
+    color = rgb { 225 50 110 }
+    color_ui = rgb { 255 73 100 }
+}
+
+BUR_GB = {
+    color = rgb { 225 50 110 }
+    color_ui = rgb { 255 73 100 }
+}
+
+AST_UK = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+
+AST_GB = {
+	color = rgb { 201 56 93 }
+	color_ui = rgb { 255 73 121 }
+}
+
+NZL_UK = {
+	color = rgb { 230 30 40 }
+	color_ui = rgb { 255 60 100 }
+}
+
+NZL_GB = {
+	color = rgb { 230 30 40 }
+	color_ui = rgb { 255 60 100 }
+}
+
+SAF_UK = {
+	color = rgb { 206 125 154 }
+	color_ui = rgb { 230 150 180 }
+}
+
+SAF_GB = {
+	color = rgb { 206 125 154 }
+	color_ui = rgb { 230 150 180 }
+}
+
+INS_HL = {
+    color = rgb { 203 138 74 }
+    color_ui = rgb { 255 179 96 }
+}
+
+CAN_UK = {
+    color = rgb { 230 50 50 }
+    color_ui = rgb { 255 80 80 }
+}
+
+CAN_GB = {
+    color = rgb { 230 50 50 }
+    color_ui = rgb { 255 80 80 }
+}
+
+ITA_ROME = {
+	color = rgb { 100  20  150 }
+	color_ui = rgb { 120 40 170 }
+}
+
+ITA_REPUB = {
+	color = rgb { 50 165 45 }
+	color_ui = rgb { 90 200 90 }
+}
+
+BALKAN_ALB = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 94 95 164 }
+}
+
+COSMETIC_YUG = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 94 95 164 }
+}
+
+BALKAN_CRO = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 94 95 164 }
+}
+
+BALKAN_BUL = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 94 95 164 }
+}
+
+BALKAN_GRE = {
+	color = rgb { 72 73 126 }
+	color_ui = rgb { 94 95 164 }
+}
+
+SOVIET_UNION = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+
+SOV_SOVIET = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 163 17 31 }
+}
+
+FRA_EMPIRE = {
+	color = rgb { 20 39 153 }
+	color_ui = rgb { 50 60 180 }
+}
+
+SWE_KALMAR = {
+	color = rgb { 250 204 7 }
+	color_ui = rgb { 255 240 40 }
+}
+
+SWE_CROWNED_KALMAR = {
+	color = rgb { 250 204 7 }
+	color_ui = rgb { 255 240 40 }
+}
+
+SWE_BLACK_KALMAR = {
+	color = rgb { 230 180 7 }
+	color_ui = rgb { 255 210 40 }
+}
+
+PRUSSIA = {
+	color = rgb { 80 79 88 }
+	color_ui = rgb { 110 110 120 }
+}
+
+GER_WEHRSTAAT = {
+	color = rgb { 80 79 88 }
+	color_ui = rgb { 110 110 120 }
+}
+
+GER_REICH = {
+	color = rgb { 80 79 88 }
+	color_ui = rgb { 110 110 120 }
+}
+
+WGR_EMPIRE = {
+	color = rgb { 75 130 135 }
+	color_ui = rgb { 100 160 170 }
+}
+
+GER_KINGDOM = {
+	color = rgb { 75 130 135 }
+	color_ui = rgb { 100 160 170 }
+}
+
+GER_EMPIRE = {
+	color = rgb { 75 130 135 }
+	color_ui = rgb { 100 160 170 }
+}
+
+GER_REPUB = {
+	color = rgb { 112 153 148 }
+	color_ui = rgb { 140 180 180 }
+}
+
+FEDERAL_GERMANY = {
+	color = rgb { 112 153 148 }
+	color_ui = rgb { 140 180 180 }
+}
+
+EAST_GERMANY = {
+	color = rgb { 164 24 31 }
+	color_ui = rgb { 200 60 80 }
+}
+
+SOCIALIST_GERMANY = {
+	color = rgb { 196 57 70 }
+	color_ui = rgb { 240 70 100 }
+}
+
+CSA_CONGAREE = {
+	color = rgb { 138 14 19 }
+	color_ui = rgb { 170 50 60 }
+}
+POL_empire = {
+	color = rgb { 146 34 34 }
+	color_ui = rgb { 146 34 34 }
+}
+POL_rzeczpospolita = {
+	color = rgb { 159 21 90 }
+	color_ui = rgb { 159 21 90 }
+}
+POL_PIAS = {
+	color = rgb { 26 110 34 }
+	color_ui = rgb { 26 110 34 }
+}
+POL_pagan = {
+	color = rgb { 152 58 24 }
+	color_ui = rgb { 152 58 24 }
+}
+POL_lechitic = {
+	color = rgb { 12 122 19 }
+	color_ui = rgb { 12 122 19 }
+}
+POL_zapadoslavia = {
+	color = rgb { 9 85 151 }
+	color_ui = rgb { 9 85 151 }
+}
+POL_slavic = {
+	color = rgb { 56 12 122 }
+	color_ui = rgb { 56 12 122 }
+}
+PMP_papal = {
+	color = rgb { 242 152 145 }
+	color_ui = rgb { 242 152 145 }
+}
+GRE_GREATER_GREECE = {
+	color = rgb { 3 93 138 }
+	color_ui = rgb { 3 93 138 }
+}

@@ -1,0 +1,81 @@
+﻿capital = 500
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+oob = "BRA_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	early_fighter = 1
+	CAS1 = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_depth_charges = 1
+		early_ship_hull_heavy = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+	}
+	#set_naval_oob = ""
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.7.17"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 20
+	fascism = 20
+	neutrality = 40
+	communism = 20
+}
+
+
+set_convoys = 40
+
+recruit_character = BRA_armando_sales
+recruit_character = BRA_eurico_gaspar_dutra
+recruit_character = BRA_mascarenhas_de_morais
+recruit_character = BRA_augusto_rademaker
+recruit_character = BRA_pedro_iv
+recruit_character = BRA_getúlio_vargas
+recruit_character = BRA_plínio_salgado
+recruit_character = BRA_luís_carlos_prestes

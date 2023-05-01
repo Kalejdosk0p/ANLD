@@ -1,0 +1,2393 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ideology_monarchist_group"
+		texturefile = "gfx/interface/ideologies/neutrality_group.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_ideology_communism_group"
+		texturefile = "gfx/interface/ideologies/communism_group.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_fascism_group"
+		texturefile = "gfx/interface/ideologies/fascism_group.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_democratic_group"
+		texturefile = "gfx/interface/ideologies/democratic_group.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_universal"
+		texturefile = "gfx/interface/ideas/generic/idea_voting_red_rosette.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_restricted"
+		texturefile = "gfx/interface/ideas/generic/idea_voting_blue_rosette.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_landed"
+		texturefile = "gfx/interface/ideas/generic/idea_voting_purple_rosette.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_novote"
+		texturefile = "gfx/interface/ideas/generic/idea_voting_black_rosette.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_voting_locked"
+		texturefile = "gfx/interface/ideas/generic/idea_voting_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_gold_standard"
+		texturefile = "gfx/interface/ideas/generic/idea_money_gold_standard.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_fixed_exchange"
+		texturefile = "gfx/interface/ideas/generic/idea_money_fixed_exchange.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_floating_exchange"
+		texturefile = "gfx/interface/ideas/generic/idea_money_floating_exchange.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_printing"
+		texturefile = "gfx/interface/ideas/generic/idea_money_printing.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_money_locked"
+		texturefile = "gfx/interface/ideas/generic/idea_money_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_welfare_state"
+		texturefile = "gfx/interface/ideas/generic/idea_order_welfare_state.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_robber_barons"
+		texturefile = "gfx/interface/ideas/generic/idea_order_robber_barons.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_established_religion"
+		texturefile = "gfx/interface/ideas/generic/idea_order_established_religion.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_labour_camps"
+		texturefile = "gfx/interface/ideas/generic/idea_order_labour_camps.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_order_locked"
+		texturefile = "gfx/interface/ideas/generic/idea_order_locked.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_colonial_governor_western_european_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_colonial_governor_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_colonial_governor_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_colonial_governor_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_colonial_governor_south_america_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_colonial_governor_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_colonial_governor_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_international_secretary_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_international_secretary_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_international_secretary_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_international_secretary_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_international_secretary_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_international_secretary_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_international_secretary_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_independence_fighter_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_independence_fighter_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_independence_fighter_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_independence_fighter_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_independence_fighter_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_independence_fighter_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_independence_fighter_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_statesman_western_european_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_statesman_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_statesman_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_statesman_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_statesman_south_america_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_statesman_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/characters/idea_talleyrand.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_monarchist_statesman_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_trades_unionist_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_trades_unionist_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_trades_unionist_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_trades_unionist_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_trades_unionist_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_trades_unionist_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_trades_unionist_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_innovative_capitalist_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_innovative_capitalist_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_innovative_capitalist_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_innovative_capitalist_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_innovative_capitalist_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_innovative_capitalist_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_innovative_capitalist_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_landed_gentleman_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_landed_gentleman_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_landed_gentleman_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_landed_gentleman_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_landed_gentleman_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_landed_gentleman_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_landed_gentleman_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_great_war_hero_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_great_war_hero_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_great_war_hero_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_great_war_hero_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_asia_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_great_war_hero_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_south_america_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_great_war_hero_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_great_war_hero_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_chief_of_propaganda_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_chief_of_propaganda_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_chief_of_propaganda_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_chief_of_propaganda_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_asia_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_chief_of_propaganda_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_south_america_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_chief_of_propaganda_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_chief_of_propaganda_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_africa_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_infantry_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_infantry_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_infantry_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_infantry_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_infantry_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_infantry_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_infantry_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_special_forces_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_special_forces_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_special_forces_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_special_forces_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_special_forces_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_special_forces_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_special_forces_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_regrouper_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_regrouper_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_regrouper_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_regrouper_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_7.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_regrouper_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_regrouper_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_regrouper_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_fortification_engineer_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_fortification_engineer_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_fortification_engineer_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_fortification_engineer_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_7.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_fortification_engineer_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_fortification_engineer_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_fortification_engineer_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_compassionate_gentleman_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_compassionate_gentleman_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_compassionate_gentleman_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_compassionate_gentleman_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_asia_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_compassionate_gentleman_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_compassionate_gentleman_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_arab_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_compassionate_gentleman_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_africa_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_smooth_talking_charmer_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_smooth_talking_charmer_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_smooth_talking_charmer_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_smooth_talking_charmer_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_asia_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_smooth_talking_charmer_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_smooth_talking_charmer_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_arab_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_smooth_talking_charmer_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_africa_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_fascist_demagogue_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_fascist_demagogue_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_fascist_demagogue_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_fascist_demagogue_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_fascist_demagogue_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_south_america_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_fascist_demagogue_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_arab_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_fascist_demagogue_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_africa_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_democratic_reformer_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_democratic_reformer_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_democratic_reformer_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_democratic_reformer_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_democratic_reformer_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_democratic_reformer_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_democratic_reformer_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_communist_revolutionary_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_communist_revolutionary_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_communist_revolutionary_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_europe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_communist_revolutionary_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_communist_revolutionary_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_communist_revolutionary_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_communist_revolutionary_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_communist_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_navy_chief_reform_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_europe_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_navy_chief_reform_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_europe_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_navy_chief_reform_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_europe_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_navy_chief_reform_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_asia_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_navy_chief_reform_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_south_america_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_navy_chief_reform_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_arab_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_navy_chief_reform_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_africa_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_air_chief_reform_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_air_chief_reform_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_air_chief_reform_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_air_chief_reform_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_asia_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_air_chief_reform_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_south_america_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_air_chief_reform_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_arab_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_air_chief_reform_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_africa_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_infiltration_expert_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_infiltration_expert_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_infiltration_expert_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_infiltration_expert_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_asia_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_infiltration_expert_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_south_america_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_infiltration_expert_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_infiltration_expert_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_air_africa_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_disinformation_expert_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_disinformation_expert_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_disinformation_expert_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_disinformation_expert_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_disinformation_expert_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_disinformation_expert_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_disinformation_expert_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_master_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_master_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_master_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_master_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_asia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_master_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_south_america.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_master_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_arab.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_master_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_africa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_catcher_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_south_america_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_catcher_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_south_america_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_catcher_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_south_america_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_catcher_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_asia_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_catcher_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_south_america_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_catcher_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_arab_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_spy_catcher_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_africa_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_coast_guard_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_coast_guard_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_coast_guard_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_europe_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_coast_guard_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_asia_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_coast_guard_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_south_america_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_coast_guard_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_coast_guard_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_navy_africa_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_paramilitary_chief_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_paramilitary_chief_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_paramilitary_chief_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_paramilitary_chief_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_paramilitary_chief_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_paramilitary_chief_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_paramilitary_chief_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_national_guard_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_national_guard_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_national_guard_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_national_guard_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_national_guard_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_national_guard_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_national_guard_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_prince_of_terror_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_prince_of_terror_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_prince_of_terror_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_prince_of_terror_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_arab_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_prince_of_terror_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_south_america_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_prince_of_terror_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_arab_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_prince_of_terror_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_political_advisor_africa_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_chief_drill_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_chief_drill_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_chief_drill_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_chief_drill_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_7.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_chief_drill_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_chief_drill_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_army_chief_drill_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_army_chief_reform_western_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_army_chief_reform_eastern_european_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_army_chief_reform_commonwealth_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_europe_6.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_army_chief_reform_asian_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_asia_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_army_chief_reform_south_america_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_south_america_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_army_chief_reform_middle_eastern_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_arab_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_generic_deluge_army_chief_reform_african_2d"
+		texturefile = "gfx/interface/ideas/idea_generic_army_africa_4.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ataturk"
+		texturefile = "gfx/interface/ideas/characters/ataturk_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_swedish_king"
+		texturefile = "gfx/interface/ideas/spirits/gustav_sweden.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_emperor_napoleon"
+		texturefile = "gfx/interface/ideas/spirits/napoleon_prince_imperial_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_emperor_napoleon_old"
+		texturefile = "gfx/interface/ideas/spirits/napoleon_portrait.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_american_king"
+		texturefile = "gfx/interface/ideas/spirits/american_king.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ottoman_emperor"
+		texturefile = "gfx/interface/ideas/spirits/ottoman_emperor_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_fighting_king"
+		texturefile = "gfx/interface/ideas/spirits/king_george_viii_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hu_hanmin"
+		texturefile = "gfx/interface/ideas/spirits/hu_hanmin_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_emperor_puyi"
+		texturefile = "gfx/interface/ideas/spirits/emperor_puyi_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_sohn_seiner_klasse"
+		texturefile = "gfx/interface/ideas/spirits/ernst_thaelmann_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_enver_hoxha"
+		texturefile = "gfx/interface/ideas/characters/enver_hoxha_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_alfred_rosenberg"
+		texturefile = "gfx/interface/ideas/idea_joachim_von_ribbentrop.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_jakob_hauer"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_europe.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ernst_rohm"
+		texturefile = "gfx/interface/ideas/characters/ernst_rohm.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_konrad_adenauer"
+		texturefile = "gfx/interface/ideas/idea_generic_democratic_europe.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_habsburg_emperor"
+		texturefile = "gfx/interface/ideas/spirits/otto_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_aryan_supremacist"
+		texturefile = "gfx/interface/ideas/spirits/hitler_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_aryan_chancellor"
+		texturefile = "gfx/interface/ideas/spirits/hitler_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_westphalian_king"
+		texturefile = "gfx/interface/ideas/spirits/german_prince.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_life_hussar"
+		texturefile = "gfx/interface/ideas/spirits/mackensen_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_bourbon_king"
+		texturefile = "gfx/interface/ideas/spirits/bourbon_king_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_italian_king"
+		texturefile = "gfx/interface/ideas/spirits/joachim_murat_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_deluge_legacy_of_slavery"
+		texturefile = "gfx/interface/ideas/spirits/ball_and_chain.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_league_of_nations"
+		texturefile = "gfx/interface/ideas/spirits/league_of_nations.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_deluge_women_workforce"
+		texturefile = "gfx/interface/ideas/spirits/women_workforce.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_heavenly_king"
+		texturefile = "gfx/interface/ideas/spirits/heavenly_king_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_yin_and_yang"
+		texturefile = "gfx/interface/ideas/spirits/yin_and_yang.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_dare_to_die"
+		texturefile = "gfx/interface/ideas/spirits/dare_to_die.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_emperor_russia"
+		texturefile = "gfx/interface/ideas/spirits/russian_duke_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rasputin_small_page"
+		texturefile = "gfx/interface/ideas/characters/rasputin_small_page.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_vostorgov"
+		texturefile = "gfx/interface/ideas/characters/russian_priest_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_aleister_crowley"
+		texturefile = "gfx/interface/ideas/characters/aleister_crowley.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hexagramme_eye"
+		texturefile = "gfx/interface/ideas/spirits/hexagramme_eye.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_franz_seldte_blue"
+		texturefile = "gfx/interface/ideas/characters/franz_seldte_blue.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_franz_seldte_yellow"
+		texturefile = "gfx/interface/ideas/characters/franz_seldte_yellow.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_otto_skorzeny"
+		texturefile = "gfx/interface/ideas/characters/otto_skorzeny.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hans_ludin"
+		texturefile = "gfx/interface/ideas/characters/hans_ludin.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_werner_von_blomberg"
+		texturefile = "gfx/interface/ideas/characters/blomberg_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_alfried_krupp"
+		texturefile = "gfx/interface/ideas/characters/alfried_krupp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rudolf_rocker"
+		texturefile = "gfx/interface/ideas/characters/rudolf_rocker.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_wilhelm_brandt"
+		texturefile = "gfx/interface/ideas/characters/agustin_grandes.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_alfred_jodl"
+		texturefile = "gfx/interface/ideas/characters/alfred_jodl.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_maximilian_von_weichs"
+		texturefile = "gfx/interface/ideas/characters/maximilian_von_weichs.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ernst_bernhard_busch"
+		texturefile = "gfx/interface/ideas/characters/ernst_bernhard_busch.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_helmuth_weidling"
+		texturefile = "gfx/interface/ideas/characters/helmuth_weidling.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_wilhelm_marschall"
+		texturefile = "gfx/interface/ideas/characters/wilhelm_marschall.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_gunther_lutjens_2"
+		texturefile = "gfx/interface/ideas/characters/gunther_lutjens_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hans_marchwitza"
+		texturefile = "gfx/interface/ideas/characters/sigmund_jaehn.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_rosa_luxemburg"
+		texturefile = "gfx/interface/ideas/characters/rosa_luxembourg_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_fridolin_von_senger"
+		texturefile = "gfx/interface/ideas/characters/fridolin_von_senger.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_walter_grabmann"
+		texturefile = "gfx/interface/ideas/characters/walter_grabmann.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_josef_kammhuber"
+		texturefile = "gfx/interface/ideas/characters/luftwaffe_officer.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_walther_von_reichenau"
+		texturefile = "gfx/interface/ideas/characters/walther_von_reichenau.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hermann_boehm"
+		texturefile = "gfx/interface/ideas/characters/hermann_boehm.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_friedrich_guggenberger"
+		texturefile = "gfx/interface/ideas/characters/friedrich_guggenberger.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ferdinand_heim"
+		texturefile = "gfx/interface/ideas/characters/ferdinand_heim.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_kurt_fricke"
+		texturefile = "gfx/interface/ideas/characters/kurt_fricke.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_eduard_dietl"
+		texturefile = "gfx/interface/ideas/characters/eduard_dietl.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_gunther_rall"
+		texturefile = "gfx/interface/ideas/characters/gunther_rall.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_reinhard_heydrich"
+		texturefile = "gfx/interface/ideas/characters/reinhard_heydrich.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_karl_liebknecht"
+		texturefile = "gfx/interface/ideas/characters/karl_liebknecht.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hans_kahle"
+		texturefile = "gfx/interface/ideas/characters/spanish_civil_war_officer_1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_heinrich_dollwetzel"
+		texturefile = "gfx/interface/ideas/characters/spanish_civil_war_officer_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ludwig_renn"
+		texturefile = "gfx/interface/ideas/characters/robert_merriman.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_dudley_rawson_stratford_de_chair"
+		texturefile = "gfx/interface/ideas/characters/dudley_rawson_stratford_de_chair.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_otto_wels"
+		texturefile = "gfx/interface/ideas/characters/otto_wels.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hermann_recknagel"
+		texturefile = "gfx/interface/ideas/characters/hermann_recknagel.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_theodor_krancke"
+		texturefile = "gfx/interface/ideas/characters/theodor_krancke.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hellmuth_heye"
+		texturefile = "gfx/interface/ideas/characters/hellmuth_heye.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_eugen_von_schobert"
+		texturefile = "gfx/interface/ideas/characters/eugen_von_schobert.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_sepp_dietrich"
+		texturefile = "gfx/interface/ideas/characters/sepp_dietrich.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_robert_haining"
+		texturefile = "gfx/interface/ideas/characters/robert_haining.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_john_rolls"
+		texturefile = "gfx/interface/ideas/characters/john_rolls.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_robert_weeks"
+		texturefile = "gfx/interface/ideas/characters/robert_weeks.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_sidney_kirkman"
+		texturefile = "gfx/interface/ideas/characters/miles_dempsey.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_henry_maitland_wilson"
+		texturefile = "gfx/interface/ideas/characters/henry_maitland_wilson.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_oswald_mosley"
+		texturefile = "gfx/interface/ideas/characters/oswald_mosley.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_maximilian_felzmann"
+		texturefile = "gfx/interface/ideas/characters/maximilian_felzmann.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_kurt_zeitzler"
+		texturefile = "gfx/interface/ideas/characters/kurt_zeitzler.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_walter_warlimont"
+		texturefile = "gfx/interface/ideas/characters/walter_warlimont.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hans_krebs"
+		texturefile = "gfx/interface/ideas/characters/hans_krebs.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ernst_kaltenbrunner"
+		texturefile = "gfx/interface/ideas/characters/ernst_kaltenbrunner.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_wilhelm_von_gayl"
+		texturefile = "gfx/interface/ideas/characters/alvin_gittins.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_john_easonsmith"
+		texturefile = "gfx/interface/ideas/characters/john_easonsmith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_robert_laycock"
+		texturefile = "gfx/interface/ideas/characters/robert_laycock.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_paddy_mayne"
+		texturefile = "gfx/interface/ideas/characters/paddy_mayne.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_benoit-leon_de_fornel"
+		texturefile = "gfx/interface/ideas/characters/alphonse_georges_2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_hans_gaede"
+		texturefile = "gfx/interface/ideas/characters/hans_gaede.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_ivar_holmquist"
+		texturefile = "gfx/interface/ideas/characters/ivar_holmquist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_le_deluge"
+		texturefile = "gfx/interface/ideas/spirits/le_deluge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_boleslaw_wieniawa_dlugoszewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/boleslaw_wieniawa_dlugoszewski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_lucjan_zeligowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/lucjan_zeligowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_nopcsa_ferenc_picture_small"
+		texturefile = "gfx/interface/ideas/characters/nopcsa_ferenc_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_pronay_pal_picture_small"
+		texturefile = "gfx/interface/ideas/characters/pronay_pal_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_witold_pilecki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/witold_pilecki_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wladyslaw_anders_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wladyslaw_anders_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_fryderyk_ii_idea"
+		texturefile = "gfx/interface/ideas/spirits/fryderyk_ii_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_New_Marshall_idea"
+		texturefile = "gfx/interface/ideas/spirits/New_Marshall_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_Old_Marshall_idea"
+		texturefile = "gfx/interface/ideas/spirits/Old_Marshall_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_state_that_gives"
+		texturefile = "gfx/interface/ideas/spirits/state_that_gives.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_renewed_warsaw_confederation"
+		texturefile = "gfx/interface/ideas/spirits/renewed_warsaw_confederation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_juliusz_rummel_picture_small"
+		texturefile = "gfx/interface/ideas/characters/juliusz_rummel_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kazimierz_sosnowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kazimierz_sosnowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_sosabowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_sosabowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wiktor_thommee_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wiktor_thommee_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wilhelm_orlik_rueckemann_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wilhelm_orlik_rueckemann_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_zygmunt_seyda_picture_small"
+		texturefile = "gfx/interface/ideas/characters/zygmunt_seyda_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_albrecht_luitpol_picture_small"
+		texturefile = "gfx/interface/ideas/characters/albrecht_luitpol_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_edward_rydz_smigly_picture_small"
+		texturefile = "gfx/interface/ideas/characters/edward_rydz_smigly_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_emil_krukowicz_przedrzymirski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/emil_krukowicz_przedrzymirski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ferenc_feketehalmy_czeydner_picture_small"
+		texturefile = "gfx/interface/ideas/characters/ferenc_feketehalmy_czeydner_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_franciszek_kleeberg_picture_small"
+		texturefile = "gfx/interface/ideas/characters/franciszek_kleeberg_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gero_erno_picture_small"
+		texturefile = "gfx/interface/ideas/characters/gero_erno_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_geza_lakatos_picture_small"
+		texturefile = "gfx/interface/ideas/characters/geza_lakatos_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ivan_hindy_picture_small"
+		texturefile = "gfx/interface/ideas/characters/ivan_hindy_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gustaw_orlicz_dreszer_picture_small"
+		texturefile = "gfx/interface/ideas/characters/gustaw_orlicz_dreszer_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_janko_vukovic_picture_small"
+		texturefile = "gfx/interface/ideas/characters/janko_vukovic_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_josip_broz_tito_picture_small"
+		texturefile = "gfx/interface/ideas/characters/josip_broz_tito_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jozef_haller_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jozef_haller_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jozef_kapciuk_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jozef_kapciuk_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jozef_pilsudski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jozef_pilsudski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_karoly_beregfy_picture_small"
+		texturefile = "gfx/interface/ideas/characters/karoly_beregfy_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_lajos_veress_picture_small"
+		texturefile = "gfx/interface/ideas/characters/lajos_veress_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_marian_kukiel_picture_small"
+		texturefile = "gfx/interface/ideas/characters/marian_kukiel_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_matyas_rakosi_picture_small"
+		texturefile = "gfx/interface/ideas/characters/matyas_rakosi_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_paul_von_brlog_picture_small"
+		texturefile = "gfx/interface/ideas/characters/paul_von_brlog_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_roman_abraham_picture_small"
+		texturefile = "gfx/interface/ideas/characters/roman_abraham_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_szalasi_ferenc_picture_small"
+		texturefile = "gfx/interface/ideas/characters/szalasi_ferenc_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_szakasits_arpad_picture_small"
+		texturefile = "gfx/interface/ideas/characters/szakasits_arpad_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_maczek_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_maczek_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_kopanski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_kopanski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_grzmot_skotnicki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_grzmot_skotnicki_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wladyslaw_sikorski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wladyslaw_sikorski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wincenty_kowalski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wincenty_kowalski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tadeusz_kutrzeba_picture_small"
+		texturefile = "gfx/interface/ideas/characters/tadeusz_kutrzeba_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wladyslaw_bortnowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wladyslaw_bortnowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_maria_draskovic_idea"
+		texturefile = "gfx/interface/ideas/spirits/maria_draskovic_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_esterhazy_moricz_idea"
+		texturefile = "gfx/interface/ideas/spirits/esterhazy_moricz_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_zsigmond_szechneyi_idea"
+		texturefile = "gfx/interface/ideas/spirits/zsigmond_szechneyi_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_andrassy_sandor_idea"
+		texturefile = "gfx/interface/ideas/spirits/andrassy_sandor_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_fryderyk_i_idea"
+		texturefile = "gfx/interface/ideas/spirits/fryderyk_i_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_prince_louis_of_westhphalia_idea"
+		texturefile = "gfx/interface/ideas/spirits/prince_louis_of_westhphalia_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_pierpont_morgan_hamilton_idea"
+		texturefile = "gfx/interface/ideas/spirits/pierpont_morgan_hamilton_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_joachim_murat_vi_idea"
+		texturefile = "gfx/interface/ideas/spirits/joachim_murat_vi_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_edward_viii_idea"
+		texturefile = "gfx/interface/ideas/spirits/edward_viii_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_august_von_mackensen_idea"
+		texturefile = "gfx/interface/ideas/spirits/august_von_mackensen_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_eligiusz_niewiadomski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/eligiusz_niewiadomski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_eugeniusz_kwiatkowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/eugeniusz_kwiatkowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_henryk_floyar_rajchman_picture_small"
+		texturefile = "gfx/interface/ideas/characters/henryk_floyar_rajchman_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ignacy_moscicki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/ignacy_moscicki_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jerzy_zdzichowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jerzy_zdzichowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jozef_beck_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jozef_beck_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kazimierz_bartel_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kazimierz_bartel_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_leon_kozlowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/leon_kozlowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_marian_zyndram_koscialowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/marian_zyndram_koscialowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wladyslaw_grabski_picutre_small"
+		texturefile = "gfx/interface/ideas/characters/wladyslaw_grabski_picutre_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_antoni_sujkowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/antoni_sujkowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gustaw_macewicz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/gustaw_macewicz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_henryk_zygalski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/henryk_zygalski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jan_kowalewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jan_kowalewski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_janina_klopocka_picture_small"
+		texturefile = "gfx/interface/ideas/characters/janina_klopocka_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jozef_ludwik_zajac_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jozef_ludwik_zajac_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kazimierz_switalski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kazimierz_switalski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ludomil_rayski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/ludomil_rayski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mieczyslaw_michalowicz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/mieczyslaw_michalowicz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_pawluc_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_pawluc_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_piasecki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_piasecki_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_szukalski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_szukalski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_ujejski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_ujejski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_ulam_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_ulam_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tadeusz_romer_picture_small"
+		texturefile = "gfx/interface/ideas/characters/tadeusz_romer_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tadeusz_tanski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/tadeusz_tanski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_witold_urbanowicz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/witold_urbanowicz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wladyslaw_raczkiewicz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wladyslaw_raczkiewicz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wlodzimierz_skoczylas_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wlodzimierz_skoczylas_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_zadruga_idea_icon"
+		texturefile = "gfx/interface/ideas/spirits/zadruga_idea_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_franciszek_latinik_picutre_small"
+		texturefile = "gfx/interface/ideas/characters/franciszek_latinik_picutre_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_karol_swierczewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/karol_swierczewski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_leonard_skierski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/leonard_skierski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_michal_rola_zymierski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/michal_rola_zymierski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_michal_tokarzewski_karaszewicz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/michal_tokarzewski_karaszewicz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_poplawski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_poplawski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wladyslaw_jung_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wladyslaw_jung_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_zygmunt_berling_picutre_small"
+		texturefile = "gfx/interface/ideas/characters/zygmunt_berling_picutre_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_boleslaw_roja_picture_small"
+		texturefile = "gfx/interface/ideas/characters/boleslaw_roja_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_adam_koc_picture_small"
+		texturefile = "gfx/interface/ideas/characters/adam_koc_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_andrzej_swietlicki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/andrzej_swietlicki_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bronislaw_prugar_ketling_picture_small"
+		texturefile = "gfx/interface/ideas/characters/bronislaw_prugar_ketling_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kazimierz_fabrycy_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kazimierz_fabrycy_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mikolaj_boltuc_picture_small"
+		texturefile = "gfx/interface/ideas/characters/mikolaj_boltuc_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rudolf_dreszer_picture_small"
+		texturefile = "gfx/interface/ideas/characters/rudolf_dreszer_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stefan_dab_biernacki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stefan_dab_biernacki_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stefan_rowecki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stefan_rowecki_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_adam_stefan_sapieha_picture_small"
+		texturefile = "gfx/interface/ideas/characters/adam_stefan_sapieha_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_aleksander_kaminski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/aleksander_kaminski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_august_hlond_picture_small"
+		texturefile = "gfx/interface/ideas/characters/august_hlond_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_janusz_korczak_picture_small"
+		texturefile = "gfx/interface/ideas/characters/janusz_korczak_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jozef_panas_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jozef_panas_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_julian_tuwin_picture_small"
+		texturefile = "gfx/interface/ideas/characters/julian_tuwin_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kazimiera_illakowiczowna_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kazimiera_illakowiczowna_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kazimierz_lutoslawski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kazimierz_lutoslawski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rudolf_gundlach_picture_small"
+		texturefile = "gfx/interface/ideas/characters/rudolf_gundlach_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_zygmunt_przetakiewicz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/zygmunt_przetakiewicz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_waclaw_przezdziecki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/waclaw_przezdziecki_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alphonse_juin_picture_small"
+		texturefile = "gfx/interface/ideas/characters/alphonse_juin_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_andre_leon_blum_picture_small"
+		texturefile = "gfx/interface/ideas/characters/andre_leon_blum_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_boguslaw_stepinski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/boguslaw_stepinski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_charles_huntziger_picture_small"
+		texturefile = "gfx/interface/ideas/characters/charles_huntziger_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_francois_darlan_picture_small"
+		texturefile = "gfx/interface/ideas/characters/francois_darlan_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jean_de_laborde_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jean_de_laborde_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jean_de_lattre_de_tassigny_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jean_de_lattre_de_tassigny_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_philippe_petain_picture_small"
+		texturefile = "gfx/interface/ideas/characters/philippe_petain_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_rene_emile_godfroy_picture_small"
+		texturefile = "gfx/interface/ideas/characters/rene_emile_godfroy_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tadeusz_then_picture_small"
+		texturefile = "gfx/interface/ideas/characters/tadeusz_then_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alphonse_georges_picture_small"
+		texturefile = "gfx/interface/ideas/characters/alphonse_georges_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_charles_de_gaulle_picture_small"
+		texturefile = "gfx/interface/ideas/characters/charles_de_gaulle_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_charles_maurras_picture_small"
+		texturefile = "gfx/interface/ideas/characters/charles_maurras_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_henri_giraud_picture_small"
+		texturefile = "gfx/interface/ideas/characters/henri_giraud_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_maurice_gamelin_picture_small"
+		texturefile = "gfx/interface/ideas/characters/maurice_gamelin_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_maurice_thorez_picture_small"
+		texturefile = "gfx/interface/ideas/characters/maurice_thorez_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_maxime_weygand_picture_small"
+		texturefile = "gfx/interface/ideas/characters/maxime_weygand_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_philippe_leclerc_de_hauteclocque"
+		texturefile = "gfx/interface/ideas/characters/philippe_leclerc_de_hauteclocque.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_pol_hun_friendship_idea"
+		texturefile = "gfx/interface/ideas/spirits/pol_hun_friendship_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_Banner_of_1st_Polish_Legion_in_Italy_idea"
+		texturefile = "gfx/interface/ideas/spirits/Banner_of_1st_Polish_Legion_in_Italy_idea.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_vatican_dissatisfied_idea"
+		texturefile = "gfx/interface/ideas/spirits/vatican_dissatisfied.dds"
+	}
+
+	spriteType = {
+		name = "GFX_adam_doboszynski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/adam_doboszynski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_aleksander_wat_picture_small"
+		texturefile = "gfx/interface/ideas/characters/aleksander_wat_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_aleksy_cwiakowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/aleksy_cwiakowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_anatol_stern_picture_small"
+		texturefile = "gfx/interface/ideas/characters/anatol_stern_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_bruno_jasienski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/bruno_jasienski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_edward_osobka_morawski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/edward_osobka_morawski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_feliks_widy_wirski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/feliks_widy_wirski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gusztav_gratz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/gusztav_gratz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jedrzej_giertych_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jedrzej_giertych_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jerzy_rutkowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jerzy_rutkowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jozef_jankowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jozef_jankowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kalman_kanya_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kalman_kanya_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_karol_radek_picture_small"
+		texturefile = "gfx/interface/ideas/characters/karol_radek_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_kazimierz_dagnan_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kazimierz_dagnan_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ludwik_waszkiewicz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/ludwik_waszkiewicz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_gaszynski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_gaszynski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_mroz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_mroz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tomasz_pilarski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/tomasz_pilarski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tytus_czyzewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/tytus_czyzewski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wlodzimierz_tarlo_mazinski"
+		texturefile = "gfx/interface/ideas/characters/wlodzimierz_tarlo_mazinski.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_zoltan_tildy_picture_small"
+		texturefile = "gfx/interface/ideas/characters/zoltan_tildy_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_pawel_salwator_piast_riedelski_spirit"
+		texturefile = "gfx/interface/ideas/spirits/pawel_salwator_piast_riedelski_spirit.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_augustyn_jozef_czartoryski_spirit"
+		texturefile = "gfx/interface/ideas/spirits/augustyn_jozef_czartoryski_spirit.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_karol_wojtyla_picture"
+		texturefile = "gfx/interface/ideas/spirits/karol_wojtyla_picture.dds"
+	}
+	
+}

@@ -1,0 +1,1874 @@
+focus_tree = {
+	id = deluge_germanies_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			original_tag = WGR
+		}
+		modifier = {
+			add = 10
+			original_tag = GER
+		}
+	}
+	
+	default = no
+	reset_on_civilwar = yes
+
+	
+	focus = {
+		id = germany_deluge_meritocracy
+		icon = GFX_goal_generic_production2
+		mutually_exclusive = { focus = germany_deluge_aristocracy }
+		x = 1
+		y = 0
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_meritocracy_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 0
+				date < 1936.5.15
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+			modifier = { # political power when at war and needs to change manpower law
+				factor = 2
+				has_war = yes
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+				}
+				manpower_per_military_factory < 1000
+			}
+			modifier = { # political power when at war and needs to change economy law
+				factor = 2
+				has_war = yes
+				OR = {
+					has_idea = civilian_economy
+					has_idea = low_economic_mobilisation
+					has_idea = partial_economic_mobilisation
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_aristocracy
+		icon = "GFX_goal_generic_air_doctrine"
+		mutually_exclusive = { focus = germany_deluge_meritocracy }
+		x = 3
+		y = 0
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_aristocracy_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = communism
+			}
+			modifier = {
+				factor = 0
+				date < 1936.5.15
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+			modifier = { # political power when at war and needs to change manpower law
+				factor = 2
+				has_war = yes
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+				}
+				manpower_per_military_factory < 1000
+			}
+			modifier = { # political power when at war and needs to change economy law
+				factor = 2
+				has_war = yes
+				OR = {
+					has_idea = civilian_economy
+					has_idea = low_economic_mobilisation
+					has_idea = partial_economic_mobilisation
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_popular_sovereignty
+		icon = "GFX_goal_support_democracy"
+		prerequisite = { focus = germany_deluge_meritocracy }
+		x = 1
+		y = 1
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 150
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = democratic
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+			modifier = { # political power when at war and needs to change manpower law
+				factor = 2
+				has_war = yes
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+				}
+				manpower_per_military_factory < 1000
+			}
+			modifier = { # political power when at war and needs to change economy law
+				factor = 2
+				has_war = yes
+				OR = {
+					has_idea = civilian_economy
+					has_idea = low_economic_mobilisation
+					has_idea = partial_economic_mobilisation
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_divine_right
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = germany_deluge_aristocracy }
+		x = 3
+		y = 1
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 150
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = democratic
+					has_government = fascism
+					has_government = communism
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+			modifier = { # political power when at war and needs to change manpower law
+				factor = 2
+				has_war = yes
+				OR = {
+					has_idea = volunteer_only
+					has_idea = limited_conscription
+					has_idea = extensive_conscription
+				}
+				manpower_per_military_factory < 1000
+			}
+			modifier = { # political power when at war and needs to change economy law
+				factor = 2
+				has_war = yes
+				OR = {
+					has_idea = civilian_economy
+					has_idea = low_economic_mobilisation
+					has_idea = partial_economic_mobilisation
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = germany_deluge_individualism
+		icon = GFX_goal_generic_demand_territory
+		mutually_exclusive = { focus = germany_deluge_corporatism }
+		x = 5
+		y = 0
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_individualism_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+			modifier = {
+				factor = 0
+				date < 1936.5.15
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_corporatism
+		icon = GFX_goal_generic_political_pressure
+		mutually_exclusive = { focus = germany_deluge_individualism }
+		x = 7
+		y = 0
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_corporatism_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0
+				date < 1936.5.15
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_pluralism
+		icon = "GFX_goal_generic_national_unity"
+		prerequisite = { focus = germany_deluge_individualism }
+		x = 5
+		y = 1
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_pluralism_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_leader_cult
+		icon = "GFX_goal_support_fascism"
+		prerequisite = { focus = germany_deluge_corporatism }
+		x = 7
+		y = 1
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_leader_cult_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_youth_organisations
+		icon = "GFX_goal_generic_position_armies"
+		prerequisite = { focus = germany_deluge_leader_cult focus = germany_deluge_pluralism focus = germany_deluge_divine_right focus = germany_deluge_popular_sovereignty }
+		x = 4
+		y = 2
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_youth_organisations_idea
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_land_reform
+		icon = "GFX_goal_support_communism"
+		prerequisite = { focus = germany_deluge_youth_organisations }
+		mutually_exclusive = { focus = germany_deluge_manorialism }
+		x = 1
+		y = 3
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_land_reform_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_manorialism
+		icon = GFX_focus_hun_elect_a_king
+		prerequisite = { focus = germany_deluge_youth_organisations }
+		mutually_exclusive = { focus = germany_deluge_land_reform }
+		x = 3
+		y = 3
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_manorialism_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = communism
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = germany_deluge_fraternal_nations
+		icon = GFX_goal_anschluss
+		prerequisite = { focus = germany_deluge_land_reform }
+		x = 1
+		y = 4
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			add_stability = 0.05
+			set_rule = { can_create_factions = yes }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = democratic
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_dynastic_politics
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		prerequisite = { focus = germany_deluge_manorialism }
+		x = 3
+		y = 4
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_political_power = 150
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}
+			add_stability = 0.05
+			set_rule = { can_create_factions = yes }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = democratic
+					has_government = fascism
+					has_government = communism
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_police_consent
+		icon = GFX_goal_molotov_ribbentrop_pact
+		prerequisite = { focus = germany_deluge_youth_organisations }
+		mutually_exclusive = { focus = germany_deluge_secret_police }
+		x = 5
+		y = 3
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_police_consent_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_secret_police
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = germany_deluge_youth_organisations }
+		mutually_exclusive = { focus = germany_deluge_police_consent }
+		x = 7
+		y = 3
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_secret_police_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = democratic
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = germany_deluge_judiciary
+		icon = "GFX_goal_generic_neutrality_focus"
+		prerequisite = { focus = germany_deluge_police_consent }
+		x = 5
+		y = 4
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_judiciary_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_state_terror
+		icon = GFX_focus_boot_scales
+		prerequisite = { focus = germany_deluge_secret_police }
+		x = 7
+		y = 4
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_ideas = deluge_state_terror_idea
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_deluge_national_unity
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = germany_deluge_fraternal_nations focus = germany_deluge_dynastic_politics focus = germany_deluge_judiciary focus = germany_deluge_state_terror }
+		x = 4
+		y = 5
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			if = {
+				limit = { has_idea = deluge_great_war_horrors_idea }
+				remove_ideas = deluge_great_war_horrors_idea
+			}
+			if = {
+				limit = { has_idea = deluge_chinese_sectarianism_idea }
+				remove_ideas = deluge_chinese_sectarianism_idea
+			}			
+			if = {
+				limit = { has_idea = deluge_german_civil_war_idea }
+				remove_ideas = deluge_german_civil_war_idea
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+
+	focus = {
+		id = germany_create_faction
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = germany_deluge_national_unity }
+		prerequisite = { focus = germany_deluge_fraternal_nations focus = germany_deluge_dynastic_politics }
+		x = 2
+		y = 6
+		available_if_capitulated = no
+		cost = 10
+		available = {
+			OR = {
+				has_global_flag = german_civil_war_ended
+				has_war = no
+				is_in_faction = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = 150
+			if = {
+				limit = {
+					is_in_faction = no
+					is_subject = no
+					has_government = communism
+				}
+				create_faction = "factionGermanInternational"
+			}
+			if = {
+				limit = {
+					is_in_faction = no
+					is_subject = no
+					NOT = { has_government = communism }
+				}
+				create_faction = "factionGermanBloc"
+			}
+		}
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	focus = {
+		id = germany_claim_holland
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = germany_create_faction }
+		x = 1
+		y = 7
+		available_if_capitulated = no
+		cost = 10
+		available = {
+			OR = {
+				has_global_flag = german_civil_war_ended
+				has_war = no
+				has_war_with = HOL
+			}
+			NOT = { is_in_faction_with = HOL }
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_war_with = HOL
+			}
+			modifier = {
+				factor = 0.1
+				has_war = yes
+				NOT = { has_war_with = HOL }
+			}
+			modifier = {
+				factor = 0
+				has_government = democratic
+				NOT = { has_war_with = HOL }
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+				NOT = { has_war_with = HOL }
+			}
+			modifier = {
+				factor = 0.5
+				any_country = {
+					ROOT = {
+						has_wargoal_against = PREV
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = HOL }
+				}
+				news_event = german_expansion.1
+			}
+			
+			add_named_threat = { threat = 2 name = germany_claims_holland }
+			
+			add_state_core = 784
+			add_state_claim = 36
+			add_state_claim = 7
+			add_state_claim = 35
+			add_state_claim = 6
+			
+			if = { limit = { NOT = { owns_state = 784 } }
+				random_country = {
+					limit = { owns_state = 784 }
+					ROOT = {
+						create_wargoal = {
+							type = take_core_state
+							target = PREV
+							generator = { 784 }
+						}
+					}
+				}
+			}
+			if = { limit = { NOT = { owns_state = 36 } }
+				random_country = {
+					limit = { owns_state = 36 }
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = { 36 7 35 6 }
+						}
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = HOL
+	}
+	
+	focus = {
+		id = germany_claim_france
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = germany_create_faction }
+		x = 3
+		y = 7
+		available_if_capitulated = no
+		cost = 10
+		available = {
+			OR = {
+				has_global_flag = german_civil_war_ended
+				has_war = no
+				has_war_with = FRA
+				has_war_with = FRR
+			}
+			NOT = { is_in_faction_with = FRA }
+			NOT = { is_in_faction_with = FRR }
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_war_with = FRA
+			}
+			modifier = {
+				factor = 5
+				has_war_with = FRR
+			}
+			modifier = {
+				factor = 0.1
+				has_war = yes
+				NOT = {
+					OR = {
+						has_war_with = FRA
+						has_war_with = FRR
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_government = democratic
+				NOT = {
+					OR = {
+						has_war_with = FRA
+						has_war_with = FRR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+				NOT = {
+					OR = {
+						has_war_with = FRA
+						has_war_with = FRR
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				any_country = {
+					ROOT = {
+						has_wargoal_against = PREV
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = FRA }
+				}
+				news_event = german_expansion.2
+			}
+			
+			add_named_threat = { threat = 3 name = germany_claims_france }
+
+			add_state_core = 786
+			add_state_core = 42
+			add_state_core = 28
+			add_state_claim = 8
+			add_state_claim = 17
+			add_state_claim = 34
+			
+			if = { limit = { NOT = { owns_state = 42 } }
+				random_country = {
+					limit = { owns_state = 42 }
+					ROOT = {
+						create_wargoal = {
+							type = take_core_state
+							target = PREV
+							generator = { 786 42 28 }
+						}
+					}
+				}
+			}
+			if = { limit = { NOT = { owns_state = 17 } }
+				random_country = {
+					limit = { owns_state = 17 }
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = { 8 17 34 }
+						}
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = FRA
+		will_lead_to_war_with = FRR
+	}
+	
+	focus = {
+		id = germany_claim_austria
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = germany_create_faction }
+		x = 5
+		y = 7
+		available_if_capitulated = no
+		cost = 10
+		available = {
+			OR = {
+				has_global_flag = german_civil_war_ended
+				has_war = no
+				has_war_with = AUS
+			}
+			NOT = { is_in_faction_with = AUS }
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_war_with = AUS
+			}
+			modifier = {
+				factor = 0.1
+				has_war = yes
+				NOT = { has_war_with = AUS }
+			}
+			modifier = {
+				factor = 0
+				has_government = democratic
+				NOT = { has_war_with = AUS }
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+				NOT = { has_war_with = AUS }
+			}
+			modifier = {
+				factor = 0.5
+				any_country = {
+					ROOT = {
+						has_wargoal_against = PREV
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = AUS }
+				}
+				news_event = german_expansion.3
+			}
+			
+			add_named_threat = { threat = 4 name = germany_claims_austria }
+			
+			add_state_core = 4
+			add_state_core = 152
+			add_state_core = 153
+			add_state_core = 39
+			add_state_claim = 69
+			add_state_claim = 72
+			add_state_claim = 74
+			add_state_claim = 9
+			add_state_claim = 75
+			add_state_claim = 102
+			add_state_claim = 736
+			
+			if = { limit = { NOT = { owns_state = 4 } }
+				random_country = {
+					limit = { owns_state = 4 }
+					ROOT = {
+						create_wargoal = {
+							type = take_core_state
+							target = PREV
+							generator = { 4 152 153 39 }
+						}
+					}
+				}
+			}
+			if = { limit = { NOT = { owns_state = 72 } }
+				random_country = {
+					limit = { owns_state = 72 }
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = { 72 74 9 75 69 }
+						}
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = AUS
+	}
+	
+	focus = {
+		id = germany_claim_poland
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = germany_create_faction }
+		x = 7
+		y = 7
+		available_if_capitulated = no
+		cost = 10
+		available = {
+			OR = {
+				has_global_flag = german_civil_war_ended
+				has_war = no
+				has_war_with = POL
+			}
+			NOT = { is_in_faction_with = POL }
+			is_subject = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				has_war_with = POL
+			}
+			modifier = {
+				factor = 0.1
+				has_war = yes
+				NOT = { has_war_with = POL }
+			}
+			modifier = {
+				factor = 0
+				has_government = democratic
+				NOT = { has_war_with = POL }
+			}
+			modifier = {
+				factor = 0.1
+				OR = {
+					has_government = communism
+					has_government = neutrality
+				}
+				NOT = { has_war_with = POL }
+			}
+			modifier = {
+				factor = 0.5
+				any_country = {
+					ROOT = {
+						has_wargoal_against = PREV
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_war_with = POL }
+				}
+				news_event = german_expansion.4
+			}
+			
+			add_named_threat = { threat = 3 name = germany_claims_poland }
+
+			add_state_claim = 5
+			add_state_claim = 86
+			add_state_claim = 66
+			add_state_claim = 67
+			add_state_claim = 87
+			add_state_claim = 98
+			
+			if = { limit = { NOT = { owns_state = 87 } }
+				random_country = {
+					limit = { owns_state = 87 }
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = { 5 86 66 67 87 98 }
+						}
+					}
+				}
+			}
+		}
+		will_lead_to_war_with = POL
+	}
+	
+	focus = {
+		id = germany_league_ratification
+		icon = GFX_focus_league_of_nations
+		available = {
+			OR = {
+				has_idea = deluge_league_of_nations_prospective_member
+				has_idea = deluge_league_of_nations_lapsing_member
+			}
+			has_war = no
+			has_global_flag = flag_league_international_court_vote_concluded
+			has_global_flag = flag_league_relief_union_vote_concluded
+			has_global_flag = flag_league_prohibit_poison_gas_vote_concluded
+			has_global_flag = flag_league_prisoners_of_war_vote_concluded
+			has_global_flag = flag_league_maritime_protections_vote_concluded
+			NOT = { has_global_flag = flag_league_of_nations_disbanded }
+		}
+		x = 9
+		y = 0
+		available_if_capitulated = yes
+		cost = 10
+		completion_reward = {
+			add_political_power = 80
+			
+			if = {
+				limit = {
+					is_major = yes
+				}
+				add_named_threat = { threat = -3 name = deluge_ratified_league_of_nations_threat }
+			}
+			
+			if = {
+				limit = {
+					is_major = no
+					is_subject = no
+				}
+				add_named_threat = { threat = -1 name = deluge_ratified_league_of_nations_threat }
+			}
+			
+			hidden_effect = {
+				news_event = deluge_league.28
+			}
+			
+			# bitmask is used to determine final attributes of the idea
+			# flags are supposedly initialised at 0
+			# 1 = court of justice
+			# 2 = disaster relief
+			# 4 = gas warfare ban
+			# 8 = convention on pows
+			# 16 = convention on convoys
+			# total of 32 variations (including if none of the conventions pass)
+			
+			if = {
+				limit = {
+					has_idea = deluge_league_of_nations_prospective_member
+				}
+				remove_ideas = deluge_league_of_nations_prospective_member
+			}
+			
+			if = {
+				limit = {
+					has_idea = deluge_league_of_nations_lapsing_member
+				}
+				remove_ideas = deluge_league_of_nations_lapsing_member
+			}
+			
+			add_to_tech_sharing_group = deluge_league_of_nations_tech_group
+
+			custom_effect_tooltip = tooltip_league_final_effects_depend_on_votes
+			
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 0
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 1
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_0
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 1
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 2
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_1
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 2
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 3
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_2
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 3
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 4
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_3
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 4
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 5
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_4
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 5
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 6
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_5
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 6
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 7
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_6
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 7
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 8
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_7
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 8
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 9
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_8
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 9
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 10
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_9
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 10
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 11
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_10
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 11
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 12
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_11
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 12
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 13
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_12
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 13
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 14
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_13
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 14
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 15
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_14
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 15
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 16
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_15
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 16
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 17
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_16
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 17
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 18
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_17
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 18
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 19
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_18
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 19
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 20
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_19
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 20
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 21
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_20
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 21
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 22
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_21
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 22
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 23
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_22
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 23
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 24
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_23
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 24
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 25
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_24
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 25
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 26
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_25
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 26
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 27
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_26
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 27
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 28
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_27
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 28
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 29
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_28
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 29
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 30
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_29
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 30
+					}
+					NOT = {
+						has_global_flag = {
+							flag = flag_league_of_nations_bitmask
+							value > 31
+						}
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_30
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_league_of_nations_bitmask
+						value > 31
+					}
+				}
+				add_ideas = deluge_league_of_nations_member_31
+			}
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.75
+				date < 1937.1.1
+			}
+			
+			modifier = {
+				factor = 0.75
+				date < 1938.1.1
+			}
+			
+			modifier = {
+				factor = 0.75
+				date < 1939.1.1
+			}
+			
+			modifier = {
+				factor = 0.75
+				threat > 25
+			}
+			
+			modifier = {
+				factor = 0.75
+				threat > 50
+			}
+			
+			modifier = {
+				factor = 0.5
+				is_subject = yes
+			}
+			
+			modifier = {
+				factor = 0
+				is_subject = yes
+				any_country = {
+					ROOT = {
+						is_subject_of = PREV
+					}
+					NOT = {
+						OR = {
+							has_idea = deluge_league_of_nations_prospective_member
+							has_idea = deluge_league_of_nations_lapsing_member
+							has_idea = deluge_league_of_nations_member_1
+							has_idea = deluge_league_of_nations_member_2
+							has_idea = deluge_league_of_nations_member_3
+							has_idea = deluge_league_of_nations_member_4
+							has_idea = deluge_league_of_nations_member_5
+							has_idea = deluge_league_of_nations_member_6
+							has_idea = deluge_league_of_nations_member_7
+							has_idea = deluge_league_of_nations_member_8
+							has_idea = deluge_league_of_nations_member_9
+							has_idea = deluge_league_of_nations_member_10
+							has_idea = deluge_league_of_nations_member_11
+							has_idea = deluge_league_of_nations_member_12
+							has_idea = deluge_league_of_nations_member_13
+							has_idea = deluge_league_of_nations_member_14
+							has_idea = deluge_league_of_nations_member_15
+							has_idea = deluge_league_of_nations_member_16
+							has_idea = deluge_league_of_nations_member_17
+							has_idea = deluge_league_of_nations_member_18
+							has_idea = deluge_league_of_nations_member_19
+							has_idea = deluge_league_of_nations_member_20
+							has_idea = deluge_league_of_nations_member_21
+							has_idea = deluge_league_of_nations_member_22
+							has_idea = deluge_league_of_nations_member_23
+							has_idea = deluge_league_of_nations_member_24
+							has_idea = deluge_league_of_nations_member_25
+							has_idea = deluge_league_of_nations_member_26
+							has_idea = deluge_league_of_nations_member_27
+							has_idea = deluge_league_of_nations_member_28
+							has_idea = deluge_league_of_nations_member_29
+							has_idea = deluge_league_of_nations_member_30
+							has_idea = deluge_league_of_nations_member_31
+						}
+					}
+				}
+			}
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+				NOT = { is_in_faction_with = FRA }
+			}
+			modifier = {
+				factor = 2
+				is_in_faction_with = FRA
+			}
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0.5
+				has_government = fascism
+			}
+		}
+	}
+	
+	focus = {
+		id = germany_league_leave
+		icon = GFX_focus_league_of_nations
+		prerequisite = { focus = germany_league_ratification }
+		available = {
+			NOT = { has_global_flag = flag_league_of_nations_disbanded }
+		}
+		x = 9
+		y = 1
+		available_if_capitulated = yes
+		cost = 5
+		completion_reward = {
+			add_political_power = 80
+			
+			if = {
+				limit = {
+					is_major = yes
+				}
+				add_named_threat = { threat = 1 name = deluge_left_league_of_nations_threat }
+			}
+		
+			remove_from_tech_sharing_group = deluge_league_of_nations_tech_group
+			
+			remove_ideas = deluge_league_of_nations_member_0
+			
+			hidden_effect = {
+				news_event = deluge_league.29
+				remove_ideas = deluge_league_of_nations_prospective_member
+				remove_ideas = deluge_league_of_nations_member_1
+				remove_ideas = deluge_league_of_nations_member_2
+				remove_ideas = deluge_league_of_nations_member_3
+				remove_ideas = deluge_league_of_nations_member_4
+				remove_ideas = deluge_league_of_nations_member_5
+				remove_ideas = deluge_league_of_nations_member_6
+				remove_ideas = deluge_league_of_nations_member_7
+				remove_ideas = deluge_league_of_nations_member_8
+				remove_ideas = deluge_league_of_nations_member_9
+				remove_ideas = deluge_league_of_nations_member_10
+				remove_ideas = deluge_league_of_nations_member_11
+				remove_ideas = deluge_league_of_nations_member_12
+				remove_ideas = deluge_league_of_nations_member_13
+				remove_ideas = deluge_league_of_nations_member_14
+				remove_ideas = deluge_league_of_nations_member_15
+				remove_ideas = deluge_league_of_nations_member_16
+				remove_ideas = deluge_league_of_nations_member_17
+				remove_ideas = deluge_league_of_nations_member_18
+				remove_ideas = deluge_league_of_nations_member_19
+				remove_ideas = deluge_league_of_nations_member_20
+				remove_ideas = deluge_league_of_nations_member_21
+				remove_ideas = deluge_league_of_nations_member_22
+				remove_ideas = deluge_league_of_nations_member_23
+				remove_ideas = deluge_league_of_nations_member_24
+				remove_ideas = deluge_league_of_nations_member_25
+				remove_ideas = deluge_league_of_nations_member_26
+				remove_ideas = deluge_league_of_nations_member_27
+				remove_ideas = deluge_league_of_nations_member_28
+				remove_ideas = deluge_league_of_nations_member_29
+				remove_ideas = deluge_league_of_nations_member_30
+				remove_ideas = deluge_league_of_nations_member_31
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				is_in_faction_with = FRA
+			}
+			modifier = {
+				factor = 0
+				is_subject = yes
+				any_country = {
+					ROOT = {
+						is_subject_of = PREV
+					}
+					is_in_tech_sharing_group = deluge_league_of_nations_tech_group
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0
+				has_war = no
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					any_enemy_country = {
+						is_in_tech_sharing_group = deluge_league_of_nations_tech_group
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+
+	# Economic/industrial
+	
+	shared_focus = deluge_architects
+	
+	shared_focus = deluge_resource_efficiency
+	
+	shared_focus = deluge_infrastructure
+	
+	shared_focus = deluge_electronics_research
+	
+	# Military
+
+	shared_focus = deluge_naval_infrastructure
+	
+	shared_focus = deluge_great_war_lessons
+	
+	shared_focus = deluge_aircraft_industry
+	
+}

@@ -1,0 +1,111 @@
+characters={
+	CSC_juan_josé_arévalo_bermejo={
+		name="Juan José Arévalo Bermejo"
+		portraits={
+			civilian={
+				large="gfx/leaders/CSC/juan_arevalo.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CSC_emiliano_zapata={
+		name="Emiliano Zapata"
+		portraits={
+			civilian={
+				large="gfx/leaders/CSC/zapata.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CSC_josé_gonzález_beytia={
+		name="José González Beytia"
+		portraits={
+			civilian={
+				large="gfx/leaders/CSC/jose_beytia.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CSC_atanasio_ix={
+		name="Atanasio IX"
+		portraits={
+			civilian={
+				large="gfx/leaders/CSC/regulo_patino.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CSC_jacinto_pat={
+		name="Jacinto Pat"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_5.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CSC_ah_puch={
+		name="Ah Puch"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CSC_ah_zab_kan={
+		name="Ah Z'ab Kan"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+			}
+		}
+		corps_commander={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

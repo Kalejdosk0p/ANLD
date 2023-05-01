@@ -1,0 +1,120 @@
+﻿##### COLOMBIA NAME LISTS #####
+### REGULAR DESTROYER NAMES###
+GCB_DD_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_DESTROYERS
+
+	for_countries = { GCB }
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }			
+
+	prefix = ""
+	fallback_name = "Destructor %d"					
+
+	unique = {											
+		"Antioquia" "Caldas" "20 de Julio" "7 de Agosto" "Santander" "Almirante Padilla" "Almirante Tono" "Almirante Brión" "Cordoba" 
+	}
+}
+
+### LIGHT CRUISER NAMES###
+GCB_CL_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CL
+
+	for_countries = { GCB }
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = ""
+	fallback_name = "Crucero Ligero %d"
+
+	unique = {
+		"Medellín" "Cartagena" "Barranquilla" "Santa Marta" "Bucaramanga" "Tumaco" "Buenaventura" 
+	}
+}
+
+### HEAVY CRUISER NAMES###
+GCB_CA_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CA
+
+	for_countries = { GCB }
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = ""
+	fallback_name = "Crucero Pesado %d"
+
+	unique = {
+		"Medellín" "Cartagena" "Barranquilla" "Santa Marta" "Bucaramanga" "Tumaco" "Buenaventura" 
+	}
+}
+
+
+### BATTLESHIP NAMES ###
+GCB_BB_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BB
+
+	for_countries = { GCB }
+
+	type = ship
+	ship_types = { ship_hull_heavy battleship }
+	
+	prefix = ""
+	fallback_name = "Acorazado %d"		
+
+	unique = {
+		"Cristobal Colón" "Bogotá" 
+	}
+}
+
+### BATTLECRUISER NAMES ###
+GCB_BC_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_BC
+
+	for_countries = { GCB }
+
+	type = ship
+	ship_types = { ship_hull_heavy battle_cruiser }
+	
+	prefix = ""
+	fallback_name = "Crucero de Batalla %d"		
+
+	unique = {
+		"Cristobal Colón" "Bogotá" 
+	}
+}
+
+### AIRCRAFT CARRIER NAMES ###
+GCB_CV_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_CARRIERS
+
+	for_countries = { GCB }
+
+	type = ship
+	ship_types = { ship_hull_carrier carrier }
+	
+	prefix = ""
+	fallback_name = "Portaaviones %d"	
+
+	unique = {
+		"República de Colombia" "La Gloriosa" "Magdalena" "Bogotá" "Pamplonita" "Rio Negro" "Arauca" 
+	}
+}
+
+### SUBMARINES ###
+GCB_SS_HISTORICAL = {
+	name = NAME_THEME_HISTORICAL_SUBMARINES
+
+	for_countries = { GCB }
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = ""
+	fallback_name = "R%d"
+	
+	unique = {
+		"R1" "R2" "R3" "R4" "R5" "R6" "R7" "R8" "R9" "R10"
+	}
+}

@@ -1,0 +1,124 @@
+characters={
+	CAN_andré_verrier={
+		name="André Verrier"
+		portraits={
+			civilian={
+				large="gfx/leaders/SOV/soviet_policeman.dds"
+			}
+		}
+		field_marshal={
+			traits={ harsh_leader defensive_doctrine }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAN_guillaume_i={
+		name="Guillaume I"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAN/marquess_of_londonderry.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAN_bishop_alphonselouis_du_st_maurice={
+		name="Bishop Alphonse-Louis du St Maurice"
+		portraits={
+			civilian={
+				large="gfx/leaders/CAN/cardinal_newman.dds"
+			}
+		}
+		country_leader={
+			ideology=religious_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CAN_felix_tremblay={
+		name="Felix Tremblay"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_nikolai_berzarin.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Nikolai_Berzarin.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CAN_edouard_gagnon={
+		name="Edouard Gagnon"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_kuzma_galitsky.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Kuzma_Galitsky.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer commando }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CAN_antoine_gauthier={
+		name="Antoine Gauthier"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_SOV_alexander_gorbatov.dds"
+			}
+			army={
+				large="gfx/leaders/SOV/Portrait_Soviet_Alexander_Gorbatov.dds"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+	CAN_mathéo_ney_delchingen={
+		name="Mathéo Ney d'Elchingen"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			traits={ quartermaster_general war_industrialist }
+			expire="1943.5.1.12"
+			id=-1
+		}
+	}
+}

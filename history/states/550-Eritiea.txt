@@ -1,0 +1,33 @@
+
+state={
+	id=550
+	name="STATE_550"
+
+	history={
+		owner = ETH
+		victory_points = {
+			12766 1 
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+			dockyard = 1
+			industrial_complex = 1
+			12766 = {
+				naval_base = 3
+
+			}
+
+		}
+		add_core_of = ETH
+
+	}
+
+	provinces={
+		5017 5047 5091 8043 12723 12766 13251 13252 
+	}
+	manpower=800600
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

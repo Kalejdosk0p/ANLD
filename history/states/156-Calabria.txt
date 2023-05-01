@@ -1,0 +1,28 @@
+
+state={
+	id=156
+	name="STATE_156"
+	manpower = 2966315
+	
+	state_category = city
+	resources={
+		steel=2
+	}
+	history={
+		owner = ITA
+		victory_points = {
+			12066 5
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 4
+			air_base = 5
+			anti_air_building = 1
+		}
+		add_core_of = ITA
+	}
+
+	provinces={
+		3901 9856 9990 10027  12066 12098 
+	}
+}

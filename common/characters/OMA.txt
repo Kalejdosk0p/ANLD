@@ -1,0 +1,55 @@
+characters={
+	OMA_said_bin_taimur={
+		name="Said bin Taimur"
+		portraits={
+			civilian={
+				large="GFX_portrait_oman_said_bin_taimur"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	OMA_halil_alhimsi={
+		name="Halil al-Himsi"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_communism1.dds"
+			}
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1941.5.1.12"
+			id=-1
+		}
+	}
+	OMA_ahmad_albasri={
+		name="Ahmad al-Basri"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1952.5.1.12"
+			id=-1
+		}
+	}
+	OMA_hasan_albaghdadi={
+		name="Hasan al-Baghdadi"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_3.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			traits={ financial_expert quartermaster_general }
+			expire="1946.5.1.12"
+			id=-1
+		}
+	}
+}

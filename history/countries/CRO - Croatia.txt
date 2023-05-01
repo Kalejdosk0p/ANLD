@@ -1,0 +1,80 @@
+﻿capital = 109
+
+oob = "CRO_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+set_convoys = 20
+
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_recon = 1
+	early_fighter = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		mtg_transport = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_depth_charges = 1
+	}
+	#set_naval_oob = ""
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.6.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 10
+	fascism = 20
+	communism = 20
+	neutrality = 50
+}
+	
+add_ideas = {
+	extensive_conscription
+	#marida_draskovic_spirit
+}
+recruit_character = CRO_deluge_maria_draskovic
+recruit_character = CRO_ante_pavelic
+recruit_character = CRO_josip_broz_tito
+recruit_character = CRO_deluge_paul_von_brlog
+recruit_character = CRO_deluge_radic
+recruit_character = CRO_deluge_albrecht_luitpold
+recruit_character = CRO_deluge_vukovic
+#recruit_character = 
+#recruit_character = 
+#recruit_character = 
+
+#recruit_character = 
+#recruit_character = 
+

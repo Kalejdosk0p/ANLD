@@ -1,0 +1,56 @@
+characters={
+	ABU_shakhbut_bin_sultan={
+		name="Shakhbut bin Sultan"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_land_3.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ABU_abd_alqadir_ibm_kamil={
+		name="Abd al-Qadir ibm Kamil"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchist_ideology
+			expire="1941.5.1.12"
+			id=-1
+		}
+	}
+	ABU_fuad_ibn_salim={
+		name="Fuad ibn Salim"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=social_democratic_ideology
+			traits={ financial_expert }
+			expire="1949.5.1.12"
+			id=-1
+		}
+	}
+	ABU_ishaq_ibn_ishaq={
+		name="Ishaq ibn Ishaq"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			traits={ quartermaster_general silent_workhorse }
+			expire="1941.5.1.12"
+			id=-1
+		}
+	}
+}

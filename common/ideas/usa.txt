@@ -1,0 +1,649 @@
+ideas = {
+	tank_manufacturer = { 
+	
+		designer = yes
+	
+		marmon_herrington = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { fast_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		chrysler = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		army_ordnance_department = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+			
+			modifier = {
+			}
+		}	
+	}
+	
+	naval_manufacturer = { 
+	
+		designer = yes
+		
+		norfolk_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		electric_boat_company = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		brooklyn_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		newport_news_shipbuilding = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	aircraft_manufacturer = { 
+		
+		designer = yes
+		
+		north_american_aviation = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		#bell = {
+		#	
+		#	
+		#	allowed = {
+		#		original_tag = USA
+		#	}
+		#	
+		#
+		#	
+		#	research_bonus = {
+		#		air_equipment = 0.15
+		#	}
+		#	
+		#	traits = { light_aircraft_manufacturer }	#TODO, make different from north american
+		#	
+		#	modifier = {
+		#	}
+		#}	
+		
+		lockheed = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		douglas_aircraft_company = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		
+		boeing = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		#consolidated_aircraft = {
+		#	
+		#	
+		#	allowed = {
+		#		original_tag = USA
+		#	}
+		#	
+		#
+		#	
+		#	research_bonus = {
+		#		air_equipment = 0.15
+		#	}
+		#	
+		#	traits = { heavy_aircraft_manufacturer } #TODO remove?
+		#	
+		#	modifier = {
+		#	}
+		#}
+		grumman = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}		
+	}
+	
+	
+	small_arms_manufacturer_slot = {
+			
+		designer = yes
+		
+		colt = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { civilian_firearms_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		rock_island_arsenal = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { military_ordnance_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		springfield_armory = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { mass_producer_manufacturer }
+			
+			modifier = {
+			}
+		}
+	
+	}
+		
+	vehicle_manufacturer_slot = {
+			
+		designer = yes
+		
+		ford_motor_company = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { truck_manufacturer }
+			
+			modifier = {
+			}
+		}
+	
+	}
+		
+	guns_manufacturer_slot = {
+			
+		designer = yes
+		
+		bethlehem_steel = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { steelworks_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+		argus = {
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			cost = 150
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { rangefinder_manufacturer }
+		}
+
+		
+	}
+	
+
+	
+	industrial_concern = {
+					
+		carnegie = {
+			
+			allowed = {
+				OR = {
+					original_tag = USA
+					original_tag = LOU
+				}
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}					
+					
+		standard_oil_california = {
+			
+			
+			allowed = {
+				OR = {
+					original_tag = USA
+					original_tag = LOU
+				}
+			}
+			
+
+			
+			research_bonus = {
+				industry = 0.05
+				construction_tech = 0.10
+				synth_resources = 0.10
+			}
+			
+			traits = { refinery_concern }
+			
+			modifier = {
+			}
+		}
+		
+		general_electric = {
+			
+			
+			allowed = {
+				OR = {
+					original_tag = USA
+					original_tag = LOU
+				}
+			}
+			
+
+			
+			research_bonus = {
+				electronics = 0.10
+			}
+			
+			traits = { electronics_concern }
+			
+			modifier = {
+			}
+		}
+	}
+	
+	
+	theorist = {
+		omar_bradley = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_superior_firepower = 0.15
+			}
+			
+			traits = { superior_firepower_expert }
+		}
+		
+		george_patton = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_mobile_warfare = 0.15
+			}
+			
+			traits = { mobile_warfare_expert }
+		}
+		
+		dewitt_clinton_ramsey = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+		
+		marc_mitscher = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_base_strike = 0.15
+			}
+			
+			traits = { naval_aviation_pioneer }
+		}
+		
+		curtis_lemay = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+			cost = 250
+			
+			research_bonus = {
+				cat_strategic_destruction = 0.15
+			}
+			
+			traits = { victory_through_airpower }
+		}
+		
+		harold_mcclelland = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		robert_oppenheimer = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
+			
+			ai_will_do = {
+				factor = 1
+				
+				modifier = {
+					factor = 0
+					date < 1938.1.1
+				}
+				modifier = {
+					factor = 0.5
+					date < 1940.1.1
+				}
+				modifier = {
+					factor = 2
+					date > 1942.1.1
+				}
+			}
+
+		}
+		
+		robert_goddard = {
+			
+			
+			allowed = {
+				original_tag = USA
+			}
+			
+
+			
+			research_bonus = {
+				rocketry = 0.15
+			}
+			
+			traits = { rocket_scientist }
+			
+			ai_will_do = {
+				factor = 1
+				
+				modifier = {
+					factor = 0
+					date < 1938.1.1
+				}
+				modifier = {
+					factor = 0.5
+					date < 1940.1.1
+				}
+				modifier = {
+					factor = 2
+					date > 1942.1.1
+				}
+			}
+
+		}
+	}
+	
+}

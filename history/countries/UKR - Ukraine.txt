@@ -1,0 +1,106 @@
+﻿capital = 202
+
+oob = "UKR_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+add_opinion_modifier = { target = BLR modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = BAL modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = CAU modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = DDR modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = FRA modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = USA modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = TUR modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = SOV modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = POL modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = HUN modifier = great_war_hostility_modifier }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	trade_interdiction = 1
+	mass_assault = 1
+	formation_flying = 1
+	fuel_silos = 1
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+	}
+	#set_naval_oob = ""
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.2.3"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 25
+	fascism = 15
+	communism = 50
+	neutrality = 10
+}
+
+set_convoys = 50
+
+add_ideas = {
+	limited_exports
+	extensive_conscription
+	partial_economic_mobilisation
+	universal
+	floating_exchange
+	labour_camps
+	deluge_revolutionary_republic_idea
+}
+
+recruit_character = UKR_nestor_makhno
+recruit_character = UKR_hetman_grigoriev
+recruit_character = UKR_dmytro_antonovych
+recruit_character = UKR_stepan_bandera
+recruit_character = UKR_andrey_yeryomenko
+recruit_character = UKR_rodion_malinovsky
+recruit_character = UKR_georgy_zhukov
+recruit_character = UKR_fedir_shchus
+recruit_character = UKR_ivan_konev
+recruit_character = UKR_semyon_timoshenko
+recruit_character = UKR_semyon_budyonny
+recruit_character = UKR_andrey_vlasov
+recruit_character = UKR_ivan_fedyuninsky
+recruit_character = UKR_maksim_purkayev
+recruit_character = UKR_alexander_gorbatov
+recruit_character = UKR_kirill_moskalenko
+recruit_character = UKR_kuzma_galitsky
+recruit_character = UKR_markian_popov
+recruit_character = UKR_nikolai_berzarin
+recruit_character = UKR_gordey_levchenko

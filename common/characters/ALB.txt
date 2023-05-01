@@ -1,0 +1,581 @@
+characters={
+	ALB_enver_hoxha={
+		name="Enver Hoxha"
+		portraits={
+			civilian={
+				large="gfx/leaders/ALB/enver_hoxha.dds"
+			}
+		}
+		country_leader={
+			desc="bunker_fanatic_desc"
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ALB_xhemal_aranitasi={
+		name="Xhemal Aranitasi"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=1
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=1
+			legacy_id=-1
+		}
+	}
+	ALB_zog_i={
+		name="Zog I"
+		portraits={
+			civilian={
+				large="gfx/leaders/ALB/Portrait_Albania_King_Zog.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KING_ZOG_DESC"
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	ALB_eqrem_dine={
+		name="Eqrem Dine"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			traits={ financial_expert }
+			expire="1952.5.1.12"
+			id=-1
+		}
+	}
+	ALB_elez_dine={
+		name="Elez Dine"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_europe_generic_7.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			traits={ armaments_organizer }
+			expire="1953.5.1.12"
+			id=-1
+		}
+	}
+	ALB_midhat_frasheri = {
+		name = "Midhat Frashëri"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ALB_midhat_frasheri
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				popular_figurehead
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_fiqri_dine = {
+		name = "Fiqri Dine"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ALB_fiqri_dine
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				war_industrialist
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_qemal_komani = {
+		name = "Qemal Komani"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = ALB_qemal_komani
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				military_theorist
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_xhelal_mitrovica = {
+		name = "Xhelal Mitrovica"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = ALB_xhelal_mitrovica
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				air_warfare_theorist
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_hajre_fetahu = {
+		name = "Hajre Fetahu"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = theorist
+			idea_token = ALB_hajre_fetahu
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				naval_theorist
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_jocelyn_percy = {
+		name = "Jocelyn Percy"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = security_chief_slot
+			idea_token = ALB_jocelyn_percy
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				prince_of_terror
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_selim_moishiou = {
+		name = "Selim Moishiou"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ALB_selim_moishiou
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				army_artillery_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_alexander_mori = {
+		name = "Alexander Mori"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ALB_alexander_mori
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				army_regrouping_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_kristo_cajupi = {
+		name = "Kristo Cajupi"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ALB_kristo_cajupi
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				army_concealment_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_halil_nergutti = {
+		name = "Halil Nergutti"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = ALB_halil_nergutti
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				navy_capital_ship_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_prenk_pervizi = {
+		name = "Prenk Pervizi"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = chief_of_staff_slot
+			idea_token = ALB_prenk_pervizi
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_kol_bibe_mirakaj = {
+		name = "Kolë Bibë Mirakaj"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = ALB_kol_bibe_mirakaj
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_eqrem_libohova = {
+		name = "Eqrem Libohova"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ALB_eqrem_libohova
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				air_chief_ground_support_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_zuhdi_shabani = {
+		name = "Zuhdi Shabani"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ALB_zuhdi_shabani
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				air_chief_safety_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_aziz_sulejmani = {
+		name = "Aziz Sulejmani"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = air_chief
+			idea_token = ALB_aziz_sulejmani
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				air_chief_reform_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_rexhep_mitrovica = {
+		name = "Rexhep Mitrovica"
+		portraits = {
+			civilian = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+			army = {
+				small = GFX_portrait_AST_leslie_morshead_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ALB_rexhep_mitrovica
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				navy_chief_naval_aviation_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_hasan_begolli = {
+		name = "Hasan Begolli"
+		portraits = {
+			civilian = {
+				small = generic_navy_arab_1
+			}
+			army = {
+				small = generic_navy_arab_1
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ALB_hasan_begolli
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	ALB_ismael_ghaxa = {
+		name = "Ismael Ghaxa"
+		portraits = {
+			civilian = {
+				small = generic_navy_arab_3
+			}
+			army = {
+				small = generic_navy_arab_3
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = ALB_ismael_ghaxa
+			allowed = { tag = ALB }
+			visible = {
+				tag = ALB
+			}
+			cost = 150
+			available = { 
+				
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+}

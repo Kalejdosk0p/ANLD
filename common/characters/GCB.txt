@@ -1,0 +1,131 @@
+characters={
+	GCB_eleazar_lópez_contreras={
+		name="Eleazar López Contreras"
+		portraits={
+			civilian={
+				large="gfx/leaders/GCB/eleazar_lopez_contreras.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ELEAZAR_LOPEZ_CONTRERAS_DESC"
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GCB_federico_páez={
+		name="Federico Páez"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_FEDERICO_PAEZ_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GCB_juan_bautista_fuenmayor={
+		name="Juan Bautista Fuenmayor"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_1.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_JUAN_BAUTISTA_FUENMAYOR_DESC"
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GCB_josé_carlos_mariátegui={
+		name="José Carlos Mariátegui"
+		portraits={
+			civilian={
+				large="gfx/leaders/GCB/jose_carlos_mariategui.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GCB_alfonso_lópez_pumarejo={
+		name="Alfonso López Pumarejo"
+		portraits={
+			civilian={
+				large="gfx/leaders/COL/portrait_col_alfonso_lopez_pumarejo.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ALFONSO_LOPEZ_PUMAREJO_DESC"
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GCB_mariano_ospina_pérez={
+		name="Mariano Ospina Pérez"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MARIANO_OSPINA_PEREZ_DESC"
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GCB_carlos_eugenio_restrepo={
+		name="Carlos Eugenio Restrepo"
+		portraits={
+			civilian={
+				large="gfx/leaders/GCB/carlos_eugenio_restrepo_restrepo.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GCB_eduardo_mendoza_goiticoa={
+		name="Eduardo Mendoza Goiticoa"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GCB_gustavo_rojas_pinilla={
+		name="Gustavo Rojas Pinilla"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_south_america_generic_land_3.dds"
+			}
+			army={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster urban_assault_specialist }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

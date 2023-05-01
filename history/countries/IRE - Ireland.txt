@@ -1,0 +1,68 @@
+﻿capital = 113
+
+oob = "IRE_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+add_opinion_modifier = { target = FRA modifier = historic_friendship_modifier }
+add_opinion_modifier = { target = ENG modifier = historic_rivalry_modifier }
+
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_battery = 1
+	}
+	#set_naval_oob = ""
+}
+
+set_convoys = 10
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 55
+	fascism = 20
+	communism = 20
+	neutrality = 5
+}
+	
+add_ideas = {
+	free_trade
+	limited_conscription
+	civilian_economy
+	restricted
+	welfare_state
+}
+recruit_character = IRE_Éamon_de_valera
+recruit_character = IRE_eoin_oduffy
+recruit_character = IRE_james_larkin
+recruit_character = IRE_william_norton
+recruit_character = IRE_michael_costello
+recruit_character = IRE_james_connolly
+recruit_character = IRE_sir_edward_mervyn_archdale
+recruit_character = IRE_michael_collins

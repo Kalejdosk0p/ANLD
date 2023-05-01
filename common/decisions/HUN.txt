@@ -1,0 +1,187 @@
+political_actions = {
+	integrate_slovakia = {
+		icon = GFX_decision_generic_nationalism
+		fire_only_once = yes
+		available = {
+			owns_state = 70
+			controls_state = 70
+			owns_state = 664
+			controls_state = 664
+			owns_state = 71
+			controls_state = 71
+			owns_state = 73
+			controls_state = 73
+		}
+		allowed = {
+			original_tag = HUN
+		}
+		days_remove = 150
+		ai_will_do = {
+			factor = 5
+		}
+		modifier = {
+			
+		}
+		cost = 100
+		remove_effect = {
+			if = {
+				limit = {
+					70 = {NOT = {is_core_of = HUN}}
+				}
+				70 = {add_core_of = HUN}
+			}
+			if = {
+				limit = {
+					664 = {NOT = {is_core_of = HUN}}
+				}
+				664 = {add_core_of = HUN}
+			}
+			if = {
+				limit = {
+					71 = {NOT = {is_core_of = HUN}}
+				}
+				71 = {add_core_of = HUN}
+			}
+			if = {
+				limit = {
+					73 = {NOT = {is_core_of = HUN}}
+				}
+				73 = {add_core_of = HUN}
+			}
+		}
+	}
+	integrate_croatia = {
+		icon = GFX_decision_generic_nationalism
+		fire_only_once = yes
+		available = {
+			owns_state = 109
+			controls_state = 109
+			owns_state = 103
+			controls_state = 103
+			owns_state = 104
+			controls_state = 104
+		}
+		allowed = {
+			original_tag = HUN
+		}
+		days_remove = 150
+		ai_will_do = {
+			factor = 5
+		}
+		modifier = {
+			
+		}
+		cost = 100
+		remove_effect = {
+			if = {
+				limit = {
+					109 = {NOT = {is_core_of = HUN}}
+				}
+				109 = {add_core_of = HUN}
+			}
+			if = {
+				limit = {
+					103 = {NOT = {is_core_of = HUN}}
+				}
+				103 = {add_core_of = HUN}
+			}
+			if = {
+				limit = {
+					151 = {NOT = {is_core_of = HUN}}
+				}
+				151 = {add_core_of = HUN}
+			}
+			if = {
+				limit = {
+					104 = {NOT = {is_core_of = HUN}}
+				}
+				104 = {add_core_of = HUN}
+			}
+		}
+	}
+	integrate_slovenia = {
+		icon = GFX_decision_generic_nationalism
+		fire_only_once = yes
+		available = {
+			owns_state = 102
+			controls_state = 102
+			owns_state = 853
+			controls_state = 853
+		}
+		allowed = {
+			original_tag = HUN
+		}
+		days_remove = 75
+		ai_will_do = {
+			factor = 5
+		}
+		modifier = {
+			
+		}
+		cost = 50
+		remove_effect = {
+			if = {
+				limit = {
+					102 = {NOT = {is_core_of = HUN}}
+				}
+				102 = {add_core_of = HUN}
+			}
+			if = {
+				limit = {
+					853 = {NOT = {is_core_of = HUN}}
+				}
+				853 = {add_core_of = HUN}
+			}
+		}
+	}
+	install_puppet_monarchy_in_albania = {
+		icon = GFX_decision_generic_monarchy
+		fire_only_once = yes
+		available = {
+			ALB = {
+				is_subject_of = HUN
+			}
+		}
+		allowed = {
+			original_tag = HUN
+		}
+		ai_will_do = {
+			factor = 5
+		}	
+		cost = 25
+		complete_effect = {
+			ALB = {
+				create_country_leader = {
+					name = "Franz Nopcsa von Felső-Szilvás"
+					desc = "HUN_nopcsa_ferenc_desc"
+					picture = "gfx/leaders/HUN/Franz_Nopcsa_Ferenc.dds"
+					expire = "1965.1.1"
+					ideology = bonapartist_ideology
+					traits = { 
+						adventurous_aristocrat
+					}
+				}
+				create_country_leader = {
+					name = "Franz Nopcsa von Felső-Szilvás"
+					desc = "HUN_nopcsa_ferenc_desc"
+					picture = "gfx/leaders/HUN/Franz_Nopcsa_Ferenc.dds"
+					expire = "1965.1.1"
+					ideology = corporatist_ideology
+					traits = { 
+						adventurous_aristocrat
+					}
+				}
+				create_country_leader = {
+					name = "Franz Nopcsa von Felső-Szilvás"
+					desc = "HUN_nopcsa_ferenc_desc"
+					picture = "gfx/leaders/HUN/Franz_Nopcsa_Ferenc.dds"
+					expire = "1965.1.1"
+					ideology = constitutionalist_ideology
+					traits = { 
+						adventurous_aristocrat
+					}
+				}
+			}
+		}
+	}
+}

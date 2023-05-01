@@ -1,0 +1,47 @@
+state={
+	id=797
+	name="STATE_797"
+
+	manpower=2121468
+
+	state_category = large_town
+
+	resources={
+		steel=10
+		oil=60
+	}
+
+	history={
+		owner = MEX
+		
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+
+ 			9713 = {
+				naval_base = 1
+				bunker = 3
+			}
+			610 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			9713 3
+		}
+		victory_points = {
+			610 1
+		}
+		add_core_of = MEX
+		add_core_of = DES
+		add_core_of = CAL
+		
+	}
+
+	provinces={
+		11495 505 11733 3471 6482 3644 6665 3588 610 9730 6772 9697 6757 6681 677 11658 9713 781 768 6745 
+	}
+	
+}

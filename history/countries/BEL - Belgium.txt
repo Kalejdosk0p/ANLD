@@ -1,0 +1,47 @@
+﻿capital = 8
+
+oob = "BEL_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	trench_warfare = 1
+	fuel_silos = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1932.11.27"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 20
+	fascism = 10
+	communism = 15
+	neutrality = 55
+}
+	
+set_convoys = 10
+
+add_ideas = {
+	free_trade
+	limited_conscription
+	fixed_exchange
+	robber_barons
+}
+recruit_character = BEL_joseph_jacquemotte
+recruit_character = BEL_georges_timmermans
+recruit_character = BEL_grand_duchess_marieadélaïde
+recruit_character = BEL_léon_degrelle
+recruit_character = BEL_m.c.l._keyaerts
+recruit_character = BEL_fernand_de_pelichy

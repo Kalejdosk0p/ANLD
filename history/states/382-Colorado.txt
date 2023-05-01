@@ -1,0 +1,32 @@
+
+state={
+	id=382
+	name="STATE_382"
+	manpower = 1235790
+	resources={
+		oil=14
+	}
+	
+	state_category = town
+
+	history={
+		owner = DES
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			1827 = {
+				bunker = 3
+
+			}
+		}
+		add_core_of = DES
+		victory_points = {
+			1827 5
+		}
+
+	}
+
+	provinces={
+		868 1658 1827 3869 6887 10535 10588 12627 1756
+	}
+}

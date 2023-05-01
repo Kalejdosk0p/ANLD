@@ -1,0 +1,261 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_deluge_napoleon_small"
+		texturefile = "gfx/event_pictures/deluge_napoleon_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_clausewitz_small"
+		texturefile = "gfx/event_pictures/deluge_clausewitz_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_friedrich_von_bulow_small"
+		texturefile = "gfx/event_pictures/deluge_friedrich_von_bulow_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_jomini_small"
+		texturefile = "gfx/event_pictures/deluge_jomini_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_news_event_chinese_soldiers_march"
+		texturefile = "gfx/event_pictures/news_event_chinese_soldiers_march.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_militia"
+		texturefile = "gfx/event_pictures/deluge_militia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_deluge_protest"
+		texturefile = "gfx/event_pictures/deluge_protest.dds"
+	}
+
+	spriteType = {
+		name = "GFX_deluge_public_funeral"
+		texturefile = "gfx/event_pictures/deluge_public_funeral.dds"
+	}
+
+	spriteType = {
+		name = "GFX_deluge_paris_small"
+		texturefile = "gfx/event_pictures/deluge_paris_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_deluge_paris_large"
+		texturefile = "gfx/event_pictures/deluge_paris_large.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_brandenburg_ruin"
+		texturefile = "gfx/event_pictures/deluge_brandenburg_ruin.dds"
+	}
+
+	spriteType = {
+		name = "GFX_deluge_port"
+		texturefile = "gfx/event_pictures/deluge_port.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_istanbul_small"
+		texturefile = "gfx/event_pictures/deluge_istanbul_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_deluge_istanbul_large"
+		texturefile = "gfx/event_pictures/deluge_istanbul_large.dds"
+	}
+
+	spriteType = {
+		name = "GFX_deluge_mussolini_parade"
+		texturefile = "gfx/event_pictures/deluge_mussolini_parade.dds"
+	}
+
+	spriteType = {
+		name = "GFX_deluge_hungarian_parliament_building"
+		texturefile = "gfx/event_pictures/deluge_hungarian_parliament_building.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_package_tour_small"
+		texturefile = "gfx/event_pictures/deluge_package_tour_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_package_tour_large"
+		texturefile = "gfx/event_pictures/deluge_package_tour_large.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_malta"
+		texturefile = "gfx/event_pictures/deluge_malta.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_malta_large"
+		texturefile = "gfx/event_pictures/deluge_malta_large.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_league_of_nations_entrance_large"
+		texturefile = "gfx/event_pictures/deluge_league_of_nations_entrance_large.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_deluge_league_of_nations_small"
+		texturefile = "gfx/event_pictures/deluge_league_of_nations_small.dds"
+	}
+###POLAND HAPPENS
+	spriteType = {
+		name = GFX_smigly_in_power
+		texturefile = "gfx/event_pictures/smigly_in_power.dds"
+	}
+	spriteType = {
+		name = "GFX_smigly_declares"
+		texturefile = "gfx/event_pictures/smigly_declares.dds"
+	}
+	spriteType = {
+		name = GFX_sikorski_in_power
+		texturefile = "gfx/event_pictures/sikorski_in_power.dds"
+	}
+	spriteType = {
+		name = "GFX_sikorski_declares"
+		texturefile = "gfx/event_pictures/sikorski_declares.dds"
+	}
+	spriteType = {
+		name = GFX_Stachniuk_in_power
+		texturefile = "gfx/event_pictures/stachniuk_in_power.dds"
+	}
+	spriteType = {
+		name = GFX_Piasecki_in_power
+		texturefile = "gfx/event_pictures/piasecki_in_power.dds"
+	}
+	spriteType = {
+		name = GFX_Jozef_Pilsudski_dead_global
+		texturefile = "gfx/event_pictures/Jozef_Pilsudski_dead_global.dds"
+	}
+	spriteType = {
+		name = GFX_jozef_pilsudski_dead_small
+		texturefile = "gfx/event_pictures/Jozef_Pilsudski_dead_country.dds"
+	}
+	spriteType = {
+		name = "GFX_old_foreign_policy"
+		texturefile = "gfx/event_pictures/POL_old_foreign_policy.dds"
+	}
+	spriteType = {
+		name = "GFX_polish_cavalary_1"
+		texturefile = "gfx/event_pictures/polish_cavalary_1.dds"
+	}
+	spriteType = {
+		name = "GFX_polish_cavalary_2"
+		texturefile = "gfx/event_pictures/polish_cavalary_2.dds"
+	}
+	spriteType = {
+		name = "GFX_beck_1"
+		texturefile = "gfx/event_pictures/Beck_1.dds"
+	}
+	spriteType = {
+		name = "GFX_beck_2"
+		texturefile = "gfx/event_pictures/Beck_2.dds"
+	}
+	spriteType = {
+		name = "GFX_english_polish_relation_1"
+		texturefile = "gfx/event_pictures/english_polish_relation_1.dds"
+	}
+	spriteType = {
+		name = "GFX_english_polish_relation_2"
+		texturefile = "gfx/event_pictures/english_polish_relation_2.dds"
+	}
+	spriteType = {
+		name = "GFX_polish_flag"
+		texturefile = "gfx/event_pictures/polish_flag.dds"
+	}
+	spriteType = {
+		name = "GFX_introduce_polski_zloty"
+		texturefile = "gfx/event_pictures/introduce_polski_zloty.dds"
+	}
+	spriteType = {
+		name = "GFX_lechia_formed"
+		texturefile = "gfx/event_pictures/lechia_formed.dds"
+	}
+	spriteType = {
+		name = "GFX_royal_castle_in_warsaw_1_news_event"
+		texturefile = "gfx/event_pictures/royal_castle_in_warsaw_1_news_event.dds"
+	}
+	spriteType = {
+		name = "GFX_swedish_royal_palace_news_event"
+		texturefile = "gfx/event_pictures/swedish_royal_palace_news_event.dds"
+	}
+	spriteType = {
+		name = "GFX_old_polish_king"
+		texturefile = "gfx/event_pictures/old_polish_king.dds"
+	}
+	spriteType = {
+		name = "GFX_soldiers_on_bicycles"
+		texturefile = "gfx/event_pictures/soldiers_on_bicycles.dds"
+	}
+	spriteType = {
+		name = "GFX_guy_on_tank"
+		texturefile = "gfx/event_pictures/guy_on_tank.dds"
+	}
+	spriteType = {
+		name = "GFX_castle_of_visegrad"
+		texturefile = "gfx/event_pictures/castle_of_visegrad.dds"
+	}
+	spriteType = {
+		name = "GFX_hungarian_and_polish_soldiers"
+		texturefile = "gfx/event_pictures/hungarian_and_polish_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_hungarian_and_polish_soldiers_big"
+		texturefile = "gfx/event_pictures/hungarian_and_polish_soldiers_big.dds"
+	}
+	spriteType = {
+		name = "GFX_pope_news_event"
+		texturefile = "gfx/event_pictures/pope_news_event.dds"
+	}
+	spriteType = {
+		name = "GFX_psl_wins_event"
+		texturefile = "gfx/event_pictures/psl_wins_event.dds"
+	}
+	spriteType = {
+		name = "GFX_nd_wins_event"
+		texturefile = "gfx/event_pictures/nd_wins_event.dds"
+	}
+	spriteType = {
+		name = "GFX_roman_dmowski_funeral"
+		texturefile = "gfx/event_pictures/roman_dmowski_funeral.dds"
+	}
+	spriteType = {
+		name = "GFX_sanation_abolished"
+		texturefile = "gfx/event_pictures/sanation_abolished.dds"
+	}
+	spriteType = {
+		name = "GFX_roman_dmowski_died_small"
+		texturefile = "gfx/event_pictures/roman_dmowski_died_small.dds"
+	}
+	spriteType = {
+		name = "GFX_pius_xii_picture_small"
+		texturefile = "gfx/event_pictures/pius_xii_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_smigły_rydz_sad"
+		texturefile = "gfx/event_pictures/smigły_rydz_sad.dds"
+	}
+	spriteType = {
+		name = "GFX_rodnovery_back_color"
+		texturefile = "gfx/event_pictures/rodnovery_back_color.dds"
+	}
+	spriteType = {
+		name = "GFX_rodnovery_back_black_white"
+		texturefile = "gfx/event_pictures/rodnovery_back_black_white.dds"
+	}
+	spriteType = {
+		name = "GFX_balloon_competition"
+		texturefile = "gfx/event_pictures/balloon_competition.dds"
+	}
+}

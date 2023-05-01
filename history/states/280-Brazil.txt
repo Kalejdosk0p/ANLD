@@ -1,0 +1,25 @@
+
+state={
+	id=280
+	name="STATE_280"
+
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 0
+
+		}
+		add_core_of = BRA
+
+	}
+	
+	impassable = yes
+
+	provinces={
+		1979 2142 2147 2204 5232 8172 8175 10956 11010 12939 
+	}
+	manpower=120000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

@@ -1,0 +1,39 @@
+﻿capital = 267
+
+oob = "AFG_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+set_technology = {
+	infantry_weapons = 1
+	gwtank = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 10
+	fascism = 20
+	communism = 5
+	neutrality = 65
+}
+
+add_ideas = {
+	limited_conscription
+	partial_economic_mobilisation
+	novote
+	neutrality_idea
+}
+
+recruit_character = AFG_mohammed_zahir_shah
+recruit_character = AFG_sardar_shah_wali_khan
+recruit_character = AFG_mohammad_hashim_khan
+recruit_character = AFG_akbar_sherkhanzai
+recruit_character = AFG_shahpur_nawabi

@@ -1,0 +1,37 @@
+
+state={
+	id=229
+	name="STATE_229"
+	manpower = 2881049
+	
+	state_category = large_town
+	
+	resources={
+		oil=70
+	}
+
+	history={
+		owner = CAU
+		victory_points = {
+			7661 20
+		}
+		victory_points = {
+			1539 1
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 1
+			4545 = {
+				bunker = 1
+			}
+		}
+		add_core_of = CAU
+		add_core_of = AZR
+	}
+
+	provinces={
+		1467 1536 1539 1610 4458 4473 4477 4545 4614 7495 7661 9715 11645 11674 11704 12434 6763
+	}
+}

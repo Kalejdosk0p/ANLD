@@ -1,0 +1,82 @@
+﻿capital = 46
+
+oob = "ROM_1936"
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+set_convoys = 50
+
+# Starting tech
+set_technology = {
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	fuel_silos = 1
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_depth_charges = 1
+	}
+	#set_naval_oob = ""
+}
+
+create_import = {
+	resource = steel
+	factories = 1
+	exporter = SOV
+}
+create_import = {
+	resource = steel
+	factories = 1
+	exporter = FRA
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 30
+	fascism = 5
+	communism = 15
+	neutrality = 50
+}
+recruit_character = ROM_dimitrie_ghika
+recruit_character = ROM_gheorghe_tatarescu
+recruit_character = ROM_constantin_ion_parhon
+recruit_character = ROM_armand_calinescu
+recruit_character = ROM_octavian_goga
+recruit_character = ROM_petre_dumitrescu
+
+recruit_character = ROM_ioan_mihail_racovita
+recruit_character = ROM_ion_antonescu
+recruit_character = ROM_horia_macellariu
+recruit_character = ROM_gheorghe_avramescu
+
+recruit_character = ROM_corneliu_zelea_codreanu

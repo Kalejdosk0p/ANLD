@@ -1,0 +1,26 @@
+
+state={
+	id=718
+	name="STATE_718"
+	resources={
+		rubber=5.000
+	}
+
+	history={
+		owner = DEN
+		add_core_of = COG
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		2034 2073 2154 6027 7931 10883 11934 12741 12808 12824 
+	}
+	manpower=6229078
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

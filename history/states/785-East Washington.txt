@@ -1,0 +1,35 @@
+state={
+	id=785
+	name="STATE_785" # 750
+
+	manpower=521468
+
+	state_category = town
+
+
+	history={
+		owner = DES
+		
+		victory_points = {
+			587 20
+		}
+		
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+
+		}
+
+		victory_points = {
+			1690 1 
+		}
+
+		add_core_of = DES
+		
+	}
+
+	provinces={
+		     10198 10693 1690 12673 4747 10327 4778 12124 1832 12676 4838 7677 12578 7820
+	}
+	
+}

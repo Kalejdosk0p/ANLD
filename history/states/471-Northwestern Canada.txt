@@ -1,0 +1,30 @@
+
+state={
+	id=471
+	name="STATE_471"
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+			13203 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = SOV
+		add_core_of = ASK
+		victory_points = {
+			13203 1 
+		}
+
+	}
+
+	provinces={
+		917 1799 1872 4678 10548 10707 12508 12571 13202 13203 
+	}
+	manpower=57681
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

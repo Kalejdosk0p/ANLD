@@ -1,0 +1,62 @@
+characters={
+	MAL_onn_jaafar={
+		name="Onn Jaafar"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	MAL_lai_teck={
+		name="Lai Teck"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	MAL_ibrahim_hj_yaacob={
+		name="Ibrahim Hj Yaacob"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_fascism.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+	MAL_sir_shenton_thomas={
+		name="Sir Shenton Thomas"
+		portraits={
+			civilian={
+				large="gfx/leaders/MAL/sir_shenton_thomas.dds"
+			}
+		}
+		field_marshal={
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1953.3.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,138 @@
+characters={
+	GRE_markos_vafiadis={
+		name="Markos Vafiadis"
+		portraits={
+			civilian={
+				large="gfx/leaders/GRE/Portrait_Greece_Markos_Vafiadis.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_MARKOS_VAFIADIS_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GRE_georgios_kosmidis={
+		name="Georgios Kosmidis"
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_georgios_kosmidis"
+			}
+		}
+		country_leader={
+			desc="POLITICS_GEORGIOS_KOSMIDIS_DESC"
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GRE_markos_drakos={
+		name="Markos Drakos"
+		portraits={
+			army={
+				large="GFX_portrait_gre_markos_drakos"
+				small=GFX_portrait_GRE_markos_drakos_small
+			}
+		}
+		corps_commander={
+			traits={ career_officer infantry_officer trickster hill_fighter trait_mountaineer}
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	GRE_charalambos_katsimitros={
+		name="Charalambos Katsimitros"
+		portraits={
+			army={
+				large="GFX_portrait_gre_charalambos_katsimitros"
+				small=GFX_portrait_GRE_charalambos_katsimitros_small
+			}
+		}
+		corps_commander={
+			traits={ inflexible_strategist trait_cautious war_hero trickster trait_mountaineer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	GRE_alexandros_papagos={
+		name="Alexandros Papagos"
+		portraits={
+			army={
+				small="GFX_idea_gre_alexandros_papagos"
+				large="GFX_portrait_gre_alexandros_papagos"
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = GRE_alexandros_papagos
+			allowed = {
+				original_tag = GRE
+			}
+			available = {
+				
+			}
+			traits = {
+				army_chief_defensive_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		field_marshal={
+			traits={ old_guard inflexible_strategist career_officer war_hero trait_mountaineer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	GRE_george_ii={
+		name="George II"
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_george_ii"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GRE_emmanuel_tsouderos={
+		name="Emmanuel Tsouderos"
+		portraits={
+			civilian={
+				large="GFX_portrait_gre_emmanouil_tsouderos"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	GRE_ioannis_metaxas={
+		name="Ioannis Metaxas"
+		portraits={
+			civilian={
+				large="GFX_portrait_GRE_ioannis_metaxas"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

@@ -1,0 +1,56 @@
+characters={
+	KUW_abdullah_ii={
+		name="Abdullah II"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_fascism1.dds"
+			}
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	KUW_jamal_ibn_abd_allah={
+		name="Jamal ibn Abd Allah"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			traits={ armaments_organizer compassionate_gentleman }
+			expire="1950.5.1.12"
+			id=-1
+		}
+	}
+	KUW_nur_aldin_ibn_umar={
+		name="Nur al-Din ibn Umar"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			traits={ armaments_organizer ideological_crusader }
+			expire="1955.5.1.12"
+			id=-1
+		}
+	}
+	KUW_tawfiq_ibn_khalid={
+		name="Tawfiq ibn Khalid"
+		portraits={
+			civilian={
+				large="gfx/leaders/SAU/Portrait_Arabia_Generic_land_2.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1943.5.1.12"
+			id=-1
+		}
+	}
+}

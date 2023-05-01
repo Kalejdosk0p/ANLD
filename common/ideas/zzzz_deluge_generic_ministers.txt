@@ -1,0 +1,79 @@
+ideas = {
+	political_advisor = {
+		TUR_ataturk = {
+
+			picture = ataturk
+
+			allowed = {
+				original_tag = TUR
+			}
+			
+			available = {
+				NOT = { has_global_flag = ataturk_died }
+			}
+			
+			traits = { turkish_nationalist }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		ALB_enver_hoxha = {
+
+			picture = enver_hoxha
+
+			allowed = {
+				original_tag = ALB
+			}
+			
+			available = {
+			}
+			
+			traits = { bunker_fanatic }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+	
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 5
+					has_government = communism
+				}
+				modifier = {
+					factor = 0
+					has_government = democratic
+				}
+				modifier = {
+					factor = 0
+					has_government = neutrality
+				}
+				modifier = {
+					factor = 0
+					has_government = fascism
+				}
+			}
+		}
+	}
+	chief_of_staff_slot = {
+		
+	}
+	security_chief_slot = {
+		
+	}
+	intelligence_chief_slot = {
+		
+	}
+	high_command = {
+		
+	}
+}

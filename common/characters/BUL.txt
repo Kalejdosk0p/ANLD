@@ -1,0 +1,97 @@
+characters={
+	BUL_boris_iii={
+		name="Boris III"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUL/tsar_boris.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_BORIS_III_DESC"
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_georgi_dimitrov={
+		name="Georgi Dimitrov"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUL/Portrait_Bulgaria_Georgi_Dimitrov.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_GEORGI_DIMITROV_DESC"
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_hristo_lukov={
+		name="Hristo Lukov"
+		portraits={
+			civilian={
+				large="gfx/leaders/BUL/hristo_lukov.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_zivko_topalovic={
+		name="Zivko Topalovic"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_ZIVCO_TOPALOVIC_DESC"
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	BUL_vasil_tenev_boydev={
+		name="Vasil Tenev Boydev"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ armor_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=-1
+		}
+	}
+	BUL_georgi_nikolov_popov={
+		name="Georgi Nikolov Popov"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			}
+		}
+		field_marshal={
+			traits={ defensive_doctrine }
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=4
+			legacy_id=-1
+		}
+	}
+}

@@ -1,0 +1,46 @@
+﻿
+# Events related to the Balkan counties which don't pertain to the Central Powers
+
+add_namespace = deluge_balkans
+
+# A country has unified Yugoslavia
+
+news_event = {
+	id = deluge_balkans.1
+	title = deluge_balkans1title
+	desc = deluge_balkans1desc
+	
+	picture = GFX_deluge_hungarian_parliament_building
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_balkans1opta
+		trigger = {
+			OR = {
+				tag = ROOT
+				is_in_faction_with = ROOT
+			}
+		}
+	}
+	option = {
+		name = deluge_balkans1optb
+		trigger = {
+			has_war_with = ROOT
+		}
+	}
+	option = {
+		name = deluge_balkans1optc
+		trigger = {
+			NOT = {
+				OR = {
+					tag = ROOT
+					is_in_faction_with = ROOT
+					has_war_with = ROOT
+				}
+			}
+		}
+	}
+}

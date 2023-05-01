@@ -1,0 +1,77 @@
+ideas = {
+	aircraft_manufacturer = { 
+		
+		designer = yes
+		
+		dar = {
+			
+			picture = generic_air_manufacturer_1
+
+			
+			allowed = {
+				original_tag = BUL
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			# licenced Focke-Wulf Fw 44, built own trainers DAR 6 and DAR 9.
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+
+
+	theorist = {
+		BUL_kiril_stanchev = {
+			
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		BUL_ivan_gaidimitriv = {
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+		BUL_georgi_petsov = {
+
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = BUL
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+
+	}
+}

@@ -1,0 +1,45 @@
+﻿capital = 48
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+oob = "BUL_1936"
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	infantry_weapons = 1
+
+	tech_support = 1		
+	tech_engineers = 1
+	motorised_infantry = 1
+	early_fighter = 1
+	fuel_silos = 1
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.3.5"
+	election_frequency = 48
+	elections_allowed = yes
+	
+}
+
+set_popularities = {
+	democratic = 30
+	fascism = 5
+	communism = 15
+	neutrality = 50
+}
+	
+recruit_character = BUL_boris_iii
+recruit_character = BUL_georgi_dimitrov
+recruit_character = BUL_hristo_lukov
+recruit_character = BUL_zivko_topalovic
+recruit_character = BUL_vasil_tenev_boydev
+recruit_character = BUL_georgi_nikolov_popov

@@ -1,0 +1,301 @@
+ideas = {
+	tank_manufacturer = { 
+		
+		designer = yes
+		
+		pzinz_rom = {
+			
+			picture = generic_tank_manufacturer_3
+
+			
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { medium_tank_manufacturer }
+
+			equipment_bonus = {
+			}
+			
+			modifier = {
+				# heavily armored light tanks 7TP, weak vs air ,diesel powered
+			}
+		}
+
+		ROM_leonidas_works = {
+			
+			picture = generic_tank_manufacturer_3
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+		}
+	}
+
+	industrial_concern = {
+		
+		
+		ROM_ROMLOC = {
+		
+			picture = industrial_concern_1
+			
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				
+			}
+			
+			traits = { industrial_concern }
+		}
+
+				
+	}
+
+	naval_manufacturer = { 			
+		
+		designer = yes
+		
+		constanta_shipyard = {
+			
+			picture = generic_naval_manufacturer_2
+
+			
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			equipment_bonus = {
+				# cant find enough info 
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		ROM_coastal_defense_navy_designer = {
+			
+			picture = generic_coastal_navy
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+
+		ROM_black_sea_dominance_designer = {
+			
+			picture = generic_sea_focused_navy
+
+			cost = 75
+
+			allowed = {		
+				original_tag = ROM
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+
+	small_arms_manufacturer_slot = {
+		
+		designer = yes
+		
+		ROM_cugir = {
+			
+			picture = idea_ROM_cugir #used with permission from Turning Point mod
+
+
+			allowed = {
+				original_TAG = ROM
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { mass_producer_manufacturer }
+			
+		}
+	}
+
+	guns_manufacturer_slot = {
+		
+		designer = yes
+		
+		ROM_resita = {
+			
+			picture = generic_artillery_manufacturer_1
+
+
+			allowed = {
+				original_TAG = ROM
+			}
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { steelworks_manufacturer }
+			
+		}
+		
+	}
+	
+	vehicle_manufacturer_slot = {
+		
+		designer = yes
+		
+		ROM_vauxhall = {
+			
+			picture = vauxhall
+
+			allowed = {
+				original_TAG = ROM
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { tankette_manufacturer }
+			
+		}
+
+
+		ROM_malaxa = {
+			
+			picture = generic_motorized_equipment_manufacturer_1
+
+
+			allowed = {
+				original_TAG = ROM
+			}
+			
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { tractor_manufacturer }
+			
+		}
+		
+		ROM_opel = {
+			
+			picture = opel
+
+			cost = 75
+
+			allowed = {
+				original_tag = ROM
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { truck_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = { 		
+			
+		designer = yes
+		
+		iar = {
+			
+			picture = generic_air_manufacturer_2
+
+			cost = 150
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { CAS_manufacturer }
+			
+			equipment_bonus = {
+				# produced the IAR-80 fighter/ground attack aircraft around 350 of them during 36-44
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ROM_ICAR = {
+			
+			picture = generic_air_manufacturer_1
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		ROM_SET = {
+			
+			picture = generic_air_manufacturer_2
+
+			allowed = {
+				original_tag = ROM
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

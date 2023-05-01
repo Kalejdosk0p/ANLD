@@ -1,0 +1,41 @@
+
+state={
+	id=57
+	name="STATE_57"
+	manpower = 5109333
+	state_category = large_city
+
+	resources={
+		steel=20
+	}
+	
+	history={
+		owner = DDR
+		victory_points = {
+			495 30
+		}
+		victory_points = {
+			9509 5
+		}
+		victory_points = {
+			11431 3
+		}
+		victory_points = {
+			6535 10
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		add_core_of = DDR
+		add_core_of = WGR
+		add_core_of = GER
+	}
+
+	provinces={
+		405 495 3355 3398 6535 6622 9443 9509 11346 11431 
+	}
+}

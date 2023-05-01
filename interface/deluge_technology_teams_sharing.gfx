@@ -1,0 +1,13 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_comecon_icon"
+		texturefile = "gfx/interface/technology_sharing/comecon_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_league_programme_icon"
+		texturefile = "gfx/interface/technology_sharing/league_programme_icon.dds"
+	}
+	
+}

@@ -1,0 +1,64 @@
+characters={
+	SIA_phraya_phahon={
+		name="Phraya Phahon"
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/Portrait_Siam_Phraya_Phahon.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_PHRAYA_PHAHON_DESC"
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_plaek_phibunsongkhram={
+		name="Plaek Phibunsongkhram"
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/luang_phibul.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_rama_vii={
+		name="Rama VII"
+		portraits={
+			civilian={
+				large="gfx/leaders/SIA/king_rama_vii.dds"
+			}
+		}
+		field_marshal={
+			skill=1
+			attack_skill=1
+			defense_skill=2
+			planning_skill=1
+			logistics_skill=2
+			legacy_id=-1
+		}
+		country_leader={
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	SIA_phya_phonphayuhasena={
+		name="Phya Phonphayuhasena"
+		portraits={
+			civilian={
+				large="gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			traits={ financial_expert }
+			expire="1953.5.1.12"
+			id=-1
+		}
+	}
+}

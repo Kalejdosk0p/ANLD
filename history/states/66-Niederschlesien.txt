@@ -1,0 +1,40 @@
+
+state={
+	id=66
+	name="STATE_66"
+	manpower = 3678146
+	resources={
+		steel=50
+		aluminium=16
+	}
+	
+	state_category = large_city
+
+	history={
+		owner = POL
+		victory_points = {
+			9570 20
+		}
+		victory_points = {
+			552 5
+		}
+		victory_points = {
+			3545 5
+		}
+		victory_points = {
+			3438 5
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 6
+		}
+		add_core_of = POL
+
+	}
+
+	provinces={
+		552 3283 3438 3485 3510 3545 6462 6534 6595 9470 9570 11517 
+	}
+}

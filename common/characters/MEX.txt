@@ -1,0 +1,215 @@
+characters={
+	MEX_salvador_abascal={
+		name="Salvador Abascal"
+		portraits={
+			civilian={
+				large="gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_SALVADOR_ABASCAL_DESC"
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MEX_heliodoro_charis={
+		name="Heliodoro Charis"
+		portraits={
+			army={
+				small="GFX_portrait_mex_heliodoro_charis_small"
+			}
+			army={
+				large="GFX_portrait_mex_heliodoro_charis"
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=700
+		}
+	}
+	MEX_luis_farell={
+		name="Luis Farell"
+		portraits={
+			army={
+				small="GFX_portrait_mex_luis_farell_small"
+			}
+			army={
+				large="GFX_portrait_mex_luis_farell"
+			}
+		}
+		corps_commander={
+			traits={ war_hero }
+			skill=3
+			attack_skill=4
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=701
+		}
+	}
+	MEX_antonio_lópez_iv={
+		name="Antonio López IV"
+		portraits={
+			civilian={
+				large="gfx/leaders/MEX/mexican_general.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MEX_Álvaro_obregón={
+		name="Álvaro Obregón"
+		portraits={
+			civilian={
+				large="gfx/leaders/MEX/obregon.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MEX_pancho_villa={
+		name="Pancho Villa"
+		portraits={
+			civilian={
+				large="gfx/leaders/MEX/pancho_villa.dds"
+			}
+		}
+		country_leader={
+			ideology=anarchist_ideology
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	MEX_gildardo_magaña={
+		name="Gildardo Magaña"
+		portraits={
+			army={
+				small="GFX_portrait_mex_gildardo_magana_small"
+			}
+			army={
+				large="GFX_portrait_mex_gildardo_magana"
+			}
+		}
+		corps_commander={
+			traits={ media_personality }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=702
+		}
+	}
+	MEX_manuel_pérez_treviño={
+		name="Manuel Pérez Treviño"
+		portraits={
+			army={
+				small="GFX_portrait_mex_manuel_perez_trevino_small"
+			}
+			army={
+				large="GFX_portrait_mex_manuel_perez_trevino"
+			}
+		}
+		corps_commander={
+			traits={ career_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=3
+			legacy_id=703
+		}
+	}
+	MEX_abelardo_l._rodríguez={
+		name="Abelardo L. Rodríguez"
+		portraits={
+			army={
+				small="GFX_portrait_mex_abelardo_rodriguez_small"
+			}
+			army={
+				large="GFX_portrait_mex_abelardo_rodriguez"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=704
+		}
+	}
+	MEX_manuel_Ávila_camacho={
+		name="Manuel Ávila Camacho"
+		portraits={
+			army={
+				small="GFX_portrait_mex_avila_military_small"
+			}
+			army={
+				large="GFX_portrait_mex_avila_military"
+			}
+		}
+		corps_commander={
+			traits={ politically_connected }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=705
+		}
+	}
+	MEX_othón_p._blanco_núñez_de_cáceres={
+		name="Othón P. Blanco Núñez de Cáceres"
+		portraits={
+			army={
+				small="GFX_portrait_mex_othon_blanco_small"
+			}
+			army={
+				large="GFX_portrait_mex_othon_blanco"
+			}
+		}
+		navy_leader={
+			traits={ old_guard_navy }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=706
+		}
+	}
+	MEX_heriberto_jara_corona={
+		name="Heriberto Jara Corona"
+		portraits={
+			army={
+				small="GFX_portrait_mex_heriberto_corona_small"
+			}
+			army={
+				large="GFX_portrait_mex_heriberto_corona"
+			}
+		}
+		navy_leader={
+			traits={ navy_media_personality }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+			legacy_id=707
+		}
+	}
+}

@@ -1,0 +1,108 @@
+﻿capital = 231
+
+set_research_slots = 3
+set_stability = 0.4
+set_war_support = 0.2
+
+oob = "CAU_1936"
+
+add_opinion_modifier = { target = BLR modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = UKR modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = BAL modifier = great_war_alliance_modifier }
+add_opinion_modifier = { target = DDR modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = FRA modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = USA modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = TUR modifier = great_war_friendship_modifier }
+add_opinion_modifier = { target = SOV modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = POL modifier = great_war_hostility_modifier }
+add_opinion_modifier = { target = HUN modifier = great_war_hostility_modifier }
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	trade_interdiction = 1
+	mass_assault = 1
+	formation_flying = 1
+	fuel_silos = 1
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+	}
+	#set_naval_oob = ""
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_submarine = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_depth_charges = 1
+	}
+	#set_naval_oob = ""
+}
+
+set_convoys = 50
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1934.6.5"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 10
+	fascism = 20
+	communism = 50
+	neutrality = 20
+}
+
+create_faction = Republican_International
+add_to_faction = CAU
+add_to_faction = UKR
+add_to_faction = BLR
+add_to_faction = BAL
+	
+add_ideas = {
+	limited_exports
+	extensive_conscription
+	partial_economic_mobilisation
+	universal
+	floating_exchange
+	labour_camps
+	deluge_revolutionary_republic_idea
+}
+recruit_character = CAU_ioseb_jughashvili
+recruit_character = CAU_anastas_mikoyan
+recruit_character = CAU_ivan_bagramyan
+recruit_character = CAU_aleksandr_vasilevsky
+recruit_character = CAU_boris_shaposhnikov
+recruit_character = CAU_issa_pliyev
+recruit_character = CAU_leonid_govorov
+recruit_character = CAU_georgiy_zakharov
+recruit_character = CAU_yakov_cherevichenko
+recruit_character = CAU_andrei_grechko
+recruit_character = CAU_vasily_chuikov
+recruit_character = CAU_sergey_gorshkov
+recruit_character = CAU_kirill_surkov
+recruit_character = CAU_kirill_kuropatkin
+

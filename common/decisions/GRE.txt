@@ -1,0 +1,72 @@
+form_greater_greece_category = {
+	form_greater_greece = {
+		icon = GFX_decision_generic_form_nation
+		visible = {
+			always = yes
+		}
+		available = {
+			owns_state = 47
+			controls_state = 47
+			owns_state = 731
+			controls_state = 731
+			owns_state = 186
+			controls_state = 186
+			owns_state = 182
+			controls_state = 182
+			owns_state = 185
+			controls_state = 185
+			owns_state = 805
+			controls_state = 805
+			owns_state = 184
+			controls_state = 184
+			owns_state = 187
+			controls_state = 187
+			owns_state = 164
+			controls_state = 164
+			owns_state = 341
+			controls_state = 341
+			owns_state = 340
+			controls_state = 340
+			owns_state = 339
+			controls_state = 339
+			owns_state = 342
+			controls_state = 342
+			owns_state = 183
+			controls_state = 183
+			owns_state = 106
+			controls_state = 106
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			805 = {
+				add_core_of = GRE
+			}
+			44 = {
+				add_core_of = GRE
+			}
+			801 = {
+				add_core_of = GRE
+			}
+			343 = {
+				add_core_of = GRE
+			}
+			346 = {
+				add_core_of = GRE
+			}
+			49 = {
+				add_core_of = GRE
+			}
+			345 = {
+				add_core_of = GRE
+			}
+			set_cosmetic_tag = GRE_GREATER_GREECE
+			add_political_power = 100
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

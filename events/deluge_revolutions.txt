@@ -1,0 +1,1612 @@
+﻿
+# Governments with low support have civil wars against rival ideology, or capitulate
+# Countries with elections allowed will prefer those
+
+add_namespace = deluge_revolutions
+
+# fascism vs neutrality
+
+country_event = {
+	id = deluge_revolutions.1
+	title = deluge_revolutions1title
+	desc = deluge_revolutions1desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = fascism
+		neutrality > 0.5
+		OR = {
+			has_elections = no
+			neutrality > 0.6
+		}
+		NOT = { has_idea = deluge_fascism_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_u_v_m }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+		
+	option = {
+		name = deluge_revolutions1opta
+		
+		set_country_flag = has_had_civil_war_u_v_m
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_monarchist_statesman
+			}
+			remove_ideas = generic_monarchist_statesman
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_landed_gentleman
+			}
+			remove_ideas = generic_landed_gentleman
+		}
+		
+		start_civil_war = {
+			ruling_party = fascism
+			ideology = neutrality
+			size = 0.5
+		}
+		
+		add_ideas = deluge_fascism_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions1optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_fascism_crackdown_idea }
+			remove_ideas = deluge_fascism_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_fascist_demagogue
+			}
+			remove_ideas = generic_deluge_fascist_demagogue
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_great_war_hero
+			}
+			remove_ideas = generic_great_war_hero
+		}
+		
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# fascism vs communism
+
+country_event = {
+	id = deluge_revolutions.2
+	title = deluge_revolutions2title
+	desc = deluge_revolutions2desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = fascism
+		communism > 0.5
+		OR = {
+			has_elections = no
+			communism > 0.6
+		}
+		NOT = { has_idea = deluge_fascism_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_u_v_r }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+		
+	option = {
+		name = deluge_revolutions2opta
+		
+		set_country_flag = has_had_civil_war_u_v_r
+
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_communist_revolutionary
+			}
+			remove_ideas = generic_deluge_communist_revolutionary
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_trades_unionist
+			}
+			remove_ideas = generic_trades_unionist
+		}
+		
+		start_civil_war = {
+			ruling_party = fascism
+			ideology = communism
+			size = 0.5
+		}
+		
+		add_ideas = deluge_fascism_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions2optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_fascism_crackdown_idea }
+			remove_ideas = deluge_fascism_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_fascist_demagogue
+			}
+			remove_ideas = generic_deluge_fascist_demagogue
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_great_war_hero
+			}
+			remove_ideas = generic_great_war_hero
+		}
+		
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# fascism vs democratic
+
+country_event = {
+	id = deluge_revolutions.3
+	title = deluge_revolutions3title
+	desc = deluge_revolutions3desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = fascism
+		democratic > 0.5
+		OR = {
+			has_elections = no
+			democratic > 0.6
+		}
+		NOT = { has_idea = deluge_fascism_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_u_v_d }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+		
+	option = {
+		name = deluge_revolutions3opta
+		
+		set_country_flag = has_had_civil_war_u_v_d
+
+		if = {
+			limit = {
+				has_idea = generic_deluge_democratic_reformer
+			}
+			remove_ideas = generic_deluge_democratic_reformer
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_innovative_capitalist
+			}
+			remove_ideas = generic_innovative_capitalist
+		}
+		
+		start_civil_war = {
+			ruling_party = fascism
+			ideology = democratic
+			size = 0.5
+		}
+		
+		add_ideas = deluge_fascism_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions3optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_fascism_crackdown_idea }
+			remove_ideas = deluge_fascism_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_fascist_demagogue
+			}
+			remove_ideas = generic_deluge_fascist_demagogue
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_great_war_hero
+			}
+			remove_ideas = generic_great_war_hero
+		}
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# neutrality vs fascism
+
+country_event = {
+	id = deluge_revolutions.4
+	title = deluge_revolutions4title
+	desc = deluge_revolutions4desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = neutrality
+		fascism > 0.5
+		OR = {
+			has_elections = no
+			fascism > 0.6
+		}
+		OR = {
+			NOT = { tag = POM }
+			is_subject = no
+		}
+		NOT = { has_idea = deluge_neutrality_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_m_v_u }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+		
+	option = {
+		name = deluge_revolutions4opta
+
+		set_country_flag = has_had_civil_war_m_v_u
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_fascist_demagogue
+			}
+			remove_ideas = generic_deluge_fascist_demagogue
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_great_war_hero
+			}
+			remove_ideas = generic_great_war_hero
+		}
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.5
+		}
+		
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = fascism
+			size = 0.5
+		}
+		
+		add_ideas = deluge_neutrality_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions4optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_neutrality_crackdown_idea }
+			remove_ideas = deluge_neutrality_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_monarchist_statesman
+			}
+			remove_ideas = generic_monarchist_statesman
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_landed_gentleman
+			}
+			remove_ideas = generic_landed_gentleman
+		}
+		
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# neutrality vs communism
+
+country_event = {
+	id = deluge_revolutions.5
+	title = deluge_revolutions5title
+	desc = deluge_revolutions5desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = neutrality
+		communism > 0.5
+		OR = {
+			has_elections = no
+			communism > 0.6
+		}
+		NOT = { has_idea = deluge_neutrality_liberalisation_idea }
+		OR = {
+			NOT = { tag = POM }
+			is_subject = no
+		}
+		OR = {
+			NOT = { tag = FRA } # There is a special case for the French Empire having a civil war
+			has_idea_with_trait = communist_revolutionary # Player wants to go radical
+			date > 1940.5.1 # Opportunity for scripted civil war has passed
+		}
+		NOT = { has_country_flag = has_had_civil_war_m_v_r }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = deluge_revolutions5opta
+		
+		set_country_flag = has_had_civil_war_m_v_r
+
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_communist_revolutionary
+			}
+			remove_ideas = generic_deluge_communist_revolutionary
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_trades_unionist
+			}
+			remove_ideas = generic_trades_unionist
+		}
+		
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = communism
+			size = 0.5
+		}
+		
+		add_ideas = deluge_neutrality_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions5optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_monarchist_statesman
+			}
+			remove_ideas = generic_monarchist_statesman
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_landed_gentleman
+			}
+			remove_ideas = generic_landed_gentleman
+		}
+		
+		if = {
+			limit = { has_idea = deluge_neutrality_crackdown_idea }
+			remove_ideas = deluge_neutrality_crackdown_idea
+		}
+		
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# neutrality vs democratic
+
+country_event = {
+	id = deluge_revolutions.6
+	title = deluge_revolutions6title
+	desc = deluge_revolutions6desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = neutrality
+		democratic > 0.5
+		OR = {
+			has_elections = no
+			democratic > 0.6
+		}
+		OR = {
+			NOT = { tag = POM }
+			is_subject = no
+		}
+		NOT = { has_idea = deluge_neutrality_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_m_v_d }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = deluge_revolutions6opta
+		
+		set_country_flag = has_had_civil_war_m_v_d
+
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_democratic_reformer
+			}
+			remove_ideas = generic_deluge_democratic_reformer
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_innovative_capitalist
+			}
+			remove_ideas = generic_innovative_capitalist
+		}
+		
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = democratic
+			size = 0.5
+		}
+		
+		add_ideas = deluge_neutrality_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions6optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_neutrality_crackdown_idea }
+			remove_ideas = deluge_neutrality_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_monarchist_statesman
+			}
+			remove_ideas = generic_monarchist_statesman
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_landed_gentleman
+			}
+			remove_ideas = generic_landed_gentleman
+		}
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# democratic vs neutrality
+
+country_event = {
+	id = deluge_revolutions.7
+	title = deluge_revolutions7title
+	desc = deluge_revolutions7desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = democratic
+		neutrality > 0.5
+		OR = {
+			has_elections = no
+			neutrality > 0.6
+		}
+		NOT = { has_idea = deluge_democratic_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_d_v_m }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+		
+	option = {
+		name = deluge_revolutions7opta
+
+		set_country_flag = has_had_civil_war_d_v_m
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_monarchist_statesman
+			}
+			remove_ideas = generic_monarchist_statesman
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_landed_gentleman
+			}
+			remove_ideas = generic_landed_gentleman
+		}
+		
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = neutrality
+			size = 0.5
+		}
+		
+		add_ideas = deluge_democratic_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions7optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_democratic_crackdown_idea }
+			remove_ideas = deluge_democratic_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_democratic_reformer
+			}
+			remove_ideas = generic_deluge_democratic_reformer
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_innovative_capitalist
+			}
+			remove_ideas = generic_innovative_capitalist
+		}
+		
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# democratic vs communism
+
+country_event = {
+	id = deluge_revolutions.8
+	title = deluge_revolutions8title
+	desc = deluge_revolutions8desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = democratic
+		communism > 0.5
+		OR = {
+			has_elections = no
+			communism > 0.6
+		}
+		NOT = { has_idea = deluge_democratic_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_d_v_r }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = deluge_revolutions8opta
+		
+		set_country_flag = has_had_civil_war_d_v_r
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_communist_revolutionary
+			}
+			remove_ideas = generic_deluge_communist_revolutionary
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_trades_unionist
+			}
+			remove_ideas = generic_trades_unionist
+		}
+		
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = communism
+			size = 0.5
+		}
+		
+		add_ideas = deluge_democratic_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions8optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_democratic_crackdown_idea }
+			remove_ideas = deluge_democratic_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_democratic_reformer
+			}
+			remove_ideas = generic_deluge_democratic_reformer
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_innovative_capitalist
+			}
+			remove_ideas = generic_innovative_capitalist
+		}
+		
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = yes
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# democratic vs fascism
+
+country_event = {
+	id = deluge_revolutions.9
+	title = deluge_revolutions9title
+	desc = deluge_revolutions9desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = democratic
+		fascism > 0.5
+		OR = {
+			has_elections = no
+			fascism > 0.6
+		}
+		NOT = { has_idea = deluge_democratic_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_d_v_u }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = deluge_revolutions9opta
+		
+		set_country_flag = has_had_civil_war_d_v_u
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_fascist_demagogue
+			}
+			remove_ideas = generic_deluge_fascist_demagogue
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_great_war_hero
+			}
+			remove_ideas = generic_great_war_hero
+		}
+		
+		start_civil_war = {
+			ruling_party = democratic
+			ideology = fascism
+			size = 0.5
+		}
+		
+		add_ideas = deluge_democratic_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions9optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_democratic_crackdown_idea }
+			remove_ideas = deluge_democratic_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_democratic_reformer
+			}
+			remove_ideas = generic_deluge_democratic_reformer
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_innovative_capitalist
+			}
+			remove_ideas = generic_innovative_capitalist
+		}
+		
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# communism vs fascism
+
+country_event = {
+	id = deluge_revolutions.10
+	title = deluge_revolutions10title
+	desc = deluge_revolutions10desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = communism
+		fascism > 0.5
+		OR = {
+			has_elections = no
+			fascism > 0.6
+		}
+		NOT = { has_idea = deluge_communism_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_r_v_u }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = deluge_revolutions10opta
+		
+		set_country_flag = has_had_civil_war_r_v_u
+
+		add_popularity = {
+			ideology = communism
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_fascist_demagogue
+			}
+			remove_ideas = generic_deluge_fascist_demagogue
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_great_war_hero
+			}
+			remove_ideas = generic_great_war_hero
+		}
+		
+		start_civil_war = {
+			ruling_party = communism
+			ideology = fascism
+			size = 0.5
+		}
+		
+		add_ideas = deluge_communism_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions10optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_communism_crackdown_idea }
+			remove_ideas = deluge_communism_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_communist_revolutionary
+			}
+			remove_ideas = generic_deluge_communist_revolutionary
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_trades_unionist
+			}
+			remove_ideas = generic_trades_unionist
+		}
+		
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# communism vs neutrality
+
+country_event = {
+	id = deluge_revolutions.11
+	title = deluge_revolutions11title
+	desc = deluge_revolutions11desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = communism
+		neutrality > 0.5
+		OR = {
+			has_elections = no
+			neutrality > 0.6
+		}
+		NOT = { has_idea = deluge_communism_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_r_v_m }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = deluge_revolutions11opta
+		
+		set_country_flag = has_had_civil_war_r_v_m
+
+		add_popularity = {
+			ideology = communism
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_monarchist_statesman
+			}
+			remove_ideas = generic_monarchist_statesman
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_landed_gentleman
+			}
+			remove_ideas = generic_landed_gentleman
+		}
+		
+		start_civil_war = {
+			ruling_party = communism
+			ideology = neutrality
+			size = 0.5
+		}
+		
+		add_ideas = deluge_communism_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions11optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_communism_crackdown_idea }
+			remove_ideas = deluge_communism_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_communist_revolutionary
+			}
+			remove_ideas = generic_deluge_communist_revolutionary
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_trades_unionist
+			}
+			remove_ideas = generic_trades_unionist
+		}
+		
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# communism vs democratic
+
+country_event = {
+	id = deluge_revolutions.12
+	title = deluge_revolutions12title
+	desc = deluge_revolutions12desc
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_government = communism
+		democratic > 0.5
+		OR = {
+			has_elections = no
+			democratic > 0.6
+		}
+		NOT = { has_idea = deluge_communism_liberalisation_idea }
+		NOT = { has_country_flag = has_had_civil_war_r_v_d }
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+	
+	option = {
+		name = deluge_revolutions12opta
+		
+		set_country_flag = has_had_civil_war_r_v_d
+
+		add_popularity = {
+			ideology = communism
+			popularity = 0.5
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_democratic_reformer
+			}
+			remove_ideas = generic_deluge_democratic_reformer
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_innovative_capitalist
+			}
+			remove_ideas = generic_innovative_capitalist
+		}
+		
+		start_civil_war = {
+			ruling_party = communism
+			ideology = democratic
+			size = 0.5
+		}
+		
+		add_ideas = deluge_communism_crackdown_idea
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.5
+				has_war = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions12optb
+		
+		trigger = {
+			is_subject = no
+		}
+		
+		if = {
+			limit = { has_idea = deluge_communism_crackdown_idea }
+			remove_ideas = deluge_communism_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_deluge_communist_revolutionary
+			}
+			remove_ideas = generic_deluge_communist_revolutionary
+		}
+		
+		if = {
+			limit = {
+				has_idea = generic_trades_unionist
+			}
+			remove_ideas = generic_trades_unionist
+		}
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0.5
+				is_in_faction = yes
+			}
+			modifier = {
+				factor = 0.5
+				has_war = no
+			}
+		}
+	}
+	
+}
+
+# Opposition parties demand elections be allowed
+
+country_event = {
+	id = deluge_revolutions.13
+	title = deluge_revolutions13title
+	desc = {
+		text = deluge_revolutions13desccommunism
+		trigger = { has_government = communism }
+	}
+	desc = {
+		text = deluge_revolutions13descdemocratic
+		trigger = { has_government = democratic }
+	}
+	desc = {
+		text = deluge_revolutions13descneutrality
+		trigger = { has_government = neutrality }
+	}
+	desc = {
+		text = deluge_revolutions13descfascism
+		trigger = { has_government = fascism }
+	}
+	picture = GFX_deluge_militia
+	
+	trigger = {
+		has_elections = no
+		is_subject = no
+		NOT = { has_idea = deluge_changed_voting_law }
+		NOT = { has_idea = deluge_communism_crackdown_idea }
+		NOT = { has_idea = deluge_communism_liberalisation_idea }
+		NOT = { has_idea = deluge_democratic_crackdown_idea }
+		NOT = { has_idea = deluge_democratic_liberalisation_idea }
+		NOT = { has_idea = deluge_neutrality_crackdown_idea }
+		NOT = { has_idea = deluge_neutrality_liberalisation_idea }
+		NOT = { has_idea = deluge_fascism_crackdown_idea }
+		NOT = { has_idea = deluge_fascism_liberalisation_idea }
+		OR = {
+			AND = {
+				has_government = communism
+				NOT = { communism > 0.5 }
+			}
+			AND = {
+				has_government = democratic
+				NOT = { democratic > 0.5 }
+			}
+			AND = {
+				has_government = neutrality
+				NOT = { neutrality > 0.5 }
+			}
+			AND = {
+				has_government = fascism
+				NOT = { fascism > 0.5 }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	option = {
+		name = deluge_revolutions13opta
+		
+		if = {
+			limit = { has_government = communism }
+			add_timed_idea = { idea = deluge_communism_liberalisation_idea days = 180 }
+			add_ideas = universal
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+		}
+
+		if = {
+			limit = { has_government = democratic }
+			add_timed_idea = { idea = deluge_democratic_liberalisation_idea days = 180 }
+			add_ideas = restricted
+			set_politics = {
+				ruling_party = democratic
+				elections_allowed = yes
+			}
+		}
+
+		if = {
+			limit = { has_government = neutrality }
+			add_timed_idea = { idea = deluge_neutrality_liberalisation_idea days = 180 }
+			add_ideas = landed
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = yes
+			}
+		}
+
+		if = {
+			limit = { has_government = fascism }
+			add_timed_idea = { idea = deluge_fascism_liberalisation_idea days = 180 }
+			add_ideas = landed
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = yes
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 10
+				has_government = democratic
+			}
+			modifier = {
+				factor = 5
+				has_government = communism
+			}
+			modifier = {
+				factor = 2
+				has_government = neutrality
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_revolutions13optb
+
+		if = {
+			limit = { has_government = communism }
+			add_timed_idea = { idea = deluge_communism_crackdown_idea days = 360 }
+		}
+
+		if = {
+			limit = { has_government = democratic }
+			add_timed_idea = { idea = deluge_democratic_crackdown_idea days = 360 }
+		}
+
+		if = {
+			limit = { has_government = neutrality }
+			add_timed_idea = { idea = deluge_neutrality_crackdown_idea days = 360 }
+		}
+
+		if = {
+			limit = { has_government = fascism }
+			add_timed_idea = { idea = deluge_fascism_crackdown_idea days = 360 }
+		}
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+		}
+	}
+		
+}
+
+# Country has no elections but not novote
+
+country_event = {
+	id = deluge_revolutions.14
+	title = deluge_revolutions14title
+	desc = {
+		text = deluge_revolutions14desccommunism
+		trigger = { has_government = communism }
+	}
+	desc = {
+		text = deluge_revolutions14descdemocratic
+		trigger = { has_government = democratic }
+	}
+	desc = {
+		text = deluge_revolutions14descneutrality
+		trigger = { has_government = neutrality }
+	}
+	desc = {
+		text = deluge_revolutions14descfascism
+		trigger = { has_government = fascism }
+	}
+	picture = GFX_report_event_election_vote
+	
+	trigger = {
+		has_elections = no
+		NOT = { has_idea = novote }
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = deluge_revolutions14opt
+		add_ideas = novote
+	}
+}
+
+# Country has elections but also novote
+
+country_event = {
+	id = deluge_revolutions.15
+	title = deluge_revolutions15title
+	desc = {
+		text = deluge_revolutions15desccommunism
+		trigger = { has_government = communism }
+	}
+	desc = {
+		text = deluge_revolutions15descdemocratic
+		trigger = { has_government = democratic }
+	}
+	desc = {
+		text = deluge_revolutions15descneutrality
+		trigger = { has_government = neutrality }
+	}
+	desc = {
+		text = deluge_revolutions15descfascism
+		trigger = { has_government = fascism }
+	}
+	picture = GFX_report_event_election_vote
+	
+	trigger = {
+		has_elections = yes
+		has_idea = novote
+	}
+	
+	mean_time_to_happen = {
+		days = 2
+	}
+
+	option = {
+		name = deluge_revolutions15opt
+		
+		if = {
+			limit = { has_government = communism }
+			add_ideas = universal
+		}
+
+		if = {
+			limit = { has_government = democratic }
+			add_ideas = restricted
+		}
+
+		if = {
+			limit = { has_government = neutrality }
+			add_ideas = landed
+		}
+
+		if = {
+			limit = { has_government = fascism }
+			add_ideas = landed
+		}
+	}
+}
+

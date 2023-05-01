@@ -1,0 +1,7 @@
+
+
+graphical_culture = south_america_gfx
+graphical_culture_2d = south_america_2d
+
+
+color = { 155  101  107 }

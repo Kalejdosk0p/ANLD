@@ -1,0 +1,5240 @@
+﻿
+# Cleaning up after the German Civil War
+
+add_namespace = german_civil_war
+
+# neutrality victory
+
+country_event = {
+	id = german_civil_war.1
+	title = german_civil_war1title
+	desc = german_civil_war1desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = WGR
+		country_exists = WGR
+		has_government = neutrality
+		NOT = { has_war_with = DDR }
+		NOT = { has_war_with = GER }
+		has_capitulated = no
+		is_subject = no
+		OR = {
+			DDR = {
+				has_government = neutrality
+				is_subject = no
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = WGR
+				}
+			}
+			DDR = {
+				is_subject_of = WGR
+			}
+			DDR = {
+				is_subject = yes
+				is_in_faction_with = WGR
+			}
+			NOT = { country_exists = DDR }
+			owns_state = 57
+		}
+		OR = {
+			GER = {
+				has_government = neutrality
+				is_subject = no
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = WGR
+				}
+			}
+			GER = {
+				is_subject_of = WGR
+			}
+			GER = {
+				is_subject = yes
+				is_in_faction_with = WGR
+			}
+			NOT = { country_exists = GER }
+			owns_state = 64
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = german_civil_war1opt
+		
+		if = {
+			limit = { has_idea = deluge_german_civil_war_idea }
+			remove_ideas = deluge_german_civil_war_idea
+		}
+		
+		if = {
+			limit = { country_exists = DDR }
+			annex_country = { target = DDR transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = GER }
+			annex_country = { target = GER transfer_troops = no }
+		}
+		every_state = {
+			limit = {
+				is_core_of = DDR
+			}
+			remove_core_of = DDR
+		}
+		every_state = {
+			limit = {
+				is_core_of = GER
+			}
+			remove_core_of = GER
+		}
+		if = {
+			limit = {
+				has_global_flag = german_communist_corvee_labour
+			}
+			56 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 3234
+				}
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 241
+				}
+			}
+			51 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 6469
+				}
+			}
+			57 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 3355
+				}
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 495
+				}
+			}
+		}
+		hidden_effect = {
+			set_global_flag = german_civil_war_ended
+			news_event = { days = 1 id = german_civil_war.2 }
+		}
+	}
+}
+
+# News event for a neutrality victory
+
+news_event = {
+	id = german_civil_war.2
+	title = german_civil_war2title
+	desc = german_civil_war2desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war2opta
+		
+		trigger = { has_government = communism }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war2optb
+		
+		trigger = { has_government = democratic }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war2optc
+		
+		trigger = { has_government = neutrality }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war2optd
+		
+		trigger = { has_government = fascism }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+}
+
+# communism victory
+
+country_event = {
+	id = german_civil_war.3
+	title = german_civil_war3title
+	desc = german_civil_war3desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DDR
+		country_exists = DDR
+		has_government = communism
+		NOT = { has_war_with = WGR }
+		NOT = { has_war_with = GER }
+		has_capitulated = no
+		is_subject = no
+		OR = {
+			WGR = {
+				has_government = communism
+				is_subject = no
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = DDR
+				}
+			}
+			WGR = {
+				is_subject_of = DDR
+			}
+			WGR = {
+				is_subject = yes
+				is_in_faction_with = DDR
+			}
+			NOT = { country_exists = WGR }
+			owns_state = 52
+		}
+		OR = {
+			GER = {
+				has_government = communism
+				is_subject = no
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = DDR
+				}
+			}
+			GER = {
+				is_subject_of = DDR
+			}
+			GER = {
+				is_subject = yes
+				is_in_faction_with = DDR
+			}
+			NOT = { country_exists = GER }
+			owns_state = 64
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = german_civil_war3opt
+		
+		if = {
+			limit = { has_idea = deluge_german_civil_war_idea }
+			remove_ideas = deluge_german_civil_war_idea
+		}
+		
+		if = {
+			limit = { country_exists = WGR }
+			annex_country = { target = WGR transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = GER }
+			annex_country = { target = GER transfer_troops = no }
+		}
+		every_state = {
+			limit = {
+				is_core_of = WGR
+			}
+			remove_core_of = WGR
+		}
+		every_state = {
+			limit = {
+				is_core_of = GER
+			}
+			remove_core_of = GER
+		}
+		if = {
+			limit = {
+				has_global_flag = german_communist_corvee_labour
+			}
+			56 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 3234
+				}
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 241
+				}
+			}
+			51 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 6469
+				}
+			}
+			57 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 3355
+				}
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 495
+				}
+			}
+		}
+		hidden_effect = {
+			set_global_flag = german_civil_war_ended
+			news_event = { days = 1 id = german_civil_war.4 }
+		}
+	}
+}
+
+# News event for a communism victory
+
+news_event = {
+	id = german_civil_war.4
+	title = german_civil_war4title
+	desc = german_civil_war4desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war4opta
+		
+		trigger = { has_government = communism }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war4optb
+		
+		trigger = { has_government = democratic }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war4optc
+		
+		trigger = { has_government = neutrality }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war4optd
+		
+		trigger = { has_government = fascism }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+}
+
+# fascism victory
+
+country_event = {
+	id = german_civil_war.5
+	title = german_civil_war5title
+	desc = german_civil_war5desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		country_exists = GER
+		has_government = fascism
+		NOT = { has_war_with = DDR }
+		NOT = { has_war_with = WGR }
+		has_capitulated = no
+		is_subject = no
+		OR = {
+			DDR = {
+				has_government = fascism
+				is_subject = no
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = GER
+				}
+			}
+			DDR = {
+				is_subject_of = GER
+			}
+			DDR = {
+				is_subject = yes
+				is_in_faction_with = GER
+			}
+			NOT = { country_exists = DDR }
+			owns_state = 57
+		}
+		OR = {
+			WGR = {
+				has_government = fascism
+				is_subject = no
+				OR = {
+					is_in_faction = no
+					is_in_faction_with = GER
+				}
+			}
+			WGR = {
+				is_subject_of = GER
+			}
+			WGR = {
+				is_subject = yes
+				is_in_faction_with = GER
+			}
+			NOT = { country_exists = WGR }
+			owns_state = 52
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = german_civil_war5opt
+		
+		if = {
+			limit = { has_idea = deluge_german_civil_war_idea }
+			remove_ideas = deluge_german_civil_war_idea
+		}
+		
+		if = {
+			limit = { country_exists = DDR }
+			annex_country = { target = DDR transfer_troops = no }
+		}
+		if = {
+			limit = { country_exists = WGR }
+			annex_country = { target = WGR transfer_troops = no }
+		}
+		every_state = {
+			limit = {
+				is_core_of = DDR
+			}
+			remove_core_of = DDR
+		}
+		every_state = {
+			limit = {
+				is_core_of = WGR
+			}
+			remove_core_of = WGR
+		}
+		if = {
+			limit = {
+				has_global_flag = german_communist_corvee_labour
+			}
+			56 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 3234
+				}
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 241
+				}
+			}
+			51 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 6469
+				}
+			}
+			57 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 3355
+				}
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 495
+				}
+			}
+		}
+		hidden_effect = {
+			set_global_flag = german_civil_war_ended
+			news_event = { days = 1 id = german_civil_war.6 }
+		}
+	}
+}
+
+# News event for a fascism victory
+
+news_event = {
+	id = german_civil_war.6
+	title = german_civil_war6title
+	desc = german_civil_war6desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war6opta
+		
+		trigger = { has_government = communism }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war6optb
+		
+		trigger = { has_government = democratic }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war6optc
+		
+		trigger = { has_government = neutrality }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+	option = {
+		name = german_civil_war6optd
+		
+		trigger = { has_government = fascism }
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = FRA
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				country_event = { days = 1 id = german_civil_war.17 }
+			}
+		}
+	}
+}
+
+# Westphalia is losing ground to the communists
+# and France gets the opportunity to intervene (unpopular)
+
+country_event = {
+	id = german_civil_war.7
+	title = german_civil_war7title
+	desc = german_civil_war7desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		country_exists = WGR
+		has_government = neutrality
+		is_faction_leader = yes
+		NOT = { has_war_with = WGR }
+		NOT = { has_war_with = DDR }
+		WGR = {
+			is_in_faction = no
+			has_government = neutrality
+			is_subject = no
+			has_war_with = DDR
+		}
+		OR = {
+			50 = {
+				is_controlled_by = DDR
+			}
+			52 = {
+				is_controlled_by = DDR
+			}
+			53 = {
+				is_controlled_by = DDR
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = german_civil_war7opta
+		
+		show_ideas_tooltip = deluge_anti-war_sentiment_france_idea
+		
+		if = {
+			limit = {
+				has_idea = deluge_great_war_horrors_idea
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.35
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { has_idea = deluge_great_war_horrors_idea }
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		}
+		
+		WGR = { country_event = { id = german_civil_war.9 } }
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	option = {
+		name = german_civil_war7optb
+		
+		add_political_power = 50
+		
+		news_event = { days = 1 id = german_civil_war.14 }
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_idea = deluge_great_war_horrors_idea
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+}
+
+# Westphalia is losing ground to the ultranationalists
+# and France gets the opportunity to intervene (unpopular)
+
+# If followed through, also gives rival Germanies and Poland
+# cores and claims on French territories
+
+country_event = {
+	id = german_civil_war.8
+	title = german_civil_war8title
+	desc = german_civil_war8desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		country_exists = WGR
+		has_government = neutrality
+		is_faction_leader = yes
+		NOT = { has_war_with = WGR }
+		NOT = { has_war_with = GER }
+		WGR = {
+			is_in_faction = no
+			has_government = neutrality
+			is_subject = no
+			has_war_with = GER
+		}
+		OR = {
+			50 = {
+				is_controlled_by = GER
+			}
+			52 = {
+				is_controlled_by = GER
+			}
+			53 = {
+				is_controlled_by = GER
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = german_civil_war8opta
+		
+		show_ideas_tooltip = deluge_anti-war_sentiment_france_idea
+		
+		if = {
+			limit = {
+				has_idea = deluge_great_war_horrors_idea
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.2
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { has_idea = deluge_great_war_horrors_idea }
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+		}
+		
+		WGR = { country_event = { id = german_civil_war.9 } }
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	option = {
+		name = german_civil_war8optb
+		
+		add_political_power = 50
+		
+		news_event = { days = 1 id = german_civil_war.14 }
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 3
+				has_idea = deluge_great_war_horrors_idea
+			}
+			modifier = {
+				factor = 2
+				has_war = yes
+			}
+			modifier = {
+				factor = 10
+				any_enemy_country = {
+					is_major = yes
+				}
+			}
+		}
+	}
+}
+
+# AI Westphalia will always accept
+
+country_event = {
+	id = german_civil_war.9
+	title = german_civil_war9title
+	desc = german_civil_war9desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war9opta
+		
+		set_global_flag = French_intervention_in_GCW_flag
+		
+		FRA = {
+			add_timed_idea = { idea = deluge_anti-war_sentiment_france_idea days = 1095 }
+			
+			add_to_faction = WGR
+			
+			add_to_war = {
+				targeted_alliance = WGR
+				enemy = DDR
+			}
+			
+			add_to_war = {
+				targeted_alliance = WGR
+				enemy = GER
+			}
+		}
+		
+		add_ai_strategy = {
+			type = alliance
+			id = "FRA"
+			value = 500
+		}
+		
+		news_event = { days = 1 id = german_civil_war.10 }
+		
+		if = {
+			limit = {
+				country_exists = GER
+				country_exists = POL
+				GER = {
+					has_government = fascism
+					is_subject = no
+					is_in_faction = no
+					NOT = { has_war_with = POL }
+				}
+				POL = {
+					has_government = fascism
+					is_faction_leader = yes
+				}
+			}
+			GER = { country_event = { days = 2 id = german_civil_war.11 } }
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					country_exists = POL
+					NOT = {
+						POL = {
+							is_in_faction_with = FRA
+						}
+					}
+				}
+				POL = { add_state_core = 62 }
+				POL = { add_state_core = 63 }
+				POL = { add_state_core = 85 }
+			}
+			
+			if = {
+				limit = {
+					country_exists = GER
+					NOT = {
+						GER = {
+							is_in_faction_with = FRA
+						}
+					}
+				}
+				GER = { add_state_core = 786 }
+				GER = { add_state_core = 42 }
+				GER = { add_state_core = 28 }
+				GER = { add_state_core = 62 }
+				GER = { add_state_core = 63 }
+				GER = { add_state_core = 85 }
+				GER = { add_state_claim = 8 }
+				GER = { add_state_claim = 34 }
+				GER = { add_state_claim = 17 }
+			}
+			
+			if = {
+				limit = {
+					country_exists = DDR
+					NOT = {
+						DDR = {
+							is_in_faction_with = FRA
+						}
+					}
+				}
+				DDR = { add_state_core = 786 }
+				DDR = { add_state_core = 42 }
+				DDR = { add_state_core = 28 }
+				DDR = { add_state_core = 62 }
+				DDR = { add_state_core = 63 }
+				DDR = { add_state_core = 85 }
+				DDR = { add_state_claim = 8 }
+				DDR = { add_state_claim = 34 }
+				DDR = { add_state_claim = 17 }
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war9optb
+		
+		add_political_power = 100
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# News event for French intervention into the GCW
+
+news_event = {
+	id = german_civil_war.10
+	title = german_civil_war10title
+	desc = german_civil_war10desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war10opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war10optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war10optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war10optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# Teutonic Reich gets the opportunity to ask Poland for help against France
+
+country_event = {
+	id = german_civil_war.11
+	title = german_civil_war11title
+	desc = german_civil_war11desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war11opta
+		
+		POL = { country_event = { days = 1 id = german_civil_war.12 } }
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war11optb
+		
+		add_political_power = 100
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Poland can refuse to help Teutonic Reich
+# AI will tend to say yes
+
+country_event = {
+	id = german_civil_war.12
+	title = german_civil_war12title
+	desc = german_civil_war12desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war12opta
+		
+		add_to_faction = GER
+		
+		add_to_war = {
+			targeted_alliance = GER
+			enemy = DDR
+		}
+		
+		add_to_war = {
+			targeted_alliance = GER
+			enemy = WGR
+		}
+		
+		news_event = { days = 1 id = german_civil_war.13 }
+		
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	option = {
+		name = german_civil_war12optb
+		
+		add_political_power = 100
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# News event for Polish intervention into the GCW
+
+news_event = {
+	id = german_civil_war.13
+	title = german_civil_war13title
+	desc = german_civil_war13desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war13opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war13optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war13optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war13optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# News event for France refusing to intervene in GCW
+
+news_event = {
+	id = german_civil_war.14
+	title = german_civil_war14title
+	desc = german_civil_war14desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war14opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war14optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war14optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war14optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# Communists have lost a state and get the opportunity to
+# conscript the civilian population to produce fortifications
+# in the major cities. Changes social policy and conscription.
+
+country_event = {
+	id = german_civil_war.15
+	title = german_civil_war15title
+	desc = german_civil_war15desc
+	picture = GFX_report_event_bunker_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DDR
+		OR = {
+			has_war_with = GER
+			has_war_with = WGR
+		}
+		OR = {
+			58 = {
+				is_controlled_by = GER
+			}
+			59 = {
+				is_controlled_by = GER
+			}
+			55 = {
+				is_controlled_by = WGR
+			}
+		}
+		has_government = communism
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = german_civil_war15opta
+		
+		set_global_flag = german_communist_corvee_labour
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		if = {
+			limit = {
+				NOT = { has_idea = labour_camps }
+			}
+			add_ideas = labour_camps
+		}
+		
+		if = {
+			limit = {
+				has_idea = limited_conscription
+			}
+			add_ideas = extensive_conscription
+		}
+		
+		56 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 3234
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 241
+				instant_build = yes
+			}
+		}
+		51 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 6469
+				instant_build = yes
+			}
+		}
+		57 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 3355
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 2
+				province = 495
+				instant_build = yes
+			}
+		}
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.16 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		name = german_civil_war15optb
+				
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+		
+		add_political_power = 100
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# News event for corvee labour
+
+news_event = {
+	id = german_civil_war.16
+	title = german_civil_war16title
+	desc = german_civil_war16desc
+	
+	picture = GFX_news_event_053
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war16opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war16optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war16optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war16optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# After the civil war ends, France gets to choose whom
+# to give the interned German fleet to
+
+country_event = {
+	id = german_civil_war.17
+	title = german_civil_war17title
+	desc = german_civil_war17desc
+	
+	picture = GFX_report_event_usa_heavy_cruiser
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = interned_german_fleet_has_been_awarded
+	}
+
+	option = {
+		name = german_civil_war17opta
+		
+		trigger = {
+			country_exists = WGR
+			NOT = { has_war_with = WGR }
+			WGR = {
+				is_subject = no
+			}
+		}
+		
+		WGR = { country_event = { days = 1 id = german_civil_war.19 } }
+		
+		add_political_power = 50
+		
+		add_named_threat = { threat = -1 name = threat_german_fleet_returned }
+		
+		WGR = {
+			add_opinion_modifier = { target = FRA modifier = returned_our_ships_modifier }
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				is_in_faction_with = WGR
+			}
+			modifier = {
+				factor = 10
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0
+				has_government = communism
+			}
+		}
+	}
+	
+	option = {
+		name = german_civil_war17optb
+		
+		trigger = {
+			country_exists = GER
+			NOT = { has_war_with = GER }
+			GER = {
+				is_subject = no
+			}
+		}
+		
+		GER = { country_event = { days = 1 id = german_civil_war.19 } }
+		
+		add_named_threat = { threat = -1 name = threat_german_fleet_returned }
+		
+		add_political_power = 50
+		
+		GER = {
+			add_opinion_modifier = { target = FRA modifier = returned_our_ships_modifier }
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				is_in_faction_with = GER
+			}
+			modifier = {
+				factor = 10
+				has_government = fascism
+			}
+			modifier = {
+				factor = 2
+				has_government = neutrality
+			}
+			modifier = {
+				factor = 0
+				has_government = communism
+			}
+		}
+	}
+
+	option = {
+		name = german_civil_war17optc
+		
+		trigger = {
+			country_exists = DDR
+			NOT = { has_war_with = DDR }
+			DDR = {
+				is_subject = no
+			}
+		}
+		
+		DDR = { country_event = { days = 1 id = german_civil_war.19 } }
+		
+		add_named_threat = { threat = -1 name = threat_german_fleet_returned }
+		
+		add_political_power = 50
+		
+		DDR = {
+			add_opinion_modifier = { target = FRA modifier = returned_our_ships_modifier }
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 100
+				is_in_faction_with = DDR
+			}
+			modifier = {
+				factor = 10
+				has_government = communism
+			}
+			modifier = {
+				factor = 2
+				has_government = democratic
+			}
+			modifier = {
+				factor = 0
+				has_government = fascism
+			}
+		}
+	}
+
+	option = {
+		name = german_civil_war17optd
+		
+		custom_effect_tooltip = tooltip_the_interned_german_fleet_becomes_available
+		
+		add_named_threat = { threat = 2 name = threat_german_fleet_seized }
+		
+		if = {
+			limit = {
+				country_exists = DDR
+			}
+			DDR = {
+				add_opinion_modifier = { target = FRA modifier = seized_our_ships_modifier }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						not = { has_dlc = "Man the Guns" }
+					}
+					load_oob = FRA_interned_fleet_DDR_legacy
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					load_oob = FRA_interned_fleet_DDR_mtg
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				country_exists = WGR
+			}
+			WGR = {
+				add_opinion_modifier = { target = FRA modifier = seized_our_ships_modifier }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						not = { has_dlc = "Man the Guns" }
+					}
+					load_oob = FRA_interned_fleet_WGR_legacy
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					load_oob = FRA_interned_fleet_WGR_mtg
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				country_exists = GER
+			}
+			GER = {
+				add_opinion_modifier = { target = FRA modifier = seized_our_ships_modifier }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						not = { has_dlc = "Man the Guns" }
+					}
+					load_oob = FRA_interned_fleet_GER_legacy
+				}
+				if = {
+					limit = {
+						has_dlc = "Man the Guns"
+					}
+					load_oob = FRA_interned_fleet_GER_mtg
+				}
+			}
+		}
+		
+		news_event = { days = 1 id = german_civil_war.21 }
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# If France goes to war, the interned German fleet
+# is immediately seized
+
+country_event = {
+	id = german_civil_war.18
+	title = german_civil_war18title
+	desc = german_civil_war18desc
+	
+	picture = GFX_report_event_usa_heavy_cruiser
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		has_war = yes
+		NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = interned_german_fleet_has_been_awarded
+	}
+
+	option = {
+		name = german_civil_war18opt
+		
+		custom_effect_tooltip = tooltip_the_interned_german_fleet_becomes_available
+		
+		add_named_threat = { threat = 1 name = threat_german_fleet_seized }
+		
+		DDR = {
+			add_opinion_modifier = { target = FRA modifier = seized_our_ships_modifier }
+		}
+		WGR = {
+			add_opinion_modifier = { target = FRA modifier = seized_our_ships_modifier }
+		}
+		GER = {
+			add_opinion_modifier = { target = FRA modifier = seized_our_ships_modifier }
+		}
+
+		hidden_effect = {
+			if = {
+				limit = {
+					not = { has_dlc = "Man the Guns" }
+				}
+				load_oob = FRA_interned_fleet_WGR_legacy
+			}
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				load_oob = FRA_interned_fleet_WGR_mtg
+			}
+		}
+		
+		news_event = { days = 1 id = german_civil_war.22 }
+	}
+}
+
+# Event for Germany receiving the fleet
+
+country_event = {
+	id = german_civil_war.19
+	title = german_civil_war19title
+	desc = german_civil_war19desc
+	
+	picture = GFX_report_event_usa_heavy_cruiser
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war19opt
+		
+		custom_effect_tooltip = tooltip_the_interned_german_fleet_becomes_available
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					tag = DDR
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							not = { has_dlc = "Man the Guns" }
+						}
+						load_oob = DDR_interned_fleet_legacy
+					}
+					if = {
+						limit = {
+							has_dlc = "Man the Guns"
+						}
+						load_oob = DDR_interned_fleet_mtg
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = GER
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							not = { has_dlc = "Man the Guns" }
+						}
+						load_oob = GER_interned_fleet_legacy
+					}
+					if = {
+						limit = {
+							has_dlc = "Man the Guns"
+						}
+						load_oob = GER_interned_fleet_mtg
+					}
+				}
+			}
+			if = {
+				limit = {
+					tag = WGR
+				}
+				hidden_effect = {
+					if = {
+						limit = {
+							not = { has_dlc = "Man the Guns" }
+						}
+						load_oob = WGR_interned_fleet_legacy
+					}
+					if = {
+						limit = {
+							has_dlc = "Man the Guns"
+						}
+						load_oob = WGR_interned_fleet_mtg
+					}
+				}
+			}
+		}
+		news_event = { days = 1 id = german_civil_war.20 }
+	}
+}
+
+# News event for the fleet being returned
+
+news_event = {
+	id = german_civil_war.20
+	title = german_civil_war20title
+	desc = german_civil_war20desc
+	
+	picture = GFX_news_event_020
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war20opta
+		trigger = {
+			OR = {
+				tag = DDR
+				tag = WGR
+				tag = GER
+			}
+		}
+	}
+	option = {
+		name = german_civil_war20optb
+		trigger = { tag = FRA }
+	}
+	option = {
+		name = german_civil_war20optc
+		trigger = {
+			NOT = {
+				OR = {
+					tag = DDR
+					tag = WGR
+					tag = GER
+					tag = FRA
+				}
+			}
+		}
+	}
+}
+
+# News event for the fleet being seized (at peace)
+
+news_event = {
+	id = german_civil_war.21
+	title = german_civil_war21title
+	desc = german_civil_war21desc
+	
+	picture = GFX_news_event_020
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war21opta
+		trigger = {
+			OR = {
+				tag = DDR
+				tag = WGR
+				tag = GER
+			}
+		}
+	}
+	option = {
+		name = german_civil_war21optb
+		trigger = { tag = FRA }
+	}
+	option = {
+		name = german_civil_war21optc
+		trigger = {
+			NOT = {
+				OR = {
+					tag = DDR
+					tag = WGR
+					tag = GER
+					tag = FRA
+				}
+			}
+		}
+	}
+}
+
+# News event for the fleet being seized (at war)
+
+news_event = {
+	id = german_civil_war.22
+	title = german_civil_war22title
+	desc = german_civil_war22desc
+	
+	picture = GFX_news_event_020
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war22opta
+		trigger = {
+			NOT = { has_war_with = FRA }
+			OR = {
+				tag = DDR
+				tag = WGR
+				tag = GER
+			}
+		}
+	}
+	option = {
+		name = german_civil_war22optb
+		trigger = { tag = FRA }
+	}
+	option = {
+		name = german_civil_war22optc
+		trigger = {
+			NOT = { has_war_with = FRA }
+			NOT = {
+				OR = {
+					tag = DDR
+					tag = WGR
+					tag = GER
+					tag = FRA
+				}
+			}
+		}
+	}
+	option = {
+		name = german_civil_war22optd
+		trigger = { has_war_with = FRA }
+	}
+}
+
+# Civil War has ended and Germany can choose a new site for their capital
+# AI tends towards Berlin
+
+country_event = {
+	id = german_civil_war.23
+	title = german_civil_war23title
+	desc = german_civil_war23desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		has_global_flag = german_civil_war_ended
+		OR = {
+			tag = DDR
+			tag = GER
+			tag = WGR
+		}
+		owns_state = 64
+		controls_state = 64
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = german_civil_war23opta
+		
+		set_global_flag = flag_german_capital_moved # allows domestic politics events to fire, used to stagger post-war events
+		
+		set_capital = { state = 64 }
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 5
+				tag = DDR
+			}
+			
+			modifier = {
+				factor = 5
+				tag = GER
+			}
+		}
+	}
+		
+	option = {
+		name = german_civil_war23optb
+		
+		trigger = {
+			owns_state = 52
+			controls_state = 52
+		}
+		
+		set_global_flag = flag_german_capital_moved # allows domestic politics events to fire, used to stagger post-war events
+		
+		set_capital = { state = 52 }
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = { # Dortmund, Westfalen
+		name = german_civil_war23optc
+		
+		trigger = {
+			owns_state = 57
+			controls_state = 57
+		}
+		
+		set_global_flag = flag_german_capital_moved # allows domestic politics events to fire, used to stagger post-war events
+		
+		set_capital = { state = 57 }
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 5
+				tag = WGR
+			}
+		}
+	}
+	option = { # Frankfurt, Hessen
+		name = german_civil_war23optd
+		
+		trigger = {
+			owns_state = 55
+			controls_state = 55
+		}
+		
+		set_global_flag = flag_german_capital_moved # allows domestic politics events to fire, used to stagger post-war events
+		
+		set_capital = { state = 55 }
+				
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Civil war ends but the winner changed its ideology
+
+country_event = {
+	id = german_civil_war.24
+	title = german_civil_war24title
+	desc = german_civil_war24desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		NOT = { has_global_flag = german_civil_war_ended }
+		OR = {
+			AND = {
+				tag = WGR
+				NOT = { has_government = neutrality }
+				NOT = { has_war_with = DDR }
+				NOT = { has_war_with = GER }		
+				has_capitulated = no
+				is_subject = no
+				OR = {
+					DDR = {
+						is_subject_of = WGR
+					}
+					DDR = {
+						is_subject = yes
+						is_in_faction_with = WGR
+					}
+					NOT = { country_exists = DDR }
+					owns_state = 57 # Dortmund
+				}
+				OR = {
+					GER = {
+						is_subject_of = WGR
+					}
+					GER = {
+						is_subject = yes
+						is_in_faction_with = WGR
+					}
+					NOT = { country_exists = GER }
+					owns_state = 64 # Berlin
+				}
+			}
+			AND = {
+				tag = GER
+				NOT = { has_government = fascism }
+				NOT = { has_war_with = DDR }
+				NOT = { has_war_with = WGR }		
+				has_capitulated = no
+				is_subject = no
+				OR = {
+					DDR = {
+						is_subject_of = GER
+					}
+					DDR = {
+						is_subject = yes
+						is_in_faction_with = GER
+					}
+					NOT = { country_exists = DDR }
+					owns_state = 57 # Dortmund
+				}
+				OR = {
+					WGR = {
+						is_subject_of = GER
+					}
+					WGR = {
+						is_subject = yes
+						is_in_faction_with = GER
+					}
+					NOT = { country_exists = WGR }
+					owns_state = 52 # Munich
+				}
+			}
+			AND = {
+				tag = DDR
+				NOT = { has_government = communism }
+				NOT = { has_war_with = WGR }
+				NOT = { has_war_with = GER }		
+				has_capitulated = no
+				is_subject = no
+				OR = {
+					WGR = {
+						is_subject_of = DDR
+					}
+					WGR = {
+						is_subject = yes
+						is_in_faction_with = DDR
+					}
+					NOT = { country_exists = WGR }
+					owns_state = 52 # Munich
+				}
+				OR = {
+					GER = {
+						is_subject_of = DDR
+					}
+					GER = {
+						is_subject = yes
+						is_in_faction_with = DDR
+					}
+					NOT = { country_exists = GER }
+					owns_state = 64 # Berlin
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = german_civil_war_ended
+	}
+	
+	option = {
+		name = german_civil_war24opt
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		if = {
+			limit = { has_idea = deluge_german_civil_war_idea }
+			remove_ideas = deluge_german_civil_war_idea
+		}
+		
+		if = {
+			limit = { has_idea = westphalian_king }
+			remove_ideas = westphalian_king
+		}
+		
+		if = {
+			limit = { has_idea = life_hussar }
+			remove_ideas = life_hussar
+		}
+		
+		if = {
+			limit = { has_idea = sohn_seiner_klasse }
+			remove_ideas = sohn_seiner_klasse
+		}
+		
+		if = {
+			limit = {
+				country_exists = DDR
+				NOT = { tag = DDR }
+			}
+			annex_country = { target = DDR transfer_troops = no }
+		}
+		if = {
+			limit = {
+				country_exists = GER
+				NOT = { tag = GER }
+			}
+			annex_country = { target = GER transfer_troops = no }
+		}
+		
+		if = {
+			limit = {
+				country_exists = WGR
+				NOT = { tag = WGR }
+			}
+			annex_country = { target = WGR transfer_troops = no }
+		}
+		if = {
+			limit = {
+				NOT = { tag = DDR }
+			}
+			every_state = {
+				limit = {
+					is_core_of = DDR
+				}
+				remove_core_of = DDR
+			}
+		}
+		if = {
+			limit = {
+				NOT = { tag = GER }
+			}
+			every_state = {
+				limit = {
+					is_core_of = GER
+				}
+				remove_core_of = GER
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { tag = WGR }
+			}
+			every_state = {
+				limit = {
+					is_core_of = WGR
+				}
+				remove_core_of = WGR
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = german_communist_corvee_labour
+			}
+			56 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 3234
+				}
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 241
+				}
+			}
+			51 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 6469
+				}
+			}
+			57 = {
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 3355
+				}
+				remove_building = {
+					type = bunker
+					level = 2
+					province = 495
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = { has_global_flag = interned_german_fleet_has_been_awarded }
+				}
+				set_global_flag = interned_german_fleet_has_been_awarded
+				FRA = {
+					country_event = { days = 1 id = german_civil_war.17 }
+				}
+			}
+		}
+	}
+}
+
+# After the civil war, August von Mackensen goes into retirement
+# Reinhard Heydrich is successor to the Teutonic Order but the military
+# attempt a palace coup under Blomberg. The monarchists are available as a
+# compromise.
+
+country_event = {
+	id = german_civil_war.25
+	title = german_civil_war25title
+	desc = german_civil_war25desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GER
+		has_global_flag = flag_german_capital_moved
+		has_government = fascism
+		has_war = no
+		is_subject = no
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			remove_unit_leader = 1
+			
+			retire_country_leader = yes
+			
+			remove_ideas = life_hussar
+		}
+	}
+	
+	option = {
+		name = german_civil_war25opta
+		
+		if = {
+			limit = {
+				has_idea = werner_von_blomberg
+			}
+			remove_ideas = werner_von_blomberg
+		}
+		
+		set_global_flag = flag_blomberg_purged
+				
+		hidden_effect = {			
+			news_event = { days = 1 id = german_civil_war.26 }
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war25optb
+		
+		custom_effect_tooltip = tooltip_german_reich
+		
+		if = {
+			limit = {
+				has_idea = reinhard_heydrich
+			}
+			remove_ideas = reinhard_heydrich
+		}
+		
+		set_global_flag = flag_heydrich_purged
+		
+		create_country_leader = {
+			name = "Werner von Blomberg"
+			desc = ""
+			picture = "gfx/leaders/deluge/germans/werner_von_blomberg.dds"
+			expire = "1965.1.1"
+			ideology = corporatist_ideology
+			traits = {
+			}
+		}
+		
+		hidden_effect = {
+			set_cosmetic_tag = GER_WEHRSTAAT
+			
+			set_party_name = { ideology = fascism name = deluge_germany_military_fascism_party_short long_name = deluge_germany_military_fascism_party_long }
+			
+			news_event = { days = 1 id = german_civil_war.27 }
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war25optc
+		
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.2
+		}
+		
+		country_event = german_civil_war.28
+		
+		if = {
+			limit = {
+				has_idea = werner_von_blomberg
+			}
+			remove_ideas = werner_von_blomberg
+		}
+		
+		set_global_flag = flag_blomberg_purged
+		
+		if = {
+			limit = {
+				has_idea = reinhard_heydrich
+			}
+			remove_ideas = reinhard_heydrich
+		}
+		
+		set_global_flag = flag_heydrich_purged
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# News event for Reinhard Heydrich taking over Germany
+
+news_event = {
+	id = german_civil_war.26
+	title = german_civil_war26title
+	desc = german_civil_war26desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war26opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war26optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war26optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war26optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# News event for Werner von Blomberg taking over Germany
+
+news_event = {
+	id = german_civil_war.27
+	title = german_civil_war27title
+	desc = german_civil_war27desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war27opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war27optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war27optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war27optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# Hohenzollern Germany is asked to pick a form of address
+# German Empire
+# Kingdom of Germany
+# Kingdom of Prussia (no change)
+
+country_event = {
+	id = german_civil_war.28
+	title = german_civil_war28title
+	desc = german_civil_war28desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war28opta
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		
+		custom_effect_tooltip = tooltip_german_empire
+		
+		hidden_effect = {
+			set_cosmetic_tag = GER_EMPIRE
+			
+			news_event = { days = 1 id = german_civil_war.29 }
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war28optb
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		
+		custom_effect_tooltip = tooltip_german_kingdom
+		
+		hidden_effect = {
+			set_cosmetic_tag = GER_KINGDOM
+			
+			news_event = { days = 1 id = german_civil_war.29 }
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war28optc
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.29 }
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# News event for Hohenzollern Germany
+
+news_event = {
+	id = german_civil_war.29
+	title = german_civil_war29title
+	desc = german_civil_war29desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war29opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war29optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war29optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war29optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# After the civil war, the Westphalian monarchy needs to cement its power
+# If it won without French help, it can create the German Empire
+# If it has elections, it can rebrand as a liberal constitutional kingdom
+# It can rely on French help, joining their faction if still independent
+# The king can reject the need to compromise for a hit to power and support
+
+country_event = {
+	id = german_civil_war.30
+	title = german_civil_war30title
+	desc = german_civil_war30desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = WGR
+		has_global_flag = flag_german_capital_moved
+		has_government = neutrality
+		has_war = no
+		is_subject = no
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = german_civil_war30opta
+		
+		trigger = {
+			NOT = { is_in_faction_with = FRA }
+		}
+		
+		add_political_power = 100
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.05
+		}
+		set_global_flag = german_empire_by_WGR
+		swap_ideas = {
+			remove_idea = westphalian_king
+			add_idea = german_emperor
+		}
+		
+		custom_effect_tooltip = tooltip_westphalian_german_empire
+		
+		add_opinion_modifier = { target = FRA modifier = german_nationalism_modifier }
+		
+		hidden_effect = {
+			set_cosmetic_tag = WGR_EMPIRE
+			
+			news_event = { days = 1 id = german_civil_war.31 }
+			
+			create_country_leader = {
+				name = "Frederick II"
+				desc = "german_emperor_desc"
+				picture = "gfx/leaders/deluge/germans/prince_karl_anton.dds"
+				expire = "1965.1.1"
+				ideology = bonapartist_ideology
+				traits = {
+				
+				}
+			}
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+		
+	option = {
+		name = german_civil_war30optb
+		
+		trigger = {
+			has_elections = yes
+		}
+		
+		add_political_power = 100
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.25
+		}
+		set_global_flag = german_kingdom_by_WGR
+		swap_ideas = {
+			remove_idea = westphalian_king
+			add_idea = german_king
+		}
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		
+		hidden_effect = {
+			create_country_leader = {
+				name = "Frederick II"
+				desc = "german_king_desc"
+				picture = "gfx/leaders/deluge/germans/prince_karl_anton.dds"
+				expire = "1965.1.1"
+				ideology = bonapartist_ideology
+				traits = {
+				
+				}
+			}
+			
+			news_event = { days = 1 id = german_civil_war.32 }
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war30optc
+		
+		trigger = {
+			OR = {
+				is_in_faction = no
+				is_in_faction_with = FRA
+			}
+			FRA = {
+				has_government = neutrality
+			}
+		}
+		
+		if = {
+			limit = {
+				is_in_faction_with = FRA
+			}
+			add_political_power = -150
+			
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+		}
+		
+		if = {
+			limit = {
+				has_elections = yes
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = { is_in_faction_with = FRA }
+			}
+			FRA = { country_event = { days = 1 id = german_civil_war.33 } }
+		}
+		set_global_flag = german_tyranny_by_WGR
+		swap_ideas = {
+			remove_idea = westphalian_king
+			add_idea = german_tyrant
+		}
+		
+		hidden_effect = {
+			create_country_leader = {
+				name = "Frederick II"
+				desc = "german_tyrant_desc"
+				picture = "gfx/leaders/deluge/germans/prince_karl_anton.dds"
+				expire = "1965.1.1"
+				ideology = reactionary_ideology
+				traits = {
+				
+				}
+			}
+		}
+			
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 5
+				is_in_faction = no
+			}
+			
+			modifier = {
+				factor = 5
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	option = {
+		name = german_civil_war30optd
+		
+		trigger = {
+			NOT = { is_in_faction_with = FRA }
+		}
+		
+		add_political_power = -100
+		
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.05
+		}
+		
+		if = {
+			limit = {
+				has_elections = yes
+			}
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+			}
+		}
+		
+		swap_ideas = {
+			remove_idea = westphalian_king
+			add_idea = german_tyrant
+		}
+		
+		hidden_effect = {
+			create_country_leader = {
+				name = "Frederick II"
+				desc = "german_tyrant_desc"
+				picture = "gfx/leaders/deluge/germans/prince_karl_anton.dds"
+				expire = "1965.1.1"
+				ideology = reactionary_ideology
+				traits = {
+				
+				}
+			}
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# News event for Westphalia forming the German Empire
+
+news_event = {
+	id = german_civil_war.31
+	title = german_civil_war31title
+	desc = german_civil_war31desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war31opta
+		trigger = { tag = WGR }
+	}
+	
+	option = {
+		name = german_civil_war31optb
+		
+		trigger = { tag = FRA }
+		
+		add_opinion_modifier = { target = WGR modifier = german_nationalism_modifier }
+	}
+	
+	option = {
+		name = german_civil_war31optc
+		trigger = {
+			has_government = communism
+			NOT = { tag = WGR }
+			NOT = { tag = FRA }
+		}
+	}
+	
+	option = {
+		name = german_civil_war31optd
+		trigger = {
+			has_government = democratic
+			NOT = { tag = WGR }
+			NOT = { tag = FRA }
+		}
+	}
+	
+	option = {
+		name = german_civil_war31opte
+		trigger = {
+			has_government = neutrality
+			NOT = { tag = WGR }
+			NOT = { tag = FRA }
+		}
+	}
+	
+	option = {
+		name = german_civil_war31optf
+		trigger = {
+			has_government = fascism
+			NOT = { tag = WGR }
+			NOT = { tag = FRA }
+		}
+	}
+}
+
+# News event for Westphalia forming a constitutional monarchy
+
+news_event = {
+	id = german_civil_war.32
+	title = german_civil_war32title
+	desc = german_civil_war32desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war32opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war32optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war32optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war32optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# Westphalia asks to be readmitted to the Continental System after winning the civil war
+# AI always accepts
+
+country_event = {
+	id = german_civil_war.33
+	title = german_civil_war33title
+	desc = german_civil_war33desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war33opta
+
+		add_to_faction = WGR
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war33optb
+		
+		WGR = { country_event = german_civil_war.34 }
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Human France has rejected an alliance request
+
+country_event = {
+	id = german_civil_war.34
+	title = german_civil_war34title
+	desc = german_civil_war34desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war34opt
+	}
+}
+
+# After the civil war, Ernst Thaelmann is assassinated by unknown assailants
+# A successor is determined by the response to placing blame and investigating
+# Event to fortify with conscripts also affected the outcome, if it fired
+
+# Initial assassination
+# Anarchists demand a political amnesty
+# Marxists rename Fredrickshaven in his honour
+# Jacobins advocate martial law
+# Social Democrats advocate a general election
+
+country_event = {
+	id = german_civil_war.35
+	title = german_civil_war35title
+	desc = german_civil_war35desc
+	picture = GFX_report_event_generic_communist_congress
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DDR
+		has_global_flag = flag_german_capital_moved
+		has_government = communism
+		has_war = no
+		is_subject = no
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		hidden_effect = {
+			kill_country_leader = yes
+			
+			remove_ideas = sohn_seiner_klasse
+		}
+	}
+
+	option = {
+		name = german_civil_war35opta
+		
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+		
+		if = {
+			limit = {
+				has_idea = labour_camps
+			}
+			add_ideas = welfare_state
+		}
+		
+		if = {
+			limit = {
+				has_idea = deluge_communism_crackdown_idea
+			}
+			remove_ideas = deluge_communism_crackdown_idea
+		}
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.36 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war35optb
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		set_province_name = { id = 241 name = "Thälmannshaven" }
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.36 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war35optc
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		if = {
+			limit = {
+				has_idea = deluge_communism_liberalisation_idea
+			}
+			remove_ideas = deluge_communism_liberalisation_idea
+		}
+		
+		if = {
+			limit = {
+				has_elections = no
+				NOT = { has_idea = deluge_communism_crackdown_idea }
+			}
+			add_timed_idea = { idea = deluge_communism_crackdown_idea days = 180 }
+		}
+		
+		if = {
+			limit = {
+				has_elections = yes
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+		}
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.36 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war35optd
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+		
+		if = {
+			limit = {
+				has_idea = deluge_communism_crackdown_idea
+			}
+			remove_ideas = deluge_communism_crackdown_idea
+		}
+		
+		if = {
+			limit = {
+				has_elections = yes
+				NOT = { has_idea = deluge_communism_liberalisation_idea }
+			}
+			add_timed_idea = { idea = deluge_communism_liberalisation_idea days = 180 }
+		}
+		
+		if = {
+			limit = {
+				has_elections = no
+			}
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = yes
+			}
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.36 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Questions arise about the assassins
+# Anarchists blame the Communist government for losing the faith of the people
+# Marxists blame the defeated monarchists and fascists
+# Jacobins blame the Poles, French and Dutch and agitate for war
+# Social democrats demand the civilian police take over the investigation
+
+country_event = {
+	id = german_civil_war.36
+	title = german_civil_war36title
+	desc = german_civil_war36desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war36opta
+		
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+				
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.38 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war36optb
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.38 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war36optc
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		add_timed_idea = { idea = deluge_german_support_for_war_idea days = 180 }
+		
+		if = {
+			limit = {
+				HOL = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+			add_opinion_modifier = { target = HOL modifier = suspected_assassins_modifier }
+			
+			
+			hidden_effect = {
+				HOL = { country_event = german_civil_war.37 }
+			}
+		}
+		
+		if = {
+			limit = {
+				FRA = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+			add_opinion_modifier = { target = FRA modifier = suspected_assassins_modifier }
+			
+			hidden_effect = {
+				FRA = { country_event = german_civil_war.37 }
+			}
+		}
+		
+		if = {
+			limit = {
+				POL = {
+					NOT = {
+						has_government = communism
+					}
+				}
+			}
+			add_opinion_modifier = { target = POL modifier = suspected_assassins_modifier }
+			
+			hidden_effect = {
+				POL = { country_event = german_civil_war.37 }
+			}
+		}
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.38 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war36optd
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.38 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Poland, France and Holland are accused of the assassination
+
+country_event = {
+	id = german_civil_war.37
+	title = german_civil_war37title
+	desc = german_civil_war37desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war37opt
+		
+		add_opinion_modifier = { target = DDR modifier = unfounded_accusations_modifier }
+	}
+}
+
+# An anarchist cell is accused of the assassination by state security
+# Anarchists disavow the act
+# Marxists say this proves anarchism is left-wing infantilism
+# Jacobins want to purge the anarchists for threatening the state
+# Social democrats condemn all political violence equally
+
+country_event = {
+	id = german_civil_war.38
+	title = german_civil_war38title
+	desc = german_civil_war38desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war38opta
+		
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+		
+		add_political_power = -25
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.39 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war38optb
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		add_political_power = 25
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.39 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war38optc
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		add_political_power = 25
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.39 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war38optd
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.39 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The security forces admit to fabricating the case against the anarchists
+# The Anarchists say this proves the need to dismantle the state
+# The Marxists say the system works because the deception was exposed
+# The Jacobins are still sceptical of the anarchists and support the security forces
+# The Social Democrats say this proves the need for rule of law
+
+country_event = {
+	id = german_civil_war.39
+	title = german_civil_war39title
+	desc = german_civil_war39desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+
+	option = {
+		name = german_civil_war39opta
+		
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+		
+		add_political_power = 25
+		
+		add_timed_idea = { idea = deluge_german_angry_security_forces_idea days = 180 }
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.40 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war39optb
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		add_popularity = {
+			ideology = communism
+			popularity = -0.05
+		}
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.40 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war39optc
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		add_political_power = -50
+		
+		add_timed_idea = { idea = deluge_german_pleased_security_forces_idea days = 180 }
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.40 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war39optd
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+				
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.40 }
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# The party congress is being held to elect a new leader
+
+country_event = {
+	id = german_civil_war.40
+	title = german_civil_war40title
+	desc = german_civil_war40desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = flag_german_radicals_gone_to_conference # Shuts down civil war events that affect the support tallies
+	}
+
+	option = {
+		name = german_civil_war40opta
+		
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+				
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.41 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war40optb
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.41 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war40optc
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+				
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.41 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = german_civil_war40optd
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+		
+		hidden_effect = {
+			country_event = { days = 2 id = german_civil_war.41 }
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Compare the support of the four factions
+# If there is a clear victor, they win outright, else return any that are tied
+# and let the player pick between them
+
+# The highest value possible is currently:
+
+# - Fortify/conscription event
+# - 2x Artillery from Sweden events
+# - Berlin Captured event
+# - Munich Captured event
+# - Initial response to assassination news
+# - Questions about assassin's origin
+# - Accusation against the anarchists
+# - Anarchists were framed
+# - Party conference
+
+# Total: 10
+
+country_event = {
+	id = german_civil_war.41
+	title = hidden_title
+	desc = hidden_desc
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+	
+		if = { # Anarchists win outright
+			limit = {
+				OR = {
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_anarchists
+							value > 6
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 6
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 6
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 6
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_anarchists
+							value > 5
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 5
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 5
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 5
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_anarchists
+							value > 4
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 4
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 4
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 4
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_anarchists
+							value > 3
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 3
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 3
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 3
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_anarchists
+							value > 2
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 2
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 2
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 2
+							}
+						}
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_outright_majority
+			
+			country_event = german_civil_war.42
+		}
+		
+		if = { # Marxists win outright
+			limit = {
+				OR = {
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_marxists
+							value > 6
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 6
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 6
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 6
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_marxists
+							value > 5
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 5
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 5
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 5
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_marxists
+							value > 4
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 4
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 4
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 4
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_marxists
+							value > 3
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 3
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 3
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 3
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_marxists
+							value > 2
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 2
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 2
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 2
+							}
+						}
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_outright_majority
+			
+			country_event = german_civil_war.43
+		}
+		
+		if = { # Jacobins win outright
+			limit = {
+				OR = {
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_jacobins
+							value > 6
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 6
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 6
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 6
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_jacobins
+							value > 5
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 5
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 5
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 5
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_jacobins
+							value > 4
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 4
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 4
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 4
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_jacobins
+							value > 3
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 3
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 3
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 3
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_jacobins
+							value > 2
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 2
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 2
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_social_democrats
+								value > 2
+							}
+						}
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_outright_majority
+			
+			country_event = german_civil_war.44
+		}
+		
+		if = { # Social Democrats win outright
+			limit = {
+				OR = {
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_social_democrats
+							value > 6
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 6
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 6
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 6
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_social_democrats
+							value > 5
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 5
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 5
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 5
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_social_democrats
+							value > 4
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 4
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 4
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 4
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_social_democrats
+							value > 3
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 3
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 3
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 3
+							}
+						}
+					}
+					AND = {
+						has_global_flag = {
+							flag = flag_german_support_for_social_democrats
+							value > 2
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_marxists
+								value > 2
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_jacobins
+								value > 2
+							}
+						}
+						NOT = {
+							has_global_flag = {
+								flag = flag_german_support_for_anarchists
+								value > 2
+							}
+						}
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_outright_majority
+			
+			country_event = german_civil_war.45
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 6
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 6
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 6
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 6
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_highest_6
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 5
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 5
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 5
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 5
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_highest_5
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 4
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 4
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 4
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 4
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_highest_4
+		}
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 3
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 3
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 3
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 3
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_highest_3
+		}
+		if = {
+			limit = {
+				OR = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 2
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 2
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 2
+					}
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 2
+					}
+				}
+			}
+			set_global_flag = flag_german_radicals_highest_2
+		}
+		
+		if = {
+			limit = {
+				has_global_flag = flag_german_radicals_highest_6
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 6
+					}
+				}
+				set_global_flag = flag_german_radicals_anarchists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 6
+					}
+				}
+				set_global_flag = flag_german_radicals_marxists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 6
+					}
+				}
+				set_global_flag = flag_german_radicals_jacobins_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 6
+					}
+				}
+				set_global_flag = flag_german_radicals_social_democrats_proceed
+			}
+		}
+		
+		if = {
+			limit = {
+				has_global_flag = flag_german_radicals_highest_5
+				NOT = { has_global_flag = flag_german_radicals_highest_6 }
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 5
+					}
+				}
+				set_global_flag = flag_german_radicals_anarchists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 5
+					}
+				}
+				set_global_flag = flag_german_radicals_marxists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 5
+					}
+				}
+				set_global_flag = flag_german_radicals_jacobins_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 5
+					}
+				}
+				set_global_flag = flag_german_radicals_social_democrats_proceed
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = flag_german_radicals_highest_4
+				NOT = { has_global_flag = flag_german_radicals_highest_5 }
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 4
+					}
+				}
+				set_global_flag = flag_german_radicals_anarchists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 4
+					}
+				}
+				set_global_flag = flag_german_radicals_marxists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 4
+					}
+				}
+				set_global_flag = flag_german_radicals_jacobins_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 4
+					}
+				}
+				set_global_flag = flag_german_radicals_social_democrats_proceed
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = flag_german_radicals_highest_3
+				NOT = { has_global_flag = flag_german_radicals_highest_4 }
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 3
+					}
+				}
+				set_global_flag = flag_german_radicals_anarchists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 3
+					}
+				}
+				set_global_flag = flag_german_radicals_marxists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 3
+					}
+				}
+				set_global_flag = flag_german_radicals_jacobins_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 3
+					}
+				}
+				set_global_flag = flag_german_radicals_social_democrats_proceed
+			}
+		}
+		if = {
+			limit = {
+				has_global_flag = flag_german_radicals_highest_2
+				NOT = { has_global_flag = flag_german_radicals_highest_3 }
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_anarchists
+						value > 2
+					}
+				}
+				set_global_flag = flag_german_radicals_anarchists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_marxists
+						value > 2
+					}
+				}
+				set_global_flag = flag_german_radicals_marxists_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_jacobins
+						value > 2
+					}
+				}
+				set_global_flag = flag_german_radicals_jacobins_proceed
+			}
+			if = {
+				limit = {
+					has_global_flag = {
+						flag = flag_german_support_for_social_democrats
+						value > 2
+					}
+				}
+				set_global_flag = flag_german_radicals_social_democrats_proceed
+			}
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = flag_german_radicals_outright_majority
+				}
+			}
+			country_event = german_civil_war.46
+		}
+	}
+}
+
+# Anarchists have won the power struggle
+
+country_event = {
+	id = german_civil_war.42
+	title = german_civil_war42title
+	desc = german_civil_war42desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war42opt
+				
+		create_country_leader = {
+			name = "Rudolf Rocker"
+			desc = ""
+			picture = "gfx/leaders/deluge/germans/rudolf_rocker_large.dds"
+			expire = "1965.1.1"
+			ideology = anarchist_ideology
+			traits = {
+			}
+		}
+		
+		add_political_power = 100
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.47 }
+		}
+	}
+}
+
+# Marxists have won the power struggle
+
+country_event = {
+	id = german_civil_war.43
+	title = german_civil_war43title
+	desc = german_civil_war43desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war43opt
+		
+		create_country_leader = {
+			name = "Karl Liebknecht"
+			desc = ""
+			picture = "gfx/leaders/deluge/germans/karl_liebknecht.dds"
+			expire = "1965.1.1"
+			ideology = marxist_ideology
+			traits = {
+			}
+		}
+		
+		add_political_power = 100
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.48 }
+		}
+	}
+}
+
+# Jacobins have won the power struggle
+
+country_event = {
+	id = german_civil_war.44
+	title = german_civil_war44title
+	desc = german_civil_war44desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war44opt
+		
+		create_country_leader = {
+			name = "Ludwig Renn"
+			desc = ""
+			picture = "gfx/leaders/deluge/robert_merriman.dds"
+			expire = "1965.1.1"
+			ideology = jacobin_ideology
+			traits = {
+			}
+		}
+		
+		army_experience = 25
+		air_experience = 50
+		navy_experience = 50
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.49 }
+		}
+	}
+}
+
+# Social Democrats have won the power struggle
+
+country_event = {
+	id = german_civil_war.45
+	title = german_civil_war45title
+	desc = german_civil_war45desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war45opt
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		
+		create_country_leader = {
+			name = "Karl Liebknecht"
+			desc = ""
+			picture = "gfx/leaders/deluge/germans/karl_liebknecht.dds"
+			expire = "1965.1.1"
+			ideology = marxist_ideology
+			traits = {
+			}
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.50 }
+		}
+	}
+}
+
+# The debate between factions is tied with at least two potential winners
+
+country_event = {
+	id = german_civil_war.46
+	title = german_civil_war46title
+	desc = german_civil_war46desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war46opta
+		
+		trigger = {
+			has_global_flag = flag_german_radicals_anarchists_proceed
+		}
+		
+		create_country_leader = {
+			name = "Rudolf Rocker"
+			desc = ""
+			picture = "gfx/leaders/deluge/germans/rudolf_rocker_large.dds"
+			expire = "1965.1.1"
+			ideology = anarchist_ideology
+			traits = {
+			}
+		}
+		
+		add_political_power = 100
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.47 }
+		}
+	}
+	
+	option = {
+		name = german_civil_war46optb
+		
+		trigger = {
+			has_global_flag = flag_german_radicals_marxists_proceed
+		}
+		
+		create_country_leader = {
+			name = "Karl Liebknecht"
+			desc = ""
+			picture = "gfx/leaders/deluge/germans/karl_liebknecht.dds"
+			expire = "1965.1.1"
+			ideology = marxist_ideology
+			traits = {
+			}
+		}
+		
+		add_political_power = 100
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.48 }
+		}
+	}
+	
+	option = {
+		name = german_civil_war46optc
+		
+		trigger = {
+			has_global_flag = flag_german_radicals_jacobins_proceed
+		}
+		
+		create_country_leader = {
+			name = "Ludwig Renn"
+			desc = ""
+			picture = "gfx/leaders/deluge/robert_merriman.dds"
+			expire = "1965.1.1"
+			ideology = jacobin_ideology
+			traits = {
+			}
+		}
+		
+		army_experience = 25
+		air_experience = 50
+		navy_experience = 50
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.49 }
+		}
+	}
+	
+	option = {
+		name = german_civil_war46optd
+		
+		trigger = {
+			has_global_flag = flag_german_radicals_social_democrats_proceed
+		}
+		
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.05
+		}
+		
+		if = {
+			limit = {
+				has_global_flag = flag_german_radicals_anarchists_proceed
+				NOT = { has_global_flag = flag_german_radicals_jacobins_proceed }
+				NOT = { has_global_flag = flag_german_radicals_marxists_proceed }
+			}
+			create_country_leader = {
+				name = "Rudolf Rocker"
+				desc = ""
+				picture = "gfx/leaders/deluge/germans/rudolf_rocker_large.dds"
+				expire = "1965.1.1"
+				ideology = anarchist_ideology
+				traits = {
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_global_flag = flag_german_radicals_marxists_proceed
+			}
+			create_country_leader = {
+				name = "Karl Liebknecht"
+				desc = ""
+				picture = "gfx/leaders/deluge/germans/karl_liebknecht.dds"
+				expire = "1965.1.1"
+				ideology = marxist_ideology
+				traits = {
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_global_flag = flag_german_radicals_jacobins_proceed
+				NOT = { has_global_flag = flag_german_radicals_marxists_proceed }
+			}
+			create_country_leader = {
+				name = "Ludwig Renn"
+				desc = ""
+				picture = "gfx/leaders/deluge/robert_merriman.dds"
+				expire = "1965.1.1"
+				ideology = jacobin_ideology
+				traits = {
+				}
+			}
+		}
+		
+		set_global_flag = flag_german_internal_politics_resolved
+		custom_effect_tooltip = tooltip_german_internal_politics_resolved
+		
+		hidden_effect = {
+			news_event = { days = 1 id = german_civil_war.50 }
+		}
+	}
+}
+
+# News event for an Anarchist victory
+
+news_event = {
+	id = german_civil_war.47
+	title = german_civil_war47title
+	desc = german_civil_war47desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war47opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war47optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war47optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war47optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# News event for a Marxist victory
+
+news_event = {
+	id = german_civil_war.48
+	title = german_civil_war48title
+	desc = german_civil_war48desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war48opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war48optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war48optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war48optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# News event for a Jacobin victory
+
+news_event = {
+	id = german_civil_war.49
+	title = german_civil_war49title
+	desc = german_civil_war49desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war49opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war49optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war49optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war49optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# News event for a Social Democratic victory
+
+news_event = {
+	id = german_civil_war.50
+	title = german_civil_war50title
+	desc = german_civil_war50desc
+	
+	picture = GFX_deluge_brandenburg_ruin
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war50opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = german_civil_war50optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = german_civil_war50optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = german_civil_war50optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# 1937 has arrived, the war is dragging on and the Social Democrats offer to try to buy some hardware
+# from Sweden and seek a non-aggression pact
+
+country_event = {
+	id = german_civil_war.51
+	title = german_civil_war51title
+	desc = german_civil_war51desc
+	picture = GFX_report_event_generic_read_write
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DDR
+		NOT = { has_global_flag = flag_german_radicals_gone_to_conference }
+		date > 1937.1.1
+		has_war = yes
+		has_government = communism
+		NOT = {
+			has_war_with = SWE
+		}
+		SWE = {
+			has_government = democratic
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = german_civil_war51opta
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+		
+		add_war_support = 0.01
+		
+		SWE = {
+			country_event = { days = 1 id = german_civil_war.52 }
+		}
+		
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = german_civil_war51optb
+				
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Sweden receives the request and tends to decline
+
+country_event = {
+	id = german_civil_war.52
+	title = german_civil_war52title
+	desc = german_civil_war52desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war52opta
+		
+		trigger = {
+			has_equipment = {
+				artillery_equipment > 12
+			}
+		}
+		
+		add_opinion_modifier = { target = DDR modifier = assistance_in_civil_war_modifier }
+		
+		send_equipment = { target = DDR type = artillery_equipment amount = 12 }
+		
+		diplomatic_relation = { country = DDR relation = non_aggression_pact }
+		
+		DDR = {
+			country_event = { days = 1 id = german_civil_war.53 }
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war52optb
+		
+		trigger = {
+			NOT = {
+				has_equipment = {
+					artillery_equipment > 12
+				}
+			}
+		}
+		
+		add_political_power = -25
+		
+		add_opinion_modifier = { target = DDR modifier = assistance_in_civil_war_modifier }
+		
+		diplomatic_relation = { country = DDR relation = non_aggression_pact }
+		
+		DDR = {
+			country_event = { days = 1 id = german_civil_war.53 }
+			
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 12
+				producer = SWE
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war52optc
+		
+		DDR = {
+			country_event = { days = 1 id = german_civil_war.54 }
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+}
+	
+# Germany is informed that Sweden accepted
+
+country_event = {
+	id = german_civil_war.53
+	title = german_civil_war53title
+	desc = german_civil_war53desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war53opta
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		add_opinion_modifier = { target = SWE modifier = assistance_in_civil_war_modifier }
+		
+		if = {
+			limit = {
+				has_idea = ludwig_renn
+			}
+			add_political_power = 150
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					has_idea = ludwig_renn
+				}
+			}
+			add_ideas = ludwig_renn
+		}
+		
+		ai_chance = {
+			factor = 2
+		}
+	}
+		
+	option = {
+		name = german_civil_war53optb
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+		
+		add_opinion_modifier = { target = SWE modifier = assistance_in_civil_war_modifier }
+		
+		if = {
+			limit = {
+				has_idea = otto_wels
+			}
+			add_political_power = 150
+		}
+		
+		if = {
+			limit = {
+				NOT = {
+					has_idea = otto_wels
+				}
+			}
+			add_ideas = otto_wels
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Germany is informed that Sweden declined
+
+country_event = {
+	id = german_civil_war.54
+	title = german_civil_war54title
+	desc = german_civil_war54desc
+	
+	picture = GFX_report_event_generic_communist_congress
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = german_civil_war54opta
+		
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		add_political_power = -150
+		
+		ai_chance = {
+			factor = 2
+		}
+	}
+	
+	option = {
+		name = german_civil_war54optb
+				
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = -1 }
+		custom_effect_tooltip = tooltip_decreases_support_jacobins
+		
+		if = {
+			limit = {
+				NOT = {
+					has_idea = ludwig_renn
+				}
+			}
+			add_political_power = -150
+		}
+		
+		if = {
+			limit = {
+				has_idea = ludwig_renn
+			}
+			remove_ideas = ludwig_renn
+		}
+				
+		ai_chance = {
+			factor = 1
+		}
+	}
+		
+	option = {
+		name = german_civil_war54optc
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = -1 }
+		custom_effect_tooltip = tooltip_decreases_support_social_democrats
+		
+		if = {
+			limit = {
+				NOT = {
+					has_idea = otto_wels
+				}
+			}
+			add_political_power = -150
+		}
+		
+		if = {
+			limit = {
+				has_idea = otto_wels
+			}
+			remove_ideas = otto_wels
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Radical forces have occupied Berlin
+# Marxists and Anarchists want to immediately nationalise the industries
+# Social Democrats want to wait until the end of the war 
+# Jacobins want to confiscate rifles instead
+
+country_event = {
+	id = german_civil_war.55
+	title = german_civil_war55title
+	desc = german_civil_war55desc
+	
+	picture = GFX_report_event_spain_civil_war_volunteers_02
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DDR
+		NOT = { has_global_flag = flag_german_radicals_gone_to_conference }
+		64 = {
+			is_controlled_by = DDR
+		}
+		has_government = communism
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = german_civil_war55opta
+		
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		add_political_power = 40
+		
+		ai_chance = {
+			factor = 2
+		}
+	}
+	
+	option = {
+		name = german_civil_war55optb
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+		
+		add_stability = 0.01
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war55optc
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 150
+			producer = GER
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Radical forces have occupied Munich and a number of cultural treasures are discovered in the monarchist palaces
+# Marxists and Social Democrats want to preserve the national artifacts
+# Anarchists want to burn them
+# Jacobins want to sell them to Switzerland for more rifles
+
+country_event = {
+	id = german_civil_war.56
+	title = german_civil_war56title
+	desc = german_civil_war56desc
+	
+	picture = GFX_report_event_swedish_soldier
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = DDR
+		NOT = { has_global_flag = flag_german_radicals_gone_to_conference }
+		52 = {
+			is_controlled_by = DDR
+		}
+		has_government = communism
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = german_civil_war56opta
+		
+		modify_global_flag = { flag = flag_german_support_for_anarchists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_anarchists
+		
+		add_political_power = 40
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war56optb
+		
+		modify_global_flag = { flag = flag_german_support_for_marxists value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_marxists
+		
+		modify_global_flag = { flag = flag_german_support_for_social_democrats value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_social_democrats
+		
+		add_stability = 0.01
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = german_civil_war56optc
+		
+		modify_global_flag = { flag = flag_german_support_for_jacobins value = 1 }
+		custom_effect_tooltip = tooltip_increases_support_jacobins
+		
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_0
+			amount = 150
+			producer = SWI
+		}
+		
+		ai_chance = {
+			factor = 2
+		}
+	}
+}
+

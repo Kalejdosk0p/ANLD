@@ -1,0 +1,27 @@
+
+state={
+	id=469
+	name="STATE_469"
+
+	history={
+		owner = AQN
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		add_core_of = AQN
+		victory_points = {
+			736 3 
+		}
+
+	}
+
+	provinces={
+		736 3481 3498 4739 9669 10611 10656 11440 12593 12663 
+	}
+	manpower=1265605
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

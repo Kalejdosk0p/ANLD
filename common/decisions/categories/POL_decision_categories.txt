@@ -1,0 +1,213 @@
+expand_ozn_category = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_category_ozn
+	priority = 3
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+			POL = { has_completed_focus = POL_create_ozn }
+	}
+	visible_when_empty = no
+}
+integration_category = {
+	icon = GFX_decision_category_eng_move_to_secure_the_dominions
+	picture = GFX_decision_category_integration_picture_POL
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		OR = {
+			POL = { has_completed_focus = POL_begin_oczyszczenie_project }
+			POL = { has_completed_focus = POL_start_cultural_integration }
+			POL = { has_completed_focus = POL_lechitic_legacy }
+			POL = { has_completed_focus = POL_torch_for_all_slavs }
+			POL = { has_completed_focus = POL_clean_the_ghettos }
+		}
+	}
+	visible_when_empty = no
+}
+seek_enemies_category = {
+	icon = GFX_decision_category_border_conflicts
+	picture = GFX_decision_category_seek_enemies
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { has_completed_focus = POL_seek_enemies }
+	}
+	visible_when_empty = no
+}
+seek_collaboration_category = {
+	icon = GFX_decision_category_eng_concessions_to_the_trade_unions
+	picture = GFX_decision_cat_picture_gateway_to_europe
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+			POL = { has_completed_focus = POL_seek_collaboration }
+	}
+	visible_when_empty = no
+}
+seek_cooperation_category = {
+	icon = GFX_decision_category_generic_foreign_policy
+	picture = GFX_decision_category_seek_cooperation
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { has_completed_focus = POL_seek_cooperation }
+	}
+	visible_when_empty = no
+}
+seek_empire_category = {
+	icon = GFX_decision_category_generic_formable_nations
+	picture = GFX_decision_cat_generic_commonwealth
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+			POL = { has_completed_focus = POL_seek_empire }
+	}
+	visible_when_empty = no
+}
+seek_allies_category = {
+	icon = GFX_decision_category_generic_fascism
+	picture = GFX_decision_category_seek_allies
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { has_completed_focus = POL_seek_allies }
+	}
+	visible_when_empty = no
+}
+establish_honor_i_ojczyzna_category = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decision_category_h2o
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { has_completed_focus = POL_establish_honor_i_ojczyzna }
+	}
+	visible_when_empty = no
+}
+army_reform_category = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_decisions_category_polish_army
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { 
+			has_completed_focus = POL_start_army_reform 
+			NOT = {has_country_flag = POL_army_problem_solved}
+		}
+	}
+	visible_when_empty = no
+}
+expand_cities_category = {
+	icon = GFX_decision_category_gre_paying_ifc_debt
+	picture = GFX_decision_category_expand_cities
+	priority = 2
+	on_map_area = {
+		state = 10#Warszawa
+		state = 808#Ryga
+		state = 86#Poznań
+		state = 66#Wrocław
+		state = 67#Katowice
+		state = 88#Kraków
+		state = 91#Lwów
+		state = 92#Lublin
+		state = 89#Stanisławów
+		state = 94#Brześć
+		state = 5#Królewiec
+		state = 85#Tri-City (Gdynia and Gdańsk)
+		state = 202#Kijów
+		state = 96#Wilno
+		state = 11#Kaunas
+		state = 87#Łódź
+		state = 206#Mińsk
+		state = 192#Odessa
+		state = 9#Praga
+		state = 75#Brno
+		state = 62#Szczecin
+		state = 65#Saksonia
+		state = 64##Berlin/Branibór
+		name = POL_map_icon_expand_cities		
+		zoom = 75	
+	}
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { 
+			has_completed_focus = POL_expand_main_polish_cities
+		}
+	}
+	visible_when_empty = no
+}
+restore_holy_sites_category = {
+	icon = GFX_decision_category_generic_industry
+	picture = GFX_decisions_category_slavic_holy_sites
+	priority = 2
+	on_map_area = {
+		state = 61#Mecklenburgia (Radogoszcz)
+		state = 62#Szczecin and Arkona
+		state = 263##Nowogród
+		state = 202#Kijów
+		state = 98#Płock
+		state = 63#Trzebiatów, but in Koszalin
+		state = 66#Ślęża Mountain
+		state = 90#Łysa Góra
+		name = POL_map_icon_restore_holy_sites	
+		zoom = 75	
+	}
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { 
+			has_completed_focus = POL_return_of_ancient_faith
+		}
+	}
+	visible_when_empty = no
+}
+expand_urban_regions_category = {
+	icon = GFX_decision_category_generic_economy
+	picture = GFX_decision_category_polish_countryside
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { 
+			has_completed_focus = POL_finish_land_reform
+		}
+	}
+	visible_when_empty = no
+}
+competition_on_free_market_category = {
+	icon = GFX_decision_category_gre_investment_decisions
+	picture = GFX_free_market_decisions_category
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { 
+			has_completed_focus = POL_embrace_free_competition
+		}
+	}
+	visible_when_empty = yes
+}
+

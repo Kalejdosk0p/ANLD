@@ -1,0 +1,726 @@
+﻿
+# Events dealing with the latin and native Americans (USA stuff goes in american_expansionism)
+
+add_namespace = deluge_americas
+
+# If USA is justifying on a neighbour, allow opposing factions to form by event
+
+country_event = {
+	id = deluge_americas.1
+	title = hidden
+	desc = hidden
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	hidden = yes
+	
+	trigger = {
+		tag = USA
+		FROM = {
+			OR = {
+				TAG = LOU
+				TAG = CAN
+				TAG = MEX
+				TAG = BRA
+				TAG = GCB
+				TAG = URC
+				TAG = CSC
+				TAG = ARG
+				TAG = DES
+				TAG = AQN
+			}
+		}
+	}
+	
+	option = {
+		set_global_flag = american_expansionism_started
+	}
+}
+
+# A latin kingdom forms a faction to oppose America
+# Global can also be set by the faction NF in America's tree
+
+country_event = {
+	id = deluge_americas.2
+	title = deluge_americas2title
+	desc = deluge_americas2desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		has_global_flag = american_expansionism_started
+		NOT = { has_global_flag = faction_creation_consideration }
+		NOT = { has_global_flag = latin_royalists_created }
+		OR = {
+			TAG = LOU
+			TAG = CAN
+			TAG = MEX
+			TAG = BRA
+			TAG = GCB
+			TAG = URC
+			TAG = CSC
+			TAG = ARG
+			TAG = DES
+			TAG = AQN
+		}
+		is_in_faction = no
+		has_government = neutrality
+		NOT = { has_country_flag = rejected_latin_faction_creation }
+		has_war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+		
+		modifier = {
+			factor = 0.5
+			is_major = yes
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_factories > 10 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_factories > 15 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_factories > 20 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_factories > 25 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { num_of_factories > 30 }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = faction_creation_consideration
+	}
+	
+	option = {
+		name = deluge_americas2opta
+		
+		clr_global_flag = faction_creation_consideration
+		set_global_flag = latin_royalists_created
+		set_country_flag = leader_latin_royalists
+		
+		create_faction = "factionLatinRoyalists"
+		
+		hidden_effect = {
+			news_event = { days = 1 id = deluge_americas.3 }
+		}
+		
+		ai_chance = {
+			factor = 2
+			
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+			
+			modifier = {
+				factor = 10
+				is_major = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_americas2optb
+		
+		clr_global_flag = faction_creation_consideration
+		set_country_flag = rejected_latin_faction_creation
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# News event for creating the Latin Royalists
+
+news_event = {
+	id = deluge_americas.3
+	title = deluge_americas3title
+	desc = deluge_americas3desc
+	
+	picture = GFX_news_event_009
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas3opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = deluge_americas3optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = deluge_americas3optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = deluge_americas3optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# A latin kingdom seeks to join the faction
+
+country_event = {
+	id = deluge_americas.4
+	title = deluge_americas4title
+	desc = deluge_americas4desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	trigger = {
+		has_global_flag = latin_royalists_created
+		OR = {
+			TAG = LOU
+			TAG = CAN
+			TAG = MEX
+			TAG = BRA
+			TAG = GCB
+			TAG = URC
+			TAG = CSC
+			TAG = ARG
+			TAG = DES
+			TAG = AQN
+		}
+		is_in_faction = no
+		has_government = neutrality
+		NOT = { has_country_flag = latin_royalist_membership_considered }
+		has_war = no
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_country_flag = latin_royalist_membership_considered
+	}
+	
+	option = {
+		name = deluge_americas4opta
+		
+		random_country = {
+			limit = {
+				has_country_flag = leader_latin_royalists
+			}
+			country_event = deluge_americas.5
+		}
+		
+		ai_chance = {
+			factor = 2
+			
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+		}
+	}
+	
+	option = {
+		name = deluge_americas4optb
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# AI Royalist leader will always accept
+
+country_event = {
+	id = deluge_americas.5
+	title = deluge_americas5title
+	desc = deluge_americas5desc
+	
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas5opta
+		
+		add_to_faction = FROM
+		
+		hidden_effect = {
+			FROM = {
+				country_event = deluge_americas.6
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = deluge_americas5optb
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Hidden event to create the right FROM
+
+country_event = {
+	id = deluge_americas.6
+	title = hidden
+	desc = hidden
+	
+	picture = GFX_deluge_protest
+	
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Okay
+		hidden_effect = {
+			news_event = { days = 1 id = deluge_americas.7 }
+		}
+	}
+}
+
+# News event for new Royalist member
+
+news_event = {
+	id = deluge_americas.7
+	title = deluge_americas7title
+	desc = deluge_americas7desc
+	
+	picture = GFX_news_event_009
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas7opta
+		trigger = { has_government = communism }
+	}
+	option = {
+		name = deluge_americas7optb
+		trigger = { has_government = democratic }
+	}
+	option = {
+		name = deluge_americas7optc
+		trigger = { has_government = neutrality }
+	}
+	option = {
+		name = deluge_americas7optd
+		trigger = { has_government = fascism }
+	}
+}
+
+# Louisiana claims Quebec
+
+news_event = {
+	id = deluge_americas.8
+	title = deluge_americas8title
+	desc = deluge_americas8desc
+	
+	picture = GFX_news_event_012
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas8opta
+		trigger = {
+			OR = {
+				original_tag = LOU
+				is_in_faction_with = LOU
+			}
+		}
+	}
+	option = {
+		name = deluge_americas8optb
+		trigger = {
+			OR = {
+				original_tag = CAN
+				is_in_faction_with = CAN
+			}
+		}
+	}
+	option = {
+		name = deluge_americas8optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = LOU
+					is_in_faction_with = LOU
+					original_tag = CAN
+					is_in_faction_with = CAN
+				}
+			}
+		}
+	}
+}
+
+# Louisiana claims Deseret
+
+news_event = {
+	id = deluge_americas.9
+	title = deluge_americas9title
+	desc = deluge_americas9desc
+	
+	picture = GFX_news_event_032
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas9opta
+		trigger = {
+			OR = {
+				original_tag = LOU
+				is_in_faction_with = LOU
+			}
+		}
+	}
+	option = {
+		name = deluge_americas9optb
+		trigger = {
+			OR = {
+				original_tag = DES
+				is_in_faction_with = DES
+			}
+		}
+	}
+	option = {
+		name = deluge_americas9optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = LOU
+					is_in_faction_with = LOU
+					original_tag = DES
+					is_in_faction_with = DES
+				}
+			}
+		}
+	}
+}
+
+# Louisiana claims Mexico
+
+news_event = {
+	id = deluge_americas.10
+	title = deluge_americas10title
+	desc = deluge_americas10desc
+	
+	picture = GFX_news_event_047
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas10opta
+		trigger = {
+			OR = {
+				original_tag = LOU
+				is_in_faction_with = LOU
+			}
+		}
+	}
+	option = {
+		name = deluge_americas10optb
+		trigger = {
+			OR = {
+				original_tag = MEX
+				is_in_faction_with = MEX
+			}
+		}
+	}
+	option = {
+		name = deluge_americas10optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = LOU
+					is_in_faction_with = LOU
+					original_tag = MEX
+					is_in_faction_with = MEX
+				}
+			}
+		}
+	}
+}
+
+# Louisiana claims Algonquin
+
+news_event = {
+	id = deluge_americas.11
+	title = deluge_americas11title
+	desc = deluge_americas11desc
+	
+	picture = GFX_news_event_011
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas11opta
+		trigger = {
+			OR = {
+				original_tag = LOU
+				is_in_faction_with = LOU
+			}
+		}
+	}
+	option = {
+		name = deluge_americas11optb
+		trigger = {
+			OR = {
+				original_tag = AQN
+				is_in_faction_with = AQN
+			}
+		}
+	}
+	option = {
+		name = deluge_americas11optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = LOU
+					is_in_faction_with = LOU
+					original_tag = AQN
+					is_in_faction_with = AQN
+				}
+			}
+		}
+	}
+}
+
+# Louisiana claims on America
+
+news_event = {
+	id = deluge_americas.12
+	title = deluge_americas12title
+	desc = deluge_americas12desc
+	
+	picture = GFX_news_event_056
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas12opta
+		trigger = {
+			OR = {
+				original_tag = LOU
+				is_in_faction_with = LOU
+			}
+		}
+	}
+	option = {
+		name = deluge_americas12optb
+		trigger = {
+			OR = {
+				original_tag = USA
+				is_in_faction_with = USA
+			}
+		}
+	}
+	option = {
+		name = deluge_americas12optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = LOU
+					is_in_faction_with = LOU
+					original_tag = USA
+					is_in_faction_with = USA
+				}
+			}
+		}
+	}
+}
+
+# Louisiana claims France
+
+news_event = {
+	id = deluge_americas.13
+	title = deluge_americas13title
+	desc = deluge_americas13desc
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas13opta
+		trigger = {
+			OR = {
+				original_tag = LOU
+				is_in_faction_with = LOU
+			}
+		}
+	}
+	option = {
+		name = deluge_americas13optb
+		trigger = {
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+		}
+	}
+	option = {
+		name = deluge_americas13optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = LOU
+					is_in_faction_with = LOU
+					original_tag = FRA
+					is_in_faction_with = FRA
+				}
+			}
+		}
+	}
+}
+
+# Louisiana claims on Spain
+
+news_event = {
+	id = deluge_americas.14
+	title = deluge_americas14title
+	desc = deluge_americas14desc
+	
+	picture = GFX_news_event_ast_navy
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas14opta
+		trigger = {
+			OR = {
+				original_tag = LOU
+				is_in_faction_with = LOU
+			}
+		}
+	}
+	option = {
+		name = deluge_americas14optb
+		trigger = {
+			OR = {
+				original_tag = SPR
+				is_in_faction_with = SPR
+			}
+		}
+	}
+	option = {
+		name = deluge_americas14optc
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = LOU
+					is_in_faction_with = LOU
+					original_tag = SPR
+					is_in_faction_with = SPR
+				}
+			}
+		}
+	}
+}
+
+# Louisiana returns its seat of government to Paris
+
+news_event = {
+	id = deluge_americas.15
+	title = deluge_americas15title
+	desc = deluge_americas15desc
+	
+	picture = GFX_deluge_paris_large
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = deluge_americas15opta
+		trigger = {
+			original_tag = LOU
+		}
+	}
+	option = {
+		name = deluge_americas15optb
+		trigger = {
+			is_in_faction_with = LOU
+			NOT = {
+				original_tag = LOU
+			}
+		}
+	}
+	option = {
+		name = deluge_americas15optc
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = LOU
+					original_tag = LOU
+				}
+			}
+		}
+	}
+}
+
+# Caribbean has been released in a European colony and gets cores on the other areas (this way Cuba, Haiti etc get preference over a one-state "Caribbean")
+
+country_event = {
+	id = deluge_americas.16
+	title = deluge_americas16title
+	desc = deluge_americas16desc
+	
+	picture = GFX_report_event_merchant_ship_01
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CBN
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = deluge_americas16opt
+		
+		add_state_core = 315 # Cuba
+		add_state_core = 318 # Haiti
+		add_state_core = 319 # Dominican Republic
+		add_state_core = 695 # Curacao
+		add_state_core = 309 # Suriname
+		add_state_core = 310 # Guiana
+		add_state_core = 696 # Bermuda
+	}
+}
+
