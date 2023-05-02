@@ -1052,6 +1052,25 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 		}
+		POL_maritime_defence_fund_idea = {
+			picture = generic_the_london_naval_treaty
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				industrial_capacity_dockyard = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
 		POL_anti_tank_rifle = {
 			picture = generic_artillery_regiments
 			allowed = {
@@ -1786,6 +1805,28 @@ ideas = {
 				send_volunteer_factor = 0.25
 				send_volunteers_tension = -0.35
 				lend_lease_tension = -0.4
+			}
+		}
+		POL_legacy_of_polish_legions_in_italy_2 = {
+			picture = Banner_of_1st_Polish_Legion_in_Italy_idea
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				war_support_factor = 0.05
+				send_volunteer_factor = 0.25
+				send_volunteers_tension = -0.35
+				lend_lease_tension = -0.4
+				compliance_gain = 0.05
 			}
 		}
 		POL_crush_decadency_idea = {

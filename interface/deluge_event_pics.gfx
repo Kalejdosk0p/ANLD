@@ -258,4 +258,12 @@ spriteTypes = {
 		name = "GFX_balloon_competition"
 		texturefile = "gfx/event_pictures/balloon_competition.dds"
 	}
+	spriteType = {
+		name = "GFX_slavic_union"
+		texturefile = "gfx/event_pictures/slavic_union.dds"
+	}
+	spriteType = {
+		name = "GFX_zapadoslavia_formed"
+		texturefile = "gfx/event_pictures/zapadoslavia_formed.dds"
+	}
 }

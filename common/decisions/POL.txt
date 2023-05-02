@@ -2531,6 +2531,7 @@ seek_enemies_category = {
 					has_completed_focus = POL_encourage_priests_in_military
 					has_completed_focus = POL_repair_polish_ideomatrix
 					has_completed_focus = POL_create_new_type_of_man
+					has_completed_focus = POL_come_back_to_traditional_values
 				}
 			}
 			NOT = {POL = {has_idea = wojna_totalna_idea}}
@@ -2552,7 +2553,12 @@ seek_enemies_category = {
 	}
 	send_ultimatum_to_austria = {
 		icon = GFX_decision_eng_trade_unions_support
-		visible = {has_completed_focus = POL_seek_enemies}
+		visible = {
+			OR = {
+				has_completed_focus = POL_seek_enemies
+				#has_completed_focus = POL_new_revanchist_policy
+			}
+		}
 		available = {
 			AUS = {owns_state = 74}
 			AUS = {owns_state = 75}

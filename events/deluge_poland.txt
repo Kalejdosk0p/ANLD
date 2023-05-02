@@ -248,13 +248,25 @@ country_event = {#POL chooses leader for PSL
 	option = {##Maciej Rataj
 		name = deluge_poland.14.a
 		promote_character = POL_deluge_rataj
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.54
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
 	}
-	option = {##Walery Sławek
+	option = {##Artur Śliwiński
 		name = deluge_poland.14.b
-		promote_character = POL_deluge_slawek
+		promote_character = POL_deluge_artur_sliwinski
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.54
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -262,6 +274,12 @@ country_event = {#POL chooses leader for PSL
 	option = {##Andrzej Waleron
 		name = deluge_poland.14.c
 		promote_character = POL_deluge_waleron
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.54
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -269,6 +287,12 @@ country_event = {#POL chooses leader for PSL
 	option = {##Jan Dąbski
 		name = deluge_poland.14.e
 		promote_character = POL_deluge_dabski
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.54
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -293,6 +317,12 @@ country_event = {#POL chooses leader for ND
 			}
 			promote_character = POL_deluge_Dmowski
 		}
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.55
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -300,6 +330,12 @@ country_event = {#POL chooses leader for ND
 	option = {##Marian Seyda
 		name = deluge_poland.15.b
 		promote_character = POL_deluge_marian_seyda
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.55
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -307,6 +343,12 @@ country_event = {#POL chooses leader for ND
 	option = {##Jan Mosdorf
 		name = deluge_poland.15.c
 		promote_character = POL_deluge_mosdorf
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.55
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -314,6 +356,119 @@ country_event = {#POL chooses leader for ND
 	option = {##Tadeusz Bielecki
 		name = deluge_poland.15.e
 		promote_character = POL_deluge_bielecki
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.55
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {#Roman Dmowski dies
+	id = deluge_poland.16
+	title = deluge_poland.16.t
+	desc = {
+		text = deluge_poland.16.d1
+		trigger = {
+			trigger = {
+			POL_deluge_Dmowski = {
+				is_country_leader = yes
+			}
+		}
+		}
+	}
+	desc = {
+		text = deluge_poland.16.d2
+		trigger = {
+			trigger = {
+			POL_deluge_Dmowski = {
+				is_country_leader = no
+			}
+		}
+		}
+	}
+	picture = GFX_roman_dmowski_died_small
+	trigger = {
+		tag = POL
+		date > 1940.1.1
+		POL = {
+			has_completed_focus = POL_ND_wins
+		}
+	}
+	option = {##Tadeusz Bielecki
+		name = deluge_poland.16.a
+		trigger = {
+			POL_deluge_Dmowski = {
+				is_country_leader = yes
+			}
+		}
+		retire_character = POL_deluge_Dmowski
+		promote_character = POL_deluge_bielecki
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.56
+				hours = 48
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##Marian Seyda
+		name = deluge_poland.16.b
+		trigger = {
+			POL_deluge_Dmowski = {
+				is_country_leader = yes
+			}
+		}
+		retire_character = POL_deluge_Dmowski
+		promote_character = POL_deluge_marian_seyda
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.56
+				hours = 48
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##Jan Mosdorf
+		name = deluge_poland.16.c
+		trigger = {
+			POL_deluge_Dmowski = {
+				is_country_leader = yes
+			}
+		}
+		retire_character = POL_deluge_Dmowski
+		promote_character = POL_deluge_mosdorf
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.56
+				hours = 48
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##Dmowski dies but not as leader
+		name = deluge_poland.16.e
+		trigger = {
+			POL_deluge_Dmowski = {
+				is_country_leader = no
+			}
+		}
+		retire_character = POL_deluge_Dmowski
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.56
+				hours = 48
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -531,6 +686,12 @@ country_event = {##plot happenes
 		add_ideas = POL_problems_in_administration
 		add_ideas = POL_problems_in_army
 		retire_character = POL_Smigly
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.53
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -582,6 +743,12 @@ country_event = {##plot happenes
 		add_ideas = POL_problems_in_administration
 		add_ideas = POL_problems_in_army
 		retire_character = POL_Smigly
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.53
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -633,6 +800,12 @@ country_event = {##plot happenes
 		add_ideas = POL_problems_in_administration
 		add_ideas = POL_problems_in_army
 		retire_character = POL_Smigly
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.53
+				hours = 6
+			}
+		}
 		ai_chance = {
 			base = 1
 		}
@@ -682,7 +855,7 @@ country_event = {##Stachniuk changes king
 	id = deluge_poland.26
 	title = deluge_poland.26.t
 	desc = deluge_poland.26.d
-	picture = GFX_old_polish_king
+	picture = GFX_deluge_paris_small
 	is_triggered_only = yes
 	option = {##Stachniuk puts Paweł Salwator Piast-Riedelski
 		name = deluge_poland.26.a
@@ -728,7 +901,7 @@ news_event = {##Stachniuk forms Zapadoslavia
 	id = deluge_poland.28
 	title = deluge_poland.28.t
 	desc = deluge_poland.28.d
-	picture = GFX_lechia_formed
+	picture = GFX_zapadoslavia_formed
 	is_triggered_only = yes
 	major = yes
 	option = {
@@ -739,7 +912,7 @@ news_event = {##Stachniuk forms Union of all Slavs
 	id = deluge_poland.29
 	title = deluge_poland.29.t
 	desc = deluge_poland.29.d
-	picture = GFX_lechia_formed
+	picture = GFX_slavic_union
 	is_triggered_only = yes
 	major = yes
 	option = {
@@ -889,6 +1062,12 @@ country_event = {##PER gets message about training in it by POL
 				add = -3
 			}
 			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 7
+			}
+			modifier = {
 				has_opinion = {
 				    target = POL
 				    value < 30
@@ -931,6 +1110,12 @@ country_event = {##PER gets message about training in it by POL
 				    value < 30
 				}
 				add = 3
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -7
 			}
 			modifier = {
 				has_opinion = {
@@ -1012,6 +1197,12 @@ country_event = {##FIN gets message about training in it by POL
 				add = -3
 			}
 			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 7
+			}
+			modifier = {
 				has_opinion = {
 				    target = POL
 				    value > 30
@@ -1047,6 +1238,12 @@ country_event = {##FIN gets message about training in it by POL
 				    value < 30
 				}
 				add = 3
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -7
 			}
 			modifier = {
 				has_opinion = {
@@ -1096,7 +1293,7 @@ country_event = {##Piasecki changes king
 	id = deluge_poland.41
 	title = deluge_poland.41.t
 	desc = deluge_poland.41.d
-	picture = GFX_old_polish_king
+	picture = GFX_deluge_paris_small
 	is_triggered_only = yes
 	option = {##Piasecki puts Paweł Salwator Piast-Riedelski
 		name = deluge_poland.41.a
@@ -1437,6 +1634,824 @@ country_event = {##Poland decides about goverment of Mandate of Palestine
 		}
 	}
 }
+news_event = {##global event that informs that sanation is abolished
+	id = deluge_poland.53
+	title = deluge_poland.53.t
+	desc = deluge_poland.53.d
+	picture = GFX_sanation_abolished
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.53.a
+	}
+}
+news_event = {##global event that informs that PSL wins Polish elections
+	id = deluge_poland.54
+	title = deluge_poland.54.t
+	desc = deluge_poland.54.d
+	picture = GFX_psl_wins_event
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.54.a
+	}
+}
+news_event = {##global event that informs that ND wins Polish elections
+	id = deluge_poland.55
+	title = deluge_poland.55.t
+	desc = deluge_poland.55.d
+	picture = GFX_nd_wins_event
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.55.a
+	}
+}
+news_event = {##global event that informs that Roman Dmowski died
+	id = deluge_poland.56
+	title = deluge_poland.56.t
+	desc = deluge_poland.56.d
+	picture = GFX_roman_dmowski_funeral
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.56.a
+	}
+}
+country_event = {##pope vists POL
+	id = deluge_poland.57
+	title = deluge_poland.57.t
+	desc = deluge_poland.57.d
+	picture = GFX_pius_xii_picture_small
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland.57.a
+		swap_ideas = {
+			add_idea = POL_vatican_support_idea_2
+			remove_idea = POL_vatican_support_idea
+		}
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.58
+				hours = 10
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+news_event = {##global event that pope visits POL
+	id = deluge_poland.58
+	title = deluge_poland.58.t
+	desc = deluge_poland.58.d
+	picture = GFX_pope_news_event
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.58.a
+	}
+}
+country_event = {##pope reacts to POL not giving him Palestine
+	id = deluge_poland.59
+	title = deluge_poland.59.t
+	desc = deluge_poland.59.d
+	picture = GFX_pius_xii_picture_small
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland.59.a
+		add_ideas = POL_vatican_dissatisfied
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##controller of Rome is asked by POL to annex vatican city and capture rome
+	id = deluge_poland.60
+	title = deluge_poland.60.t
+	desc = deluge_poland.60.d
+	picture = GFX_pius_xii_picture_small
+	is_triggered_only = yes
+	option = {#agree
+		name = deluge_poland.60.a
+		add_political_power = -50
+		add_ideas = hated_by_catholic_world
+		POL = {
+			add_ideas = hated_by_catholic_world
+		}
+		set_global_flag = Vatican_city_annexed_for_POL
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.61
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#disagree
+		name = deluge_poland.60.b
+		add_political_power = 10
+		POL = {
+			add_opinion_modifier = { target = ITA modifier = medium_decrease }
+			country_event = {
+				id = deluge_poland.63
+				hours = 10
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_153
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+news_event = {##global event that owner of Rome annexes Vatican
+	id = deluge_poland.61
+	title = deluge_poland.61.t
+	desc = deluge_poland.61.d
+	picture = GFX_pope_news_event
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.61.a
+	}
+	option = {
+		name = deluge_poland.61.b
+	}
+}
+news_event = {##global event that POL creates new church
+	id = deluge_poland.62
+	title = deluge_poland.62.t
+	desc = deluge_poland.62.d
+	picture = GFX_pope_news_event
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.62.a
+	}
+}
+country_event = {##POL gets event that controller of Rome refused
+	id = deluge_poland.63
+	title = deluge_poland.63.t
+	desc = deluge_poland.63.d
+	picture = GFX_report_event_ITA_grand_council
+	is_triggered_only = yes
+	option = {#attack now
+		name = deluge_poland.63.a
+		if = {
+			limit = {
+				FROM = {
+					is_in_faction_with = POL
+				}
+			}
+			remove_from_faction = FROM
+		}
+		declare_war_on = {
+            target = FROM
+            type = annex_everything
+        }
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#attack later
+		name = deluge_poland.63.b
+		create_wargoal = {
+			type = take_claimed_state
+			target = FROM
+			generator = {
+				2
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##Rydz-Śmigły kills himself if Warsaw was lost
+	id = deluge_poland.64
+	title = deluge_poland.64.t
+	desc = deluge_poland.64.d
+	picture = GFX_report_event_sanation_right_victory
+	trigger = {
+		10 = {
+			controller = {
+				NOT = {
+					tag = POL
+				}
+			}
+			POL = {
+				surrender_progress > 0.5
+			}
+		}
+		has_country_leader =  {
+			character = POL_Smigly
+			ruling_only = no
+		}
+		POL_Smigly = {
+			NOT = {
+				has_trait = overwhelming_decadency
+			}
+		}
+	}
+	option = {#Śmigły doesn't do that
+		name = deluge_poland.64.a
+		add_trait = {
+			character = POL_Smigly
+			ideology = social_darwinist_ideology
+			trait = overwhelming_decadency
+		}
+		custom_effect_tooltip = POL_custom_effect_tooltip_156
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#Haller
+		name = deluge_poland.64.b
+		retire_character = POL_Smigly
+		promote_character = POL_deluge_Haller
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 20
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#Wieniawa-Długoszewski
+		name = deluge_poland.64.c
+		retire_character = POL_Smigly
+		promote_character = POL_deluge_wieniawa_dlugoszewski
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 20
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#next options
+		name = deluge_poland.64.f
+		POL = {
+			country_event = deluge_poland.67
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+news_event = {##global event that Rydz-Śmigły killed himself
+	id = deluge_poland.65
+	title = deluge_poland.65.t
+	desc = deluge_poland.65.d
+	picture = GFX_smigły_rydz_sad
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.65.a
+	}
+}
+news_event = {##global event that Rodnovery faith is officialy back
+	id = deluge_poland.66
+	title = deluge_poland.66.t
+	desc = deluge_poland.66.d
+	picture = GFX_rodnovery_back_color
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.66.a
+	}
+}
+country_event = {##Rydz-Śmigły kills himself if Warsaw was lost part 2
+	id = deluge_poland.67
+	title = deluge_poland.67.t
+	desc = deluge_poland.64.d
+	picture = GFX_report_event_sanation_right_victory
+	is_triggered_only = yes
+	option = {#Orlicz-Dreszer
+		name = deluge_poland.64.e
+		retire_character = POL_Smigly
+		promote_character = POL_deluge_Orlicz_Dreszer
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 20
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#Józef Bek
+		name = deluge_poland.64.h
+		retire_character = POL_Smigly
+		promote_character = POL_deluge_jozef_beck
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 20
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#Kazimierz Sosnkowski
+		name = deluge_poland.64.i
+		retire_character = POL_Smigly
+		promote_character = POL_deluge_sosnowski
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 20
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#previous options
+		name = deluge_poland.64.g
+		POL = {
+			country_event = deluge_poland.64
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##player/AI chooses ruling communist party
+	id = deluge_poland.68
+	title = deluge_poland.68.t
+	desc = deluge_poland.68.d
+	picture = GFX_report_event_generic_communist_congress
+	is_triggered_only = yes
+	option = {#PPS
+		name = deluge_poland.68.a
+		set_country_flag = POL_PPS_won_in_event
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 10
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#KPP
+		name = deluge_poland.68.b
+		set_country_flag = POL_KPP_won_in_event
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 10
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#another options
+		name = deluge_poland.68.c
+		POL = {
+			country_event = deluge_poland.69
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##player/AI chooses ruling communist party part 2
+	id = deluge_poland.69
+	title = deluge_poland.69.t
+	desc = deluge_poland.69.d
+	picture = GFX_report_event_generic_communist_congress
+	is_triggered_only = yes
+	option = {#NSP
+		name = deluge_poland.69.a
+		set_country_flag = POL_NSP_won_in_event
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 10
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#NSPR
+		name = deluge_poland.69.b
+		set_country_flag = POL_NSPR_won_in_event
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 10
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {#another options (only one left)
+		name = deluge_poland.69.c
+		POL = {
+			country_event = deluge_poland.70
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##player/AI chooses ruling communist party part 3
+	id = deluge_poland.70
+	title = deluge_poland.70.t
+	desc = deluge_poland.70.d
+	picture = GFX_report_event_generic_communist_congress
+	is_triggered_only = yes
+	option = {#compromise - PKWN
+		name = deluge_poland.70.a
+		set_country_flag = POL_PKWN_won_in_event
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland.65
+				hours = 10
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##other countries get event that Poland asks them to join their church
+	id = deluge_poland.71
+	title = deluge_poland.71.t
+	desc = deluge_poland.71.d
+	picture = GFX_beck_2
+	is_triggered_only = yes
+	option = {#agree
+		name = deluge_poland.71.a
+		add_ideas = member_of_new_polish_church
+		add_political_power = -50
+		hidden_effect = {
+			POL = {
+				country_event = {
+					id = deluge_poland.72
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				ROOT = {has_government = POL}
+				add = 3
+			}
+			modifier = {
+				NOT = {ROOT = {has_government = POL}}
+				add = -3
+			}
+			modifier = {
+				has_opinion = {
+					target = POL
+					value < 30
+				}
+				add = -3
+			}
+			modifier = {
+				has_opinion = {
+					target = POL
+					value > 30
+				}
+				add = 3
+			}
+			modifier = {
+				check_variable = { POL.num_of_factories < ROOT.num_of_factories }
+				add = -3
+			}
+			modifier = {
+				check_variable = { POL.num_of_factories > ROOT.num_of_factories }
+				add = 3
+			}
+		}
+	}
+	option = {#disagree
+		name = deluge_poland.71.b
+		add_political_power = 50
+		hidden_effect = {
+			POL = {
+				country_event = {
+					id = deluge_poland.73
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				ROOT = {has_government = POL}
+				add = -3
+			}
+			modifier = {
+				NOT = {ROOT = {has_government = POL}}
+				add = 3
+			}
+			modifier = {
+				has_opinion = {
+					target = POL
+					value < 30
+				}
+				add = 3
+			}
+			modifier = {
+				has_opinion = {
+					target = POL
+					value > 30
+				}
+				add = -3
+			}
+			modifier = {
+				check_variable = { POL.num_of_factories < ROOT.num_of_factories }
+				add = 3
+			}
+			modifier = {
+				check_variable = { POL.num_of_factories > ROOT.num_of_factories }
+				add = -3
+			}
+		}
+	}
+}
+country_event = {##POL gets info that other country accepted joining their church
+	id = deluge_poland.72
+	title = deluge_poland.72.t
+	desc = deluge_poland.72.d
+	picture = GFX_polish_cavalary_1
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland.72.a
+		add_political_power = 10
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##POL gets info that other country rejected joining their church
+	id = deluge_poland.73
+	title = deluge_poland.73.t
+	desc = deluge_poland.73.d
+	picture = GFX_polish_cavalary_1
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland.73.a
+		create_wargoal = {
+			type = puppet_wargoal_focus
+			target = FROM
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##event about lore of Polish Hyperborea
+	id = deluge_poland.74
+	title = deluge_poland.74.t
+	desc = deluge_poland.74.d
+	picture = GFX_polish_cavalary_1
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland.74.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##question of monarchy in new Polish Republic
+	id = deluge_poland.75
+	title = deluge_poland.75.t
+	desc = deluge_poland.75.d
+	picture = GFX_deluge_paris_small
+	is_triggered_only = yes
+	option = {##Turn him fully into figurhead
+		name = deluge_poland.75.a
+		trigger = {
+			has_idea = new_wettyn_king
+		}
+		swap_ideas = {
+			add_idea = new_wettyn_king_figurehead
+			remove_idea = new_wettyn_king
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##delete monarchy
+		name = deluge_poland.75.b
+		trigger = {
+			NOT = {
+				has_idea = new_wettyn_king
+			}
+		}
+		add_political_power = 50
+		add_stability = -0.05
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##get Piast-Riedelski
+		name = deluge_poland.75.c
+		if = {
+			limit = {
+				has_idea = new_wettyn_king
+			}
+			swap_ideas = {
+				add_idea = POL_piast_king
+				remove_idea = new_wettyn_king
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = new_wettyn_king
+				}
+			}
+			add_ideas = POL_piast_king
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##get Czartoryski
+		name = deluge_poland.75.e
+		if = {
+			limit = {
+				has_idea = new_wettyn_king
+			}
+			swap_ideas = {
+				add_idea = POL_czartoryski_king
+				remove_idea = new_wettyn_king
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_idea = new_wettyn_king
+				}
+			}
+			add_ideas = POL_czartoryski_king
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##event about history of Tadeusz Kościuszko
+	id = deluge_poland.76
+	title = deluge_poland.76.t
+	desc = deluge_poland.76.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		AND = {
+			date > 1937.10.13
+			date < 1937.10.16
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = deluge_poland.76.a
+		add_political_power = 5
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##event about history of Maria Curie-Skłodowska
+	id = deluge_poland.77
+	title = deluge_poland.77.t
+	desc = deluge_poland.77.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		AND = {
+			date > 1939.7.3
+			date < 1939.7.6
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = deluge_poland.77.a
+		add_political_power = 5
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##event about history of Adam Mickiewicz
+	id = deluge_poland.78
+	title = deluge_poland.78.t
+	desc = deluge_poland.78.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		AND = {
+			date > 1938.12.13
+			date < 1938.12.24
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = deluge_poland.78.a
+		add_political_power = 5
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##event about history of Emilia Plater
+	id = deluge_poland.79
+	title = deluge_poland.79.t
+	desc = deluge_poland.79.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		AND = {
+			date > 1936.11.12
+			date < 1936.11.15
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = deluge_poland.79.a
+		add_political_power = 5
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##event about history of Wojciech Głowacki
+	id = deluge_poland.80
+	title = deluge_poland.80.t
+	desc = deluge_poland.80.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		AND = {
+			date > 1938.6.1
+			date < 1938.6.4
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = deluge_poland.80.a
+		add_political_power = 5
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##event about history of Józef Poniatowski
+	id = deluge_poland.81
+	title = deluge_poland.81.t
+	desc = deluge_poland.81.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		AND = {
+			date > 1938.10.18
+			date < 1938.10.21
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = deluge_poland.81.a
+		add_political_power = 5
+		ai_chance = {
+			base = 1
+		}
+	}
+}
 country_event = {##POL proposes defense pact to UK
 	id = deluge_poland_foreign.1
 	title = deluge_poland_foreign.1.t
@@ -1465,6 +2480,12 @@ country_event = {##POL proposes defense pact to UK
 			modifier = {
 				ENG = {has_government = POL}
 				add = 3
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 5
 			}
 			modifier = {
 				NOT = {ENG = {has_government = POL}}
@@ -1717,6 +2738,12 @@ country_event = {##POL invites countries to faction
 				add = 5
 			}
 			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 5
+			}
+			modifier = {
 				NOT = {ROOT = {has_government = POL}}
 				add = -5
 			}
@@ -1880,11 +2907,17 @@ country_event = {##many countries gain information about preparing of crusade
 			base = 10
 			modifier = {
 				ROOT  = {has_government = POL}
+				add = 2
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
 				add = 5
 			}
 			modifier = {
 				NOT = {ROOT  = {has_government = POL}}
-				add = -5
+				add = -2
 			}
 			modifier = {
 				has_opinion = {
@@ -1916,11 +2949,11 @@ country_event = {##many countries gain information about preparing of crusade
 			base = 10
 			modifier = {
 				ROOT  = {has_government = POL}
-				add = -5
+				add = -2
 			}
 			modifier = {
 				NOT = {ROOT  = {has_government = POL}}
-				add = 5
+				add = 2
 			}
 			modifier = {
 				has_opinion = {
@@ -2173,6 +3206,35 @@ country_event = {##POL gets info about that HUN refused to offer
 		}
 	}
 }
+news_event = {##pope supports crusade
+	id = deluge_poland_foreign.20
+	title = deluge_poland_foreign.20.t
+	desc = deluge_poland_foreign.20.d
+	picture = GFX_pope_news_event
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.20.a
+	}
+}
+country_event = {##members of the crusade gain money after winning
+	id = deluge_poland_foreign.21
+	title = deluge_poland_foreign.21.t
+	desc = deluge_poland_foreign.21.d
+	picture = GFX_report_event_001
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.21.a
+		remove_ideas = POL_member_of_crusade_2
+		add_timed_idea = {
+			idea = POL_payment_for_crusade
+			days = 300
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
 country_event = {##one of sides of POL-ENG act calls other to war
 	id = deluge_poland_foreign.28
 	title = deluge_poland_foreign.28.t
@@ -2323,6 +3385,12 @@ country_event = {##one of sides of POL-ENG act calls other to war
 				add = -5
 			}
 			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 5
+			}
+			modifier = {
 				if = {
 					limit = {
 						OR = {
@@ -2447,6 +3515,12 @@ country_event = {##one of sides of POL-ENG act calls other to war
 				add = -5
 			}
 			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -5
+			}
+			modifier = {
 				if = {
 					limit = {
 						OR = {
@@ -2522,6 +3596,12 @@ country_event = {##POL sends ultimatum to AUS for CZE and SLO
 		ai_chance = {
 			base = 10
 			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 5
+			}
+			modifier = {
 				add = 10
 				POL = {
 					strength_ratio = { 
@@ -2569,6 +3649,12 @@ country_event = {##POL sends ultimatum to AUS for CZE and SLO
 				FRA = {has_government = AUS}
 			}
 			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -3
+			}
+			modifier = {
 				add = -10
 				NOT = {FRA = {has_government = AUS}}
 			}
@@ -2580,6 +3666,7 @@ country_event = {##POL sends ultimatum to AUS for CZE and SLO
 			POL = {country_event = {id = deluge_poland_foreign.32 hours = 6}}
 		}
 		ai_chance = {
+			base = 10
 			modifier = {
 				add = -10
 				POL = {
@@ -2598,6 +3685,12 @@ country_event = {##POL sends ultimatum to AUS for CZE and SLO
 					}
 				}
 			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -5
+			}
 		}
 	}
 }
@@ -2612,9 +3705,36 @@ country_event = {##FRA decides
 		name = deluge_poland_foreign.31.a
 		AUS = {country_event = {id = deluge_poland_foreign.33 hours = 6}}
 		ai_chance = {
+			base = 10
 			modifier = {
-				factor = 10
+				add = 5
 				POL = {has_government = POL}
+			}
+			modifier = {
+				add = -5
+				NOT = {
+					POL = {has_government = POL}
+				}
+			}
+			modifier = {
+				has_opinion = {
+				    target = POL
+				    value > 30
+				}
+				add = 3
+			}
+			modifier = {
+				has_opinion = {
+				    target = POL
+				    value < 30
+				}
+				add = -3
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 5
 			}
 		}
 	}
@@ -2622,9 +3742,36 @@ country_event = {##FRA decides
 		name = deluge_poland_foreign.31.b
 		AUS = {country_event = {id = deluge_poland_foreign.34 hours = 6}}
 		ai_chance = {
+			base = 10
 			modifier = {
-				factor = 10
-				AUS = {has_government = FRA}
+				add = -5
+				POL = {has_government = POL}
+			}
+			modifier = {
+				add = 5
+				NOT = {
+					POL = {has_government = POL}
+				}
+			}
+			modifier = {
+				has_opinion = {
+				    target = POL
+				    value > 30
+				}
+				add = -3
+			}
+			modifier = {
+				has_opinion = {
+				    target = POL
+				    value < 30
+				}
+				add = 3
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -5
 			}
 		}
 	}
@@ -2632,8 +3779,9 @@ country_event = {##FRA decides
 		name = deluge_poland_foreign.31.c
 		AUS = {country_event = {id = deluge_poland_foreign.35 hours = 6}}
 		ai_chance = {
+			base = 10
 			modifier = {
-				factor = 10
+				add = 15
 				OR = {
 					AND = {
 						strength_ratio = {tag = POL ratio < 1.5}
@@ -2648,6 +3796,20 @@ country_event = {##FRA decides
 						NOT = {FRA = {has_government = AUS}}
 					}
 				}
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -3
+			}
+			modifier = {
+				NOT = {
+					POL = {
+						has_idea = POL_deluge_jozef_beck
+					}
+				}
+				add = 3
 			}
 		}
 	}
@@ -2692,6 +3854,7 @@ country_event = {##POL gets informed that AUS refused
 		}}
 		clr_global_flag = POL_invites_someone
 		ai_chance = {
+			base = 10
 			modifier = {
 				factor = 10
 				strength_ratio = {tag = AUS ratio > 2.0}
@@ -2705,6 +3868,7 @@ country_event = {##POL gets informed that AUS refused
 		add_war_support = -0.05
 		clr_global_flag = POL_invites_someone
 		ai_chance = {
+			base = 10
 			modifier = {
 				factor = 10
 				strength_ratio = {tag = AUS ratio > 2.0}
@@ -2798,9 +3962,24 @@ country_event = {##AUS gets info that FRA doesn't give a sh*t about this problem
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
+			base = 10
 			modifier = {
-				factor = 10
+				add = 10
 				POL = {strength_ratio = { tag = AUS ratio > 2.0 }}
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 5
+			}
+			modifier = {
+				check_variable = { POL.num_of_factories > AUS.num_of_factories }
+				add = 5
+			}
+			modifier = {
+				check_variable = { POL.num_of_factories < AUS.num_of_factories }
+				add = -5
 			}
 		}
 	}
@@ -2810,9 +3989,24 @@ country_event = {##AUS gets info that FRA doesn't give a sh*t about this problem
 			POL = {country_event = {id = deluge_poland_foreign.32 hours = 6}}
 		}
 		ai_chance = {
+			base = 10
 			modifier = {
-				factor = 10
-				strength_ratio = { tag = POL ratio > 1.5 }
+				add = 10
+				POL = {strength_ratio = { tag = AUS ratio < 2.0 }}
+			}
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -5
+			}
+			modifier = {
+				check_variable = { POL.num_of_factories > AUS.num_of_factories }
+				add = -5
+			}
+			modifier = {
+				check_variable = { POL.num_of_factories < AUS.num_of_factories }
+				add = 5
 			}
 		}
 	}
@@ -2887,6 +4081,12 @@ country_event = {##POL asks FIN if they want to get independent
 		}
 		ai_chance = {
 			base = 10
+			modifier = {
+				add = 30
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+			}
 		}
 	}
 	option = {##FIN refuses
@@ -2966,10 +4166,72 @@ country_event = {## POL is asked if FRA can be an arbitrage
 	option = {##ok
 		name = deluge_poland_foreign.43.a
 		FRA = {country_event = {id = deluge_poland_foreign.31 hours = 3}}
+		ai_chance = {
+			base  = 10
+			modifier = {
+				has_opinion = {
+				    target = FRA
+				    value < 30
+				}
+				add = -5
+			}
+			modifier = {
+				has_opinion = {
+				    target = FRA
+				    value > 30
+				}
+				add = 5
+			}
+			modifier = {
+				add = 10
+				POL = {
+					has_government = FRA
+				}
+			}
+			modifier = {
+				add = -10
+				NOT = {
+					POL = {
+						has_government = FRA
+					}
+				}
+			}
+		}
 	}
 	option = {##not ok
 		name = deluge_poland_foreign.43.b
 		AUS = {country_event = {id = deluge_poland_foreign.44 hours = 3}}
+		ai_chance = {
+			base  = 10
+			modifier = {
+				has_opinion = {
+				    target = FRA
+				    value < 30
+				}
+				add = 5
+			}
+			modifier = {
+				has_opinion = {
+				    target = FRA
+				    value > 30
+				}
+				add = -5
+			}
+			modifier = {
+				add = -10
+				POL = {
+					has_government = FRA
+				}
+			}
+			modifier = {
+				add = 10
+				NOT = {
+					POL = {
+						has_government = FRA
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {## AUS gets info that POL didn't agree on arbitrage
@@ -2982,9 +4244,16 @@ country_event = {## AUS gets info that POL didn't agree on arbitrage
 		name = deluge_poland_foreign.44.a
 		POL = {country_event = {id = deluge_poland_foreign.32 hours = 3}}
 		ai_chance = {
+			base = 10
 			modifier = {
-				factor = 10
+				add = 10
 				POL = {strength_ratio = { tag = AUS ratio < 2.0 }}
+			}
+			modifier = {
+				add = -10
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
 			}
 		}
 	}
@@ -3011,9 +4280,16 @@ country_event = {## AUS gets info that POL didn't agree on arbitrage
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
+			base = 10
 			modifier = {
+				add = 10
 				POL = {strength_ratio = { tag = AUS ratio > 2.0 }}
-				factor = 10
+			}
+			modifier = {
+				add = 10
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
 			}
 		}
 	}
@@ -3030,15 +4306,20 @@ country_event = {##JAP is asked if POL can send it's advisor there
 		POL = {country_event = {id = deluge_poland_foreign.46 hours = 20}}
 		set_global_flag = POL_attache_is_in_JAP
 		ai_chance = {
-			base = 1
-			factor = 1
+			base = 10
 			modifier = {
 				JAP = {has_government = POL}
-				factor = 100
+				add = 10
 			}
 			modifier = {
 				NOT = {JAP = {has_government = POL}}
-				factor = 0.01
+				add = -10
+			}
+			modifier = {
+				add = 10
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
 			}
 		}
 	}
@@ -3046,15 +4327,20 @@ country_event = {##JAP is asked if POL can send it's advisor there
 		name = deluge_poland_foreign.45.b
 		POL = {country_event = {id = deluge_poland_foreign.47 hours = 20}}
 		ai_chance = {
-			base = 1
-			factor = 1
+			base = 10
 			modifier = {
 				JAP = {has_government = POL}
-				factor = 0.1
+				add = -10
 			}
 			modifier = {
 				NOT = {JAP = {has_government = POL}}
-				factor = 100
+				add = 10
+			}
+			modifier = {
+				add = -10
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
 			}
 		}
 	}
@@ -3154,7 +4440,59 @@ country_event = {##SOV gets propostion of pact against radicals
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
-			factor = 1
+			base = 10
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = 10
+			}
+			modifier = {
+				has_opinion = {
+				    target = POL
+				    value > 30
+				}
+				add = 5
+			}
+			modifier = {
+				has_opinion = {
+				    target = POL
+				    value < 30
+				}
+				add = -5
+			}
+			modifier = {
+				POL = {
+					has_government = SOV
+				}
+				add = 3
+			}
+			modifier = {
+				NOT = {
+					POL = {
+						has_government = SOV
+					}
+				}
+				add = -3
+			}
+			modifier = {
+				add = 7
+				POL = {
+					strength_ratio = { 
+						tag = SOV 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -5
+				POL = {
+					strength_ratio = { 
+						tag = SOV 
+						ratio < 1.5 
+					}
+				}
+			}
 		}
 	}
 	option = {##refuse
@@ -3164,7 +4502,59 @@ country_event = {##SOV gets propostion of pact against radicals
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
-			factor = 1
+			base = 10
+			modifier = {
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+				add = -10
+			}
+			modifier = {
+				has_opinion = {
+				    target = POL
+				    value > 30
+				}
+				add = -5
+			}
+			modifier = {
+				has_opinion = {
+				    target = POL
+				    value < 30
+				}
+				add = 5
+			}
+			modifier = {
+				POL = {
+					has_government = SOV
+				}
+				add = -3
+			}
+			modifier = {
+				NOT = {
+					POL = {
+						has_government = SOV
+					}
+				}
+				add = 3
+			}
+			modifier = {
+				add = -5
+				POL = {
+					strength_ratio = { 
+						tag = SOV 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 7
+				POL = {
+					strength_ratio = { 
+						tag = SOV 
+						ratio < 1.5 
+					}
+				}
+			}
 		}
 	}
 }
@@ -3542,7 +4932,13 @@ country_event = {##POL proposes GER support in civil war
 		}
 		set_global_flag = GER_gives_resources_to_POL
 		ai_chance = {
-			factor = 100
+			base = 10
+			modifier = {
+				add = 50
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+			}
 		}
 	}
 	option = {##GER gives minus consumer goods for Poland and gives plus consumer goods fro itself
@@ -3560,7 +4956,13 @@ country_event = {##POL proposes GER support in civil war
 		}
 		set_global_flag = GER_gives_money_to_POL
 		ai_chance = {
-			factor = 100
+			base = 10
+			modifier = {
+				add = 50
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+			}
 		}
 	}
 	option = {##GER refuses
@@ -3569,7 +4971,13 @@ country_event = {##POL proposes GER support in civil war
 			country_event = {id = deluge_poland_foreign.55 hours = 3}
 		}
 		ai_chance = {
-			factor = 100
+			base = 10
+			modifier = {
+				add = -50
+				POL = {
+					has_idea = POL_deluge_jozef_beck
+				}
+			}
 		}
 	}
 }

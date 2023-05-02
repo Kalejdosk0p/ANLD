@@ -2390,4 +2390,48 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/spirits/karol_wojtyla_picture.dds"
 	}
 	
+	spriteType = {
+		name = "GFX_edward_saryusz_stokowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/edward_saryusz_stokowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_eustachy_sapieha_picuture_small"
+		texturefile = "gfx/interface/ideas/characters/eustachy_sapieha_picuture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jan_karol_kochanowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jan_karol_kochanowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_jan_moszynski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jan_moszynski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_leszek_gembarzewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/leszek_gembarzewski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_mackiewicz_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_mackiewicz_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_stanislaw_mikolajczyk_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_mikolajczyk_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_waclaw_niemojowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/waclaw_niemojowski_picture_small.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_wladyslaw_gimbert_studniecki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wladyslaw_gimbert_studniecki_picture_small.dds"
+	}
 }

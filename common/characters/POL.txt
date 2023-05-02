@@ -554,7 +554,7 @@ characters={
 			desc = "POL_Haller_leader_desc"
 		}
 		corps_commander = {
-			traits = { war_hero old_guard bearer_of_artillery }
+			traits = { war_hero old_guard }
 			skill=4
 			attack_skill=3
 			defense_skill=4
@@ -1045,7 +1045,7 @@ characters={
 			logistics_skill=4
 		}
 	}
-	POL_deluge_sosnowski = {##Kazimierz Sosnowski
+	POL_deluge_sosnowski = {##Kazimierz Sosnkowski
 		name = POL_Character_deluge_sosnowski
 		portraits={
 			army = {
@@ -1054,13 +1054,19 @@ characters={
 				small = GFX_kazimierz_sosnowski_picture_small
 			}
 		}
-		corps_commander = {
-			traits = { brilliant_strategist }
+		field_marshal = {
+			traits = { brilliant_strategist organizer }
 			skill=4
 			attack_skill=4
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=3
+		}
+		country_leader = {
+			ideology = corporatist_ideology
+			expire = "1969.1.1.1"
+			traits = { national_hero_sosnkowski }
+			desc = "POL_deluge_sosnowski_leader_desc"
 		}
 		advisor={
 			slot = army_chief
@@ -1489,7 +1495,7 @@ characters={
 		name = POL_Character_deluge_rola_zymierski
 		portraits = {
 			army = {
-				large="GFX_michal_rola_zymierski"
+				large="gfx/leaders/POL/michal_rola_zymierski.dds"
 				small = GFX_michal_rola_zymierski_picture_small
 			}
 		}
@@ -1506,7 +1512,7 @@ characters={
 		name = POL_Character_deluge_zygumnt_berling
 		portraits = {
 			army = {
-				large="GFX_zygmunt_berling"
+				large="gfx/leaders/POL/zygmunt_berling.dds"
 				small = GFX_zygmunt_berling_picutre_small
 			}
 		}
@@ -1523,7 +1529,7 @@ characters={
 		name = POL_Character_deluge_roja
 		portraits = {
 			army = {
-				large="GFX_boleslaw_roja"
+				large="gfx/leaders/POL/boleslaw_roja.dds"
 				small = GFX_boleslaw_roja_picture_small
 			}
 		}
@@ -1540,7 +1546,7 @@ characters={
 		name = POL_Character_deluge_latinik
 		portraits = {
 			army = {
-				large="GFX_franciszek_latinik"
+				large="gfx/leaders/POL/franciszek_latinik.dds"
 				small = GFX_franciszek_latinik_picutre_small
 			}
 		}
@@ -1557,7 +1563,7 @@ characters={
 		name = POL_Character_deluge_jung
 		portraits = {
 			army = {
-				large="GFX_wladyslaw_jung"
+				large="gfx/leaders/POL/wladyslaw_jung.dds"
 				small = GFX_wladyslaw_jung_picture_small
 			}
 		}
@@ -1574,7 +1580,7 @@ characters={
 		name = POL_Character_deluge_stanislaw_haller
 		portraits = {
 			army = {
-				large="GFX_stanislaw_haller"
+				large="gfx/leaders/POL/stanislaw_haller.dds"
 				small = GFX_marian_kukiel_picture_small
 			}
 		}
@@ -1591,7 +1597,7 @@ characters={
 		name = POL_Character_deluge_dzierzykraj_stokalski
 		portraits = {
 			army = {
-				large="GFX_radoslaw_dzierzykraj_stokalski"
+				large="gfx/leaders/POL/radoslaw_dzierzykraj_stokalski.dds"
 				small = GFX_marian_kukiel_picture_small
 			}
 		}
@@ -1608,7 +1614,7 @@ characters={
 		name = POL_Character_deluge_poplawski
 		portraits = {
 			army = {
-				large="GFX_stanislaw_poplawski"
+				large="gfx/leaders/POL/stanislaw_poplawski.dds"
 				small = GFX_stanislaw_poplawski_picture_small
 			}
 		}
@@ -1625,7 +1631,7 @@ characters={
 		name = POL_Character_deluge_swierczewski
 		portraits = {
 			army = {
-				large="GFX_karol_swierczewski"
+				large="gfx/leaders/POL/karol_swierczewski.dds"
 				small = GFX_karol_swierczewski_picture_small
 			}
 		}
@@ -1642,7 +1648,7 @@ characters={
 		name = POL_Character_deluge_skierski
 		portraits = {
 			army = {
-				large="GFX_leonard_skierski"
+				large="gfx/leaders/POL/leonard_skierski.dds"
 				small = GFX_leonard_skierski_picture_small
 			}
 		}
@@ -1659,7 +1665,7 @@ characters={
 		name = POL_Character_deluge_dzierzanowski
 		portraits = {
 			army = {
-				large="GFX_kazimierz_dzierzanowski"
+				large="gfx/leaders/POL/kazimierz_dzierzanowski.dds"
 				small = GFX_marian_kukiel_picture_small
 			}
 		}
@@ -1676,7 +1682,7 @@ characters={
 		name = POL_Character_deluge_piskor
 		portraits = {
 			army = {
-				large="GFX_tadeusz_piskor"
+				large="gfx/leaders/POL/tadeusz_piskor.dds"
 				small = GFX_marian_kukiel_picture_small
 			}
 		}
@@ -1693,7 +1699,7 @@ characters={
 		name = POL_Character_deluge_zulauf
 		portraits = {
 			army = {
-				large="GFX_juliusz_zulauf"
+				large="gfx/leaders/POL/juliusz_zulauf.dds"
 				small = GFX_marian_kukiel_picture_small
 			}
 		}
@@ -1710,7 +1716,7 @@ characters={
 		name = POL_Character_deluge_prich
 		portraits = {
 			army = {
-				large="GFX_rudolf_prich"
+				large="gfx/leaders/POL/rudolf_prich.dds"
 				small = GFX_marian_kukiel_picture_small
 			}
 		}
@@ -1758,7 +1764,7 @@ characters={
 			}
 		}
 		advisor={
-			slot = security_chief_slot
+			slot = political_advisor
 			idea_token = POL_deluge_kozlowski
 			allowed = { tag = POL }
 			visible = {
@@ -1769,7 +1775,7 @@ characters={
 				
 			}
 			traits = {
-				archeologist_and_soldier
+				compassionate_gentleman
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian
@@ -1887,7 +1893,8 @@ characters={
 				
 			}
 			traits = {
-				minister_of_iron_railways
+				#minister_of_iron_railways
+				industry_reformer
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian
@@ -2786,7 +2793,7 @@ characters={
 		name = POL_Character_deluge_stanislaw_mikolajczyk
 		portraits={
 			civilian={
-				small="GFX_marian_zyndram_koscialowski_picture_small"
+				small="GFX_stanislaw_mikolajczyk_picture_small"
 			}
 		}
 		advisor={
@@ -2971,10 +2978,10 @@ characters={
 		name = POL_Character_deluge_stanislaw_mackiewicz
 		portraits={
 			civilian={
-				small=GFX_feliks_widy_wirski_picture_small
+				small=GFX_stanislaw_mackiewicz_picture_small
 			}
 			army={
-				small=GFX_feliks_widy_wirski_picture_small
+				small=GFX_stanislaw_mackiewicz_picture_small
 			}
 		}
 		advisor={
@@ -3041,10 +3048,10 @@ characters={
 		name = POL_Character_deluge_leszek_gembarzewski
 		portraits={
 			civilian={
-				small=GFX_aleksy_cwiakowski_picture_small
+				small=GFX_leszek_gembarzewski_picture_small
 			}
 			army={
-				small=GFX_aleksy_cwiakowski_picture_small
+				small=GFX_leszek_gembarzewski_picture_small
 			}
 		}
 		advisor={
@@ -3076,10 +3083,10 @@ characters={
 		name = POL_Character_deluge_jan_moszynski
 		portraits={
 			civilian={
-				small=GFX_aleksy_cwiakowski_picture_small
+				small=GFX_jan_moszynski_picture_small
 			}
 			army={
-				small=GFX_aleksy_cwiakowski_picture_small
+				small=GFX_jan_moszynski_picture_small
 			}
 		}
 		advisor={
@@ -3216,10 +3223,10 @@ characters={
 		name = POL_Character_deluge_edward_saryusz_stokowski
 		portraits={
 			civilian={
-				small=GFX_jozef_jankowski_picture_small
+				small=GFX_edward_saryusz_stokowski_picture_small
 			}
 			army={
-				small=GFX_jozef_jankowski_picture_small
+				small=GFX_edward_saryusz_stokowski_picture_small
 			}
 		}
 		advisor={
@@ -3251,10 +3258,10 @@ characters={
 		name = POL_Character_deluge_eustachy_sapieha
 		portraits={
 			civilian={
-				small=GFX_jozef_jankowski_picture_small
+				small=GFX_eustachy_sapieha_picuture_small
 			}
 			army={
-				small=GFX_jozef_jankowski_picture_small
+				small=GFX_eustachy_sapieha_picuture_small
 			}
 		}
 		advisor={
@@ -3286,10 +3293,10 @@ characters={
 		name = POL_Character_deluge_waclaw_niemojowski
 		portraits={
 			civilian={
-				small=GFX_jozef_jankowski_picture_small
+				small=GFX_waclaw_niemojowski_picture_small
 			}
 			army={
-				small=GFX_jozef_jankowski_picture_small
+				small=GFX_waclaw_niemojowski_picture_small
 			}
 		}
 		advisor={
@@ -3321,10 +3328,10 @@ characters={
 		name = POL_Character_deluge_jan_kochanowski
 		portraits={
 			civilian={
-				small=GFX_jozef_jankowski_picture_small
+				small=GFX_jan_karol_kochanowski_picture_small
 			}
 			army={
-				small=GFX_jozef_jankowski_picture_small
+				small=GFX_jan_karol_kochanowski_picture_small
 			}
 		}
 		advisor={

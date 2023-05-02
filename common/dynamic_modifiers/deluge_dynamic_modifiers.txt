@@ -71,6 +71,19 @@ POL_rivalry_between_POW_and_WP_dynamic_modifier = { ##POL_WPvsPOW_
 	railway_gun_bombardment_factor = POL_WPvsPOW_railway_gun_bombardment_factor
 	army_artillery_attack_factor = POL_WPvsPOW_army_artillery_attack_factor
 	army_artillery_defence_factor = POL_WPvsPOW_army_artillery_defence_factor
+	naval_torpedo_reveal_chance_factor = POL_WPvsPOW_naval_torpedo_reveal_chance_factor
+	navy_submarine_defence_factor = POL_WPvsPOW_navy_submarine_defence_factor
+	navy_submarine_attack_factor = POL_WPvsPOW_navy_submarine_attack_factor
+	naval_torpedo_cooldown_factor = POL_WPvsPOW_naval_torpedo_cooldown_factor
+	navy_max_range_factor = POL_WPvsPOW_navy_max_range_factor
+	naval_critical_score_chance_factor = POL_WPvsPOW_naval_critical_score_chance_factor
+	naval_detection = POL_WPvsPOW_naval_detection
+	navy_capital_ship_attack_factor = POL_WPvsPOW_navy_capital_ship_attack_factor
+	navy_capital_ship_defence_factor = POL_WPvsPOW_navy_capital_ship_defence_factor
+	river_crossing_factor = POL_WPvsPOW_river_crossing_factor
+	command_abilities_cost_factor = POL_WPvsPOW_command_abilities_cost_factor
+	max_command_power = POL_WPvsPOW_max_command_power
+	experience_gain_artillery_combat_factor = POL_WPvsPOW_experience_gain_artillery_combat_factor
 }
 POL_current_state_of_development = { ##POL_development_
 	enable = { always = yes }

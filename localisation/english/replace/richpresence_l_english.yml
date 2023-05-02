@@ -1,0 +1,11 @@
+﻿l_english:
+ SOCIAL_DSTATUS_IN_MAIN_MENU:0 "In the Main Menu with Apres Nous Le Deluge mod"
+ SOCIAL_DSTATUS_IN_SP_LOBBY:0 "In the Singleplayer Lobby with Apres Nous Le Deluge mod"
+ SOCIAL_DSTATUS_IN_MP_LOBBY:0 "In the Multiplayer Lobby with Apres Nous Le Deluge mod"
+ SOCIAL_DSTATUS_PLAYING:0 "Playing with Apres Nous Le Deluge mod"
+ SOCIAL_DSTATUS_PLAYING_AS:0 "Playing with Apres Nous Le Deluge mod as $COUNTRY$ in $YEAR$"
+ SOCIAL_DSTATUS_PLAYING_GAME:0 "Playing $GAME$ with Apres Nous Le Deluge mod"
+ SOCIAL_DSTATUS_PLAYING_SOME_GAME:0 "Playing another game with Apres Nous Le Deluge mod"
+ SOCIAL_DSTATUS_OBSERVING:0 "Observing with Apres Nous Le Deluge mod"
+ SOCIAL_DSTATUS_OBSERVING_AS:1 "Observing with Apres Nous Le Deluge mod as $COUNTRY$ in $YEAR$"
+ SOCIAL_DSTATUS_BLOCKED_STATUS:0 " "

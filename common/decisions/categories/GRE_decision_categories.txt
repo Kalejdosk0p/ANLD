@@ -1,0 +1,57 @@
+form_greater_greece_category = {
+	icon = GFX_decision_category_generic_formable_nations
+	picture = GFX_decision_cat_picture_form_greater_greece
+	priority = 2
+	allowed = {
+		original_tag = GRE
+	}
+	visible = {
+		always = yes
+	}
+	on_map_area = {
+		state = 47
+		state = 731
+		state = 185
+		state = 805
+		state = 186
+		state = 182
+		state = 187
+		state = 184
+		state = 341
+		state = 340
+		state = 339
+		state = 342
+		state = 164
+		state = 183
+		state = 106
+		name = GRE_provinces_needed		
+		zoom = 75	
+	}
+	on_map_area = {
+		state = 47
+		state = 731
+		state = 185
+		state = 805
+		state = 186
+		state = 182
+		state = 187
+		state = 184
+		state = 341
+		state = 340
+		state = 339
+		state = 342
+		state = 164
+		state = 183
+		state = 106
+		state = 347
+		state = 49
+		state = 343
+		state = 345
+		state = 346
+		state = 44
+		state = 801
+		name = GRE_provinces_cored		
+		zoom = 75	
+	}
+	visible_when_empty = no
+}

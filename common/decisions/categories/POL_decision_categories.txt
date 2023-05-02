@@ -24,6 +24,7 @@ integration_category = {
 			POL = { has_completed_focus = POL_lechitic_legacy }
 			POL = { has_completed_focus = POL_torch_for_all_slavs }
 			POL = { has_completed_focus = POL_clean_the_ghettos }
+			POL = { has_completed_focus = POL_fight_jewish_influence }
 		}
 	}
 	visible_when_empty = no
@@ -36,7 +37,12 @@ seek_enemies_category = {
 		original_tag = POL
 	}
 	visible = {
-		POL = { has_completed_focus = POL_seek_enemies }
+		POL = {
+			OR = {
+				has_completed_focus = POL_seek_enemies
+				#has_completed_focus = POL_new_revanchist_policy
+			}
+		}
 	}
 	visible_when_empty = no
 }
@@ -48,7 +54,10 @@ seek_collaboration_category = {
 		original_tag = POL
 	}
 	visible = {
+		OR = {
 			POL = { has_completed_focus = POL_seek_collaboration }
+			POL = { has_completed_focus = POL_new_revanchist_policy }
+		}
 	}
 	visible_when_empty = no
 }

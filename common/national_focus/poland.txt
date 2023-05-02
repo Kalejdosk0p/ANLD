@@ -2766,9 +2766,8 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.15
 			}
-			add_to_variable = { POL_zadruga_conscription = 0.01}
-			add_to_variable = { POL_zadruga_army_attack_against_major_factor = 0.1}
 			add_to_variable = { POL_zadruga_army_defence_against_major_factor = 0.1}
+			add_to_variable = { POL_zadruga_army_attack_against_major_factor = 0.1}
 			custom_effect_tooltip = POL_custom_effect_tooltip_68
 		}
 		ai_will_do = {
@@ -2963,8 +2962,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_to_variable = {POL_zadruga_research_speed_factor = 0.02}
-			add_to_variable = {POL_zadruga_army_core_attack_factor = 0.05}
-			add_to_variable = {POL_zadruga_army_core_defence_factor = 0.05}
+			add_to_variable = {POL_zadruga_army_core_attack_factor = 0.03}
+			add_to_variable = {POL_zadruga_army_core_defence_factor = 0.03}
 			add_to_variable = {POL_zadruga_war_support_factor = 0.1}
 			custom_effect_tooltip = POL_custom_effect_tooltip_72
 			if = {
@@ -3013,6 +3012,35 @@ focus_tree = {
 			set_rule = {
 				can_generate_female_aces = yes
 			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}		
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_cult_of_emilia_plater
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		prerequisite = { focus = POL_liberate_women_from_catholic_slavery }
+		relative_position_id = POL_liberate_women_from_catholic_slavery
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_LAND_ARMY FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_to_variable = {POL_zadruga_conscription = 0.03}
+			add_to_variable = {POL_zadruga_army_core_defence_factor = 0.02}
+			add_to_variable = {POL_zadruga_monthly_population = 0.1}
+			custom_effect_tooltip = POL_custom_effect_tooltip_170
+			
 		}
 		ai_will_do = {
 			factor = 20
@@ -3233,9 +3261,9 @@ focus_tree = {
 				add_political_power = 50
 				add_stability = 0.05
 			}
-			add_to_variable = {POL_zadruga_army_attack_factor = 0.05}
-			add_to_variable = {POL_zadruga_army_defence_factor = 0.05}
-			add_to_variable = {POL_zadruga_conscription = -0.02}
+			add_to_variable = {POL_zadruga_army_attack_factor = 0.02}
+			add_to_variable = {POL_zadruga_army_defence_factor = 0.02}
+			add_to_variable = {POL_zadruga_conscription = -0.01}
 			custom_effect_tooltip = POL_custom_effect_tooltip_80
 			retire_character = POL_deluge_julian_tuwin
 			retire_character = POL_deluge_janusz_korczak
@@ -3254,7 +3282,7 @@ focus_tree = {
 	focus = {
 		id = POL_incorporate_beauty_of_east
 		icon = GFX_focus_SOV_reinforce_southern_naval_bases
-		x = 1
+		x = -1
 		y = 2
 		prerequisite = { focus = POL_remember_niklots_sacriface}
 		relative_position_id = POL_keep_friends_from_above_baltic
@@ -3284,7 +3312,7 @@ focus_tree = {
 	focus = {
 		id = POL_return_of_ancient_faith
 		icon = GFX_restore_the_ancient_faith
-		x = 1
+		x = 0
 		y = 1
 		prerequisite = { focus = POL_incorporate_beauty_of_east focus = POL_eliminate_przechrztowie}
 		relative_position_id = POL_eliminate_przechrztowie
@@ -3331,7 +3359,7 @@ focus_tree = {
 	focus = {
 		id = POL_the_true_messiah_arrival
 		icon = GFX_focus_generic_fascist_propaganda
-		x = -1
+		x = 0
 		y = 1
 		prerequisite = { focus = POL_incorporate_beauty_of_east focus = POL_eliminate_przechrztowie}
 		relative_position_id = POL_incorporate_beauty_of_east
@@ -4895,7 +4923,7 @@ focus_tree = {
 	focus = {
 		id = POL_divide_and_conquer
 		icon = GFX_focus_generic_military_dictatorship
-		x = 111
+		x = 119
 		y = 0
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS FOCUS_FILTER_POLITICAL}
 		cost = 5
@@ -5126,7 +5154,7 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = POL_new_foreign_policy }
 		relative_position_id = POL_new_foreign_policy
-		mutually_exclusive = {focus = POL_support_other_democracies focus = POL_world_revolution}
+		#mutually_exclusive = {focus = POL_support_other_democracies focus = POL_world_revolution}
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
 		cost = 10
 		available = {
@@ -5153,7 +5181,7 @@ focus_tree = {
 		prerequisite = { focus = POL_new_foreign_policy }
 		prerequisite = { focus = POL_legacy_of_polish_legions_in_lombardy }
 		relative_position_id = POL_new_foreign_policy
-		mutually_exclusive = {focus = POL_world_revolution focus = POL_royal_marriages}
+		#mutually_exclusive = {focus = POL_world_revolution focus = POL_royal_marriages}
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
 		cost = 10
 		available = {
@@ -5173,8 +5201,72 @@ focus_tree = {
 		available_if_capitulated = yes
 	}
 	focus = {
-		id = POL_world_revolution
-		icon = GFX_focus_ETH_callout_to_the_world
+		id = POL_new_revanchist_policy
+		icon = GFX_goal_generic_major_war
+		x = -2
+		y = 1
+		prerequisite = { focus = POL_support_other_democracies focus = POL_royal_marriages focus = POL_new_revolution}
+		relative_position_id = POL_support_other_democracies
+		mutually_exclusive = {focus = POL_european_cooperation }
+		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
+		mutually_exclusive = {focus = POL_european_cooperation focus = POL_world_revolution }
+		cost = 8
+		available = {
+			OR = {
+				has_completed_focus = POL_ND_wins
+				has_completed_focus = POL_monarchists_take_power
+				has_completed_focus = POL_NSPR_wins
+				has_completed_focus = POL_NSP_wins
+				has_completed_focus = POL_PKWN_wins
+			}
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_european_cooperation
+		icon = GFX_focus_usa_focus_on_europe
+		x = 0
+		y = 1
+		prerequisite = { focus = POL_support_other_democracies focus = POL_royal_marriages focus = POL_new_revolution}
+		relative_position_id = POL_support_other_democracies
+		mutually_exclusive = {focus = POL_new_revanchist_policy focus = POL_world_revolution }
+		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
+		cost = 8
+		available = {
+			OR = {
+				has_completed_focus = POL_PSL_wins
+				has_completed_focus = POL_PKWN_wins
+				has_completed_focus = POL_PPS_wins
+				has_completed_focus = POL_monarchists_take_power
+			}
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_new_revolution
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
 		x = 3
 		y = 1
 		prerequisite = { focus = POL_new_foreign_policy }
@@ -5200,9 +5292,37 @@ focus_tree = {
 		available_if_capitulated = yes
 	}
 	focus = {
+		id = POL_world_revolution
+		icon = GFX_focus_ETH_callout_to_the_world
+		x = 0
+		y = 1
+		prerequisite = { focus = POL_new_revolution }
+		relative_position_id = POL_new_revolution
+		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
+		mutually_exclusive = {focus = POL_new_revanchist_policy focus = POL_european_cooperation }
+		cost = 10
+		available = {
+			has_completed_focus = POL_KPP_wins
+			has_completed_focus = POL_PPS_wins
+			has_completed_focus = POL_PKWN_wins
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
 		id = POL_legacy_of_polish_legions_in_lombardy
 		icon = GFX_Banner_of_1st_Polish_Legion_in_Italy_focus
-		x = 116
+		x = 124
 		y = 1
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS FOCUS_FILTER_WAR_SUPPORT}
 		cost = 8
@@ -5228,7 +5348,7 @@ focus_tree = {
 	focus = {
 		id = POL_establish_LMiR
 		icon = GFX_focus_POL_colonial_league
-		x = 2
+		x = 5
 		y = 1
 		prerequisite = {focus = POL_navy_reform}
 		prerequisite = {focus = POL_legacy_of_polish_legions_in_lombardy}
@@ -5236,11 +5356,141 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_COLONIALISM}
 		cost = 8
 		available = {
+			always = false
 			OR = {
 				has_completed_focus = POL_continue_with_sanation
 				has_completed_focus = POL_monarchists_take_power
 				has_completed_focus = POL_democracy_prevails
 			}
+		}
+		completion_reward = {
+			swap_ideas = {
+				add_idea = POL_legacy_of_polish_legions_in_italy_2
+				remove_idea = POL_legacy_of_polish_legions_in_italy
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_advisors
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_fate_of_madagascar
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 1
+		y = 1
+		prerequisite = {focus = POL_establish_LMiR}
+		relative_position_id = POL_establish_LMiR
+		search_filters = {FOCUS_FILTER_COLONIALISM}
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_fate_of_gambia
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = -1
+		y = 1
+		prerequisite = {focus = POL_establish_LMiR}
+		relative_position_id = POL_establish_LMiR
+		search_filters = {FOCUS_FILTER_COLONIALISM}
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_old_ties_with_haiti
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 0
+		y = 2
+		prerequisite = {focus = POL_establish_LMiR}
+		relative_position_id = POL_establish_LMiR
+		search_filters = {FOCUS_FILTER_COLONIALISM}
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_fate_of_tobago
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = -2
+		y = 2
+		prerequisite = {focus = POL_establish_LMiR}
+		relative_position_id = POL_establish_LMiR
+		search_filters = {FOCUS_FILTER_COLONIALISM}
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_ties_with_parana
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 2
+		y = 2
+		prerequisite = {focus = POL_establish_LMiR}
+		relative_position_id = POL_establish_LMiR
+		search_filters = {FOCUS_FILTER_COLONIALISM}
+		cost = 8
+		available = {
+			
 		}
 		completion_reward = {
 			
@@ -5745,6 +5995,7 @@ focus_tree = {
 				ideology = neutrality
 				popularity = -0.05
 			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_1
 		}
 		ai_will_do = {
 			factor = 40
@@ -7405,7 +7656,7 @@ focus_tree = {
 	focus = {
 		id = POL_get_rid_of_opium_for_masses
 		icon = GFX_force_atheism
-		x = 2
+		x = 7
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -7482,7 +7733,7 @@ focus_tree = {
 	focus = {
 		id = POL_dictatorship_of_proletariat
 		icon = GFX_focus_SOV_ivan_plays_baseball
-		x = -4
+		x = -2
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -7536,7 +7787,7 @@ focus_tree = {
 	focus = {
 		id = POL_centrally_planned_economy
 		icon = GFX_focus_generic_energy
-		x = -1
+		x = 0
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -7687,7 +7938,7 @@ focus_tree = {
 	focus = {
 		id = POL_alliance_with_church
 		icon = GFX_focus_por_concordat
-		x = -2
+		x = 4
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -7841,7 +8092,7 @@ focus_tree = {
 	focus = {
 		id = POL_establish_secret_police
 		icon = GFX_goal_generic_military_deal
-		x = 0
+		x = 10
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -7866,7 +8117,7 @@ focus_tree = {
 	focus = {
 		id = POL_polish_revolutionary_directorate
 		icon = GFX_focus_focus_fra_revolution_utmost
-		x = 4
+		x = 5
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8028,7 +8279,7 @@ focus_tree = {
 	focus = {
 		id = POL_integrate_PNS
 		icon = GFX_focus_SOV_ivan_plays_baseball
-		x = 0
+		x = 3
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8053,7 +8304,7 @@ focus_tree = {
 	focus = {
 		id = POL_integrate_futurists
 		icon = GFX_goal_generic_dangerous_deal
-		x = 2
+		x = 5
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8078,12 +8329,12 @@ focus_tree = {
 	focus = {
 		id = POL_integrate_SCh
 		icon = GFX_SCh_logo
-		x = 0
+		x = 7
 		y = 1
 		search_filters = {}
 		cost = 5
-		prerequisite = { focus = POL_integrate_PNS focus = POL_integrate_futurists}
-		relative_position_id = POL_integrate_PNS
+		prerequisite = { focus = POL_militaristic_tendencies focus = POL_technocratic_tendencies focus = POL_christian_socialist_realism focus = POL_cult_of_the_wodz focus = POL_cult_of_the_revolution}
+		relative_position_id = POL_militaristic_tendencies
 		available = {
 			
 		}
@@ -8103,12 +8354,12 @@ focus_tree = {
 	focus = {
 		id = POL_integrate_anarchists
 		icon = GFX_focus_SOV_ivan_plays_baseball
-		x = 0
+		x = 9
 		y = 1
 		search_filters = {}
 		cost = 5
-		prerequisite = { focus = POL_integrate_PNS focus = POL_integrate_futurists}
-		relative_position_id = POL_integrate_futurists
+		prerequisite = { focus = POL_militaristic_tendencies focus = POL_technocratic_tendencies focus = POL_christian_socialist_realism focus = POL_cult_of_the_wodz focus = POL_cult_of_the_revolution}
+		relative_position_id = POL_militaristic_tendencies
 		available = {
 			
 		}
@@ -8128,7 +8379,7 @@ focus_tree = {
 	focus = {
 		id = POL_continue_pluralism_in_party
 		icon = GFX_goal_generic_national_unity
-		x = 0
+		x = -2
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8156,7 +8407,7 @@ focus_tree = {
 	focus = {
 		id = POL_reform_into_pzpr
 		icon = GFX_focus_SOV_ivan_plays_baseball
-		x = 2
+		x = 0
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8184,14 +8435,14 @@ focus_tree = {
 	focus = {
 		id = POL_unquestionable_role_of_mister_chairman
 		icon = GFX_focus_generic_join_comintern
-		x = 1
-		y = 1
+		x = 0
+		y = 2
 		search_filters = {}
 		cost = 5
 		prerequisite = { focus = POL_reform_into_pzpr focus = POL_dictatorship_of_proletariat }
-		relative_position_id = POL_reform_into_pzpr
+		relative_position_id = POL_dictatorship_of_proletariat
 		available = {
-			#has_completed_focus = POL_PKWN_wins
+			
 		}
 		completion_reward = {
 			
@@ -8209,7 +8460,7 @@ focus_tree = {
 	focus = {
 		id = POL_nationalize_foreign_industry
 		icon = GFX_goal_generic_consumer_goods
-		x = -4
+		x = 8
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8492,7 +8743,7 @@ focus_tree = {
 	focus = {
 		id = POL_encourage_class_war
 		icon = GFX_focus_spr_class_war
-		x = 4
+		x = 10
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8517,7 +8768,7 @@ focus_tree = {
 	focus = {
 		id = POL_communist_youth_organisation
 		icon = GFX_focus_generic_support_the_left_right
-		x = 6
+		x = 12
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8542,7 +8793,7 @@ focus_tree = {
 	focus = {
 		id = POL_workers_militia
 		icon = GFX_focus_ITA_peasants_rise
-		x = 8
+		x = 14
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -8899,7 +9150,7 @@ focus_tree = {
 	focus = {
 		id = POL_start_army_reform
 		icon = GFX_focus_POL_prepare_for_the_inevitable
-		x = 145
+		x = 150
 		y = 0
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		cost = 10
@@ -9070,8 +9321,22 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = {POL_WPvsPOW_railway_gun_bombardment_factor = 0.05}
-			custom_effect_tooltip = POL_custom_effect_tooltip_118
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				add_to_variable = {POL_WPvsPOW_railway_gun_bombardment_factor = 0.05}
+				custom_effect_tooltip = POL_custom_effect_tooltip_118
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_to_variable = {POL_WPvsPOW_experience_gain_artillery_combat_factor = 0.07}
+				custom_effect_tooltip = POL_custom_effect_tooltip_173
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -9280,7 +9545,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = {POL_WPvsPOW_max_dig_in_factor = 0.1}
+			add_to_variable = {POL_WPvsPOW_max_dig_in_factor = 0.05}
 			add_ideas = POL_mass_production_of_support_equipment
 			custom_effect_tooltip = POL_custom_effect_tooltip_115
 		}
@@ -9547,6 +9812,50 @@ focus_tree = {
 				bonus = 1
 				uses = 1
 				category = support_tech 
+			}
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				create_equipment_variant = {
+					name = "14TP"
+					type = medium_tank_chassis_2
+					parent_version = 0
+					modules = {
+						main_armament_slot = tank_medium_cannon_2
+						turret_type_slot = tank_medium_three_man_tank_turret
+						suspension_type_slot = tank_interleaved_suspension
+						armor_type_slot = tank_welded_armor
+						engine_type_slot = tank_gasoline_engine
+						special_type_slot_1 = tank_radio_3
+						special_type_slot_2 = additional_machine_guns
+						special_type_slot_3 = additional_machine_guns
+					}
+					upgrades = {
+						tank_nsb_engine_upgrade = 4
+						tank_nsb_armor_upgrade = 3
+					}
+					icon = "GFX_POL_improved_medium_tank_medium"
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				create_equipment_variant = {
+					name = "14TP"
+					type = improved_medium_tank
+					parent_version = 0
+					upgrades = {
+						tank_gun_upgrade = 4
+						tank_armor_upgrade = 4
+						tank_engine_upgrade = 4
+						tank_reliability_upgrade = 4
+					}
+					icon = "GFX_POL_improved_medium_tank_medium"
+				}
 			}
 		}
 		ai_will_do = {
@@ -10011,14 +10320,74 @@ focus_tree = {
 		available_if_capitulated = yes
 	}
 	focus = {
+		id = POL_decentralised_high_command
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_LAND_ARMY}
+		prerequisite = { focus = POL_land_mine_detectors focus = POL_wz_35_anti_tank_rifle}
+		relative_position_id = POL_land_mine_detectors
+		cost = 8
+		mutually_exclusive = {
+			focus = POL_centralised_high_command
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_to_variable = {POL_WPvsPOW_max_command_power = 80}
+			add_to_variable = {POL_WPvsPOW_command_power_gain_mult = -0.1}
+			add_to_variable = {POL_WPvsPOW_command_abilities_cost_factor = -0.15}
+			custom_effect_tooltip = POL_custom_effect_tooltip_171
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_centralised_high_command
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_LAND_ARMY}
+		prerequisite = { focus = POL_land_mine_detectors focus = POL_wz_35_anti_tank_rifle}
+		relative_position_id = POL_wz_35_anti_tank_rifle
+		cost = 8
+		mutually_exclusive = {
+			focus = POL_decentralised_high_command
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			add_to_variable = {POL_WPvsPOW_command_power_gain_mult = 0.15}
+			add_to_variable = {POL_WPvsPOW_command_abilities_cost_factor = -0.2}
+			custom_effect_tooltip = POL_custom_effect_tooltip_172
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
 		id = POL_establish_new_academies
 		icon = GFX_focus_generic_military_academy
 		x = 1
 		y = 1
 		search_filters = {FOCUS_FILTER_LAND_ARMY}
-		prerequisite = { focus = POL_wz_35_anti_tank_rifle}
-		prerequisite = { focus = POL_land_mine_detectors}
-		relative_position_id = POL_land_mine_detectors
+		prerequisite = { focus = POL_decentralised_high_command focus = POL_centralised_high_command}
+		relative_position_id = POL_decentralised_high_command
 		cost = 8
 		available = {
 			
@@ -10040,7 +10409,7 @@ focus_tree = {
 	focus = {
 		id = POL_navy_reform
 		icon = GFX_goal_generic_navy_doctrines_tactics
-		x = -23
+		x = -15
 		y = 1
 		search_filters = {FOCUS_FILTER_NAVY}
 		prerequisite = { focus = POL_start_army_reform }
@@ -10194,6 +10563,107 @@ focus_tree = {
 		available_if_capitulated = yes
 	}
 	focus = {
+		id = POL_maritime_defence_fund
+		icon = GFX_goal_generic_construct_naval_dockyard 
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_NAVY }
+		prerequisite = { focus = POL_coast_defence focus = POL_listen_to_orlicz_dreszer}
+		relative_position_id = POL_coast_defence
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = POL_maritime_defence_fund_idea
+				days = 300
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				create_equipment_variant = {
+					name = "Orzeł Class"				
+					type = ship_hull_submarine_3
+					name_group = POL_SS_HISTORICAL
+					parent_version = 0
+					modules = {
+						fixed_ship_torpedo_slot = ship_torpedo_sub_3
+						fixed_ship_engine_slot = sub_ship_engine_3
+						rear_1_custom_slot = ship_torpedo_sub_3
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Man the Guns"
+					}
+				}
+				add_tech_bonus = {
+					name = POL_lazy_research_bonus
+					bonus = 1
+					uses = 1
+					category = ss_tech
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_expand_river_flotillas
+		icon = GFX_focus_generic_torpedo_production
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_NAVY FOCUS_FILTER_RESEARCH}
+		prerequisite = { focus = POL_maritime_defence_fund }
+		relative_position_id = POL_maritime_defence_fund
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_to_variable = {POL_WPvsPOW_river_crossing_factor = -0.03}
+			custom_effect_tooltip = POL_custom_effect_tooltip_169
+			add_tech_bonus = {
+				name = POL_lazy_research_bonus
+				bonus = 1
+				uses = 1
+				category = marine_tech
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
 		id = POL_design_the_giants
 		icon = GFX_focus_generic_destroyer
 		x = 0
@@ -10220,6 +10690,102 @@ focus_tree = {
 				uses = 2
 				category = bb_tech
 			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_upgrade_beasts_of_surface
+		icon = GFX_goal_generic_navy_carrier
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_NAVY}
+		prerequisite = { focus = POL_design_the_giants }
+		relative_position_id = POL_design_the_giants
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_to_variable = {POL_WPvsPOW_navy_capital_ship_attack_factor = 0.03}
+			add_to_variable = {POL_WPvsPOW_navy_capital_ship_defence_factor = 0.03}
+			add_to_variable = {POL_WPvsPOW_naval_detection = 0.05}
+			add_to_variable = {POL_WPvsPOW_naval_critical_score_chance_factor = 0.05}
+			custom_effect_tooltip = POL_custom_effect_tooltip_168
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_plan_underwater_ORPs
+		icon = GFX_focus_generic_midget_submarines
+		x = 0
+		y = 2
+		search_filters = {FOCUS_FILTER_NAVY FOCUS_FILTER_RESEARCH}
+		prerequisite = { focus = POL_hidden_fleet }
+		prerequisite = { focus = POL_coast_defence focus = POL_listen_to_orlicz_dreszer }
+		relative_position_id = POL_hidden_fleet
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			navy_experience = 50
+			add_tech_bonus = {
+				name = POL_lazy_research_bonus
+				bonus = 0.6
+				uses = 2
+				category = ss_tech
+			}
+			add_tech_bonus = {
+				name = POL_lazy_research_bonus
+				bonus = 0.6
+				uses = 2
+				category = cat_torpedoes
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_upgrade_beasts_of_depth
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_NAVY}
+		prerequisite = { focus = POL_plan_underwater_ORPs }
+		relative_position_id = POL_plan_underwater_ORPs
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_to_variable = {POL_WPvsPOW_naval_torpedo_reveal_chance_factor = -0.05}
+			add_to_variable = {POL_WPvsPOW_navy_submarine_defence_factor = 0.03}
+			add_to_variable = {POL_WPvsPOW_navy_submarine_attack_factor = 0.03}
+			add_to_variable = {POL_WPvsPOW_naval_torpedo_cooldown_factor = -0.05}
+			custom_effect_tooltip = POL_custom_effect_tooltip_167
 		}
 		ai_will_do = {
 			factor = 20

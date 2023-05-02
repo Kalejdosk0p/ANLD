@@ -276,9 +276,9 @@ on_actions = {
 						has_full_control_of_state = 68
 					}
 				}
-				set_province_name = { id = 3473 name = "Lubuskie" }
-				set_province_name = { id = 11415 name = "Chociebóż" }
-				68 = { set_state_name = "Kostrzyńskie" }
+				set_province_name = { id = 3473 name = "Kostrzyń" }
+				set_province_name = { id = 11415 name = "Chociebuż" }
+				68 = { set_state_name = "Lubuskie" }
 			}
 			if = {#EASTERN GERMANY to POL
 				limit = {

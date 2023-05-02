@@ -1,0 +1,38 @@
+defined_text = {
+	name = GetListenToOrliczDreszerName
+	text = {
+		trigger = {
+			original_tag = POL
+			has_character = POL_deluge_Orlicz_Dreszer
+		}
+		localization_key = POL_ListenToOrliczDreszer_has_Dreszer
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			NOT = {
+				has_character = POL_deluge_Orlicz_Dreszer
+			}
+		}
+		localization_key = POL_ListenToOrliczDreszer_has_not_Dreszer
+	}
+}
+defined_text = {
+	name = GetListenToOrliczDreszerNameDESC
+	text = {
+		trigger = {
+			original_tag = POL
+			has_character = POL_deluge_Orlicz_Dreszer
+		}
+		localization_key = POL_ListenToOrliczDreszer_has_DreszerDESC
+	}
+	text = {
+		trigger = {
+			original_tag = POL
+			NOT = {
+				has_character = POL_deluge_Orlicz_Dreszer
+			}
+		}
+		localization_key = POL_ListenToOrliczDreszer_has_not_DreszerDESC
+	}
+}
