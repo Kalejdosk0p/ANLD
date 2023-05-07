@@ -896,15 +896,15 @@ spriteTypes = {
 		legacy_lazy_load = no	
 	}
 	SpriteType = {
-		name = "GFX_Endencja_cooperation"
-		texturefile = "gfx/interface/goals/Endencja_cooperation.dds"			
+		name = "GFX_goal_endecja_cooperation"
+		texturefile = "gfx/interface/goals/goal_endecja_cooperation.dds"			
 	}
 	SpriteType = {
-		name = "GFX_Endencja_cooperation_shine"
-		texturefile = "gfx/interface/goals/Endencja_cooperation.dds"
+		name = "GFX_goal_endecja_cooperation_shine"
+		texturefile = "gfx/interface/goals/goal_endecja_cooperation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Endencja_cooperation.dds"
+			animationmaskfile = "gfx/interface/goals/goal_endecja_cooperation.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -917,7 +917,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Endencja_cooperation.dds"
+			animationmaskfile = "gfx/interface/goals/goal_endecja_cooperation.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2496,43 +2496,6 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_onr_falanga_logo"
-		texturefile = "gfx/interface/goals/onr_falanga_logo.dds"			
-	}
-
-	SpriteType = {
-		name = "GFX_onr_falanga_logo_shine"
-		texturefile = "gfx/interface/goals/onr_falanga_logo.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/onr_falanga_logo.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
-			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-
-		animation = {
-			animationmaskfile = "gfx/interface/goals/onr_falanga_logo.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
-			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no	
-	}
-	
-	SpriteType = {
 		name = "GFX_partly_free_elections"
 		texturefile = "gfx/interface/goals/partly_free_elections.dds"			
 	}
@@ -2977,16 +2940,16 @@ spriteTypes = {
 	}
 	
 	SpriteType = {
-		name = "GFX_nspr_logo2"
-		texturefile = "gfx/interface/goals/nspr_logo2.dds"			
+		name = "GFX_goal_nspr"
+		texturefile = "gfx/interface/goals/goal_nspr.dds"			
 	}
 
 	SpriteType = {
-		name = "GFX_nspr_logo2_shine"
-		texturefile = "gfx/interface/goals/nspr_logo2.dds"
+		name = "GFX_goal_nspr_shine"
+		texturefile = "gfx/interface/goals/goal_nspr.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/nspr_logo2.dds"
+			animationmaskfile = "gfx/interface/goals/goal_nspr.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2999,7 +2962,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/nspr_logo2.dds"
+			animationmaskfile = "gfx/interface/goals/goal_nspr.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -3529,16 +3492,16 @@ spriteTypes = {
 	}
 	
 	SpriteType = { 
-		name = "GFX_Endecja2"
-		texturefile = "gfx/interface/goals/Endecja2.dds"
+		name = "GFX_goal_endecja"
+		texturefile = "gfx/interface/goals/goal_endecja.dds"
 	}
 
 	SpriteType = { 
-		name = "GFX_Endecja2_shine"
-		texturefile = "gfx/interface/goals/Endecja2.dds"
+		name = "GFX_goal_endecja_shine"
+		texturefile = "gfx/interface/goals/goal_endecja.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Endecja2.dds"
+			animationmaskfile = "gfx/interface/goals/goal_endecja.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -3550,7 +3513,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Endecja2.dds"
+			animationmaskfile = "gfx/interface/goals/goal_endecja.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no
@@ -3565,16 +3528,16 @@ spriteTypes = {
 	}
 	
 	SpriteType = { 
-		name = "GFX_Endencja_cooperation2"
-		texturefile = "gfx/interface/goals/Endencja_cooperation2.dds"
+		name = "GFX_goal_endecja_cooperation"
+		texturefile = "gfx/interface/goals/goal_endecja_cooperation.dds"
 	}
 
 	SpriteType = { 
-		name = "GFX_Endencja_cooperation2_shine"
-		texturefile = "gfx/interface/goals/Endencja_cooperation2.dds"
+		name = "GFX_goal_endecja_cooperation_shine"
+		texturefile = "gfx/interface/goals/goal_endecja_cooperation.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Endencja_cooperation2.dds"
+			animationmaskfile = "gfx/interface/goals/goal_endecja_cooperation.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = -90.0
 			animationlooping = no
@@ -3586,7 +3549,79 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 } 
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/Endencja_cooperation2.dds"
+			animationmaskfile = "gfx/interface/goals/goal_endecja_cooperation.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_goal_pkwn"
+		texturefile = "gfx/interface/goals/goal_pkwn.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_pkwn_shine"
+		texturefile = "gfx/interface/goals/goal_pkwn.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_pkwn.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_pkwn.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = 90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no
+	}
+	
+	SpriteType = { 
+		name = "GFX_goal_pzpr"
+		texturefile = "gfx/interface/goals/goal_pzpr.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_pzpr_shine"
+		texturefile = "gfx/interface/goals/goal_pzpr.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_pzpr.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = no
+			animationtime = 0.75
+			animationdelay = 0
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_pzpr.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
 			animationrotation = 90.0
 			animationlooping = no

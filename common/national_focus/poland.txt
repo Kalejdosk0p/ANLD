@@ -971,7 +971,7 @@ focus_tree = {
 		icon = GFX_LIT_death_industry
 		x = -2
 		y = 2
-		prerequisite = { focus = POL_start_project_in_north_east }
+		prerequisite = { focus = POL_start_project_in_kashubia }
 		relative_position_id = POL_start_project_in_north_east
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cost = 7
@@ -2002,7 +2002,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_invite_ND_to_government
-		icon = GFX_Endencja_cooperation2
+		icon = GFX_goal_endecja_cooperation
 		x = 3
 		y = 1
 		prerequisite = { focus = POL_sikorski_wins }
@@ -3448,7 +3448,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_seek_support_from_ND
-		icon = GFX_Endencja_cooperation2
+		icon = GFX_goal_endecja_cooperation
 		x = -1
 		y = 1
 		prerequisite = { focus = POL_piasecki_wins}
@@ -3478,7 +3478,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_ONR_takes_over
-		icon = GFX_onr_falanga_logo2 #GFX_focus_POL_riot_of_37 # GFX_onr_falanga_logo
+		icon = GFX_onr_falanga_logo2
 		x = 6
 		y = 1
 		prerequisite = { focus = POL_purge_the_party}
@@ -5539,7 +5539,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_ND_wins
-		icon = GFX_Endecja2
+		icon = GFX_goal_endecja
 		x = -2
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -8065,7 +8065,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_PKWN_wins
-		icon = GFX_focus_SOV_the_supreme_soviet
+		icon = GFX_goal_pkwn
 		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -8406,7 +8406,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_reform_into_pzpr
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_goal_pzpr
 		x = 0
 		y = 1
 		search_filters = {}
@@ -9122,7 +9122,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_NSPR_wins
-		icon = GFX_nspr_logo2
+		icon = GFX_goal_nspr
 		x = 14
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
