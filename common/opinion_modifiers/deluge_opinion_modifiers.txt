@@ -60,4 +60,8 @@ opinion_modifiers = {
 		value = 30
 	}
 
+	genocided_us = {
+		value = -100
+	}
+
 }

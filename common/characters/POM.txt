@@ -38,6 +38,32 @@ characters={
 			logistics_skill=2
 		}
 	}
+	POM_karl_jesko_von_puttkamer={
+		name="Karl-Jesko von Puttkamer"
+		portraits={
+			civilian={
+				large="gfx/leaders/POM/karl_jesco_von_puttkamer.dds"
+				#small="GFX_philippe_petain_picture_small"
+			}
+			army={
+				large="gfx/leaders/POM/karl_jesco_von_puttkamer.dds"
+				#small="GFX_philippe_petain_picture_small"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			#desc = ""
+		}
+		corps_commander={
+			traits={}
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+		}
+	}
 	POM_lech_bądkowski={
 		name="Lech Bądkowski"
 		portraits={

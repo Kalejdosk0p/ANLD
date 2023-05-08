@@ -315,6 +315,22 @@ characters={
 			desc = "POL_deluge_bielecki_desc"
 		}
 	}
+	POL_deluge_korfanty = {##Wojciech Korfanty
+		name = POL_Character_deluge_korfanty
+		portraits={
+			civilian = {
+				large = "gfx/leaders/POL/wojciech_korfanty.dds"
+			}
+		}
+		country_leader = {
+			ideology = constitutionalist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				
+			}
+			desc = "POL_deluge_korfanty_desc"
+		}
+	}
 	POL_deluge_augustus_wettin = {##Frederick Augustus III of Wettin/Fryderyk I Wettyn
 		name = POL_Character_deluge_augustus_wettin
 		portraits={
@@ -483,6 +499,23 @@ characters={
 				
 			}
 			desc = "POL_deluge_antoni_ciszak_desc"
+		}
+	}
+	POL_deluge_wladyslaw_gomulka = {##Władysław Gomułka
+		name = POL_Character_deluge_wladyslaw_gomulka
+		portraits={
+			civilian={ 
+				large = GFX_portrait_POL_wladyslaw_gomulka
+				#small = GFX_portrait_POL_roman_dmowski_small
+			}
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				
+			}
+			desc = "POL_deluge_wladyslaw_gomulka_desc"
 		}
 	}
 	POL_deluge_waclaw_kozielski = {##Wacław Kozielski
@@ -2158,7 +2191,6 @@ characters={
 			}
 			traits = {
 				#smooth_talking_charmer
-				#compassionate_gentleman
 				ambitious_negotiator_fascism_deluge
 				trait_beck_tooltip
 			}

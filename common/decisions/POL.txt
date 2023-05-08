@@ -2571,6 +2571,7 @@ seek_enemies_category = {
 			AUS = {owns_state = 73}
 			AUS = { NOT = { is_in_faction_with = POL } }
 		}
+		war_with_on_remove = AUS
 		cost = 75
 		fire_only_once = yes
 		days_remove = 15
@@ -3376,8 +3377,8 @@ seek_enemies_category = {
 		}
 		available = {
 			POL = { 
-					country_exists = FRA
-					NOT = {is_in_faction_with = FRA}
+				country_exists = FRA
+				NOT = {is_in_faction_with = FRA}
 			}
 		}
 		cost = 50
@@ -8545,6 +8546,308 @@ competition_on_free_market_category = {
 					level = 1
 					instant_build = yes
 				}
+			}
+		}
+	}
+}
+export_catholicism_category = {
+	annihilation_antitheists = {
+		icon = GFX_decision_generic_civil_support
+		fire_only_once = no
+		target_trigger = {
+			FROM = {
+				has_government = communism
+			}
+			FROM = {
+				NOT = {
+					is_subject_of = POL
+					has_idea = member_of_new_polish_church
+				}
+			}
+		}
+		allowed = {
+			original_tag = POL
+			country_exists = FROM
+		}
+		available = {
+			FROM = {
+				has_government = communism
+			}
+		}
+		days_remove = 100
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		cost = 50
+		remove_effect = {
+			POL = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FROM
+				}
+			}
+		}
+	}
+	destroy_heretical_factions = {
+		icon = GFX_decision_generic_prepare_civil_war
+		fire_only_once = no
+		targets = { GER WGR DDR SWE DEN NOR ENG ICE GRN FAR HOL SWI SER BUL ROM GRE BLR UKR SOV ETH ABK GEO OSS ARM ASK SIB WSR STP MOS TSR }
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			FROM = {
+				NOT = {
+					is_subject_of = POL
+					has_idea = member_of_new_polish_church
+				}
+			}
+		}
+		allowed = {
+			original_tag = POL
+			country_exists = FROM
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		available = {
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		days_remove = 100
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		cost = 50
+		remove_effect = {
+			POL = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FROM
+				}
+			}
+		}
+	}
+	get_rid_of_muslims = {
+		icon = GFX_decision_generic_scorched_earth
+		fire_only_once = no
+		targets = { ALB TUR CAU PER AFG IRQ KUR SYR LEB SAU QAT ABU KUW OMA YEM HEJ JOR AZR CHE DAG EGY LBA ALG TUN MOR MAU MLI NGR CHD SUD GUI BKF SEN GAM PAK MAL INS UZB KAZ TKM TJK KRG CRI }
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			FROM = {
+				NOT = {
+					is_subject_of = POL
+					has_idea = member_of_new_polish_church
+				}
+			}
+		}
+		allowed = {
+			original_tag = POL
+			country_exists = FROM
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		available = {
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		days_remove = 100
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		cost = 50
+		remove_effect = {
+			POL = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FROM
+				}
+			}
+		}
+	}
+	destroy_infidels = {
+		icon = GFX_decision_generic_arrest
+		fire_only_once = no
+		targets = { RAJ TIB CHI PRC JAP TAN NEP BHU SIA BUR KOR VIN CAM LAO CSC AQN }
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					is_subject_of = POL
+					has_idea = member_of_new_polish_church
+				}
+			}
+		}
+		allowed = {
+			original_tag = POL
+			country_exists = FROM
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		available = {
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		days_remove = 100
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		cost = 50
+		remove_effect = {
+			POL = {
+				create_wargoal = {
+					type = puppet_wargoal_focus
+					target = FROM
+				}
+			}
+		}
+	}
+	request_conversion = {
+		icon = GFX_decision_hol_radio_oranje
+		fire_only_once = no
+		targets = { HUN AUS ITA CRO FRA BEL POM BAL LIT LAT EST IRE POR SPR SAV ARA CAT GCB LOU USA MEX DES CAN OCC BRI NMD ALS BGD LIB CAR TOG IVE NGA CMN GHA NAM CBN CSA LAK MAR URC CUB FRG HAI ARG BRA COS NIC HON ELS GUA PAN ECU PRU COL VEN CUR SUR PAR BOL CHL URG MAD ZIM ANG MZB SAF AST NZL PHI COG TNG KEN UGA HAW TEX CAL }
+		visible = {
+			original_tag = POL
+			country_exists = FROM
+			FROM = {
+				is_subject = no
+			}
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					is_subject_of = POL
+					has_idea = member_of_new_polish_church
+				}
+			}
+		}
+		allowed = {
+			POL = {
+				has_completed_focus = POL_our_own_pope
+			}
+			original_tag = POL
+			country_exists = FROM
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		available = {
+			POL = {
+				has_completed_focus = POL_our_own_pope
+			}
+			original_tag = POL
+			country_exists = FROM
+			FROM = {
+				is_subject = no
+			}
+			FROM = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		days_remove = 14
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		cost = 50
+		remove_effect = {
+			FROM = {
+				country_event = {
+					id = deluge_poland.71
+				}
+			}
+		}
+	}
+	install_our_church = {
+		icon = GFX_decision_generic_brainwash
+		fire_only_once = no
+		target_trigger = {
+			FROM = {
+				is_subject_of = POL
+				NOT = {
+					has_idea = member_of_new_polish_church
+				}
+			}
+		}
+		allowed = {
+			original_tag = POL
+			country_exists = FROM
+		}
+		available = {
+			FROM = {
+				NOT = {
+					has_idea = member_of_new_polish_church
+				}
+			}
+		}
+		days_remove = 50
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+		}
+		cost = 50
+		remove_effect = {
+			FROM = {
+				add_ideas = member_of_new_polish_church
 			}
 		}
 	}

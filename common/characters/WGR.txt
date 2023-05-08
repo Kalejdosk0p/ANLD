@@ -3,7 +3,8 @@ characters={
 		name="Hermann Göring"
 		portraits={
 			civilian={
-				large="gfx/leaders/GER/hermann_goring.dds"
+				#large="gfx/leaders/GER/hermann_goring.dds"
+				large=GFX_portrait_GER_hermann_goring
 			}
 		}
 		country_leader={
@@ -42,7 +43,8 @@ characters={
 		name="Frederick II"
 		portraits={
 			civilian={
-				large="gfx/leaders/GER/prince_karl_anton.dds"
+				#large="gfx/leaders/GER/prince_karl_anton.dds"
+				large=GFX_portraits_fra_napoleon_vi
 			}
 		}
 		country_leader={

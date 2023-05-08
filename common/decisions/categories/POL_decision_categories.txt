@@ -219,4 +219,29 @@ competition_on_free_market_category = {
 	}
 	visible_when_empty = yes
 }
-
+export_catholicism_category = {
+	icon = GFX_decision_category_spr_the_seeds_of_revolution
+	picture = GFX_decision_category_polish_church
+	priority = 2
+	allowed = {
+		original_tag = POL
+	}
+	visible = {
+		POL = { 
+			has_completed_focus = POL_export_catholicism_abroad
+		}
+	}
+	visible_when_empty = yes
+}
+POL_balance_of_power_monarchist_decisions_category = {
+	icon = GFX_decision_category_power_struggle
+	allowed = {
+		original_tag = POL
+	}
+	priority = 90
+	visible = {
+		POL = {
+			has_completed_focus = POL_monarchists_take_power
+		}
+	}
+}

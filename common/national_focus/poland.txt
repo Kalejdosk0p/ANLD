@@ -316,7 +316,7 @@ focus_tree = {
 	focus = {
 		id = POL_enforce_patriarchy 
 		icon = GFX_focus_CZE_german_puppet
-		x = -7
+		x = -10
 		y = 1
 		prerequisite = { focus = POL_purge_undersirables }
 		relative_position_id = POL_purge_undersirables
@@ -440,7 +440,7 @@ focus_tree = {
 	focus = {
 		id = POL_begin_oczyszczenie_project
 		icon = GFX_focus_generic_court
-		x = -3
+		x = -4
 		y = 1
 		prerequisite = { focus = POL_purge_undersirables }
 		relative_position_id = POL_purge_undersirables
@@ -466,7 +466,7 @@ focus_tree = {
 	focus = {
 		id = POL_start_project_in_south_east
 		icon = GFX_UKR_death_industry
-		x = 2
+		x = 3
 		y = 1
 		prerequisite = { focus = POL_begin_oczyszczenie_project }
 		relative_position_id = POL_begin_oczyszczenie_project
@@ -533,6 +533,13 @@ focus_tree = {
 					}
 				}
 				else_if = {
+					limit = {has_idea = oczyszczenie_project_8 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_8
+						add_idea = oczyszczenie_project_9
+					}
+				}
+				else_if = {
 					limit = {
 						NOT = {
 							has_idea = oczyszczenie_project
@@ -543,13 +550,14 @@ focus_tree = {
 							has_idea = oczyszczenie_project_6
 							has_idea = oczyszczenie_project_7
 							has_idea = oczyszczenie_project_8
+							has_idea = oczyszczenie_project_9
 						}
 					}
 					custom_effect_tooltip = POL_custom_effect_tooltip_2
 				}
 			}
 			UKR = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 		}
 		ai_will_do = {
@@ -632,6 +640,13 @@ focus_tree = {
 					}
 				}
 				else_if = {
+					limit = {has_idea = oczyszczenie_project_8 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_8
+						add_idea = oczyszczenie_project_9
+					}
+				}
+				else_if = {
 					limit = {
 						NOT = {
 							has_idea = oczyszczenie_project
@@ -642,19 +657,20 @@ focus_tree = {
 							has_idea = oczyszczenie_project_6
 							has_idea = oczyszczenie_project_7
 							has_idea = oczyszczenie_project_8
+							has_idea = oczyszczenie_project_9
 						}
 					}
 					custom_effect_tooltip = POL_custom_effect_tooltip_2
 				}
 			}
 			BAL = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 			BLR = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 			LIT = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 		}
 		ai_will_do = {
@@ -670,16 +686,17 @@ focus_tree = {
 	focus = {
 		id = POL_start_project_in_kashubia
 		icon = GFX_KSH_death_industry
-		x = -1
+		x = -3
 		y = 1
-		prerequisite = { focus = POL_start_project_in_north_east }
-		relative_position_id = POL_start_project_in_north_east
+		prerequisite = { focus = POL_begin_oczyszczenie_project }
+		relative_position_id = POL_begin_oczyszczenie_project
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cost = 7
 		available = {
 			POL = {
 				is_subject = no
 				controls_state = 63
+				controls_state = 62
 				controls_state = 85
 				controls_state = 807
 			}
@@ -688,6 +705,7 @@ focus_tree = {
 			63 = {add_manpower = -100000}
 			85 = {add_manpower = -100000}
 			807 = {add_manpower = -100000}
+			62 = {add_manpower = -100000}
 			if = { 
 				limit = {has_idea = oczyszczenie_project }
 				swap_ideas = {
@@ -737,6 +755,13 @@ focus_tree = {
 					}
 				}
 				else_if = {
+					limit = {has_idea = oczyszczenie_project_8 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_8
+						add_idea = oczyszczenie_project_9
+					}
+				}
+				else_if = {
 					limit = {
 						NOT = {
 							has_idea = oczyszczenie_project
@@ -747,13 +772,127 @@ focus_tree = {
 							has_idea = oczyszczenie_project_6
 							has_idea = oczyszczenie_project_7
 							has_idea = oczyszczenie_project_8
+							has_idea = oczyszczenie_project_9
 						}
 					}
 					custom_effect_tooltip = POL_custom_effect_tooltip_2
 				}
 			}
 			POM = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
+			}
+		}
+		ai_will_do = {
+			factor = 15
+		}
+		bypass = {
+			is_subject = yes
+		}		
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = no
+	}
+	focus = {
+		id = POL_start_project_in_germany
+		icon = GFX_GER_death_industry
+		x = 0
+		y = 1
+		prerequisite = { focus = POL_start_project_in_kashubia }
+		relative_position_id = POL_start_project_in_kashubia
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		cost = 7
+		available = {
+			POL = {
+				is_subject = no
+				controls_state = 64
+				controls_state = 61
+				controls_state = 65
+			}
+		}
+		completion_reward = {
+			64 = {add_manpower = -100000}
+			61 = {add_manpower = -100000}
+			65 = {add_manpower = -100000}
+			if = { 
+				limit = {has_idea = oczyszczenie_project }
+				swap_ideas = {
+					remove_idea = oczyszczenie_project
+					add_idea = oczyszczenie_project_2
+				}
+				else_if = {
+					limit = {has_idea = oczyszczenie_project_2 }
+						swap_ideas = {
+						remove_idea = oczyszczenie_project_2
+						add_idea = oczyszczenie_project_3
+					}
+				}
+				else_if = {
+					limit = {has_idea = oczyszczenie_project_3 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_3
+						add_idea = oczyszczenie_project_4
+					}
+				}
+				else_if = {
+					limit = {has_idea = oczyszczenie_project_4 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_4
+						add_idea = oczyszczenie_project_5
+					}
+				}
+				else_if = {
+					limit = {has_idea = oczyszczenie_project_5 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_5
+						add_idea = oczyszczenie_project_6
+					}
+				}
+				else_if = {
+					limit = {has_idea = oczyszczenie_project_6 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_6
+						add_idea = oczyszczenie_project_7
+					}
+				}
+				else_if = {
+					limit = {has_idea = oczyszczenie_project_7 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_7
+						add_idea = oczyszczenie_project_8
+					}
+				}
+				else_if = {
+					limit = {has_idea = oczyszczenie_project_8 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_8
+						add_idea = oczyszczenie_project_9
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_idea = oczyszczenie_project
+							has_idea = oczyszczenie_project_2
+							has_idea = oczyszczenie_project_3
+							has_idea = oczyszczenie_project_4
+							has_idea = oczyszczenie_project_5
+							has_idea = oczyszczenie_project_6
+							has_idea = oczyszczenie_project_7
+							has_idea = oczyszczenie_project_8
+							has_idea = oczyszczenie_project_9
+						}
+					}
+					custom_effect_tooltip = POL_custom_effect_tooltip_2
+				}
+			}
+			GER = {
+				add_opinion_modifier = { target = POL modifier = genocided_us }
+			}
+			WGR = {
+				add_opinion_modifier = { target = POL modifier = genocided_us }
+			}
+			DDR = {
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 		}
 		ai_will_do = {
@@ -770,7 +909,7 @@ focus_tree = {
 		id = POL_continue_project_in_ukraine
 		icon = GFX_UKR_death_industry
 		x = 0
-		y = 2
+		y = 1
 		prerequisite = { focus = POL_start_project_in_south_east }
 		relative_position_id = POL_start_project_in_south_east
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -838,6 +977,13 @@ focus_tree = {
 					}
 				}
 				else_if = {
+					limit = {has_idea = oczyszczenie_project_8 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_8
+						add_idea = oczyszczenie_project_9
+					}
+				}
+				else_if = {
 					limit = {
 						NOT = {
 							has_idea = oczyszczenie_project
@@ -848,13 +994,14 @@ focus_tree = {
 							has_idea = oczyszczenie_project_6
 							has_idea = oczyszczenie_project_7
 							has_idea = oczyszczenie_project_8
+							has_idea = oczyszczenie_project_9
 						}
 					}
 					custom_effect_tooltip = POL_custom_effect_tooltip_2
 				}
 			}
 			UKR = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 		}
 		ai_will_do = {
@@ -870,8 +1017,8 @@ focus_tree = {
 	focus = {
 		id = POL_continue_project_in_belarus
 		icon = GFX_BLR_death_industry
-		x = 0
-		y = 2
+		x = 1
+		y = 1
 		prerequisite = { focus = POL_start_project_in_north_east }
 		relative_position_id = POL_start_project_in_north_east
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -937,6 +1084,13 @@ focus_tree = {
 					}
 				}
 				else_if = {
+					limit = {has_idea = oczyszczenie_project_8 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_8
+						add_idea = oczyszczenie_project_9
+					}
+				}
+				else_if = {
 					limit = {
 						NOT = {
 							has_idea = oczyszczenie_project
@@ -947,13 +1101,14 @@ focus_tree = {
 							has_idea = oczyszczenie_project_6
 							has_idea = oczyszczenie_project_7
 							has_idea = oczyszczenie_project_8
+							has_idea = oczyszczenie_project_9
 						}
 					}
 					custom_effect_tooltip = POL_custom_effect_tooltip_2
 				}
 			}
 			BLR = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 		}
 		ai_will_do = {
@@ -969,9 +1124,9 @@ focus_tree = {
 	focus = {
 		id = POL_continue_project_in_lithuania
 		icon = GFX_LIT_death_industry
-		x = -2
-		y = 2
-		prerequisite = { focus = POL_start_project_in_kashubia }
+		x = -1
+		y = 1
+		prerequisite = { focus = POL_start_project_in_north_east }
 		relative_position_id = POL_start_project_in_north_east
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cost = 7
@@ -1036,6 +1191,13 @@ focus_tree = {
 					}
 				}
 				else_if = {
+					limit = {has_idea = oczyszczenie_project_8 }
+					swap_ideas = {
+						remove_idea = oczyszczenie_project_8
+						add_idea = oczyszczenie_project_9
+					}
+				}
+				else_if = {
 					limit = {
 						NOT = {
 							has_idea = oczyszczenie_project
@@ -1046,16 +1208,17 @@ focus_tree = {
 							has_idea = oczyszczenie_project_6
 							has_idea = oczyszczenie_project_7
 							has_idea = oczyszczenie_project_8
+							has_idea = oczyszczenie_project_9
 						}
 					}
 					custom_effect_tooltip = POL_custom_effect_tooltip_2
 				}
 			}
 			LIT = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 			BAL = {
-				add_opinion_modifier = { target = POL modifier = medium_decrease }
+				add_opinion_modifier = { target = POL modifier = genocided_us }
 			}
 		}
 		ai_will_do = {
@@ -1071,11 +1234,12 @@ focus_tree = {
 	focus = {
 		id = POL_project_is_finished
 		icon = GFX_generic_repression
-		x = -2
+		x = -3
 		y = 1
 		prerequisite = { focus = POL_continue_project_in_lithuania }
 		prerequisite = { focus = POL_continue_project_in_belarus }
 		prerequisite = { focus = POL_continue_project_in_ukraine }
+		prerequisite = { focus = POL_start_project_in_germany }
 		relative_position_id = POL_continue_project_in_ukraine
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		cost = 10
@@ -2695,7 +2859,7 @@ focus_tree = {
 	focus = {
 		id = POL_take_peoples_property_from_capitalists
 		icon = GFX_focus_rom_parties_end
-		x = -4
+		x = -3
 		y = 1
 		prerequisite = { focus = POL_establish_zadruga }
 		relative_position_id = POL_establish_zadruga
@@ -3212,7 +3376,7 @@ focus_tree = {
 	focus = {
 		id = POL_remember_niklots_sacriface
 		icon = GFX_focus_generic_military_academy
-		x = 0
+		x = 1
 		y = 1
 		prerequisite = { focus = POL_gloryfiy_mieslaws_uprising focus = POL_keep_friends_from_above_baltic}
 		relative_position_id = POL_gloryfiy_mieslaws_uprising
@@ -3247,9 +3411,10 @@ focus_tree = {
 		id = POL_eliminate_przechrztowie
 		icon = GFX_purge_citizens
 		x = -1
-		y = 2
-		prerequisite = { focus = POL_remember_niklots_sacriface}
-		relative_position_id = POL_gloryfiy_mieslaws_uprising
+		y = 1
+		prerequisite = { focus = POL_revengeance_on_enemy_with_god_and_even_in_spite_of_god}
+		prerequisite = { focus = POL_gloryfiy_mieslaws_uprising}
+		relative_position_id = POL_revengeance_on_enemy_with_god_and_even_in_spite_of_god
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_STABILITY FOCUS_FILTER_LAND_ARMY}
 		cost = 8
 		available = {
@@ -3282,10 +3447,11 @@ focus_tree = {
 	focus = {
 		id = POL_incorporate_beauty_of_east
 		icon = GFX_focus_SOV_reinforce_southern_naval_bases
-		x = -1
-		y = 2
-		prerequisite = { focus = POL_remember_niklots_sacriface}
-		relative_position_id = POL_keep_friends_from_above_baltic
+		x = 1
+		y = 1
+		prerequisite = { focus = POL_revengeance_on_enemy_with_god_and_even_in_spite_of_god}
+		prerequisite = { focus = POL_keep_friends_from_above_baltic}
+		relative_position_id = POL_revengeance_on_enemy_with_god_and_even_in_spite_of_god
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_MANPOWER }
 		cost = 8
 		available = {
@@ -3397,8 +3563,8 @@ focus_tree = {
 		icon = GFX_poland_bear
 		x = 0
 		y = 1
-		prerequisite = { focus = POL_gloryfiy_mieslaws_uprising focus = POL_keep_friends_from_above_baltic}
-		relative_position_id = POL_keep_friends_from_above_baltic
+		prerequisite = { focus = POL_remember_niklots_sacriface }
+		relative_position_id = POL_remember_niklots_sacriface
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_LAND_ARMY}
 		cost = 8
 		available = {
@@ -4483,16 +4649,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = POL_custom_effect_tooltip_155
-			every_country = {
-				limit = {
-					has_idea = POL_member_of_crusade_2
-				}
-				declare_war_on = { 
-					target = TUR 
-					type = puppet_wargoal_focus 
+			454 = {
+				owner = {
+					every_country = {
+						limit = {
+							has_idea = POL_member_of_crusade_2
+						}
+						declare_war_on = { 
+							target = PREV 
+							type = puppet_wargoal_focus 
+						}
+					}
 				}
 			}
 		}
+		will_lead_to_war_with = TUR
 		ai_will_do = {
 			factor = 30
 		}
@@ -5272,7 +5443,6 @@ focus_tree = {
 		prerequisite = { focus = POL_new_foreign_policy }
 		prerequisite = { focus = POL_legacy_of_polish_legions_in_lombardy }
 		relative_position_id = POL_new_foreign_policy
-		mutually_exclusive = {focus = POL_support_other_democracies focus = POL_royal_marriages}
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
 		cost = 10
 		available = {
@@ -10538,6 +10708,7 @@ focus_tree = {
 		relative_position_id = POL_great_fleet
 		mutually_exclusive = {focus = POL_coast_defence}
 		cost = 8
+		dynamic = yes
 		available = {
 			
 		}

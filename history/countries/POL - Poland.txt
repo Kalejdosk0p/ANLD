@@ -435,4 +435,5 @@ recruit_character = POL_deluge_ludwik_waszkiewicz
 recruit_character = POL_deluge_tomasz_pilarski
 recruit_character = POL_deluge_stanislaw_mikolajczyk
 
-#recruit_character = 
+recruit_character = POL_deluge_korfanty
+recruit_character = POL_deluge_wladyslaw_gomulka

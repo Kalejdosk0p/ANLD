@@ -3,7 +3,8 @@ characters={
 		name="Heinrich Himmler"
 		portraits={
 			civilian={
-				large="gfx/leaders/GER/himmler.dds"
+				#large="gfx/leaders/GER/himmler.dds"
+				large=GFX_portrait_GER_heinrich_himmler
 			}
 		}
 		country_leader={
@@ -56,7 +57,8 @@ characters={
 		name="Wilhelm I"
 		portraits={
 			civilian={
-				large="gfx/leaders/GER/prince_wilhelm.dds"
+				#large="gfx/leaders/GER/prince_wilhelm.dds"
+				large=GFX_portrait_ger_wilhelm_iii
 			}
 		}
 		country_leader={

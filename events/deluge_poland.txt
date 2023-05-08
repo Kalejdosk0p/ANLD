@@ -2452,6 +2452,75 @@ country_event = {##event about history of Józef Poniatowski
 		}
 	}
 }
+country_event = {##Sikorski brings back democracy to Poland 
+	id = deluge_poland.82
+	title = deluge_poland.82.t
+	desc = deluge_poland.82.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		has_completed_focus = POL_partly_free_elections
+		democracy > 0.35
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {##Sikorski stays
+		name = deluge_poland.82.a
+		set_rule = {can_declare_war_on_same_ideology = yes}
+		set_rule = {can_only_justify_war_on_threat_country = no}
+		swap_ideas = {
+			remove_idea = little_light_of_democracy
+			add_idea = little_light_of_democracy_2
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+			last_election = "1935.12.17"
+			election_frequency = 24
+			long_name = POL_morges_name_long
+			name = POL_morges_name_short
+		}
+		remove_country_leader_role = {
+			character = POL_deluge_Sikorski
+			ideology = corporatist_ideology
+		}
+		add_country_leader_role = {
+			character = POL_deluge_Sikorski
+			promote_leader = yes
+			country_leader = {
+				ideology = constitutionalist_ideology
+				expire = "1965.1.1.1"
+				traits = { liberal_marshal }
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##Wojciech Konfranty becomes leader
+		name = deluge_poland.82.b
+		promote_character = POL_deluge_korfanty
+		set_rule = {can_declare_war_on_same_ideology = yes}
+		set_rule = {can_only_justify_war_on_threat_country = no}
+		swap_ideas = {
+			remove_idea = little_light_of_democracy
+			add_idea = little_light_of_democracy_2
+		}
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = no
+			last_election = "1935.12.17"
+			election_frequency = 24
+			long_name = POL_morges_name_long
+			name = POL_morges_name_short
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
 country_event = {##POL proposes defense pact to UK
 	id = deluge_poland_foreign.1
 	title = deluge_poland_foreign.1.t

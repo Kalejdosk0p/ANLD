@@ -2268,7 +2268,7 @@ focus_tree = {
 	focus = {
 		id = FRA_leadership_of_the_private
 		icon = GFX_focus_generic_the_giant_wakes
-		x = 9
+		x = 8
 		y = 8
 		cost = 10
 
@@ -2305,6 +2305,36 @@ focus_tree = {
 			}
 		}
 		prerequisite = { focus = FRA_reconciliation_committee focus = FRA_liberalisation focus = FRA_absolutist_grip }
+	}
+	
+	focus = {
+		id = FRA_question_of_pomerania
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 2
+		y = 1
+		search_filters = {}
+		cost = 5
+		prerequisite = { focus = FRA_reconciliation_committee focus = FRA_squeeze_the_maximum focus = FRA_liberalisation focus = FRA_radical_formations focus = FRA_absolutist_grip}
+		relative_position_id = FRA_reconciliation_committee
+		available = {
+			
+		}
+		completion_reward = {
+			#FRA = {
+			#	country_event = {
+			#		id = 
+			#	}
+			#}
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
 	}
 
 	#Рыночное хозяйство
