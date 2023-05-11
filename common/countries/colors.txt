@@ -60,8 +60,8 @@ AZR = {
 	color_ui = rgb { 60 220 90 }
 }
 BAL = {
-	color = rgb { 200 30  100 }
-	color_ui = rgb { 220 50 120 }
+	color = rgb { 0 102 102 }
+	color_ui = rgb { 0 102 102 }
 }
 BEL = { # f6f15a
 	color = rgb { 240  255  100 }
@@ -80,8 +80,8 @@ BKF = {
 	color_ui = rgb { 190 190 190 }
 }
 BLR = {
-	color = rgb { 200 50 50 }
-	color_ui = rgb { 220 70 70 }
+	color = rgb { 180 220 190 }
+	color_ui = rgb { 180 220 190 }
 }
 BRA = {
 	color = rgb { 76  145  63 }
@@ -381,7 +381,7 @@ LAO = {
 }
 LAT = {
 	color = rgb { 75 77 186 }
-	color_ui = rgb { 95 97 206 }
+	color_ui = rgb { 124 125 184 }
 }
 LEB = {
 	color = rgb { 255  230  200 }
@@ -397,7 +397,7 @@ LIB = {
 }
 LIT = {
 	color = rgb { 219 219 119 }
-	color_ui = rgb { 239 239 139 }
+	color_ui = rgb { 255 255 155 }
 }
 LOU = {
 	color = rgb { 190  190  230 }
@@ -504,8 +504,8 @@ PHI = {
 	color_ui = rgb { 198 169 248 }
 }
 POL = {
-	color = rgb { 175  120  120 }
-	color_ui = rgb { 195 140 140 }
+	color = rgb { 176 81 111 }
+	color_ui = rgb { 176 81 111 }
 }
 POM = {
 	color = rgb { 50  150  50 }
@@ -652,8 +652,8 @@ UGA = {
 	color_ui = rgb { 255 160 40 }
 }
 UKR = {
-	color = rgb { 0 91 197 }
-	color_ui = rgb { 30 120 220 }
+	color = rgb { 0  80  230 }
+	color_ui = rgb { 0  80  230 }	
 }
 URC = {
 	color = rgb { 150  210  210 }
