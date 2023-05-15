@@ -83,7 +83,7 @@ add_ideas = {
 	labour_camps
 	deluge_legacy_of_slavery
 }
-recruit_character = LOU_louis_iii
+recruit_character = LOU_jean_i_bourbon
 recruit_character = LOU_bishop_alphonselouis_du_st_maurice
 recruit_character = LOU_henri_s._truman
 recruit_character = LOU_simone_girard
@@ -92,12 +92,13 @@ recruit_character = LOU_lucien_garcia
 recruit_character = LOU_claude_roux
 recruit_character = LOU_maurice_dupont
 recruit_character = LOU_libert_fournier
+
 recruit_character = LOU_leslie_moreau
 recruit_character = LOU_russell_durand
 recruit_character = LOU_raimont_thomas
 recruit_character = LOU_jean_martin
 recruit_character = LOU_august_de_saint_arnaud
-
+recruit_character = LOU_henri_i_bourbon
 
 if = {
 	limit = { has_dlc = "Man the Guns" }

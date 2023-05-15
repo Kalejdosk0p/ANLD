@@ -59,9 +59,41 @@ opinion_modifiers = {
 	assistance_in_civil_war_modifier = {
 		value = 30
 	}
-
+	
 	genocided_us = {
 		value = -100
 	}
 
+	panslavic_policy = {
+		value = 35
+	}
+	
+	balto_slavic_friendship = {
+		value = 35
+	}
+
+	reminded_polabian_crusade = {
+		value = -45
+	}
+	
+	appreciated_the_beauty_of_the_east = {
+		value = 35
+	}
+	
+	polish_british_pact_signed = {
+		value = 75
+	}
+	
+	polish_hungarian_friendship = {
+		value = 100
+	}
+	
+	beck_milyukov_pact_signed = {
+		value = 50
+	}
+	
+	supported_us_in_civil_war = {
+		value = 60
+	}
+	
 }

@@ -1,5 +1,5 @@
 ﻿add_namespace = deluge_greece
-country_event = {
+country_event = {##GRE gets event about metaxists
 	id = deluge_greece.1
 	title = deluge_greece.1.t
 	desc = deluge_greece.1.d
@@ -28,7 +28,7 @@ country_event = {
 			popularity = 0.1
 		}
 		ai_chance = {
-			factor = 10
+			factor = 1
 		}
 	}
 	option = {
@@ -71,5 +71,38 @@ country_event = {
 		ai_chance = {
 			factor = 1
 		}
+	}
+}
+news_event = {##metaxist government is created
+	id = deluge_greece.2
+	title = deluge_greece.2.t
+	desc = deluge_greece.2.d
+	picture = GFX_metaxists_take_power2
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_greece.2.a
+	}
+}
+news_event = {##metaxists take full power
+	id = deluge_greece.3
+	title = deluge_greece.3.t
+	desc = deluge_greece.3.d
+	picture = GFX_metaxists_take_power1
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_greece.3.a
+	}
+}
+news_event = {##metaxists are purged
+	id = deluge_greece.4
+	title = deluge_greece.4.t
+	desc = deluge_greece.4.d
+	picture = GFX_metaxists_purged
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_greece.4.a
 	}
 }

@@ -1,16 +1,28 @@
 characters={
-	LOU_louis_iii={
-		name="Louis III"
+	LOU_jean_i_bourbon={
+		name="Jean I d’Orléans"
 		portraits={
 			civilian={
-				large="gfx/leaders/LOU/earl_of_wessex.dds"
+				large=GFX_portrait_fra_jean_duke_of_guise
 			}
 		}
 		country_leader={
-			desc="bourbon_king_desc"
+			#desc="bourbon_king_desc"
 			ideology=reactionary_ideology
 			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+	LOU_henri_i_bourbon={
+		name="Henri I d’Orléans"
+		portraits={
+			civilian={
+				large=GFX_portrait_fra_henry_count_of_paris
+			}
+		}
+		country_leader={
+			#desc="bourbon_king_desc"
+			ideology=reactionary_ideology
+			expire="1965.1.1.1"
 		}
 	}
 	LOU_bishop_alphonselouis_du_st_maurice={

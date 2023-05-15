@@ -2434,4 +2434,9 @@ spriteTypes = {
 		name = "GFX_wladyslaw_gimbert_studniecki_picture_small"
 		texturefile = "gfx/interface/ideas/characters/wladyslaw_gimbert_studniecki_picture_small.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_polish_national_army"
+		texturefile = "gfx/interface/ideas/spirits/polish_national_army.dds"
+	}
 }

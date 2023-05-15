@@ -90,4 +90,17 @@ characters={
 			id=-1
 		}
 	}
+	POM_marie_clotilde_bonaparte={
+		name="Marie Clotilde Bonaparte"
+		portraits={
+			civilian={
+				large="gfx/leaders/POM/marie_clotilde_bonaparte.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			#desc = ""
+		}
+	}
 }

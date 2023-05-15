@@ -248,3 +248,6 @@
  security_chief_slot_cost_factor: "Security Chief Cost"
  chief_of_staff_slot_cost_factor: "Chief of Staff Cost"
  intelligence_chief_slot_cost_factor: "Intelligence Chief Cost"
+ generic.26.t:0 "[FROM.GetName] is preparing casus belli against us!"
+ generic.26.d:0 "Our intelligence and spies told us that recently [FROM.GetName] is claiming some of our teritories. This may end in war with [FROM.GetName]. We must prepare our army for that."
+ generic.26.a:0 "They will regret that!"

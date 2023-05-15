@@ -366,4 +366,209 @@ political_actions = {
 			factor = 0
 		}
 	}
+	
+	germany_integrate_pom = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		available = {
+			has_manpower > 2000
+			has_equipment = { infantry_equipment > 1999 }
+			owns_state = 807
+			controls_state = 807
+			owns_state = 85
+			controls_state = 85
+			owns_state = 63
+			controls_state = 63
+			owns_state = 62
+			controls_state = 62
+		}
+		fire_only_once = no
+		days_re_enable = 10
+		visible = {
+			OR = {
+				tag = GER
+				tag = WGR
+				tag = DDR
+			}
+			has_global_flag = POM_issue_solved
+			OR = {
+				62 = { NOT = { is_core_of = ROOT } } 
+				63 = { NOT = { is_core_of = ROOT } } 
+				807 = { NOT = { is_core_of = ROOT } } 
+				85 = { NOT = { is_core_of = ROOT } } 
+			}
+		}
+		cost = 100
+		days_remove = 100
+		modifier = {
+			
+		}
+		remove_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = -2000
+			}
+			62 = { add_core_of = ROOT } 
+			63 = { add_core_of = ROOT } 
+			807 = { add_core_of = ROOT } 
+			85 = { add_core_of = ROOT }		
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = yes
+				factor = 0.5
+			}
+		}
+	}
+	
+	germany_claim_pom = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			OR = {
+				tag = GER
+				tag = WGR
+				tag = DDR
+			}
+			has_global_flag = POM_issue_solved
+		}
+		available = {
+			ROOT = { 
+				OR = {
+					NOT = {owns_state = 807}
+					NOT = {owns_state = 85}
+					NOT = {owns_state = 63}
+					NOT = {owns_state = 62}
+				}
+			} 
+			OR = {
+				807 = { owner = { NOT = { is_in_faction_with = ROOT } } }
+				85 = { owner = { NOT = { is_in_faction_with = ROOT } } }
+				63 = { owner = { NOT = { is_in_faction_with = ROOT } } }
+				62 = { owner = { NOT = { is_in_faction_with = ROOT } } }
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { 
+				limit = { 
+					NOT = {
+						807 = { is_claimed_by = ROOT }
+						85 = { is_claimed_by = ROOT }
+						63 = { is_claimed_by = ROOT }
+						62 = { is_claimed_by = ROOT }
+					} 
+				}
+				add_state_claim = 807
+				add_state_claim = 85
+				add_state_claim = 63
+				add_state_claim = 62
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 807 
+					owns_state = 85
+					owns_state = 63
+					owns_state = 62
+				} }
+				every_country = {
+					limit = { 
+						OR = {
+							owns_state = 807 
+							owns_state = 85
+							owns_state = 62
+							owns_state = 63
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								807 85 63 62
+							}
+						}
+					}
+					country_event = {
+						id = generic.26
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	
+	fra_install_marie_claudette = {
+		icon = GFX_decision_eng_support_imperialist_coup
+		visible = {
+			OR = {
+				tag = FRA
+				tag = WGr
+			}
+			has_global_flag = POM_issue_solved
+			NOT = {
+				has_government = communism
+			}
+			POM = {
+				NOT = {
+					has_country_leader = {
+						character = POM_marie_clotilde_bonaparte
+						ruling_only = yes
+					}
+				}
+			}
+		}
+		available = {
+			POM = {
+				is_subject_of = ROOT
+			}
+		}
+		cost = 0
+		fire_only_once = no
+		days_re_enable = 5
+		complete_effect = {
+			if = {
+				limit = {
+					FRA = {
+						has_character = POM_marie_clotilde_bonaparte
+					}
+				}
+				every_possible_country = {
+					limit = { has_character = POM_marie_clotilde_bonaparte }
+					random_character = {
+						limit = { is_character = POM_marie_clotilde_bonaparte }
+						set_nationality = POM
+					}
+				}
+				POM = {
+					promote_character = POM_marie_clotilde_bonaparte
+				}
+			}
+			if = {
+				limit = {
+					POM = {
+						has_character = POM_marie_clotilde_bonaparte
+					}
+				}
+				POM = {
+					promote_character = POM_marie_clotilde_bonaparte
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+	}
 }

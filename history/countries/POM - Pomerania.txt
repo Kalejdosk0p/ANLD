@@ -63,6 +63,7 @@ recruit_character = POM_philippe_petain
 recruit_character = POM_lech_bądkowski
 recruit_character = POM_wilhelm_stuckart
 recruit_character = POM_karl_jesko_von_puttkamer
+recruit_character = POM_marie_clotilde_bonaparte
 
 add_ideas = {
 	limited_exports

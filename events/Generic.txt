@@ -1777,3 +1777,14 @@ country_event = {
 		hidden_effect = { clear_global_event_target = demanded_prov_target }
 	}
 }
+country_event = {
+	id = generic.26
+	title = generic.26.t
+	desc = generic.26.d
+	picture = GFX_guy_on_tank
+	is_triggered_only = yes
+	option = {
+		name = generic.26.a
+		ai_chance = {factor = 1}
+	}
+}

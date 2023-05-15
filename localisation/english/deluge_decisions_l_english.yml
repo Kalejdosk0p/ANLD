@@ -51,3 +51,6 @@
  decision_austria_socialist_republic_of_germany_desc: "The red star represents the army who protect the nation. The hammer and sickle represents the vanguard party who led us to liberation."
  decision_austria_german_reich: "German Reich"
  decision_austria_german_reich_desc: "We will proudly fly the new state flag derived from the Iron Cross and the national colours of black, white and red."
+ germany_integrate_pom:0 "Integrate Pomerania"
+ germany_claim_pom:0 "Claim Pomerania"
+ fra_install_marie_claudette:0 "Install Marie Claudette Bonaparte in [POM.GetName]"

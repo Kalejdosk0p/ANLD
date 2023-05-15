@@ -266,4 +266,64 @@ spriteTypes = {
 		name = "GFX_zapadoslavia_formed"
 		texturefile = "gfx/event_pictures/zapadoslavia_formed.dds"
 	}
+	spriteType = {
+		name = "GFX_piasecki_proclaims"
+		texturefile = "gfx/event_pictures/piasecki_proclaims.dds"
+	}
+	spriteType = {
+		name = "GFX_russia_breaks_pact"
+		texturefile = "gfx/event_pictures/russia_breaks_pact.dds"
+	}
+	spriteType = {
+		name = "GFX_poland_breaks_pact"
+		texturefile = "gfx/event_pictures/poland_breaks_pact.dds"
+	}
+	spriteType = {
+		name = "GFX_metaxists_take_power1"
+		texturefile = "gfx/event_pictures/metaxists_take_power1.dds"
+	}
+	spriteType = {
+		name = "GFX_metaxists_take_power2"
+		texturefile = "gfx/event_pictures/metaxists_take_power2.dds"
+	}
+	spriteType = {
+		name = "GFX_metaxists_purged"
+		texturefile = "gfx/event_pictures/metaxists_purged.dds"
+	}
+	spriteType = {
+		name = "GFX_castle_of_visegrad_big"
+		texturefile = "gfx/event_pictures/castle_of_visegrad_big.dds"
+	}
+	spriteType = {
+		name = "GFX_polish_romanian_bridge"
+		texturefile = "gfx/event_pictures/polish_romanian_bridge.dds"
+	}
+	spriteType = {
+		name = "GFX_boleslaw_wieniawa_dlugoszewski_in_rome"
+		texturefile = "gfx/event_pictures/boleslaw_wieniawa_dlugoszewski_in_rome.dds"
+	}
+	spriteType = {
+		name = "GFX_polish_airmen_in_bulgaria"
+		texturefile = "gfx/event_pictures/polish_airmen_in_bulgaria.dds"
+	}
+	spriteType = {
+		name = "GFX_polish_car"
+		texturefile = "gfx/event_pictures/polish_car.dds"
+	}
+	spriteType = {
+		name = "GFX_long_live_polish_army"
+		texturefile = "gfx/event_pictures/long_live_polish_army.dds"
+	}
+	spriteType = {
+		name = "GFX_french_tanks_in_city"
+		texturefile = "gfx/event_pictures/french_tanks_in_city.dds"
+	}
+	spriteType = {
+		name = "GFX_kashubia_gains_independence"
+		texturefile = "gfx/event_pictures/kashubia_gains_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_pomerania_divided"
+		texturefile = "gfx/event_pictures/pomerania_divided.dds"
+	}
 }

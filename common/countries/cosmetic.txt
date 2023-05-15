@@ -212,10 +212,10 @@ POL_empire = {
 	color_ui = rgb { 146 34 34 }
 }
 POL_rzeczpospolita = {
-	color = rgb { 159 21 90 }
-	color_ui = rgb { 159 21 90 }
+	color = rgb { 176 81 111 }
+	color_ui = rgb { 176 81 111 }
 }
-POL_PIAS = {
+POL_falanga = {
 	color = rgb { 26 110 34 }
 	color_ui = rgb { 26 110 34 }
 }
@@ -242,4 +242,8 @@ PMP_papal = {
 GRE_GREATER_GREECE = {
 	color = rgb { 3 93 138 }
 	color_ui = rgb { 3 93 138 }
+}
+POM_kashubia = {
+	color = rgb { 66 245 149 }
+	color_ui = rgb { 66 245 149 }
 }

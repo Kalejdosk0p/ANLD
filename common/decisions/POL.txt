@@ -2671,6 +2671,91 @@ seek_enemies_category = {
 							}
 						}
 					}
+					country_event = {
+						id = generic.26
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_war = no
+				factor = 10
+			}
+			modifier = {
+				has_war = yes
+				factor = 0.01
+			}
+		}
+	}
+	claim_pom = {
+		icon = GFX_decision_generic_operation
+		visible = {
+			POL = { has_completed_focus = POL_seek_enemies}
+		}
+		available = {
+			POL = { 
+				OR = {
+					NOT = {owns_state = 807}
+					NOT = {owns_state = 85}
+					NOT = {owns_state = 63}
+					NOT = {owns_state = 62}
+				}
+			} 
+			OR = {
+				807 = { owner = { NOT = { is_in_faction_with = POL } } }
+				85 = { owner = { NOT = { is_in_faction_with = POL } } }
+				63 = { owner = { NOT = { is_in_faction_with = POL } } }
+				62 = { owner = { NOT = { is_in_faction_with = POL } } }
+			}
+		}
+		cost = 50
+		days_remove = 35
+		fire_only_once = no
+		days_re_enable = 5
+		remove_effect = {
+			if = { 
+				limit = { 
+					NOT = {
+						807 = { is_claimed_by = POL }
+						85 = { is_claimed_by = POL }
+						63 = { is_claimed_by = POL }
+						62 = { is_claimed_by = POL }
+					} 
+				}
+				add_state_claim = 807
+				add_state_claim = 85
+				add_state_claim = 63
+				add_state_claim = 62
+			} 
+			if = { limit = { NOT = { 
+					owns_state = 807 
+					owns_state = 85
+					owns_state = 63
+					owns_state = 62
+				} }
+				every_country = {
+					limit = { 
+						OR = {
+							owns_state = 807 
+							owns_state = 85
+							owns_state = 62
+							owns_state = 63
+						}
+					}
+					ROOT = {
+						create_wargoal = {
+							type = take_claimed_state
+							target = PREV
+							generator = {
+								807 85 63 62
+							}
+						}
+					}
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}
@@ -2740,6 +2825,9 @@ seek_enemies_category = {
 								80 79 78
 							}
 						}
+					}
+					country_event = {
+						id = generic.26
 					}
 				}
 			}
@@ -2816,6 +2904,9 @@ seek_enemies_category = {
 							}
 						}
 					}
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}
@@ -2891,6 +2982,9 @@ seek_enemies_category = {
 								196 227 200 137
 							}
 						}
+					}
+					country_event = {
+						id = generic.26
 					}
 				}
 			}
@@ -3022,6 +3116,9 @@ seek_enemies_category = {
 							}
 						}
 					}
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}
@@ -3134,6 +3231,9 @@ seek_enemies_category = {
 							}
 						}
 					}
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}
@@ -3234,6 +3334,9 @@ seek_enemies_category = {
 							}
 						}
 					}
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}
@@ -3277,12 +3380,22 @@ seek_enemies_category = {
 					type = puppet_wargoal_focus
 					target = SWE
 				}
+				SWE = {
+					country_event = {
+						id = generic.26
+					}
+				}
 			}
 			if = { 
 				limit = { country_exists = SWD }
 				create_wargoal = {
-				type = puppet_wargoal_focus
-				target = SWD
+					type = puppet_wargoal_focus
+					target = SWD
+				}
+				SWD = {
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}
@@ -3320,6 +3433,11 @@ seek_enemies_category = {
 					type = puppet_wargoal_focus
 					target = SOV
 				}
+				SOV = {
+					country_event = {
+						id = generic.26
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -3356,6 +3474,11 @@ seek_enemies_category = {
 					type = puppet_wargoal_focus
 					target = TUR
 				}
+				TUR = {
+					country_event = {
+						id = generic.26
+					}
+				}
 			}
 		}
 		ai_will_do = {
@@ -3391,6 +3514,11 @@ seek_enemies_category = {
 				create_wargoal = {
 					type = puppet_wargoal_focus
 					target = FRA
+				}
+				FRA = {
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}
@@ -3653,9 +3781,9 @@ seek_empire_category = {
 			num_of_factories > 200
 			amount_research_slots > 4
 			has_stability > 0.8
+			has_government = democratic
 		}
 		complete_effect = {
-			set_cosmetic_tag = POL_rzeczpospolita
 			add_ideas = glory_restored
 			hidden_effect = {
 				news_event = { id = deluge_poland.18 hours = 6 } 
@@ -4709,6 +4837,146 @@ seek_empire_category = {
 			add_ideas = western_slavs_united_idea
 			hidden_effect = {
 				news_event = { id = deluge_poland.28 hours = 6 } 
+			}
+		}
+	}
+	create_empire_pias = {
+		fire_only_once = yes
+		icon = GFX_decision_eng_trade_unions_support
+		visible = {
+			has_completed_focus = POL_piasecki_wins
+		}
+		available = {
+			POL = {is_faction_leader = yes}
+			POL = {is_major = yes}
+			POL = {is_subject = no}
+			custom_trigger_tooltip = {##Pomerania
+				tooltip = POL_custom_trigger_tooltip_4
+				controls_state = 807
+				owns_state = 807
+				controls_state = 85 
+				owns_state = 85
+				controls_state = 63 
+				owns_state = 63
+				controls_state = 62 
+				owns_state = 62
+			}
+			custom_trigger_tooltip = {##Eastern Germany
+				tooltip = POL_custom_trigger_tooltip_5
+				controls_state = 61
+				owns_state = 61
+				controls_state = 64
+				owns_state = 64
+				controls_state = 68 
+				owns_state = 68
+				controls_state = 65 
+				owns_state = 65
+			}
+			custom_trigger_tooltip = {##Czechia
+				tooltip = POL_custom_trigger_tooltip_6
+				controls_state = 9
+				owns_state = 9
+				controls_state = 69
+				owns_state = 69
+				controls_state = 72 
+				owns_state = 72
+				controls_state = 75 
+				owns_state = 75
+				controls_state = 74 
+				owns_state = 74
+			}
+			custom_trigger_tooltip = {##Lithuania
+				tooltip = POL_custom_trigger_tooltip_20
+				controls_state = 11
+				owns_state = 11
+				controls_state = 814
+				owns_state = 814
+				controls_state = 188
+				owns_state = 188
+				controls_state = 189
+				owns_state = 189
+				controls_state = 815
+				owns_state = 815
+			}
+			custom_trigger_tooltip = {##Latvia
+				tooltip = POL_custom_trigger_tooltip_21
+				controls_state = 190
+				owns_state = 190
+				controls_state = 809
+				owns_state = 809
+				controls_state = 810
+				owns_state = 810
+				controls_state = 808
+				owns_state = 808
+				controls_state = 12
+				owns_state = 12
+			}
+			custom_trigger_tooltip = {##Estonia
+				tooltip = POL_custom_trigger_tooltip_22
+				controls_state = 191
+				owns_state = 191
+				controls_state = 813
+				owns_state = 813
+				controls_state = 13
+				owns_state = 13
+				controls_state = 812
+				owns_state = 812
+				controls_state = 811
+				owns_state = 811
+			}
+			custom_trigger_tooltip = {##Belarus
+				tooltip = POL_custom_trigger_tooltip_23
+				controls_state = 96
+				owns_state = 96
+				controls_state = 95
+				owns_state = 95
+				controls_state = 194
+				owns_state = 194
+				controls_state = 204
+				owns_state = 204
+				controls_state = 206
+				owns_state = 206
+				controls_state = 241
+				owns_state = 241
+				controls_state = 764
+				owns_state = 764
+				controls_state = 207
+				owns_state = 207
+			}
+			custom_trigger_tooltip = {##Ukraine
+				tooltip = POL_custom_trigger_tooltip_24
+				controls_state = 199
+				owns_state = 199
+				controls_state = 201
+				owns_state = 201
+				controls_state = 198
+				owns_state = 198
+				controls_state = 202
+				owns_state = 202
+				controls_state = 203
+				owns_state = 203
+				controls_state = 834
+				owns_state = 834
+				controls_state = 192
+				owns_state = 192
+				controls_state = 197
+				owns_state = 197
+				controls_state = 226
+				owns_state = 226
+				controls_state = 221
+				owns_state = 221
+				controls_state = 259
+				owns_state = 259
+				controls_state = 225
+				owns_state = 225
+				controls_state = 193
+				owns_state = 193
+			}
+		}
+		complete_effect = {
+			add_ideas = glory_restored
+			hidden_effect = {
+				news_event = { id = deluge_poland.83 hours = 6 } 
 			}
 		}
 	}
@@ -8589,6 +8857,11 @@ export_catholicism_category = {
 					type = puppet_wargoal_focus
 					target = FROM
 				}
+				FROM = {
+					country_event = {
+						id = generic.26
+					}
+				}
 			}
 		}
 	}
@@ -8639,6 +8912,11 @@ export_catholicism_category = {
 				create_wargoal = {
 					type = puppet_wargoal_focus
 					target = FROM
+				}
+				FROM = {
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}
@@ -8691,6 +8969,11 @@ export_catholicism_category = {
 					type = puppet_wargoal_focus
 					target = FROM
 				}
+				FROM = {
+					country_event = {
+						id = generic.26
+					}
+				}
 			}
 		}
 	}
@@ -8739,6 +9022,11 @@ export_catholicism_category = {
 				create_wargoal = {
 					type = puppet_wargoal_focus
 					target = FROM
+				}
+				FROM = {
+					country_event = {
+						id = generic.26
+					}
 				}
 			}
 		}

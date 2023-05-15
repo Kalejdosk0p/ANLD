@@ -14,6 +14,8 @@ Harry, 0677
 (Color portraits)
 ivan_the_grozdnyi, 1531
 (Portraits)
+Ahmed Pasha Al Said, 2647
+(Color portraits)
 
 #TESTERS
 Thoras, 7062
@@ -34,6 +36,8 @@ Noremac2000
 (Color portraits)
 PoorBananaMan27
 (Color portraits)
+squirrelystew, 6885
+(Graphics, Color portraits)
 WalkerWerraOrchestra
 Paradox Interactive
 Paradox Development Studio

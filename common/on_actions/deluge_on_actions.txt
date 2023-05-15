@@ -933,4 +933,95 @@ on_actions = {
 			}
 		}
 	}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = POL_SOV_pact_signed
+					OR = {
+						tag = POL
+						tag = SOV
+					}
+					FROM = {
+						OR = {
+							tag = SOV
+							tag = POL
+						}
+					}
+				}
+				if = {
+					limit = {
+						SOV = {
+							has_opinion_modifier = beck_milyukov_pact_signed
+						}
+					}
+					remove_opinion_modifier = {
+						target = SOV
+						modifier = beck_milyukov_pact_signed
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							has_opinion_modifier = beck_milyukov_pact_signed
+						}
+					}
+					remove_opinion_modifier = {
+						target = POL
+						modifier = beck_milyukov_pact_signed
+					}
+				}
+				if = {##SOV breaks Beck-Milyukov Pact
+					limit = {
+						FROM = {
+							tag = POL
+						}
+					}
+					news_event = {
+						id = deluge_poland_foreign.23
+					}
+				}
+				if = {##POL breaks Beck-Milyukov Pact
+					limit = {
+						FROM = {
+							tag = SOV
+						}
+					}
+					news_event = {
+						id = deluge_poland_foreign.22
+					}
+				}
+			}
+		}
+	}
+	on_weekly_POM = {
+		effect = {
+			if = {
+				limit = {
+					POM = {
+						is_subject = yes
+						NOT = {
+							has_country_leader =  {
+								character = POM_marie_clotilde_bonaparte
+								ruling_only = yes
+							}
+						}
+					}
+				}
+				POM = {
+					drop_cosmetic_tag = yes
+				}
+			}
+			if = {
+				limit = {
+					POM = {
+						is_subject = no
+					}
+				}
+				POM = {
+					set_cosmetic_tag = POM_kashubia
+				}
+			}
+		}
+	}
 }

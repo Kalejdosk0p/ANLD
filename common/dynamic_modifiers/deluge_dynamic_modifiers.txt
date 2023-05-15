@@ -15,7 +15,7 @@ POL_ozn_dynamic_modifier = { ##POL_ozn_
 }
 POL_rivalry_between_POW_and_WP_dynamic_modifier = { ##POL_WPvsPOW_
 	enable = { always = yes }
-	icon = GFX_idea_ast_volunteer_defence_corps
+	icon = GFX_idea_polish_national_army
 	##POW:
 	max_dig_in_factor = POL_WPvsPOW_max_dig_in_factor
 	resistance_damage_to_garrison = POL_WPvsPOW_resistance_damage_to_garrison

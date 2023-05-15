@@ -8,9 +8,15 @@ country_event = {#Rydz wants to change flag and abolishes monarchy
 	picture = GFX_polish_flag
 	is_triggered_only = yes
 	option = { ##new flag
+		trigger = {
+			NOT = {
+				has_cosmetic_tag = POL_empire
+			}
+		}
 		name = deluge_poland.1.a
 		add_political_power = -10
 		add_stability = -0.1
+		set_cosmetic_tag = POL_rzeczpospolita
 		ai_chance = {factor = 1}
 	}
 	option = { #old flag
@@ -1855,6 +1861,7 @@ country_event = {##Rydz-Śmigły kills himself if Warsaw was lost
 			}
 		}
 	}
+	fire_only_once = yes
 	option = {#Śmigły doesn't do that
 		name = deluge_poland.64.a
 		add_trait = {
@@ -2255,6 +2262,7 @@ country_event = {##question of monarchy in new Polish Republic
 				has_idea = new_wettyn_king
 			}
 		}
+		set_cosmetic_tag = POL_rzeczpospolita
 		add_political_power = 50
 		add_stability = -0.05
 		ai_chance = {
@@ -2316,13 +2324,10 @@ country_event = {##event about history of Tadeusz Kościuszko
 	fire_only_once = yes
 	trigger = {
 		tag = POL
-		AND = {
-			date > 1937.10.13
-			date < 1937.10.16
-		}
+		date > 1937.10.13
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 10
 	}
 	option = {
 		name = deluge_poland.76.a
@@ -2340,13 +2345,10 @@ country_event = {##event about history of Maria Curie-Skłodowska
 	fire_only_once = yes
 	trigger = {
 		tag = POL
-		AND = {
-			date > 1939.7.3
-			date < 1939.7.6
-		}
+		date > 1939.7.3
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 10
 	}
 	option = {
 		name = deluge_poland.77.a
@@ -2364,13 +2366,10 @@ country_event = {##event about history of Adam Mickiewicz
 	fire_only_once = yes
 	trigger = {
 		tag = POL
-		AND = {
-			date > 1938.12.13
-			date < 1938.12.24
-		}
+		date > 1938.12.13
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 10
 	}
 	option = {
 		name = deluge_poland.78.a
@@ -2388,13 +2387,10 @@ country_event = {##event about history of Emilia Plater
 	fire_only_once = yes
 	trigger = {
 		tag = POL
-		AND = {
-			date > 1936.11.12
-			date < 1936.11.15
-		}
+		date > 1936.11.12
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 10
 	}
 	option = {
 		name = deluge_poland.79.a
@@ -2412,13 +2408,10 @@ country_event = {##event about history of Wojciech Głowacki
 	fire_only_once = yes
 	trigger = {
 		tag = POL
-		AND = {
-			date > 1938.6.1
-			date < 1938.6.4
-		}
+		date > 1938.6.1
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 10
 	}
 	option = {
 		name = deluge_poland.80.a
@@ -2436,13 +2429,10 @@ country_event = {##event about history of Józef Poniatowski
 	fire_only_once = yes
 	trigger = {
 		tag = POL
-		AND = {
-			date > 1938.10.18
-			date < 1938.10.21
-		}
+		date > 1938.10.18
 	}
 	mean_time_to_happen = {
-		days = 2
+		days = 10
 	}
 	option = {
 		name = deluge_poland.81.a
@@ -2521,6 +2511,17 @@ country_event = {##Sikorski brings back democracy to Poland
 		}
 	}
 }
+news_event = {##global event that Poland under Piasecki fully regained it's former glory
+	id = deluge_poland.83
+	title = deluge_poland.83.t
+	desc = deluge_poland.83.d
+	picture = GFX_piasecki_proclaims
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.83.a
+	}
+}
 country_event = {##POL proposes defense pact to UK
 	id = deluge_poland_foreign.1
 	title = deluge_poland_foreign.1.t
@@ -2536,12 +2537,18 @@ country_event = {##POL proposes defense pact to UK
 				active = yes
 			}
 		}
+		POL = {add_ideas = POL_ENG_defence_pact}
+		ENG = {add_ideas = POL_ENG_defence_pact}
+		ENG = {
+			add_opinion_modifier = { target = POL modifier = polish_british_pact_signed }
+		}
+		POL = {
+			add_opinion_modifier = { target = ENG modifier = polish_british_pact_signed }
+		}
 		custom_effect_tooltip = POL_effect_tooltip_1
 		hidden_effect = {
 			news_event = { id = deluge_poland_foreign.2 hours = 10 }
 			clr_global_flag = POL_invites_someone
-			POL = {add_ideas = POL_ENG_defence_pact}
-			ENG = {add_ideas = POL_ENG_defence_pact}
 			set_global_flag = POL_ENG_pact_once_signed
 		}
 		ai_chance = {
@@ -2884,7 +2891,7 @@ news_event = {##global event that ITA joins POL
 	id = deluge_poland_foreign.5
 	title = deluge_poland_foreign.5.t
 	desc = deluge_poland_foreign.5.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_boleslaw_wieniawa_dlugoszewski_in_rome
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -2919,7 +2926,7 @@ news_event = {##global event that AUS joins POL
 	id = deluge_poland_foreign.7
 	title = deluge_poland_foreign.7.t
 	desc = deluge_poland_foreign.7.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_castle_of_visegrad_big
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -2943,7 +2950,7 @@ news_event = {##global event that SER joins POL
 	id = deluge_poland_foreign.8
 	title = deluge_poland_foreign.8.t
 	desc = deluge_poland_foreign.8.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_polish_car
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -3053,7 +3060,7 @@ news_event = {##global event that CRO joins POL
 	id = deluge_poland_foreign.10
 	title = deluge_poland_foreign.10.t
 	desc = deluge_poland_foreign.10.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_castle_of_visegrad_big
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -3077,7 +3084,7 @@ news_event = {##global event that ALB joins POL
 	id = deluge_poland_foreign.11
 	title = deluge_poland_foreign.11.t
 	desc = deluge_poland_foreign.11.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_castle_of_visegrad_big
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -3114,7 +3121,7 @@ news_event = {##global event that GRE joins POL
 	id = deluge_poland_foreign.13
 	title = deluge_poland_foreign.13.t
 	desc = deluge_poland_foreign.13.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_castle_of_visegrad_big
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -3138,7 +3145,7 @@ news_event = {##global event that BUL joins POL
 	id = deluge_poland_foreign.14
 	title = deluge_poland_foreign.14.t
 	desc = deluge_poland_foreign.14.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_polish_airmen_in_bulgaria
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -3177,6 +3184,12 @@ country_event = {##HUN is asked by POL to proclaim eternal friendship
 			#	target = HUN
 			#	can_not_declare_war = yes
 			#}
+		}
+		HUN = {
+			add_opinion_modifier = { target = POL modifier = polish_hungarian_friendship }
+		}
+		POL = {
+			add_opinion_modifier = { target = HUN modifier = polish_hungarian_friendship }
 		}
 		hidden_effect = {
 			news_event = {
@@ -3218,7 +3231,7 @@ news_event = {##global event that ROM joins POL
 	id = deluge_poland_foreign.17
 	title = deluge_poland_foreign.17.t
 	desc = deluge_poland_foreign.17.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_polish_romanian_bridge
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -3242,7 +3255,7 @@ news_event = {##global event that DEN joins POL
 	id = deluge_poland_foreign.18
 	title = deluge_poland_foreign.18.t
 	desc = deluge_poland_foreign.18.d
-	picture = GFX_old_foreign_policy
+	picture = GFX_castle_of_visegrad_big
 	major = yes
 	is_triggered_only = yes
 	option = {
@@ -3302,6 +3315,28 @@ country_event = {##members of the crusade gain money after winning
 		ai_chance = {
 			base = 100
 		}
+	}
+}
+news_event = {##POL break Beck-Milyukov Pact
+	id = deluge_poland_foreign.22
+	title = deluge_poland_foreign.22.t
+	desc = deluge_poland_foreign.22.d
+	picture = GFX_poland_breaks_pact
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.22.a
+	}
+}
+news_event = {##SOV break Beck-Milyukov Pact
+	id = deluge_poland_foreign.23
+	title = deluge_poland_foreign.23.t
+	desc = deluge_poland_foreign.23.d
+	picture = GFX_russia_breaks_pact
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.23.a
 	}
 }
 country_event = {##one of sides of POL-ENG act calls other to war
@@ -4485,6 +4520,7 @@ country_event = {##SOV gets propostion of pact against radicals
 			add_state_claim = 190
 			add_state_claim = 809
 			add_state_claim = 808
+			add_opinion_modifier = { target = SOV modifier = beck_milyukov_pact_signed }
 		}
 		SOV = {
 			add_state_claim = 812
@@ -4503,6 +4539,7 @@ country_event = {##SOV gets propostion of pact against radicals
 			add_state_claim = 259
 			add_state_claim = 221
 			add_state_claim = 226
+			add_opinion_modifier = { target = POL modifier = beck_milyukov_pact_signed }
 		}
 		hidden_effect = {
 			news_event = {id = deluge_poland_foreign.50 hours = 3}
@@ -4995,6 +5032,7 @@ country_event = {##POL proposes GER support in civil war
 			    type = infantry_equipment
 			    amount = 8000
 			}
+			add_opinion_modifier = { target = POL modifier = supported_us_in_civil_war }
 		}
 		POL = {
 			country_event = {id = deluge_poland_foreign.54 hours = 3}
@@ -5022,6 +5060,7 @@ country_event = {##POL proposes GER support in civil war
 			    type = infantry_equipment
 			    amount = 8000
 			}
+			add_opinion_modifier = { target = POL modifier = supported_us_in_civil_war }
 		}
 		set_global_flag = GER_gives_money_to_POL
 		ai_chance = {

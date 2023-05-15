@@ -2843,7 +2843,7 @@ focus_tree = {
 						tag = POM
 					}
 				}
-				add_opinion_modifier = { target = POL modifier = huge_increase }
+				add_opinion_modifier = { target = POL modifier = panslavic_policy }
 			}
 		}
 		ai_will_do = {
@@ -3244,6 +3244,11 @@ focus_tree = {
 						type = topple_government
 						expire = 0
 					}
+					PREV = {
+						country_event = {
+							id = generic.26
+						}
+					}
 				}
 			}
 			every_country = {
@@ -3257,6 +3262,11 @@ focus_tree = {
 						target = PREV
 						type = topple_government
 						expire = 0
+					}
+					PREV = {
+						country_event = {
+							id = generic.26
+						}
 					}
 				}
 			}
@@ -3348,16 +3358,16 @@ focus_tree = {
 		}
 		completion_reward = {
 			BAL = {
-				add_opinion_modifier = { target = POL modifier = huge_increase }
+				add_opinion_modifier = { target = POL modifier = balto_slavic_friendship }
 			}
 			LIT = {
-				add_opinion_modifier = { target = POL modifier = huge_increase }
+				add_opinion_modifier = { target = POL modifier = balto_slavic_friendship }
 			}
 			LAT = {
-				add_opinion_modifier = { target = POL modifier = huge_increase }
+				add_opinion_modifier = { target = POL modifier = balto_slavic_friendship }
 			}
 			EST = {
-				add_opinion_modifier = { target = POL modifier = huge_increase }
+				add_opinion_modifier = { target = POL modifier = balto_slavic_friendship }
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_75
 			custom_effect_tooltip = POL_custom_effect_tooltip_76
@@ -3391,10 +3401,10 @@ focus_tree = {
 			custom_effect_tooltip = POL_custom_effect_tooltip_77
 			POL = {add_war_support = 0.05}
 			GER = {
-				add_opinion_modifier = { target = POL modifier = large_decrease }
+				add_opinion_modifier = { target = POL modifier = reminded_polabian_crusade }
 			}
 			WGR = {
-				add_opinion_modifier = { target = POL modifier = large_decrease }
+				add_opinion_modifier = { target = POL modifier = reminded_polabian_crusade }
 			}
 		}
 		ai_will_do = {
@@ -3464,6 +3474,26 @@ focus_tree = {
 			}
 			add_to_variable = { POL_zadruga_non_core_manpower = 0.05}
 			custom_effect_tooltip = POL_custom_effect_tooltip_79
+			every_country = {
+				limit = {
+					OR = {
+						tag = TUR
+						tag = CAU
+						tag = ARM
+						tag = AZR
+						tag = GEO
+						tag = ABK
+						tag = OSS
+						tag = CHE
+						tag = DAG
+						tag = CRI
+						tag = TSR
+						tag = GRE
+						tag = KUR
+					}
+				}
+				add_opinion_modifier = { target = POL modifier = appreciated_the_beauty_of_the_east }
+			}
 		}
 		ai_will_do = {
 			factor = 20
@@ -3655,7 +3685,7 @@ focus_tree = {
 			has_completed_focus = POL_piasecki_wins
 		}
 		completion_reward = {
-			set_cosmetic_tag = POL_PIAS
+			set_cosmetic_tag = POL_falanga
 			set_party_name = { ideology = fascism long_name = POL_falanga_name_long name = POL_falanga_name_short }
 			hidden_effect = {
 				add_to_variable = { POL_falanga_stability_factor = -0.1}
@@ -8731,7 +8761,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_forced_urbanization
-		icon = GFX_focus_generic_industry_1
+		icon = GFX_forced_urbanization
 		x = 0
 		y = 1
 		search_filters = {}
@@ -8937,7 +8967,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_communist_youth_organisation
-		icon = GFX_focus_generic_support_the_left_right
+		icon = GFX_communist_youth_organizations
 		x = 12
 		y = 1
 		search_filters = {}
@@ -9043,7 +9073,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_glorify_mothers
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_glorify_mothers
 		x = 0
 		y = 1
 		search_filters = {}
@@ -9071,7 +9101,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_glorify_warrioress
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_glorify_warrioress
 		x = 2
 		y = 1
 		search_filters = {}
@@ -9099,7 +9129,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_political_commissars_in_army
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_political_commissars_in_army
 		x = 2
 		y = 1
 		search_filters = {}
@@ -9127,7 +9157,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_apolitical_army
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_apolitical_army
 		x = 0
 		y = 1
 		search_filters = {}
@@ -9267,7 +9297,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_new_radical_constitution
-		icon = GFX_focus_generic_treaty
+		icon = GFX_new_radical_constitution
 		x = 1
 		y = 1
 		search_filters = {}

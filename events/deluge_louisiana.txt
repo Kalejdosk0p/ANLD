@@ -1,0 +1,35 @@
+﻿add_namespace = deluge_louisiana
+country_event = {
+	id = deluge_louisiana.1
+	title = deluge_louisiana.1.t
+	desc = deluge_louisiana.1.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		date > 1940.8.25
+		tag = LOU
+		has_character = LOU_jean_i_bourbon
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {
+		name = deluge_louisiana.1.a
+		retire_character = LOU_jean_i_bourbon
+		promote_character = LOU_henri_i_bourbon
+		hidden_effect = {
+			news_event = { id = deluge_louisiana.2 }
+		}
+	}
+}
+news_event = {
+	id = deluge_louisiana.2
+	title = deluge_louisiana.2.t
+	desc = deluge_louisiana.2.d
+	picture = GFX_news_event_generic_funeral
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_louisiana.2.a
+	}
+}
