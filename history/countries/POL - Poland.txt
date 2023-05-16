@@ -437,3 +437,11 @@ recruit_character = POL_deluge_stanislaw_mikolajczyk
 
 recruit_character = POL_deluge_korfanty
 recruit_character = POL_deluge_wladyslaw_gomulka
+recruit_character = POL_deluge_xawery_czernicki
+recruit_character = POL_deluge_stanislaw_hryniewiecki
+recruit_character = POL_deluge_stefan_frankowski
+recruit_character = POL_deluge_karol_korytowski
+recruit_character = POL_deluge_jozef_unrug
+recruit_character = POL_deluge_adam_mohuczy
+recruit_character = POL_deluge_jerzy_swirski
+recruit_character = POL_deluge_wlodzimierz_steyer

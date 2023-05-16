@@ -7926,13 +7926,13 @@ focus_tree = {
 		bypass = {
 			
 		}
-		cancel_if_invalid = yes		
-		continue_if_invalid = no		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
 		available_if_capitulated = yes
 	}
 	focus = {
 		id = POL_dictatorship_of_proletariat
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_dictatorship_of_proletariat
 		x = -2
 		y = 1
 		search_filters = {}
@@ -7957,7 +7957,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_cult_of_the_wodz
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_cult_of_the_wodz
 		x = 1
 		y = 1
 		search_filters = {}
@@ -8215,7 +8215,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_christian_socialist_realism
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_christian_socialist_realism
 		x = 1
 		y = 1
 		search_filters = {}
@@ -9017,7 +9017,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_slavic_army_of_labour
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_slavic_army_of_labour
 		x = 1
 		y = 1
 		search_filters = {}

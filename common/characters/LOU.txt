@@ -3,7 +3,7 @@ characters={
 		name="Jean I d’Orléans"
 		portraits={
 			civilian={
-				large=GFX_portrait_fra_jean_duke_of_guise
+				large="gfx/leaders/LOU/jean_i_orlean.dds"
 			}
 		}
 		country_leader={
@@ -16,7 +16,7 @@ characters={
 		name="Henri I d’Orléans"
 		portraits={
 			civilian={
-				large=GFX_portrait_fra_henry_count_of_paris
+				large="gfx/leaders/LOU/henry_i_orlean.dds"
 			}
 		}
 		country_leader={

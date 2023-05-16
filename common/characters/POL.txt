@@ -1762,6 +1762,274 @@ characters={
 			logistics_skill=2
 		}
 	}
+	##ADMIRALS:
+	POL_deluge_xawery_czernicki = {
+		name=POL_Character_deluge_xawery_czernicki
+		portraits = {
+			army = {
+				small=GFX_xawery_czernicki_picture_small
+				large="gfx/leaders/POL/xawery_czernicki.dds"
+			}
+			navy = {
+				small=GFX_xawery_czernicki_picture_small
+				large="gfx/leaders/POL/xawery_czernicki.dds"
+			}
+		}
+		navy_leader = {
+			traits = { old_guard_navy}
+			skill=4
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=3
+			coordination_skill=3
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = POL_deluge_xawery_czernicki
+			allowed = {
+				tag = POL
+			}
+			traits = {
+				navy_chief_old_guard 
+			}
+			cost = 150
+			available = { 
+				
+			}
+			ai_will_do = {
+				factor = 1.000
+			}
+			ledger = navy
+		}
+	}
+	POL_deluge_stanislaw_hryniewiecki = {
+		name=POL_Character_deluge_stanislaw_hryniewiecki
+		portraits = {
+			army = {
+				small=GFX_stanislaw_hryniewiecki_picture_small
+				large="gfx/leaders/POL/stanislaw_hryniewiecki.dds"
+			}
+			navy = {
+				small=GFX_stanislaw_hryniewiecki_picture_small
+				large="gfx/leaders/POL/stanislaw_hryniewiecki.dds"
+			}
+		}
+		navy_leader = {
+			traits = { naval_lineage blockade_runner }
+			skill=3
+			attack_skill=2
+			defense_skill=1
+			maneuvering_skill=4
+			coordination_skill=3
+		}
+	}
+	POL_deluge_stefan_frankowski = {
+		name=POL_Character_deluge_stefan_frankowski
+		portraits = {
+			army = {
+				small=GFX_stefan_frankowski_picture_small
+				large=GFX_portrait_POL_Stefan_Frankowski
+			}
+			navy = {
+				small=GFX_stefan_frankowski_picture_small
+				large=GFX_portrait_POL_Stefan_Frankowski
+			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			maneuvering_skill=1
+			coordination_skill=2
+		}
+	}
+	POL_deluge_karol_korytowski = {
+		name=POL_Character_deluge_karol_korytowski
+		portraits = {
+			army = {
+				small=GFX_karol_korytowski_picture_small
+				large=GFX_portrait_POL_karol_korytowski
+			}
+			navy = {
+				small=GFX_karol_korytowski_picture_small
+				large=GFX_portrait_POL_karol_korytowski
+			}
+		}
+		navy_leader = {
+			traits = { navy_career_officer superior_tactician }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			maneuvering_skill=1
+			coordination_skill=1
+		}
+	}
+	POL_deluge_jozef_unrug = {
+		name=POL_Character_deluge_jozef_unrug
+		portraits = {
+			army = {
+				small=GFX_jozef_unrug_picture_small
+				large=GFX_portrait_POL_jozef_unrug
+			}
+			navy = {
+				small=GFX_jozef_unrug_picture_small
+				large=GFX_portrait_POL_jozef_unrug
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POL_deluge_jozef_unrug
+			allowed = {
+				tag = POL
+			}
+			visible = {
+				tag = POL
+			}
+			available = {
+				
+			}
+			traits = {
+				navy_chief_maneuver_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+			ledger = navy
+		}
+		navy_leader = {
+			traits = { navy_career_officer spotter mine_layer seawolf }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+	POL_deluge_adam_mohuczy = {
+		name=POL_Character_deluge_adam_mohuczy
+		portraits = {
+			army = {
+				small=GFX_adam_mohuczy_picture_small
+				large="gfx/leaders/POL/adam_mohuczy.dds"
+			}
+			navy = {
+				small=GFX_adam_mohuczy_picture_small
+				large="gfx/leaders/POL/adam_mohuczy.dds"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = POL_deluge_adam_mohuczy
+			allowed = {
+				tag = POL
+			}
+			visible = {
+				tag = POL
+			}
+			available = {
+				
+			}
+			traits = {
+				navy_chief_decisive_battle_1
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+			ledger = navy
+		}
+		navy_leader = {
+			traits = { old_guard_navy seawolf lancer }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+	POL_deluge_jerzy_swirski = {
+		name=POL_Character_deluge_jerzy_swirski
+		portraits = {
+			army = {
+				small=GFX_jerzy_swirski_picture_small
+				large="gfx/leaders/POL/jerzy_swirski.dds"
+			}
+			navy = {
+				small=GFX_jerzy_swirski_picture_small
+				large="gfx/leaders/POL/jerzy_swirski.dds"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = POL_deluge_jerzy_swirski
+			allowed = {
+				tag = POL
+			}
+			visible = {
+				tag = POL
+			}
+			traits = {
+				naval_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+			ledger = navy
+		}
+		navy_leader = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			maneuvering_skill = 3
+			coordination_skill = 3
+		}
+	}
+	POL_deluge_wlodzimierz_steyer = {
+		name=POL_Character_deluge_wlodzimierz_steyer
+		portraits = {
+			army = {
+				small=GFX_wlodzimierz_steyer_picture_small
+				large="gfx/leaders/POL/wlodzimierz_steyer.dds"
+			}
+			navy = {
+				small=GFX_wlodzimierz_steyer_picture_small
+				large="gfx/leaders/POL/wlodzimierz_steyer.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = POL_deluge_wlodzimierz_steyer
+			allowed = {
+				tag = POL
+			}
+			visible = {
+				tag = POL
+			}
+			available = { 
+				
+			}
+			traits = {
+				navy_amphibious_assault_1
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1
+			}
+			ledger = navy
+		}
+		navy_leader = {
+			traits = { ground_pounder }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			maneuvering_skill = 3
+			coordination_skill = 2
+		}
+	}
 	##ADVISORS:
 	##NOT-POLITICAL:
 	POL_deluge_folyar_rajchman = {##Henryk Floyar-Rajchman

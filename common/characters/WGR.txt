@@ -43,8 +43,7 @@ characters={
 		name="Frederick II"
 		portraits={
 			civilian={
-				#large="gfx/leaders/GER/prince_karl_anton.dds"
-				large=GFX_portraits_fra_napoleon_vi
+				large="gfx/leaders/GER/portraits_wgr_napoleon_vi.dds"
 			}
 		}
 		country_leader={
