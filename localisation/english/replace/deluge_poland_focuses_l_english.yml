@@ -1,0 +1,24 @@
+﻿l_english:
+
+ ###POLITICAL TREE###
+ 
+ POL_death_of_marshal:0 "Death of the Marshal"
+ POL_death_of_marshal_desc:0 "Our beloved Marshal has passed away. Now the fate of the country is being decided — whether the old order will be continued or a new one will begin. Without a doubt, this opens the door to power for some ambitious figures, no matter how much they mourn our loss."
+ 
+ ###MILITARY TREE###
+ 
+ POL_start_army_reform:0 "Army Reform"
+ POL_start_army_reform_desc:0 "It's not that our army is weak, but years of waiting have made it obsolete, and its high command is more involved in politics than in the defense of the country. The Polish Military urgently needs to be put on its feet! The sooner we start reforming the armed forces, the better."
+ 
+ ###ECONOMIC TREE###
+ 
+ POL_hire_economists:0 "Renew the Ministry of Finance"
+ POL_hire_economists_desc:0 "As our economy is slowly recovering from turmoils, it is time for a rotation in the Cabinet. We need fresh blood that assesses global trends in a new way, and does not cling to the beginning of the century."
+ POL_end_recovery:0 "End Recovery"
+ POL_end_recovery_desc:0 "We have done a good job on our economic program: our reserves are being restored, and the main budget receives extra funds. Now it's time to announce the end of the crisis and get down to real business."
+ 
+ POL_support_cities:0 "Support Cities"
+ POL_support_cities_desc:0 "In order to reach the industrial level of Western European countries, we must redirect the available funds to urban development. Since Poland is mostly a peasant country, we will gain a lot if we take a course towards industrialization now."
+ 
+ POL_support_countryside:0 "Support Countryside"
+ POL_support_countryside_desc:0 "Flirting with excessive industrialization can be dangerous. Instead of taking risks, we will conduct it at a careful pace, and the remaining funds will be sent to the countryside to help peasants improve their work efficiency and quality of life."
