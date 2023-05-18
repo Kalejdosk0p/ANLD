@@ -3,11 +3,11 @@ Discord tags are displayed
 
 #LEAD DEVELOPER
 CommGesen, 5165
-(Concept, French content, Coding, Graphics)
+(Concept, Coding, Graphics)
 
 #DEVELOPER ASSISTANT
 Szymon, 4996
-(Polish content, Coding)
+(Coding)
 
 #CONTRIBUTORS
 Harry, 0677
@@ -35,6 +35,8 @@ Vinctories
 Noremac2000
 (Color portraits)
 PoorBananaMan27
+(Color portraits)
+Hexis, 3776
 (Color portraits)
 squirrelystew, 6885
 (Graphics, Color portraits)
