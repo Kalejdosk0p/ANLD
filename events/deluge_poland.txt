@@ -749,6 +749,8 @@ country_event = {##plot happenes
 		add_ideas = POL_problems_in_administration
 		add_ideas = POL_problems_in_army
 		retire_character = POL_Smigly
+		promote_character = POL_deluge_pkwn
+		set_party_name = { ideology = communism long_name = POL_PKWN_name_long name = POL_PKWN_name_short }
 		hidden_effect = {
 			news_event = {
 				id = deluge_poland.53
@@ -1985,7 +1987,9 @@ country_event = {##Rydz-Śmigły kills himself if Warsaw was lost part 2
 	option = {#previous options
 		name = deluge_poland.64.g
 		POL = {
-			country_event = deluge_poland.64
+			country_event = {
+				id = deluge_poland.64
+			}
 		}
 		ai_chance = {
 			base = 1
@@ -2002,10 +2006,10 @@ country_event = {##player/AI chooses ruling communist party
 		name = deluge_poland.68.a
 		set_country_flag = POL_PPS_won_in_event
 		hidden_effect = {
-			news_event = {
-				id = deluge_poland.65
-				hours = 10
-			}
+			#news_event = {
+			#	id = deluge_poland.65
+			#	hours = 10
+			#}
 		}
 		ai_chance = {
 			base = 1
@@ -2015,10 +2019,10 @@ country_event = {##player/AI chooses ruling communist party
 		name = deluge_poland.68.b
 		set_country_flag = POL_KPP_won_in_event
 		hidden_effect = {
-			news_event = {
-				id = deluge_poland.65
-				hours = 10
-			}
+			#news_event = {
+			#	id = deluge_poland.65
+			#	hours = 10
+			#}
 		}
 		ai_chance = {
 			base = 1
@@ -2044,10 +2048,10 @@ country_event = {##player/AI chooses ruling communist party part 2
 		name = deluge_poland.69.a
 		set_country_flag = POL_NSP_won_in_event
 		hidden_effect = {
-			news_event = {
-				id = deluge_poland.65
-				hours = 10
-			}
+			#news_event = {
+			#	id = deluge_poland.65
+			#	hours = 10
+			#}
 		}
 		ai_chance = {
 			base = 1
@@ -2057,10 +2061,10 @@ country_event = {##player/AI chooses ruling communist party part 2
 		name = deluge_poland.69.b
 		set_country_flag = POL_NSPR_won_in_event
 		hidden_effect = {
-			news_event = {
-				id = deluge_poland.65
-				hours = 10
-			}
+			#news_event = {
+			#	id = deluge_poland.65
+			#	hours = 10
+			#}
 		}
 		ai_chance = {
 			base = 1
@@ -2086,10 +2090,10 @@ country_event = {##player/AI chooses ruling communist party part 3
 		name = deluge_poland.70.a
 		set_country_flag = POL_PKWN_won_in_event
 		hidden_effect = {
-			news_event = {
-				id = deluge_poland.65
-				hours = 10
-			}
+			#news_event = {
+			#	id = deluge_poland.65
+			#	hours = 10
+			#}
 		}
 		ai_chance = {
 			base = 1
@@ -2520,6 +2524,221 @@ news_event = {##global event that Poland under Piasecki fully regained it's form
 	major = yes
 	option = {
 		name = deluge_poland.83.a
+	}
+}
+country_event = {##new communist party chooses it's leader
+	id = deluge_poland.84
+	title = deluge_poland.84.t
+	desc = deluge_poland.84.d
+	picture = GFX_report_event_generic_communist_congress
+	is_triggered_only = yes
+	option = {##PPS - Jędrzej Moraczewski
+		name = deluge_poland.84.moraczewski
+		trigger = {
+			has_country_flag = POL_PPS_won_in_event
+		}
+		promote_character = POL_deluge_jedrzej_moraczewski
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##PPS - Zygmunt Marek
+		name = deluge_poland.84.marek
+		trigger = {
+			has_country_flag = POL_PPS_won_in_event
+		}
+		promote_character = POL_deluge_zygumnt_marek
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##PPS - Tomasz Arciszewski
+		name = deluge_poland.84.arciszewski
+		trigger = {
+			has_country_flag = POL_PPS_won_in_event
+		}
+		promote_character = POL_deluge_tomasz_arciszewski
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##PPS - Maria Koszutska
+		name = deluge_poland.84.koszutska
+		trigger = {
+			has_country_flag = POL_PPS_won_in_event
+		}
+		promote_character = POL_deluge_maria_koszutska
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##KPP - Władysław Gomułka
+		name = deluge_poland.84.gomulka
+		trigger = {
+			has_country_flag = POL_KPP_won_in_event
+		}
+		promote_character = POL_deluge_wladyslaw_gomulka
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##KPP - Julian Leszczyński
+		name = deluge_poland.84.leszczynski
+		trigger = {
+			has_country_flag = POL_KPP_won_in_event
+		}
+		promote_character = POL_deluge_julian_leszczynski
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##KPP - Wanda Wasilewska
+		name = deluge_poland.84.wasilewska
+		trigger = {
+			has_country_flag = POL_KPP_won_in_event
+		}
+		promote_character = POL_deluge_wanda_wasilewska
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##KPP - Karol Radek
+		name = deluge_poland.84.radek
+		trigger = {
+			has_country_flag = POL_KPP_won_in_event
+		}
+		promote_character = POL_deluge_karol_radek
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NSP - Antoni Ciszak
+		name = deluge_poland.84.ciszak
+		trigger = {
+			has_country_flag = POL_NSP_won_in_event
+		}
+		promote_character = POL_deluge_antoni_ciszak
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NSP - Czesław Chmielewski
+		name = deluge_poland.84.chmielewski
+		trigger = {
+			has_country_flag = POL_NSP_won_in_event
+		}
+		promote_character = POL_deluge_czeslaw_chmielewski
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NSP - Karol Popiel
+		name = deluge_poland.84.popiel
+		trigger = {
+			has_country_flag = POL_NSP_won_in_event
+		}
+		promote_character = POL_deluge_karol_popiel
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NSP - Adam Chądzyński 
+		name = deluge_poland.84.chadzynski
+		trigger = {
+			has_country_flag = POL_NSP_won_in_event
+		}
+		promote_character = POL_deluge_adam_chadzynski
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NSPR - Kazimierz Dagnan
+		name = deluge_poland.84.dagnan
+		trigger = {
+			has_country_flag = POL_NSPR_won_in_event
+		}
+		promote_character = POL_deluge_dagnan
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NSPR - Władysław Orębski
+		name = deluge_poland.84.orebski
+		trigger = {
+			has_country_flag = POL_NSPR_won_in_event
+		}
+		promote_character = POL_deluge_wladyslaw_orebski
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NSPR - Wacław Kozielski
+		name = deluge_poland.84.kozielski
+		trigger = {
+			has_country_flag = POL_NSPR_won_in_event
+		}
+		promote_character = POL_deluge_waclaw_kozielski
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NSPR - Kazimierz Zakrzewski
+		name = deluge_poland.84.zakrzewski
+		trigger = {
+			has_country_flag = POL_NSPR_won_in_event
+		}
+		promote_character = POL_deluge_kazimierz_zakrzewski
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
 	}
 }
 country_event = {##POL proposes defense pact to UK

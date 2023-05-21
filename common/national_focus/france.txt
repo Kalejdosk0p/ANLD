@@ -11,7 +11,7 @@ focus_tree = {
 	#Исследовательские перестановки
 	focus = {
 		id = FRA_research_rearrangements
-		icon = GFX_goal_continuous_research
+		icon = GFX_goal_tfv_generic_tech_sharing
 		x = 35
 		y = 0
 		cost = 5
@@ -408,7 +408,7 @@ focus_tree = {
 	#Стратегические научные центры
 	focus = {
 		id = FRA_strategic_research_centers
-		icon = GFX_goal_tfv_generic_tech_sharing
+		icon = GFX_research_and_developement
 		x = 32
 		y = 2
 		cost = 10
@@ -529,7 +529,7 @@ focus_tree = {
 	#Надёжный источник
 	focus = {
 		id = FRA_reliable_source
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_radio_goods
 		x = 37
 		y = 3
 		cost = 3
@@ -716,7 +716,7 @@ focus_tree = {
 	#Повсеместная лояльность
 	focus = {
 		id = FRA_widespread_loyalty
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_additional_reservists
 		x = 11
 		y = 2
 		cost = 10
@@ -865,7 +865,7 @@ focus_tree = {
 	#Домашнее управление
 	focus = {
 		id = FRA_home_management
-		icon = GFX_focus_generic_rubber
+		icon = GFX_agricultural_industry
 		x = 11
 		y = 4
 		cost = 10
@@ -2892,7 +2892,7 @@ focus_tree = {
 	#Каждый — гражданин
 	focus = {
 		id = FRA_everyone_is_a_citizen
-		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		icon = GFX_new_five_year_plan #goal_tfv_saf_anti_colonialist_crusade
 		x = 5
 		y = 11
 		cost = 10
@@ -3142,7 +3142,7 @@ focus_tree = {
 	#Армия
 	focus = {
 		id = FRA_army
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_national_defense_fund
 		x = 19
 		y = 1
 		cost = 10
@@ -3307,7 +3307,7 @@ focus_tree = {
 	#Профессиональный долг
 	focus = {
 		id = FRA_professional_duty
-		icon = GFX_goal_generic_major_war
+		icon = GFX_army_modernizations
 		x = 21
 		y = 4
 		cost = 10
@@ -3327,7 +3327,7 @@ focus_tree = {
 	#Обновление доктрины
 	focus = {
 		id = FRA_updating_the_doctrine
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_goal_generic_army_doctrines
 		x = 19
 		y = 4
 		cost = 10

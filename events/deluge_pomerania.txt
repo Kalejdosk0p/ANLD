@@ -18,6 +18,10 @@ country_event = {##FRA decides what is gonna happen to POM
 		POM = {
 			promote_character = POM_marie_clotilde_bonaparte
 			set_cosmetic_tag = POM_kashubia
+			remove_country_leader_role = {
+				character = POM_philippe_petain
+				ideology = bonapartist_ideology
+			}
 		}
 		country_event = {##fate of Petain for France
 			id = deluge_pomerania.15
@@ -119,6 +123,10 @@ country_event = {##FRA decides what is gonna happen to POM
 				id = deluge_pomerania.4
 			}
 			set_cosmetic_tag = POM_kashubia
+			remove_country_leader_role = {
+				character = POM_philippe_petain
+				ideology = bonapartist_ideology
+			}
 		}
 		country_event = {##fate of Petain for France
 			id = deluge_pomerania.15
@@ -232,6 +240,12 @@ country_event = {##FRA decides what is gonna happen to POM
 					country_exists = DDR
 					country_exists = GER
 				}
+			}
+		}
+		POM = {
+			remove_country_leader_role = {
+				character = POM_philippe_petain
+				ideology = bonapartist_ideology
 			}
 		}
 		every_possible_country = {
@@ -482,6 +496,12 @@ country_event = {##FRA decides what is gonna happen to POM - part 2
 	is_triggered_only = yes
 	option = {#give POM to POL
 		name = deluge_pomerania.2.a
+		POM = {
+			remove_country_leader_role = {
+				character = POM_philippe_petain
+				ideology = bonapartist_ideology
+			}
+		}
 		every_possible_country = {
 			limit = { has_character = POM_philippe_petain }
 			random_character = {
@@ -521,6 +541,12 @@ country_event = {##FRA decides what is gonna happen to POM - part 2
 	}
 	option = {#give POM to GER/WGR/DDR 
 		name = deluge_pomerania.2.b
+		POM = {
+			remove_country_leader_role = {
+				character = POM_philippe_petain
+				ideology = bonapartist_ideology
+			}
+		}
 		every_possible_country = {
 			limit = { has_character = POM_philippe_petain }
 			random_character = {

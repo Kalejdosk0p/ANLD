@@ -2439,4 +2439,88 @@ spriteTypes = {
 		name = "GFX_idea_polish_national_army"
 		texturefile = "gfx/interface/ideas/spirits/polish_national_army.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_ursus"
+		texturefile = "gfx/interface/ideas/designers/ursus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_pzinz"
+		texturefile = "gfx/interface/ideas/designers/pzinz.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_sepewe"
+		texturefile = "gfx/interface/ideas/designers/sepewe.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_huta_zgoda"
+		texturefile = "gfx/interface/ideas/designers/huta_zgoda.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_stocznia_gdanska"
+		texturefile = "gfx/interface/ideas/designers/stocznia_gdanska.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_starachowice_works"
+		texturefile = "gfx/interface/ideas/designers/starachowice_works.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ksus"
+		texturefile = "gfx/interface/ideas/designers/ksus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lot"
+		texturefile = "gfx/interface/ideas/designers/lot.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lws"
+		texturefile = "gfx/interface/ideas/designers/lws.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_lwd"
+		texturefile = "gfx/interface/ideas/designers/lwd.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_h_cegielski"
+		texturefile = "gfx/interface/ideas/designers/h_cegielski.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_dwl"
+		texturefile = "gfx/interface/ideas/designers/dwl.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_hsw"
+		texturefile = "gfx/interface/ideas/designers/hsw.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_synthetic_rubber"
+		texturefile = "gfx/interface/ideas/spirits/synthetic_rubber.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_plan_w"
+		texturefile = "gfx/interface/ideas/spirits/POL_plan_w.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_paramilitarism"
+		texturefile = "gfx/interface/ideas/spirits/POL_paramilitarism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_POL_broken_emblem"
+		texturefile = "gfx/interface/ideas/spirits/POL_broken_emblem.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_massive_strikes"
+		texturefile = "gfx/interface/ideas/spirits/massive_strikes.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_new_five_year_plan"
+		texturefile = "gfx/interface/ideas/spirits/idea_new_five_year_plan.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_decadency_at_its_fullest"
+		texturefile = "gfx/interface/ideas/spirits/idea_decadency_at_its_fullest.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_flag_of_workers_brigades"
+		texturefile = "gfx/interface/ideas/spirits/flag_of_workers_brigades.dds"
+	}
 }

@@ -1,7 +1,7 @@
 characters={
 	##LEADERS:
 	POL_Pilsudski = {##Józef Piłsudski
-		name = POL_Character_Pilsudski 
+		name = POL_Character_Pilsudski
 		portraits={
 			civilian= {
 				large="gfx/leaders/POL/jozef_pilsudski.dds"
@@ -27,20 +27,20 @@ characters={
 				dislikes_russia
 			}
 			expire = "1969.1.1.1"
-			desc = "POL_Pilsudski_leader_desc"
+			desc = "POL_Pilsudski_desc"
 		}
 	}
 	POL_Smigly = {##Edward Rydz-Śmigły
 		name = POL_Character_Smigly 
 		portraits = {
 			civilian = {
-				#large="gfx/leaders/POL/Rydz.dds"
-				large = "GFX_portrait_POL_edward_rydz_smigly"
+				large="gfx/leaders/POL/edward_rydz_smigly.dds"
+				#large = "GFX_portrait_POL_edward_rydz_smigly"
 				small = "GFX_edward_rydz_smigly_picture_small"
 			}
 			army = {
-				#large="gfx/leaders/POL/Rydz.dds"
-				large = "GFX_portrait_POL_edward_rydz_smigly"
+				large="gfx/leaders/POL/edward_rydz_smigly.dds"
+				#large = "GFX_portrait_POL_edward_rydz_smigly"
 				small = "GFX_edward_rydz_smigly_picture_small"
 			}
 		}
@@ -48,7 +48,7 @@ characters={
 			ideology = social_darwinist_ideology
 			expire = "1969.1.1.1"
 			traits = { marshal_of_sky_and_soil }
-			desc = "POL_Smigly_leader_desc"
+			desc = "POL_Smigly_desc"
 		}
 		field_marshal = {
 			traits = { war_hero offensive_doctrine trait_reckless media_personality }
@@ -80,7 +80,7 @@ characters={
 		name = POL_Character_Sanation_Emergency_Council 
 		portraits={
 			civilian={
-				large="gfx/leaders/POL/portrait_POL_Sanation_Emergency_Council.dds"
+				large="gfx/leaders/POL/SEC.dds"
 			}
 		}
 		country_leader = {
@@ -122,7 +122,7 @@ characters={
 			ideology = corporatist_ideology
 			expire = "1969.1.1.1"
 			traits = { liberal_marshal}
-			desc = "POL_deluge_Sikorski_leader_desc"
+			desc = "POL_deluge_Sikorski_desc"
 		}
 		field_marshal = {
 			traits = { war_hero defensive_doctrine trait_cautious }
@@ -180,7 +180,7 @@ characters={
 				father_of_polish_democratic_nationalism
 				dislikes_germany_deluge
 			}
-			desc = "POL_Dmowski_desc"
+			desc = "POL_deluge_Dmowski_desc"
 		}
 	}
 	POL_deluge_slawek = {##Walery Sławek
@@ -214,7 +214,7 @@ characters={
 			traits = {
 				leftist_freemanson
 			}
-			desc = "POL_deluge_artur_sliwinski_leader_desc"
+			desc = "POL_deluge_artur_sliwinski_desc"
 		}
 	}
 	POL_deluge_rataj = {##Maciej Rataj
@@ -467,74 +467,6 @@ characters={
 			desc = "POL_deluge_aleksander_tyszkiewicz_desc"
 		}
 	}
-	POL_deluge_zygumnt_marek = {##Zygmunt Marek
-		name = POL_Character_deluge_zygumnt_marek
-		portraits={
-			civilian={ 
-				large = "gfx/leaders/POL/zygmunt_marek.dds"
-				#small = GFX_portrait_POL_roman_dmowski_small
-			}
-		}
-		country_leader = {
-			ideology = jacobin_ideology
-			expire = "1969.1.1.1"
-			traits = {
-				
-			}
-			desc = "POL_deluge_zygumnt_marek_desc"
-		}
-	}
-	POL_deluge_antoni_ciszak = {##Antoni Ciszak
-		name = POL_Character_deluge_antoni_ciszak
-		portraits={
-			civilian={ 
-				large = "gfx/leaders/POL/antoni_ciszak.dds"
-				#small = GFX_portrait_POL_roman_dmowski_small
-			}
-		}
-		country_leader = {
-			ideology = marxist_ideology
-			expire = "1969.1.1.1"
-			traits = {
-				
-			}
-			desc = "POL_deluge_antoni_ciszak_desc"
-		}
-	}
-	POL_deluge_wladyslaw_gomulka = {##Władysław Gomułka
-		name = POL_Character_deluge_wladyslaw_gomulka
-		portraits={
-			civilian={ 
-				large = GFX_portrait_POL_wladyslaw_gomulka
-				#small = GFX_portrait_POL_roman_dmowski_small
-			}
-		}
-		country_leader = {
-			ideology = marxist_ideology
-			expire = "1969.1.1.1"
-			traits = {
-				
-			}
-			desc = "POL_deluge_wladyslaw_gomulka_desc"
-		}
-	}
-	POL_deluge_waclaw_kozielski = {##Wacław Kozielski
-		name = POL_Character_deluge_waclaw_kozielski
-		portraits={
-			civilian={ 
-				large = "gfx/leaders/POL/waclaw_kozielski.dds"
-				#small = GFX_portrait_POL_roman_dmowski_small
-			}
-		}
-		country_leader = {
-			ideology = marxist_ideology
-			expire = "1969.1.1.1"
-			traits = {
-				
-			}
-			desc = "POL_deluge_waclaw_kozielski_desc"
-		}
-	}
 	##GENERALS:
 	POL_deluge_Kukiel = {##Marian Kukiel
 		name = POL_Character_deluge_Kukiel
@@ -552,6 +484,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=4
+			desc = "POL_deluge_Kukiel_desc"
 		}
 		advisor={
 			slot = high_command
@@ -576,7 +509,6 @@ characters={
 		portraits={
 			army = {
 				large = "GFX_portrait_POL_jozef_haller"
-				#large="gfx/leaders/POL/Haller.dds"
 				small = GFX_jozef_haller_picture_small
 			}
 		}
@@ -584,7 +516,7 @@ characters={
 			ideology = social_darwinist_ideology
 			expire = "1969.1.1.1"
 			traits = { national_hero_haller }
-			desc = "POL_Haller_leader_desc"
+			desc = "POL_deluge_Haller_desc"
 		}
 		corps_commander = {
 			traits = { war_hero old_guard }
@@ -593,6 +525,7 @@ characters={
 			defense_skill=4
 			planning_skill=4
 			logistics_skill=3
+			desc = "POL_deluge_Haller_desc"
 		}
 		advisor = {
 			slot = chief_of_staff_slot
@@ -629,6 +562,7 @@ characters={
 			defense_skill=3
 			planning_skill=4
 			logistics_skill=4
+			desc = "POL_deluge_Kleeberg_desc"
 		}
 	}
 	POL_deluge_Rummel = {##Juliusz Rómmel/Rummel
@@ -646,6 +580,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=3
+			desc = "POL_deluge_Rummel_desc"
 		}
 		advisor={
 			slot = high_command
@@ -677,7 +612,7 @@ characters={
 			ideology = social_darwinist_ideology
 			expire = "1969.1.1.1"
 			traits = { naval_invasion_expert }
-			desc = "POL_gustaw_orlicz_dreszer_leader_desc"
+			desc = "POL_deluge_Orlicz_Dreszer_desc"
 		}
 		corps_commander = {
 			traits = { media_personality naval_liason politically_connected }
@@ -686,6 +621,7 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=3
+			desc = "POL_deluge_Orlicz_Dreszer_desc"
 		}
 	}
 	POL_deluge_Anders = {##Władysław Anders
@@ -704,6 +640,7 @@ characters={
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=4
+			desc = "POL_deluge_Anders_desc"
 		}
 		advisor={
 			slot = army_chief
@@ -738,6 +675,7 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=3
+			desc = "POL_deluge_Maczek_desc"
 		}
 		advisor={
 			slot = theorist
@@ -764,7 +702,6 @@ characters={
 		portraits={
 			army = {
 				large="GFX_portrait_POL_stanislaw_sosabowski"
-				#large="gfx/leaders/POL/sosabowski.dds"
 				small = GFX_stanislaw_sosabowski_picture_small
 			}
 		}
@@ -775,6 +712,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=4
+			desc = "POL_deluge_Sosabowski_desc"
 		}
 		advisor={
 			slot = high_command
@@ -799,7 +737,6 @@ characters={
 		portraits={
 			army = {
 				large="GFX_portrait_POL_witold_pilecki"
-				#large="gfx/leaders/POL/Witold_Pilecki.dds"
 				small = GFX_witold_pilecki_picture_small
 			}
 		}
@@ -810,6 +747,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=3
+			desc = "POL_deluge_Pilecki_desc"
 		}
 		advisor={
 			slot = security_chief_slot
@@ -845,6 +783,7 @@ characters={
 			defense_skill=4
 			planning_skill=4
 			logistics_skill=3
+			desc = "POL_deluge_Zeligowski_desc"
 		}
 		advisor={
 			slot = chief_of_staff_slot
@@ -880,6 +819,7 @@ characters={
 			defense_skill=4
 			planning_skill=3
 			logistics_skill=3
+			desc = "POL_deluge_abraham_desc"
 		}
 		advisor={
 			slot = theorist
@@ -915,6 +855,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=3
+			desc = "POL_deluge_kowalski_desc"
 		}
 		advisor={
 			slot = high_command
@@ -949,6 +890,7 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=4
+			desc = "POL_deluge_thommee_desc"
 		}
 		advisor={
 			slot = chief_of_staff_slot
@@ -983,6 +925,7 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=4
+			desc = "POL_deluge_Kapciuk_desc"
 		}
 		advisor={
 			slot = high_command
@@ -1019,6 +962,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=3
+			desc = "POL_deluge_Grzmot_Skotnicki_desc"
 		}
 	}
 	POL_deluge_kopanski = {##Stanisław Kopański
@@ -1041,6 +985,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=1
+			desc = "POL_deluge_kopanski_desc"
 		}
 		advisor={
 			slot = high_command
@@ -1076,6 +1021,7 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=4
+			desc = "POL_deluge_Kutrzeba_desc"
 		}
 	}
 	POL_deluge_sosnowski = {##Kazimierz Sosnkowski
@@ -1083,7 +1029,6 @@ characters={
 		portraits={
 			army = {
 				large="GFX_portrait_POL_kazimierz_sosnkowski"
-				#large="gfx/leaders/POL/sosnowski.dds"
 				small = GFX_kazimierz_sosnowski_picture_small
 			}
 		}
@@ -1094,12 +1039,13 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=3
+			desc = "POL_deluge_sosnowski_desc"
 		}
 		country_leader = {
 			ideology = corporatist_ideology
 			expire = "1969.1.1.1"
 			traits = { national_hero_sosnkowski }
-			desc = "POL_deluge_sosnowski_leader_desc"
+			desc = "POL_deluge_sosnowski_desc"
 		}
 		advisor={
 			slot = army_chief
@@ -1119,6 +1065,42 @@ characters={
 			ledger = civilian
 		}
 	}
+	POL_deluge_szylling = {##Antoni Szylling
+		name = POL_Character_deluge_szylling
+		portraits={
+			army = {
+				large="gfx/leaders/POL/antoni_szylling.dds" 
+				small = GFX_antoni_szylling_picture_small
+			}
+		}
+		corps_commander = {
+			traits = { old_guard inflexible_strategist trait_cautious trickster }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			desc = "POL_deluge_szylling_desc"
+		}
+	}
+	POL_deluge_berbecki = {##Leon Berbecki
+		name = POL_Character_deluge_berbecki
+		portraits={
+			army = {
+				large="gfx/leaders/POL/Leon_Berbecki.dds" 
+				small = GFX_leon_berbecki_picture_small
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			desc = "POL_deluge_berbecki_desc"
+		}
+	}
 	POL_deluge_orlik_ruckemann = {##Wilhelm Orlik-Ruckemann
 		name = POL_Character_deluge_orlik_ruckemann
 		portraits={
@@ -1134,6 +1116,7 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=3
+			desc = "POL_deluge_orlik_ruckemann_desc"
 		}
 	}
 	POL_deluge_krukowicz_przedrzymirski = {##Emil Krukowicz-Przedrzymirski
@@ -1151,6 +1134,7 @@ characters={
 			defense_skill=4
 			planning_skill=4
 			logistics_skill=4
+			desc = "POL_deluge_krukowicz_przedrzymirski_desc"
 		}
 		advisor = {
 			slot = high_command
@@ -1185,7 +1169,7 @@ characters={
 			ideology = social_darwinist_ideology
 			expire = "1969.1.1.1"
 			traits = { famous_womanizer_and_legionary }
-			desc = "POL_dlugoszewski_leader_desc"
+			desc = "POL_deluge_wieniawa_dlugoszewski_desc"
 		}
 		corps_commander = {
 			traits = { cavalry_officer politically_connected war_hero }
@@ -1194,6 +1178,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=1
+			desc = "POL_deluge_wieniawa_dlugoszewski_desc"
 		}
 		advisor = {
 			slot = theorist
@@ -1231,6 +1216,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=1
+			desc = "POL_deluge_bortnowski_desc"
 		}
 		advisor={
 			slot = army_chief
@@ -1266,6 +1252,7 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=2
+			desc = "POL_deluge_wojtek_desc"
 		}
 	}
 	POL_deluge_tokarzewski_karaszewicz = {##Michał Tokarzewski-Karaszewicz
@@ -1283,6 +1270,7 @@ characters={
 			defense_skill=1
 			planning_skill=3
 			logistics_skill=1
+			desc = "POL_deluge_tokarzewski_karaszewicz_desc"
 		}
 	}
 	POL_deluge_czuma = {##Walerian Czuma
@@ -1300,6 +1288,7 @@ characters={
 			defense_skill=1
 			planning_skill=3
 			logistics_skill=2
+			desc = "POL_deluge_czuma_desc"
 		}
 	}
 	POL_deluge_mlot_fijalkowski = {##Czesław Młot-Fijałkowski
@@ -1317,6 +1306,7 @@ characters={
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_mlot_fijalkowski_desc"
 		}
 	}
 	POL_deluge_langner = {##Władysław Langner
@@ -1334,6 +1324,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_langner_desc"
 		}
 	}
 	POL_deluge_wlad = {##Franciszek Wład
@@ -1351,6 +1342,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=1
+			desc = "POL_deluge_wlad_desc"
 		}
 	}
 	POL_deluge_boruta_spiechowicz = {##Mieczyław Boruta-Spiechowicz
@@ -1368,6 +1360,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_boruta_spiechowicz_desc"
 		}
 	}
 	POL_deluge_knoll_kownacki = {##Edmund Knoll-Kownacki
@@ -1385,6 +1378,7 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=2
+			desc = "POL_deluge_knoll_kownacki_desc"
 		}
 	}
 	POL_deluge_fabrycy = {##Kazimierz Fabrycy
@@ -1402,6 +1396,7 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
+			desc = "POL_deluge_fabrycy_desc"
 		}
 	}
 	POL_deluge_dab_biernacki = {##Stefan Dąb Biernacki
@@ -1419,6 +1414,7 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
+			desc = "POL_deluge_dab_biernacki_desc"
 		}
 	}
 	POL_deluge_rudolf_dreszer = {##Rudolf Dreszer
@@ -1436,6 +1432,7 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=2
+			desc = "POL_deluge_rudolf_dreszer_desc"
 		}
 	}
 	POL_deluge_alter = {##Franciszek Alter
@@ -1453,6 +1450,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_alter_desc"
 		}
 	}
 	POL_deluge_rowecki = {##Stefan Rowecki
@@ -1470,6 +1468,7 @@ characters={
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=1
+			desc = "POL_deluge_rowecki_desc"
 		}
 	}
 	POL_deluge_przezdziecki = {##Wacław Przeździecki
@@ -1487,6 +1486,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_przezdziecki_desc"
 		}
 	}
 	POL_deluge_boltuc = {##Mikołaj Bołtuć
@@ -1504,6 +1504,7 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=2
+			desc = "POL_deluge_boltuc_desc"
 		}
 	}
 	POL_deluge_prugar_ketling = {##Bronisław Prugar-Ketling
@@ -1521,6 +1522,7 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_prugar_ketling_desc"
 		}
 	}
 	##GENERALS Not Avavaile from the start
@@ -1539,6 +1541,7 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
+			desc = "POL_deluge_rola_zymierski_desc"
 		}
 	}
 	POL_deluge_zygumnt_berling = {##Zygmunt Berling
@@ -1556,6 +1559,7 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
+			desc = "POL_deluge_zygumnt_berling_desc"
 		}
 	}
 	POL_deluge_roja = {##Bolesław Roja
@@ -1573,6 +1577,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=1
+			desc = "POL_deluge_roja_desc"
 		}
 	}
 	POL_deluge_latinik = {##Franciszek Latinik
@@ -1590,6 +1595,7 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=1
+			desc = "POL_deluge_latinik_desc"
 		}
 	}
 	POL_deluge_jung = {##Władysław Jung
@@ -1607,6 +1613,7 @@ characters={
 			defense_skill=1
 			planning_skill=3
 			logistics_skill=3
+			desc = "POL_deluge_jung_desc"
 		}
 	}
 	POL_deluge_stanislaw_haller = {##Stanisław Haller
@@ -1624,6 +1631,7 @@ characters={
 			defense_skill=1
 			planning_skill=5
 			logistics_skill=4
+			desc = "POL_deluge_stanislaw_haller_desc"
 		}
 	}
 	POL_deluge_dzierzykraj_stokalski = {##Radosław Dzierżykraj-Stokalski
@@ -1641,6 +1649,7 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
+			desc = "POL_deluge_dzierzykraj_stokalski_desc"
 		}
 	}
 	POL_deluge_poplawski = {##Stanisław Popławski
@@ -1658,6 +1667,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_poplawski_desc"
 		}
 	}
 	POL_deluge_swierczewski = {##Karol Świerczewski
@@ -1675,6 +1685,7 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
+			desc = "POL_deluge_swierczewski_desc"
 		}
 	}
 	POL_deluge_skierski = {##Leonard Skierski
@@ -1692,6 +1703,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_skierski_desc"
 		}
 	}
 	POL_deluge_dzierzanowski = {##Kazimierz Dzierżanowski
@@ -1709,6 +1721,7 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_dzierzanowski_desc"
 		}
 	}
 	POL_deluge_piskor = {##Tadeusz Piskor
@@ -1726,6 +1739,7 @@ characters={
 			defense_skill=2
 			planning_skill=1
 			logistics_skill=3
+			desc = "POL_deluge_piskor_desc"
 		}
 	}
 	POL_deluge_zulauf = {##Juliusz Zulauf
@@ -1743,6 +1757,7 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
+			desc = "POL_deluge_zulauf_desc"
 		}
 	}
 	POL_deluge_prich = {##Rudolf Prich
@@ -1760,6 +1775,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
+			desc = "POL_deluge_prich_desc"
 		}
 	}
 	##ADMIRALS:
@@ -1782,6 +1798,7 @@ characters={
 			defense_skill=4
 			maneuvering_skill=3
 			coordination_skill=3
+			desc = "POL_deluge_xawery_czernicki_desc"
 		}
 		advisor = {
 			slot = navy_chief
@@ -1821,6 +1838,7 @@ characters={
 			defense_skill=1
 			maneuvering_skill=4
 			coordination_skill=3
+			desc = "POL_deluge_stanislaw_hryniewiecki_desc"
 		}
 	}
 	POL_deluge_stefan_frankowski = {
@@ -1842,6 +1860,7 @@ characters={
 			defense_skill=4
 			maneuvering_skill=1
 			coordination_skill=2
+			desc = "POL_deluge_stefan_frankowski_desc"
 		}
 	}
 	POL_deluge_karol_korytowski = {
@@ -1863,6 +1882,7 @@ characters={
 			defense_skill=3
 			maneuvering_skill=1
 			coordination_skill=1
+			desc = "POL_deluge_karol_korytowski_desc"
 		}
 	}
 	POL_deluge_jozef_unrug = {
@@ -1905,6 +1925,7 @@ characters={
 			defense_skill = 3
 			maneuvering_skill = 3
 			coordination_skill = 3
+			desc = "POL_deluge_jozef_unrug_desc"
 		}
 	}
 	POL_deluge_adam_mohuczy = {
@@ -1947,6 +1968,7 @@ characters={
 			defense_skill = 2
 			maneuvering_skill = 3
 			coordination_skill = 3
+			desc = "POL_deluge_adam_mohuczy_desc"
 		}
 	}
 	POL_deluge_jerzy_swirski = {
@@ -1986,6 +2008,7 @@ characters={
 			defense_skill = 3
 			maneuvering_skill = 3
 			coordination_skill = 3
+			desc = "POL_deluge_jerzy_swirski_desc"
 		}
 	}
 	POL_deluge_wlodzimierz_steyer = {
@@ -2028,6 +2051,7 @@ characters={
 			defense_skill = 2
 			maneuvering_skill = 3
 			coordination_skill = 2
+			desc = "POL_deluge_wlodzimierz_steyer_desc"
 		}
 	}
 	##ADVISORS:
@@ -2070,13 +2094,78 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				NOT = {
+					has_completed_focus = POL_radicals_takeover
+				}
 			}
 			cost = 150
 			available = { 
-				
+				NOT = {
+					has_government = communism
+				}
 			}
 			traits = {
 				compassionate_gentleman
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_julian_eberhardt = {##Julian Eberhardt
+		name = POL_Character_deluge_julian_eberhardt
+		portraits={
+			civilian={
+				small="GFX_julian_eberhardt_picture_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_julian_eberhardt
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					has_completed_focus = POL_radicals_takeover
+				}
+			}
+			cost = 150
+			available = { 
+				NOT = {
+					has_government = communism
+				}
+			}
+			traits = {
+				minister_of_iron_railways
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_august_zaleski = {##August Zaleski
+		name = POL_Character_deluge_august_zaleski
+		portraits={
+			civilian={
+				small="GFX_august_zaleski_picture_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_august_zaleski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					has_completed_focus = POL_radicals_takeover
+				}
+			}
+			cost = 150
+			available = { 
+				NOT = {
+					has_government = communism
+				}
+			}
+			traits = {
+				smooth_talking_charmer
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian
@@ -2188,10 +2277,15 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				NOT = {
+					has_completed_focus = POL_radicals_takeover
+				}
 			}
 			cost = 150
 			available = { 
-				
+				NOT = {
+					has_government = communism
+				}
 			}
 			traits = {
 				#minister_of_iron_railways
@@ -2442,7 +2536,7 @@ characters={
 			ideology = social_darwinist_ideology
 			expire = "1969.1.1.1"
 			traits = { ultranationalist_prime_minister }
-			desc = "POL_Bek_leader_desc"
+			desc = "POL_deluge_jozef_beck_desc"
 		}
 		advisor={
 			slot = political_advisor
@@ -2484,9 +2578,6 @@ characters={
 			cost = 150
 			available = { 
 				has_government = fascism
-				NOT = {
-					has_completed_focus = POL_oppose_sanation
-				}
 			}
 			traits = {
 				minister_of_religious_denominations_and_public_enlightenment
@@ -3661,6 +3752,771 @@ characters={
 		}
 	}
 	##COMMUNISTS:
+	POL_deluge_zygumnt_marek = {##Zygmunt Marek
+		name = POL_Character_deluge_zygumnt_marek
+		portraits={
+			civilian={ 
+				large = "gfx/leaders/POL/zygmunt_marek.dds"
+				small = GFX_zygumnt_marek_picture_small
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				marxist_academic
+			}
+			desc = "POL_deluge_zygumnt_marek_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_zygumnt_marek
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = {
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				human_rights_enjoyer
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_jedrzej_moraczewski = {##Jędrzej Moraczewski
+		name = POL_Character_deluge_jedrzej_moraczewski
+		portraits={
+			civilian={ 
+				large = "gfx/leaders/POL/jedrzej_moraczewski.dds"
+				small = GFX_jedrzej_moraczewski_picture_small
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				veteran_communist
+			}
+			desc = "POL_deluge_jedrzej_moraczewski_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_zygumnt_marek
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = {
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				minister_of_communications
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_tomasz_arciszewski = {##Tomasz Arciszewski
+		name = POL_Character_deluge_tomasz_arciszewski
+		portraits={
+			civilian={ 
+				large = "gfx/leaders/POL/tomasz_arciszewski.dds"
+				small = GFX_tomasz_arciszewski_picture_small
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				patriotic_socialist
+			}
+			desc = "POL_deluge_tomasz_arciszewski_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_tomasz_arciszewski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = {
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				peoples_commissar_for_posts_and_telegraphs
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_maria_koszutska = {##Maria Koszutska
+		name = POL_Character_deluge_maria_koszutska
+		portraits={
+			civilian={
+				large = GFX_portrait_POL_maria_koszutska
+				small = GFX_maria_koszutska_picture_small
+			}
+		}
+		gender = female 
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				red_feminist_weaker
+			}
+			desc = "POL_deluge_maria_koszutska_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_maria_koszutska
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				red_feminist
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_wladyslaw_gomulka = {##Władysław Gomułka
+		name = POL_Character_deluge_wladyslaw_gomulka
+		portraits={
+			civilian={ 
+				large = GFX_portrait_POL_wladyslaw_gomulka
+				small = GFX_wladyslaw_gomulka_picture_small
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				communist_with_human_face_weaker
+			}
+			desc = "POL_deluge_wladyslaw_gomulka_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_wladyslaw_gomulka
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				communist_with_human_face
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_julian_leszczynski = {##Julian Leszczński
+		name = POL_Character_deluge_julian_leszczynski
+		portraits={
+			civilian={ 
+				large = "gfx/leaders/POL/julian_leszczynski.dds"
+				small = GFX_julian_leszczynski_picture_small
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				socialist_autocrat
+			}
+			desc = "POL_deluge_julian_leszczynski_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_julian_leszczynski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				minister_of_peasants_deluge
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_wanda_wasilewska = {##Wanda Wasilewska
+		name = POL_Character_deluge_wanda_wasilewska
+		portraits={
+			civilian={
+				large = "gfx/leaders/POL/wanda_wasilewska.dds"
+				small = GFX_wanda_wasilewska_picture_small
+			}
+			army={
+				large = "gfx/leaders/POL/wanda_wasilewska.dds"
+				small = GFX_wanda_wasilewska_picture_small
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				red_suffragette
+			}
+			desc = "POL_deluge_wanda_wasilewska_desc"
+		}
+		gender = female
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_wanda_wasilewska
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				red_army_organizer
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_karol_radek = {##Karol Radek/Karol Sobelsohn
+		name = POL_Character_deluge_karol_radek
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/karol_radek.dds"
+				small=GFX_karol_radek_picture_small
+			}
+			army={
+				large="gfx/leaders/POL/karol_radek.dds"
+				small=GFX_karol_radek_picture_small
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				socialist_justice
+			}
+			desc = "POL_deluge_karol_radek_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_karol_radek
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				deluge_pernament_revolutionary
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_antoni_ciszak = {##Antoni Ciszak
+		name = POL_Character_deluge_antoni_ciszak
+		portraits={
+			civilian={
+				large = "gfx/leaders/POL/antoni_ciszak.dds"
+				small = GFX_antoni_ciszak_picture_small
+			}
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				hero_of_the_peasantry
+			}
+			desc = "POL_deluge_antoni_ciszak_desc"
+		}
+	}
+	POL_deluge_czeslaw_chmielewski = {##Czesław Chmielewski
+		name = POL_Character_deluge_czeslaw_chmielewski
+		portraits={
+			civilian={ 
+				large = "gfx/leaders/POL/czeslaw_chmielewski.dds"
+				small = GFX_czeslaw_chmielewski_picture_small
+			}
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				doctor_of_laws_weaker
+			}
+			desc = "POL_deluge_czeslaw_chmielewski_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_czeslaw_chmielewski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = {
+				OR = {
+					has_completed_focus = POL_NSPR_wins
+					has_completed_focus = POL_NSP_wins
+					has_completed_focus = POL_PKWN_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				doctor_of_laws
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_karol_popiel = {##Karol Popiel
+		name = POL_Character_deluge_karol_popiel
+		portraits={
+			civilian={ 
+				large = "gfx/leaders/POL/karol_popiel.dds"
+				small = GFX_karol_popiel_picture_small
+			}
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				former_minister_of_justice
+			}
+			desc = "POL_deluge_karol_popiel_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_karol_popiel
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_NSPR_wins
+					has_completed_focus = POL_NSP_wins
+					has_completed_focus = POL_PKWN_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				minister_of_justice
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_adam_chadzynski = {##Adam Chądzyński
+		name = POL_Character_deluge_adam_chadzynski
+		portraits={
+			civilian={
+				large = "gfx/leaders/POL/adam_chadzynski.dds"
+				small = GFX_adam_chadzynski_picture_small
+			}
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				industry_reformer
+			}
+			desc = "POL_deluge_adam_chadzynski_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_adam_chadzynski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_NSPR_wins
+					has_completed_focus = POL_NSP_wins
+					has_completed_focus = POL_PKWN_wins
+				}
+				is_country_leader = no
+			}
+			traits = {
+				minister_of_iron_railways
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_waclaw_kozielski = {##Wacław Kozielski
+		name = POL_Character_deluge_waclaw_kozielski
+		portraits={
+			civilian={ 
+				large = "gfx/leaders/POL/waclaw_kozielski.dds"
+				small = GFX_waclaw_kozielski_picture_small
+			}
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				radical_revanchist
+			}
+			desc = "POL_deluge_waclaw_kozielski_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_waclaw_kozielski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_sikorski_wins
+						has_completed_focus = POL_piasecki_wins
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_NSP_wins
+					has_completed_focus = POL_NSPR_wins
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_find_support_among_radicals
+					has_completed_focus = POL_contact_nationalist_radicals
+				}
+				is_country_leader = no
+			}
+			traits = {
+				paramilitary_organizer
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_wladyslaw_orebski = {##Władysław Orębski
+		name = POL_Character_deluge_wladyslaw_orebski
+		portraits={
+			civilian={
+				large = "gfx/leaders/POL/wladyslaw_orebski.dds"
+				small = GFX_wladyslaw_orebski_picture_small
+			}
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				headstrong
+				
+			}
+			desc = "POL_deluge_wladyslaw_orebski_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_wladyslaw_orebski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_sikorski_wins
+						has_completed_focus = POL_piasecki_wins
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_NSP_wins
+					has_completed_focus = POL_NSPR_wins
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_find_support_among_radicals
+					has_completed_focus = POL_contact_nationalist_radicals
+				}
+				is_country_leader = no
+			}
+			traits = {
+				devoted_corporatist
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_kazimierz_zakrzewski = {##Kazimierz Zakrzewski
+		name = POL_Character_deluge_kazimierz_zakrzewski
+		portraits={
+			civilian={
+				large ="gfx/leaders/POL/kazimierz_zakrzewski.dds"
+				small =GFX_kazimierz_zakrzewski_picture_small
+			}
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				totalitarian_systems_analyst_weaker
+			}
+			desc = "POL_deluge_kazimierz_zakrzewski_desc"
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_kazimierz_zakrzewski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_sikorski_wins
+						has_completed_focus = POL_piasecki_wins
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_NSP_wins
+					has_completed_focus = POL_NSPR_wins
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_find_support_among_radicals
+					has_completed_focus = POL_contact_nationalist_radicals
+				}
+			}
+			traits = {
+				totalitarian_systems_analyst
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_dagnan = {##Kazimierz Dagnan
+		name = POL_Character_deluge_dagnan
+		portraits={
+			civilian={
+				small=GFX_kazimierz_dagnan_picture_small
+				large="gfx/leaders/POL/dagnan.dds"
+			}
+			army={
+				small=GFX_kazimierz_dagnan_picture_small
+				large="gfx/leaders/POL/dagnan.dds"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_dagnan
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_sikorski_wins
+						has_completed_focus = POL_piasecki_wins
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_NSP_wins
+					has_completed_focus = POL_NSPR_wins
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_find_support_among_radicals
+					has_completed_focus = POL_contact_nationalist_radicals
+				}
+			}
+			traits = {
+				theoretician_of_national_bolshevism
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+		country_leader = {
+			ideology = marxist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				theoretician_of_national_bolshevism_weaker
+			}
+			desc = "POL_deluge_dagnan_desc"
+		}
+	}
+	POL_deluge_boleslaw_bierut = {##Bolesław Bierut - radical collabolator
+		name = POL_Character_deluge_boleslaw_bierut
+		portraits={
+			civilian={
+				large = "gfx/leaders/POL/boleslaw_bierut.dds"
+				small = GFX_boleslaw_bierut_picture_small
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				
+			}
+			desc = "POL_deluge_boleslaw_bierut_desc"
+		}
+	}
+	POL_deluge_pkwn = {##Polski Komitet Wyzwolenia Narodowego - PKWN - Polish Committee of National Liberation
+		name = POL_Character_deluge_pkwn
+		portraits={
+			civilian={
+				large = GFX_portrait_SOV_supreme_soviet
+			}
+		}
+		country_leader = {
+			ideology = jacobin_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				temporary_committee
+			}
+			desc = "POL_deluge_pkwn_desc"
+		}
+	}
 	POL_deluge_widy_wirski = {##Feliks Widy-Wirski
 		name = POL_Character_deluge_widy_wirski
 		portraits={
@@ -3687,7 +4543,7 @@ characters={
 			}
 			cost = 150
 			available = { 
-				has_completed_focus = POL_radicals_takeover
+				has_government = communism
 			}
 			traits = {
 				minister_of_religious_denominations_and_public_enlightenment
@@ -3726,88 +4582,6 @@ characters={
 			}
 			traits = {
 				chair_of_the_unions
-			}
-			ai_will_do = { factor = 1.0 }
-			ledger = civilian
-		}
-	}
-	POL_deluge_karol_radek = {##Karol Radek/Karol Sobelsohn
-		name = POL_Character_deluge_karol_radek
-		portraits={
-			civilian={
-				small=GFX_karol_radek_picture_small
-			}
-			army={
-				small=GFX_karol_radek_picture_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_deluge_karol_radek
-			allowed = { tag = POL }
-			visible = {
-				tag = POL
-				NOT = {
-					OR = {
-						has_completed_focus = POL_continue_with_sanation
-						has_completed_focus = POL_democracy_prevails
-						has_completed_focus = POL_monarchists_take_power
-					}
-				}
-			}
-			cost = 150
-			available = { 
-				OR = {
-					has_completed_focus = POL_PKWN_wins
-					has_completed_focus = POL_PPS_wins
-					has_completed_focus = POL_KPP_wins
-				}
-			}
-			traits = {
-				deluge_pernament_revolutionary
-			}
-			ai_will_do = { factor = 1.0 }
-			ledger = civilian
-		}
-	}
-	##NATIONAL-BOLSHEVIKS:
-	POL_deluge_dagnan = {##Kazimierz Dagnan
-		name = POL_Character_deluge_dagnan
-		portraits={
-			civilian={
-				small=GFX_kazimierz_dagnan_picture_small
-			}
-			army={
-				small=GFX_kazimierz_dagnan_picture_small
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = POL_deluge_dagnan
-			allowed = { tag = POL }
-			visible = {
-				tag = POL
-				NOT = {
-					OR = {
-						has_completed_focus = POL_sikorski_wins
-						has_completed_focus = POL_piasecki_wins
-						has_completed_focus = POL_democracy_prevails
-						has_completed_focus = POL_monarchists_take_power
-					}
-				}
-			}
-			cost = 150
-			available = { 
-				OR = {
-					has_completed_focus = POL_NSP_wins
-					has_completed_focus = POL_NSPR_wins
-					has_completed_focus = POL_PKWN_wins
-					has_completed_focus = POL_find_support_among_radicals
-					has_completed_focus = POL_contact_nationalist_radicals
-				}
-			}
-			traits = {
-				theoretician_of_national_bolshevism
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian

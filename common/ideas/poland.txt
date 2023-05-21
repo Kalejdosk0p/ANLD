@@ -846,6 +846,26 @@ ideas = {
 				war_support_factor = -0.15
 			}
 		}
+		secret_societies_disbanded = {
+			picture = ast_abandon_the_westminster_system
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				has_war = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.05
+				consumer_goods_factor = -0.02
+			}
+		}
 		POL_ENG_defence_pact = {
 			picture = soviet_german_friendship
 			allowed = {
@@ -2193,7 +2213,7 @@ ideas = {
 	tank_manufacturer = {
 		designer = yes
 		pzinz_designer = {
-			picture = generic_tank_manufacturer_1
+			picture = pzinz
 			allowed = {
 				original_tag = POL
 			}
@@ -2229,7 +2249,7 @@ ideas = {
 			}
 		}
 		ksus = {
-			picture = generic_tank_manufacturer_3
+			picture = ksus
 			allowed = {
 				original_tag = POL
 			}
@@ -2247,7 +2267,7 @@ ideas = {
 			}
 		}
 		ursus_tanks = {
-			picture = generic_tank_manufacturer_1
+			picture = ursus
 			allowed = {
 				original_tag = POL
 			}
@@ -2268,7 +2288,7 @@ ideas = {
 	vehicle_manufacturer_slot = {
 		designer = yes
 		ursus_vehicles = {
-			picture = generic_motorized_equipment_manufacturer_3
+			picture = ursus
 			allowed = {
 				original_tag = POL
 			}
@@ -2348,7 +2368,7 @@ ideas = {
 			}
 		}
 		cegielski_artillery_factory = {
-			picture = generic_artillery_manufacturer_2
+			picture = h_cegielski
 			allowed = {
 				original_tag = POL
 			}
@@ -2374,7 +2394,7 @@ ideas = {
 			}
 		}
 		starachowice_works = {
-			picture = generic_artillery_manufacturer_3
+			picture = starachowice_works
 			allowed = {
 				original_tag = POL
 			}
@@ -2395,7 +2415,7 @@ ideas = {
 			}
 		}
 		ursus_artilery = {
-			picture = generic_artillery_manufacturer_1
+			picture = ursus
 			allowed = {
 				original_tag = POL
 			}
@@ -2421,7 +2441,7 @@ ideas = {
 			}
 		}
 		ursus_artilery_better = {
-			picture = generic_artillery_manufacturer_1
+			picture = ursus
 			allowed = {
 				original_tag = POL
 			}
@@ -2448,7 +2468,7 @@ ideas = {
 	small_arms_manufacturer_slot = {
 		designer = yes
 		ursus_guns = {
-			picture = generic_infantry_equipment_manufacturer_1
+			picture = ursus
 			allowed = {
 				original_tag = POL
 			}
@@ -2484,7 +2504,7 @@ ideas = {
 			}
 		}
 		sepewe = {
-			picture = generic_infantry_equipment_manufacturer_3
+			picture = sepewe
 			allowed = {
 				original_tag = POL
 			}
@@ -2505,7 +2525,7 @@ ideas = {
 	naval_manufacturer = {
 		designer = yes
 		ursus_ships = {
-			picture = generic_naval_manufacturer_1
+			picture = ursus
 			allowed = {
 				original_tag = POL
 			}
@@ -2523,7 +2543,7 @@ ideas = {
 			}
 		}
 		gdansk_dockyard = {
-			picture = generic_naval_manufacturer_2
+			picture = stocznia_gdanska
 			allowed = {
 				original_tag = POL
 			}
@@ -2559,7 +2579,7 @@ ideas = {
 			}
 		}
 		ironworks_agreement = {
-			picture = generic_naval_manufacturer_1
+			picture = huta_zgoda
 			allowed = {
 				original_tag = POL
 			}
@@ -2616,7 +2636,7 @@ ideas = {
 			}
 		}
 		lot = {
-			picture = generic_air_manufacturer_2
+			picture = lot
 			allowed = {
 				original_tag = POL
 			}
@@ -2652,7 +2672,7 @@ ideas = {
 			}
 		}
 		plage_and_laskiewicz = {
-			picture = generic_air_manufacturer_1
+			picture = lws
 			allowed = {
 				original_tag = POL
 			}
@@ -2709,7 +2729,7 @@ ideas = {
 			}
 		}
 		ursus_industry = {
-			picture = generic_industrial_concern_2
+			picture = ursus
 			allowed = {
 				original_tag = POL
 			}
@@ -2732,7 +2752,7 @@ ideas = {
 			}
 		}
 		hsw = {
-			picture = generic_industrial_concern_3
+			picture = hsw
 			allowed = {
 				original_tag = POL
 			}

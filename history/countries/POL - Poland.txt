@@ -444,4 +444,23 @@ recruit_character = POL_deluge_karol_korytowski
 recruit_character = POL_deluge_jozef_unrug
 recruit_character = POL_deluge_adam_mohuczy
 recruit_character = POL_deluge_jerzy_swirski
+
 recruit_character = POL_deluge_wlodzimierz_steyer
+recruit_character = POL_deluge_jedrzej_moraczewski
+recruit_character = POL_deluge_tomasz_arciszewski
+recruit_character = POL_deluge_boleslaw_bierut
+recruit_character = POL_deluge_julian_leszczynski
+
+recruit_character = POL_deluge_maria_koszutska
+recruit_character = POL_deluge_czeslaw_chmielewski
+recruit_character = POL_deluge_wanda_wasilewska
+recruit_character = POL_deluge_karol_popiel
+
+recruit_character = POL_deluge_adam_chadzynski
+recruit_character = POL_deluge_wladyslaw_orebski
+recruit_character = POL_deluge_kazimierz_zakrzewski
+recruit_character = POL_deluge_august_zaleski
+recruit_character = POL_deluge_julian_eberhardt
+recruit_character = POL_deluge_pkwn
+recruit_character = POL_deluge_berbecki
+recruit_character = POL_deluge_szylling

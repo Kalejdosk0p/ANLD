@@ -113,13 +113,13 @@ focus_tree = {
 		cost = 3
 		mutually_exclusive = { focus = POL_sikorski_wins focus = POL_stachniuk_wins focus = POL_piasecki_wins }
 		available = {
-		
+			
 		}
 		completion_reward = {
 			promote_character = POL_Smigly
 			hidden_effect = {
 				news_event = { id = deluge_poland.4 hours = 6 }
-				#retire_character = POL_Sanation_Emergency_Council
+				retire_character = POL_Sanation_Emergency_Council
 			}
 		}
 		ai_will_do = {
@@ -143,13 +143,13 @@ focus_tree = {
 		cost = 3
 		mutually_exclusive = { focus = POL_smigly_wins focus = POL_stachniuk_wins focus = POL_piasecki_wins }
 		available = {
-		
+			
 		}
 		completion_reward = {
 			promote_character = POL_deluge_Sikorski
 			hidden_effect = {
 				news_event = { id = deluge_poland.5 hours = 6 } 
-				#retire_character = POL_Sanation_Emergency_Council
+				retire_character = POL_Sanation_Emergency_Council
 			}
 		}
 		ai_will_do = {
@@ -173,13 +173,13 @@ focus_tree = {
 		cost = 3
 		mutually_exclusive = { focus = POL_smigly_wins focus = POL_sikorski_wins focus = POL_piasecki_wins }
 		available = {
-		
+			
 		}
 		completion_reward = {
 			promote_character = POL_deluge_Stachniuk
 			hidden_effect = {
 				news_event = { id = deluge_poland.6 hours = 6 }
-				#retire_character = POL_Sanation_Emergency_Council
+				retire_character = POL_Sanation_Emergency_Council
 			}
 		}
 		ai_will_do = {
@@ -203,13 +203,13 @@ focus_tree = {
 		cost = 3
 		mutually_exclusive = { focus = POL_smigly_wins focus = POL_sikorski_wins focus = POL_stachniuk_wins }
 		available = {
-		
+			
 		}
 		completion_reward = {
 			promote_character = POL_Piasecki
 			hidden_effect = {
 				news_event = { id = deluge_poland.7 hours = 6 } 
-				#retire_character = POL_Sanation_Emergency_Council
+				retire_character = POL_Sanation_Emergency_Council
 			}
 		}
 		ai_will_do = {
@@ -372,7 +372,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_national_myth_of_hyperborea
-		icon = GFX_focus_ETH_the-italo_ethiopian_empire
+		icon = GFX_national_myth_of_hyperborea
 		x = 1
 		y = 1
 		prerequisite = { focus = POL_teach_about_national_myths_in_schools }
@@ -1516,7 +1516,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_ensure_complete_political_dominance
-		icon = GFX_purge_citizens
+		icon = GFX_political_arrests
 		x = 0
 		y = 1
 		prerequisite = { focus = POL_create_ozn }
@@ -1537,6 +1537,36 @@ focus_tree = {
 			add_political_power = 100
 			add_stability = 0.05
 			add_manpower = -10000
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}		
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_disband_secret_societies
+		icon = GFX_ban_the_freemasonry
+		x = -1
+		y = 1
+		prerequisite = { focus = POL_ensure_complete_political_dominance }
+		relative_position_id = POL_ensure_complete_political_dominance
+		search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_political_power = -15
+			add_ideas = secret_societies_disbanded
 		}
 		ai_will_do = {
 			factor = 20
@@ -1734,7 +1764,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_state_that_gives
-		icon = GFX_focus_mex_privatisation
+		icon = GFX_POL_national_economy
 		x = 0
 		y = 1
 		prerequisite = { focus = POL_mobilize_the_masses }
@@ -1759,7 +1789,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_crush_decadency
-		icon = GFX_focus_spr_crush_the_revolution
+		icon = GFX_crush_decadency
 		x = 0
 		y = 1
 		prerequisite = { focus = POL_state_that_gives }
@@ -2490,7 +2520,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_catholic_school_reform
-		icon = GFX_Catholic_school_reform
+		icon = GFX_catholic_students_movement_2
 		x = 0
 		y = 1
 		prerequisite = { focus = POL_religion_in_schools }
@@ -3189,7 +3219,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_cult_of_emilia_plater
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_cult_of_emilia_plater
 		x = -1
 		y = 1
 		prerequisite = { focus = POL_liberate_women_from_catholic_slavery }
@@ -3817,7 +3847,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_create_new_type_of_man
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_POL_ONR_paramilitary
 		x = 0
 		y = 1
 		prerequisite = { focus = POL_introduce_eugenics_into_hospitals}
@@ -4081,7 +4111,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_unite_with_onr_abc
-		icon = GFX_goal_generic_dangerous_deal
+		icon = GFX_ONR_ABC
 		x = 0
 		y = 1
 		prerequisite = { focus = POL_catholic_youth_organisations}
@@ -4327,7 +4357,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_invest_in_middle_class
-		icon = GFX_tax_reform
+		icon = GFX_POL_invest_into_middle_class
 		x = 0
 		y = 1
 		prerequisite = { focus = POL_falangist_corporatism}
@@ -4954,7 +4984,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_our_own_church
-		icon = GFX_focus_generic_catholic_dominion
+		icon = GFX_POL_church_nation_state #focus_generic_catholic_dominion
 		x = 1
 		y = 1
 		prerequisite = { focus = POL_recreate_kingdom_of_jerusalem}
@@ -4985,7 +5015,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_destroy_fake_pope
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_catholic_dominion #goal_generic_political_pressure
 		x = 1
 		y = 1
 		prerequisite = { focus = POL_our_own_church}
@@ -5707,7 +5737,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_democracy_prevails
-		icon = GFX_goal_support_democracy
+		icon = GFX_hold_an_election
 		x = -10
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -6051,7 +6081,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_formalize_youth_organisations
-		icon = GFX_focus_generic_treaty
+		icon = GFX_POL_new_type_of_man
 		x = 0
 		y = 2
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_LAND_ARMY}
@@ -6302,7 +6332,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_help_middle_class
-		icon = GFX_tax_reform
+		icon = GFX_POL_invest_into_middle_class
 		x = 0
 		y = 2
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_INTERNAL_AFFAIRS}
@@ -7358,6 +7388,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_party_name = { ideology = communism long_name = POL_KPP_name_long name = POL_KPP_name_short }
+			country_event = {
+				id = deluge_poland.84
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7671,16 +7704,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_party_name = { ideology = communism long_name = POL_PPS_name_long name = POL_PPS_name_short }
-			if = {
-				limit = {
-					NOT = {
-						has_country_leader =  {
-							character = POL_deluge_zygumnt_marek
-							ruling_only = yes
-						}
-					}
-				}
-				promote_character = POL_deluge_zygumnt_marek
+			country_event = {
+				id = deluge_poland.84
 			}
 		}
 		ai_will_do = {
@@ -7830,7 +7855,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_reogranize_the_society
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_reorganize_society
 		x = 0
 		y = 1
 		search_filters = {}
@@ -7966,10 +7991,7 @@ focus_tree = {
 		relative_position_id = POL_nationalize_churchs_property
 		mutually_exclusive = {focus = POL_cult_of_the_revolution}
 		available = {
-			OR = {
-				has_completed_focus = POL_NSPR_wins
-				has_completed_focus = POL_NSP_wins
-			}
+			has_completed_focus = POL_NSPR_wins
 		}
 		completion_reward = {
 			
@@ -8278,6 +8300,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_party_name = { ideology = communism long_name = POL_PKWN_name_long name = POL_PKWN_name_short }
+			remove_trait = {
+				character = POL_deluge_pkwn
+				ideology = jacobin_ideology
+				trait = temporary_committee
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8478,7 +8505,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_integrate_PNS
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_POL_PNS
 		x = 3
 		y = 1
 		search_filters = {}
@@ -8553,7 +8580,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_integrate_anarchists
-		icon = GFX_focus_SOV_ivan_plays_baseball
+		icon = GFX_anarchists
 		x = 9
 		y = 1
 		search_filters = {}
@@ -8684,7 +8711,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_new_five_year_plan
-		icon = GFX_goal_generic_soviet_construction
+		icon = GFX_new_five_year_plan
 		x = -2
 		y = 1
 		search_filters = {}
@@ -8787,7 +8814,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_socialist_agrarianism
-		icon = GFX_focus_generic_coffee
+		icon = GFX_agrarian_reform
 		x = 0
 		y = 1
 		search_filters = {}
@@ -8838,7 +8865,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_unity_of_men_and_nature
-		icon = GFX_focus_generic_horse_studs
+		icon = GFX_unity_of_men_and_nature
 		x = 0
 		y = 1
 		search_filters = {}
@@ -8928,7 +8955,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_party_name = { ideology = communism long_name = POL_NSP_name_long name = POL_NSP_name_short}
-			promote_character = POL_deluge_antoni_ciszak
+			country_event = {
+				id = deluge_poland.84
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8992,7 +9021,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_workers_militia
-		icon = GFX_focus_ITA_peasants_rise
+		icon = GFX_generic_socialist_action
 		x = 14
 		y = 1
 		search_filters = {}
@@ -9185,7 +9214,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_guerrilla_tactics
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		icon = GFX_guerrilla_tactics
 		x = 0
 		y = 1
 		search_filters = {}
@@ -9213,7 +9242,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_anti_guerrilla_tactics
-		icon = GFX_goal_generic_major_war
+		icon = GFX_anti_guerrilla_tactics
 		x = 0
 		y = 1
 		search_filters = {}
@@ -9335,7 +9364,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_party_name = { ideology = communism long_name = POL_NSPR_name_long name = POL_NSPR_name_short }
-			promote_character = POL_deluge_waclaw_kozielski
+			country_event = {
+				id = deluge_poland.84
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -9789,7 +9820,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_army_prepared_for_everything
-		icon = GFX_goal_generic_wolf_pack
+		icon = GFX_guerrilla_tactics
 		x = 1
 		y = 1
 		search_filters = {FOCUS_FILTER_LAND_ARMY}
@@ -10521,7 +10552,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_decentralised_high_command
-		icon = GFX_goal_generic_more_territorial_claims
+		icon = GFX_army_modernizations
 		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_LAND_ARMY}
@@ -10552,7 +10583,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_centralised_high_command
-		icon = GFX_focus_generic_military_mission
+		icon = GFX_additional_reservists
 		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_LAND_ARMY}
@@ -11959,7 +11990,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_protect_forests
-		icon = GFX_goal_generic_defence
+		icon = GFX_protect_forests
 		x = 1
 		y = 1
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_LAND_ARMY}
