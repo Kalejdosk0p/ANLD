@@ -1627,16 +1627,16 @@ country_event = {##Poland decides about goverment of Mandate of Palestine
 	desc = deluge_poland.52.d
 	picture = GFX_report_event_african_soldiers
 	is_triggered_only = yes
-	option = {##PMP will become fascist
+	option = {##PAL will become fascist
 		name = deluge_poland.52.a
-		set_global_flag = PMP_will_become_fascist
+		set_global_flag = PAL_will_become_fascist
 		ai_chance = {
 			base = 1
 		}
 	}
-	option = {##PMP will become neutral
+	option = {##PAL will become neutral
 		name = deluge_poland.52.b
-		set_global_flag = PMP_will_become_neutral
+		set_global_flag = PAL_will_become_neutral
 		ai_chance = {
 			base = 1
 		}

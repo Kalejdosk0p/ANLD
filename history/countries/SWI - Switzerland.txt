@@ -1,4 +1,4 @@
-﻿capital = 3
+﻿capital = 5
 
 oob = "SWI_1936"
 

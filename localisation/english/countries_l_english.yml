@@ -966,8 +966,8 @@
  
  ###EASTERN EUROPE###
  
- POL_communism:0 "Polish People's Republic"
- POL_communism_DEF:0 "the Polish People's Republic"
+ POL_communism:0 "Polish Republic"
+ POL_communism_DEF:0 "the Polish Republic"
  POL_communism_ADJ:0 "Polish"
  POL_democratic:0 "Kingdom of Poland"
  POL_democratic_DEF:0 "the Kingdom of Poland"
@@ -1654,6 +1654,19 @@
  LEB_fascism_DEF:0 "the State of Lebanon"
  LEB_fascism_ADJ:0 "Lebanese"
  
+ PAL_communism:0 "Palestinian Republic"
+ PAL_communism_DEF:0 "Palestinian Republic"
+ PAL_communism_ADJ:0 "Palestinian"
+ PAL_democratic:0 "State of Palestine"
+ PAL_democratic_DEF:0 "the State of Palestine"
+ PAL_democratic_ADJ:0 "Palestinian"
+ PAL_neutrality:0 "State of Palestine"
+ PAL_neutrality_DEF:0 "the State of Palestine"
+ PAL_neutrality_ADJ:0 "Palestinian"
+ PAL_fascism:0 "State of Palestine"
+ PAL_fascism_DEF:0 "the State of Palestine"
+ PAL_fascism_ADJ:0 "Palestinian"
+ 
  JOR_communism:0 "Jordanian Republic"
  JOR_communism_DEF:0 "the Jordanian Republic"
  JOR_communism_ADJ:0 "Jordanian"
@@ -2332,16 +2345,3 @@
  NZL_fascism:0 "New Zealand"
  NZL_fascism_DEF:0 "New Zealand"
  NZL_fascism_ADJ:0 "New Zealander"
- 
- PMP_communism:0 "Polish Commune of Palestine"
- PMP_communism_DEF:0 "the Polish Commune of Palestine"
- PMP_communism_ADJ:0 "Polish-Palestinian"
- PMP_democratic:0 "Polish Republic of Palestine"
- PMP_democratic_DEF:0 "the Polish Republic of Palestine"
- PMP_democratic_ADJ:0 "Polish-Palestinian"
- PMP_neutrality:0 "Polish Kingdom of Palestine"
- PMP_neutrality_DEF:0 "the Polish Kingdom of Palestine"
- PMP_neutrality_ADJ:0 "Polish-Palestinian"
- PMP_fascism:0 "Polish Mandate of Palestine"
- PMP_fascism_DEF:0 "the Polish Mandate of Palestine"
- PMP_fascism_ADJ:0 "Polish-Palestinian"

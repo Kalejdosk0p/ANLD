@@ -979,8 +979,8 @@
  
  ###ВОСТОЧНАЯ ЕВРОПА###
  
- POL_communism:0 "Польская Народная Республика"
- POL_communism_DEF:0 "Польская Народная Республика"
+ POL_communism:0 "Польская Республика"
+ POL_communism_DEF:0 "Польская Республика"
  POL_communism_ADJ:0 "Польск."
  POL_democratic:0 "Королевство Польское"
  POL_democratic_DEF:0 "Королевство Польское"
@@ -1666,6 +1666,19 @@
  LEB_fascism:0 "Государство Ливан"
  LEB_fascism_DEF:0 "Государство Ливан"
  LEB_fascism_ADJ:0 "Ливанск."
+ 
+ PAL_communism:0 "Палестинская Республика"
+ PAL_communism_DEF:0 "Палестинская Республика"
+ PAL_communism_ADJ:0 "Палестинск."
+ PAL_democratic:0 "Государство Палестина"
+ PAL_democratic_DEF:0 "Государство Палестина"
+ PAL_democratic_ADJ:0 "Палестинск."
+ PAL_neutrality:0 "Государство Палестина"
+ PAL_neutrality_DEF:0 "Государство Палестина"
+ PAL_neutrality_ADJ:0 "Палестинск."
+ PAL_fascism:0 "Государство Палестина"
+ PAL_fascism_DEF:0 "Государство Палестина"
+ PAL_fascism_ADJ:0 "Палестинск."
  
  JOR_communism:0 "Иорданская Республика"
  JOR_communism_DEF:0 "Иорданская Республика"

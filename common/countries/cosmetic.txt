@@ -235,7 +235,7 @@ POL_slavic = {
 	color = rgb { 56 12 122 }
 	color_ui = rgb { 56 12 122 }
 }
-PMP_papal = {
+PAL_papal = {
 	color = rgb { 242 152 145 }
 	color_ui = rgb { 242 152 145 }
 }

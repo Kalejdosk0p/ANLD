@@ -35,7 +35,7 @@ focus_tree = {
 	
 	default = no
 	
-	continuous_focus_position = { x = 20000 y = 0 }
+	continuous_focus_position = { x = 50 y = 1200 }
 
 	focus = {
 		id = POL_death_of_marshal
@@ -4775,7 +4775,7 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			PMP = {
+			PAL = {
 				transfer_state = 454
 				add_state_core = 454
 				transfer_state = 455
@@ -4790,13 +4790,13 @@ focus_tree = {
 				add_state_core = 677
 			}
 			POL = {
-				puppet = PMP
+				puppet = PAL
 			}
-			PMP = {
+			PAL = {
 				create_country_leader = {
 					name = "Karol Wojtyła"
 					desc = "karol_wojtyla_desc"
-					picture = "gfx/leaders/PMP/karol_wojtyla.dds"
+					picture = "gfx/leaders/PAL/karol_wojtyla.dds"
 					expire = "1965.1.1"
 					ideology = reactionary_ideology
 					traits = {
@@ -4806,7 +4806,7 @@ focus_tree = {
 				create_country_leader = {
 					name = "Stanisław Rymar"
 					desc = "stanislaw_rymar_desc"
-					picture = "gfx/leaders/PMP/stanislaw_rymar.dds"
+					picture = "gfx/leaders/PAL/stanislaw_rymar.dds"
 					expire = "1965.1.1"
 					ideology = religious_ideology
 					traits = {
@@ -4815,17 +4815,17 @@ focus_tree = {
 				}
 				set_party_name = {
 					ideology = fascism
-					long_name = PMP_POL_fascist_administration_long
-					name = PMP_POL_fascist_administration_short
+					long_name = PAL_POL_fascist_administration_long
+					name = PAL_POL_fascist_administration_short
 				}
 				set_party_name = {
 					ideology = neutrality
-					long_name = PMP_POL_neutral_administration_long
-					name = PMP_POL_neutral_administration_short
+					long_name = PAL_POL_neutral_administration_long
+					name = PAL_POL_neutral_administration_short
 				}
 				if = {
 					limit = {
-						has_global_flag = PMP_will_become_fascist
+						has_global_flag = PAL_will_become_fascist
 					}
 					set_politics = {
 						ruling_party = fascism
@@ -4842,7 +4842,7 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						has_global_flag = PMP_will_become_neutral
+						has_global_flag = PAL_will_become_neutral
 					}
 					set_politics = {
 						ruling_party = neutrality
@@ -4880,13 +4880,13 @@ focus_tree = {
 		mutually_exclusive = {focus = POL_our_own_church}
 		cost = 10
 		available = {
-			PMP = {
+			PAL = {
 				is_subject_of = POL
 			}
 		}
 		completion_reward = {
-			POL = { set_autonomy = { target = PMP autonomy_state = autonomy_free } }
-			PMP = {
+			POL = { set_autonomy = { target = PAL autonomy_state = autonomy_free } }
+			PAL = {
 				set_politics = {
 					ruling_party = neutrality
 					elections_allowed = no
@@ -4901,8 +4901,8 @@ focus_tree = {
 				}
 				set_party_name = {
 					ideology = neutrality
-					long_name = PMP_vatican_neutral_administration_long
-					name = PMP_vatican_neutral_administration_short
+					long_name = PAL_vatican_neutral_administration_long
+					name = PAL_vatican_neutral_administration_short
 				}
 				create_country_leader = {
 					name = "Pius XII"
@@ -4914,7 +4914,7 @@ focus_tree = {
 						
 					}
 				}
-				set_cosmetic_tag = PMP_papal
+				set_cosmetic_tag = PAL_papal
 			}
 		}
 		ai_will_do = {

@@ -760,7 +760,7 @@ D15 = {
 	color = rgb { 194 140 86 }
 	color_ui = rgb { 252 182 112 }
 }
-PMP = {
+PAL = {
 	color = rgb { 92 15 44 }
 	color_ui = rgb { 92 15 44 }
 }
