@@ -304,6 +304,30 @@ create_faction = Visegrad_Group
 add_to_faction = POL
 add_to_faction = HUN
 
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	create_operative_leader = {
+		name = "Roman Czerniawski"
+		GFX = GFX_portrait_roman_czerniawski
+		traits = { }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		nationalities = { POL }
+	}
+
+	create_operative_leader = {
+		name = "Krystyna Skarbek"
+		GFX = GFX_portrait_krystyna_skarbek
+		traits = { operative_commando operative_seducer }
+		bypass_recruitment = no
+		available_to_spy_master = yes
+		female = yes
+		nationalities = { POL }
+	}
+}
+
 recruit_character = POL_Pilsudski
 recruit_character = POL_deluge_Dmowski
 recruit_character = POL_Sanation_Emergency_Council 
@@ -464,3 +488,4 @@ recruit_character = POL_deluge_julian_eberhardt
 recruit_character = POL_deluge_pkwn
 recruit_character = POL_deluge_berbecki
 recruit_character = POL_deluge_szylling
+recruit_character = POL_deluge_jan_woznicki

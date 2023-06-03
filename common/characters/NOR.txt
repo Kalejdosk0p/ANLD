@@ -1,0 +1,130 @@
+characters={
+	NOR_vidkun_quisling={
+		name="Vidkun Quisling"
+		portraits={
+			civilian={
+				large=GFX_portrait_Vidkun_Quisling
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			expire="1965.1.1.1"
+			#desc=""
+			traits = {
+			}
+		}
+	}
+	NOR_haakon_vii={
+		name="Haakon VII"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOR/haakon_vii.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			#desc=""
+			traits = {
+			}
+		}
+	}
+	NOR_martin_tranmael={
+		name="Martin Tranmæl"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOR/.dds"
+			}
+		}
+		country_leader={
+			ideology=jacobin_ideology
+			expire="1965.1.1.1"
+			#desc=""
+			traits = {
+			}
+		}
+	}
+	NOR_adam_egede_nissen={
+		name="Adam Egede-Nissen"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOR/.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			#desc=""
+			traits = {
+			}
+		}
+	}
+	NOR_johan_ludwig_mowinckel={
+		name="Johan Ludwig Mowinckel"
+		portraits={
+			civilian={
+				large="gfx/leaders/NOR/.dds"
+			}
+		}
+		country_leader={
+			ideology=constitutionalist_ideology
+			expire="1965.1.1.1"
+			#desc=""
+			traits = {
+			}
+		}
+	}
+	NOR_johan_nygaardsvold={
+		name="Johan Nygaardsvold"
+		portraits={
+			civilian={
+				large="GFX_portrait_Johan_Nygaardsvold"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			#desc=""
+			traits = {
+			}
+		}
+	}
+	NOR_carl_gustav_fleischer={
+		name="Carl Gustav Fleischer"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster winter_specialist }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	NOR_elias_corneliussen={
+		name="Elias Corneliussen"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_navy_3.dds"
+			}
+			army={
+				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			}
+		}
+		navy_leader={
+			traits={ spotter }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+		}
+	}
+}

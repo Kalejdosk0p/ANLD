@@ -17,8 +17,18 @@ country_event = {
 		name = deluge_louisiana.1.a
 		retire_character = LOU_jean_i_bourbon
 		promote_character = LOU_henri_i_bourbon
+		set_global_flag = LOU_old_monarch_died
 		hidden_effect = {
 			news_event = { id = deluge_louisiana.2 }
+		}
+		if = {
+			limit = {
+				has_idea = bourbon_king
+			}
+			swap_ideas = {
+				remove_idea = bourbon_king
+				add_idea = bourbon_king_2
+			}
 		}
 	}
 }

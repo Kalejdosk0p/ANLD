@@ -4464,42 +4464,6 @@ spriteTypes = {
 	}
 
 	SpriteType = { 
-		name = "GFX_agrarian_reform"
-		texturefile = "gfx/interface/goals/agrarian_reform.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_agrarian_reform_shine"
-		texturefile = "gfx/interface/goals/agrarian_reform.dds"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/agrarian_reform.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = -90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/agrarian_reform.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
-			animationrotation = 90.0
-			animationlooping = no
-			animationtime = 0.75
-			animationdelay = 0
-			animationblendmode = "add"
-			animationtype = "scrolling"
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
-	}
-
-	SpriteType = { 
 		name = "GFX_agricultural_industry"
 		texturefile = "gfx/interface/goals/agricultural_industry.dds"
 	}

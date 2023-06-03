@@ -3,19 +3,45 @@ ideas = {
 	country = {
 
 		bourbon_king = {
+			picture = generic_pp_unity_bonus
 			allowed = {
 				original_tag = LOU
 			}
-			allowed_civil_war = {
-				NOT = { has_government = communism }
+			available = {
+				#empty
 			}
-			removal_cost = -1
-			
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				neutrality_drift = 0.05
+				war_support_factor = 0.05
+				stability_factor = 0.05
 			}
 		}
-		
+		bourbon_king_2 = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				original_tag = LOU
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				neutrality_drift = 0.05
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
 		american_king = {
 			
 			allowed = {
@@ -30,22 +56,66 @@ ideas = {
 				neutrality_drift = 0.05
 			}
 		}
-		
 		swedish_king = {
-			
+			picture = generic_pp_unity_bonus
 			allowed = {
 				original_tag = SWE
 			}
-			allowed_civil_war = {
-				NOT = { has_government = communism }
+			available = {
+				#empty
 			}
-			removal_cost = -1
-			
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				neutrality_drift = 0.05
+				war_support_factor = 0.05
+				stability_factor = 0.05
 			}
 		}
-		
+		danish_king = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				original_tag = DEN
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				neutrality_drift = 0.05
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		norwegian_king = {
+			picture = generic_pp_unity_bonus
+			allowed = {
+				original_tag = NOR
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				neutrality_drift = 0.05
+				war_support_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
 		emperor_napoleon = {
 			
 			allowed = {

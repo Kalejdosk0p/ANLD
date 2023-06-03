@@ -91,13 +91,8 @@ recruit_character = SWE_axel_pehrssonbramstorp
 recruit_character = SWE_erik_af_edholm
 recruit_character = SWE_ivar_holmquist
 recruit_character = SWE_gustav_v
-recruit_character = SWE_vidkun_quisling
-recruit_character = SWE_vilhelm_buhl
 recruit_character = SWE_folke_högberg
-recruit_character = SWE_carl_gustav_fleischer
-recruit_character = SWE_wilhelm_wain_prior
 recruit_character = SWE_claes_lindström
-recruit_character = SWE_elias_corneliussen
 
 ### VARIANTS ###
 # 1936 Start #

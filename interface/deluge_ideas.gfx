@@ -2523,4 +2523,12 @@ spriteTypes = {
 		name = "GFX_idea_flag_of_workers_brigades"
 		texturefile = "gfx/interface/ideas/spirits/flag_of_workers_brigades.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_generic_mountain_warfare"
+		texturefile = "gfx/interface/ideas/spirits/generic_mountain_warfare.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_generic_supply_depot"
+		texturefile = "gfx/interface/ideas/spirits/generic_supply_depot.dds"
+	}
 }

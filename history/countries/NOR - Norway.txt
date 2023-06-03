@@ -64,75 +64,15 @@ set_popularities = {
 	neutrality = 14
 }
 
-create_country_leader = {
-	name = "Adam Egede-Nissen"
-	desc = "POLITICS_ADAM_EGEDE_NISSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-	expire = "1965.1.1"
-	ideology = marxist_ideology
-	traits = {
-		#
-	}
+add_ideas = {
+	norwegian_king
 }
 
-create_country_leader = {
-	name = "Johan Ludwig Mowinckel"
-	desc = "POLITICS_JOHAN_LUDWIG_MOWINCKEL_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-	expire = "1965.1.1"
-	ideology = constitutionalist_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Johan Nygaardsvold"
-	desc = "POLITICS_JOHAN_NYGAARDSVOLD_DESC"
-	picture = "Portrait_Norway_Johan_Nygaardsvold.dds"
-	expire = "1965.1.1"
-	ideology = liberal_republican_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Vidkun Quisling"
-	desc = "POLITICS_VIDKUN_QUISLING_DESC"
-	picture = "gfx/leaders/SWE/vidkun_quisling.dds"
-	expire = "1965.1.1"
-	ideology = social_darwinist_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Gustav V"
-	desc = "swedish_king_desc"
-	picture = "gfx/leaders/SWE/gustav_sweden.dds"
-	expire = "1965.1.1"
-	ideology = bonapartist_ideology
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Carl Gustav Fleischer"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	traits = {  trickster winter_specialist }
-	skill = 4
-	attack_skill = 3
-	defense_skill = 4
-	planning_skill = 2
-	logistics_skill = 4
-}
-
-create_navy_leader = {
-	name = "Elias Corneliussen"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
-	traits = { spotter }
-	skill = 3
-}
+recruit_character = NOR_vidkun_quisling
+recruit_character = NOR_johan_nygaardsvold
+recruit_character = NOR_carl_gustav_fleischer
+recruit_character = NOR_elias_corneliussen
+recruit_character = NOR_martin_tranmael
+recruit_character = NOR_johan_ludwig_mowinckel
+recruit_character = NOR_adam_egede_nissen
+recruit_character = NOR_haakon_vii

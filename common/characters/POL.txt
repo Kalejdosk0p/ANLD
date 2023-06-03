@@ -19,6 +19,7 @@ characters={
 			defense_skill=3
 			planning_skill=4
 			logistics_skill=4
+			desc = "POL_Pilsudski_desc"
 		}
 		country_leader = {
 			ideology = social_darwinist_ideology
@@ -57,6 +58,7 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=4
+			desc = "POL_Smigly_desc"
 		}
 		advisor={
 			slot = army_chief
@@ -131,6 +133,7 @@ characters={
 			defense_skill=4
 			planning_skill=3
 			logistics_skill=3
+			desc = "POL_deluge_Sikorski_desc"
 		}
 		advisor={
 			slot = army_chief
@@ -3027,7 +3030,8 @@ characters={
 				}
 			}
 			traits = {
-				innovative_capitalist
+				#innovative_capitalist
+				devoted_corporatist
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian
@@ -3176,6 +3180,38 @@ characters={
 			}
 			traits = {
 				reformist_democrat
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_jan_woznicki = {##Jan Woźnicki
+		name = POL_Character_deluge_jan_woznicki
+		portraits={
+			civilian={
+				small="GFX_jan_woznicki_picture_small"
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_jan_woznicki
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_radicals_takeover
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				has_government = democratic
+			}
+			traits = {
+				innovative_capitalist
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian

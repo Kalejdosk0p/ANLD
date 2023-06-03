@@ -61,85 +61,16 @@ set_popularities = {
 	communism = 10
 	neutrality = 10
 }
+
+add_ideas = {
+	danish_king
+}
 	
 set_convoys = 40
 
-#recruit_character = DEN_thorvald_stauning
-
-create_country_leader = {
-	name = "Thorvald Stauning"
-	desc = "POLITICS_THORVALD_STAUNING_DESC"
-	picture = "GFX_portrait_Thorvald_Stauning"
-	expire = "1965.1.1"
-	ideology = social_democratic_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Gustav V"
-	desc = "swedish_king_desc"
-	picture = "gfx/leaders/SWE/gustav_sweden.dds"
-	expire = "1965.1.1"
-	ideology = bonapartist_ideology
-	traits = {
-		#
-	}
-}
-
-#create_country_leader = {
-#	name = "Peter Rochegune Munch"
-#	desc = "POLITICS_PETER_ROCHEGUNE_MUNCH_DESC"
-#	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
-#	expire = "1965.1.1"
-#	ideology = constitutionalist_ideology
-#	traits = {
-#		#
-#	}
-#}
-
-#create_country_leader = {
-#	name = "Vilhelm Buhl"
-#	desc = ""
-#	picture = "gfx/leaders/DEN/vilhelm_buhl.dds"
-#	expire = "1965.1.1"
-#	ideology = liberal_republican_ideology
-#	traits = {
-#		#
-#	}
-#}
-
-create_country_leader = {
-	name = "Frits Clausen"
-	desc = "POLITICS_FRITS_CLAUSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
-	expire = "1965.1.1"
-	ideology = corporatist_ideology
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Aksel Larsen"
-	desc = "POLITICS_AKSEL_LARSEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
-	expire = "1965.1.1"
-	ideology = marxist_ideology
-	traits = {
-		#
-	}
-}
-
-
-create_corps_commander = {
-	name = "Wilhelm Wain Prior"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
-	traits = { trickster }
-	skill = 3
-    attack_skill = 2
-    defense_skill = 3
-    planning_skill = 3
-    logistics_skill = 2
-}
+recruit_character = DEN_thorvald_stauning
+recruit_character = DEN_frits_clausen
+recruit_character = DEN_christian_x
+recruit_character = DEN_erik_scavenius
+recruit_character = DEN_aksel_larsen
+recruit_character = DEN_wilhelm_wain_prior

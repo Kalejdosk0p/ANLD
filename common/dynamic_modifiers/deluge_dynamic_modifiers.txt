@@ -84,6 +84,10 @@ POL_rivalry_between_POW_and_WP_dynamic_modifier = { ##POL_WPvsPOW_
 	command_abilities_cost_factor = POL_WPvsPOW_command_abilities_cost_factor
 	max_command_power = POL_WPvsPOW_max_command_power
 	experience_gain_artillery_combat_factor = POL_WPvsPOW_experience_gain_artillery_combat_factor
+	air_strategic_bomber_bombing_factor = POL_WPvsPOW_air_strategic_bomber_bombing_factor
+	air_superiority_efficiency = POL_WPvsPOW_air_superiority_efficiency
+	air_training_xp_gain_factor = POL_WPvsPOW_air_training_xp_gain_factor
+	air_weather_penalty = POL_WPvsPOW_air_weather_penalty
 }
 POL_current_state_of_development = { ##POL_development_
 	enable = { always = yes }

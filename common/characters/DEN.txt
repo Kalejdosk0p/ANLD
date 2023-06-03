@@ -1,0 +1,102 @@
+characters={
+	DEN_christian_x={
+		name="Chrystian X"
+		portraits={
+			civilian={
+				large="gfx/leaders/DEN/chrystian_x.dds"
+			}
+		}
+		country_leader={
+			#desc=""
+			ideology=bonapartist_ideology
+			expire="1965.1.1.1"
+			traits = {
+				
+			}
+		}
+	}
+	DEN_thorvald_stauning={
+		name="Thorvald Stauning"
+		portraits={
+			civilian={
+				large="GFX_portrait_Thorvald_Stauning"
+			}
+		}
+		country_leader={
+			ideology=social_democratic_ideology
+			expire="1965.1.1.1"
+			desc = "POLITICS_THORVALD_STAUNING_DESC"
+			traits = {
+				
+			}
+		}
+	}
+	DEN_erik_scavenius={
+		name="Erik Scavenius"
+		portraits={
+			civilian={
+				large="gfx/leaders/DEN/Portrait_Denmark_Erik_Scavenius.dds"
+			}
+		}
+		country_leader={
+			ideology=liberal_republican_ideology
+			expire="1965.1.1.1"
+			desc = ""
+			traits = {
+				
+			}
+		}
+	}
+	DEN_frits_clausen={
+		name="Frits Clausen"
+		portraits={
+			civilian={
+				large="gfx/leaders/DEN/frits_clausen.dds"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			#desc = ""
+			traits = {
+				
+			}
+		}
+	}
+	DEN_aksel_larsen={
+		name="Aksel Larsen"
+		portraits={
+			civilian={
+				large="gfx/leaders/DEN/aksel_larsen.dds"
+			}
+		}
+		country_leader={
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
+			desc = ""
+			traits = {
+				
+			}
+		}
+	}
+	DEN_wilhelm_wain_prior={
+		name="Wilhelm Wain Prior"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
+			}
+			army={
+				large="gfx/leaders/DEN/wilhelm_wain_prior.dds"
+			}
+		}
+		corps_commander={
+			traits={ trickster }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+}

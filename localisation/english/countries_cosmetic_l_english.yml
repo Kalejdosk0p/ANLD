@@ -355,6 +355,19 @@
  PAL_papal_fascism_DEF:0 "Kingdom of Jerusalem"
  PAL_papal_fascism_ADJ:0 "Jerusalem"
  
+ PAL_polish_communism:0 "Polish Communes of Palestine"
+ PAL_polish_communism_DEF:0 "the Polish Communes of Palestine"
+ PAL_polish_communism_ADJ:0 "Palestinian"
+ PAL_polish_democratic:0 "Polish Republic of Palestine"
+ PAL_polish_democratic_DEF:0 "the Polish Republic of Palestine"
+ PAL_polish_democratic_ADJ:0 "Palestinian"
+ PAL_polish_neutrality:0 "Polish Mandate of Palestine"
+ PAL_polish_neutrality_DEF:0 "the Polish Mandate of Palestine"
+ PAL_polish_neutrality_ADJ:0 "Palestinian"
+ PAL_polish_fascism:0 "Polish State of Palestine"
+ PAL_polish_fascism_DEF:0 "the Polish State of Palestine"
+ PAL_polish_fascism_ADJ:0 "Palestinian"
+ 
  ###RUSSIA###
  
  FIN_RE_neutrality:0 "Grand Duchy of Finland"

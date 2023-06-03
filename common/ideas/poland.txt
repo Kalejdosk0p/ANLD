@@ -1197,6 +1197,27 @@ ideas = {
 				}	
 			}
 		}
+		POL_mielec_air_factory_spirit = {
+			picture = man_five_year_plan_air
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				air_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}	
+			}
+		}
 		POL_mass_production_of_anti_air = {
 		
 			picture = generic_mountain_warfare

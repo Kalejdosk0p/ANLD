@@ -68,7 +68,7 @@ characters={
 		name="Lech Bądkowski"
 		portraits={
 			civilian={
-				large="gfx/leaders/POM/lech_dabkowski.dds"
+				large="gfx/leaders/POM/lech_badkowski.dds"
 			}
 		}
 		country_leader={

@@ -30,6 +30,8 @@
  GRE_democratic_party_long:0 "Greek People's Party"
  GRE_fascism_party:0 "Metaxists"
  GRE_fascism_party_long:0 "Metaxist Movement"
+ GRE_EEE_name_long:0 "Ethniki Enosis Ellados (National Union of Greece)"
+ GRE_EEE_name_short:0 "EEE"
  ##decisions' categories
  form_greater_greece_category:0 "Form Greater Hellas"
  form_greater_greece_category_desc:0 "We lost many territories after the Great War. We need to take them back and form country that is greater than it ever was!"

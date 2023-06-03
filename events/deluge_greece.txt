@@ -13,7 +13,7 @@ country_event = {##GRE gets event about metaxists
 	mean_time_to_happen = {
 		months = 1
 	}
-	option = {
+	option = {##create partialy metaxist government - monarchist is still ruling party
 		name = deluge_greece.1.a
 		swap_ideas = {
 			remove_idea = GRE_metaxism_on_the_rise
@@ -31,7 +31,7 @@ country_event = {##GRE gets event about metaxists
 			factor = 1
 		}
 	}
-	option = {
+	option = {##create fully metaxist government - metaxists take power
 		name = deluge_greece.1.b
 		swap_ideas = {
 			remove_idea = GRE_metaxism_on_the_rise
@@ -56,7 +56,7 @@ country_event = {##GRE gets event about metaxists
 			factor = 1
 		}
 	}
-	option = {
+	option = {##purge metaxists
 		name = deluge_greece.1.c
 		remove_ideas = GRE_metaxism_on_the_rise
 		add_manpower = -10000
@@ -68,6 +68,9 @@ country_event = {##GRE gets event about metaxists
 			ideology = neutrality
 			popularity = -0.3
 		}
+		retire_character = GRE_ioannis_metaxas
+		promote_character = GRE_georgios_kosmidis
+		set_party_name = { ideology = fascism long_name = GRE_EEE_name_long name = GRE_EEE_name_short }
 		ai_chance = {
 			factor = 1
 		}

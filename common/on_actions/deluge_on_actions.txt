@@ -499,6 +499,108 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					tag = SWE
+					NOT = {
+						has_idea = swedish_king
+					}
+					NOT = {
+						AND = {
+							OR = {
+								has_government = neutrality
+								has_government = communism
+							}
+						}
+					}
+				}
+				SWE = {
+					add_ideas = swedish_king
+				}
+			}
+			if = {
+				limit = {
+					tag = SWE
+					has_idea = swedish_king
+					NOT = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+					}
+				}
+				SWE = {
+					remove_ideas = swedish_king
+				}
+			}
+			if = {
+				limit = {
+					tag = DEN
+					NOT = {
+						has_idea = danish_king
+					}
+					NOT = {
+						AND = {
+							OR = {
+								has_government = neutrality
+								has_government = communism
+							}
+						}
+					}
+				}
+				DEN = {
+					add_ideas = danish_king
+				}
+			}
+			if = {
+				limit = {
+					tag = DEN
+					has_idea = danish_king
+					NOT = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+					}
+				}
+				DEN = {
+					remove_ideas = danish_king
+				}
+			}
+			if = {
+				limit = {
+					tag = NOR
+					NOT = {
+						has_idea = norwegian_king
+					}
+					NOT = {
+						AND = {
+							OR = {
+								has_government = neutrality
+								has_government = communism
+							}
+						}
+					}
+				}
+				NOR = {
+					add_ideas = norwegian_king
+				}
+			}
+			if = {
+				limit = {
+					tag = NOR
+					has_idea = norwegian_king
+					NOT = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+					}
+				}
+				NOR = {
+					remove_ideas = norwegian_king
+				}
+			}
+			if = {
+				limit = {
 					tag = GRE
 					NOT = {
 						has_idea = GRE_george_ii_idea
@@ -640,6 +742,9 @@ on_actions = {
 						has_idea = bourbon_king
 					}
 					NOT = {
+						has_global_flag = LOU_old_monarch_died
+					}
+					NOT = {
 						AND = {
 							OR = {
 								has_government = neutrality
@@ -662,9 +767,48 @@ on_actions = {
 							has_government = democratic
 						}
 					}
+					NOT = {
+						has_global_flag = LOU_old_monarch_died
+					}
 				}
 				LOU = {
 					remove_ideas = bourbon_king
+				}
+			}
+			if = {
+				limit = {
+					tag = LOU
+					NOT = {
+						has_idea = bourbon_king_2
+					}
+					has_global_flag = LOU_old_monarch_died
+					NOT = {
+						AND = {
+							OR = {
+								has_government = neutrality
+								has_government = communism
+							}
+						}
+					}
+				}
+				LOU = {
+					add_ideas = bourbon_king_2
+				}
+			}
+			if = {
+				limit = {
+					tag = LOU
+					has_idea = bourbon_king_2
+					NOT = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+					}
+					has_global_flag = LOU_old_monarch_died
+				}
+				LOU = {
+					remove_ideas = bourbon_king_2
 				}
 			}
 			if = {

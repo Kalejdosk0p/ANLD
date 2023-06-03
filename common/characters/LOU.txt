@@ -42,7 +42,7 @@ characters={
 		name="Henri S. Truman"
 		portraits={
 			civilian={
-				large="gfx/leaders/LOU/harry_truman.dds"
+				large="GFX_portrait_Harry_S_Truman"
 			}
 		}
 		country_leader={

@@ -4744,18 +4744,92 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS FOCUS_FILTER_FORMABLE_NATIONS}
 		cost = 10
 		available = {
-			owns_state = 454
-			controls_state = 454
-			owns_state = 455
-			controls_state = 455
-			owns_state = 553
-			controls_state = 553
-			owns_state = 554
-			controls_state = 554
-			owns_state = 680
-			controls_state = 680
-			owns_state = 677
-			controls_state = 677
+			OR = {
+				AND = {
+					owns_state = 454
+					controls_state = 454
+				}
+				AND = {
+					454 = {
+						owner = {
+							is_subject_of = POL
+						}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					owns_state = 455
+					controls_state = 455
+				}
+				AND = {
+					455 = {
+						owner = {
+							is_subject_of = POL
+						}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					owns_state = 553
+					controls_state = 553
+				}
+				AND = {
+					553 = {
+						owner = {
+							is_subject_of = POL
+						}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					owns_state = 554
+					controls_state = 554
+				}
+				AND = {
+					554 = {
+						owner = {
+							is_subject_of = POL
+						}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					owns_state = 680
+					controls_state = 680
+				}
+				AND = {
+					680 = {
+						owner = {
+							is_subject_of = POL
+						}
+					}
+				}
+			}
+			OR = {
+				AND = {
+					owns_state = 677
+					controls_state = 677
+				}
+				AND = {
+					677 = {
+						owner = {
+							is_subject_of = POL
+						}
+					}
+				}
+			}
+			OR = {
+				PAL = {
+					is_subject_of = POL
+				}
+				NOT = {
+					country_exists = PAL
+				}
+			}
 		}
 		select_effect = {
 			POL = {
@@ -4793,6 +4867,7 @@ focus_tree = {
 				puppet = PAL
 			}
 			PAL = {
+				set_cosmetic_tag = PAL_polish
 				create_country_leader = {
 					name = "Karol Wojtyła"
 					desc = "karol_wojtyla_desc"
@@ -8814,7 +8889,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_socialist_agrarianism
-		icon = GFX_agrarian_reform
+		icon = GFX_focus_generic_coffee
 		x = 0
 		y = 1
 		search_filters = {}
@@ -10845,11 +10920,16 @@ focus_tree = {
 						has_dlc = "Man the Guns"
 					}
 				}
-				add_tech_bonus = {
-					name = POL_lazy_research_bonus
-					bonus = 1
-					uses = 1
-					category = ss_tech
+				create_equipment_variant = {
+					name = "Orzeł Class"
+					type = submarine_3
+					allow_without_tech = yes
+					upgrades = {
+						ship_reliability_upgrade = 3
+						sub_torpedo_upgrade = 3
+						sub_stealth_upgrade = 3
+						sub_engine_upgrade = 3
+					}
 				}
 			}
 		}
@@ -10977,17 +11057,35 @@ focus_tree = {
 		}
 		completion_reward = {
 			navy_experience = 50
-			add_tech_bonus = {
-				name = POL_lazy_research_bonus
-				bonus = 0.6
-				uses = 2
-				category = ss_tech
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_tech_bonus = {
+					name = POL_lazy_research_bonus
+					bonus = 0.6
+					uses = 2
+					category = ss_tech
+				}
+				add_tech_bonus = {
+					name = POL_lazy_research_bonus
+					bonus = 0.6
+					uses = 2
+					category = cat_torpedoes
+				}
 			}
-			add_tech_bonus = {
-				name = POL_lazy_research_bonus
-				bonus = 0.6
-				uses = 2
-				category = cat_torpedoes
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Man the Guns"
+					}
+				}
+				add_tech_bonus = {
+					name = POL_lazy_research_bonus
+					bonus = 0.6
+					uses = 3
+					category = ss_tech
+				}
 			}
 		}
 		ai_will_do = {
@@ -11032,7 +11130,7 @@ focus_tree = {
 	focus = {
 		id = POL_air_reform
 		icon = GFX_goal_generic_build_airforce
-		x = 20
+		x = 16
 		y = 1
 		search_filters = {FOCUS_FILTER_AVITATION}
 		prerequisite = { focus = POL_start_army_reform }
@@ -11049,6 +11147,342 @@ focus_tree = {
 				category = air_doctrine
 			}
 			air_experience = 20
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_light_planes
+		icon = GFX_goal_generic_air_fighter
+		x = -2
+		y = 1
+		search_filters = {FOCUS_FILTER_AVITATION}
+		prerequisite = { focus = POL_air_reform }
+		relative_position_id = POL_air_reform
+		mutually_exclusive = {
+			focus = POL_heavy_planes
+		}
+		cost = 6
+		available = {
+			
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = POL_lazy_research_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = POL_lazy_research_bonus
+				bonus = 0.6
+				uses = 2
+				category = light_air
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_heavy_planes
+		icon = GFX_goal_generic_air_bomber
+		x = 2
+		y = 1
+		search_filters = {FOCUS_FILTER_AVITATION}
+		prerequisite = { focus = POL_air_reform }
+		relative_position_id = POL_air_reform
+		mutually_exclusive = {
+			focus = POL_light_planes
+		}
+		cost = 6
+		available = {
+			
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = POL_lazy_research_bonus
+				cost_reduction = 0.25
+				uses = 2
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+				name = POL_lazy_research_bonus
+				bonus = 0.6
+				uses = 1
+				category = heavy_air
+			}
+			add_tech_bonus = {
+				name = POL_lazy_research_bonus
+				bonus = 0.6
+				uses = 1
+				category = medium_air
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_mielec_aircraft_factory
+		icon = GFX_mielec_aircraft_factory
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_AVITATION}
+		prerequisite = { focus = POL_light_planes focus = POL_heavy_planes }
+		relative_position_id = POL_light_planes
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_ideas = POL_mielec_air_factory_spirit
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_swiatecki_bomb_slip
+		icon = GFX_focus_generic_long_range_aircraft
+		x = 2
+		y = 1
+		search_filters = {FOCUS_FILTER_AVITATION}
+		prerequisite = { focus = POL_light_planes focus = POL_heavy_planes }
+		relative_position_id = POL_light_planes
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_to_variable = {POL_WPvsPOW_air_strategic_bomber_bombing_factor = 0.1}
+			custom_effect_tooltip = POL_custom_effect_tooltip_174
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_paratroopers_trainings
+		icon = GFX_focus_generic_paratrooper
+		x = 4
+		y = 1
+		search_filters = {FOCUS_FILTER_AVITATION}
+		prerequisite = { focus = POL_light_planes focus = POL_heavy_planes }
+		relative_position_id = POL_light_planes
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = POL_lazy_research_bonus
+				bonus = 1
+				uses = 2
+				category = para_tech
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_expand_avitation_industry
+		icon = GFX_focus_generic_aircraft_production
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_AVITATION}
+		prerequisite = { focus = POL_mielec_aircraft_factory focus = POL_swiatecki_bomb_slip focus = POL_paratroopers_trainings}
+		relative_position_id = POL_mielec_aircraft_factory
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					infrastructure < 5
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					infrastructure < 5
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				create_equipment_variant = {
+					name = "PZL P.46"
+					type = small_plane_cas_airframe_2
+					modules = {
+						fixed_main_weapon_slot = bomb_locks
+						fixed_auxiliary_weapon_slot_1 = light_mg_4x
+						engine_type_slot = engine_2_1x
+						special_type_slot_1 = lmg_defense_turret_2x
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {has_dlc = "By Blood Alone"}
+				}
+				create_equipment_variant = {
+					name = "PZL P.43"
+					type = CAS_equipment_2
+					upgrades = {
+						plane_cas_upgrade = 2
+						plane_range_upgrade = 2
+						plane_engine_upgrade = 3
+						plane_reliability_upgrade = 2
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_build_new_airports
+		icon = GFX_goal_generic_air_production
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_AVITATION}
+		prerequisite = { focus = POL_mielec_aircraft_factory focus = POL_swiatecki_bomb_slip focus = POL_paratroopers_trainings}
+		relative_position_id = POL_swiatecki_bomb_slip
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					air_base < 7
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					air_base < 7
+				}
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			air_experience = 30
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_kings_of_skies
+		icon = GFX_focus_generic_copy_plane_designs
+		x = 0
+		y = 2
+		search_filters = {FOCUS_FILTER_AVITATION}
+		prerequisite = {focus = POL_swiatecki_bomb_slip}
+		prerequisite = {focus = POL_paratroopers_trainings}
+		prerequisite = {focus = POL_mielec_aircraft_factory}
+		prerequisite = {focus = POL_expand_avitation_industry}
+		prerequisite = {focus = POL_build_new_airports}
+		relative_position_id = POL_swiatecki_bomb_slip
+		cost = 8
+		available = {
+			
+		}
+		completion_reward = {
+			add_to_variable = {POL_WPvsPOW_air_superiority_efficiency = 0.05}
+			add_to_variable = {POL_WPvsPOW_air_training_xp_gain_factor = 0.05}
+			add_to_variable = {POL_WPvsPOW_air_weather_penalty = -0.05}
+			custom_effect_tooltip = POL_custom_effect_tooltip_175
 		}
 		ai_will_do = {
 			factor = 20

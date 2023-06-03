@@ -75,7 +75,6 @@ set_popularities = {
 }
 	
 add_ideas = {
-	#bourbon_king
 	civilian_economy
 	limited_conscription
 	free_trade

@@ -162,3 +162,4 @@
  cant_change_money_law_tooltip:0 "Blocks possibility to change monetary policy!"
  strikes_delegalised_flag:0 "Strikes Delegalised"
  strikes_delegalised_flag_tooltip:0 "Strikes will be delegalised and events about them will not appear!"
+ LOU_old_monarch_died:0 "Jean I of [LOU.GetName] died!"
