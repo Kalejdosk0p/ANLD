@@ -33,7 +33,6 @@ country_event = {
 			TAG = BAL
 			TAG = UKR
 			TAG = CAU
-			TAG = AQN
 			TAG = BLR
 		}
 		is_in_faction = no
@@ -296,19 +295,6 @@ country_event = {
 				add_ai_strategy = {
 					type = alliance
 					id = "CAU"
-					value = 9999
-				}
-			}
-		}
-		
-		if = {
-			limit = {
-				TAG = CAN
-			}
-			FROM = {
-				add_ai_strategy = {
-					type = alliance
-					id = "CAN"
 					value = 9999
 				}
 			}
