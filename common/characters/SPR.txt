@@ -3,27 +3,28 @@ characters={
 		name="Alejandro Lerroux"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				large=GFX_portrait_SPR_alejandro_lerroux
 			}
 		}
 		country_leader={
 			desc="POLITICS_ALEJANDRO_LERROUX_DESC"
 			ideology=jacobin_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	SPR_alfonso_xiii={
 		name="Alfonso XIII"
 		portraits={
 			civilian={
-				large="gfx/leaders/SPR/king_alfonso.dds"
+				large="GFX_portrait_SPA_alfonso_xiii"
 			}
 		}
 		country_leader={
 			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
+			traits = {
+				disgraced_monarch
+			}
 		}
 	}
 	SPR_manuel_azana={
@@ -37,14 +38,70 @@ characters={
 			desc="POLITICS_MANUEL_AZANA_DESC"
 			ideology=constitutionalist_ideology
 			expire="1965.1.1.1"
-			id=-1
+		}
+	}
+	SPR_jose_antonio_primo_de_rivera={
+		name="Jose Antonio Primo de Rivera"
+		portraits={
+			civilian={
+				large="GFX_portrait_SPA_jose_antonio_primo_de_rivera"
+				small="GFX_idea_SPA_jose_antonio_primo_de_rivera"
+			}
+			army={
+				small="GFX_idea_SPA_jose_antonio_primo_de_rivera"
+				large="GFX_portrait_SPA_jose_antonio_primo_de_rivera"
+			}
+		}
+		country_leader={
+			ideology=corporatist_ideology
+			expire="1965.1.1.1"
+			
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = SPR_jose_antonio_primo_de_rivera
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				falangist_figurehead 
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+			ledger = civilian
+		}
+	}
+	SPR_josé_díaz={
+		name="José Díaz"
+		portraits={
+			civilian={
+				large=GFX_portrait_SPR_jose_diaz
+			}
+		}
+		country_leader={
+			desc="POLITICS_JOSE_DIAZ_DESC"
+			ideology=marxist_ideology
+			expire="1965.1.1.1"
 		}
 	}
 	SPR_francisco_franco={
 		name="Francisco Franco"
 		portraits={
 			civilian={
-				large="gfx/leaders/SPR/Portrait_Spain_Francisco_Franco.dds"
+				large="GFX_portrait_spain_francisco_franco"
+				small=GFX_portrait_SPA_francisco_franco_small
+			}
+			army={
+				large="GFX_portrait_spain_francisco_franco"
+				small=GFX_portrait_SPA_francisco_franco_small
 			}
 		}
 		corps_commander={
@@ -53,60 +110,481 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=-1
 		}
-		country_leader={
-			desc="POLITICS_FRANCISCO_FRANCO_DESC"
-			ideology=corporatist_ideology
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	SPR_jose_antonio_primo_de_rivera={
-		name="Jose Antonio Primo de Rivera"
-		portraits={
-			civilian={
-				large="gfx/leaders/SPR/Jose_Antonio_Primo_de_Rivera.dds"
+		advisor={
+			slot = army_chief
+			idea_token = SPR_francisco_franco
+			allowed = {
+				original_tag = SPR
 			}
-		}
-		country_leader={
-			ideology=corporatist_ideology
-			expire="1965.1.1.1"
-			id=-1
-		}
-	}
-	SPR_josé_díaz={
-		name="José Díaz"
-		portraits={
-			civilian={
-				large="gfx/leaders/SPR/Portrait_Spain_Jose_Diaz.dds"
+			available = {
+				
 			}
-		}
-		country_leader={
-			desc="POLITICS_JOSE_DIAZ_DESC"
-			ideology=marxist_ideology
-			expire="1965.1.1.1"
-			id=-1
+			traits = {
+				army_chief_offensive_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 	SPR_josé_asensio_torrado={
 		name="José Asensio Torrado"
 		portraits={
 			army={
-				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
-			}
-			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+				large="GFX_portrait_SPR_jose_asensio_torrado"
+				small=GFX_portrait_SPR_jose_asensio_torrado_small
 			}
 		}
-		field_marshal={
-			traits={ defensive_doctrine }
+		corps_commander={
+			traits={ career_officer infantry_leader }
 			skill=2
 			attack_skill=1
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=1
-			legacy_id=-1
+		}
+	}
+	SPR_vicente_rojo_lluch={
+		name="Vicente Rojo Lluch"
+		portraits={
+			army={
+				large="GFX_portrait_SPR_vicente_rojo_lluch"
+				small=GFX_portrait_SPR_vicente_rojo_lluch_small
+			}
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=3
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SPR_vicente_rojo_lluch
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				army_chief_maneuver_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SPR_jose_miaja={
+		name="Jose Miaja"
+		portraits={
+			army={
+				large="GFX_portrait_SPR_jose_miaja"
+				small=GFX_portrait_SPR_jose_miaja_small
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=1
+		}
+		advisor={
+			slot = high_command
+			idea_token = SPR_jose_miaja
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+			ledger = army
+		}
+	}
+	SPR_valentin_gonzalez={
+		name="Valentin Gonzalez"
+		portraits={
+			army={
+				large="GFX_portrait_SPR_valentin_gonzalez"
+				small=GFX_portrait_SPR_valentin_gonzalez_small
+			}
+		}
+		corps_commander={
+			traits={ harsh_leader }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+		}
+	}
+	SPR_enrique_lister={
+		name = "Enrique Lister"
+		portraits={
+			army={
+				large="GFX_portrait_SPR_enrique_lister"
+				small = GFX_portrait_SPR_enrique_lister_small
+			}
+		}
+		corps_commander={
+			traits={ politically_connected infantry_leader trickster }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	SPR_juan_modesto={
+		name="Juan Modesto"
+		portraits={
+			army={
+				large="GFX_portrait_SPR_juan_modesto"
+				small=GFX_portrait_SPR_juan_modesto_small
+			}
+		}
+		corps_commander={
+			traits={ trait_mountaineer }
+			skill=2
+			attack_skill=1
+			defense_skill=1
+			planning_skill=2
+			logistics_skill=3
+		}
+	}
+	SPR_antonio_cordon_garcia={
+		name="Antonio Cordon Garcia"
+		portraits={
+			army={
+				large="GFX_portrait_SPR_antonio_cordon_garcia"
+				small=GFX_portrait_SPR_antonio_cordon_garcia_small
+			}
+		}
+		corps_commander={
+			traits={ infantry_leader }
+			skill=2
+			attack_skill=2
+			defense_skill=1
+			planning_skill=3
+			logistics_skill=1
+		}
+	}
+	SPR_mohamed_meziane={
+		name="Mohamed Meziane"
+		portraits={
+			army={
+				large="GFX_portrait_SPA_mohamed_meziane"
+				small=GFX_portrait_SPR_mohamed_meziane_small
+			}
+		}
+		corps_commander={
+			traits={ career_officer harsh_leader  }
+			skill=4
+			attack_skill=5
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+		}
+	}
+	SPR_gonzalo_queipo_de_llano={
+		name="Gonzalo Queipo De Llano"
+		portraits={
+			army={
+				large="GFX_portrait_SPA_gonzalo_queipo_de_llano"
+				small=GFX_portrait_SPR_gonzalo_queipo_de_llano_small
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer}
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	SPR_emilio_mola={
+		name="Emilio Mola"
+		portraits={
+			army={
+				large="GFX_portrait_SPA_emilio_mola"
+				small=GFX_portrait_SPA_emilio_mola_small
+			}
+		}
+		advisor={	
+			slot = high_command
+			idea_token = SPR_emilio_mola
+			ledger = army
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				army_infantry_2
+			}
+			cost = 150
+		}
+		field_marshal={
+			traits={ trait_cautious thorough_planner organisational_leader }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=4
+			logistics_skill=2
+		}
+	}
+	SPR_juan_yague={
+		name="Juan Yague Blanco"
+		portraits={
+			army={
+				large="GFX_portrait_SPA_juan_yague"
+				small=GFX_portrait_SPA_juan_yague_small
+			}
+		}
+		advisor={
+			slot = army_chief
+			idea_token = SPR_juan_yague
+			ledger = army
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 150
+		}
+		corps_commander={
+			traits={ brilliant_strategist trait_reckless  }
+			skill=3
+			attack_skill=4
+			defense_skill=2
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	SPR_agustin_munoz_grandes={
+		name="Agustin Munoz Grandes"
+		portraits={
+			army={
+				small="GFX_idea_SPA_agustin_munoz_grandes"
+				large="GFX_portrait_SPA_augustin_muynoz_grandes"
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = SPR_agustin_munoz_grandes
+			ledger = army
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				mobile_warfare_expert
+			}
+		}
+		corps_commander={
+			traits={ infantry_officer trait_SPA_nationalist_sympathies }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	SPR_jose_enrique_varela={
+		name="Jose Enrique Varela"
+		portraits={
+			army={
+				large="GFX_portrait_SPA_jose_enrique_varela"
+				small=GFX_portrait_SPA_jose_enrique_varela_small
+			}
+		}
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = SPR_jose_enrique_varela
+			ledger = army
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				military_theorist
+			}
+		}
+		corps_commander={
+			traits={ organizer infantry_leader }
+			skill=3
+			attack_skill=3
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=2
+		}
+	}
+	SPR_miguel_cabanellas={
+		name="Miguel Cabanellas"
+		portraits={
+			army={
+				large="GFX_portrait_SPA_miguel_cabanellas"
+				small=GFX_portrait_SPA_miguel_cabanellas_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = SPR_miguel_cabanellas
+			ledger = army
+			cost = 100
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				army_regrouping_2
+			}
+		}
+		corps_commander={
+			traits={ old_guard cavalry_officer }
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+		}
+	}
+	SPR_jose_millan_astray={
+		name="Jose Millan Astray"
+		portraits={
+			army={
+				large="GFX_portrait_SPA_jose_millan_astray"
+				small=GFX_portrait_SPR_jose_millan_astray_small
+			}
+		}
+		corps_commander={
+			traits={ trait_reckless war_hero  }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=2
+		}
+	}
+	SPR_miguel_buiza_fernandez_palacios={
+		name="Miguel Buiza Fernandez Palacios"
+		portraits={
+			army={
+				large="GFX_portrait_SPR_miguel_buiza_fernandez_palacios"
+				small=GFX_portrait_SPR_miguel_buiza_fernandez_palacios_small
+			}
+		}
+		navy_leader={
+			traits={ craven }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			maneuvering_skill=1
+			coordination_skill=1
+		}
+		advisor={
+			slot = high_command
+			idea_token = SPR_miguel_buiza_fernandez_palacios
+			ledger = navy
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				navy_screen_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	SPR_luis_carrero_blanco={
+		name="Luis Carrero Blanco"
+		portraits={
+			army={
+				large="GFX_portrait_SPA_luis_carrero_blanco"
+				small=GFX_portrait_SPA_luis_carrero_blanco_small
+			}
+		}
+		advisor={
+			slot = navy_chief
+			idea_token = SPR_luis_carrero_blanco
+			allowed = {
+				original_tag = SPR
+			}
+			visible = {
+				original_tag = SPR
+			}
+			available = {
+				
+			}
+			traits = {
+				navy_chief_decisive_battle_2
+			}
+			cost = 100
+		}
+		navy_leader={
+			traits={ seawolf }
+			skill=2
+			attack_skill=2
+			defense_skill=2
+			maneuvering_skill=2
+			coordination_skill=1
 		}
 	}
 }

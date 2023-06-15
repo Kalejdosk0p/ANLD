@@ -33,7 +33,7 @@ characters={
 		name="Martin Tranmæl"
 		portraits={
 			civilian={
-				large="gfx/leaders/NOR/.dds"
+				large="gfx/leaders/NOR/martin_tranmael.dds"
 			}
 		}
 		country_leader={
@@ -48,7 +48,7 @@ characters={
 		name="Adam Egede-Nissen"
 		portraits={
 			civilian={
-				large="gfx/leaders/NOR/.dds"
+				large="gfx/leaders/NOR/adam_egede_nissen.dds"
 			}
 		}
 		country_leader={
@@ -63,7 +63,7 @@ characters={
 		name="Johan Ludwig Mowinckel"
 		portraits={
 			civilian={
-				large="gfx/leaders/NOR/.dds"
+				large="gfx/leaders/NOR/johan_ludwig_mowinckel.dds"
 			}
 		}
 		country_leader={
@@ -96,7 +96,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_1.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large="gfx/leaders/NOR/carl_gustav_fleischer.dds"
 			}
 		}
 		corps_commander={
@@ -115,7 +115,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_navy_3.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+				large="gfx/leaders/NOR/elias_corneliussen.dds"
 			}
 		}
 		navy_leader={

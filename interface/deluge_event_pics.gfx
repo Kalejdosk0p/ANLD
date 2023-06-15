@@ -326,4 +326,12 @@ spriteTypes = {
 		name = "GFX_pomerania_divided"
 		texturefile = "gfx/event_pictures/pomerania_divided.dds"
 	}
+	spriteType = {
+		name = "GFX_polish_european_cooperation"
+		texturefile = "gfx/event_pictures/polish_european_cooperation.dds"
+	}
+	spriteType = {
+		name = "GFX_new_revolution_in_poland"
+		texturefile = "gfx/event_pictures/new_revolution_in_poland.dds"
+	}
 }

@@ -16,7 +16,7 @@ characters={
 		name="Sven Linderot"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large="gfx/leaders/SWE/sven_linderot.dds"
 			}
 		}
 		country_leader={
@@ -29,7 +29,7 @@ characters={
 		name="Axel Pehrsson-Bramstorp"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				large="gfx/leaders/SWE/axel_pehrssonbramstorp.dds"
 			}
 		}
 		country_leader={
@@ -45,7 +45,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				large="gfx/leaders/SWE/erik_af_edholm.dds"
 			}
 		}
 		corps_commander={
@@ -62,10 +62,10 @@ characters={
 		name="Ivar Holmquist"
 		portraits={
 			army={
-				small=""
+				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
 			}
 			army={
-				large="gfx/leaders/SWE/general_ivar_holmquist.dds"
+				large="gfx/leaders/SWE/ivar_holmquist.dds"
 			}
 		}
 		field_marshal={
@@ -79,10 +79,10 @@ characters={
 		}
 	}
 	SWE_gustav_v={
-		name="Gustav V"
+		name="Gustaf V"
 		portraits={
 			civilian={
-				large="gfx/leaders/SWE/gustav_sweden.dds"
+				large="gfx/leaders/SWE/gustaf_v.dds"
 			}
 		}
 		country_leader={
@@ -99,7 +99,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_2.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+				large="gfx/leaders/SWE/folke_högberg.dds"
 			}
 		}
 		corps_commander={
@@ -119,7 +119,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_navy_2.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+				large="gfx/leaders/SWE/claes_lindström.dds"
 			}
 		}
 		navy_leader={

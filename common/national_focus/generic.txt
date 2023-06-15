@@ -691,7 +691,7 @@ focus_tree = {
 	
 	focus = {
 		id = deluge_league_ratification
-		icon = GFX_focus_league_of_nations
+		icon = GFX_league_of_nations_treaty
 		available = {
 			OR = {
 				has_idea = deluge_league_of_nations_prospective_member

@@ -90,3 +90,5 @@
  POM_FRA_neutrality_subject:0 "French Mandate of Pomerania"
  ##CUSTOM TOOLTIPS:
  POM_custom_effect_tooltip_1:0 "This guarantee will be removed after 1 year!"
+ ##WORLD TENSION:
+ FRA_fate_of_pomerania:0 "Fate of Pomerania"

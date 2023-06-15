@@ -635,7 +635,23 @@ country_event = {##state of emergency in Poland
 		add_stability = 0.1
 		add_ideas = state_of_emergency_idea
 		hidden_effect = {
-			country_event = { id = deluge_poland.24 days = 35 }
+			country_event = { id = deluge_poland.23_and_half days = 7 }
+		}
+	}
+}
+country_event = {##Circle of God's Cause infiltrates POL government
+	id = deluge_poland.23_and_half
+	title = deluge_poland.23_and_half.t
+	desc = deluge_poland.23_and_half.d
+	picture = GFX_deluge_paris_small
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland.23_and_half.a
+		add_political_power = -5
+		add_stability = -0.05
+		add_ideas = POL_circle_of_gods_cause
+		hidden_effect = {
+			country_event = { id = deluge_poland.24 days = 28 }
 		}
 	}
 }
@@ -2741,6 +2757,31 @@ country_event = {##new communist party chooses it's leader
 		}
 	}
 }
+country_event = {##Prophet Ilja becames famous 
+	id = deluge_poland.85
+	title = deluge_poland.85.t
+	desc = deluge_poland.85.d
+	picture = GFX_deluge_paris_small
+	fire_only_once = yes
+	trigger = {
+		tag = POL
+		date > 1939.6.6
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {
+		name = deluge_poland.85.a
+		97 = {
+			add_dynamic_modifier = {
+				modifier = POL_religious_sect_of_wierszalin
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
 country_event = {##POL proposes defense pact to UK
 	id = deluge_poland_foreign.1
 	title = deluge_poland_foreign.1.t
@@ -3558,6 +3599,73 @@ news_event = {##SOV break Beck-Milyukov Pact
 		name = deluge_poland_foreign.23.a
 	}
 }
+news_event = {##POL chooses new revanchist policy
+	id = deluge_poland_foreign.24
+	title = deluge_poland_foreign.24.t
+	desc = deluge_poland_foreign.24.d
+	picture = GFX_polish_cavalary_2
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.24.a
+	}
+}
+news_event = {##POL chooses european cooperation
+	id = deluge_poland_foreign.25
+	title = deluge_poland_foreign.25.t
+	desc = deluge_poland_foreign.25.d
+	picture = GFX_polish_european_cooperation
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.25.a
+	}
+}
+news_event = {##POL chooses new revolution
+	id = deluge_poland_foreign.26
+	title = deluge_poland_foreign.26.t
+	desc = deluge_poland_foreign.26.d
+	picture = GFX_new_revolution_in_poland
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.26.a
+	}
+}
+country_event = {##countries are getting invited to Polish european cooperation
+	id = deluge_poland_foreign.27
+	title = deluge_poland_foreign.27.t
+	desc = deluge_poland_foreign.27.d
+	picture = GFX_report_event_poland_rejects
+	is_triggered_only = yes
+	option = {##accept
+		name = deluge_poland_foreign.27.a
+		POL = {
+			add_to_faction = ROOT
+		}
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland_foreign.58
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.27.b
+		hidden_effect = {
+			POL = {
+				country_event = {
+					id = deluge_poland_foreign.57
+				}
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
 country_event = {##one of sides of POL-ENG act calls other to war
 	id = deluge_poland_foreign.28
 	title = deluge_poland_foreign.28.t
@@ -3591,6 +3699,11 @@ country_event = {##one of sides of POL-ENG act calls other to war
 				NOT = {POL = {has_war_with = GER}}
 			}
 			AND = {
+				tag = POL
+				ENG = {has_war_with = DEN}
+				NOT = {POL = {has_war_with = DEN}}
+			}
+			AND = {
 				tag = ENG
 				POL = {has_war_with = SWE}
 				NOT = {ENG = {has_war_with = SWE}}
@@ -3614,6 +3727,11 @@ country_event = {##one of sides of POL-ENG act calls other to war
 				tag = ENG
 				POL = {has_war_with = GER}
 				NOT = {ENG = {has_war_with = GER}}
+			}
+			AND = {
+				tag = ENG
+				POL = {has_war_with = DEN}
+				NOT = {ENG = {has_war_with = DEN}}
 			}
 		}
 		POL = {has_idea = POL_ENG_defence_pact}
@@ -3664,6 +3782,13 @@ country_event = {##one of sides of POL-ENG act calls other to war
 		}
 		if = {
 			limit = {
+				tag = POL
+				ENG = {has_war_with = DEN}
+			}
+			declare_war_on = { target = DEN type = puppet_wargoal_focus }
+		}
+		if = {
+			limit = {
 				tag = ENG
 				POL = {has_war_with = GER}
 			}
@@ -3697,6 +3822,13 @@ country_event = {##one of sides of POL-ENG act calls other to war
 			}
 			declare_war_on = { target = WGR type = puppet_wargoal_focus }
 		}
+		if = {
+			limit = {
+				tag = ENG
+				POL = {has_war_with = DEN}
+			}
+			declare_war_on = { target = DEN type = puppet_wargoal_focus }
+		}
 		ai_chance = {
 			base = 10
 			modifier = {
@@ -3718,24 +3850,64 @@ country_event = {##one of sides of POL-ENG act calls other to war
 					limit = {
 						OR = {
 							AND = {
+								tag = ENG
 								FRA = {num_of_factories < 100}
 								POL = {has_war_with = FRA}
 							}
 							AND = {
+								tag = ENG
 								SWE = {num_of_factories < 50}
 								POL = {has_war_with = SWE}
 							}
 							AND = {
+								tag = ENG
 								GER = {num_of_factories < 50}
 								POL = {has_war_with = GER}
 							}
 							AND = {
+								tag = ENG
 								WGR = {num_of_factories < 50}
 								POL = {has_war_with = WGR}
 							}
 							AND = {
+								tag = ENG
 								DDR = {num_of_factories < 50}
 								POL = {has_war_with = DDR}
+							}
+							AND = {
+								tag = ENG
+								DEN = {num_of_factories < 50}
+								POL = {has_war_with = DEN}
+							}
+							AND = {
+								tag = POL
+								FRA = {num_of_factories < 100}
+								ENG = {has_war_with = FRA}
+							}
+							AND = {
+								tag = POL
+								SWE = {num_of_factories < 50}
+								ENG = {has_war_with = SWE}
+							}
+							AND = {
+								tag = POL
+								GER = {num_of_factories < 50}
+								ENG = {has_war_with = GER}
+							}
+							AND = {
+								tag = POL
+								WGR = {num_of_factories < 50}
+								ENG = {has_war_with = WGR}
+							}
+							AND = {
+								tag = POL
+								DDR = {num_of_factories < 50}
+								ENG = {has_war_with = DDR}
+							}
+							AND = {
+								tag = POL
+								DEN = {num_of_factories < 50}
+								ENG = {has_war_with = DEN}
 							}
 						}
 					}
@@ -3747,24 +3919,64 @@ country_event = {##one of sides of POL-ENG act calls other to war
 					limit = {
 						OR = {
 							AND = {
+								tag = ENG
 								FRA = {num_of_factories > 100}
-								POL = {has_war_with = FRA}
+								ENG = {has_war_with = FRA}
 							}
 							AND = {
+								tag = ENG
 								SWE = {num_of_factories > 50}
-								POL = {has_war_with = SWE}
+								ENG = {has_war_with = SWE}
 							}
 							AND = {
+								tag = ENG
 								GER = {num_of_factories > 50}
-								POL = {has_war_with = GER}
+								ENG = {has_war_with = GER}
 							}
 							AND = {
+								tag = ENG
 								WGR = {num_of_factories > 50}
 								POL = {has_war_with = WGR}
 							}
 							AND = {
+								tag = ENG
 								DDR = {num_of_factories > 50}
-								POL = {has_war_with = DDR}
+								ENG = {has_war_with = DDR}
+							}
+							AND = {
+								tag = ENG
+								DEN = {num_of_factories > 50}
+								ENG = {has_war_with = DEN}
+							}
+							AND = {
+								tag = POL
+								FRA = {num_of_factories > 100}
+								ENG = {has_war_with = FRA}
+							}
+							AND = {
+								tag = POL
+								SWE = {num_of_factories > 50}
+								ENG = {has_war_with = SWE}
+							}
+							AND = {
+								tag = POL
+								GER = {num_of_factories > 50}
+								ENG = {has_war_with = GER}
+							}
+							AND = {
+								tag = POL
+								WGR = {num_of_factories > 50}
+								ENG = {has_war_with = WGR}
+							}
+							AND = {
+								tag = POL
+								DDR = {num_of_factories > 50}
+								ENG = {has_war_with = DDR}
+							}
+							AND = {
+								tag = POL
+								DEN = {num_of_factories > 50}
+								ENG = {has_war_with = DEN}
 							}
 						}
 					}
@@ -3813,24 +4025,64 @@ country_event = {##one of sides of POL-ENG act calls other to war
 					limit = {
 						OR = {
 							AND = {
+								tag = ENG
 								FRA = {num_of_factories < 100}
 								POL = {has_war_with = FRA}
 							}
 							AND = {
+								tag = ENG
 								SWE = {num_of_factories < 50}
 								POL = {has_war_with = SWE}
 							}
 							AND = {
+								tag = ENG
 								GER = {num_of_factories < 50}
 								POL = {has_war_with = GER}
 							}
 							AND = {
+								tag = ENG
 								WGR = {num_of_factories < 50}
 								POL = {has_war_with = WGR}
 							}
 							AND = {
+								tag = ENG
 								DDR = {num_of_factories < 50}
 								POL = {has_war_with = DDR}
+							}
+							AND = {
+								tag = ENG
+								DEN = {num_of_factories < 50}
+								POL = {has_war_with = DEN}
+							}
+							AND = {
+								tag = POL
+								FRA = {num_of_factories < 100}
+								ENG = {has_war_with = FRA}
+							}
+							AND = {
+								tag = POL
+								SWE = {num_of_factories < 50}
+								ENG = {has_war_with = SWE}
+							}
+							AND = {
+								tag = POL
+								GER = {num_of_factories < 50}
+								ENG = {has_war_with = GER}
+							}
+							AND = {
+								tag = POL
+								WGR = {num_of_factories < 50}
+								ENG = {has_war_with = WGR}
+							}
+							AND = {
+								tag = POL
+								DDR = {num_of_factories < 50}
+								ENG = {has_war_with = DDR}
+							}
+							AND = {
+								tag = POL
+								DEN = {num_of_factories < 50}
+								ENG = {has_war_with = DEN}
 							}
 						}
 					}
@@ -3848,24 +4100,64 @@ country_event = {##one of sides of POL-ENG act calls other to war
 					limit = {
 						OR = {
 							AND = {
+								tag = ENG
 								FRA = {num_of_factories > 100}
 								POL = {has_war_with = FRA}
 							}
 							AND = {
+								tag = ENG
 								SWE = {num_of_factories > 50}
 								POL = {has_war_with = SWE}
 							}
 							AND = {
+								tag = ENG
 								GER = {num_of_factories > 50}
 								POL = {has_war_with = GER}
 							}
 							AND = {
+								tag = ENG
 								WGR = {num_of_factories > 50}
 								POL = {has_war_with = WGR}
 							}
 							AND = {
+								tag = ENG
 								DDR = {num_of_factories > 50}
 								POL = {has_war_with = DDR}
+							}
+							AND = {
+								tag = ENG
+								DEN = {num_of_factories > 50}
+								POL = {has_war_with = DEN}
+							}
+							AND = {
+								tag = POL
+								FRA = {num_of_factories > 100}
+								ENG = {has_war_with = FRA}
+							}
+							AND = {
+								tag = POL
+								SWE = {num_of_factories > 50}
+								ENG = {has_war_with = SWE}
+							}
+							AND = {
+								tag = POL
+								GER = {num_of_factories > 50}
+								ENG = {has_war_with = GER}
+							}
+							AND = {
+								tag = POL
+								WGR = {num_of_factories > 50}
+								ENG = {has_war_with = WGR}
+							}
+							AND = {
+								tag = POL
+								DDR = {num_of_factories > 50}
+								ENG = {has_war_with = DDR}
+							}
+							AND = {
+								tag = POL
+								DEN = {num_of_factories > 50}
+								ENG = {has_war_with = DEN}
 							}
 						}
 					}
@@ -3905,15 +4197,19 @@ country_event = {##POL sends ultimatum to AUS for CZE and SLO
 		70 = {transfer_state_to = HUN}
 		71 = {transfer_state_to = HUN}
 		73 = {transfer_state_to = HUN}
+		POL = {
+			diplomatic_relation = {
+				country = AUS
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_named_threat = {
+				threat = 7
+				name = POL_austrian_ultimatum
+			}
+		}
 		hidden_effect = {
 			news_event = {id = deluge_poland_foreign.38 hours = 3}
-			POL = {
-				diplomatic_relation = {
-					country = AUS
-					relation = non_aggression_pact
-					active = yes
-				}
-			}
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
@@ -4017,7 +4313,6 @@ country_event = {##POL sends ultimatum to AUS for CZE and SLO
 		}
 	}
 }
-#here I ended fixing ai_chance
 country_event = {##FRA decides 
 	id = deluge_poland_foreign.31
 	title = deluge_poland_foreign.31.t
@@ -4205,7 +4500,7 @@ country_event = {##AUS gets info that FRA give territoires to POL and HUN
 	desc = deluge_poland_foreign.33.d
 	picture = GFX_report_event_gre_balkan_pact
 	is_triggered_only = yes
-	option = {##AUS is f*cking furious
+	option = {##AUS is furious
 		name = deluge_poland_foreign.33.a
 		74 = {transfer_state_to = POL}
 		75 = {transfer_state_to = POL}
@@ -4217,14 +4512,18 @@ country_event = {##AUS gets info that FRA give territoires to POL and HUN
 		71 = {transfer_state_to = HUN}
 		73 = {transfer_state_to = HUN}
 		news_event = {id = deluge_poland_foreign.39 hours = 3}
-		hidden_effect = {
-			POL = {
-				diplomatic_relation = {
-					country = AUS
-					relation = non_aggression_pact
-					active = yes
-				}
+		POL = {
+			diplomatic_relation = {
+				country = AUS
+				relation = non_aggression_pact
+				active = yes
 			}
+			add_named_threat = {
+				threat = 7
+				name = POL_austrian_ultimatum
+			}
+		}
+		hidden_effect = {
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
@@ -4241,14 +4540,14 @@ country_event = {##AUS gets info that FRA doesn't give territoires to POL and HU
 	option = {##AUS is happy :)
 		name = deluge_poland_foreign.34.a
 		news_event = {id = deluge_poland_foreign.40 hours = 3}
-		hidden_effect = {
-			POL = {
-				diplomatic_relation = {
-					country = AUS
-					relation = non_aggression_pact
-					active = yes
-				}
+		POL = {
+			diplomatic_relation = {
+				country = AUS
+				relation = non_aggression_pact
+				active = yes
 			}
+		}
+		hidden_effect = {
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
@@ -4273,15 +4572,19 @@ country_event = {##AUS gets info that FRA doesn't give a sh*t about this problem
 		70 = {transfer_state_to = HUN}
 		71 = {transfer_state_to = HUN}
 		73 = {transfer_state_to = HUN}
+		POL = {
+			diplomatic_relation = {
+				country = AUS
+				relation = non_aggression_pact
+				active = yes
+			}
+			add_named_threat = {
+				threat = 7
+				name = POL_austrian_ultimatum
+			}
+		}
 		hidden_effect = {
 			news_event = {id = deluge_poland_foreign.38 hours = 3}
-			POL = {
-				diplomatic_relation = {
-					country = AUS
-					relation = non_aggression_pact
-					active = yes
-				}
-			}
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
@@ -4348,14 +4651,18 @@ country_event = {##AUS gets info that FRA give some territoires to POL and HUN
 		664 = {transfer_state_to = HUN}
 		70 = {transfer_state_to = HUN}
 		71 = {transfer_state_to = HUN}
-		hidden_effect = {
-			POL = {
-				diplomatic_relation = {
-					country = AUS
-					relation = non_aggression_pact
-					active = yes
-				}
+		POL = {
+			diplomatic_relation = {
+				country = AUS
+				relation = non_aggression_pact
+				active = yes
 			}
+			add_named_threat = {
+				threat = 4
+				name = POL_austrian_ultimatum
+			}
+		}
+		hidden_effect = {
 			clr_global_flag = POL_invites_someone
 		}
 		ai_chance = {
@@ -5352,5 +5659,29 @@ country_event = {##GER refuses POL help
 		ai_chance = {
 			factor = 100
 		}
+	}
+}
+country_event = {##POL gets info that other country rejected polish invitation to european cooperation
+	id = deluge_poland_foreign.57
+	title = deluge_poland_foreign.57.t
+	desc = deluge_poland_foreign.57.d
+	picture = GFX_report_event_poland_rejects
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.57.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+news_event = {##global event that SOV-POL treaty is signed
+	id = deluge_poland_foreign.58
+	title = deluge_poland_foreign.58.t
+	desc = deluge_poland_foreign.58.d
+	picture = GFX_news_event_009
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland_foreign.58.a
 	}
 }

@@ -2654,6 +2654,37 @@ characters={
 			ledger = civilian
 		}
 	}
+	POL_deluge_miedzinski = {##Bogusław Miedziński
+		name = POL_Character_deluge_miedzinski
+		portraits={
+			civilian={
+				small=GFX_boguslaw_miedzinski_picture_small
+			}
+			army={
+				small=GFX_boguslaw_miedzinski_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_miedzinski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					has_completed_focus = POL_oppose_sanation
+				}
+			}
+			cost = 150
+			available = { 
+				has_completed_focus = POL_continue_with_sanation
+			}
+			traits = {
+				backroom_backstabber
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
 	POL_deluge_swietlicki = {##Andrzej Świetlicki
 		name = POL_Character_deluge_swietlicki
 		portraits={

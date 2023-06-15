@@ -40,6 +40,17 @@ set_popularities = {
 recruit_character = BUL_boris_iii
 recruit_character = BUL_georgi_dimitrov
 recruit_character = BUL_hristo_lukov
-recruit_character = BUL_zivko_topalovic
+
 recruit_character = BUL_vasil_tenev_boydev
 recruit_character = BUL_georgi_nikolov_popov
+recruit_character = BUL_atanas_shalapatov
+recruit_character = BUL_nikola_mushanov
+
+recruit_character = BUL_nikola_mihov
+recruit_character = BUL_ivan_markov
+recruit_character = BUL_georgi_markov
+
+recruit_character = BUL_asen_nikolov
+recruit_character = BUL_nikola_stoychev
+recruit_character = BUL_damian_velchev
+recruit_character = BUL_angel_dotsev

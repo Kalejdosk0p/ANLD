@@ -489,3 +489,4 @@ recruit_character = POL_deluge_pkwn
 recruit_character = POL_deluge_berbecki
 recruit_character = POL_deluge_szylling
 recruit_character = POL_deluge_jan_woznicki
+recruit_character = POL_deluge_miedzinski

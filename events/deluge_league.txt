@@ -1,21 +1,13 @@
-﻿
-# Events for creating the League of Nations and for voting on its conventions
-
+﻿# Events for creating the League of Nations and for voting on its conventions
 add_namespace = deluge_league
-
 # France creates the League
-
 news_event = {
 	id = deluge_league.1
 	title = deluge_league1title
 	desc = deluge_league1desc
-	
 	picture = GFX_deluge_league_of_nations_entrance_large
-	
 	major = yes
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = deluge_league1opta
 		trigger = { has_government = communism }
@@ -88,10 +80,7 @@ country_event = {
 		}
 	}
 }
-
-# France proposes an International Court of Justice
-
-news_event = {
+news_event = {#France proposes an International Court of Justice
 	id = deluge_league.3
 	title = deluge_league3title
 	desc = deluge_league3desc

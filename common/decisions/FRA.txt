@@ -7,7 +7,7 @@ FRA_league_of_nations = {
 		fire_only_once = yes
 		
 		available = {
-
+			
 		}
 
 		allowed = {

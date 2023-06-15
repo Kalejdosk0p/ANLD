@@ -45,7 +45,7 @@ focus_tree = {
 		cost = 2
 		available_if_capitulated = yes
 		available = {
-			not = {
+			NOT = {
 				has_country_leader =  {
 					character = POL_Pilsudski
 					ruling_only = yes
@@ -5276,7 +5276,9 @@ focus_tree = {
 				add_core_of = POL
 			}
 			hidden_effect = {
-				news_event = { id = deluge_poland.8 hours = 6 }
+				news_event = {
+					id = deluge_poland.8
+				}
 			}
 		}
 		ai_will_do = {
@@ -5454,69 +5456,15 @@ focus_tree = {
 		available_if_capitulated = yes
 	}
 	focus = {
-		id = POL_royal_marriages
-		icon = GFX_focus_generic_royal_wedding
+		id = POL_new_revanchist_policy
+		icon = GFX_goal_generic_major_war
 		x = -1
 		y = 1
 		prerequisite = { focus = POL_new_foreign_policy }
 		relative_position_id = POL_new_foreign_policy
-		#mutually_exclusive = {focus = POL_support_other_democracies focus = POL_world_revolution}
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
+		mutually_exclusive = {focus = POL_european_cooperation focus = POL_new_revolution }
 		cost = 10
-		available = {
-			has_completed_focus = POL_monarchists_take_power
-		}
-		completion_reward = {
-			
-		}
-		ai_will_do = {
-			factor = 50
-		}
-		bypass = {
-			
-		}
-		cancel_if_invalid = yes		
-		continue_if_invalid = no		
-		available_if_capitulated = yes
-	}
-	focus = {
-		id = POL_support_other_democracies
-		icon = GFX_goal_support_democracy
-		x = 1
-		y = 1
-		prerequisite = { focus = POL_new_foreign_policy }
-		prerequisite = { focus = POL_legacy_of_polish_legions_in_lombardy }
-		relative_position_id = POL_new_foreign_policy
-		#mutually_exclusive = {focus = POL_world_revolution focus = POL_royal_marriages}
-		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
-		cost = 10
-		available = {
-			has_completed_focus = POL_democracy_prevails
-		}
-		completion_reward = {
-			
-		}
-		ai_will_do = {
-			factor = 50
-		}
-		bypass = {
-			
-		}
-		cancel_if_invalid = yes		
-		continue_if_invalid = no		
-		available_if_capitulated = yes
-	}
-	focus = {
-		id = POL_new_revanchist_policy
-		icon = GFX_goal_generic_major_war
-		x = -2
-		y = 1
-		prerequisite = { focus = POL_support_other_democracies focus = POL_royal_marriages focus = POL_new_revolution}
-		relative_position_id = POL_support_other_democracies
-		mutually_exclusive = {focus = POL_european_cooperation }
-		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
-		mutually_exclusive = {focus = POL_european_cooperation focus = POL_world_revolution }
-		cost = 8
 		available = {
 			OR = {
 				has_completed_focus = POL_ND_wins
@@ -5527,7 +5475,16 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			
+			68 = {
+				add_core_of = POL
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_188
+			add_political_power = 100
+			hidden_effect = {
+				news_event = {
+					id = deluge_poland_foreign.24
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 50
@@ -5542,13 +5499,13 @@ focus_tree = {
 	focus = {
 		id = POL_european_cooperation
 		icon = GFX_focus_usa_focus_on_europe
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = POL_support_other_democracies focus = POL_royal_marriages focus = POL_new_revolution}
-		relative_position_id = POL_support_other_democracies
-		mutually_exclusive = {focus = POL_new_revanchist_policy focus = POL_world_revolution }
+		prerequisite = { focus = POL_new_foreign_policy }
+		relative_position_id = POL_new_foreign_policy
+		mutually_exclusive = {focus = POL_new_revanchist_policy focus = POL_new_revolution }
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
-		cost = 8
+		cost = 10
 		available = {
 			OR = {
 				has_completed_focus = POL_PSL_wins
@@ -5558,7 +5515,12 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				news_event = {
+					id = deluge_poland_foreign.25
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_189
 		}
 		ai_will_do = {
 			factor = 50
@@ -5578,41 +5540,20 @@ focus_tree = {
 		prerequisite = { focus = POL_new_foreign_policy }
 		prerequisite = { focus = POL_legacy_of_polish_legions_in_lombardy }
 		relative_position_id = POL_new_foreign_policy
+		mutually_exclusive = {focus = POL_new_revanchist_policy focus = POL_european_cooperation }
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
 		cost = 10
 		available = {
 			has_completed_focus = POL_radicals_takeover
 		}
 		completion_reward = {
-			
-		}
-		ai_will_do = {
-			factor = 50
-		}
-		bypass = {
-			
-		}
-		cancel_if_invalid = yes		
-		continue_if_invalid = no		
-		available_if_capitulated = yes
-	}
-	focus = {
-		id = POL_world_revolution
-		icon = GFX_focus_ETH_callout_to_the_world
-		x = 0
-		y = 1
-		prerequisite = { focus = POL_new_revolution }
-		relative_position_id = POL_new_revolution
-		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS}
-		mutually_exclusive = {focus = POL_new_revanchist_policy focus = POL_european_cooperation }
-		cost = 10
-		available = {
-			has_completed_focus = POL_KPP_wins
-			has_completed_focus = POL_PPS_wins
-			has_completed_focus = POL_PKWN_wins
-		}
-		completion_reward = {
-			
+			custom_effect_tooltip = POL_custom_effect_tooltip_190
+			set_faction_name = Revolutionary_Commonwealth
+			hidden_effect = {
+				news_event = {
+					id = deluge_poland_foreign.26
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 50
@@ -6367,6 +6308,7 @@ focus_tree = {
 				ideology = communism
 				popularity = -0.05
 			}
+			remove_ideas = POL_circle_of_gods_cause
 		}
 		ai_will_do = {
 			factor = 40
@@ -6755,7 +6697,24 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_idea = restricted
+					}
+				}
+				add_ideas = {
+					restricted
+				}
+			}
+			set_country_flag = cant_change_voting_law
+			custom_effect_tooltip = cant_change_voting_law_tooltip
+			hidden_effect = {
+				add_dynamic_modifier = { modifier = POL_democracy_reborn }
+				add_to_variable = { POL_demo_reborn_democratic_drift = 0.05}
+				add_to_variable = { POL_demo_reborn_political_power_factor = 0.05}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_176
 		}
 		ai_will_do = {
 			factor = 40
@@ -6780,7 +6739,10 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_to_variable = { POL_demo_reborn_stability_factor = 0.05}
+			add_to_variable = { POL_demo_reborn_war_support_factor = 0.05}
+			add_to_variable = { POL_demo_reborn_production_speed_buildings_factor = 0.05}
+			custom_effect_tooltip = POL_custom_effect_tooltip_177
 		}
 		ai_will_do = {
 			factor = 40
@@ -6805,7 +6767,10 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_to_variable = { POL_demo_reborn_conscription = 0.02}
+			add_to_variable = { POL_demo_reborn_research_speed_factor = 0.03}
+			custom_effect_tooltip = POL_custom_effect_tooltip_178
+			add_manpower = 20000
 		}
 		ai_will_do = {
 			factor = 40
@@ -6830,7 +6795,31 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_completed_focus = POL_the_new_system
+				}
+				#will be added later
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_democracy_prevails
+				}
+				add_to_variable = { POL_demo_reborn_conscription = 0.005}
+				add_to_variable = { POL_demo_reborn_war_support_factor = 0.05}
+				custom_effect_tooltip = POL_custom_effect_tooltip_184
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_completed_focus = POL_democracy_prevails
+							has_completed_focus = POL_the_new_system
+						}
+					}
+				}
+				custom_effect_tooltip = POL_custom_effect_tooltip_152
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -6855,7 +6844,31 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_completed_focus = POL_the_new_system
+				}
+				#will be added later
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_democracy_prevails
+				}
+				add_to_variable = { POL_demo_reborn_conscription = 0.025}
+				add_to_variable = { POL_demo_reborn_research_speed_factor = 0.04}
+				custom_effect_tooltip = POL_custom_effect_tooltip_185
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_completed_focus = POL_democracy_prevails
+							has_completed_focus = POL_the_new_system
+						}
+					}
+				}
+				custom_effect_tooltip = POL_custom_effect_tooltip_152
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -6880,7 +6893,43 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					infrastructure < 5
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					infrastructure < 5
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_political_power = 100
 		}
 		ai_will_do = {
 			factor = 40
@@ -6905,7 +6954,10 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_to_variable = { POL_demo_reborn_conscription = 0.02}
+			add_to_variable = { POL_demo_reborn_global_building_slots_factor = 0.1}
+			add_to_variable = { POL_demo_reborn_democratic_drift = 0.05}
+			custom_effect_tooltip = POL_custom_effect_tooltip_179
 		}
 		ai_will_do = {
 			factor = 40
@@ -6930,6 +6982,45 @@ focus_tree = {
 			
 		}
 		completion_reward = {
+			add_to_variable = { POL_demo_reborn_industrial_capacity_factory = 0.05}
+			add_to_variable = { POL_demo_reborn_consumer_goods_factor = -0.05}
+			custom_effect_tooltip = POL_custom_effect_tooltip_180
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 			
 		}
 		ai_will_do = {
@@ -6955,7 +7046,9 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_to_variable = { POL_demo_reborn_production_speed_buildings_factor = 0.05}
+			add_to_variable = { POL_demo_reborn_consumer_goods_factor = -0.02}
+			custom_effect_tooltip = POL_custom_effect_tooltip_181
 		}
 		ai_will_do = {
 			factor = 40
@@ -6980,7 +7073,10 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_to_variable = { POL_demo_reborn_stability_factor = 0.05}
+			add_to_variable = { POL_demo_reborn_political_power_factor = 0.05}
+			custom_effect_tooltip = POL_custom_effect_tooltip_182
+			remove_ideas = POL_circle_of_gods_cause
 		}
 		ai_will_do = {
 			factor = 40
@@ -7005,7 +7101,23 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_idea = welfare_state
+					}
+				}
+				add_ideas = {
+					welfare_state
+				}
+			}
+			set_country_flag = cant_change_social_order
+			custom_effect_tooltip = cant_change_social_order_tooltip
+			add_to_variable = { POL_demo_reborn_stability_factor = 0.05}
+			add_to_variable = { POL_demo_reborn_political_power_factor = 0.02}
+			add_to_variable = { POL_demo_reborn_monthly_population = 0.1}
+			add_to_variable = { POL_demo_reborn_consumer_goods_factor = 0.03}
+			custom_effect_tooltip = POL_custom_effect_tooltip_183
 		}
 		ai_will_do = {
 			factor = 40
@@ -7030,7 +7142,32 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					has_completed_focus = POL_the_new_system
+				}
+				#will be added later
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_democracy_prevails
+				}
+				add_to_variable = { POL_demo_reborn_trade_opinion_factor = -0.35}
+				add_to_variable = { POL_demo_reborn_consumer_goods_factor = 0.02}
+				add_to_variable = { POL_demo_reborn_production_speed_buildings_factor = 0.05}
+				custom_effect_tooltip = POL_custom_effect_tooltip_186
+			}
+			if = {
+				limit = {
+					NOT = {
+						OR = {
+							has_completed_focus = POL_the_new_system
+							has_completed_focus = POL_democracy_prevails
+						}
+					}
+				}
+				custom_effect_tooltip = POL_custom_effect_tooltip_152
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7057,7 +7194,24 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_idea = printing
+					}
+				}
+				add_ideas = {
+					printing
+				}
+			}
+			set_country_flag = cant_change_money_law
+			custom_effect_tooltip = cant_change_money_law_tooltip
+			add_to_variable = { POL_demo_reborn_industrial_capacity_factory = 0.03}
+			add_to_variable = { POL_demo_reborn_industrial_capacity_dockyard = 0.05}
+			add_to_variable = { POL_demo_reborn_industrial_capacity_factory = 0.05}
+			add_to_variable = { POL_demo_reborn_consumer_goods_factor = -0.05}
+			custom_effect_tooltip = POL_custom_effect_tooltip_187
+			add_political_power = 100
 		}
 		ai_will_do = {
 			factor = 40
@@ -7435,7 +7589,15 @@ focus_tree = {
 				}
 				retire_character = POL_deluge_augustus_wettin
 			}
-			retire_character = POL_deluge_christian_wettin
+			#retire_character = POL_deluge_christian_wettin
+			add_corps_commander_role = {
+				Character = POL_deluge_wanda_wasilewska
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 3
+			}
 			POL = {country_event = {id = deluge_poland.68 hours = 3}}
 		}
 		ai_will_do = {
@@ -8451,7 +8613,10 @@ focus_tree = {
 		prerequisite = { focus = POL_PKWN_wins }
 		relative_position_id = POL_PKWN_wins
 		available = {
-			
+			has_country_leader = {
+				character = POL_deluge_pkwn
+				ruling_only = yes
+			}
 		}
 		completion_reward = {
 			
@@ -9387,7 +9552,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			custom_effect_tooltip = POL_custom_effect_tooltip_1
 		}
 		ai_will_do = {
 			factor = 40
@@ -10641,7 +10806,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = {POL_WPvsPOW_max_command_power = 80}
+			add_to_variable = {POL_WPvsPOW_max_command_power = 30}
 			add_to_variable = {POL_WPvsPOW_command_power_gain_mult = -0.1}
 			add_to_variable = {POL_WPvsPOW_command_abilities_cost_factor = -0.15}
 			custom_effect_tooltip = POL_custom_effect_tooltip_171
@@ -10903,7 +11068,7 @@ focus_tree = {
 					has_dlc = "Man the Guns"
 				}
 				create_equipment_variant = {
-					name = "Orzeł Class"				
+					name = "Orzeł Class"	
 					type = ship_hull_submarine_3
 					name_group = POL_SS_HISTORICAL
 					parent_version = 0
@@ -13001,7 +13166,7 @@ focus_tree = {
 				value = 10
 			}
 			5 = { 
-				add_manpower = 5000 
+				add_manpower = 5000
 			}
 			5 = {
 				add_building_construction = {

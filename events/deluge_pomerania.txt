@@ -26,6 +26,10 @@ country_event = {##FRA decides what is gonna happen to POM
 		country_event = {##fate of Petain for France
 			id = deluge_pomerania.15
 		}
+		add_named_threat = {
+			threat = 10
+			name = FRA_fate_of_pomerania
+		}
 		hidden_effect = {
 			news_event = {id = deluge_pomerania.6}##news event about what happened
 		}
@@ -118,6 +122,10 @@ country_event = {##FRA decides what is gonna happen to POM
 		}
 		give_guarantee = POM
 		custom_effect_tooltip = POM_custom_effect_tooltip_1
+		add_named_threat = {
+			threat = -5
+			name = FRA_fate_of_pomerania
+		}
 		POM = {
 			country_event = {##Pomerania chooses it's ideology
 				id = deluge_pomerania.4
@@ -247,6 +255,10 @@ country_event = {##FRA decides what is gonna happen to POM
 				character = POM_philippe_petain
 				ideology = bonapartist_ideology
 			}
+		}
+		add_named_threat = {
+			threat = 3
+			name = FRA_fate_of_pomerania
 		}
 		every_possible_country = {
 			limit = { has_character = POM_philippe_petain }
@@ -509,6 +521,10 @@ country_event = {##FRA decides what is gonna happen to POM - part 2
 				set_nationality = FRA
 			}
 		}
+		add_named_threat = {
+			threat = 10
+			name = FRA_fate_of_pomerania
+		}
 		if = {
 			limit = {
 				country_exists = POL
@@ -553,6 +569,10 @@ country_event = {##FRA decides what is gonna happen to POM - part 2
 				limit = { is_character = POM_philippe_petain }
 				set_nationality = FRA
 			}
+		}
+		add_named_threat = {
+			threat = 10
+			name = FRA_fate_of_pomerania
 		}
 		if = {
 			limit = {

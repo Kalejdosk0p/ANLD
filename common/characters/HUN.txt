@@ -5,7 +5,6 @@ characters={
 			army={
 				small="GFX_lajos_veress_picture_small"
 				large="GFX_Portrait_hungary_lajos_veress"
-				#large="gfx/leaders/HUN/veress_lajos.dds"
 			}
 		}
 		corps_commander={
@@ -15,7 +14,6 @@ characters={
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	HUN_ferenc_feketehalmyczeydner={
@@ -23,7 +21,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_ferenc_feketehalmy_czeydner_picture_small"
-				#large="gfx/leaders/HUN/feketehalmy_czeydner.dds"
 				large="GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
 			}
 		}
@@ -33,14 +30,12 @@ characters={
 			defense_skill=1
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	HUN_mátyás_rákosi={
 		name="Mátyás Rákosi"
 		portraits={
 			civilian={
-				#large="gfx/leaders/HUN/matyas_rakosi.dds"
 				large="GFX_Portrait_hungary_matyas_rakosi"
 				small = GFX_matyas_rakosi_picture_small
 			}
@@ -49,7 +44,6 @@ characters={
 			desc="POLITICS_MATYAS_RAKOSKI_DESC"
 			ideology=marxist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 		advisor={
 			slot = political_advisor
@@ -76,7 +70,6 @@ characters={
 			army={
 				small="GFX_geza_lakatos_picture_small"
 				large="GFX_Portrait_hungary_geza_lakatos"
-				#large="gfx/leaders/HUN/geza_lakatos.dds"
 			}
 		}
 		corps_commander={
@@ -85,7 +78,6 @@ characters={
 			defense_skill=2
 			planning_skill=3
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	HUN_iván_hindy={
@@ -93,7 +85,6 @@ characters={
 		portraits={
 			army={
 				small="GFX_ivan_hindy_picture_small"
-				#large="gfx/leaders/HUN/hindy_ivan.dds"
 				large="GFX_Portrait_hungary_ivan_hindy"
 			}
 		}
@@ -104,7 +95,6 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=4
-			legacy_id=-1
 		}
 	}
 	HUN_károly_beregfy={
@@ -113,7 +103,6 @@ characters={
 			army={
 				small="GFX_karoly_beregfy_picture_small"
 				large="GFX_Portrait_hungary_karoly_beregfy"
-				#large="gfx/leaders/HUN/beregfy_karolyi.dds"
 			}
 		}
 		corps_commander={
@@ -122,7 +111,39 @@ characters={
 			defense_skill=1
 			planning_skill=1
 			logistics_skill=1
-			legacy_id=-1
+		}
+	}
+	HUN_janos_galicz={
+		name="Janos Galicz"
+		portraits={
+			army={
+				large="GFX_portrait_SPR_janos_galicz"
+				small=GFX_portrait_SPR_janos_galicz_small
+			}
+		}
+		advisor={
+			slot = high_command
+			idea_token = HUN_janos_galicz
+			allowed = {
+				original_tag = HUN
+			}
+			visible = {
+				original_tag = HUN
+			}
+			available = {
+				
+			}
+			traits = { army_logistics_1 }
+			cost = 150
+			ledger = army
+		}
+		corps_commander={
+			traits={ trait_reckless }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
 		}
 	}
 	HUN_deluge_esterhazy_moricz = {#Esterházy Móricz

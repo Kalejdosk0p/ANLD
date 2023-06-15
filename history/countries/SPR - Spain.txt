@@ -90,6 +90,24 @@ recruit_character = SPR_francisco_franco
 recruit_character = SPR_jose_antonio_primo_de_rivera
 recruit_character = SPR_josé_díaz
 recruit_character = SPR_josé_asensio_torrado
+recruit_character = SPR_vicente_rojo_lluch
+recruit_character = SPR_jose_miaja
+
+recruit_character = SPR_valentin_gonzalez
+recruit_character = SPR_enrique_lister
+recruit_character = SPR_mohamed_meziane
+recruit_character = SPR_juan_yague
+recruit_character = SPR_emilio_mola
+recruit_character = SPR_gonzalo_queipo_de_llano
+recruit_character = SPR_juan_yague
+recruit_character = SPR_agustin_munoz_grandes
+
+recruit_character = SPR_jose_enrique_varela
+recruit_character = SPR_miguel_cabanellas
+recruit_character = SPR_jose_millan_astray
+recruit_character = SPR_miguel_buiza_fernandez_palacios
+recruit_character = SPR_luis_carrero_blanco
+
 
 ### Ship Variants ###
 

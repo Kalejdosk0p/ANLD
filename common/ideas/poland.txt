@@ -2230,6 +2230,27 @@ ideas = {
 				consumer_goods_factor = -0.1
 			}
 		}
+		POL_circle_of_gods_cause = {
+			picture = MEX_church_power_5
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.03
+				political_power_factor = -0.05
+				fascism_drift = 0.05
+				neutrality_drift = 0.03
+			}
+		}
 	}
 	tank_manufacturer = {
 		designer = yes

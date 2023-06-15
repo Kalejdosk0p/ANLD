@@ -16,7 +16,7 @@ characters={
 		name="Gheorghe Tatarescu"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+				large="GFX_Portrait_romania_gheorghe_tatarescu"
 			}
 		}
 		country_leader={
@@ -44,14 +44,41 @@ characters={
 		name="Armand Calinescu"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				large="GFX_Portrait_romania_armand_calinescu"
+				small="GFX_idea_ROM_armand_calinescu"
+			}
+			army={
+				large="GFX_Portrait_romania_armand_calinescu"
+				small="GFX_idea_ROM_armand_calinescu"
 			}
 		}
 		country_leader={
 			desc="POLITICS_ARMAND_CALINESCU_DESC"
 			ideology=constitutionalist_ideology
 			expire="1965.1.1.1"
-			id=-1
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = ROM_armand_calinescu
+			allowed = {
+				original_tag = ROM
+			}
+			traits = {
+				compassionate_gentleman 
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}
+			ledger = civilian
+		}
+		corps_commander = {
+			traits = { organizer infantry_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
 		}
 	}
 	ROM_octavian_goga={
@@ -174,7 +201,7 @@ characters={
 		name="Corneliu Zelea Codreanu"
 		portraits={
 			civilian={
-				large="gfx/leaders/ROM/corneliu_codreanu.dds"
+				large="GFX_Portrait_romania_corneliu_zelea_codreanu"
 			}
 		}
 		country_leader={

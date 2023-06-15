@@ -1,148 +1,3 @@
-expand_ozn_category = {
-	create_zmp = {
-		icon = GFX_decision_generic_military
-		fire_only_once = yes
-		available = {
-			num_of_civilian_factories_available_for_projects > 5
-		}
-		allowed = {
-			original_tag = POL
-		}
-		days_remove = 35
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				has_war = yes
-				factor = 10
-			}
-		}
-		modifier = {
-			civilian_factory_use = 5
-		}
-		cost = 30
-		remove_effect = {
-			add_to_variable = { POL_ozn_conscription = 0.03 }
-			add_to_variable = { POL_ozn_fascism_drift = 0.05 }
-			custom_effect_tooltip = POL_custom_effect_tooltip_11
-		}
-	}
-	teach_about_etatism = {
-		icon = GFX_decision_generic_political_discourse
-		fire_only_once = yes
-		available = {
-			num_of_civilian_factories_available_for_projects > 3
-		}
-		allowed = {
-			original_tag = POL
-		}
-		days_remove = 50
-		ai_will_do = {
-			factor = 5
-			modifier = {
-				has_war = yes
-				factor = 10
-			}
-		}
-		modifier = {
-			civilian_factory_use = 3
-			political_power_gain = -0.1
-		}
-		cost = 30
-		remove_effect =  {
-			add_to_variable = { POL_ozn_consumer_goods_factor = -0.05}
-			add_to_variable = { POL_ozn_industrial_capacity_factory = 0.05 }
-			custom_effect_tooltip = POL_custom_effect_tooltip_12
-		}
-	}
-	anti_jewish_propaganda = {
-		icon = GFX_decision_oppression
-		available = {
-			num_of_civilian_factories_available_for_projects > 2
-			has_completed_focus = POL_purge_undersirables
-		}
-		fire_only_once = yes
-		visible = {}
-		cost = 35
-		days_remove = 45
-		modifier = {
-			civilian_factory_use = 2
-			political_power_gain = -0.1
-		}
-		remove_effect =  {
-			add_to_variable = { POL_ozn_stability_factor = 0.1}
-			add_to_variable = { POL_ozn_political_power_gain = 0.1 }
-			subtract_from_variable = { POL_ozn_conscription = 0.01 }
-			custom_effect_tooltip = POL_custom_effect_tooltip_15
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	create_opw = {
-		icon = GFX_decision_onmap_recruit_operative
-		available = {
-			num_of_civilian_factories_available_for_projects > 5
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				has_intelligence_agency = yes
-			}
-		}
-		fire_only_once = yes
-		visible = {}
-		cost = 40
-		days_remove = 30
-		modifier = {
-			civilian_factory_use = 5
-		}
-		remove_effect =  {
-			add_to_variable = { POL_ozn_resistance_damage_to_garrison = -0.2}
-			if = {
-				limit = {
-					has_dlc = "La Resistance"
-				}
-				hidden_effect = {
-					set_variable = { POL_ozn_operative_slot = 1 }
-					upgrade_intelligence_agency = upgrade_decryption_boost_2
-				}
-				custom_effect_tooltip = POL_custom_effect_tooltip_13
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "La Resistance"
-					}
-				}
-				custom_effect_tooltip = POL_custom_effect_tooltip_25
-			}
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-	advertise_ozn = {
-		icon = GFX_decision_generic_speech
-		available = {
-			num_of_civilian_factories_available_for_projects > 2
-		}
-		fire_only_once = yes
-		visible = {}
-		cost = 30
-		days_remove = 50
-		modifier = {
-			civilian_factory_use = 2
-		}
-		remove_effect =  {
-			add_to_variable = { POL_ozn_war_support_factor = 0.1}
-			add_to_variable = { POL_ozn_conscription = 0.015 }
-			custom_effect_tooltip = POL_custom_effect_tooltip_14
-		}
-		ai_will_do = {
-			factor = 5
-		}
-	}
-}
 integration_category = {
 	integrate_lit = {
 		icon = GFX_decision_hol_exchange_intelligence_data
@@ -2521,7 +2376,12 @@ seek_enemies_category = {
 	wojna_totalna = {
 		icon = GFX_decision_generic_prepare_civil_war
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -2532,6 +2392,7 @@ seek_enemies_category = {
 					has_completed_focus = POL_repair_polish_ideomatrix
 					has_completed_focus = POL_create_new_type_of_man
 					has_completed_focus = POL_come_back_to_traditional_values
+					has_completed_focus = POL_workers_militia
 				}
 			}
 			NOT = {POL = {has_idea = wojna_totalna_idea}}
@@ -2554,9 +2415,11 @@ seek_enemies_category = {
 	send_ultimatum_to_austria = {
 		icon = GFX_decision_eng_trade_unions_support
 		visible = {
-			OR = {
-				has_completed_focus = POL_seek_enemies
-				#has_completed_focus = POL_new_revanchist_policy
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
 			}
 		}
 		available = {
@@ -2593,7 +2456,12 @@ seek_enemies_category = {
 	claim_cze = {
 		icon = GFX_decision_generic_operation
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -2692,7 +2560,12 @@ seek_enemies_category = {
 	claim_pom = {
 		icon = GFX_decision_generic_operation
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -2774,7 +2647,12 @@ seek_enemies_category = {
 	retake_mol = {
 		icon = GFX_decision_generic_operation
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -2847,7 +2725,12 @@ seek_enemies_category = {
 	retake_polabian_lands = {
 		icon = GFX_decision_generic_operation
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			has_global_flag = german_civil_war_ended
@@ -2925,7 +2808,12 @@ seek_enemies_category = {
 	retake_crimea = {
 		icon = GFX_decision_generic_operation
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -3004,7 +2892,12 @@ seek_enemies_category = {
 	conquer_ukr = {
 		icon = GFX_decision_generic_operation 
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -3137,7 +3030,12 @@ seek_enemies_category = {
 	conquer_bal = {
 		icon = GFX_decision_generic_operation 
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -3252,7 +3150,12 @@ seek_enemies_category = {
 	conquer_blr = {
 		icon = GFX_decision_generic_operation 
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -3355,7 +3258,12 @@ seek_enemies_category = {
 	avenge_swedish_deluge = {
 		icon = GFX_decision_generic_operation 
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -3414,7 +3322,12 @@ seek_enemies_category = {
 	russia_once_again = {
 		icon = GFX_decision_generic_operation 
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -3455,7 +3368,12 @@ seek_enemies_category = {
 	repetition_of_battle_of_vienna = {
 		icon = GFX_decision_generic_operation 
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -3496,7 +3414,12 @@ seek_enemies_category = {
 	revenge_for_versailles = {
 		icon = GFX_decision_generic_operation 
 		visible = {
-			POL = { has_completed_focus = POL_seek_enemies}
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_enemies
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		available = {
 			POL = { 
@@ -3539,7 +3462,13 @@ seek_collaboration_category = {
 	take_manpower = {
 		icon = GFX_decision_generic_military 
 		visible = {
-			POL = { has_completed_focus = POL_seek_collaboration }
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_collaboration
+					has_completed_focus = POL_new_revolution
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		target_trigger = {
 			FROM = { is_subject_of = POL }
@@ -3571,7 +3500,13 @@ seek_collaboration_category = {
 	take_military_industry = {
 		icon = GFX_decision_generic_merge_plant_tank
 		visible = {
-			POL = { has_completed_focus = POL_seek_collaboration }
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_collaboration
+					has_completed_focus = POL_new_revolution
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		target_trigger = {
 			FROM = { is_subject_of = POL }
@@ -3607,7 +3542,13 @@ seek_collaboration_category = {
 	take_civilian_industry = {
 		icon = GFX_decision_generic_factory 
 		visible = {
-			POL = { has_completed_focus = POL_seek_collaboration }
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_collaboration
+					has_completed_focus = POL_new_revolution
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		target_trigger = {
 			FROM = { is_subject_of = POL }
@@ -3643,7 +3584,13 @@ seek_collaboration_category = {
 	take_naval_industry = {
 		icon = GFX_decision_generic_merge_plant_ship
 		visible = {
-			POL = { has_completed_focus = POL_seek_collaboration }
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_collaboration
+					has_completed_focus = POL_new_revolution
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		target_trigger = {
 			FROM = { is_subject_of = POL }
@@ -3679,7 +3626,13 @@ seek_collaboration_category = {
 	take_scientists = {
 		icon = GFX_decision_generic_research 
 		visible = {
-			POL = { has_completed_focus = POL_seek_collaboration }
+			POL = {
+				OR = {
+					has_completed_focus = POL_seek_collaboration
+					has_completed_focus = POL_new_revolution
+					has_completed_focus = POL_new_revanchist_policy
+				}
+			}
 		}
 		target_trigger = {
 			FROM = { is_subject_of = POL }
@@ -3710,6 +3663,39 @@ seek_collaboration_category = {
 				has_war = yes
 				factor = 0.01
 			}
+		}
+	}
+	bajonskie_sums_for_france = {
+		icon = GFX_decision_gre_investment_decisions
+		visible = {
+			
+		}
+		available = {
+			POL = { 
+				country_exists = FRA
+				FRA = {
+					is_subject_of = POL
+				}
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			FRA = {
+				add_timed_idea = {
+					idea = FRA_bajonskie_sums
+					days = 450
+				}
+			}
+			POL = {
+				add_timed_idea = {
+					idea = POL_bajonskie_sums
+					days = 450
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
 		}
 	}
 }
@@ -5705,6 +5691,9 @@ seek_allies_category = {
 		icon = GFX_decision_SOV_exiles_state
 		visible = {
 			NOT = {SOV = {has_war_with = POL}}
+			NOT = {
+				has_completed_focus = POL_new_revanchist_policy
+			}
 		}
 		available = {
 			NOT = { has_global_flag = POL_invites_someone }
@@ -5906,16 +5895,11 @@ army_reform_category = {
 		}
 		remove_effect = {
 			add_to_variable = {POL_WPvsPOW_army_attack_factor = 0.1}
-			add_to_variable = {POL_WPvsPOW_army_org_factor = 0.15}
+			add_to_variable = {POL_WPvsPOW_army_org_factor = 0.13}
 			add_to_variable = {POL_WPvsPOW_army_defence_factor = 0.1}
 			add_to_variable = {POL_WPvsPOW_war_support_factor = 0.2}
-			#add_to_variable = {POL_WPvsPOW_supply_consumption_factor = -0.1}
-			#add_to_variable = {POL_WPvsPOW_army_fuel_consumption_factor = -0.1}
-			#add_to_variable = {POL_WPvsPOW_air_fuel_consumption_factor = -0.1}
-			#add_to_variable = {POL_WPvsPOW_navy_fuel_consumption_factor = -0.1}
 			add_to_variable = {POL_WPvsPOW_army_speed_factor = 0.05}
 			add_to_variable = {POL_WPvsPOW_max_planning_factor = 0.1}
-			#add_to_variable = {POL_WPvsPOW_org_loss_when_moving = -0.1}
 			clear_variable = POL_WP_strength
 			clear_variable = POL_POW_strength
 			set_country_flag = POL_army_problem_solved
@@ -9136,6 +9120,44 @@ export_catholicism_category = {
 		remove_effect = {
 			FROM = {
 				add_ideas = member_of_new_polish_church
+			}
+		}
+	}
+}
+european_cooperation_category = {
+	intive_other_countries = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		fire_only_once = no
+		target_trigger = {
+			FROM = {
+				capital_scope = {
+					is_on_continent = europe
+				}
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+		}
+		allowed = {
+			original_tag = POL
+			country_exists = FROM
+		}
+		visible = {
+			FROM = {
+				is_in_faction = no
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 10
+		complete_effect = {
+			FROM = {
+				
 			}
 		}
 	}
