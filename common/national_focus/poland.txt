@@ -11633,9 +11633,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		search_filters = {FOCUS_FILTER_AVITATION}
-		prerequisite = {focus = POL_swiatecki_bomb_slip}
-		prerequisite = {focus = POL_paratroopers_trainings}
-		prerequisite = {focus = POL_mielec_aircraft_factory}
 		prerequisite = {focus = POL_expand_avitation_industry}
 		prerequisite = {focus = POL_build_new_airports}
 		relative_position_id = POL_swiatecki_bomb_slip
