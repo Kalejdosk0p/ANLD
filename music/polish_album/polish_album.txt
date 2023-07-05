@@ -1,0 +1,674 @@
+music_station = "polish_album"
+
+music = {
+	song = "the_song_of_warsaw_1831"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "natalia"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "the_red_poppies_on_monte_cassino"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "heart_in_a_satchel"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "kalina_malina"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "weeping_willows"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "the_vistula_flows_it_flows"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "march_of_the_aviators"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "march_of_polonia"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "lancers_came_under_the_window"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "the_oath"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "oh_my_rosemary"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "god_save_poland"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "let_poland_be_poland"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "hey_hey_lancers"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "there_is_no_man_braver_than_a_soldier"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "warsaw_children"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "kadrowka"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "little_war_little_war"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "tough_times_of_a_legionnaire"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "we_are_the_first_brigade"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "camp_march"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "march_of_the_land_forces"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "squadron_303"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "hey_lads_bayonet_to_the_gun"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "grey_infantry"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "march_of_first_armoured_division"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "the_song_of_warsaw"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "to_the_barricades"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "when_the_nation_goes_to_the_battle"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "to_arms_peoples"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+			has_war = no
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "red_regiment_of_warsaw"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+		}
+		modifier = {
+			factor = 0
+			original_tag = POL
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+}
+music = {
+	song = "march_of_the_first_corps"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "march_of_the_people's_guard"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "taczanka"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+			has_war = yes
+		}
+	}
+}
+music = {
+	song = "oka"
+
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 0
+			original_tag = POL
+		}
+		modifier = {
+			factor = 3
+			original_tag = POL
+			has_government = communism
+			has_war = yes
+		}
+	}
+}

@@ -1,0 +1,180 @@
+music = {
+	name = "the_song_of_warsaw_1831"
+	file = "the_song_of_warsaw_1831.ogg"
+	volume = 0.60
+}
+music = {
+	name = "natalia"
+	file = "natalia.ogg"
+	volume = 0.60
+}
+music = {
+	name = "the_red_poppies_on_monte_cassino"
+	file = "the_red_poppies_on_monte_cassino.ogg"
+	volume = 0.60
+}
+music = {
+	name = "heart_in_a_satchel"
+	file = "heart_in_a_satchel.ogg"
+	volume = 0.60
+}
+music = {
+	name = "kalina_malina"
+	file = "kalina_malina.ogg"
+	volume = 0.60
+}
+music = {
+	name = "weeping_willows"
+	file = "weeping_willows.ogg"
+	volume = 0.60
+}
+music = {
+	name = "the_vistula_flows_it_flows"
+	file = "the_vistula_flows_it_flows.ogg"
+	volume = 0.60
+}
+music = {
+	name = "march_of_polonia"
+	file = "march_of_polonia.ogg"
+	volume = 0.60
+}
+music = {
+	name = "lancers_came_under_the_window"
+	file = "lancers_came_under_the_window.ogg"
+	volume = 0.60
+}
+music = {
+	name = "the_oath"
+	file = "the_oath.ogg"
+	volume = 0.60
+}
+music = {
+	name = "oh_my_rosemary"
+	file = "oh_my_rosemary.ogg"
+	volume = 0.60
+}
+music = {
+	name = "god_save_poland"
+	file = "god_save_poland.ogg"
+	volume = 0.60
+}
+music = {
+	name = "let_poland_be_poland"
+	file = "let_poland_be_poland.ogg"
+	volume = 0.60
+}
+music = {
+	name = "hey_hey_lancers"
+	file = "hey_hey_lancers.ogg"
+	volume = 0.60
+}
+music = {
+	name = "there_is_no_man_braver_than_a_soldier"
+	file = "there_is_no_man_braver_than_a_soldier.ogg"
+	volume = 0.60
+}
+music = {
+	name = "warsaw_children"
+	file = "warsaw_children.ogg"
+	volume = 0.60
+}
+music = {
+	name = "kadrowka"
+	file = "kadrowka.ogg"
+	volume = 0.60
+}
+music = {
+	name = "little_war_little_war"
+	file = "little_war_little_war.ogg"
+	volume = 0.60
+}
+music = {
+	name = "tough_times_of_a_legionnaire"
+	file = "tough_times_of_a_legionnaire.ogg"
+	volume = 0.60
+}
+music = {
+	name = "we_are_the_first_brigade"
+	file = "we_are_the_first_brigade.ogg"
+	volume = 0.60
+}
+music = {
+	name = "march_of_the_aviators"
+	file = "march_of_the_aviators.ogg"
+	volume = 0.60
+}
+music = {
+	name = "camp_march"
+	file = "camp_march.ogg"
+	volume = 0.60
+}
+music = {
+	name = "march_of_the_land_forces"
+	file = "march_of_the_land_forces.ogg"
+	volume = 0.60
+}
+music = {
+	name = "squadron_303"
+	file = "squadron_303.ogg"
+	volume = 0.60
+}
+music = {
+	name = "hey_lads_bayonet_to_the_gun"
+	file = "hey_lads_bayonet_to_the_gun.ogg"
+	volume = 0.60
+}
+music = {
+	name = "grey_infantry"
+	file = "grey_infantry.ogg"
+	volume = 0.60
+}
+music = {
+	name = "march_of_first_armoured_division"
+	file = "march_of_first_armoured_division.ogg"
+	volume = 0.60
+}
+music = {
+	name = "the_song_of_warsaw"
+	file = "the_song_of_warsaw.ogg"
+	volume = 0.60
+}
+music = {
+	name = "to_the_barricades"
+	file = "to_the_barricades.ogg"
+	volume = 0.60
+}
+music = {
+	name = "when_the_nation_goes_to_the_battle"
+	file = "when_the_nation_goes_to_the_battle.ogg"
+	volume = 0.60
+}
+music = {
+	name = "to_arms_peoples"
+	file = "to_arms_peoples.ogg"
+	volume = 0.60
+}
+music = {
+	name = "red_regiment_of_warsaw"
+	file = "red_regiment_of_warsaw.ogg"
+	volume = 0.60
+}
+music = {
+	name = "march_of_the_first_corps"
+	file = "march_of_the_first_corps.ogg"
+	volume = 0.60
+}
+music = {
+	name = "march_of_the_people's_guard"
+	file = "march_of_the_people's_guard.ogg"
+	volume = 0.60
+}
+music = {
+	name = "taczanka"
+	file = "taczanka.ogg"
+	volume = 0.60
+}
+music = {
+	name = "oka"
+	file = "oka.ogg"
+	volume = 0.60
+}
