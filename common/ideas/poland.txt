@@ -2251,6 +2251,194 @@ ideas = {
 				neutrality_drift = 0.03
 			}
 		}
+		consequences_of_leaving_european_cooperation_1 = {
+			picture = FRA_factory_strikes
+			allowed = {
+				always = yes
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		consequences_of_leaving_european_cooperation_2 = {
+			picture = FRA_factory_strikes
+			allowed = {
+				always = yes
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+		consequences_of_leaving_european_cooperation_3 = {
+			picture = FRA_factory_strikes
+			allowed = {
+				always = yes
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+		bezpieka = {
+			picture = generic_secret_police #generic_intel_bonus
+			allowed = {
+				always = yes
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				party_popularity_stability_factor = 0.15
+				communism_drift = 0.05
+				stability_factor = 0.1
+				drift_defence_factor = 0.2
+				foreign_subversive_activites = -0.2
+			}
+		}
+		polish_revolutionary_directorate = {
+			picture = jap_the_unthinkable_option
+			allowed = {
+				always = yes
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				subversive_activites_upkeep = -0.15
+				war_support_factor = 0.05
+				lend_lease_tension = -0.25
+				opinion_gain_monthly_same_ideology_factor = 0.4
+			}
+		}
+		POL_revolutionary_eucharist_idea = {
+			picture = home_of_the_revolution
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.05
+				resistance_target = -0.15
+				communism_drift = 0.05
+				army_org_factor = 0.02
+				compliance_growth = 0.15
+			}
+		}
+		POL_socialist_eucharist_idea = {
+			picture = generic_production_bonus
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.05
+				resistance_target = -0.15
+				communism_drift = 0.05
+				production_speed_buildings_factor = 0.05
+				compliance_growth = 0.15
+			}
+		}
+		POL_christian_socialist_realism_idea = {
+			picture = MEX_church_power_5
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.05
+				communism_drift = 0.06
+				neutrality_drift = 0.03
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.03
+				stability_factor = 0.05
+			}
+		}
+		POL_SCh_influence = {
+			picture = generic_agrarian_reform ##change it later for our icon
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.05
+				democratic_drift = 0.05
+				industrial_capacity_factory = 0.02
+				global_building_slots_factor = 0.1
+			}
+		}
 	}
 	tank_manufacturer = {
 		designer = yes

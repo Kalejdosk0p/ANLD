@@ -13,7 +13,6 @@ characters={
 			id=-1
 		}
 	}
-
 	FRA_edouard_daladier={
 		name=FRA_edouard_daladier
 		portraits={
@@ -28,7 +27,20 @@ characters={
 			id=-1
 		}
 	}
-
+	FRA_jacques_doriot={
+		name="Jacques Doriot"
+		portraits={
+			civilian={
+				#large=GFX_portrait_fra_jacques_doriot
+				large="gfx/leaders/FRA/jacques_doriot.dds"
+			}
+		}
+		country_leader={
+			ideology=social_darwinist_ideology
+			traits={  }
+			expire="1965.1.1.1"
+		}
+	}
 #	FRA_denis_guillaumat={ #Non-Aligned Leader
 #		name=FRA_denis_guillaumat
 #		portraits={
@@ -43,7 +55,6 @@ characters={
 #			id=-1
 #		}
 #	}
-
 	FRA_maurice_thorez={ #Communist Leader
 		name=FRA_maurice_thorez
 		portraits={

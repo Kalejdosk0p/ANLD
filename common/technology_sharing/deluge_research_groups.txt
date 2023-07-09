@@ -36,5 +36,25 @@ technology_sharing_group = {
 	research_sharing_per_country_bonus = 0.1
     available = {
     	is_in_faction_with = POL
+		POL = {
+			OR = {
+				has_completed_focus = POL_rising_of_central_powers
+				has_completed_focus = POL_new_revanchist_policy
+			}
+		}
+    }
+}
+technology_sharing_group = {
+
+	id = deluge_eu_coop_tech_group
+	name = deluge_eu_coop_research
+	desc = deluge_eu_coop_research_desc
+	picture = GFX_technology_sharing_default
+	research_sharing_per_country_bonus = 0.15
+    available = {
+    	is_in_faction_with = POL
+		has_dynamic_modifier = {
+			modifier = POL_european_cooperation
+		}
     }
 }

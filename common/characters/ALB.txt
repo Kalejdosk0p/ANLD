@@ -10,7 +10,6 @@ characters={
 			desc="bunker_fanatic_desc"
 			ideology=marxist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ALB_xhemal_aranitasi={
@@ -18,9 +17,7 @@ characters={
 		portraits={
 			army={
 				small="gfx/interface/ideas/idea_europe_generic_land_3.dds"
-			}
-			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+				large="gfx/leaders/ALB/xhemal_aranitasi.dds"
 			}
 		}
 		field_marshal={
@@ -29,21 +26,22 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=1
-			legacy_id=-1
 		}
 	}
-	ALB_zog_i={
-		name="Zog I"
+	ALB_ahmet_zogu={
+		name="Ahmet Zogu"
 		portraits={
 			civilian={
 				large="gfx/leaders/ALB/Portrait_Albania_King_Zog.dds"
 			}
 		}
 		country_leader={
-			desc="POLITICS_KING_ZOG_DESC"
-			ideology=bonapartist_ideology
+			#desc=""
+			ideology=constitutionalist_ideology
 			expire="1965.1.1.1"
-			id=-1
+			traits = {
+				
+			}
 		}
 	}
 	ALB_eqrem_dine={
@@ -57,7 +55,6 @@ characters={
 			ideology=constitutionalist_ideology
 			traits={ financial_expert }
 			expire="1952.5.1.12"
-			id=-1
 		}
 	}
 	ALB_elez_dine={
@@ -71,7 +68,19 @@ characters={
 			ideology=corporatist_ideology
 			traits={ armaments_organizer }
 			expire="1953.5.1.12"
-			id=-1
+		}
+	}
+	ALB_ali_iii={
+		name="Ali III"
+		portraits={
+			civilian={
+				large="gfx/leaders/Europe/Portrait_europe_generic_7.dds"
+			}
+		}
+		country_leader={
+			ideology=bonapartist_ideology
+			traits={}
+			expire="1953.5.1.12"
 		}
 	}
 	ALB_midhat_frasheri = {

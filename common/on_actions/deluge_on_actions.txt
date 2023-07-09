@@ -669,6 +669,74 @@ on_actions = {
 			}
 			if = {
 				limit = {
+					tag = ALB
+					NOT = {
+						has_idea = ali_iii
+					}
+					NOT = {
+						AND = {
+							OR = {
+								has_government = neutrality
+								has_government = communism
+							}
+						}
+					}
+				}
+				ALB = {
+					add_ideas = ali_iii
+				}
+			}
+			if = {
+				limit = {
+					tag = ALB
+					has_idea = ali_iii
+					NOT = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+					}
+				}
+				ALB = {
+					remove_ideas = ali_iii
+				}
+			}
+			if = {
+				limit = {
+					tag = BUL
+					NOT = {
+						has_idea = assen_iv
+					}
+					NOT = {
+						AND = {
+							OR = {
+								has_government = neutrality
+								has_government = communism
+							}
+						}
+					}
+				}
+				BUL = {
+					add_ideas = assen_iv
+				}
+			}
+			if = {
+				limit = {
+					tag = BUL
+					has_idea = assen_iv
+					NOT = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+					}
+				}
+				BUL = {
+					remove_ideas = assen_iv
+				}
+			}
+			if = {
+				limit = {
 					tag = AUS
 					NOT = {
 						has_idea = habsburg_emperor
@@ -1165,6 +1233,74 @@ on_actions = {
 				POM = {
 					set_cosmetic_tag = POM_kashubia
 				}
+			}
+		}
+	}
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = {
+					AND = {
+						has_dynamic_modifier = {
+							modifier = POL_european_cooperation
+						}
+						NOT = {
+							tag = POL
+						}
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { num_of_reforms_done = 1 }
+					}
+					remove_dynamic_modifier = POL_european_cooperation
+					add_stability = -0.1
+				}
+				if = {
+					limit = {
+						check_variable = { num_of_reforms_done = 2 }
+					}
+					remove_dynamic_modifier = POL_european_cooperation
+					add_stability = -0.15
+					add_war_support = -0.05
+				}
+				if = {
+					limit = {
+						check_variable = { num_of_reforms_done = 3 }
+					}
+					remove_dynamic_modifier = POL_european_cooperation
+					add_stability = -0.15
+					add_war_support = -0.05
+					add_timed_idea = {
+						idea = consequences_of_leaving_european_cooperation_1
+						days = 100
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { num_of_reforms_done = 4 }
+					}
+					remove_dynamic_modifier = POL_european_cooperation
+					add_stability = -0.15
+					add_war_support = -0.05
+					add_timed_idea = {
+						idea = consequences_of_leaving_european_cooperation_2
+						days = 100
+					}
+				}
+				if = {
+					limit = {
+						check_variable = { num_of_reforms_done = 5 }
+					}
+					remove_dynamic_modifier = POL_european_cooperation
+					add_stability = -0.15
+					add_war_support = -0.05
+					add_timed_idea = {
+						idea = consequences_of_leaving_european_cooperation_3
+						days = 100
+					}
+				}
+				clear_variable = num_of_reforms_done
 			}
 		}
 	}

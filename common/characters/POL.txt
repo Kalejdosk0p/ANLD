@@ -846,8 +846,8 @@ characters={
 		name = POL_Character_deluge_kowalski
 		portraits={
 			army = {
-				large="GFX_portrait_POL_wincenty_kowalski"
-				#large="gfx/leaders/POL/kowalski.dds"
+				#large="GFX_portrait_POL_wincenty_kowalski" ##doesn't work for people without DLC
+				large="gfx/leaders/POL/wincenty_kowalski.dds"
 				small = GFX_wincenty_kowalski_picture_small
 			}
 		}
@@ -4414,7 +4414,6 @@ characters={
 			expire = "1969.1.1.1"
 			traits = {
 				headstrong
-				
 			}
 			desc = "POL_deluge_wladyslaw_orebski_desc"
 		}

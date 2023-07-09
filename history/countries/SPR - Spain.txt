@@ -83,12 +83,13 @@ set_popularities = {
 	neutrality = 40
 }
 
+recruit_character = SPR_josé_díaz
 recruit_character = SPR_alejandro_lerroux
 recruit_character = SPR_alfonso_xiii
 recruit_character = SPR_manuel_azana
 recruit_character = SPR_francisco_franco
+
 recruit_character = SPR_jose_antonio_primo_de_rivera
-recruit_character = SPR_josé_díaz
 recruit_character = SPR_josé_asensio_torrado
 recruit_character = SPR_vicente_rojo_lluch
 recruit_character = SPR_jose_miaja

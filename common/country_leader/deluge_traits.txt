@@ -111,7 +111,7 @@ leader_traits = {
 		local_resources_factor = 0.1
 	}
 	
-	great_war_hero = {
+	great_war_hero_deluge = {
 		random = no
 		sprite = 12 # Star
 		fascism_drift = 0.05
@@ -965,7 +965,7 @@ leader_traits = {
 		conscription = 0.005
 		war_support_factor = 0.1
 	}
-	minister_of_peasants_deluge = {##it is from vanilla, but doesn't work
+	minister_of_peasants_deluge = {##it is from vanilla, but doesn't work in the mod
 		random = no
 		sprite = 13
 		research_speed_factor = 0.02
@@ -978,5 +978,26 @@ leader_traits = {
 		political_power_factor = -0.05
 		stability_factor = -0.05
 		political_advisor_cost_factor = 0.2
+	}
+	the_most_equal_of_equals = {
+		communism_drift = -0.03
+		political_power_factor = 0.1
+	}
+	mister_chairman = {
+		political_power_factor = 0.1
+		stability_factor = 0.03
+		war_support_factor = -0.05
+	}
+	grey_cat = {
+		communism_drift = 0.01
+	}
+	red_cat = {
+		political_power_factor = 0.01
+	}
+	black_cat = {
+		war_support_factor = 0.01
+	}
+	white_cat = {
+		stability_factor = 0.01
 	}
 }

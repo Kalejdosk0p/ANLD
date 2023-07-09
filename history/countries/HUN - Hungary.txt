@@ -100,3 +100,4 @@ recruit_character = HUN_szakasits_arpad
 recruit_character = HUN_szalasi_ferenc
 recruit_character = HUN_nopcsa_ferenc
 recruit_character = HUN_janos_galicz
+

@@ -1,16 +1,15 @@
 characters={
-	BUL_boris_iii={
-		name="Boris III"
+	BUL_assen_iv={
+		name="Assen IV"
 		portraits={
 			civilian={
-				large="gfx/leaders/BUL/Portrait_Bulgaria_Boris_III.dds"
+				large="gfx/leaders/BUL/assen_iv.dds"
 			}
 		}
 		country_leader={
-			desc="POLITICS_BORIS_III_DESC"
+			#desc=""
 			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	BUL_georgi_dimitrov={
@@ -24,7 +23,6 @@ characters={
 			desc="POLITICS_GEORGI_DIMITROV_DESC"
 			ideology=jacobin_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	BUL_hristo_lukov={
@@ -44,7 +42,7 @@ characters={
 		name = "Nikola Mushanov"
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_bul_nikola_mushanov"
+				large = "gfx/leaders/BUL/nikola_mushanov.dds"
 			}
 		}
 		country_leader={
@@ -71,7 +69,8 @@ characters={
 		portraits={
 			army={
 				small = "GFX_idea_bul_vasil_boydev"
-				large = "GFX_portrait_bul_vasil_boydev"
+				#large = "GFX_portrait_bul_vasil_boydev"
+				large = "gfx/leaders/BUL/vasil_boydev.dds"
 			}
 		}
 		corps_commander={
@@ -87,7 +86,8 @@ characters={
 		name="Georgi Nikolov Popov"
 		portraits={
 			army={
-				large = "GFX_portrait_bul_georgi_popov"
+				#large = "GFX_portrait_bul_georgi_popov" 
+				large = "gfx/leaders/BUL/georgi_popov.dds"
 				small = GFX_portrait_BUL_georgi_popov_small
 			}
 		}
@@ -104,7 +104,8 @@ characters={
 		name = "Atanas Shalapatov"
 		portraits = {
 			army = {
-				large = "GFX_portrait_bul_atanas_shalapatov"
+				#large = "GFX_portrait_bul_atanas_shalapatov"
+				large = "gfx/leaders/BUL/georgi_popov.dds"
 				small = GFX_portrait_BUL_atanas_shalapatov_small
 			}
 		}
@@ -121,7 +122,8 @@ characters={
 		name = "Nikola Mihov"
 		portraits = {
 			army = {
-				large = "GFX_portrait_bul_nikola_mihov"
+				#large = "GFX_portrait_bul_nikola_mihov"
+				large = "gfx/leaders/BUL/nikola_mihov.dds"
 				small = GFX_portrait_BUL_nikola_mihov_small
 			}
 		}
@@ -139,7 +141,8 @@ characters={
 		name = "Ivan Markov"
 		portraits = {
 			army = {
-				large = "GFX_portrait_bul_ivan_markov"
+				#large = "GFX_portrait_bul_ivan_markov"
+				large = "gfx/leaders/BUL/ivan_markov.dds"
 				small = GFX_portrait_BUL_ivan_markov_small
 			}
 		}
@@ -156,7 +159,8 @@ characters={
 		name = "Georgi Markov"
 		portraits = {
 			army = {
-				large = "GFX_portrait_bul_georgi_markov"
+				#large = "GFX_portrait_bul_georgi_markov"
+				large = "gfx/leaders/BUL/georgi_markov.dds"
 				small = GFX_portrait_BUL_georgi_markov_small
 			}
 		}
@@ -173,7 +177,8 @@ characters={
 		name = "Asen Nikolov"
 		portraits = {
 			army = {
-				large = "GFX_portrait_bul_asen_nikolov"
+				#large = "GFX_portrait_bul_asen_nikolov" 
+				large = "gfx/leaders/BUL/asen_nikolov.dds"
 				small = GFX_portrait_BUL_asen_nikolov_small
 			}
 		}
@@ -205,7 +210,8 @@ characters={
 		name = "Nikola Stoychev"
 		portraits = {
 			army = {
-				large = "GFX_portrait_bul_nikola_stoychev"
+				#large = "GFX_portrait_bul_nikola_stoychev"
+				large = "gfx/leaders/BUL/nikola_stoychev.dds"
 				small = GFX_portrait_BUL_nikola_stoychev_small
 			}
 		}
@@ -222,7 +228,8 @@ characters={
 		name = "Damian Velchev"
 		portraits = {
 			army = {
-				large = "GFX_portrait_bul_damyan_velchev"
+				#large = "GFX_portrait_bul_damyan_velchev"
+				large = "gfx/leaders/BUL/damyan_velchev.dds"
 				small = GFX_portrait_BUL_damian_velchev_small
 			}
 		}
@@ -239,7 +246,8 @@ characters={
 		name = "Angel Dotsev"
 		portraits = {
 			army = {
-				large = "GFX_portrait_bul_angel_dotsev"
+				#large = "GFX_portrait_bul_angel_dotsev"
+				large = "gfx/leaders/BUL/angel_dotsev.dds"
 				small = GFX_portrait_BUL_angel_dotsev_small
 			}
 		}
@@ -250,6 +258,76 @@ characters={
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 3
+		}
+	}
+	BUL_konstantin_lukash = {
+		name = "Konstantin Lukash"
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_konstantin_lukash"
+				#large = "GFX_portrait_bul_konstantin_lukash"
+				large = "gfx/leaders/BUL/konstantin_lukash.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BUL_konstantin_lukash
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+		corps_commander = {
+			traits = { infantry_officer }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+		}
+	}
+	BUL_nikola_hadzipetkov = {
+		name = "Nikola Hadzipetkov"
+		portraits = {
+			army = {
+				small = "GFX_idea_bul_nikola_hadzipetkov"
+				#large = "GFX_portrait_bul_nikola_hadzipetkov"
+				large = "gfx/leaders/BUL/nikola_hadzipetkov.dds"
+			}
+		}
+		corps_commander = {
+			traits = { brilliant_strategist infantry_officer organizer }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 3
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BUL_nikola_hadzipetkov
+			allowed = {
+				original_tag = BUL
+			}
+			available = {
+				
+			}
+			traits = {
+				army_chief_drill_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
 		}
 	}
 }

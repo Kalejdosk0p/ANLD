@@ -37,7 +37,7 @@ set_popularities = {
 	neutrality = 50
 }
 	
-recruit_character = BUL_boris_iii
+recruit_character = BUL_assen_iv
 recruit_character = BUL_georgi_dimitrov
 recruit_character = BUL_hristo_lukov
 
@@ -54,3 +54,5 @@ recruit_character = BUL_asen_nikolov
 recruit_character = BUL_nikola_stoychev
 recruit_character = BUL_damian_velchev
 recruit_character = BUL_angel_dotsev
+recruit_character = BUL_konstantin_lukash
+recruit_character = BUL_nikola_hadzipetkov

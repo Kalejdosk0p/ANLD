@@ -247,13 +247,50 @@ POL_democracy_reborn = {##POL_demo_reborn_
 	industrial_capacity_dockyard = POL_demo_reborn_industrial_capacity_dockyard
 	industrial_capacity_factory = POL_demo_reborn_industrial_capacity_factory
 }
+POL_european_cooperation = {##POL_european_cooperation_
+	enable = { always = yes }
+	icon = GFX_idea_FRA_market_dynamism
+	consumer_goods_factor = POL_european_cooperation_consumer_goods_factor
+	stability_factor = POL_european_cooperation_stability_factor
+	war_support_factor = POL_european_cooperation_war_support_factor
+	research_speed_factor = POL_european_cooperation_research_speed_factor
+	industrial_capacity_factory = POL_european_cooperation_industrial_capacity_factory
+	industrial_capacity_dockyard = POL_european_cooperation_industrial_capacity_dockyard
+	production_speed_buildings_factor = POL_european_cooperation_production_speed_buildings_factor
+	production_factory_max_efficiency_factor = POL_european_cooperation_production_factory_max_efficiency_factor
+	political_power_gain = POL_european_cooperation_political_power_gain
+	production_factory_efficiency_gain_factor = POL_european_cooperation_production_factory_efficiency_gain_factor
+}
 POL_new_system = {##POL_new_system_
 	enable = { always = yes }
-	icon = GFX_idea_fra_liberte_egalite_solidarite
+	icon = GFX_idea_FRA_liberte_egalite_solidarite
 	conscription = POL_new_system_conscription
+	conscription_factor = POL_new_system_conscription_factor
 	stability_factor = POL_new_system_stability_factor
 	war_support_factor = POL_new_system_war_support_factor
 	research_speed_factor = POL_new_system_research_speed_factor
+	drift_defence_factor = POL_new_system_drift_defence_factor
+	communism_drift = POL_new_system_communism_drift
+	experience_gain_army_factor = POL_new_system_experience_gain_army_factor
+	experience_gain_navy_factor = POL_new_system_experience_gain_navy_factor
+	experience_gain_air_factor = POL_new_system_experience_gain_air_factor
+	army_core_attack_factor = POL_new_system_army_core_attack_factor
+	army_core_defence_factor = POL_new_system_army_core_defence_factor
+	monthly_population = POL_new_system_monthly_population
+	training_time_army_factor = POL_new_system_training_time_army_factor
+	minimum_training_level = POL_new_system_minimum_training_level
+	political_power_factor = POL_new_system_political_power_factor
+	army_attack_against_major_factor = POL_new_system_army_attack_against_major_factor
+	army_defence_against_major_factor = POL_new_system_army_defence_against_major_factor
+	send_volunteer_divisions_required = POL_new_system_send_volunteer_divisions_required
+	send_volunteer_factor = POL_new_system_send_volunteer_factor
+	send_volunteers_tension = POL_new_system_send_volunteers_tension
+	industrial_capacity_factory = POL_new_system_industrial_capacity_factory
+	industrial_capacity_dockyard = POL_new_system_industrial_capacity_dockyard
+	resistance_growth_on_our_occupied_states = POL_new_system_resistance_growth_on_our_occupied_states
+	resistance_damage_to_garrison = POL_new_system_resistance_damage_to_garrison
+	non_core_manpower = POL_new_system_non_core_manpower
+	production_factory_max_efficiency_factor = POL_new_system_production_factory_max_efficiency_factor
 }
 POL_religious_sect_of_wierszalin = {
 	enable = { always = yes }

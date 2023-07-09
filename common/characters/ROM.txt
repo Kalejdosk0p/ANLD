@@ -9,7 +9,9 @@ characters={
 		country_leader={
 			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
+			traits = {
+				
+			}
 		}
 	}
 	ROM_gheorghe_tatarescu={
@@ -92,7 +94,6 @@ characters={
 			desc="POLITICS_OCTAVIAN_GOGA_DESC"
 			ideology=corporatist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ROM_petre_dumitrescu={
@@ -100,9 +101,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_Portrait_romania_petre_dumitrescu_small"
-			}
-			army={
-				large="GFX_Portrait_romania_petre_dumitrescu"
+				#large="GFX_Portrait_romania_petre_dumitrescu"
+				large="gfx/leaders/ROM/petre_dumitrescu.dds"
 			}
 		}
 		field_marshal={
@@ -112,7 +112,6 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=3
-			legacy_id=-1
 		}
 	}
 	ROM_ioan_mihail_racovita={
@@ -120,9 +119,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_Portrait_romania_ioan_mihail_racovita_small"
-			}
-			army={
-				large="GFX_Portrait_romania_ioan_mihail_racovita"
+				#large="GFX_Portrait_romania_ioan_mihail_racovita"
+				large="gfx/leaders/ROM/ioan_mihail_racovita.dds"
 			}
 		}
 		corps_commander={
@@ -132,7 +130,6 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	ROM_ion_antonescu={
@@ -149,13 +146,6 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=3
-			legacy_id=-1
-		}
-		country_leader={
-			desc="POLITICS_ION_ANTONESCU_DESC"
-			ideology=social_darwinist_ideology
-			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ROM_horia_macellariu={
@@ -163,9 +153,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_Portrait_romania_horia_macellariu_small"
-			}
-			army={
-				large="GFX_Portrait_romania_horia_macellariu"
+				#large="GFX_Portrait_romania_horia_macellariu" Portrait_romania_horia_macellariu
+				large="gfx/leaders/ROM/horia_macellariu.dds"
 			}
 		}
 		navy_leader={
@@ -175,7 +164,6 @@ characters={
 			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
-			legacy_id=-1
 		}
 	}
 	ROM_gheorghe_avramescu={
@@ -183,9 +171,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_Portrait_romania_gheorghe_avramescu_small"
-			}
-			army={
-				large="GFX_Portrait_romania_gheorghe_avramescu"
+				#large="GFX_Portrait_romania_gheorghe_avramescu"
+				large="gfx/leaders/ROM/gheorghe_avramescu.dds"
 			}
 		}
 		corps_commander={
@@ -194,20 +181,22 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=3
-			legacy_id=-1
 		}
 	}
 	ROM_corneliu_zelea_codreanu={
 		name="Corneliu Zelea Codreanu"
 		portraits={
 			civilian={
-				large="GFX_Portrait_romania_corneliu_zelea_codreanu"
+				#large="GFX_Portrait_romania_corneliu_zelea_codreanu" 
+				large="gfx/leaders/ROM/corneliu_zelea_codreanu.dds"
 			}
 		}
 		country_leader={
 			ideology=social_darwinist_ideology
 			expire="1965.1.1.1"
-			id=-1
+			traits = {
+				
+			}
 		}
 	}
 }

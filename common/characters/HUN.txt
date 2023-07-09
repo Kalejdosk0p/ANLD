@@ -4,7 +4,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_lajos_veress_picture_small"
-				large="GFX_Portrait_hungary_lajos_veress"
+				#large="GFX_Portrait_hungary_lajos_veress"
+				large="gfx/leaders/HUN/lajos_veress.dds"
 			}
 		}
 		corps_commander={
@@ -21,7 +22,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_ferenc_feketehalmy_czeydner_picture_small"
-				large="GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
+				#large="GFX_Portrait_hungary_ferenc_feketehalmy_czeydner"
+				large="gfx/leaders/HUN/ferenc_feketehalmy_czeydner.dds"
 			}
 		}
 		field_marshal={
@@ -69,7 +71,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_geza_lakatos_picture_small"
-				large="GFX_Portrait_hungary_geza_lakatos"
+				#large="GFX_Portrait_hungary_geza_lakatos"
+				large="gfx/leaders/HUN/geza_lakatos.dds"
 			}
 		}
 		corps_commander={
@@ -85,7 +88,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_ivan_hindy_picture_small"
-				large="GFX_Portrait_hungary_ivan_hindy"
+				#large="GFX_Portrait_hungary_ivan_hindy"
+				large="gfx/leaders/HUN/ivan_hindy.dds"
 			}
 		}
 		corps_commander={
@@ -102,7 +106,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_karoly_beregfy_picture_small"
-				large="GFX_Portrait_hungary_karoly_beregfy"
+				#large="GFX_Portrait_hungary_karoly_beregfy"
+				large="gfx/leaders/HUN/karoly_beregfy.dds"
 			}
 		}
 		corps_commander={
@@ -117,7 +122,8 @@ characters={
 		name="Janos Galicz"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_janos_galicz"
+				#large="GFX_portrait_SPR_janos_galicz"
+				large="gfx/leaders/HUN/janos_galicz.dds"
 				small=GFX_portrait_SPR_janos_galicz_small
 			}
 		}
@@ -348,7 +354,7 @@ characters={
 				
 			}
 			traits = {
-				great_war_hero
+				great_war_hero_deluge
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian

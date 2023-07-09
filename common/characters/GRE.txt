@@ -31,7 +31,8 @@ characters={
 		name="Markos Drakos"
 		portraits={
 			army={
-				large="GFX_portrait_gre_markos_drakos"
+				#large="GFX_portrait_gre_markos_drakos"
+				large="gfx/leaders/GRE/markos_drakos.dds"
 				small=GFX_portrait_GRE_markos_drakos_small
 			}
 		}
@@ -42,14 +43,14 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=3
-			legacy_id=-1
 		}
 	}
 	GRE_charalambos_katsimitros={
 		name="Charalambos Katsimitros"
 		portraits={
 			army={
-				large="GFX_portrait_gre_charalambos_katsimitros"
+				#large="GFX_portrait_gre_charalambos_katsimitros"
+				large="gfx/leaders/GRE/charalambos_katsimitros.dds"
 				small=GFX_portrait_GRE_charalambos_katsimitros_small
 			}
 		}
@@ -67,7 +68,8 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_gre_alexandros_papagos"
-				large="GFX_portrait_gre_alexandros_papagos"
+				#large="GFX_portrait_gre_alexandros_papagos"
+				large="gfx/leaders/GRE/alexandros_papagos.dds"
 			}
 		}
 		advisor={
@@ -100,20 +102,24 @@ characters={
 		name="George II"
 		portraits={
 			civilian={
-				large="GFX_portrait_gre_george_ii"
+				#large="GFX_portrait_gre_george_ii"
+				large="gfx/leaders/GRE/george_ii.dds"
 			}
 		}
 		country_leader={
 			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
+			traits = {
+				
+			}
 		}
 	}
 	GRE_emmanuel_tsouderos={
 		name="Emmanuel Tsouderos"
 		portraits={
 			civilian={
-				large="GFX_portrait_gre_emmanouil_tsouderos"
+				#large="GFX_portrait_gre_emmanouil_tsouderos"
+				large="gfx/leaders/GRE/emmanouil_tsouderos.dds"
 			}
 		}
 		country_leader={

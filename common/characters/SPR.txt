@@ -420,7 +420,7 @@ characters={
 			}
 		}
 		corps_commander={
-			traits={ infantry_officer trait_SPA_nationalist_sympathies }
+			traits={ infantry_officer }
 			skill=3
 			attack_skill=2
 			defense_skill=3

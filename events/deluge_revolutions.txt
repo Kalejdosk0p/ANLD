@@ -21,6 +21,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_fascism_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_u_v_m }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -133,6 +140,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_fascism_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_u_v_r }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -245,6 +259,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_fascism_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_u_v_d }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -356,6 +377,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_neutrality_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_m_v_u }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -477,6 +505,13 @@ country_event = {
 			date > 1940.5.1 # Opportunity for scripted civil war has passed
 		}
 		NOT = { has_country_flag = has_had_civil_war_m_v_r }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -593,6 +628,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_neutrality_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_m_v_d }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -705,6 +747,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_democratic_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_d_v_m }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -817,6 +866,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_democratic_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_d_v_r }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -929,6 +985,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_democratic_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_d_v_u }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1041,6 +1104,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_communism_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_r_v_u }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1153,6 +1223,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_communism_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_r_v_m }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1265,6 +1342,13 @@ country_event = {
 		}
 		NOT = { has_idea = deluge_communism_liberalisation_idea }
 		NOT = { has_country_flag = has_had_civil_war_r_v_d }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1413,6 +1497,13 @@ country_event = {
 				NOT = { fascism > 0.5 }
 			}
 		}
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1541,6 +1632,13 @@ country_event = {
 	trigger = {
 		has_elections = no
 		NOT = { has_idea = novote }
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -1579,6 +1677,13 @@ country_event = {
 	trigger = {
 		has_elections = yes
 		has_idea = novote
+		NOT = {
+			OR = {
+				tag = FRA 
+				tag = POL
+				tag = HUN
+			}
+		}
 	}
 	
 	mean_time_to_happen = {

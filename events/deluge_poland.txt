@@ -635,18 +635,18 @@ country_event = {##state of emergency in Poland
 		add_stability = 0.1
 		add_ideas = state_of_emergency_idea
 		hidden_effect = {
-			country_event = { id = deluge_poland.23_and_half days = 7 }
+			country_event = { id = deluge_poland.86 days = 7 }
 		}
 	}
 }
 country_event = {##Circle of God's Cause infiltrates POL government
-	id = deluge_poland.23_and_half
-	title = deluge_poland.23_and_half.t
-	desc = deluge_poland.23_and_half.d
+	id = deluge_poland.86
+	title = deluge_poland.86.t
+	desc = deluge_poland.86.d
 	picture = GFX_deluge_paris_small
 	is_triggered_only = yes
 	option = {
-		name = deluge_poland.23_and_half.a
+		name = deluge_poland.86.a
 		add_political_power = -5
 		add_stability = -0.05
 		add_ideas = POL_circle_of_gods_cause
@@ -2766,6 +2766,10 @@ country_event = {##Prophet Ilja becames famous
 	trigger = {
 		tag = POL
 		date > 1939.6.6
+		97 = {
+			owner = POL
+			controller = POL
+		}
 	}
 	mean_time_to_happen = {
 		days = 30
@@ -2777,6 +2781,46 @@ country_event = {##Prophet Ilja becames famous
 				modifier = POL_religious_sect_of_wierszalin
 			}
 		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+###deluge_poland.86 is taken by previous event
+country_event = {##mister chairman buys a cat
+	id = deluge_poland.87
+	title = deluge_poland.87.t
+	desc = deluge_poland.87.d
+	picture = GFX_deluge_paris_small
+	is_triggered_only = yes
+	option = {##grey cat
+		name = deluge_poland.87.a
+		add_political_power = -1
+		add_country_leader_trait = grey_cat
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##white cat
+		name = deluge_poland.87.b
+		add_political_power = -1
+		add_country_leader_trait = white_cat
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##black cat
+		name = deluge_poland.87.c
+		add_political_power = -1
+		add_country_leader_trait = black_cat
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##red cat
+		name = deluge_poland.87.e
+		add_political_power = -1
+		add_country_leader_trait = red_cat
 		ai_chance = {
 			base = 1
 		}
@@ -3643,10 +3687,16 @@ country_event = {##countries are getting invited to Polish european cooperation
 		POL = {
 			add_to_faction = ROOT
 		}
+		custom_effect_tooltip = POL_custom_effect_tooltip_191
 		hidden_effect = {
+			set_variable = {
+				var = num_of_reforms_done
+				value = 0
+			}
 			news_event = {
 				id = deluge_poland_foreign.58
 			}
+			add_dynamic_modifier = { modifier = POL_european_cooperation }
 		}
 		ai_chance = {
 			base = 100
@@ -5674,7 +5724,7 @@ country_event = {##POL gets info that other country rejected polish invitation t
 		}
 	}
 }
-news_event = {##global event that SOV-POL treaty is signed
+news_event = {##country joins Polish European Cooperation
 	id = deluge_poland_foreign.58
 	title = deluge_poland_foreign.58.t
 	desc = deluge_poland_foreign.58.d
@@ -5683,5 +5733,295 @@ news_event = {##global event that SOV-POL treaty is signed
 	major = yes
 	option = {
 		name = deluge_poland_foreign.58.a
+	}
+}
+country_event = {##countries get proposition for common currency
+	id = deluge_poland_foreign.59
+	title = deluge_poland_foreign.59.t
+	desc = deluge_poland_foreign.59.d
+	picture = GFX_report_event_physics_lab_02
+	is_triggered_only = yes
+	option = {#accept
+		name = deluge_poland_foreign.59.a
+		set_country_flag = POL_eu_coop_common_currency
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		hidden_effect = {
+			add_to_variable = { POL_european_cooperation_industrial_capacity_factory = 0.05}
+			add_to_variable = { POL_european_cooperation_industrial_capacity_dockyard = 0.05}
+			add_to_variable = {
+				var = num_of_reforms_done
+				value = 1
+			}
+		}
+		custom_effect_tooltip = POL_custom_effect_tooltip_193
+		ai_chance = {
+			factor = 500
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.59.b
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {##countries get proposition for abolition of border controls
+	id = deluge_poland_foreign.60
+	title = deluge_poland_foreign.60.t
+	desc = deluge_poland_foreign.60.d
+	picture = GFX_report_event_china_ledo_road
+	is_triggered_only = yes
+	option = {#accept
+		name = deluge_poland_foreign.60.a
+		set_country_flag = POL_eu_coop_no_borders
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		hidden_effect = {
+			add_to_variable = { POL_european_cooperation_production_speed_buildings_factor = 0.05}
+			add_to_variable = { POL_european_cooperation_consumer_goods_factor = -0.05}
+			add_to_variable = {
+				var = num_of_reforms_done
+				value = 1
+			}
+		}
+		custom_effect_tooltip = POL_custom_effect_tooltip_194
+		ai_chance = {
+			factor = 500
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.60.b
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {##countries get proposition for forming shared research facilities
+	id = deluge_poland_foreign.61
+	title = deluge_poland_foreign.61.t
+	desc = deluge_poland_foreign.61.d
+	picture = GFX_report_event_physics_lab_01
+	is_triggered_only = yes
+	option = {#accept
+		name = deluge_poland_foreign.61.a
+		set_country_flag = POL_eu_coop_shared_research
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		hidden_effect = {
+			add_to_variable = { POL_european_cooperation_research_speed_factor = 0.07}
+			add_to_variable = {
+				var = num_of_reforms_done
+				value = 1
+			}
+		}
+		custom_effect_tooltip = POL_custom_effect_tooltip_195
+		ai_chance = {
+			factor = 500
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.61.b
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {##countries get proposition for organizing international cultural events
+	id = deluge_poland_foreign.62
+	title = deluge_poland_foreign.62.t
+	desc = deluge_poland_foreign.62.d
+	picture = GFX_report_event_generic_rally
+	is_triggered_only = yes
+	option = {#accept
+		name = deluge_poland_foreign.62.a
+		set_country_flag = POL_eu_coop_events
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		hidden_effect = {
+			add_to_variable = { POL_european_cooperation_political_power_gain = 0.03}
+			add_to_variable = { POL_european_cooperation_stability_factor = 0.05}
+			add_to_variable = { POL_european_cooperation_war_support_factor = 0.05}
+			add_to_variable = {
+				var = num_of_reforms_done
+				value = 1
+			}
+		}
+		custom_effect_tooltip = POL_custom_effect_tooltip_196
+		ai_chance = {
+			factor = 500
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.62.b
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {##countries get proposition for creating new trade routes
+	id = deluge_poland_foreign.63
+	title = deluge_poland_foreign.63.t
+	desc = deluge_poland_foreign.63.d
+	picture = GFX_report_event_generic_truck
+	is_triggered_only = yes
+	option = {#accept
+		name = deluge_poland_foreign.63.a
+		set_country_flag = POL_eu_coop_new_routes
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		hidden_effect = {
+			add_to_variable = { POL_european_cooperation_production_factory_max_efficiency_factor = 0.05}
+			add_to_variable = { POL_european_cooperation_production_factory_efficiency_gain_factor = 0.05}
+			add_to_variable = {
+				var = num_of_reforms_done
+				value = 1
+			}
+		}
+		custom_effect_tooltip = POL_custom_effect_tooltip_197
+		ai_chance = {
+			factor = 500
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.63.b
+		custom_effect_tooltip = POL_custom_effect_tooltip_192
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {##POL becomes subject or is alone in faction so european cooperation is removed
+	id = deluge_poland_foreign.64
+	title = deluge_poland_foreign.64.t
+	desc = deluge_poland_foreign.64.d
+	picture = GFX_report_event_generic_train
+	trigger = {
+		tag = POL
+		has_dynamic_modifier = {
+			modifier = POL_european_cooperation
+		}
+		OR = {
+			is_faction_leader = no
+			is_subject = yes
+			AND = {
+				is_faction_leader = yes
+				num_faction_members < 2
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	option = {
+		name = deluge_poland_foreign.64.a
+		if = {
+			limit = {
+				check_variable = { num_of_reforms_done = 1 }
+			}
+			remove_dynamic_modifier = POL_european_cooperation
+			add_stability = -0.1
+		}
+		if = {
+			limit = {
+				check_variable = { num_of_reforms_done = 2 }
+			}
+			remove_dynamic_modifier = POL_european_cooperation
+			add_stability = -0.15
+			add_war_support = -0.05
+		}
+		if = {
+			limit = {
+				check_variable = { num_of_reforms_done = 3 }
+			}
+			remove_dynamic_modifier = POL_european_cooperation
+			add_stability = -0.15
+			add_war_support = -0.05
+			add_timed_idea = {
+				idea = consequences_of_leaving_european_cooperation_1
+				days = 100
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { num_of_reforms_done = 4 }
+			}
+			remove_dynamic_modifier = POL_european_cooperation
+			add_stability = -0.15
+			add_war_support = -0.05
+			add_timed_idea = {
+				idea = consequences_of_leaving_european_cooperation_2
+				days = 100
+			}
+		}
+		if = {
+			limit = {
+				check_variable = { num_of_reforms_done = 5 }
+			}
+			remove_dynamic_modifier = POL_european_cooperation
+			add_stability = -0.15
+			add_war_support = -0.05
+			add_timed_idea = {
+				idea = consequences_of_leaving_european_cooperation_3
+				days = 100
+			}
+		}
+		clear_variable = num_of_reforms_done
+		ai_chance = {
+			factor = 500
+		}
+	}
+}
+country_event = {##countries get proposition for joining research group
+	id = deluge_poland_foreign.65
+	title = deluge_poland_foreign.65.t
+	desc = deluge_poland_foreign.65.d
+	picture = GFX_report_event_generic_research_lab
+	is_triggered_only = yes
+	option = {#accept
+		name = deluge_poland_foreign.65.a
+		set_country_flag = POLeu_coop_research_group_member
+		add_to_tech_sharing_group = deluge_eu_coop_tech_group
+		ai_chance = {
+			factor = 500
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.65.b
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {##countries get economic spirit after joining polish faction
+	id = deluge_poland_foreign.66
+	title = deluge_poland_foreign.66.t
+	desc = deluge_poland_foreign.66.d
+	picture = GFX_report_event_chinese_japanese_handshake
+	trigger = {
+		is_in_faction_with = POL
+		NOT = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+		}
+		POL = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {
+		name = deluge_poland_foreign.66.a
+		add_dynamic_modifier = { modifier = POL_european_cooperation }
+		set_variable = {
+			var = num_of_reforms_done
+			value = 0
+		}
+		ai_chance = {
+			factor = 500
+		}
 	}
 }

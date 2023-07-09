@@ -9125,9 +9125,275 @@ export_catholicism_category = {
 	}
 }
 european_cooperation_category = {
+	create_common_currency = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		fire_only_once = yes
+		allowed = {
+			original_tag = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_common_currency
+			set_global_flag = POL_eu_coop_common_currency_introduced
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_industrial_capacity_factory = 0.05}
+				add_to_variable = { POL_european_cooperation_industrial_capacity_dockyard = 0.05}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_193
+			every_country = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
+					NOT = {
+						tag = POL
+					}
+				}
+				country_event = {
+					id = deluge_poland_foreign.59
+				}
+			}
+		}
+	}
+	abolish_border_controls = {
+		icon = GFX_decision_generic_trucks
+		fire_only_once = yes
+		allowed = {
+			original_tag = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_no_borders
+			set_global_flag = POL_eu_coop_no_borders_introduced
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_production_speed_buildings_factor = 0.05}
+				add_to_variable = { POL_european_cooperation_consumer_goods_factor = -0.05}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_194
+			every_country = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
+					NOT = {
+						tag = POL
+					}
+				}
+				country_event = {
+					id = deluge_poland_foreign.60
+				}
+			}
+		}
+	}
+	form_shared_research_facitilies = {
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		allowed = {
+			original_tag = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_shared_research
+			set_global_flag = POL_eu_coop_shared_research_introduced
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_research_speed_factor = 0.07}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_195
+			every_country = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
+					NOT = {
+						tag = POL
+					}
+				}
+				country_event = {
+					id = deluge_poland_foreign.61
+				}
+			}
+		}
+	}
+	organize_international_cultural_events = {
+		icon = GFX_decision_hol_radio_oranje
+		fire_only_once = yes
+		allowed = {
+			original_tag = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_events
+			set_global_flag = POL_eu_coop_events_introduced
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_political_power_gain = 0.03}
+				add_to_variable = { POL_european_cooperation_stability_factor = 0.05}
+				add_to_variable = { POL_european_cooperation_war_support_factor = 0.05}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_196
+			every_country = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
+					NOT = {
+						tag = POL
+					}
+				}
+				country_event = {
+					id = deluge_poland_foreign.62
+				}
+			}
+		}
+	}
+	creation_of_new_trade_routes = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		allowed = {
+			original_tag = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_new_routes
+			set_global_flag = POL_eu_coop_new_routes_introduced
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_production_factory_max_efficiency_factor = 0.05}
+				add_to_variable = { POL_european_cooperation_production_factory_efficiency_gain_factor = 0.05}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_197
+			every_country = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
+					NOT = {
+						tag = POL
+					}
+				}
+				country_event = {
+					id = deluge_poland_foreign.63
+				}
+			}
+		}
+	}
+	share_industrial_and_military_techs = {
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		allowed = {
+			original_tag = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_global_flag= POL_eu_coop_research_group_established
+			set_country_flag = POLeu_coop_research_group_member
+			POL = {
+				add_to_tech_sharing_group = deluge_eu_coop_tech_group
+			}
+			every_country = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
+					NOT = {
+						tag = POL
+						has_country_flag = POLeu_coop_research_group_member
+					}
+				}
+				country_event = {
+					id = deluge_poland_foreign.65
+				}
+			}
+		}
+	}
 	intive_other_countries = {
 		icon = GFX_decision_hol_exchange_intelligence_data
 		fire_only_once = no
+		days_re_enable = 3
 		target_trigger = {
 			FROM = {
 				capital_scope = {
@@ -9146,6 +9412,8 @@ european_cooperation_category = {
 		visible = {
 			FROM = {
 				is_in_faction = no
+				has_war = no
+				is_subject = no
 			}
 		}
 		available = {
@@ -9157,8 +9425,285 @@ european_cooperation_category = {
 		cost = 10
 		complete_effect = {
 			FROM = {
-				
+				country_event = {
+					id = deluge_poland_foreign.27
+				}
 			}
+		}
+	}
+	topple_the_tyrants = {
+		icon = GFX_decision_generic_reorganize_irregulars
+		fire_only_once = no
+		target_trigger = {
+			FROM = {
+				capital_scope = {
+					is_on_continent = europe
+				}
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+			}
+		}
+		allowed = {
+			original_tag = POL
+			country_exists = FROM
+		}
+		visible = {
+			
+		}
+		available = {
+			FROM = {
+				has_civil_war = no
+				if = {
+					limit = {
+						tag = GER
+					}
+					NOT = {
+						has_war_with = DDR
+						has_war_with = WGR
+					}
+				}
+				if = {
+					limit = {
+						tag = DDR
+					}
+					NOT = {
+						has_war_with = GER
+						has_war_with = WGR
+					}
+				}
+				if = {
+					limit = {
+						tag = WGR
+					}
+					NOT = {
+						has_war_with = DDR
+						has_war_with = GER
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 60
+		days_remove = 30
+		complete_effect = {
+			FROM = {
+				country_event = {
+					id = generic.26
+				}
+			}
+		}
+		remove_effect = {
+			POL = {
+				create_wargoal = {
+					type = topple_government
+					target = FROM
+				}
+			}
+		}
+	}
+}
+european_cooperation_joining_category = {
+	join_create_common_currency = {
+		icon = GFX_decision_hol_attract_foreign_investors
+		fire_only_once = yes
+		allowed = {
+			is_in_faction_with = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+			has_global_flag = POL_eu_coop_common_currency_introduced
+			NOT = {
+				has_country_flag = POL_eu_coop_common_currency
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_common_currency
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_industrial_capacity_factory = 0.05}
+				add_to_variable = { POL_european_cooperation_industrial_capacity_dockyard = 0.05}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_193
+		}
+	}
+	join_abolish_border_controls = {
+		icon = GFX_decision_generic_trucks
+		fire_only_once = yes
+		allowed = {
+			is_in_faction_with = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+			has_global_flag = POL_eu_coop_no_borders_introduced
+			NOT = {
+				has_country_flag = POL_eu_coop_no_borders
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_no_borders
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_production_speed_buildings_factor = 0.05}
+				add_to_variable = { POL_european_cooperation_consumer_goods_factor = -0.05}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_194
+		}
+	}
+	join_form_shared_research_facitilies = {
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		allowed = {
+			is_in_faction_with = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+			has_global_flag = POL_eu_coop_shared_research_introduced
+			NOT = {
+				has_country_flag = POL_eu_coop_shared_research
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_shared_research
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_research_speed_factor = 0.07}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_195
+		}
+	}
+	join_organize_international_cultural_events = {
+		icon = GFX_decision_hol_radio_oranje
+		fire_only_once = yes
+		allowed = {
+			is_in_faction_with = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+			has_global_flag = POL_eu_coop_events_introduced
+			NOT = {
+				has_country_flag = POL_eu_coop_events
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_events
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_political_power_gain = 0.03}
+				add_to_variable = { POL_european_cooperation_stability_factor = 0.05}
+				add_to_variable = { POL_european_cooperation_war_support_factor = 0.05}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_196
+		}
+	}
+	join_creation_of_new_trade_routes = {
+		icon = GFX_decision_generic_electricity
+		fire_only_once = yes
+		allowed = {
+			is_in_faction_with = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+			has_global_flag = POL_eu_coop_new_routes_introduced
+			NOT = {
+				has_country_flag = POL_eu_coop_new_routes
+			}
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POL_eu_coop_new_routes
+			hidden_effect = {
+				add_to_variable = { POL_european_cooperation_production_factory_max_efficiency_factor = 0.05}
+				add_to_variable = { POL_european_cooperation_production_factory_efficiency_gain_factor = 0.05}
+				add_to_variable = {
+					var = num_of_reforms_done
+					value = 1
+				}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_197
+		}
+	}
+	join_share_industrial_and_military_techs = {
+		icon = GFX_decision_generic_research
+		fire_only_once = yes
+		allowed = {
+			original_tag = POL
+		}
+		visible = {
+			has_dynamic_modifier = {
+				modifier = POL_european_cooperation
+			}
+			has_global_flag = POL_eu_coop_research_group_established
+		}
+		available = {
+			
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 20
+		complete_effect = {
+			set_country_flag = POLeu_coop_research_group_member
+			add_to_tech_sharing_group = deluge_eu_coop_tech_group
 		}
 	}
 }
