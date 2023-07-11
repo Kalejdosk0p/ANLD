@@ -2,43 +2,43 @@
 Discord tags are displayed
 
 #LEAD DEVELOPER
-CommGesen, 5165
+commgesen
 (Concept, Coding, Graphics)
 
 #DEVELOPER ASSISTANT
-Szymon, 4996
+leonardo_da_twix
 (Coding)
 
 #CONTRIBUTORS
-Harry, 0677
+amyiriye
+(Graphics)
+theinkyharry
 (Color portraits)
-ivan_the_grozdnyi, 1531
+ivan_the_grozdnyi
 (Portraits)
-Ahmed Pasha Al Said, 2647
+ahmedpashaalsaid
 (Color portraits)
 
 #TESTERS
-Thoras, 7062
-Trollage, 7876
-Holly Blue Agate, 2182
-Dawidovski, 4609
+thoras.
+dawidovski
 
 #ANLD THANKS
-General Runtime
+tristan1988
 (Concept)
-RedOtaku
+redotaku
 (Graphics)
-JonathanH
+jonathanh
 (Color portraits)
-Vinctories
+vinctories
 (Color portraits)
-Noremac2000
+noremac2000
 (Color portraits)
-PoorBananaMan27
+poorbananaman27
 (Color portraits)
-Hexis, 3776
+hexis
 (Color portraits)
-squirrelystew, 6885
+squirrelystew
 (Graphics, Color portraits)
 Historical Poland mod development team
 (Graphics, Color portraits)

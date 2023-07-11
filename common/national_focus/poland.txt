@@ -6065,10 +6065,11 @@ focus_tree = {
 		id = POL_rise_of_national_liberal_catholicism
 		icon = GFX_focus_por_concordat
 		x = 0
-		y = 1
+		y = 2
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS FOCUS_FILTER_STABILITY}
 		cost = 8
 		prerequisite = { focus = POL_ND_wins }
+		prerequisite = { focus = POL_question_of_monarchy_in_republic }
 		relative_position_id = POL_ND_wins
 		available = {
 			
@@ -6715,10 +6716,11 @@ focus_tree = {
 		id = POL_birth_of_new_republic
 		icon = GFX_poland_in_frame
 		x = 0
-		y = 1
+		y = 2
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 8
 		prerequisite = { focus = POL_PSL_wins }
+		prerequisite = { focus = POL_question_of_monarchy_in_republic }
 		relative_position_id = POL_PSL_wins
 		available = {
 			
@@ -6813,7 +6815,7 @@ focus_tree = {
 		id = POL_equality_for_all_races_and_nations
 		icon = GFX_focus_race_relations
 		x = 5
-		y = 1
+		y = 2
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 8
 		prerequisite = { focus = POL_birth_of_new_republic focus = POL_PPS_wins }
@@ -7067,7 +7069,7 @@ focus_tree = {
 		id = POL_help_the_poor
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		x = 3
-		y = 1
+		y = 2
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 8
 		prerequisite = { focus = POL_birth_of_new_republic}
@@ -8640,7 +8642,7 @@ focus_tree = {
 	focus = {
 		id = POL_establish_secret_police
 		icon = GFX_goal_generic_military_deal
-		x = 10
+		x = 9
 		y = 1
 		search_filters = {}
 		cost = 5
@@ -9015,7 +9017,7 @@ focus_tree = {
 	focus = {
 		id = POL_nationalize_foreign_industry
 		icon = GFX_goal_generic_consumer_goods
-		x = 8
+		x = 7
 		y = 1
 		search_filters = {}
 		cost = 5

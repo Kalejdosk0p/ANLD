@@ -262,6 +262,16 @@
  BUL_democratic_party_long:0 "Bulgarian Republican Party"
  BUL_fascism_party:0 "Legionnaires"
  BUL_fascism_party_long:0 "Union of Bulgarian National Legions"
+ 
+ CRO_communism_party:0 "LCC"
+ CRO_communism_party_long:0 "League of Communists of Croatia"
+ CRO_neutrality_party:0 "House of Drašković"
+ CRO_neutrality_party_long:0 "House of Drašković"
+ CRO_democratic_party:0 "CPPP"
+ CRO_democratic_party_long:0 "Croatian Peoples' Peasant Party"
+ CRO_fascism_party:0 "Ustaše"
+ CRO_fascism_party_long:0 "Ustaša — Croatian Revolutionary Movement"
+ 
  ROM_communism_party:0 "Communist Party"
  ROM_communism_party_long:0 "Romanian Communist Party"
  ROM_neutrality_party:0 "Ghica Loyalists"

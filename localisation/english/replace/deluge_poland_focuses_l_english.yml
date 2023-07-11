@@ -6,7 +6,7 @@
  POL_death_of_marshal_desc:0 "Józef Klemens Piłsudski, Marshal of Poland, has passed away. Now the fate of the country is being decided — whether the old order will be continued or a new one will begin. Without a doubt, this opens the door to power for some ambitious figures, no matter how much they mourn our loss."
  
  POL_continue_with_sanation:0 "The Party of Power"
- POL_continue_with_sanation_desc:0 "The government has no nobler task than to continue the work of the General Inspector. There are people who are ready to inherit the great responsibility of healing society - to inherit Sanation."
+ POL_continue_with_sanation_desc:0 "The government has no nobler task than to continue the work of our first General Inspector. There are people who are ready to inherit the great responsibility of healing society - to inherit Sanation."
  
  POL_smigly_wins:0 "Edward Rydz-Śmigły"
  POL_smigly_wins_desc:0 "Rydz-Śmigły is an ideal candidate for the role of Marshal. This is a person with experience in both the army and aviation, who is not afraid to make difficult decisions. If we want not only to protect Poland, but also to restore it to its former greatness, then we need Edward."
@@ -55,7 +55,7 @@
  POL_teach_about_etatism:0 "Etatism"
  POL_teach_about_etatism_desc:0 "It is unthinkable that foreign companies should take a share in the Polish economy, otherwise it is not our economy at all. It is necessary to develop national capital that can compete with the rest of the world. But since it will take years to cultivate the new bourgeoisie, it is possible to achieve quick results by appropriating the property of others."
  POL_create_sm_ozn:0 "Youth Duty"
- POL_create_sm_ozn_desc:0 "Youth Duty is a youth organization of the OZN. It tells its wards about traditional family and patriotic values, as well as the importance of the army and the Marshal himself. It also prepares them to serve their fatherland — boys to become warriors, and girls to become mothers."
+ POL_create_sm_ozn_desc:0 "Youth Duty is a youth organization of the CNU. It tells its wards about traditional family and patriotic values, as well as the importance of the army and the Marshal himself. It also prepares them to serve their fatherland — boys to become warriors, and girls to become mothers."
  POL_create_opw_ozn:0 "Camp of Fighting Poland"
  POL_create_opw_ozn_desc:0 "If the enemy sets foot on our land, both old and young will fight for their native land until our glorious army expels the foe back home. A paramilitary and covert organization will help us in this, which will train the civilian population for combat operations and support agent networks in the occupied territories."
  POL_abolish_monarchy:0 "Abolish Monarchy"
@@ -83,7 +83,7 @@
  POL_fund_galleries_of_patriotic_art_desc:0 "It is possible to awaken mass consciousness with a new direction in art. A series of patriotic posters and the sponsorship of our artists will spur public sentiment. These works should inspire pride to us, and trembling to the enemies."
  
  POL_sikorski_wins:0 "Władysław Sikorski"
- POL_sikorski_wins_desc:0 "Although Sikorski didn't agree with Marshal in many cases, he has zeal, and most importantly talent. He is a diligent officer and a true patriot. Who, if not him, will be able to protect our Poland from the tornado of uncertainty that is now dragging the world?"
+ POL_sikorski_wins_desc:0 "Although Sikorsky did not always agree with our beloved Marshal, he has zeal, and most importantly talent. He is a diligent officer and a true patriot. Who, if not him, will be able to protect our Poland from the tornado of uncertainty that is now dragging the world?"
  POL_culture_not_race:0 "Culture, not Race"
  POL_culture_not_race_desc:0 "Poland is a multinational state. If we divide its citizens by race, we will not only deprive ourselves of human resources, but also sow distemper. Instead of simply expunging small nations from our lives, we will propose to the government a plan for their acculturation."
  POL_start_cultural_integration:0 "Cultural Integration"
@@ -124,7 +124,7 @@
  POL_make_deal_with_king_desc:0 "Fryderyk Krystian II is not an obstacle to the Sanation government. We can use the young king for our purposes by handing him only nominal power. We will play monarchy as long as people like it."
  
  POL_stachniuk_wins:0 "Jan Stachniuk"
- POL_stachniuk_wins_desc:0 "Stachniuk is a neo-pagan with charm, influence and unusual ideas. He criticizes Christianity and capitalism, and also calls for a return to life in the traditions of the proto-Slavic society. Poland is closer to this ideology than it may seem at first glance, but to prove it, we need to remove the mask of Catholicism from our nation."
+ POL_stachniuk_wins_desc:0 "«Stoigniew» Stachniuk is a neo-pagan with charm, influence and unusual ideas. He criticizes Christianity and capitalism, and also calls for a return to life in the traditions of the proto-Slavic society. Poland is closer to this ideology than it may seem at first glance, but to prove it, we need to remove the mask of Catholicism from our nation."
  POL_find_support_among_radicals:0 "Radical Support"
  POL_find_support_among_radicals_desc:0 "Some radicals consider our actions to be correct because of the economic program and attitude towards the Catholic Church. We could attract these Reds to work for the new Polish state, and not for a destructive revolution."
  POL_find_support_among_artists:0 "Artists Support"
@@ -141,7 +141,7 @@
  POL_purge_the_party_desc:0 "Although we have seized power, there are many adherents of the old policy with great influence and authority behind us. If they are not replaced by a new organization, we risk being in a political impasse."
  
  POL_establish_zadruga:0 "Zadruga"
- POL_establish_zadruga_desc:0 "The previous government got confused about what it wanted to be, and therefore lost. We know our purpose. The Movement of Polish Nationalists Zadruga aims to restore ancient values and belifes we used to celebrate, defeat western back-culture and eliminate all enemies of the fatherland. We are honorably ready to take on this mission."
+ POL_establish_zadruga_desc:0 "The previous government got confused about what it wanted to be, and therefore lost. We know our purpose. The Movement of Polish Nationalists Zadruga aims to restore ancient values and beliefs, as well as victory over Western backward culture and the destruction of all enemies of the fatherland. We are honorably ready to take on this mission."
  POL_take_peoples_property_from_capitalists:0 "Nationalization of Foreign Property"
  POL_take_peoples_property_from_capitalists_desc:0 "The longer we allow foreign capitalists to enrich themselves on the Polish market, the weaker our state becomes. This must end! All the riches of Poland should belong only to its people."
  POL_propagation_of_proletarian_nationalism:0 "Proletarian Nationalism"
@@ -168,8 +168,8 @@
  POL_return_of_ancient_faith_desc:0 "Finally, we have weakened the Catholic Church and liberated all the holy places of the Slavic faith! There is still a lot of work to do, but now we can help the peoples restore the beliefs of our common ancestors."
  POL_incorporate_beauty_of_east:0 "The Beauty of the East"
  POL_incorporate_beauty_of_east_desc:0 "Adam Mickiewicz praised the beauty of the East in many poems. These lands are truly worthy of becoming part of the great Slavia. However, first they need to be protected from those who encroach on the culture itself of our big people."
- POL_the_true_messiah_arrival:0 "Cultural Revolution"
- POL_the_true_messiah_arrival_desc:0 "Once we were considered political marginals, but now we have become the mainstay of all Slavs. After a long struggle, it's time to fulfill the cherished goal of Zadruga and our Stoigniew. We will proclaim a cultural revolution that will unite everything Slavic."
+ POL_the_true_messiah_arrival:0 "The Coming of the True Messiah"
+ POL_the_true_messiah_arrival_desc:0 "Once we were considered political marginals, but now we have become the mainstay of all Slavs. But until now, we have not noticed the most important thing — the Messiah, about whom Adam Mickiewicz wrote for a long time, has been around all this time. Now it is clear that our Stoigniew is the same forty and four who came to protect and resurrect the state!"
  
  POL_oppose_sanation:0 "Oppose Sanation"
  POL_oppose_sanation_desc:0 "Piłsudski's quasi-regency regime is nothing without him. Already, a struggle for the right to be a dictator is raging among his supporters. Let's not wait for the military to arrange terror!"
