@@ -2543,18 +2543,16 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no	
 	}
-	
 	SpriteType = {
-		name = "GFX_poland_in_frame"
-		texturefile = "gfx/interface/goals/poland_in_frame.dds"			
+		name = "GFX_POL_birth_of_new_republic"
+		texturefile = "gfx/interface/goals/POL_birth_of_new_republic.dds"			
 	}
-
 	SpriteType = {
-		name = "GFX_poland_in_frame_shine"
-		texturefile = "gfx/interface/goals/poland_in_frame.dds"
+		name = "GFX_POL_birth_of_new_republic_shine"
+		texturefile = "gfx/interface/goals/POL_birth_of_new_republic.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/poland_in_frame.dds"
+			animationmaskfile = "gfx/interface/goals/POL_birth_of_new_republic.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2567,7 +2565,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/poland_in_frame.dds"
+			animationmaskfile = "gfx/interface/goals/POL_birth_of_new_republic.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -2580,12 +2578,45 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no	
 	}
-	
+	SpriteType = {
+		name = "GFX_POL_nationalist_school_reform"
+		texturefile = "gfx/interface/goals/POL_nationalist_school_reform.dds"			
+	}
+	SpriteType = {
+		name = "GFX_POL_nationalist_school_reform_shine"
+		texturefile = "gfx/interface/goals/POL_nationalist_school_reform.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/POL_nationalist_school_reform.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/POL_nationalist_school_reform.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no	
+	}
 	SpriteType = {
 		name = "GFX_polish_kingdom_cooperation"
 		texturefile = "gfx/interface/goals/polish_kingdom_cooperation.dds"			
 	}
-
 	SpriteType = {
 		name = "GFX_polish_kingdom_cooperation_shine"
 		texturefile = "gfx/interface/goals/polish_kingdom_cooperation.dds"
@@ -2617,12 +2648,45 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no	
 	}
-	
+	SpriteType = {
+		name = "GFX_deal_with_the_king_fryderyk_ii"
+		texturefile = "gfx/interface/goals/deal_with_the_king_fryderyk_ii.dds"			
+	}
+	SpriteType = {
+		name = "GFX_deal_with_the_king_fryderyk_ii_shine"
+		texturefile = "gfx/interface/goals/deal_with_the_king_fryderyk_ii.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/deal_with_the_king_fryderyk_ii.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/deal_with_the_king_fryderyk_ii.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no	
+	}
 	SpriteType = {
 		name = "GFX_scythian_myth"
 		texturefile = "gfx/interface/goals/scythian_myth.dds"			
 	}
-
 	SpriteType = {
 		name = "GFX_scythian_myth_shine"
 		texturefile = "gfx/interface/goals/scythian_myth.dds"
@@ -2654,12 +2718,45 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no	
 	}
-	
+	SpriteType = {
+		name = "GFX_slavic_revenge_on_the_enemy"
+		texturefile = "gfx/interface/goals/slavic_revenge_on_the_enemy.dds"			
+	}
+	SpriteType = {
+		name = "GFX_slavic_revenge_on_the_enemy_shine"
+		texturefile = "gfx/interface/goals/slavic_revenge_on_the_enemy.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/slavic_revenge_on_the_enemy.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+
+		animation = {
+			animationmaskfile = "gfx/interface/goals/slavic_revenge_on_the_enemy.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+		}
+		legacy_lazy_load = no	
+	}
 	SpriteType = {
 		name = "GFX_autarky"
 		texturefile = "gfx/interface/goals/autarky.dds"			
 	}
-
 	SpriteType = {
 		name = "GFX_autarky_shine"
 		texturefile = "gfx/interface/goals/autarky.dds"

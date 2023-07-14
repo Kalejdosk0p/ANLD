@@ -16,7 +16,7 @@ characters={
 		name="Alfonso XIII"
 		portraits={
 			civilian={
-				large="GFX_portrait_SPA_alfonso_xiii"
+				large="gfx/leaders/SPR/alfonso_xiii.dds"
 			}
 		}
 		country_leader={
@@ -44,12 +44,12 @@ characters={
 		name="Jose Antonio Primo de Rivera"
 		portraits={
 			civilian={
-				large="GFX_portrait_SPA_jose_antonio_primo_de_rivera"
+				large="gfx/leaders/SPR/jose_antonio_primo_de_rivera.dds"
 				small="GFX_idea_SPA_jose_antonio_primo_de_rivera"
 			}
 			army={
 				small="GFX_idea_SPA_jose_antonio_primo_de_rivera"
-				large="GFX_portrait_SPA_jose_antonio_primo_de_rivera"
+				large="gfx/leaders/SPR/jose_antonio_primo_de_rivera.dds"
 			}
 		}
 		country_leader={
@@ -133,7 +133,7 @@ characters={
 		name="José Asensio Torrado"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_jose_asensio_torrado"
+				large="gfx/leaders/SPR/jose_asensio_torrado.dds"
 				small=GFX_portrait_SPR_jose_asensio_torrado_small
 			}
 		}
@@ -150,7 +150,7 @@ characters={
 		name="Vicente Rojo Lluch"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_vicente_rojo_lluch"
+				large="gfx/leaders/SPR/vicente_rojo_lluch.dds"
 				small=GFX_portrait_SPR_vicente_rojo_lluch_small
 			}
 		}
@@ -187,7 +187,7 @@ characters={
 		name="Jose Miaja"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_jose_miaja"
+				large="gfx/leaders/SPR/jose_miaja.dds"
 				small=GFX_portrait_SPR_jose_miaja_small
 			}
 		}
@@ -225,7 +225,7 @@ characters={
 		name="Valentin Gonzalez"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_valentin_gonzalez"
+				large="gfx/leaders/SPR/valentin_gonzalez.dds"
 				small=GFX_portrait_SPR_valentin_gonzalez_small
 			}
 		}
@@ -242,7 +242,7 @@ characters={
 		name = "Enrique Lister"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_enrique_lister"
+				large="gfx/leaders/SPR/enrique_lister.dds"
 				small = GFX_portrait_SPR_enrique_lister_small
 			}
 		}
@@ -259,7 +259,7 @@ characters={
 		name="Juan Modesto"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_juan_modesto"
+				large="gfx/leaders/SPR/juan_modesto.dds"
 				small=GFX_portrait_SPR_juan_modesto_small
 			}
 		}
@@ -276,7 +276,7 @@ characters={
 		name="Antonio Cordon Garcia"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_antonio_cordon_garcia"
+				large="gfx/leaders/SPR/antonio_cordon_garcia.dds"
 				small=GFX_portrait_SPR_antonio_cordon_garcia_small
 			}
 		}
@@ -293,7 +293,7 @@ characters={
 		name="Mohamed Meziane"
 		portraits={
 			army={
-				large="GFX_portrait_SPA_mohamed_meziane"
+				large="gfx/leaders/SPR/mohamed_meziane.dds"
 				small=GFX_portrait_SPR_mohamed_meziane_small
 			}
 		}
@@ -310,7 +310,7 @@ characters={
 		name="Gonzalo Queipo De Llano"
 		portraits={
 			army={
-				large="GFX_portrait_SPA_gonzalo_queipo_de_llano"
+				large="gfx/leaders/SPR/gonzalo_queipo_de_llano.dds"
 				small=GFX_portrait_SPR_gonzalo_queipo_de_llano_small
 			}
 		}
@@ -327,7 +327,7 @@ characters={
 		name="Emilio Mola"
 		portraits={
 			army={
-				large="GFX_portrait_SPA_emilio_mola"
+				large="gfx/leaders/SPR/emilio_mola.dds"
 				small=GFX_portrait_SPA_emilio_mola_small
 			}
 		}
@@ -362,7 +362,7 @@ characters={
 		name="Juan Yague Blanco"
 		portraits={
 			army={
-				large="GFX_portrait_SPA_juan_yague"
+				large="gfx/leaders/SPR/juan_yague.dds"
 				small=GFX_portrait_SPA_juan_yague_small
 			}
 		}
@@ -397,7 +397,7 @@ characters={
 		name="Agustin Munoz Grandes"
 		portraits={
 			army={
-				small="GFX_idea_SPA_agustin_munoz_grandes"
+				small="gfx/leaders/SPR/augustin_muynoz_grandes.dds"
 				large="GFX_portrait_SPA_augustin_muynoz_grandes"
 			}
 		}
@@ -432,7 +432,7 @@ characters={
 		name="Jose Enrique Varela"
 		portraits={
 			army={
-				large="GFX_portrait_SPA_jose_enrique_varela"
+				large="gfx/leaders/SPR/jose_enrique_varela.dds"
 				small=GFX_portrait_SPA_jose_enrique_varela_small
 			}
 		}
@@ -467,7 +467,7 @@ characters={
 		name="Miguel Cabanellas"
 		portraits={
 			army={
-				large="GFX_portrait_SPA_miguel_cabanellas"
+				large="gfx/leaders/SPR/miguel_cabanellas.dds"
 				small=GFX_portrait_SPA_miguel_cabanellas_small
 			}
 		}
@@ -502,7 +502,7 @@ characters={
 		name="Jose Millan Astray"
 		portraits={
 			army={
-				large="GFX_portrait_SPA_jose_millan_astray"
+				large="gfx/leaders/SPR/jose_millan_astray.dds"
 				small=GFX_portrait_SPR_jose_millan_astray_small
 			}
 		}
@@ -519,7 +519,7 @@ characters={
 		name="Miguel Buiza Fernandez Palacios"
 		portraits={
 			army={
-				large="GFX_portrait_SPR_miguel_buiza_fernandez_palacios"
+				large="gfx/leaders/SPR/miguel_buiza_fernandez_palacios.dds"
 				small=GFX_portrait_SPR_miguel_buiza_fernandez_palacios_small
 			}
 		}
@@ -557,7 +557,7 @@ characters={
 		name="Luis Carrero Blanco"
 		portraits={
 			army={
-				large="GFX_portrait_SPA_luis_carrero_blanco"
+				large="gfx/leaders/SPR/luis_carrero_blanco.dds"
 				small=GFX_portrait_SPA_luis_carrero_blanco_small
 			}
 		}

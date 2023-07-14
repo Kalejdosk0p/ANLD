@@ -155,12 +155,12 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/polish_cavalary_2.dds"
 	}
 	spriteType = {
-		name = "GFX_beck_1"
-		texturefile = "gfx/event_pictures/Beck_1.dds"
+		name = "GFX_report_event_beck"
+		texturefile = "gfx/event_pictures/report_event_beck.dds"
 	}
 	spriteType = {
-		name = "GFX_beck_2"
-		texturefile = "gfx/event_pictures/Beck_2.dds"
+		name = "GFX_report_event_beck2"
+		texturefile = "gfx/event_pictures/report_event_beck2.dds"
 	}
 	spriteType = {
 		name = "GFX_english_polish_relation_1"
@@ -207,12 +207,12 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/castle_of_visegrad.dds"
 	}
 	spriteType = {
-		name = "GFX_hungarian_and_polish_soldiers"
-		texturefile = "gfx/event_pictures/hungarian_and_polish_soldiers.dds"
+		name = "GFX_news_event_polish_and_hungarian_soldiers"
+		texturefile = "gfx/event_pictures/news_event_polish_and_hungarian_soldiers.dds"
 	}
 	spriteType = {
-		name = "GFX_hungarian_and_polish_soldiers_big"
-		texturefile = "gfx/event_pictures/hungarian_and_polish_soldiers_big.dds"
+		name = "GFX_report_event_hungarian_and_polish_soldiers"
+		texturefile = "gfx/event_pictures/report_event_hungarian_and_polish_soldiers.dds"
 	}
 	spriteType = {
 		name = "GFX_pope_news_event"
@@ -333,5 +333,149 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_new_revolution_in_poland"
 		texturefile = "gfx/event_pictures/new_revolution_in_poland.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_philippe_petain"
+		texturefile = "gfx/event_pictures/report_event_philippe_petain.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_napoleon_and_poniatowski"
+		texturefile = "gfx/event_pictures/report_event_napoleon_and_poniatowski.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_maria_curie_sklodowska"
+		texturefile = "gfx/event_pictures/report_event_maria_curie_sklodowska.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_fryderyk_ii"
+		texturefile = "gfx/event_pictures/report_event_fryderyk_ii.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_battle_for_raclawice"
+		texturefile = "gfx/event_pictures/report_event_battle_for_raclawice.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_andrzej_towianski"
+		texturefile = "gfx/event_pictures/report_event_andrzej_towianski.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_adam_mickiewicz"
+		texturefile = "gfx/event_pictures/report_event_adam_mickiewicz.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hyperborea"
+		texturefile = "gfx/event_pictures/report_event_hyperborea.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_sikorski_with_soldiers"
+		texturefile = "gfx/event_pictures/report_event_sikorski_with_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_emilia_plater"
+		texturefile = "gfx/event_pictures/report_event_emilia_plater.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_tadeusz_kosciuszko"
+		texturefile = "gfx/event_pictures/report_event_tadeusz_kosciuszko.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_avitation"
+		texturefile = "gfx/event_pictures/report_event_polish_avitation.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_military_winter"
+		texturefile = "gfx/event_pictures/report_event_polish_military_winter.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_navy"
+		texturefile = "gfx/event_pictures/report_event_polish_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_political_funeral"
+		texturefile = "gfx/event_pictures/report_event_political_funeral.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_political_funeral2"
+		texturefile = "gfx/event_pictures/report_event_political_funeral2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_soldiers_marching"
+		texturefile = "gfx/event_pictures/report_event_polish_soldiers_marching.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_crusade"
+		texturefile = "gfx/event_pictures/report_event_crusade.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_karol_mikolaj_radziwill"
+		texturefile = "gfx/event_pictures/report_event_karol_mikolaj_radziwill.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_foreign_nobility_in_poland"
+		texturefile = "gfx/event_pictures/report_event_foreign_nobility_in_poland.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_pawel_salwator_piast_riedelski"
+		texturefile = "gfx/event_pictures/report_event_pawel_salwator_piast_riedelski.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_andrzej_walewski"
+		texturefile = "gfx/event_pictures/report_event_andrzej_walewski.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_tadeusz_romers_passport"
+		texturefile = "gfx/event_pictures/report_event_tadeusz_romers_passport.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_unsinkable_sam"
+		texturefile = "gfx/event_pictures/report_event_unsinkable_sam.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_free_election"
+		texturefile = "gfx/event_pictures/report_event_free_election.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_psl_politicians"
+		texturefile = "gfx/event_pictures/report_event_polish_psl_politicians.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_monarchists"
+		texturefile = "gfx/event_pictures/report_event_polish_monarchists.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_prophet_ilja"
+		texturefile = "gfx/event_pictures/report_event_prophet_ilja.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_communist_party"
+		texturefile = "gfx/event_pictures/report_event_polish_communist_party.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_hungarian_handshake"
+		texturefile = "gfx/event_pictures/report_event_polish_hungarian_handshake.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_border"
+		texturefile = "gfx/event_pictures/report_event_polish_border.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_polish_and_french_soldiers"
+		texturefile = "gfx/event_pictures/news_event_polish_and_french_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_polish_hungarian_handshake"
+		texturefile = "gfx/event_pictures/news_event_polish_hungarian_handshake.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_polish_and_french_soldiers"
+		texturefile = "gfx/event_pictures/news_event_polish_and_french_soldiers.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_polish_border"
+		texturefile = "gfx/event_pictures/news_event_polish_border.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_polish_politicians_walking"
+		texturefile = "gfx/event_pictures/news_event_polish_politicians_walking.dds"
 	}
 }

@@ -8635,11 +8635,11 @@ expand_urban_regions_category = {
 		#on_map_mode = map_only
 		target_array = POL.owned_states
 		fire_only_once = no
-		days_remove = 100
-		cost = 75
+		days_remove = 150
+		cost = 175
 		days_re_enable = 50
 		modifier = {
-			civilian_factory_use = 5
+			civilian_factory_use = 10
 		}
 		target_trigger = {
 			FROM = {
@@ -8660,9 +8660,9 @@ expand_urban_regions_category = {
 			}
 		}
 		available = {
-			num_of_civilian_factories_available_for_projects > 5
+			num_of_civilian_factories_available_for_projects > 10
 			ROOt = {
-				controls_state = FROM
+				owns_state = FROM
 			}
 		}
 		remove_effect = {

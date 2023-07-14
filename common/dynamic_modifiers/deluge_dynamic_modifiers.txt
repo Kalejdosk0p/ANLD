@@ -291,6 +291,25 @@ POL_new_system = {##POL_new_system_
 	resistance_damage_to_garrison = POL_new_system_resistance_damage_to_garrison
 	non_core_manpower = POL_new_system_non_core_manpower
 	production_factory_max_efficiency_factor = POL_new_system_production_factory_max_efficiency_factor
+	trade_opinion_factor = POL_new_system_trade_opinion_factor
+}
+POL_new_five_year_plan_modifier = {##POL_new_plan_
+	enable = { always = yes }
+	icon = GFX_idea_SOV_third_five_year_plan
+	conscription = POL_new_plan_conscription
+	stability_factor = POL_new_plan_stability_factor
+	war_support_factor = POL_new_plan_war_support_factor
+	research_speed_factor = POL_new_plan_research_speed_factor
+	drift_defence_factor = POL_new_plan_drift_defence_factor
+	communism_drift = POL_new_plan_communism_drift
+	monthly_population = POL_new_plan_monthly_population
+	political_power_factor = POL_new_plan_political_power_factor
+	industrial_capacity_factory = POL_new_plan_industrial_capacity_factory
+	industrial_capacity_dockyard = POL_new_plan_industrial_capacity_dockyard
+	production_factory_max_efficiency_factor = POL_new_plan_production_factory_max_efficiency_factor
+	consumer_goods_factor = POL_new_plan_consumer_goods_factor
+	production_speed_buildings_factor = POL_new_plan_production_speed_buildings_factor
+	global_building_slots_factor = POL_new_plan_global_building_slots_factor
 }
 POL_religious_sect_of_wierszalin = {
 	enable = { always = yes }
