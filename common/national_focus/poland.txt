@@ -1322,7 +1322,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_abolish_monarchy
-		icon = GFX_abolish_monarchy_2
+		icon = GFX_abolish_monarchy
 		x = 2
 		y = 1
 		prerequisite = { focus = POL_smigly_wins }
@@ -1351,7 +1351,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_force_atheism
-		icon = GFX_force_atheism_2
+		icon = GFX_force_atheism
 		x = 0 
 		y = 1
 		prerequisite = { focus = POL_smigly_wins }
@@ -1414,7 +1414,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_nationalise_churches
-		icon = GFX_nationalise_churches_2
+		icon = GFX_nationalise_churches
 		x = 0
 		y = 1
 		prerequisite = { focus = POL_force_atheism }
@@ -13653,7 +13653,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_tax_reform
-		icon = GFX_tax_reform_2
+		icon = GFX_tax_reform
 		x = -6
 		y = 1
 		search_filters = {FOCUS_FILTER_INDUSTRY}
@@ -13713,7 +13713,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_census_among_entrepreneurs
-		icon = GFX_capitalist_census_2
+		icon = GFX_capitalist_census
 		x = -7
 		y = 2
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL}
@@ -13747,7 +13747,7 @@ focus_tree = {
 	}
 	focus = {
 		id = POL_introudce_polish_zloty
-		icon = GFX_focus_fra_devalue_the_franc
+		icon = GFX_focus_POL_polish_zloty
 		x = 0
 		y = 3
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}

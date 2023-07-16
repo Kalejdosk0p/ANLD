@@ -161,18 +161,18 @@
  POL_remember_niklots_sacriface:0 "Perpetuate Niklot's Sacrifice"
  POL_remember_niklots_sacriface_desc:0 "Niklot was the last independent prince of the Obotrites, one of the Slavic tribes in what is now Germany. He stood up to the Danish and German crusaders until his last breath, and when the country faces a great test again, his feat comes to life in our hearts."
  POL_revengeance_on_enemy_with_god_and_even_in_spite_of_god:0 "Revenge on the Enemy"
- POL_revengeance_on_enemy_with_god_and_even_in_spite_of_god_desc:0 "Surrounded by enemies, Poland had to survive its entire history. But now the moment has come when they are all mired in confusion, and we have become stronger than ever before. Fate itself favors historical justice. Prepare the army! It's time for revenge with God and even in spite of God!"
+ POL_revengeance_on_enemy_with_god_and_even_in_spite_of_god_desc:0 "Surrounded by enemies, Poland had to survive its entire history. But now the moment has come when they are all mired in confusion, and we have become stronger than ever before. Fate itself favors historical justice. Prepare the army, it's time for revenge and we will take revenge with God — and even in spite of God!"
  POL_eliminate_przechrztowie:0 "Ban Przechrztowie"
  POL_eliminate_przechrztowie_desc:0 "Zygmunt Krasiński in his book The Undivine Comedy warned the Polish people about the danger posed by the Przechrzty — the Jews who were baptized to make it easier to control people, and later to use the unenlightened masses to establish their control over the country."
  POL_return_of_ancient_faith:0 "The Return of the Ancient Faith"
- POL_return_of_ancient_faith_desc:0 "Finally, we have weakened the Catholic Church and liberated all the holy places of the Slavic faith! There is still a lot of work to do, but now we can help the peoples restore the beliefs of our common ancestors and establish one unified Rodnovery church."
+ POL_return_of_ancient_faith_desc:0 "Finally, we have weakened the Catholic Church and liberated all the holy places of the Slavic faith! There is still a lot of work to do, but now we can help the peoples restore the beliefs of our common ancestors and create a single Rodnover church."
  POL_incorporate_beauty_of_east:0 "The Beauty of the East"
  POL_incorporate_beauty_of_east_desc:0 "Adam Mickiewicz praised the beauty of the East in many poems. These lands are truly worthy of becoming part of the great Slavia. However, first they need to be protected from those who encroach on the culture itself of our big people."
  POL_the_true_messiah_arrival:0 "The Coming of the True Messiah"
  POL_the_true_messiah_arrival_desc:0 "Once we were considered political marginals, but now we have become the mainstay of all Slavs. But until now, we have not noticed the most important thing — the Messiah, about whom Adam Mickiewicz wrote for a long time, has been around all this time. Now it is clear that our Stoigniew is the same forty and four who came to protect and resurrect the state!"
  
  POL_oppose_sanation:0 "Oppose Sanation"
- POL_oppose_sanation_desc:0 "Piłsudski's military regime is nothing without him. Already, a struggle for the right to be a dictator is raging among his supporters. Let's not wait for the military to arrange terror!"
+ POL_oppose_sanation_desc:0 "Piłsudski's militaristic regime is nothing without him. Already, a struggle for the right to be a dictator is raging among his supporters. Let's not wait for the military to arrange terror!"
  
  ###MILITARY TREE###
  
@@ -228,7 +228,7 @@
  POL_finish_four_year_plan:0 "Completion of the Four-Year Plan"
  POL_finish_four_year_plan_desc:0 "Eugeniusz Kwiatkowski's four-year plan has finally come to an end. Poland's economy has revived in industrial growth and mechanization. Now it's time to reap the benefits and set new challenges in the prosperity of our economy."
  POL_establish_state_owned_arms_factories:0 "State Armament Factories"
- POL_establish_state_owned_arms_factories_desc:0 "PWU is an industrial conglomerate that has been our largest defense contractor for a long time. It is obvious why it would be useful to allocate additional financial assistance to this company."
+ POL_establish_state_owned_arms_factories_desc:0 "SAF is an industrial conglomerate that has been our largest defense contractor for a long time. It is obvious why it would be useful to allocate additional financial assistance to this company."
  POL_militarize_poland:0 "Militarization of the Economy"
  POL_militarize_poland_desc:0 "Currently, our fatherland is under constant pressure from hostile States and we definitely need to prepare for the worst. It is better to start transferring the economy to military rails in advance."
  POL_expand_factories_in_stalowa_wola:0 "Stalowa Wola Factories"
@@ -268,7 +268,7 @@
  POL_finish_land_reform_desc:0 "After a long stage of restructuring our economy in terms of agriculture, we have the right to combine our achievements into one big reform. Undoubtedly, the people will be happy to welcome this step."
  
  POL_national_defense_found:0 "National Defence Fund"
- POL_national_defense_found_desc:0 "The National Defense Fund will become an fund that will allow the government and the people to raise funds necessary to increase the combat capability of the army. In these difficult times, our military will welcome every franc."
+ POL_national_defense_found_desc:0 "The National Defense Fund will become an organization that will allow the government and the people to raise funds necessary to increase the combat capability of the army. In these difficult times, our military will welcome every franc."
  POL_tax_reform:0 "Tax Reform"
  POL_tax_reform_desc:0 "With the beginning of the Piłsudski era, the Polish tax system became less and less reliable. General corruption, incompetence of officials and problems with a messy legal system cost us huge amounts of money lost by taxpayers every month. We definitely need reform."
  POL_census_among_entrepreneurs:0 "Census Among the Senior Management"
@@ -294,7 +294,7 @@
  POL_support_gdansk:0 "Money to Gdańsk"
  POL_support_gdansk_desc:0 "Gdańsk has been a Polish city since time immemorial and now that it is part of our country again, we must rebuild its port infrastructure. The long years spent in poor Pomerania have significantly reduced its maritime potential."
  POL_support_ursus:0 "Ursus"
- POL_support_ursus_desc:0 "Ursus is a famous tractor company that also dominated other fields of market. We will be able to order thousands of machines from them for cultivating the land, thereby we will achieve accelerated mechanization of farming and support the national producer. In the long run, this action will pay off by increasing our agricultural capabilities and increasing chance of company stabilizing on new fields."
+ POL_support_ursus_desc:0 "Ursus is a famous manufacturer of agricultural machinery. We will be able to order thousands of machines from them for cultivating the land, thereby we will achieve accelerated mechanization of farming and support the national producer. In the long term, this action will pay off with the growth of our agricultural capabilities and strengthen the company's position in the market."
  POL_help_debica_tire_company:0 "Tyre Company Dębica"
  POL_help_debica_tire_company_desc:0 "Our young manufacturing industry needs support. Having our own tyre company will bring us more income and help us produce cars. The town of Dębica is a good place to start."
  POL_introudce_polish_zloty:0 "Polish Złoty"
