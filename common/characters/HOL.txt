@@ -10,7 +10,6 @@ characters={
 			desc="POLITICS_HENDRIKUS_COLJIN_DESC"
 			ideology=corporatist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	HOL_anton_mussert={
@@ -23,21 +22,19 @@ characters={
 		country_leader={
 			ideology=social_darwinist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	HOL_lou_de_visser={
 		name="Lou de Visser"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+				large="gfx/leaders/HOL/lou_de_visser.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_LOU_DE_VISSER_DESC"
 			ideology=marxist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	HOL_dirk_jan_de_geer={
@@ -51,7 +48,6 @@ characters={
 			desc="POLITICS_DIRK_JAN_DE_GEER_DESC"
 			ideology=liberal_republican_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	HOL_petrus_wilhelmus_best={
@@ -61,7 +57,7 @@ characters={
 				small="gfx/interface/ideas/idea_europe_generic_land_4.dds"
 			}
 			army={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+				large="gfx/leaders/HOL/petrus_wilhelmus_best.dds"
 			}
 		}
 		corps_commander={
@@ -71,7 +67,6 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=4
-			legacy_id=-1
 		}
 	}
 	HOL_johannes_theodorus_furstner={
@@ -91,7 +86,6 @@ characters={
 			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
-			legacy_id=-1
 		}
 	}
 	HOL_alexander_idenburg={
@@ -104,20 +98,18 @@ characters={
 		country_leader={
 			ideology=liberal_republican_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
-	HOL_alexander_i={
-		name="Alexander I"
+	HOL_louis_ii_bonaparte={
+		name="Louis I"
 		portraits={
 			civilian={
-				large="gfx/leaders/HOL/king_william_iii_holland.dds"
+				large="gfx/leaders/HOL/louis_ii_bonaparte.dds"
 			}
 		}
 		country_leader={
 			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	HOL_georges_timmermans={
@@ -137,7 +129,6 @@ characters={
 			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
-			legacy_id=-1
 		}
 	}
 }

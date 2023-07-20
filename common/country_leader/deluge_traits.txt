@@ -1000,4 +1000,43 @@ leader_traits = {
 	white_cat = {
 		stability_factor = 0.01
 	}
+	revolutionary_committee = {
+		political_power_factor = -0.1
+		war_support_factor = 0.05
+		production_speed_arms_factory_factor = 0.05
+	}
+	democratic_committee = {
+		democratic_drift = 0.03
+		communism_drift = 0.03
+		democratic_acceptance = 50
+	}
+	party_discipline = {
+		communism_drift = 0.05
+		political_power_factor = -0.05
+		stability_weekly = 0.01
+	}
+	technocratic_tendencies = {
+		political_power_factor = -0.05
+		research_speed_factor = 0.03
+		production_speed_industrial_complex_factor = 0.05
+	}
+	militaristic_tendencies = {
+		political_power_factor = -0.05
+		production_speed_arms_factory_factor = 0.05
+		experience_loss_factor = -0.05
+	}
+	party_pluralism = {
+		political_power_factor = 0.1
+	}
+	central_planner_of_reality = {
+		monthly_population = 0.05
+		consumer_goods_factor = -0.03
+		fascism_drift = 0.05
+		communism_drift = 0.1
+		war_support_weekly = 0.01
+		conscription_factor = 0.04
+		industrial_capacity_factory = 0.01
+		industrial_capacity_dockyard = 0.01
+		production_speed_buildings_factor = 0.02
+	}
 }

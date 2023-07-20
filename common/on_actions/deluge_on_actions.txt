@@ -1253,14 +1253,18 @@ on_actions = {
 					limit = {
 						check_variable = { num_of_reforms_done = 1 }
 					}
-					remove_dynamic_modifier = POL_european_cooperation
+					remove_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
 					add_stability = -0.1
 				}
 				if = {
 					limit = {
 						check_variable = { num_of_reforms_done = 2 }
 					}
-					remove_dynamic_modifier = POL_european_cooperation
+					remove_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
 					add_stability = -0.15
 					add_war_support = -0.05
 				}
@@ -1268,7 +1272,9 @@ on_actions = {
 					limit = {
 						check_variable = { num_of_reforms_done = 3 }
 					}
-					remove_dynamic_modifier = POL_european_cooperation
+					remove_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
 					add_stability = -0.15
 					add_war_support = -0.05
 					add_timed_idea = {
@@ -1280,7 +1286,9 @@ on_actions = {
 					limit = {
 						check_variable = { num_of_reforms_done = 4 }
 					}
-					remove_dynamic_modifier = POL_european_cooperation
+					remove_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
 					add_stability = -0.15
 					add_war_support = -0.05
 					add_timed_idea = {
@@ -1292,7 +1300,9 @@ on_actions = {
 					limit = {
 						check_variable = { num_of_reforms_done = 5 }
 					}
-					remove_dynamic_modifier = POL_european_cooperation
+					remove_dynamic_modifier = {
+						modifier = POL_european_cooperation
+					}
 					add_stability = -0.15
 					add_war_support = -0.05
 					add_timed_idea = {

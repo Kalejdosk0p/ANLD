@@ -292,6 +292,8 @@ POL_new_system = {##POL_new_system_
 	non_core_manpower = POL_new_system_non_core_manpower
 	production_factory_max_efficiency_factor = POL_new_system_production_factory_max_efficiency_factor
 	trade_opinion_factor = POL_new_system_trade_opinion_factor
+	improve_relations_maintain_cost_factor = POL_new_system_improve_relations_maintain_cost_factor
+	opinion_gain_monthly_factor = POL_new_system_opinion_gain_monthly_factor
 }
 POL_new_five_year_plan_modifier = {##POL_new_plan_
 	enable = { always = yes }
@@ -310,6 +312,22 @@ POL_new_five_year_plan_modifier = {##POL_new_plan_
 	consumer_goods_factor = POL_new_plan_consumer_goods_factor
 	production_speed_buildings_factor = POL_new_plan_production_speed_buildings_factor
 	global_building_slots_factor = POL_new_plan_global_building_slots_factor
+	production_factory_efficiency_gain_factor = POL_new_plan_production_factory_efficiency_gain_factor
+}
+POL_labour_reforms = {##POL_labour_reforms_
+	enable = { always = yes }
+	icon = GFX_idea_generic_production_bonus
+	industrial_capacity_factory = POL_labour_reforms_industrial_capacity_factory
+	industrial_capacity_dockyard = POL_labour_reforms_industrial_capacity_dockyard
+	stability_factor = POL_labour_reforms_stability_factor
+	war_support_factor = POL_labour_reforms_war_support_factor
+	production_factory_max_efficiency_factor = POL_labour_reforms_production_factory_max_efficiency_factor
+	consumer_goods_factor = POL_labour_reforms_consumer_goods_factor
+	production_speed_buildings_factor = POL_labour_reforms_production_speed_buildings_factor
+	political_power_factor = POL_labour_reforms_political_power_factor
+	research_speed_factor = POL_labour_reforms_research_speed_factor
+	global_building_slots_factor = POL_labour_reforms_global_building_slots_factor
+	production_factory_efficiency_gain_factor = POL_labour_reforms_production_factory_efficiency_gain_factor
 }
 POL_religious_sect_of_wierszalin = {
 	enable = { always = yes }

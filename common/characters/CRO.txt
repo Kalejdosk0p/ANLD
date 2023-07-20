@@ -19,14 +19,13 @@ characters={
 		name="Ante Pavelic"
 		portraits={
 			civilian={
-				large="gfx/leaders/CRO/ante_pavelic.dds"
+				large="gfx/leaders/CRO/Portrait_Croatia_Ante_Pavelic.dds"
 			}
 		}
 		country_leader={
 			desc="ANTE_PAVELIC_DESC"
 			ideology=corporatist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	CRO_josip_broz_tito={
@@ -40,7 +39,6 @@ characters={
 		country_leader={
 			ideology=marxist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 		advisor={
 			slot = political_advisor
@@ -130,7 +128,6 @@ characters={
 			defense_skill=2
 			maneuvering_skill=3
 			coordination_skill=3
-			legacy_id=102
 		}
 	}
 }

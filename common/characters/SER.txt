@@ -1,29 +1,27 @@
 characters={
-	SER_peter_ii={
-		name="Peter II"
+	SER_alexander_ii={
+		name="Alexander II"
 		portraits={
 			civilian={
-				large="gfx/leaders/YUG/Portrait_Yugoslavia_Peter_II.dds"
+				large="gfx/leaders/SER/alexander_ii_of_serbia.dds"
 			}
 		}
 		country_leader={
 			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	SER_milan_stojadinovic={
 		name="Milan Stojadinovic"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				large="gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Stojadinovic.dds"
 			}
 		}
 		country_leader={
 			desc="POLITICS_MILAN_STOJADINOVIC_DESC"
 			ideology=corporatist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	SER_draža_mihailović={
@@ -39,19 +37,17 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 		country_leader={
 			ideology=social_darwinist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	SER_milan_grol={
 		name="Milan Grol"
 		portraits={
 			civilian={
-				large="gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+				large="gfx/leaders/YUG/Portrait_Yugoslavia_Milan_Grol.dds"
 			}
 		}
 		country_leader={
@@ -71,7 +67,6 @@ characters={
 		country_leader={
 			ideology=marxist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	SER_petar_bojović={
@@ -90,7 +85,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	SER_stepa_stepanović={
@@ -109,7 +103,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	SER_Živojin_mišić={
@@ -128,7 +121,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 }

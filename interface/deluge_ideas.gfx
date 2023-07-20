@@ -1631,13 +1631,13 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_idea_New_Marshall_idea"
-		texturefile = "gfx/interface/ideas/spirits/New_Marshall_idea.dds"
+		name = "GFX_idea_new_marshall_idea"
+		texturefile = "gfx/interface/ideas/spirits/new_marshall_idea.dds"
 	}
 	
 	spriteType = {
-		name = "GFX_idea_Old_Marshall_idea"
-		texturefile = "gfx/interface/ideas/spirits/Old_Marshall_idea.dds"
+		name = "GFX_idea_old_marshall_idea"
+		texturefile = "gfx/interface/ideas/spirits/old_marshall_idea.dds"
 	}
 	
 	spriteType = {
@@ -2524,11 +2524,15 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/spirits/flag_of_workers_brigades.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_generic_mountain_warfare"
-		texturefile = "gfx/interface/ideas/spirits/generic_mountain_warfare.dds"
+		name = "GFX_idea_new_wettyn_king"
+		texturefile = "gfx/interface/ideas/new_wettyn_king_picture.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_generic_supply_depot"
-		texturefile = "gfx/interface/ideas/spirits/generic_supply_depot.dds"
+		name = "GFX_idea_New_Marshall_idea"
+		texturefile = "gfx/interface/ideas/New_Marshall_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Old_Marshall_idea"
+		texturefile = "gfx/interface/ideas/Old_Marshall_idea.dds"
 	}
 }

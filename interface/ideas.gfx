@@ -6340,30 +6340,28 @@ spriteTypes = {
 		name = "GFX_idea_sov_blyukher"
 		texturefile = "gfx/interface/ideas/idea_sov_blyukher.dds"
 	}
-	
-###POLAND HAPPENS
 	spriteType = {
-		name = "GFX_idea_new_wettyn_king"
-		texturefile = "gfx/interface/ideas/new_wettyn_king_picture.dds"
+		name = "GFX_idea_ETH_national_studs"
+		texturefile = "gfx/interface/ideas/idea_ETH_national_studs.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_New_Marshall_idea"
-		texturefile = "gfx/interface/ideas/New_Marshall_idea.dds"
+		name = "GFX_idea_ITA_battaglie_per_la_nascite"
+		texturefile = "gfx/interface/ideas/idea_ITA_battaglie_per_la_nascite.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_Old_Marshall_idea"
-		texturefile = "gfx/interface/ideas/Old_Marshall_idea.dds"
+		name = "GFX_idea_ITA_il_sol_dell_avvenire_ns"
+		texturefile = "gfx/interface/ideas/idea_ITA_il_sol_dell_avvenire_ns.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_state_that_gives"
-		texturefile = "gfx/interface/ideas/state_that_gives.dds"
+		name = "GFX_idea_generic_fascist_workers"
+		texturefile = "gfx/interface/ideas/idea_generic_fascist_workers.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_woman_in_military"
-		texturefile = "gfx/interface/ideas/woman_in_military.dds"
+		name = "GFX_idea_generic_supply_depot"
+		texturefile = "gfx/interface/ideas/idea_generic_supply_depot.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_renewed_warsaw_confederation"
-		texturefile = "gfx/interface/ideas/renewed_warsaw_confederation.dds"
+		name = "GFX_idea_generic_mountain_warfare"
+		texturefile = "gfx/interface/ideas/idea_generic_mountain_warfare.dds"
 	}
 }

@@ -9,7 +9,6 @@ characters={
 		country_leader={
 			ideology=liberal_republican_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ARG_nimo_de_anquín={
@@ -23,7 +22,6 @@ characters={
 			desc="POLITICS_NIMO_DE_ANQUIN_DESC"
 			ideology=corporatist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ARG_arturo_rawson={
@@ -43,7 +41,6 @@ characters={
 			defense_skill=3
 			planning_skill=1
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	ARG_juan_pistarini={
@@ -63,7 +60,6 @@ characters={
 			defense_skill=2
 			planning_skill=4
 			logistics_skill=3
-			legacy_id=-1
 		}
 	}
 	ARG_alberto_teisaire={
@@ -83,7 +79,6 @@ characters={
 			defense_skill=1
 			maneuvering_skill=1
 			coordination_skill=1
-			legacy_id=-1
 		}
 	}
 	ARG_roberto_maría_ortiz={
@@ -97,7 +92,6 @@ characters={
 			desc="POLITICS_ROBERTO_MARIA_ORTIZ_DESC"
 			ideology=liberal_republican_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ARG_marcelo_t._de_alvear={
@@ -111,7 +105,6 @@ characters={
 			desc="POLITICS_MARCELO_ALVEAR_DESC"
 			ideology=jacobin_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ARG_fanny_jabcovsky={
@@ -125,7 +118,6 @@ characters={
 			desc="POLITICS_FANNY_JABCOVSKY_DESC"
 			ideology=marxist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ARG_hipólito_yrigoyen={
@@ -138,20 +130,18 @@ characters={
 		country_leader={
 			ideology=jacobin_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
-	ARG_julio_roca_iii={
-		name="Julio Roca III"
+	ARG_orelie_antoine_ii={
+		name="Orélie-Antoine II"
 		portraits={
 			civilian={
-				large="gfx/leaders/ARG/julio_roca.dds"
+				large="gfx/leaders/ARG/orelie_antoine_ii.dds"
 			}
 		}
 		country_leader={
 			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	ARG_juan_domingo_perón={
@@ -164,7 +154,6 @@ characters={
 		country_leader={
 			ideology=corporatist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 }

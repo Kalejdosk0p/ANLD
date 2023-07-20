@@ -9,7 +9,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -21,8 +21,8 @@ ideas = {
 				neutrality_drift = 0.05
 			}
 		}
-		new_wettyn_king = {
-			picture = fryderyk_ii_idea
+		fryderyk_ii_idea = {#new_wettyn_king - old name
+			#picture = fryderyk_ii_idea
 			allowed = {
 				tag = POL
 			}
@@ -30,7 +30,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -43,7 +43,7 @@ ideas = {
 			}
 		}
 		new_wettyn_king_figurehead = {
-			picture = fryderyk_ii_idea
+			picture = fryderyk_ii_icon
 			allowed = {
 				tag = POL
 			}
@@ -51,7 +51,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -62,7 +62,7 @@ ideas = {
 			}
 		}
 		new_wettyn_king_sikorski = {
-			picture = fryderyk_ii_idea
+			picture = fryderyk_ii_icon
 			allowed = {
 				tag = POL
 			}
@@ -70,7 +70,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -82,7 +82,7 @@ ideas = {
 			}
 		}
 		new_wettyn_king_piasecki = {
-			picture = fryderyk_ii_idea
+			picture = fryderyk_ii_icon
 			allowed = {
 				tag = POL
 			}
@@ -90,7 +90,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -111,7 +111,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -132,7 +132,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -153,7 +153,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -174,7 +174,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -195,7 +195,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -216,7 +216,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -237,7 +237,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -258,7 +258,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -279,7 +279,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -292,7 +292,7 @@ ideas = {
 			}
 		}
 		cult_of_old_marshal_idea = {
-			picture = Old_Marshall_idea
+			picture = old_marshall_idea
 			allowed = {
 				tag = POL
 			}
@@ -300,7 +300,9 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				NOT = { has_government = fascism }
+				NOT = {
+					has_government = fascism
+				}
 			}
 			allowed_civil_war = {
 				always = no
@@ -320,6 +322,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
+				
 			}
 			allowed_civil_war = {
 				always = yes
@@ -329,8 +332,8 @@ ideas = {
 				conscription_factor = 0.1
 			}
 		}
-		state_that_gives = {
-			picture = state_that_gives
+		POL_state_that_gives_idea = {
+			picture = tur_balkan_central_bank_wealthy_greece
 			allowed = {
 				tag = POL
 			}	
@@ -338,7 +341,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#NOT = { has_government = fascism }
+				
 			}
 			allowed_civil_war = {
 				always = yes
@@ -351,7 +354,7 @@ ideas = {
 			}
 		}
 		cult_of_new_marshal_idea = {
-			picture = New_Marshall_idea
+			picture = new_marshall_idea
 			allowed = {
 				tag = POL
 			}
@@ -359,7 +362,9 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				
+				NOT = {
+					has_government = fascism
+				}
 			}
 			allowed_civil_war = {
 				always = no
@@ -412,7 +417,7 @@ ideas = {
 			}
 		}
 		freedom_of_religion_idea = {
-			picture = renewed_warsaw_confederation
+			picture = SPR_torchbearers_of_tomorrow
 			allowed = {
 				tag = POL
 			}
@@ -420,7 +425,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = no
@@ -459,6 +464,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
+				is_subject = no
 			}
 			allowed_civil_war = {
 				always = yes
@@ -520,7 +526,7 @@ ideas = {
 			modifier = {
 				conscription_factor = 0.05
 				monthly_population = -0.1
-				war_support_factor = 0.1
+				war_support_factor = 0.05
 				army_core_attack_factor = 0.03
 				army_core_defence_factor = 0.03
 			}
@@ -661,6 +667,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -681,6 +688,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -834,7 +842,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				has_war = yes
+				
 			}
 			allowed_civil_war = {
 				always = no
@@ -855,7 +863,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				has_war = yes
+				
 			}
 			allowed_civil_war = {
 				always = no
@@ -1016,7 +1024,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1040,7 +1048,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1271,6 +1279,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1290,6 +1299,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1312,6 +1322,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1335,6 +1346,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1358,7 +1370,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = democratic
 			}
 			allowed_civil_war = {
 				always = no
@@ -1378,7 +1390,10 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1388,7 +1403,7 @@ ideas = {
 			}
 		}
 		POL_reforms_towards_free_market_idea = {
-			picture = HUN_treaty_of_trianon
+			picture = HUN_treaty_of_triannon
 			allowed = {
 				tag = POL
 			}
@@ -1396,7 +1411,10 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1416,7 +1434,10 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1436,7 +1457,10 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1458,7 +1482,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1515,7 +1539,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = fascism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1535,7 +1559,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1595,7 +1619,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				has_government = communism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1654,7 +1678,7 @@ ideas = {
 			}
 		}
 		POL_private_schools = {
-			picture = JAP_supremacy_of_will
+			picture = jap_supremacy_of_will
 			allowed = {
 				tag = POL
 			}
@@ -1674,7 +1698,7 @@ ideas = {
 			}
 		}
 		POL_public_schools = {
-			picture = JAP_supremacy_of_technology
+			picture = jap_supremacy_of_technology
 			allowed = {
 				tag = POL
 			}
@@ -1694,7 +1718,7 @@ ideas = {
 			}
 		}
 		POL_private_schools_and_healthcare = {
-			picture = generic_constitutional_guarantee
+			picture = generic_constitutional_guarantees
 			allowed = {
 				tag = POL
 			}
@@ -1745,7 +1769,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1768,7 +1792,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				#empty
+				
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1988,7 +2012,10 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1997,6 +2024,46 @@ ideas = {
 				political_power_factor = 0.05
 				communism_drift = 0.05
 				fascism_drift = 0.05
+			}
+			equipment_bonus = {
+				motorized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				mechanized = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			research_bonus = {
+				armor = 0.05
+				motorized = 0.05
+				mechanized = 0.05
+			}
+		}
+		POL_nuz_w_bzuhu_idea = {
+			picture = generic_purge
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.05
+				communism_drift = 0.07
 			}
 			equipment_bonus = {
 				motorized = {
@@ -2317,7 +2384,9 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				
+				NOT = {
+					has_government = communism
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -2352,7 +2421,7 @@ ideas = {
 			}
 		}
 		POL_revolutionary_eucharist_idea = {
-			picture = home_of_the_revolution
+			picture = home_of_revolution
 			allowed = {
 				tag = POL
 			}
@@ -2360,7 +2429,9 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				
+				NOT = {
+					has_government = communism
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -2382,7 +2453,9 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				
+				NOT = {
+					has_government = communism
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -2404,7 +2477,9 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				
+				NOT = {
+					has_government = communism
+				}
 			}
 			allowed_civil_war = {
 				always = yes
@@ -2427,7 +2502,7 @@ ideas = {
 				#empty
 			}
 			cancel = {
-				
+				has_government = fascism
 			}
 			allowed_civil_war = {
 				always = yes
@@ -2437,6 +2512,239 @@ ideas = {
 				democratic_drift = 0.05
 				industrial_capacity_factory = 0.02
 				global_building_slots_factor = 0.1
+			}
+		}
+		POL_anarchists_in_government = {
+			picture = SPR_anarchist_society
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.05
+				stability_factor = -0.2
+				war_support_factor = 0.1
+				conscription_factor = 0.08
+			}
+		}
+		POL_national_radicals_in_government = {
+			picture = hol_haven_of_tolerance ##change it later for our icon
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.05
+				fascism_drift = 0.05
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.03
+			}
+		}
+		POL_local_initiatives_idea = {
+			picture = generic_local_self_management 
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.05
+				production_speed_buildings_factor = 0.03
+				global_building_slots_factor = 0.05
+			}
+		}
+		POL_centralization_and_discipline_idea = {
+			picture = SOV_organize_wreckers 
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.03
+				consumer_goods_factor = -0.03
+				max_command_power = 15
+			}
+		}
+		POL_centrally_planned_economy_idea = {
+			picture = SOV_fourth_five_year_plan 
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				has_government = democratic
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.03
+				industrial_capacity_dockyard = 0.03
+				industrial_capacity_factory = 0.03
+			}
+		}
+		POL_centrally_planned_selection_idea = {
+			picture = generic_manpower_bonus
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				has_government = democratic
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				monthly_population = -0.1
+				industrial_capacity_dockyard = 0.03
+				industrial_capacity_factory = 0.03
+				research_speed_factor = 0.02
+				conscription_factor = -0.06
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+			}
+		}
+		POL_centrally_planned_society_idea = {
+			picture = generic_fascist_workers 
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				has_government = democratic
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				monthly_population = 0.05
+				consumer_goods_factor = -0.03
+				industrial_capacity_dockyard = 0.02
+				industrial_capacity_factory = 0.02
+				conscription = 0.01
+			}
+		}
+		POL_centrally_planned_art_idea = {
+			picture = ITA_il_sol_dell_avvenire_ns 
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				has_government = democratic
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.05
+				communism_drift = 0.1
+				war_support_factor = 0.1
+				stability_factor = 0.1
+				fascism_drift = 0.05
+			}
+		}
+		POL_centrally_planned_man_idea = {
+			picture = generic_production_bonus 
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				has_government = democratic
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.05
+				monthly_population = 0.03
+				conscription_factor = 0.02
+				industrial_capacity_dockyard = 0.01
+				industrial_capacity_factory = 0.01
+				consumer_goods_factor = -0.01
+				communism_drift = 0.1
+				fascism_drift = 0.1
+				stability_factor = 0.15
+			}
+		}
+		POL_centrally_planned_reality_idea = {
+			picture = chi_forced_conscription 
+			allowed = {
+				tag = POL
+			}
+			available = {
+				#empty
+			}
+			cancel = {
+				has_government = democratic
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				research_speed_factor = 0.03
+				conscription_factor = 0.05
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				political_power_factor = 0.1
+				stability_factor = 0.35
+				war_support_factor = 0.1
+				fascism_drift = 0.15
+				communism_drift = 0.2
 			}
 		}
 	}

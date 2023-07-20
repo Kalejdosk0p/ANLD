@@ -70,14 +70,16 @@ add_ideas = {
 	robber_barons
 }
 
+recruit_character = ARG_orelie_antoine_ii
+recruit_character = ARG_hipólito_yrigoyen
+recruit_character = ARG_juan_domingo_perón
 recruit_character = ARG_agustín_pedro_justo
 recruit_character = ARG_nimo_de_anquín
+
 recruit_character = ARG_arturo_rawson
 recruit_character = ARG_juan_pistarini
 recruit_character = ARG_alberto_teisaire
+
 recruit_character = ARG_roberto_maría_ortiz
 recruit_character = ARG_marcelo_t._de_alvear
 recruit_character = ARG_fanny_jabcovsky
-recruit_character = ARG_hipólito_yrigoyen
-recruit_character = ARG_julio_roca_iii
-recruit_character = ARG_juan_domingo_perón

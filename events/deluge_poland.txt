@@ -148,7 +148,7 @@ country_event = {#old king wettyn dies country
 			limit = {has_idea = old_wettyn_king}
 			swap_ideas = {
 				remove_idea = old_wettyn_king
-				add_idea = new_wettyn_king
+				add_idea = fryderyk_ii_idea
 			}
 		}
 		POL = {
@@ -598,8 +598,8 @@ country_event = {##king wants to leave
 			remove_ideas = old_wettyn_king
 		}
 		else_if = {
-			limit = {POL = {has_idea = new_wettyn_king}}
-			remove_ideas = new_wettyn_king
+			limit = {POL = {has_idea = fryderyk_ii_idea}}
+			remove_ideas = fryderyk_ii_idea
 		}
 		hidden_effect = {
 			country_event = { id = deluge_poland.23 days = 7 }
@@ -884,7 +884,7 @@ country_event = {##Stachniuk changes king
 	option = {##Stachniuk puts Paweł Salwator Piast-Riedelski
 		name = deluge_poland.26.a
 		swap_ideas = {
-			remove_idea = new_wettyn_king
+			remove_idea = fryderyk_ii_idea
 			add_idea = POL_piast_king
 		}
 		ai_chance = {
@@ -894,7 +894,7 @@ country_event = {##Stachniuk changes king
 	option = {##Stachniuk put Czartoryski on the throne
 		name = deluge_poland.26.b
 		swap_ideas = {
-			remove_idea = new_wettyn_king
+			remove_idea = fryderyk_ii_idea
 			add_idea = POL_czartoryski_king
 		}
 		ai_chance = {
@@ -903,7 +903,7 @@ country_event = {##Stachniuk changes king
 	}
 	option = {##Stachniuk deletes monarchy in Poland
 		name = deluge_poland.26.c
-		remove_ideas = new_wettyn_king
+		remove_ideas = fryderyk_ii_idea
 		POL = {add_political_power = 100}
 		ai_chance = {
 			base = 1
@@ -1322,7 +1322,7 @@ country_event = {##Piasecki changes king
 	option = {##Piasecki puts Paweł Salwator Piast-Riedelski
 		name = deluge_poland.41.a
 		swap_ideas = {
-			remove_idea = new_wettyn_king
+			remove_idea = fryderyk_ii_idea
 			add_idea = POL_piast_king
 		}
 		ai_chance = {
@@ -1332,7 +1332,7 @@ country_event = {##Piasecki changes king
 	option = {##Piasecki put Czartoryski on the throne
 		name = deluge_poland.41.b
 		swap_ideas = {
-			remove_idea = new_wettyn_king
+			remove_idea = fryderyk_ii_idea
 			add_idea = POL_czartoryski_king
 		}
 		ai_chance = {
@@ -1341,7 +1341,7 @@ country_event = {##Piasecki changes king
 	}
 	option = {##Piasecki deletes monarchy in Poland
 		name = deluge_poland.41.c
-		remove_ideas = new_wettyn_king
+		remove_ideas = fryderyk_ii_idea
 		POL = {add_political_power = -50}
 		ai_chance = {
 			base = 1
@@ -1350,7 +1350,7 @@ country_event = {##Piasecki changes king
 	option = {##Piasecki makes deal with king
 		name = deluge_poland.41.e
 		swap_ideas = {
-			remove_idea = new_wettyn_king
+			remove_idea = fryderyk_ii_idea
 			add_idea = new_wettyn_king_piasecki
 		}
 		POL = {add_political_power = 100}		
@@ -2265,11 +2265,11 @@ country_event = {##question of monarchy in new Polish Republic
 	option = {##Turn him fully into figurhead
 		name = deluge_poland.75.a
 		trigger = {
-			has_idea = new_wettyn_king
+			has_idea = fryderyk_ii_idea
 		}
 		swap_ideas = {
 			add_idea = new_wettyn_king_figurehead
-			remove_idea = new_wettyn_king
+			remove_idea = fryderyk_ii_idea
 		}
 		ai_chance = {
 			base = 1
@@ -2279,7 +2279,7 @@ country_event = {##question of monarchy in new Polish Republic
 		name = deluge_poland.75.b
 		trigger = {
 			NOT = {
-				has_idea = new_wettyn_king
+				has_idea = fryderyk_ii_idea
 			}
 		}
 		set_cosmetic_tag = POL_rzeczpospolita
@@ -2293,17 +2293,17 @@ country_event = {##question of monarchy in new Polish Republic
 		name = deluge_poland.75.c
 		if = {
 			limit = {
-				has_idea = new_wettyn_king
+				has_idea = fryderyk_ii_idea
 			}
 			swap_ideas = {
 				add_idea = POL_piast_king
-				remove_idea = new_wettyn_king
+				remove_idea = fryderyk_ii_idea
 			}
 		}
 		if = {
 			limit = {
 				NOT = {
-					has_idea = new_wettyn_king
+					has_idea = fryderyk_ii_idea
 				}
 			}
 			add_ideas = POL_piast_king
@@ -2316,17 +2316,17 @@ country_event = {##question of monarchy in new Polish Republic
 		name = deluge_poland.75.e
 		if = {
 			limit = {
-				has_idea = new_wettyn_king
+				has_idea = fryderyk_ii_idea
 			}
 			swap_ideas = {
 				add_idea = POL_czartoryski_king
-				remove_idea = new_wettyn_king
+				remove_idea = fryderyk_ii_idea
 			}
 		}
 		if = {
 			limit = {
 				NOT = {
-					has_idea = new_wettyn_king
+					has_idea = fryderyk_ii_idea
 				}
 			}
 			add_ideas = POL_czartoryski_king
@@ -2821,6 +2821,131 @@ country_event = {##mister chairman buys a cat
 		name = deluge_poland.87.e
 		add_political_power = -1
 		add_country_leader_trait = red_cat
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##after integration of PNS there is possibility to have new party name
+	id = deluge_poland.88
+	title = deluge_poland.88.t
+	desc = deluge_poland.88.d
+	picture = GFX_report_event_SOV_young_builders_of_communism
+	is_triggered_only = yes
+	option = {##no change
+		name = deluge_poland.88.a
+		add_political_power = 5
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##NOP for NSP
+		name = deluge_poland.88.b
+		trigger = {
+			has_completed_focus = POL_NSP_wins
+		}
+		set_party_name = { ideology = communism long_name = POL_NOP_name_long name = POL_NOP_name_short}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##ONS for NSPR
+		name = deluge_poland.88.c
+		trigger = {
+			has_completed_focus = POL_NSPR_wins
+		}
+		set_party_name = { ideology = communism long_name = POL_ONS_name_long name = POL_ONS_name_short}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##RNS for rest except PKWN
+		name = deluge_poland.88.e
+		trigger = {
+			OR = {
+				has_completed_focus = POL_KPP_wins
+				has_completed_focus = POL_PPS_wins
+			}
+		}
+		set_party_name = { ideology = communism long_name = POL_RNS_name_long name = POL_RNS_name_short}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##PKWN is disbanded, PZPR is new ruling party, now choosing it's leader
+	id = deluge_poland.89
+	title = deluge_poland.89.t
+	desc = deluge_poland.89.d
+	picture = GFX_report_event_SOV_young_builders_of_communism ##later change it to pzpr conference
+	is_triggered_only = yes
+	option = {##Antoni Ciszak
+		name = deluge_poland.89.a
+		promote_character = POL_deluge_antoni_ciszak
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##Władysław Gomułka
+		name = deluge_poland.89.b
+		promote_character = POL_deluge_wladyslaw_gomulka
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##Zygmunt Marek
+		name = deluge_poland.89.c
+		promote_character = POL_deluge_zygumnt_marek
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##Kazimierz Dagnan
+		name = deluge_poland.89.e
+		promote_character = POL_deluge_dagnan
+		hidden_effect = {
+			retire_character = POL_deluge_pkwn
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {##making dystopia is finished, player can choose between merging national spirits and upgrading them or getting new trait for leader
+	id = deluge_poland.90
+	title = deluge_poland.90.t
+	desc = deluge_poland.90.d
+	picture = GFX_report_event_czech_soldiers_01
+	is_triggered_only = yes
+	option = {##spirit
+		name = deluge_poland.90.a
+		custom_effect_tooltip = POL_custom_effect_tooltip_240
+		hidden_effect = {
+			remove_ideas = {
+				POL_centrally_planned_man_idea
+				POL_centrally_planned_art_idea
+				POL_centrally_planned_society_idea
+				POL_centrally_planned_selection_idea
+				POL_centrally_planned_economy_idea
+			}
+			add_ideas = POL_centrally_planned_reality_idea
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {##trait
+		name = deluge_poland.90.b
+		add_country_leader_trait = central_planner_of_reality
 		ai_chance = {
 			base = 1
 		}
@@ -5907,6 +6032,10 @@ country_event = {##POL becomes subject or is alone in faction so european cooper
 				is_faction_leader = yes
 				num_faction_members < 2
 			}
+		}
+		has_country_flag = {
+			flag = POL_created_eu_coop
+			days > 730
 		}
 	}
 	mean_time_to_happen = {
