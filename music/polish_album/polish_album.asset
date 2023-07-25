@@ -19,11 +19,6 @@ music = {
 	volume = 0.60
 }
 music = {
-	name = "kalina_malina"
-	file = "kalina_malina.ogg"
-	volume = 0.60
-}
-music = {
 	name = "weeping_willows"
 	file = "weeping_willows.ogg"
 	volume = 0.60

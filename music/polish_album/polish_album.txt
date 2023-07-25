@@ -69,23 +69,6 @@ music = {
 	}
 }
 music = {
-	song = "kalina_malina"
-
-	chance = {
-		factor = 1
-		modifier = {
-			factor = 3
-			original_tag = POL
-			has_war = no
-		}
-		modifier = {
-			factor = 0
-			original_tag = POL
-			has_war = yes
-		}
-	}
-}
-music = {
 	song = "weeping_willows"
 
 	chance = {
