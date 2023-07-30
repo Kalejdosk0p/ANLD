@@ -37,16 +37,16 @@ create_import = {
 }
 
 set_politics = {
-	ruling_party = democratic
+	ruling_party = communism
 	last_election = "1937.3.5"
 	election_frequency = 48
 	elections_allowed = yes
 }
 
 set_popularities = {
-	democratic = 50
+	democratic = 30
 	fascism = 15
-	communism = 30
+	communism = 50
 	neutrality = 5
 }
 	
