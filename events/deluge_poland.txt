@@ -379,21 +379,17 @@ country_event = {#Roman Dmowski dies
 	desc = {
 		text = deluge_poland.16.d1
 		trigger = {
-			trigger = {
 			POL_deluge_Dmowski = {
 				is_country_leader = yes
 			}
-		}
 		}
 	}
 	desc = {
 		text = deluge_poland.16.d2
 		trigger = {
-			trigger = {
 			POL_deluge_Dmowski = {
 				is_country_leader = no
 			}
-		}
 		}
 	}
 	picture = GFX_roman_dmowski_died_small
@@ -404,6 +400,7 @@ country_event = {#Roman Dmowski dies
 			has_completed_focus = POL_ND_wins
 		}
 	}
+	fire_only_once = yes
 	option = {##Tadeusz Bielecki
 		name = deluge_poland.16.a
 		trigger = {
@@ -651,7 +648,7 @@ country_event = {##Circle of God's Cause infiltrates POL government
 		add_stability = -0.05
 		add_ideas = POL_circle_of_gods_cause
 		hidden_effect = {
-			country_event = { id = deluge_poland.24 days = 28 }
+			country_event = { id = deluge_poland.24 days = 21 }
 		}
 	}
 }
@@ -708,6 +705,9 @@ country_event = {##plot happenes
 		add_ideas = POL_problems_in_administration
 		add_ideas = POL_problems_in_army
 		retire_character = POL_Smigly
+		retire_character = POL_Sanation_Emergency_Council
+		set_party_name = { ideology = fascism long_name = POL_falanga_name_long name = POL_falanga_name_short }
+		promote_character = POL_Piasecki
 		hidden_effect = {
 			news_event = {
 				id = deluge_poland.53
@@ -765,6 +765,9 @@ country_event = {##plot happenes
 		add_ideas = POL_problems_in_administration
 		add_ideas = POL_problems_in_army
 		retire_character = POL_Smigly
+		retire_character = POL_Sanation_Emergency_Council
+		set_party_name = { ideology = fascism long_name = POL_falanga_name_long name = POL_falanga_name_short }
+		promote_character = POL_Piasecki
 		promote_character = POL_deluge_pkwn
 		set_party_name = { ideology = communism long_name = POL_PKWN_name_long name = POL_PKWN_name_short }
 		hidden_effect = {
@@ -824,6 +827,9 @@ country_event = {##plot happenes
 		add_ideas = POL_problems_in_administration
 		add_ideas = POL_problems_in_army
 		retire_character = POL_Smigly
+		retire_character = POL_Sanation_Emergency_Council
+		set_party_name = { ideology = fascism long_name = POL_falanga_name_long name = POL_falanga_name_short }
+		promote_character = POL_Piasecki
 		hidden_effect = {
 			news_event = {
 				id = deluge_poland.53
@@ -1022,6 +1028,7 @@ country_event = {##king dies abroad country
 	title = deluge_poland.31.t
 	desc = deluge_poland.31.d
 	picture = GFX_deluge_port
+	fire_only_once = yes
 	trigger = {
 		tag = POL
 		POL = {
@@ -6177,5 +6184,441 @@ country_event = {##countries get economic spirit after joining polish faction
 		ai_chance = {
 			factor = 500
 		}
+	}
+}
+country_event = {##every country that owns Pomerania gets option to give it back to Poland or be at war with POL
+	id = deluge_poland_foreign.67
+	title = deluge_poland_foreign.67.t
+	desc = deluge_poland_foreign.67.d
+	picture = GFX_report_event_polish_tanks_02
+	is_triggered_only = yes
+	option = {#accept
+		name = deluge_poland_foreign.67.a
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland_foreign.69
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					owns_state = 85
+				}
+			}
+			85 = { transfer_state_to = FROM }
+		}
+		if = {
+			limit = {
+				ROOT = {
+					owns_state = 62
+				}
+			}
+			62 = { transfer_state_to = FROM }
+		}
+		if = {
+			limit = {
+				ROOT = {
+					owns_state = 63
+				}
+			}
+			63 = { transfer_state_to = FROM }
+		}
+		if = {
+			limit = {
+				ROOT = {
+					owns_state = 807
+				}
+			}
+			807 = { transfer_state_to = FROM }
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio < 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 20
+				has_opinion = {
+				    target = FROM
+				    value > 30
+				}
+			}
+			modifier = {
+				add = -20
+				has_opinion = {
+				    target = FROM
+				    value < 30
+				}
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+				add = 40
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+				add = -40
+			}
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.67.b
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = deluge_poland_foreign.68
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio < 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -20
+				has_opinion = {
+				    target = FROM
+				    value > 30
+				}
+			}
+			modifier = {
+				add = 20
+				has_opinion = {
+				    target = FROM
+				    value < 30
+				}
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+				add = -40
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+				add = 40
+			}
+		}
+	}
+}
+country_event = {##POL gets info that FROM rejected Polish demands
+	id = deluge_poland_foreign.68
+	title = deluge_poland_foreign.68.t
+	desc = deluge_poland_foreign.68.d
+	picture = GFX_report_event_poland_rejects
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.68.a
+		create_wargoal = {
+			type = take_claimed_state
+			target = FROM
+			generator = {
+				62 63 85 807
+			}
+		}
+		ai_chance = {
+			factor = 500
+		}
+	}
+}
+news_event = {#FROM gives Pomerania back to POL - FROM.FROM propably
+	id = deluge_poland_foreign.69
+	title = deluge_poland_foreign.69.t 
+	desc = deluge_poland_foreign.69.d
+	picture = GFX_news_event_polish_border
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.69.a
+	}
+}
+country_event = {##every country that owns Lubuskie/Neumark (68) gets option to give it back to Poland or be at war with POL
+	id = deluge_poland_foreign.70
+	title = deluge_poland_foreign.70.t
+	desc = deluge_poland_foreign.70.d
+	picture = GFX_report_event_polish_tanks_02
+	is_triggered_only = yes
+	option = {#accept
+		name = deluge_poland_foreign.70.a
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland_foreign.72
+			}
+		}
+		if = {
+			limit = {
+				ROOT = {
+					owns_state = 68
+				}
+			}
+			68 = { transfer_state_to = FROM }
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio < 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 20
+				has_opinion = {
+				    target = FROM
+				    value > 30
+				}
+			}
+			modifier = {
+				add = -20
+				has_opinion = {
+				    target = FROM
+				    value < 30
+				}
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+				add = 40
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+				add = -40
+			}
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.70.b
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = deluge_poland_foreign.71
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio < 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -20
+				has_opinion = {
+				    target = FROM
+				    value > 30
+				}
+			}
+			modifier = {
+				add = 20
+				has_opinion = {
+				    target = FROM
+				    value < 30
+				}
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+				add = -40
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+				add = 40
+			}
+		}
+	}
+}
+country_event = {##POL gets info that FROM rejected Polish demands
+	id = deluge_poland_foreign.71
+	title = deluge_poland_foreign.71.t
+	desc = deluge_poland_foreign.71.d
+	picture = GFX_report_event_poland_rejects
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.71.a
+		create_wargoal = {
+			type = take_claimed_state
+			target = FROM
+			generator = {
+				68
+			}
+		}
+		ai_chance = {
+			factor = 500
+		}
+	}
+}
+news_event = {#FROM gives Pomerania back to POL - FROM.FROM propably
+	id = deluge_poland_foreign.72
+	title = deluge_poland_foreign.72.t 
+	desc = deluge_poland_foreign.72.d
+	picture = GFX_news_event_polish_border
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.72.a
+	}
+}
+country_event = {##country gets invitation from radical Poland to it's faction
+	id = deluge_poland_foreign.73
+	title = deluge_poland_foreign.73.t
+	desc = deluge_poland_foreign.73.d
+	picture = GFX_polish_cavalary_1
+	is_triggered_only = yes
+	option = {##accept
+		name = deluge_poland_foreign.73.a
+		POL = { add_to_faction = ROOT }
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = 50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio < 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 20
+				has_opinion = {
+				    target = FROM
+				    value > 30
+				}
+			}
+			modifier = {
+				add = -20
+				has_opinion = {
+				    target = FROM
+				    value < 30
+				}
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+				add = 40
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+				add = -40
+			}
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.73.b
+		add_political_power = 1
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio < 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -20
+				has_opinion = {
+				    target = FROM
+				    value > 30
+				}
+			}
+			modifier = {
+				add = 20
+				has_opinion = {
+				    target = FROM
+				    value < 30
+				}
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+				add = -40
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+				add = 40
+			}
+		}
+	}
+}
+news_event = {#POL forms radical european union
+	id = deluge_poland_foreign.74
+	title = deluge_poland_foreign.74.t 
+	desc = deluge_poland_foreign.74.d
+	picture = GFX_news_event_063
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.74.a
 	}
 }

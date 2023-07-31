@@ -1906,7 +1906,7 @@ focus_tree = {
 	#		
 	#	}
 	#	completion_reward = {
-	#		#add_ideas = state_that_gives
+	#		#add_ideas = 
 	#	}
 	#	ai_will_do = {
 	#		factor = 20
@@ -2370,9 +2370,9 @@ focus_tree = {
 			hidden_effect = {
 				remove_ideas = freedom_of_religion_idea
 				remove_ideas = culture_not_race_national_spirit
+				add_ideas = little_light_of_democracy
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_36
-			add_ideas = little_light_of_democracy
 			if = {
 				limit = {
 					NOT = {
@@ -2971,8 +2971,8 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.15
 			}
-			add_to_variable = { POL_zadruga_army_defence_against_major_factor = 0.1}
-			add_to_variable = { POL_zadruga_army_attack_against_major_factor = 0.1}
+			add_to_variable = { POL_zadruga_army_defence_against_major_factor = 0.02}
+			add_to_variable = { POL_zadruga_army_attack_against_major_factor = 0.02}
 			custom_effect_tooltip = POL_custom_effect_tooltip_68
 		}
 		ai_will_do = {
@@ -2998,9 +2998,9 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = { POL_zadruga_consumer_goods_factor = -0.05}
-			add_to_variable = { POL_zadruga_production_factory_max_efficiency_factor = 0.1}
-			add_to_variable = { POL_zadruga_production_factory_efficiency_gain_factor = 0.05}
+			add_to_variable = { POL_zadruga_consumer_goods_factor = -0.02}
+			add_to_variable = { POL_zadruga_production_factory_max_efficiency_factor = 0.03}
+			add_to_variable = { POL_zadruga_production_factory_efficiency_gain_factor = 0.02}
 			custom_effect_tooltip = POL_custom_effect_tooltip_69
 			if = {
 				limit = {
@@ -3803,9 +3803,9 @@ focus_tree = {
 				uses = 1
 				category = engineers_tech 
 			}
-			add_to_variable = {POL_falanga_research_speed_factor = 0.04}
+			add_to_variable = {POL_falanga_research_speed_factor = 0.02}
 			add_to_variable = {POL_falanga_monthly_population = 0.1}
-			add_to_variable = {POL_falanga_war_support_factor = 0.20}
+			add_to_variable = {POL_falanga_war_support_factor = 0.05}
 			custom_effect_tooltip = POL_custom_effect_tooltip_123
 		}
 		ai_will_do = {
@@ -3833,9 +3833,9 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = -100000
 			add_to_variable = {POL_falanga_research_speed_factor = 0.03}
-			add_to_variable = {POL_falanga_monthly_population = -0.05}
-			add_to_variable = {POL_falanga_stability_factor = 0.15}
-			add_to_variable = {POL_falanga_production_factory_max_efficiency_factor = 0.05}
+			add_to_variable = {POL_falanga_monthly_population = -0.07}
+			add_to_variable = {POL_falanga_stability_factor = 0.05}
+			add_to_variable = {POL_falanga_production_factory_max_efficiency_factor = 0.02}
 			custom_effect_tooltip = POL_custom_effect_tooltip_124
 		}
 		ai_will_do = {
@@ -3862,8 +3862,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = -200000
-			add_to_variable = {POL_falanga_army_defence_factor = 0.05}
-			add_to_variable = {POL_falanga_army_attack_factor = 0.05}
+			add_to_variable = {POL_falanga_army_defence_factor = 0.03}
+			add_to_variable = {POL_falanga_army_attack_factor = 0.03}
 			add_to_variable = {POL_falanga_command_power_gain_mult = 0.1}
 			custom_effect_tooltip = POL_custom_effect_tooltip_125
 			set_rule = {
@@ -3933,7 +3933,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_to_variable = { POL_falanga_stability_factor = -0.05}
-			add_to_variable = { POL_falanga_consumer_goods_factor = -0.05}
+			add_to_variable = { POL_falanga_consumer_goods_factor = -0.02}
 			add_to_variable = { POL_falanga_war_support_factor = -0.05}
 			custom_effect_tooltip = POL_custom_effect_tooltip_127
 			random_owned_state = {
@@ -4062,7 +4062,7 @@ focus_tree = {
 				popularity = -0.05
 			}
 			add_to_variable = { POL_falanga_consumer_goods_factor = -0.03}
-			add_to_variable = { POL_falanga_conscription = 0.015}
+			add_to_variable = { POL_falanga_conscription = 0.005}
 			POL = {
 				add_political_power = 50
 				add_war_support = 0.05
@@ -4097,9 +4097,9 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_to_variable = { POL_falanga_research_speed_factor = 0.02}
-			add_to_variable = { POL_falanga_conscription = 0.015}
+			add_to_variable = { POL_falanga_conscription = 0.005}
 			add_to_variable = { POL_falanga_training_time_factor = -0.15}
-			add_to_variable = { POL_falanga_war_support_factor = 0.05}
+			add_to_variable = { POL_falanga_war_support_factor = 0.02}
 			custom_effect_tooltip = POL_custom_effect_tooltip_130
 		}
 		ai_will_do = {
@@ -4145,9 +4145,9 @@ focus_tree = {
 			add_to_variable = { POL_falanga_party_popularity_stability_factor = 0.1}
 			add_to_variable = { POL_falanga_political_power_factor = 0.05}
 			add_to_variable = { POL_falanga_fascism_drift = 0.05}
-			add_to_variable = { POL_falanga_war_support_factor = 0.05}
-			add_to_variable = { POL_falanga_democratic_drift = 0.03}
-			add_to_variable = { POL_falanga_neutrality_drift = 0.03}
+			add_to_variable = { POL_falanga_war_support_factor = 0.02}
+			add_to_variable = { POL_falanga_democratic_drift = 0.01}
+			add_to_variable = { POL_falanga_neutrality_drift = 0.01}
 			custom_effect_tooltip = POL_custom_effect_tooltip_131
 		}
 		ai_will_do = {
@@ -4177,11 +4177,11 @@ focus_tree = {
 		completion_reward = {
 			set_party_name = { ideology = fascism long_name = POL_PON_name_long name = POL_PON_name_short }
 			add_to_variable = { POL_falanga_party_popularity_stability_factor = 0.1}
-			add_to_variable = { POL_falanga_political_power_factor = 0.05}
+			add_to_variable = { POL_falanga_political_power_factor = 0.03}
 			add_to_variable = { POL_falanga_fascism_drift = 0.05}
-			add_to_variable = { POL_falanga_stability_factor = 0.1}
-			add_to_variable = { POL_falanga_democratic_drift = -0.08}
-			add_to_variable = { POL_falanga_neutrality_drift = -0.08}
+			add_to_variable = { POL_falanga_stability_factor = 0.02}
+			add_to_variable = { POL_falanga_democratic_drift = -0.06}
+			add_to_variable = { POL_falanga_neutrality_drift = -0.06}
 			add_to_variable = { POL_falanga_communism_drift = -0.05}
 			add_to_variable = { POL_falanga_resistance_decay_on_our_occupied_states = -0.20}
 			custom_effect_tooltip = POL_custom_effect_tooltip_132
@@ -4211,9 +4211,9 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = { POL_falanga_political_power_factor = -0.05}
-			add_to_variable = { POL_falanga_production_speed_buildings_factor = 0.05}
-			add_to_variable = { POL_falanga_industrial_capacity_factory = 0.05}
+			add_to_variable = { POL_falanga_political_power_factor = -0.07}
+			add_to_variable = { POL_falanga_production_speed_buildings_factor = 0.03}
+			add_to_variable = { POL_falanga_industrial_capacity_factory = 0.03}
 			custom_effect_tooltip = POL_custom_effect_tooltip_133
 			if = {
 				limit = {
@@ -4254,9 +4254,9 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = { POL_falanga_production_factory_efficiency_gain_factor = 0.05}
-			add_to_variable = { POL_falanga_production_factory_max_efficiency_factor = 0.05}
-			add_to_variable = { POL_falanga_industrial_capacity_factory = 0.05}
+			add_to_variable = { POL_falanga_production_factory_efficiency_gain_factor = 0.02}
+			add_to_variable = { POL_falanga_production_factory_max_efficiency_factor = 0.02}
+			add_to_variable = { POL_falanga_industrial_capacity_factory = 0.02}
 			custom_effect_tooltip = POL_custom_effect_tooltip_134
 		}
 		ai_will_do = {
@@ -4282,9 +4282,9 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = { POL_falanga_army_core_attack_factor = 0.05}
-			add_to_variable = { POL_falanga_army_core_defence_factor = 0.05}
-			add_to_variable = { POL_falanga_army_org_factor = 0.03}
+			add_to_variable = { POL_falanga_army_core_attack_factor = 0.02}
+			add_to_variable = { POL_falanga_army_core_defence_factor = 0.02}
+			add_to_variable = { POL_falanga_army_org_factor = 0.02}
 			custom_effect_tooltip = POL_custom_effect_tooltip_135
 		}
 		ai_will_do = {
@@ -4310,9 +4310,9 @@ focus_tree = {
 			has_stability > 0.5
 		}
 		completion_reward = {
-			add_to_variable = { POL_falanga_production_factory_efficiency_gain_factor = 0.05}
-			add_to_variable = { POL_falanga_production_factory_max_efficiency_factor = 0.05}
-			add_to_variable = { POL_falanga_line_change_production_efficiency_factor = 0.05}
+			add_to_variable = { POL_falanga_production_factory_efficiency_gain_factor = 0.03}
+			add_to_variable = { POL_falanga_production_factory_max_efficiency_factor = 0.03}
+			add_to_variable = { POL_falanga_line_change_production_efficiency_factor = 0.03}
 			custom_effect_tooltip = POL_custom_effect_tooltip_136
 			set_country_flag = strikes_delegalised_flag
 			custom_effect_tooltip = strikes_delegalised_flag_tooltip
@@ -4343,9 +4343,9 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = { POL_falanga_production_speed_buildings_factor = 0.05}
-			add_to_variable = { POL_falanga_consumer_goods_factor = -0.05}
-			add_to_variable = { POL_falanga_local_resources_factor = 0.05}
+			add_to_variable = { POL_falanga_production_speed_buildings_factor = 0.03}
+			add_to_variable = { POL_falanga_consumer_goods_factor = -0.03}
+			add_to_variable = { POL_falanga_local_resources_factor = 0.03}
 			custom_effect_tooltip = POL_custom_effect_tooltip_138
 		}
 		ai_will_do = {
@@ -4371,9 +4371,9 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = { POL_falanga_research_speed_factor = 0.03}
-			add_to_variable = { POL_falanga_monthly_population = 0.05}
-			add_to_variable = { POL_falanga_global_building_slots_factor = 0.1}
+			add_to_variable = { POL_falanga_research_speed_factor = 0.02}
+			add_to_variable = { POL_falanga_monthly_population = 0.03}
+			add_to_variable = { POL_falanga_global_building_slots_factor = 0.05}
 			custom_effect_tooltip = POL_custom_effect_tooltip_139
 		}
 		ai_will_do = {
@@ -4399,7 +4399,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = { POL_falanga_industrial_capacity_factory = 0.05}
+			add_to_variable = { POL_falanga_industrial_capacity_factory = 0.03}
 			add_to_variable = { POL_falanga_production_speed_arms_factory_factor = 0.1}
 			custom_effect_tooltip = POL_custom_effect_tooltip_140
 			random_owned_state = {
@@ -4456,7 +4456,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			add_to_variable = { POL_falanga_local_resources_factor = 0.15}
+			add_to_variable = { POL_falanga_local_resources_factor = 0.07}
 			add_to_variable = { POL_falanga_consumer_goods_factor = -0.05}
 			add_to_variable = { POL_falanga_production_lack_of_resource_penalty_factor = -0.1}
 			custom_effect_tooltip = POL_custom_effect_tooltip_137
@@ -5232,7 +5232,7 @@ focus_tree = {
 	focus = {
 		id = POL_divide_and_conquer
 		icon = GFX_focus_generic_military_dictatorship
-		x = 119
+		x = 124
 		y = 0
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS FOCUS_FILTER_POLITICAL}
 		cost = 5
@@ -5442,7 +5442,7 @@ focus_tree = {
 				popularity = 0.05
 			}
 			add_popularity = {
-				ideology = fascism
+				ideology = neutrality
 				popularity = 0.05
 			}
 			add_stability = -0.05
@@ -5471,7 +5471,7 @@ focus_tree = {
 		available = {
 			OR = {
 				has_completed_focus = POL_ND_wins
-				has_completed_focus = POL_monarchists_take_power
+				#has_completed_focus = POL_monarchists_take_power
 				has_completed_focus = POL_NSPR_wins
 				has_completed_focus = POL_NSP_wins
 				has_completed_focus = POL_PKWN_wins
@@ -5512,7 +5512,9 @@ focus_tree = {
 		available = {
 			OR = {
 				has_completed_focus = POL_PSL_wins
-				has_completed_focus = POL_monarchists_take_power
+				has_completed_focus = POL_PPS_wins
+				has_completed_focus = POL_NSP_wins
+				has_completed_focus = POL_PKWN_wins
 			}
 		}
 		completion_reward = {
@@ -5532,7 +5534,6 @@ focus_tree = {
 				limit = {
 					is_in_faction_with = POL
 					OR = {
-						has_government = communism
 						has_government = fascism
 					}
 				}
@@ -5586,7 +5587,7 @@ focus_tree = {
 	focus = {
 		id = POL_legacy_of_polish_legions_in_lombardy
 		icon = GFX_Banner_of_1st_Polish_Legion_in_Italy_focus
-		x = 124
+		x = 129
 		y = 1
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS FOCUS_FILTER_WAR_SUPPORT}
 		cost = 8
@@ -6087,6 +6088,7 @@ focus_tree = {
 				add_to_variable = { POL_nat_lib_cath_stability_factor = 0.05}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_145
+			custom_effect_tooltip = POL_custom_effect_tooltip_157
 		}
 		ai_will_do = {
 			factor = 40
@@ -6752,6 +6754,7 @@ focus_tree = {
 				add_to_variable = { POL_demo_reborn_political_power_factor = 0.05}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_176
+			custom_effect_tooltip = POL_custom_effect_tooltip_157
 		}
 		ai_will_do = {
 			factor = 40
@@ -7334,7 +7337,7 @@ focus_tree = {
 	focus = {
 		id = POL_elections_for_new_king
 		icon = GFX_regency_council
-		x = 5
+		x = 10
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 5
@@ -7349,6 +7352,267 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = POL_custom_effect_tooltip_142
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_reform_3rd_may_consitution
+		icon = GFX_new_polish_constitution
+		x = -11
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_elections_for_new_king focus = POL_house_of_wettin_continues }
+		relative_position_id = POL_elections_for_new_king
+		available = {
+			OR = {
+				has_completed_focus = POL_house_of_wettin_continues
+				has_completed_focus = POL_piast_riedelski_wins
+				has_completed_focus = POL_andrassy_wins
+				has_completed_focus = POL_czartoryski_wins
+				has_completed_focus = POL_radziwill_wins
+				has_completed_focus = POL_tyszkiewicz_wins
+			}
+		}
+		completion_reward = {
+			hidden_effect = {
+				#add_dynamic_modifier = { modifier = POL_3rd_may_consitution_modifier }
+				#add_to_variable = {  = 0.03}
+				#add_to_variable = {  = 0.03}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_241
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_catholicism_state_religion
+		icon = GFX_only_catholic_politicians_allowed
+		x = -2
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_reform_3rd_may_consitution }
+		relative_position_id = POL_reform_3rd_may_consitution
+		mutually_exclusive = {
+			focus = POL_limited_rights_for_religious_minorities
+			focus = POL_restore_warsaw_confederation
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_limited_rights_for_religious_minorities
+		icon = GFX_focus_generic_self_management
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_reform_3rd_may_consitution }
+		relative_position_id = POL_reform_3rd_may_consitution
+		mutually_exclusive = {
+			focus = POL_catholicism_state_religion
+			focus = POL_restore_warsaw_confederation
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_restore_warsaw_confederation
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 2
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_reform_3rd_may_consitution }
+		relative_position_id = POL_reform_3rd_may_consitution
+		mutually_exclusive = {
+			focus = POL_catholicism_state_religion
+			focus = POL_limited_rights_for_religious_minorities
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_cooperate_with_remnants_of_zadruga
+		icon = GFX_focus_zadruga_logo
+		x = 2
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_restore_warsaw_confederation focus = POL_limited_rights_for_religious_minorities }
+		relative_position_id = POL_restore_warsaw_confederation
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_alliance_with_church_monarchist
+		icon = GFX_focus_por_concordat
+		x = -2
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_catholicism_state_religion focus = POL_limited_rights_for_religious_minorities }
+		relative_position_id = POL_catholicism_state_religion
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_confiscation_of_jewish_property
+		icon = GFX_focus_generic_annex_country_2
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_catholicism_state_religion focus = POL_limited_rights_for_religious_minorities}
+		relative_position_id = POL_catholicism_state_religion
+		mutually_exclusive = {
+			focus = POL_protect_the_jews_monarchist
+			focus = POL_deal_with_jews
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_protect_the_jews_monarchist
+		icon = GFX_goal_generic_defence
+		x = 4
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_limited_rights_for_religious_minorities focus = POL_restore_warsaw_confederation }
+		relative_position_id = POL_catholicism_state_religion
+		mutually_exclusive = {
+			focus = POL_confiscation_of_jewish_property
+			focus = POL_deal_with_jews
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_deal_with_jews
+		icon = GFX_peaceful_offering
+		x = 2
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_restore_warsaw_confederation focus = POL_limited_rights_for_religious_minorities }
+		relative_position_id = POL_catholicism_state_religion
+		mutually_exclusive = {
+			focus = POL_protect_the_jews_monarchist
+			focus = POL_confiscation_of_jewish_property
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
 		}
 		ai_will_do = {
 			factor = 40
@@ -7468,7 +7732,442 @@ focus_tree = {
 			
 		}
 		completion_reward = {
+			promote_character = POL_deluge_andrassy_sandor
 			set_party_name = { ideology = neutrality long_name = POL_andrassy_name_long name = POL_andrassy_name_short }
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_contact_hungarian_monarchists
+		icon = GFX_focus_hun_elect_a_king
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_andrassy_wins }
+		relative_position_id = POL_andrassy_wins
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			HUN = {
+				has_government = neutrality
+			}
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = no
+	}
+	focus = {
+		id = POL_restore_personal_union
+		icon = GFX_pol_hun_friendship_focus
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_contact_hungarian_monarchists }
+		relative_position_id = POL_contact_hungarian_monarchists
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_creation_of_real_union
+		icon = GFX_blue_red_handshake
+		x = -1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_restore_personal_union }
+		relative_position_id = POL_restore_personal_union
+		mutually_exclusive = {
+			focus = POL_one_dynasty_two_institutions
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_one_dynasty_two_institutions
+		icon = GFX_epic_generic_monarchy_icon
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_restore_personal_union }
+		relative_position_id = POL_restore_personal_union
+		mutually_exclusive = {
+			focus = POL_creation_of_real_union
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_retake_pomerania
+		icon = GFX_goal_generic_political_pressure
+		x = 4
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_one_dynasty_two_institutions focus = POL_creation_of_real_union }
+		relative_position_id = POL_creation_of_real_union
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_build_up_pomernia
+		icon = GFX_goal_generic_build_navy
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_retake_pomerania }
+		relative_position_id = POL_retake_pomerania
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_ultimatum_for_germany
+		icon = GFX_focus_attack_germany
+		x = -1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_retake_pomerania }
+		relative_position_id = POL_retake_pomerania
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_reincorporate_lubuskie
+		icon = GFX_new_industrial_colonies
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_ultimatum_for_germany }
+		relative_position_id = POL_ultimatum_for_germany
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_increase_cooperation
+		icon = GFX_POL_soldier_and_handshake
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_one_dynasty_two_institutions }
+		relative_position_id = POL_one_dynasty_two_institutions
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_revenge_for_varna
+		icon = GFX_focus_generic_attack_turkey
+		x = 1
+		y = 2
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_one_dynasty_two_institutions focus = POL_creation_of_real_union }
+		relative_position_id = POL_creation_of_real_union
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_retake_slovakia
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		x = -2
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_one_dynasty_two_institutions focus = POL_creation_of_real_union }
+		relative_position_id = POL_creation_of_real_union
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_build_up_slovakia
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_retake_slovakia }
+		relative_position_id = POL_retake_slovakia
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_expand_slovakian_mines
+		icon = GFX_goal_generic_construct_civilian
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_build_up_slovakia }
+		relative_position_id = POL_build_up_slovakia
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_restore_union_with_croatia
+		icon = GFX_focus_YUG_banovina_of_croatia
+		x = -6
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_one_dynasty_two_institutions focus = POL_creation_of_real_union }
+		relative_position_id = POL_creation_of_real_union
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_retake_vojvodina
+		icon = GFX_goal_demand_sudetenland
+		x = -4
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_one_dynasty_two_institutions focus = POL_creation_of_real_union }
+		relative_position_id = POL_creation_of_real_union
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_build_up_southern_lands
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_retake_vojvodina }
+		prerequisite = { focus = POL_restore_union_with_croatia }
+		relative_position_id = POL_retake_vojvodina
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_question_of_capital
+		icon = GFX_majesty_and_splendor
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 1
+		prerequisite = { focus = POL_creation_of_real_union }
+		relative_position_id = POL_creation_of_real_union
+		available = {
+			
+		}
+		completion_reward = {
+			
 		}
 		ai_will_do = {
 			factor = 40
@@ -9360,8 +10059,8 @@ focus_tree = {
 			hidden_effect = {
 				add_to_variable = {POL_new_plan_stability_factor = -0.15}
 				add_to_variable = {POL_new_plan_global_building_slots_factor = 0.05}
-				add_to_variable = {POL_new_plan_industrial_capacity_factory = 0.05}
-				add_to_variable = {POL_new_plan_industrial_capacity_dockyard = 0.05}
+				add_to_variable = {POL_new_plan_industrial_capacity_factory = 0.03}
+				add_to_variable = {POL_new_plan_industrial_capacity_dockyard = 0.03}
 				add_to_variable = {POL_new_plan_production_speed_buildings_factor = 0.03}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_220
@@ -9502,8 +10201,8 @@ focus_tree = {
 				add_to_variable = {POL_new_plan_communism_drift = 0.05}
 				add_to_variable = {POL_new_plan_monthly_population = 0.05}
 				add_to_variable = {POL_new_plan_global_building_slots_factor = -0.05}
-				add_to_variable = {POL_new_plan_industrial_capacity_factory = 0.05}
-				add_to_variable = {POL_new_plan_political_power_factor = 0.05}
+				add_to_variable = {POL_new_plan_industrial_capacity_factory = 0.03}
+				add_to_variable = {POL_new_plan_political_power_factor = 0.03}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_223
 		}
@@ -9544,8 +10243,8 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				add_to_variable = {POL_new_plan_production_factory_max_efficiency_factor = 0.1}
-				add_to_variable = {POL_new_plan_production_factory_efficiency_gain_factor = -0.1}
+				add_to_variable = {POL_new_plan_production_factory_max_efficiency_factor = 0.03}
+				add_to_variable = {POL_new_plan_production_factory_efficiency_gain_factor = -0.03}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_224
 		}
@@ -9586,8 +10285,8 @@ focus_tree = {
 				}
 			}
 			hidden_effect = {
-				add_to_variable = {POL_new_plan_production_factory_max_efficiency_factor = -0.1}
-				add_to_variable = {POL_new_plan_production_factory_efficiency_gain_factor = 0.1}
+				add_to_variable = {POL_new_plan_production_factory_max_efficiency_factor = -0.03}
+				add_to_variable = {POL_new_plan_production_factory_efficiency_gain_factor = 0.03}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_225
 		}
@@ -9646,8 +10345,8 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.03
 			hidden_effect = {
-				add_to_variable = {POL_new_system_army_attack_against_major_factor = 0.05}
-				add_to_variable = {POL_new_system_army_defence_against_major_factor = 0.05}
+				add_to_variable = {POL_new_system_army_attack_against_major_factor = 0.02}
+				add_to_variable = {POL_new_system_army_defence_against_major_factor = 0.02}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_199
 		}
@@ -9675,7 +10374,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				add_to_variable = {POL_new_system_conscription = 0.0000075}
+				add_to_variable = {POL_new_system_conscription = 0.005}
 				add_to_variable = {POL_new_system_minimum_training_level = -0.2}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_200
@@ -9704,7 +10403,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				add_to_variable = {POL_new_system_conscription = 0.0000075}
+				add_to_variable = {POL_new_system_conscription = 0.005}
 				add_to_variable = {training_time_army_factor = -0.15}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_201
@@ -9736,8 +10435,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				add_to_variable = {POL_new_system_army_core_attack_factor = 0.05}
-				add_to_variable = {POL_new_system_army_core_defence_factor = 0.05}
+				add_to_variable = {POL_new_system_army_core_attack_factor = 0.02}
+				add_to_variable = {POL_new_system_army_core_defence_factor = 0.02}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_202
 		}
@@ -9797,7 +10496,20 @@ focus_tree = {
 			focus = POL_glorify_warrioress
 		}
 		available = {
-			
+			OR = {
+				NOT = {
+					has_country_leader = {
+						character = POL_deluge_wanda_wasilewska
+						ruling_only = no
+					}
+				}
+				NOT = {
+					has_country_leader = {
+						character = POL_deluge_maria_koszutska
+						ruling_only = no
+					}
+				}
+			}
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -10042,7 +10754,9 @@ focus_tree = {
 			focus = POL_country_for_all
 		}
 		available = {
-			
+			NOT = {
+				has_completed_focus = POL_equality_for_all_races_and_nations
+			}
 		}
 		completion_reward = {
 			hidden_effect = {

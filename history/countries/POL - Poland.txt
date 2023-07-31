@@ -486,7 +486,21 @@ recruit_character = POL_deluge_kazimierz_zakrzewski
 recruit_character = POL_deluge_august_zaleski
 recruit_character = POL_deluge_julian_eberhardt
 recruit_character = POL_deluge_pkwn
+
 recruit_character = POL_deluge_berbecki
 recruit_character = POL_deluge_szylling
 recruit_character = POL_deluge_jan_woznicki
 recruit_character = POL_deluge_miedzinski
+recruit_character = POL_deluge_feliks_dzierzynski
+
+recruit_character = POL_deluge_stanislaw_wojciechowski
+recruit_character = POL_deluge_norbert_barlicki
+recruit_character = POL_deluge_adam_ciolkosz
+recruit_character = POL_deluge_jozef_cyrankiewicz
+recruit_character = POL_deluge_adolf_warski
+recruit_character = POL_deluge_alfred_lampe
+recruit_character = POL_deluge_stanislaw_radkiewicz
+
+recruit_character = POL_deluge_wladyslaw_studnicki
+recruit_character = POL_deluge_edward_gierek
+recruit_character = POL_deluge_andrassy_sandor

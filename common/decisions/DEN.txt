@@ -1,0 +1,36 @@
+political_actions = {
+	recruit_norwegian_generals = {
+		icon = GFX_decision_generic_army_support
+		allowed = {
+			original_tag = DEN
+		}
+		visible = {
+			always = yes
+		}
+		available = {
+			NOR = {
+				exists = no
+			}
+			any_state = {
+				is_core_of = NOR
+				is_controlled_by = DEN
+				is_owned_by = DEN
+			}
+		}
+		cost = 0
+		fire_only_once = yes
+		complete_effect = {
+			NOR = {
+				every_unit_leader = {
+					limit = {
+						
+					}
+					set_nationality = DEN
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+}

@@ -329,6 +329,10 @@ POL_labour_reforms = {##POL_labour_reforms_
 	global_building_slots_factor = POL_labour_reforms_global_building_slots_factor
 	production_factory_efficiency_gain_factor = POL_labour_reforms_production_factory_efficiency_gain_factor
 }
+POL_3rd_may_consitution_modifier = {##3rd_may_
+	enable = { always = yes }
+	icon = GFX_idea_POL_april_constitution
+}
 POL_religious_sect_of_wierszalin = {
 	enable = { always = yes }
 	icon = GFX_modifiers_SOV_civilian_labor_in_defense##change later

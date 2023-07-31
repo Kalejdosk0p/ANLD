@@ -470,6 +470,22 @@ characters={
 			desc = "POL_deluge_aleksander_tyszkiewicz_desc"
 		}
 	}
+	POL_deluge_andrassy_sandor = {
+		name = POL_Character_deluge_andrassy_sandor
+		portraits = {
+			civilian = {
+				large="gfx/leaders/HUN/sandor.dds"
+			}
+		}
+		country_leader = {
+			desc = "andrassy_desc"
+			ideology = bonapartist_ideology
+			traits = {
+				car_enthusiast
+			}
+			expire = "1965.1.1"
+		}
+	}
 	##GENERALS:
 	POL_deluge_Kukiel = {##Marian Kukiel
 		name = POL_Character_deluge_Kukiel
@@ -1786,11 +1802,11 @@ characters={
 		name=POL_Character_deluge_xawery_czernicki
 		portraits = {
 			army = {
-				small=GFX_xawery_czernicki_picture_small
+				small=GFX_xawery_czerniecki_picture_small
 				large="gfx/leaders/POL/xawery_czernicki.dds"
 			}
 			navy = {
-				small=GFX_xawery_czernicki_picture_small
+				small=GFX_xawery_czerniecki_picture_small
 				large="gfx/leaders/POL/xawery_czernicki.dds"
 			}
 		}
@@ -2072,10 +2088,15 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				NOT = {
+					has_government = communism
+				}
 			}
 			cost = 150
 			available = { 
-				
+				NOT = {
+					has_government = communism
+				}
 			}
 			traits = {
 				quartermaster_general
@@ -2098,7 +2119,7 @@ characters={
 			visible = {
 				tag = POL
 				NOT = {
-					has_completed_focus = POL_radicals_takeover
+					has_government = communism
 				}
 			}
 			cost = 150
@@ -2128,7 +2149,7 @@ characters={
 			visible = {
 				tag = POL
 				NOT = {
-					has_completed_focus = POL_radicals_takeover
+					has_government = communism
 				}
 			}
 			cost = 150
@@ -2158,7 +2179,7 @@ characters={
 			visible = {
 				tag = POL
 				NOT = {
-					has_completed_focus = POL_radicals_takeover
+					has_government = communism
 				}
 			}
 			cost = 150
@@ -2188,7 +2209,7 @@ characters={
 			visible = {
 				tag = POL
 				NOT = {
-					has_completed_focus = POL_radicals_takeover
+					has_government = communism
 				}
 			}
 			cost = 150
@@ -2221,7 +2242,7 @@ characters={
 			visible = {
 				tag = POL
 				NOT = {
-					has_completed_focus = POL_radicals_takeover
+					has_government = communism
 				}
 			}
 			cost = 150
@@ -2253,11 +2274,17 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				NOT = {
+					has_government = communism
+				}
 			}
 			cost = 150
 			available = { 
 				POL = {
 					has_completed_focus = POL_hire_economists
+				}
+				NOT = {
+					has_government = communism
 				}
 			}
 			traits = {
@@ -2281,7 +2308,7 @@ characters={
 			visible = {
 				tag = POL
 				NOT = {
-					has_completed_focus = POL_radicals_takeover
+					has_government = communism
 				}
 			}
 			cost = 150
@@ -2311,10 +2338,15 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				NOT = {
+					has_government = communism
+				}
 			}
 			cost = 150
-			available = { 
-				
+			available = {
+				NOT = {
+					has_government = communism
+				}
 			}
 			traits = {
 				silent_workhorse
@@ -2508,6 +2540,14 @@ characters={
 					OR = {
 						has_country_flag = POL_supported_lviv_uni
 						has_country_flag = POL_supported_warsaw_uni
+						AND = {
+							has_government = communism
+							has_completed_focus = POL_radicals_takeover
+						}
+						AND = {
+							has_government = fascism
+							has_completed_focus = POL_continue_with_sanation
+						}
 					}
 				}
 			}
@@ -2547,13 +2587,12 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
-				NOT = {
-					has_completed_focus = POL_oppose_sanation
-				}
+				has_government = fascism
 			}
 			cost = 150
 			available = { 
 				has_completed_focus = POL_rising_of_central_powers
+				has_government = fascism
 			}
 			traits = {
 				#smooth_talking_charmer
@@ -2577,6 +2616,7 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 			}
 			cost = 150
 			available = { 
@@ -2602,13 +2642,17 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
-					has_completed_focus = POL_oppose_sanation
+					has_completed_focus = POL_establish_zadruga
 				}
 			}
 			cost = 150
 			available = { 
-				
+				has_government = fascism
+				NOT = {
+					has_completed_focus = POL_establish_zadruga
+				}
 			}
 			traits = {
 				fascist_demagogue
@@ -2634,9 +2678,9 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = POL_oppose_sanation
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_stachniuk_wins
@@ -2644,7 +2688,7 @@ characters={
 				}
 			}
 			cost = 150
-			available = { 
+			available = {
 				has_completed_focus = POL_smigly_wins
 			}
 			traits = {
@@ -2670,13 +2714,12 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
-				NOT = {
-					has_completed_focus = POL_oppose_sanation
-				}
+				has_government = fascism
 			}
 			cost = 150
 			available = { 
 				has_completed_focus = POL_continue_with_sanation
+				has_government = fascism
 			}
 			traits = {
 				backroom_backstabber
@@ -2701,9 +2744,9 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = POL_oppose_sanation
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_stachniuk_wins
 					}
@@ -2739,16 +2782,16 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = POL_oppose_sanation
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_stachniuk_wins
 					}
 				}
 			}
 			cost = 150
-			available = { 
+			available = {
 				OR = {
 					has_completed_focus = POL_ONR_takes_over
 					has_completed_focus = POL_smigly_wins
@@ -2778,9 +2821,9 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = POL_oppose_sanation
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
@@ -2814,9 +2857,9 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = POL_oppose_sanation
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
@@ -2850,9 +2893,9 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = POL_oppose_sanation
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
@@ -2887,9 +2930,9 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = POL_oppose_sanation
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
@@ -2907,7 +2950,7 @@ characters={
 			ledger = civilian
 		}
 	}
-	POL_deluge_tadeusz_then = {##Bogusław Wojsław Stępiński
+	POL_deluge_tadeusz_then = {##Tadeusz Then
 		name = POL_Character_deluge_tadeusz_then
 		portraits={
 			civilian={
@@ -2923,9 +2966,9 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				has_government = fascism
 				NOT = {
 					OR = {
-						has_completed_focus = POL_oppose_sanation
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
@@ -3265,14 +3308,17 @@ characters={
 					OR = {
 						has_completed_focus = POL_continue_with_sanation
 						has_completed_focus = POL_ND_wins
+						has_completed_focus = POL_monarchists_take_power
 					}
 				}
 			}
 			cost = 150
-			available = { 
+			available = {
 				POL = {
-					has_completed_focus = POL_integrate_SCh
-					has_completed_focus = POL_alliance_with_SCh
+					OR = {
+						has_completed_focus = POL_integrate_SCh
+						has_completed_focus = POL_alliance_with_SCh
+					}
 				}
 			}
 			traits = {
@@ -3412,7 +3458,6 @@ characters={
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_stachniuk_wins
 						has_completed_focus = POL_smigly_wins
-						#has_completed_focus = POL_PSL_wins
 						has_completed_focus = POL_radicals_takeover
 					}
 				}
@@ -3818,13 +3863,57 @@ characters={
 			ledger = civilian
 		}
 	}
+	POL_deluge_wladyslaw_studnicki = {##Władysław Studnicki-Gizbert - monarchist collabolator
+		name = POL_Character_deluge_wladyslaw_studnicki
+		portraits={
+			civilian={
+				small=GFX_wladyslaw_gimbert_studniecki_picture_small
+			}
+			army={
+				small=GFX_wladyslaw_gimbert_studniecki_picture_small
+			}
+		}
+		advisor={
+			slot = intelligence_chief_slot
+			idea_token = POL_deluge_wladyslaw_studnicki
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_radicals_takeover
+					}
+				}
+			}
+			cost = 150
+			available = {
+				has_completed_focus = POL_monarchists_take_power
+				has_government = neutrality
+			}
+			traits = {
+				minister_of_religious_denominations_and_public_enlightenment
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+		country_leader = {
+			ideology = bonapartist_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				
+			}
+			desc = "POL_deluge_wladyslaw_studnicki_desc"
+		}
+	}
 	##COMMUNISTS:
 	POL_deluge_zygumnt_marek = {##Zygmunt Marek
 		name = POL_Character_deluge_zygumnt_marek
 		portraits={
 			civilian={ 
 				large = "gfx/leaders/POL/zygmunt_marek.dds"
-				small = GFX_zygumnt_marek_picture_small
+				small = GFX_zygmunt_marek_picture_small
 			}
 		}
 		country_leader = {
@@ -4118,7 +4207,7 @@ characters={
 		}
 		gender = female
 		advisor={
-			slot = political_advisor
+			slot = chief_of_staff_slot
 			idea_token = POL_deluge_wanda_wasilewska
 			allowed = { tag = POL }
 			visible = {
@@ -4192,6 +4281,127 @@ characters={
 			}
 			traits = {
 				deluge_pernament_revolutionary
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_stanislaw_wojciechowski = {##Stanisław Wojciechowski 
+		name = POL_Character_deluge_stanislaw_wojciechowski
+		portraits={
+			civilian={
+				small=GFX_stanislaw_wojciechowski_picture_small
+			}
+			army={
+				small=GFX_stanislaw_wojciechowski_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_stanislaw_wojciechowski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_smigly_wins
+						has_completed_focus = POL_piasecki_wins
+						has_completed_focus = POL_invite_ND_to_government
+						has_completed_focus = POL_stachniuk_wins
+						has_completed_focus = POL_ND_wins
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+					has_completed_focus = POL_PSL_wins
+					has_completed_focus = POL_invite_PSL_to_government
+				}
+			}
+			traits = {
+				famous_social_democrat
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_norbert_barlicki = {##Norbert Barlicki
+		name = POL_Character_deluge_norbert_barlicki
+		portraits={
+			civilian={
+				small=GFX_norbert_barlicki_picture_small
+			}
+			army={
+				small=GFX_norbert_barlicki_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_norbert_barlicki
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+			}
+			traits = {
+				minister_of_public_works
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_adolf_warski = {##Adolf Warski
+		name = POL_Character_deluge_adolf_warski
+		portraits={
+			civilian={
+				small=GFX_adolf_warski_picture_small
+			}
+			army={
+				small=GFX_adolf_warski_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_adolf_warski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				OR = {
+					has_completed_focus = POL_PKWN_wins
+					has_completed_focus = POL_PPS_wins
+					has_completed_focus = POL_KPP_wins
+				}
+			}
+			traits = {
+				political_commissar
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian
@@ -4490,6 +4700,7 @@ characters={
 					has_completed_focus = POL_find_support_among_radicals
 					has_completed_focus = POL_contact_nationalist_radicals
 				}
+				is_country_leader = no
 			}
 			traits = {
 				totalitarian_systems_analyst
@@ -4534,6 +4745,7 @@ characters={
 					has_completed_focus = POL_find_support_among_radicals
 					has_completed_focus = POL_contact_nationalist_radicals
 				}
+				is_country_leader = no
 			}
 			traits = {
 				theoretician_of_national_bolshevism
@@ -4608,7 +4820,7 @@ characters={
 				}
 			}
 			cost = 150
-			available = { 
+			available = {
 				has_government = communism
 			}
 			traits = {
@@ -4618,19 +4830,19 @@ characters={
 			ledger = civilian
 		}
 	}
-	POL_deluge_edward_osobka_morawski = {##Edward Osóbka-Morawski
-		name = POL_Character_deluge_edward_osobka_morawski
+	POL_deluge_feliks_dzierzynski = {##Feliks Dzierżyński
+		name = POL_Character_deluge_feliks_dzierzynski
 		portraits={
 			civilian={
-				small=GFX_edward_osobka_morawski_picture_small
+				small=GFX_feliks_dzierzynski_picture_small
 			}
 			army={
-				small=GFX_edward_osobka_morawski_picture_small
+				small=GFX_feliks_dzierzynski_picture_small
 			}
 		}
 		advisor={
-			slot = political_advisor
-			idea_token = POL_deluge_edward_osobka_morawski
+			slot = security_chief_slot
+			idea_token = POL_deluge_feliks_dzierzynski
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
@@ -4644,10 +4856,10 @@ characters={
 			}
 			cost = 150
 			available = { 
-				has_completed_focus = POL_radicals_takeover
+				has_government = communism
 			}
 			traits = {
-				chair_of_the_unions
+				prince_of_terror
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian
@@ -4729,6 +4941,217 @@ characters={
 			}
 			traits = {
 				political_commissar
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	##communists for all communist parties:
+	POL_deluge_edward_osobka_morawski = {##Edward Osóbka-Morawski
+		name = POL_Character_deluge_edward_osobka_morawski
+		portraits={
+			civilian={
+				small=GFX_edward_osobka_morawski_picture_small
+			}
+			army={
+				small=GFX_edward_osobka_morawski_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_edward_osobka_morawski
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				has_completed_focus = POL_radicals_takeover
+			}
+			traits = {
+				chair_of_the_unions
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_adam_ciolkosz = {##Adam Ciołkosz
+		name = POL_Character_deluge_adam_ciolkosz
+		portraits={
+			civilian={
+				small=GFX_adam_ciolkosz_picture_small
+			}
+			army={
+				small=GFX_adam_ciolkosz_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_adam_ciolkosz
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				has_completed_focus = POL_radicals_takeover
+			}
+			traits = {
+				financial_expert
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_alfred_lampe = {##Alfred Lampe
+		name = POL_Character_deluge_alfred_lampe
+		portraits={
+			civilian={
+				small=GFX_alfred_lampe_picture_small
+			}
+			army={
+				small=GFX_alfred_lampe_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_alfred_lampe
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				has_completed_focus = POL_radicals_takeover
+			}
+			traits = {
+				economist
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_stanislaw_radkiewicz = {##Stanisław Radkiewicz
+		name = POL_Character_deluge_stanislaw_radkiewicz
+		portraits={
+			civilian={
+				small=GFX_stanislaw_radkiewicz_picture_small
+			}
+			army={
+				small=GFX_stanislaw_radkiewicz_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_stanislaw_radkiewicz
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				has_completed_focus = POL_radicals_takeover
+			}
+			traits = {
+				captain_of_industry
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_jozef_cyrankiewicz = {##Józef Cyrankiewicz
+		name = POL_Character_deluge_jozef_cyrankiewicz
+		portraits={
+			civilian={
+				small=GFX_jozef_cyrankiewicz_morawski_picture_small
+			}
+			army={
+				small=GFX_jozef_cyrankiewicz_morawski_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_jozef_cyrankiewicz
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				has_completed_focus = POL_radicals_takeover
+			}
+			traits = {
+				silent_workhorse
+			}
+			ai_will_do = { factor = 1.0 }
+			ledger = civilian
+		}
+	}
+	POL_deluge_edward_gierek = {##Edward Gierek
+		name = POL_Character_deluge_edward_gierek
+		portraits={
+			civilian={
+				small=GFX_edward_gierek_morawski_picture_small
+			}
+			army={
+				small=GFX_edward_gierek_morawski_picture_small
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = POL_deluge_edward_gierek
+			allowed = { tag = POL }
+			visible = {
+				tag = POL
+				NOT = {
+					OR = {
+						has_completed_focus = POL_continue_with_sanation
+						has_completed_focus = POL_democracy_prevails
+						has_completed_focus = POL_monarchists_take_power
+					}
+				}
+			}
+			cost = 150
+			available = { 
+				has_completed_focus = POL_radicals_takeover
+			}
+			traits = {
+				compassionate_gentleman
 			}
 			ai_will_do = { factor = 1.0 }
 			ledger = civilian
@@ -5146,6 +5569,7 @@ characters={
 				OR = {
 					has_completed_focus = POL_use_futurists
 					has_completed_focus = POL_find_support_among_artists
+					has_completed_focus = POL_integrate_futurists
 				}
 				is_country_leader = no
 			}
@@ -5192,6 +5616,7 @@ characters={
 				OR = {
 					has_completed_focus = POL_use_futurists
 					has_completed_focus = POL_find_support_among_artists
+					has_completed_focus = POL_integrate_futurists
 				}
 			}
 			traits = {
@@ -5231,6 +5656,7 @@ characters={
 				OR = {
 					has_completed_focus = POL_use_futurists
 					has_completed_focus = POL_find_support_among_artists
+					has_completed_focus = POL_integrate_futurists
 				}
 			}
 			traits = {
@@ -5270,6 +5696,7 @@ characters={
 				OR = {
 					has_completed_focus = POL_use_futurists
 					has_completed_focus = POL_find_support_among_artists
+					has_completed_focus = POL_integrate_futurists
 				}
 			}
 			traits = {
@@ -5296,6 +5723,9 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
+				NOT = {
+					has_government = communism
+				}
 			}
 			cost = 150
 			available = { 

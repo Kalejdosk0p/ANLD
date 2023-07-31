@@ -12,12 +12,25 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
+		}
+		#country_leader={
+		#	ideology=reactionary_ideology
+		#	expire="1965.1.1.1"
+		#}
+	}
+	NEP_francis_joseph_braganza={
+		name="Prince Francis Joseph of Braganza"
+		portraits={
+			civilian={
+				large="gfx/leaders/NEP/francis_joseph_braganza.dds"
+			}
 		}
 		country_leader={
-			ideology=reactionary_ideology
+			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
+			traits = {
+				corrupted
+			}
 		}
 	}
 	NEP_jaya_chamarajendra={

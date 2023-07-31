@@ -2419,22 +2419,18 @@ spriteTypes = {
 		name = "GFX_stanislaw_mackiewicz_picture_small"
 		texturefile = "gfx/interface/ideas/characters/stanislaw_mackiewicz_picture_small.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_stanislaw_mikolajczyk_picture_small"
 		texturefile = "gfx/interface/ideas/characters/stanislaw_mikolajczyk_picture_small.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_waclaw_niemojowski_picture_small"
 		texturefile = "gfx/interface/ideas/characters/waclaw_niemojowski_picture_small.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_wladyslaw_gimbert_studniecki_picture_small"
 		texturefile = "gfx/interface/ideas/characters/wladyslaw_gimbert_studniecki_picture_small.dds"
 	}
-	
 	spriteType = {
 		name = "GFX_idea_polish_national_army"
 		texturefile = "gfx/interface/ideas/spirits/polish_national_army.dds"
@@ -2524,15 +2520,103 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/spirits/flag_of_workers_brigades.dds"
 	}
 	spriteType = {
-		name = "GFX_idea_new_wettyn_king"
-		texturefile = "gfx/interface/ideas/new_wettyn_king_picture.dds"
-	}
-	spriteType = {
 		name = "GFX_idea_New_Marshall_idea"
 		texturefile = "gfx/interface/ideas/New_Marshall_idea.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_Old_Marshall_idea"
 		texturefile = "gfx/interface/ideas/Old_Marshall_idea.dds"
+	}
+	spriteType = {
+		name = "GFX_adam_chadzynski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/adam_chadzynski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_adam_mohuczy_picture_small"
+		texturefile = "gfx/interface/ideas/characters/adam_mohuczy_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_antoni_szylling_picture_small"
+		texturefile = "gfx/interface/ideas/characters/antoni_szylling_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_czeslaw_chmielewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/czeslaw_chmielewski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_jedrzej_moraczewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jedrzej_moraczewski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_jerzy_swirski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jerzy_swirski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_jozef_unrug_picture_small"
+		texturefile = "gfx/interface/ideas/characters/jozef_unrug_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_julian_leszczynski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/julian_leszczynski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_karol_korytowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/karol_korytowski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_karol_popiel_picture_small"
+		texturefile = "gfx/interface/ideas/characters/karol_popiel_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_kazimierz_zakrzewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/kazimierz_zakrzewski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_leon_berbecki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/leon_berbecki_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_maria_koszutska_picture_small"
+		texturefile = "gfx/interface/ideas/characters/maria_koszutska_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_stanislaw_hryniewiecki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stanislaw_hryniewiecki_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_stefan_frankowski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/stefan_frankowski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_tomasz_arciszewski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/tomasz_arciszewski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_wanda_wasilewska_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wanda_wasilewska_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_waclaw_kozielski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/waclaw_kozielski_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_wladyslaw_gomulka_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wladyslaw_gomulka_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_wlodzimierz_steyer_picture_small"
+		texturefile = "gfx/interface/ideas/characters/wlodzimierz_steyer_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_xawery_czerniecki_picture_small"
+		texturefile = "gfx/interface/ideas/characters/xawery_czerniecki_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_zygmunt_marek_picture_small"
+		texturefile = "gfx/interface/ideas/characters/zygmunt_marek_picture_small.dds"
+	}
+	spriteType = {
+		name = "GFX_august_zaleski_picture_small"
+		texturefile = "gfx/interface/ideas/characters/august_zaleski_picture_small.dds"
 	}
 }

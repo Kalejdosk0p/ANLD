@@ -32,6 +32,7 @@ add_ideas = {
 	fixed_exchange
 	labour_camps
 }
+recruit_character = NEP_francis_joseph_braganza
 recruit_character = NEP_josé_ricardo_pereira_cabral
 recruit_character = NEP_jaya_chamarajendra
 recruit_character = NEP_p._krishna_pillai

@@ -397,8 +397,8 @@ characters={
 		name="Agustin Munoz Grandes"
 		portraits={
 			army={
-				small="gfx/leaders/SPR/augustin_muynoz_grandes.dds"
-				large="GFX_portrait_SPA_augustin_muynoz_grandes"
+				large="gfx/leaders/SPR/augustin_muynoz_grandes.dds"
+				#small="GFX_portrait_SPA_augustin_muynoz_grandes"
 			}
 		}
 		advisor={

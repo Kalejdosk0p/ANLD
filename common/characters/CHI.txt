@@ -16,7 +16,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=76
 		}
 	}
 	CHI_wang_jingwei={
@@ -38,7 +37,6 @@ characters={
 		country_leader={
 			ideology=corporatist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	CHI_tu_yuming={
@@ -57,7 +55,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=78
 		}
 	}
 	CHI_hsueh_yueh={
@@ -76,7 +73,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=79
 		}
 	}
 	CHI_tai_anlan={
@@ -95,7 +91,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=80
 		}
 	}
 	CHI_wang_yaowu={
@@ -114,7 +109,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=81
 		}
 	}
 	CHI_sun_li_jen={
@@ -134,7 +128,6 @@ characters={
 			defense_skill=4
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	CHI_hu_zongnan={
@@ -154,7 +147,6 @@ characters={
 			defense_skill=3
 			planning_skill=3
 			logistics_skill=3
-			legacy_id=-1
 		}
 	}
 	CHI_gu_zhutong={
@@ -174,7 +166,6 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	CHI_wei_lihuang={
@@ -194,7 +185,6 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	CHI_fu_zuoyi={
@@ -213,7 +203,6 @@ characters={
 			defense_skill=3
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=-1
 		}
 	}
 	CHI_zhang_xueliang={
@@ -233,7 +222,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=75
 		}
 	}
 	CHI_soong_chingling={
@@ -246,20 +234,18 @@ characters={
 		country_leader={
 			ideology=jacobin_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	CHI_zhang_lan={
 		name="Zhang Lan"
 		portraits={
 			civilian={
-				large="GFX_portrait_prc_zhang_lan"
+				large="gfx/leaders/CHI/zhang_lan.dds"
 			}
 		}
 		country_leader={
 			ideology=liberal_republican_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	CHI_hu_hanmin={
@@ -273,7 +259,6 @@ characters={
 			desc="hu_hanmin_desc"
 			ideology=constitutionalist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	CHI_emperor_puyi={
@@ -287,7 +272,6 @@ characters={
 			desc="emperor_puyi_desc"
 			ideology=reactionary_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	CHI_zuo_rinchen={
@@ -306,7 +290,6 @@ characters={
 			defense_skill=2
 			planning_skill=2
 			logistics_skill=2
-			legacy_id=82
 		}
 	}
 }

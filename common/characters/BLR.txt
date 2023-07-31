@@ -3,13 +3,12 @@ characters={
 		name="Lev Dovator"
 		portraits={
 			civilian={
-				large="gfx/leaders/SOV/lev_dovator.dds"
+				large="gfx/leaders/SOV/portrait_SOV_lev_dovator.dds"
 			}
 		}
 		country_leader={
 			ideology=marxist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	BLR_piotr_miklashevich={
@@ -22,7 +21,6 @@ characters={
 		country_leader={
 			ideology=liberal_republican_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	BLR_leanard_zajac={
@@ -35,7 +33,6 @@ characters={
 		country_leader={
 			ideology=liberal_republican_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	BLR_raman_skirmut={
@@ -48,7 +45,6 @@ characters={
 		country_leader={
 			ideology=bonapartist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	BLR_exarch_paul_of_belarus={
@@ -61,7 +57,6 @@ characters={
 		country_leader={
 			ideology=religious_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	BLR_stanisław_bułakbałachowicz={
@@ -74,7 +69,6 @@ characters={
 		country_leader={
 			ideology=corporatist_ideology
 			expire="1965.1.1.1"
-			id=-1
 		}
 	}
 	BLR_vyacheslav_menzhinsky = {

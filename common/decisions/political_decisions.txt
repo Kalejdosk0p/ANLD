@@ -515,7 +515,7 @@ political_actions = {
 		visible = {
 			OR = {
 				tag = FRA
-				tag = WGr
+				tag = WGR
 			}
 			has_global_flag = POM_issue_solved
 			NOT = {
