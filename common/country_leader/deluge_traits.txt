@@ -335,10 +335,10 @@ leader_traits = {
 	}
 	leftist_freemanson = {
 		sprite = 13
-		consumer_goods_factor = -0.05
-		improve_relations_maintain_cost_factor = -0.5
-		stability_factor = 0.15
-		enemy_justify_war_goal_time = 1.0
+		consumer_goods_factor = -0.02
+		improve_relations_maintain_cost_factor = -0.3
+		stability_factor = 0.05
+		enemy_justify_war_goal_time = 0.3
 	}
 	famous_politician_and_journalist = {
 		sprite = 12

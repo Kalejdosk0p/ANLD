@@ -648,7 +648,7 @@ country_event = {##Circle of God's Cause infiltrates POL government
 		add_stability = -0.05
 		add_ideas = POL_circle_of_gods_cause
 		hidden_effect = {
-			country_event = { id = deluge_poland.24 days = 21 }
+			country_event = { id = deluge_poland.24 days = 14 }
 		}
 	}
 }

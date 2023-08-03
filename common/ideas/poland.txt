@@ -507,7 +507,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				conscription_factor = 0.03
+				conscription_factor = 0.02
 			}
 		}
 		POL_woman_in_military = {
@@ -524,11 +524,11 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				conscription_factor = 0.05
+				conscription_factor = 0.04
 				monthly_population = -0.1
-				war_support_factor = 0.05
-				army_core_attack_factor = 0.03
-				army_core_defence_factor = 0.03
+				war_support_factor = 0.03
+				army_core_attack_factor = 0.02
+				army_core_defence_factor = 0.02
 			}
 		}
 		emphasize_catholic_values_idea = {
@@ -1546,8 +1546,8 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				consumer_goods_factor = -0.1
-				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = 0.03
 				industrial_capacity_factory = -0.05
 			}
 		}

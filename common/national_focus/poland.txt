@@ -4709,6 +4709,13 @@ focus_tree = {
 				}
 				country = { id = deluge_poland_foreign.12 hours = 1 } 
 			}
+			454 = {
+				owner = {
+					country_event = {
+						id = generic.26
+					}
+				}
+			}
 		}
 		completion_reward = {
 			custom_effect_tooltip = POL_custom_effect_tooltip_155
@@ -4726,9 +4733,47 @@ focus_tree = {
 				}
 			}
 		}
-		will_lead_to_war_with = TUR
+		#will_lead_to_war_with = TUR
 		ai_will_do = {
-			factor = 30
+			base = 30
+			modifier = {
+				any_neighbor_country = {
+					owns_state = 454
+					controls_state = 454
+				}
+				add = 50
+			}
+			modifier = {
+				NOT = {
+					any_neighbor_country = {
+						owns_state = 454
+						controls_state = 454
+					}
+				}
+				add = -50
+			}
+			modifier = {
+				any_country = {
+					has_idea = POL_member_of_crusade_2
+					any_neighbor_country = {
+						owns_state = 454
+						controls_state = 454
+					}
+				}
+				add = 35
+			}
+			modifier = {
+				NOT = {
+					any_country = {
+						has_idea = POL_member_of_crusade_2
+						any_neighbor_country = {
+							owns_state = 454
+							controls_state = 454
+						}
+					}
+				}
+				add = -35
+			}
 		}
 		bypass = {
 			
@@ -5232,7 +5277,7 @@ focus_tree = {
 	focus = {
 		id = POL_divide_and_conquer
 		icon = GFX_focus_generic_military_dictatorship
-		x = 124
+		x = 144
 		y = 0
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS FOCUS_FILTER_POLITICAL}
 		cost = 5
@@ -5587,7 +5632,7 @@ focus_tree = {
 	focus = {
 		id = POL_legacy_of_polish_legions_in_lombardy
 		icon = GFX_Banner_of_1st_Polish_Legion_in_Italy_focus
-		x = 129
+		x = 149
 		y = 1
 		search_filters = {FOCUS_FILTER_FOREIGN_AFFAIRS FOCUS_FILTER_WAR_SUPPORT}
 		cost = 8
@@ -7337,7 +7382,7 @@ focus_tree = {
 	focus = {
 		id = POL_elections_for_new_king
 		icon = GFX_regency_council
-		x = 10
+		x = 18
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 5
@@ -7366,12 +7411,12 @@ focus_tree = {
 	focus = {
 		id = POL_reform_3rd_may_consitution
 		icon = GFX_new_polish_constitution
-		x = -11
-		y = 1
+		x = -1
+		y = 2
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 6
 		prerequisite = { focus = POL_elections_for_new_king focus = POL_house_of_wettin_continues }
-		relative_position_id = POL_elections_for_new_king
+		relative_position_id = POL_monarchists_take_power
 		available = {
 			OR = {
 				has_completed_focus = POL_house_of_wettin_continues
@@ -7403,7 +7448,7 @@ focus_tree = {
 	focus = {
 		id = POL_catholicism_state_religion
 		icon = GFX_only_catholic_politicians_allowed
-		x = -2
+		x = -3
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 6
@@ -7461,7 +7506,7 @@ focus_tree = {
 	focus = {
 		id = POL_restore_warsaw_confederation
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		x = 2
+		x = 3
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 6
@@ -7569,12 +7614,12 @@ focus_tree = {
 	focus = {
 		id = POL_protect_the_jews_monarchist
 		icon = GFX_goal_generic_defence
-		x = 4
+		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 6
 		prerequisite = { focus = POL_limited_rights_for_religious_minorities focus = POL_restore_warsaw_confederation }
-		relative_position_id = POL_catholicism_state_religion
+		relative_position_id = POL_restore_warsaw_confederation
 		mutually_exclusive = {
 			focus = POL_confiscation_of_jewish_property
 			focus = POL_deal_with_jews
@@ -7598,16 +7643,860 @@ focus_tree = {
 	focus = {
 		id = POL_deal_with_jews
 		icon = GFX_peaceful_offering
-		x = 2
+		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
 		cost = 6
 		prerequisite = { focus = POL_restore_warsaw_confederation focus = POL_limited_rights_for_religious_minorities }
-		relative_position_id = POL_catholicism_state_religion
+		relative_position_id = POL_limited_rights_for_religious_minorities
 		mutually_exclusive = {
 			focus = POL_protect_the_jews_monarchist
 			focus = POL_confiscation_of_jewish_property
 		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_exclude_nobility_from_obligatory_army_service
+		icon = GFX_polish_government
+		x = -4
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_confiscation_of_jewish_property focus = POL_deal_with_jews focus = POL_protect_the_jews_monarchist }
+		relative_position_id = POL_confiscation_of_jewish_property
+		mutually_exclusive = {
+			focus = POL_profesional_army
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_exceptions_for_the_nobility_in_the_army
+		icon = GFX_army_modernizations
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_exclude_nobility_from_obligatory_army_service }
+		relative_position_id = POL_exclude_nobility_from_obligatory_army_service
+		mutually_exclusive = {
+			focus = POL_profesional_army
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_profesional_army
+		icon = GFX_POL_military_reform
+		x = -2
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_confiscation_of_jewish_property focus = POL_deal_with_jews focus = POL_protect_the_jews_monarchist }
+		relative_position_id = POL_confiscation_of_jewish_property
+		mutually_exclusive = {
+			focus = POL_exclude_nobility_from_obligatory_army_service
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_women_in_military_monarchist
+		icon = GFX_focus_generic_women_in_military
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_profesional_army }
+		relative_position_id = POL_profesional_army
+		available = {
+			NOT = {
+				has_completed_focus = POL_catholicism_state_religion
+			}
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_path_towards_racial_purity
+		icon = GFX_purge_citizens
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_confiscation_of_jewish_property }
+		relative_position_id = POL_confiscation_of_jewish_property
+		mutually_exclusive = {
+			focus = POL_equality_of_race
+			focus = POL_encourage_imigration
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_equality_of_race
+		icon = GFX_focus_race_relations
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_confiscation_of_jewish_property focus = POL_deal_with_jews focus = POL_protect_the_jews_monarchist }
+		relative_position_id = POL_deal_with_jews
+		mutually_exclusive = {
+			focus = POL_path_towards_racial_purity
+			focus = POL_encourage_imigration
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_encourage_imigration
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = {focus = POL_deal_with_jews focus = POL_protect_the_jews_monarchist }
+		relative_position_id = POL_protect_the_jews_monarchist
+		mutually_exclusive = {
+			focus = POL_path_towards_racial_purity
+			focus = POL_equality_of_race
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_free_market_economy
+		icon = GFX_focus_ETH_adopt_the_lira
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_path_towards_racial_purity focus = POL_equality_of_race focus = POL_encourage_imigration}
+		relative_position_id = POL_path_towards_racial_purity
+		mutually_exclusive = {
+			focus = POL_mixed_economy
+			focus = POL_economy_controlled_by_synarch
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_attract_foreign_funds
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_free_market_economy }
+		relative_position_id = POL_free_market_economy
+		mutually_exclusive = {
+			
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_mixed_economy
+		icon = GFX_focus_ITA_devaluate_the_lire
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_path_towards_racial_purity focus = POL_equality_of_race focus = POL_encourage_imigration}
+		relative_position_id = POL_equality_of_race
+		mutually_exclusive = {
+			focus = POL_free_market_economy
+			focus = POL_economy_controlled_by_synarch
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_build_up_highways
+		icon = GFX_goal_generic_construct_infrastructure
+		x = -1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_mixed_economy focus = POL_free_market_economy}
+		relative_position_id = POL_mixed_economy
+		mutually_exclusive = {
+			
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_help_lower_class
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_mixed_economy focus = POL_economy_controlled_by_synarch}
+		relative_position_id = POL_mixed_economy
+		mutually_exclusive = {
+			
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_economy_controlled_by_synarch
+		icon = GFX_focus_generic_annex_country
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_path_towards_racial_purity focus = POL_equality_of_race focus = POL_encourage_imigration}
+		relative_position_id = POL_encourage_imigration
+		mutually_exclusive = {
+			focus = POL_free_market_economy
+			focus = POL_mixed_economy
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_cut_off_greedy_nobility
+		icon = GFX_restriction_of_access_to_credits
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_economy_controlled_by_synarch}
+		relative_position_id = POL_economy_controlled_by_synarch
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_women_in_parlament
+		icon = GFX_focus_SOV_womens_fascist_movement
+		x = -3
+		y = 2
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_free_market_economy focus = POL_mixed_economy focus = POL_economy_controlled_by_synarch}
+		relative_position_id = POL_free_market_economy
+		mutually_exclusive = {
+			focus = POL_every_adult_men_in_parlament
+			focus = POL_only_nobility_in_the_parlament
+			focus = POL_disband_parlament
+		}
+		available = {
+			NOT = {
+				has_completed_focus = POL_catholicism_state_religion
+			}
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_every_adult_men_in_parlament
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = -2
+		y = 2
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_free_market_economy focus = POL_mixed_economy focus = POL_economy_controlled_by_synarch}
+		relative_position_id = POL_mixed_economy
+		mutually_exclusive = {
+			focus = POL_women_in_parlament
+			focus = POL_only_nobility_in_the_parlament
+			focus = POL_disband_parlament
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_only_nobility_in_the_parlament
+		icon = GFX_partly_free_elections
+		x = 2
+		y = 2
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_free_market_economy focus = POL_mixed_economy focus = POL_economy_controlled_by_synarch}
+		relative_position_id = POL_mixed_economy
+		mutually_exclusive = {
+			focus = POL_women_in_parlament
+			focus = POL_every_adult_men_in_parlament
+			focus = POL_disband_parlament
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_disband_parlament
+		icon = GFX_breaking_the_treaty
+		x = 3
+		y = 2
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_free_market_economy focus = POL_mixed_economy focus = POL_economy_controlled_by_synarch}
+		relative_position_id = POL_economy_controlled_by_synarch
+		mutually_exclusive = {
+			focus = POL_women_in_parlament
+			focus = POL_every_adult_men_in_parlament
+			focus = POL_only_nobility_in_the_parlament
+		}
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_noble_titles_for_women
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = -1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_women_in_parlament}
+		relative_position_id = POL_women_in_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_socialist_kingdom
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 0
+		y = 2
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_women_in_parlament}
+		relative_position_id = POL_women_in_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_healthcare_reform
+		icon = GFX_improve_states_healthcare
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_women_in_parlament focus = POL_every_adult_men_in_parlament}
+		relative_position_id = POL_women_in_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_increasing_the_distribution_of_noble_titles
+		icon = GFX_focus_generic_monarchy_2
+		x = 3
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_women_in_parlament focus = POL_every_adult_men_in_parlament}
+		relative_position_id = POL_women_in_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_enpower_bourgeoisie
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 0
+		y = 2
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { 
+			#focus = POL_women_in_parlament 
+			focus = POL_every_adult_men_in_parlament
+		}
+		relative_position_id = POL_every_adult_men_in_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_reintroduce_liberum_veto
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_every_adult_men_in_parlament focus = POL_only_nobility_in_the_parlament}
+		relative_position_id = POL_every_adult_men_in_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_bring_back_patriarchy
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = 3
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_every_adult_men_in_parlament focus = POL_only_nobility_in_the_parlament}
+		relative_position_id = POL_every_adult_men_in_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_king_only_figurehead
+		icon = GFX_abolish_monarchy
+		x = 0
+		y = 2
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_only_nobility_in_the_parlament}
+		relative_position_id = POL_only_nobility_in_the_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_dissemination_of_sarmatian_myth
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_only_nobility_in_the_parlament}
+		relative_position_id = POL_only_nobility_in_the_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_enpower_masonic_lodges
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = -1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_disband_parlament focus = POL_only_nobility_in_the_parlament}
+		relative_position_id = POL_disband_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_technocratic_government
+		icon = GFX_light_bulb
+		x = 1
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_disband_parlament}
+		relative_position_id = POL_disband_parlament
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_empower_the_synarch
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_technocratic_government}
+		relative_position_id = POL_technocratic_government
+		available = {
+			
+		}
+		completion_reward = {
+			
+		}
+		ai_will_do = {
+			factor = 40
+		}
+		bypass = {
+			
+		}
+		cancel_if_invalid = yes		
+		continue_if_invalid = no		
+		available_if_capitulated = yes
+	}
+	focus = {
+		id = POL_increase_influence_of_AMORC_knights
+		icon = GFX_focus_SOV_ivan_plays_baseball
+		x = 3
+		y = 1
+		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
+		cost = 6
+		prerequisite = { focus = POL_disband_parlament}
+		relative_position_id = POL_disband_parlament
 		available = {
 			
 		}
@@ -10500,13 +11389,13 @@ focus_tree = {
 				NOT = {
 					has_country_leader = {
 						character = POL_deluge_wanda_wasilewska
-						ruling_only = no
+						ruling_only = yes
 					}
 				}
 				NOT = {
 					has_country_leader = {
 						character = POL_deluge_maria_koszutska
-						ruling_only = no
+						ruling_only = yes
 					}
 				}
 			}
@@ -10839,7 +11728,7 @@ focus_tree = {
 	focus = {
 		id = POL_start_army_reform
 		icon = GFX_focus_POL_prepare_for_the_inevitable
-		x = 150
+		x = 170
 		y = 0
 		search_filters = {FOCUS_FILTER_WAR_SUPPORT}
 		cost = 10
@@ -10904,7 +11793,7 @@ focus_tree = {
 	focus = {
 		id = POL_superiority_of_firepower
 		icon = GFX_goal_generic_army_artillery2
-		x = -10
+		x = -6
 		y = 1
 		search_filters = {FOCUS_FILTER_LAND_ARMY}
 		prerequisite = { focus = POL_land_army_reform }
@@ -11099,7 +11988,7 @@ focus_tree = {
 	focus = {
 		id = POL_superiority_of_mobility
 		icon = GFX_goal_generic_army_tanks
-		x = -6
+		x = -10
 		y = 1
 		search_filters = {FOCUS_FILTER_LAND_ARMY}
 		prerequisite = { focus = POL_land_army_reform }
@@ -11131,7 +12020,7 @@ focus_tree = {
 	focus = {
 		id = POL_superiority_of_planning
 		icon = GFX_goal_generic_position_armies
-		x = 2
+		x = -2
 		y = 1
 		search_filters = {FOCUS_FILTER_LAND_ARMY}
 		prerequisite = { focus = POL_land_army_reform }
@@ -11306,7 +12195,7 @@ focus_tree = {
 	focus = {
 		id = POL_superiority_of_mass
 		icon = GFX_focus_generic_little_entente
-		x = -2
+		x = 2
 		y = 1
 		search_filters = {FOCUS_FILTER_LAND_ARMY}
 		prerequisite = { focus = POL_land_army_reform }
@@ -12544,7 +13433,7 @@ focus_tree = {
 	focus = {
 		id = POL_light_planes
 		icon = GFX_goal_generic_air_fighter
-		x = -2
+		x = 2
 		y = 1
 		search_filters = {FOCUS_FILTER_AVITATION}
 		prerequisite = { focus = POL_air_reform }
@@ -12583,7 +13472,7 @@ focus_tree = {
 	focus = {
 		id = POL_heavy_planes
 		icon = GFX_goal_generic_air_bomber
-		x = 2
+		x = -2
 		y = 1
 		search_filters = {FOCUS_FILTER_AVITATION}
 		prerequisite = { focus = POL_air_reform }
@@ -12657,7 +13546,7 @@ focus_tree = {
 		y = 1
 		search_filters = {FOCUS_FILTER_AVITATION}
 		prerequisite = { focus = POL_light_planes focus = POL_heavy_planes }
-		relative_position_id = POL_light_planes
+		relative_position_id = POL_heavy_planes
 		cost = 8
 		available = {
 			
@@ -12679,11 +13568,11 @@ focus_tree = {
 	focus = {
 		id = POL_paratroopers_trainings
 		icon = GFX_focus_generic_paratrooper
-		x = 4
+		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_AVITATION}
 		prerequisite = { focus = POL_light_planes focus = POL_heavy_planes }
-		relative_position_id = POL_light_planes
+		relative_position_id = POL_heavy_planes
 		cost = 8
 		available = {
 			
@@ -12709,7 +13598,7 @@ focus_tree = {
 	focus = {
 		id = POL_expand_avitation_industry
 		icon = GFX_focus_generic_aircraft_production
-		x = 1
+		x = -1
 		y = 1
 		search_filters = {FOCUS_FILTER_AVITATION}
 		prerequisite = { focus = POL_mielec_aircraft_factory focus = POL_swiatecki_bomb_slip focus = POL_paratroopers_trainings}
@@ -12803,7 +13692,7 @@ focus_tree = {
 		y = 1
 		search_filters = {FOCUS_FILTER_AVITATION}
 		prerequisite = { focus = POL_mielec_aircraft_factory focus = POL_swiatecki_bomb_slip focus = POL_paratroopers_trainings}
-		relative_position_id = POL_swiatecki_bomb_slip
+		relative_position_id = POL_paratroopers_trainings
 		cost = 8
 		available = {
 			
@@ -12877,7 +13766,7 @@ focus_tree = {
 	focus = {
 		id = POL_hire_economists
 		icon = GFX_goal_generic_intelligence_exchange
-		x = 180
+		x = 200
 		y = 0
 		search_filters = {FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL}
 		cost = 5
@@ -13484,7 +14373,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
-			add_to_variable = {POL_development_consumer_goods_factor = -0.8}###bigger bonus
+			add_to_variable = {POL_development_consumer_goods_factor = -0.08}###bigger bonus
 			add_to_variable = {POL_development_industrial_capacity_factory = 0.10}##smaller bonus
 			add_to_variable = {POL_development_production_speed_buildings_factor = 0.10}###bigger bonus
 			custom_effect_tooltip = POL_custom_effect_tooltip_34

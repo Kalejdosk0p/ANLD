@@ -9576,6 +9576,37 @@ european_cooperation_category = {
 					owns_state = 68
 				}
 			}
+			if = {
+				limit = {
+					68 = {
+						OR = {
+							owner = GER
+							owner = DDR
+							owner = WGR
+						}
+					}
+				}
+				NOT = {
+					GER = {
+						has_war_with = DDR
+					}
+					GER = {
+						has_war_with = WGR
+					}
+					WGR = {
+						has_war_with = DDR
+					}
+					WGR = {
+						has_war_with = GER
+					}
+					DDR = {
+						has_war_with = GER
+					}
+					DDR = {
+						has_war_with = WGR
+					}
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 5
