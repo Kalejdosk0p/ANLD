@@ -5900,7 +5900,7 @@ focus_tree = {
 		relative_position_id = POL_ND_wins
 		available = {
 			OR = {
-				has_idea = new_wettyn_king
+				has_idea = fryderyk_ii_idea
 				has_country_flag = POL_king_died_abroad
 			}
 		}
@@ -7321,6 +7321,16 @@ focus_tree = {
 					set_value = 0.00
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = landed
+					}
+				}
+				add_ideas = {
+					landed
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7429,9 +7439,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				#add_dynamic_modifier = { modifier = POL_3rd_may_consitution_modifier }
-				#add_to_variable = {  = 0.03}
-				#add_to_variable = {  = 0.03}
+				add_dynamic_modifier = { modifier = POL_3rd_may_consitution_modifier }
+				add_to_variable = { 3rd_may_stability_factor = -0.05}
+				add_to_variable = { 3rd_may_political_power_factor = -0.05}
 			}
 			custom_effect_tooltip = POL_custom_effect_tooltip_241
 		}
@@ -7459,10 +7469,22 @@ focus_tree = {
 			focus = POL_restore_warsaw_confederation
 		}
 		available = {
-			
+			is_power_balance_in_range = {
+				id = POL_power_balance
+				range < POL_balance_range
+			}
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_stability_factor = 0.05}
+				add_to_variable = { 3rd_may_political_power_factor = 0.05}
+				add_to_variable = { 3rd_may_monthly_population = 0.03}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_243
+			add_power_balance_value = {
+				id = POL_power_balance
+				value = -0.05
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7488,10 +7510,18 @@ focus_tree = {
 			focus = POL_restore_warsaw_confederation
 		}
 		available = {
-			
+			is_power_balance_in_range = {
+				id = POL_power_balance
+				range = POL_balance_range
+			}
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_war_support_factor = 0.05}
+				add_to_variable = { 3rd_may_research_speed_factor = 0.01}
+				add_to_variable = { 3rd_may_conscription_factor = 0.02}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_244
 		}
 		ai_will_do = {
 			factor = 40
@@ -7517,10 +7547,24 @@ focus_tree = {
 			focus = POL_limited_rights_for_religious_minorities
 		}
 		available = {
-			
+			is_power_balance_in_range = {
+				id = POL_power_balance
+				range > POL_balance_range
+			}
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_stability_factor = -0.05}
+				add_to_variable = { 3rd_may_war_support_factor = 0.05}
+				add_to_variable = { 3rd_may_political_power_factor = 0.05}
+				add_to_variable = { 3rd_may_research_speed_factor = 0.03}
+				add_to_variable = { 3rd_may_conscription_factor = 0.04}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_245
+			add_power_balance_value = {
+				id = POL_power_balance
+				value = 0.05
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7545,7 +7589,17 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_war_support = 0.02
+			add_stability = -0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			hidden_effect = {
+				add_to_variable = { 3rd_may_fascism_drift = 0.03}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_246
+			custom_effect_tooltip = POL_custom_effect_tooltip_advisors
 		}
 		ai_will_do = {
 			factor = 40
@@ -7570,7 +7624,21 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_political_power = 100
+			add_stability = 0.03
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.07
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_advisors
+			swap_ideas = {
+				remove_idea = POL_circle_of_gods_cause
+				add_idea = POL_circle_of_gods_cause_good
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7596,10 +7664,45 @@ focus_tree = {
 			focus = POL_deal_with_jews
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value < -0.15
+			}
 		}
 		completion_reward = {
-			
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.1
+			}
+			add_war_support = -0.05
+			add_power_balance_value = {
+				id = POL_power_balance
+				value = -0.05
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7625,10 +7728,22 @@ focus_tree = {
 			focus = POL_deal_with_jews
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value > 0.15
+			}
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_conscription_factor = 0.02}
+				add_to_variable = { 3rd_may_neutrality_drift = 0.03}
+				add_to_variable = { 3rd_may_research_speed_factor = 0.02}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_247
+			add_power_balance_value = {
+				id = POL_power_balance
+				value = 0.05
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7654,10 +7769,22 @@ focus_tree = {
 			focus = POL_confiscation_of_jewish_property
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value > -0.15
+			}
+			power_balance_value = {
+				id = POL_power_balance
+				value < 0.15
+			}
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_consumer_goods_factor = -0.03}
+				add_to_variable = { 3rd_may_production_speed_buildings_factor = 0.05}
+				add_to_variable = { 3rd_may_political_power_factor = 0.02}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_248
 		}
 		ai_will_do = {
 			factor = 40
@@ -7682,10 +7809,13 @@ focus_tree = {
 			focus = POL_profesional_army
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value < 0.05
+			}
 		}
 		completion_reward = {
-			
+			add_ideas = POL_nobility_excluded_from_obligatory_army_service
 		}
 		ai_will_do = {
 			factor = 40
@@ -7710,10 +7840,17 @@ focus_tree = {
 			focus = POL_profesional_army
 		}
 		available = {
-			
+			has_idea = POL_nobility_excluded_from_obligatory_army_service
+			power_balance_value = {
+				id = POL_power_balance
+				value < -0.05
+			}
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = POL_nobility_excluded_from_obligatory_army_service
+				add_idea = POL_nobility_rules_the_army
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7738,10 +7875,13 @@ focus_tree = {
 			focus = POL_exclude_nobility_from_obligatory_army_service
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value > -0.05
+			}
 		}
 		completion_reward = {
-			
+			add_ideas = POL_professional_army_idea
 		}
 		ai_will_do = {
 			factor = 40
@@ -7766,9 +7906,20 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = POL_catholicism_state_religion
 			}
+			power_balance_value = {
+				id = POL_power_balance
+				value > 0.05
+			}
+			has_idea = POL_professional_army_idea
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = POL_professional_army_idea
+				add_idea = POL_professional_army_idea_2
+			}
+			set_rule = {
+				can_generate_female_aces = yes
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7794,10 +7945,25 @@ focus_tree = {
 			focus = POL_encourage_imigration
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value < -0.25
+			}
 		}
 		completion_reward = {
-			
+			add_manpower = -100000
+			hidden_effect = {
+				add_to_variable = { 3rd_may_conscription = -0.015}
+				add_to_variable = { 3rd_may_stability_factor = -0.05}
+				add_to_variable = { 3rd_may_political_power_factor = 0.1}
+				add_to_variable = { 3rd_may_neutrality_drift = 0.05}
+				add_to_variable = { 3rd_may_fascism_drift = 0.03}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_249
+			add_power_balance_value = {
+				id = POL_power_balance
+				value = -0.1
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7823,10 +7989,24 @@ focus_tree = {
 			focus = POL_encourage_imigration
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value > -0.25
+			}
+			power_balance_value = {
+				id = POL_power_balance
+				value < 0.25
+			}
 		}
 		completion_reward = {
-			
+			add_political_power = 40
+			hidden_effect = {
+				add_to_variable = { 3rd_may_conscription = 0.005}
+				add_to_variable = { 3rd_may_stability_factor = 0.03}
+				add_to_variable = { 3rd_may_democratic_drift = 0.05}
+				add_to_variable = { 3rd_may_communism_drift = 0.03}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_250
 		}
 		ai_will_do = {
 			factor = 40
@@ -7852,10 +8032,23 @@ focus_tree = {
 			focus = POL_equality_of_race
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value > 0.25
+			}
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_conscription = 0.015}
+				add_to_variable = { 3rd_may_stability_factor = -0.05}
+				add_to_variable = { 3rd_may_monthly_population = 0.05}
+				add_to_variable = { 3rd_may_communism_drift = 0.05}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_251
+			add_power_balance_value = {
+				id = POL_power_balance
+				value = 0.1
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7881,10 +8074,47 @@ focus_tree = {
 			focus = POL_economy_controlled_by_synarch
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value < -0.30
+			}
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_trade_opinion_factor = 0.3}
+				add_to_variable = { 3rd_may_consumer_goods_factor = -0.05}
+				add_to_variable = { 3rd_may_min_export = 0.3}
+				add_to_variable = { 3rd_may_production_speed_buildings_factor = 0.05}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_252
+			add_power_balance_value = {
+				id = POL_power_balance
+				value = -0.15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = free_trade
+					}
+				}
+				add_ideas = {
+					free_trade
+				}
+			}
+			set_country_flag = cant_change_trade_law
+			custom_effect_tooltip = cant_change_trade_law_tooltip
+			if = {
+				limit = {
+					NOT = {
+						has_idea = floating_exchange
+					}
+				}
+				add_ideas = {
+					floating_exchange
+				}
+			}
+			set_country_flag = cant_change_money_law
+			custom_effect_tooltip = cant_change_money_law_tooltip
 		}
 		ai_will_do = {
 			factor = 40
@@ -7912,7 +8142,10 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_timed_idea = {
+				idea = POL_attracted_foreign_investments
+				days = 250
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7938,10 +8171,39 @@ focus_tree = {
 			focus = POL_economy_controlled_by_synarch
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value > -0.30
+			}
+			power_balance_value = {
+				id = POL_power_balance
+				value < 0.30
+			}
 		}
 		completion_reward = {
-			
+			add_political_power = 50
+			add_war_support = 0.03
+			hidden_effect = {
+				add_to_variable = { 3rd_may_production_factory_max_efficiency_factor = 0.02}
+				add_to_variable = { 3rd_may_industrial_capacity_dockyard = 0.02}
+				add_to_variable = { 3rd_may_industrial_capacity_factory = 0.02}
+				add_to_variable = { 3rd_may_consumer_goods_factor = -0.02}
+				add_to_variable = { 3rd_may_production_speed_buildings_factor = 0.02}
+				add_to_variable = { 3rd_may_political_power_factor = 0.05}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_253
+			if = {
+				limit = {
+					NOT = {
+						has_idea = fixed_exchange
+					}
+				}
+				add_ideas = {
+					fixed_exchange
+				}
+			}
+			set_country_flag = cant_change_money_law
+			custom_effect_tooltip = cant_change_money_law_tooltip
 		}
 		ai_will_do = {
 			factor = 40
@@ -7969,7 +8231,42 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					infrastructure < 4
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					infrastructure < 4
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_controlled_by = POL
+					is_core_of = POL
+					infrastructure < 4
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -7997,7 +8294,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_ideas = POL_state_that_gives_idea
 		}
 		ai_will_do = {
 			factor = 40
@@ -8023,10 +8320,38 @@ focus_tree = {
 			focus = POL_mixed_economy
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value > 0.30
+			}
 		}
 		completion_reward = {
-			
+			add_political_power = -30
+			add_stability = -0.03
+			add_war_support = -0.03
+			hidden_effect = {
+				add_to_variable = { 3rd_may_production_factory_max_efficiency_factor = 0.05}
+				add_to_variable = { 3rd_may_industrial_capacity_dockyard = 0.05}
+				add_to_variable = { 3rd_may_industrial_capacity_factory = 0.05}
+				add_to_variable = { 3rd_may_min_export = -0.20}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_254
+			add_power_balance_value = {
+				id = POL_power_balance
+				value = 0.15
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_idea = printing
+					}
+				}
+				add_ideas = {
+					printing
+				}
+			}
+			set_country_flag = cant_change_money_law
+			custom_effect_tooltip = cant_change_money_law_tooltip
 		}
 		ai_will_do = {
 			factor = 40
@@ -8051,7 +8376,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_ideas = POL_cut_off_greedy_nobility_idea
 		}
 		ai_will_do = {
 			factor = 40
@@ -8081,9 +8406,35 @@ focus_tree = {
 			NOT = {
 				has_completed_focus = POL_catholicism_state_religion
 			}
+			power_balance_value = {
+				id = POL_power_balance
+				value > -0.05
+			}
+			power_balance_value = {
+				id = POL_power_balance
+				value < 0.25
+			}
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_idea = universal
+					}
+				}
+				add_ideas = {
+					universal
+				}
+			}
+			set_country_flag = cant_change_voting_law
+			custom_effect_tooltip = cant_change_voting_law_tooltip
+			hidden_effect = {
+				add_to_variable = { 3rd_may_communism_drift = 0.05}
+				add_to_variable = { 3rd_may_neutrality_drift = 0.04}
+				add_to_variable = { 3rd_may_democratic_drift = 0.05}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_255
+			add_political_power = 100
 		}
 		ai_will_do = {
 			factor = 40
@@ -8110,10 +8461,34 @@ focus_tree = {
 			focus = POL_disband_parlament
 		}
 		available = {
-			
+			power_balance_value = {
+				id = POL_power_balance
+				value < 0.05
+			}
+			power_balance_value = {
+				id = POL_power_balance
+				value > -0.25
+			}
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_idea = restricted
+					}
+				}
+				add_ideas = {
+					restricted
+				}
+			}
+			set_country_flag = cant_change_voting_law
+			custom_effect_tooltip = cant_change_voting_law_tooltip
+			hidden_effect = {
+				add_to_variable = { 3rd_may_neutrality_drift = 0.04}
+				add_to_variable = { 3rd_may_democratic_drift = 0.05}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_256
+			add_political_power = 50
 		}
 		ai_will_do = {
 			factor = 40
@@ -8140,10 +8515,29 @@ focus_tree = {
 			focus = POL_disband_parlament
 		}
 		available = {
-			
+			is_power_balance_in_range = {
+				id = POL_power_balance
+				range < POL_mow_medium_control_range
+			}
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_idea = landed
+					}
+				}
+				add_ideas = {
+					landed
+				}
+			}
+			set_country_flag = cant_change_voting_law
+			custom_effect_tooltip = cant_change_voting_law_tooltip
+			hidden_effect = {
+				add_to_variable = { 3rd_may_neutrality_drift = 0.08}
+				add_to_variable = { 3rd_may_political_power_factor = -0.03}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_257
 		}
 		ai_will_do = {
 			factor = 40
@@ -8170,10 +8564,30 @@ focus_tree = {
 			focus = POL_only_nobility_in_the_parlament
 		}
 		available = {
-			
+			is_power_balance_in_range = {
+				id = POL_power_balance
+				range > POL_synarchist_group_medium_control_range
+			}
 		}
 		completion_reward = {
-			
+			if = {
+				limit = {
+					NOT = {
+						has_idea = novote
+					}
+				}
+				add_ideas = {
+					novote
+				}
+			}
+			set_country_flag = cant_change_voting_law
+			custom_effect_tooltip = cant_change_voting_law_tooltip
+			hidden_effect = {
+				add_to_variable = { 3rd_may_neutrality_drift = 0.1}
+				add_to_variable = { 3rd_may_fascism_drift = -0.03}
+				add_to_variable = { 3rd_may_political_power_factor = -0.05}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_258
 		}
 		ai_will_do = {
 			factor = 40
@@ -8198,7 +8612,14 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_neutrality_drift = 0.05}
+				add_to_variable = { 3rd_may_political_power_factor = 0.07}
+				add_to_variable = { 3rd_may_global_building_slots_factor = -0.07}
+				add_to_variable = { 3rd_may_communism_drift = 0.03}
+				add_to_variable = { 3rd_may_war_support_factor = 0.1}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_262
 		}
 		ai_will_do = {
 			factor = 40
@@ -8223,7 +8644,15 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			remove_power_balance = {
+				id = POL_power_balance
+			}
+			add_ideas = socialist_kingdom
+			hidden_effect = {
+				news_event = {
+					id = deluge_poland.91
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8248,7 +8677,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_ideas = monarchist_healthcare_reform
 		}
 		ai_will_do = {
 			factor = 40
@@ -8273,7 +8702,14 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_neutrality_drift = 0.05}
+				add_to_variable = { 3rd_may_political_power_factor = 0.03}
+				add_to_variable = { 3rd_may_global_building_slots_factor = -0.05}
+				add_to_variable = { 3rd_may_stability_factor = -0.05}
+				add_to_variable = { 3rd_may_war_support_factor = 0.05}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_261
 		}
 		ai_will_do = {
 			factor = 40
@@ -8301,7 +8737,15 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			remove_power_balance = {
+				id = POL_power_balance
+			}
+			add_ideas = bourgeoisie_kingdom
+			hidden_effect = {
+				news_event = {
+					id = deluge_poland.92
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8326,7 +8770,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_ideas = liberum_veto
 		}
 		ai_will_do = {
 			factor = 40
@@ -8351,7 +8795,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_ideas = patriachy_restored
 		}
 		ai_will_do = {
 			factor = 40
@@ -8376,7 +8820,55 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				news_event = {
+					id = deluge_poland.93
+				}
+			}
+			promote_character = POL_deluge_sejm
+			if = {
+				limit = {
+					has_completed_focus = POL_house_of_wettin_continues
+				}
+				add_ideas = new_wettyn_king_figurehead
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_piast_riedelski_wins
+				}
+				add_ideas = POL_piast_king
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_czartoryski_wins
+				}
+				add_ideas = POL_czartoryski_king
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_andrassy_wins
+				}
+				add_ideas = POL_andrassy_king
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_radziwill_wins
+				}
+				add_ideas = POL_radziwill_king
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_bonaparte_bastard_wins
+				}
+				add_ideas = POL_walewski_king
+			}
+			if = {
+				limit = {
+					has_completed_focus = POL_tyszkiewicz_wins
+				}
+				add_ideas = POL_tyszkiewicz_king
+			}
+			add_ideas = noble_republic
 		}
 		ai_will_do = {
 			factor = 40
@@ -8401,7 +8893,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_ideas = sarmatian_myth
 		}
 		ai_will_do = {
 			factor = 40
@@ -8426,7 +8918,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_ideas = POL_enpower_masonic_lodges_idea
 		}
 		ai_will_do = {
 			factor = 40
@@ -8451,7 +8943,12 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			hidden_effect = {
+				add_to_variable = { 3rd_may_research_speed_factor = 0.07}
+				add_to_variable = { 3rd_may_fascism_drift = -0.02}
+				add_to_variable = { 3rd_may_neutrality_drift = 0.03}
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_260
 		}
 		ai_will_do = {
 			factor = 40
@@ -8476,7 +8973,15 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			remove_power_balance = {
+				id = POL_power_balance
+			}
+			add_country_leader_trait = the_synarch
+			hidden_effect = {
+				news_event = {
+					id = deluge_poland.94
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8501,7 +9006,7 @@ focus_tree = {
 			
 		}
 		completion_reward = {
-			
+			add_ideas = royal_amorc_knights
 		}
 		ai_will_do = {
 			factor = 40
@@ -8640,14 +9145,35 @@ focus_tree = {
 		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
-		cost = 1
+		cost = 5
 		prerequisite = { focus = POL_andrassy_wins }
 		relative_position_id = POL_andrassy_wins
 		available = {
-			
+			country_exists = HUN
+			HUN = {
+				is_subject = no
+				has_capitulated = no
+			}
+			POL = {
+				is_subject = no
+				NOT = {
+					has_war_with = HUN
+				}
+			}
 		}
 		completion_reward = {
-			
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+			add_stability = 0.05
+			HUN = {
+				add_popularity = {
+					ideology = neutrality
+					popularity = 0.1
+				}
+				add_political_power = 100
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8667,14 +9193,28 @@ focus_tree = {
 		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
-		cost = 1
+		cost = 5
 		prerequisite = { focus = POL_contact_hungarian_monarchists }
 		relative_position_id = POL_contact_hungarian_monarchists
 		available = {
-			
+			country_exists = HUN
+			HUN = {
+				is_subject = no
+				has_capitulated = no
+			}
+			POL = {
+				is_subject = no
+				NOT = {
+					has_war_with = HUN
+				}
+			}
 		}
 		completion_reward = {
-			
+			HUN = {
+				country_event = {
+					id = deluge_poland_foreign.75
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8682,6 +9222,7 @@ focus_tree = {
 		bypass = {
 			
 		}
+		will_lead_to_war_with = HUN
 		cancel_if_invalid = yes		
 		continue_if_invalid = no		
 		available_if_capitulated = yes
@@ -8692,17 +9233,153 @@ focus_tree = {
 		x = -1
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
-		cost = 1
+		cost = 10
 		prerequisite = { focus = POL_restore_personal_union }
 		relative_position_id = POL_restore_personal_union
 		mutually_exclusive = {
 			focus = POL_one_dynasty_two_institutions
 		}
 		available = {
-			
+			OR = {
+				HUN = {
+					is_subject_of = POL
+				}
+				POL = {
+					owns_state = 76
+					controls_state = 76
+					owns_state = 84
+					controls_state = 84
+					owns_state = 83
+					controls_state = 83
+					owns_state = 82
+					controls_state = 82
+					owns_state = 154
+					controls_state = 154
+					owns_state = 43
+					controls_state = 43
+					owns_state = 155
+					controls_state = 155
+				}
+			}
+			NOT = {
+				POL = {
+					has_country_flag = POL_HUN_disallowed_real_union
+				}
+			}
 		}
 		completion_reward = {
-			
+			set_cosmetic_tag = POL_hungary
+			HUN = {
+				every_unit_leader = {
+					limit = {
+						##no limit - every commander is chosen
+					}
+					set_nationality = POL
+				}
+				hidden_effect = {
+					retire_character = HUN_deluge_andrassy_sandor
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_deluge_erno_gero }
+				random_character = {
+					limit = { is_character = HUN_deluge_erno_gero }
+					set_nationality = POL
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_deluge_tihamer_fabinyi }
+				random_character = {
+					limit = { is_character = HUN_deluge_tihamer_fabinyi }
+					set_nationality = POL
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_deluge_tildy }
+				random_character = {
+					limit = { is_character = HUN_deluge_tildy }
+					set_nationality = POL
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_nopcsa_ferenc }
+				random_character = {
+					limit = { is_character = HUN_nopcsa_ferenc }
+					set_nationality = POL
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_kalman_kanya }
+				random_character = {
+					limit = { is_character = HUN_kalman_kanya }
+					set_nationality = POL
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_gusztav_gratz }
+				random_character = {
+					limit = { is_character = HUN_gusztav_gratz }
+					set_nationality = POL
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_mátyás_rákosi }
+				random_character = {
+					limit = { is_character = HUN_mátyás_rákosi }
+					set_nationality = POL
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_szakasits_arpad }
+				random_character = {
+					limit = { is_character = HUN_szakasits_arpad }
+					set_nationality = POL
+				}
+			}
+			every_possible_country = {
+				limit = { has_character = HUN_szalasi_ferenc }
+				random_character = {
+					limit = { is_character = HUN_szalasi_ferenc }
+					set_nationality = POL
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						is_subject_of = POL
+					}
+				}
+				annex_country = {
+					target = HUN
+					transfer_troops = yes
+				}
+			}
+			76 = {
+				add_core_of = POL
+			}
+			84 = {
+				add_core_of = POL
+			}
+			83 = {
+				add_core_of = POL
+			}
+			82 = {
+				add_core_of = POL
+			}
+			154 = {
+				add_core_of = POL
+			}
+			43 = {
+				add_core_of = POL
+			}
+			155 = {
+				add_core_of = POL
+			}
+			hidden_effect = {
+				news_event = {
+					id = deluge_poland_foreign.79
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8720,17 +9397,265 @@ focus_tree = {
 		x = 1
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
-		cost = 1
+		cost = 8
 		prerequisite = { focus = POL_restore_personal_union }
 		relative_position_id = POL_restore_personal_union
 		mutually_exclusive = {
 			focus = POL_creation_of_real_union
 		}
 		available = {
-			
+			OR = {
+				HUN = {
+					is_subject_of = POL
+				}
+				POL = {
+					owns_state = 76
+					controls_state = 76
+					owns_state = 84
+					controls_state = 84
+					owns_state = 83
+					controls_state = 83
+					owns_state = 82
+					controls_state = 82
+					owns_state = 154
+					controls_state = 154
+					owns_state = 43
+					controls_state = 43
+					owns_state = 155
+					controls_state = 155
+				}
+			}
 		}
 		completion_reward = {
-			
+			add_ideas = POL_HUN_cooperation
+			if = {
+				limit = {
+					HUN = {
+						is_subject_of = POL
+					}
+				}
+				HUN = {
+					add_ideas = POL_HUN_cooperation
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						HUN = {
+							is_subject_of = POL
+						}
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 76
+						}
+					}
+					HUN = {
+						transfer_state = 76
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 84
+						}
+					}
+					HUN = {
+						transfer_state = 84
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 83
+						}
+					}
+					HUN = {
+						transfer_state = 83
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 82
+						}
+					}
+					HUN = {
+						transfer_state = 82
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 155
+						}
+					}
+					HUN = {
+						transfer_state = 155
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 154
+						}
+					}
+					HUN = {
+						transfer_state = 154
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 43
+						}
+					}
+					HUN = {
+						transfer_state = 43
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 45
+						}
+					}
+					HUN = {
+						transfer_state = 45
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 151
+						}
+					}
+					HUN = {
+						transfer_state = 151
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 109
+						}
+					}
+					HUN = {
+						transfer_state = 109
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 103
+						}
+					}
+					HUN = {
+						transfer_state = 103
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 104
+						}
+					}
+					HUN = {
+						transfer_state = 104
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 102
+						}
+					}
+					HUN = {
+						transfer_state = 102
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 853
+						}
+					}
+					HUN = {
+						transfer_state = 853
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 736
+						}
+					}
+					HUN = {
+						transfer_state = 736
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 852
+						}
+					}
+					HUN = {
+						transfer_state = 852
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 664
+						}
+					}
+					HUN = {
+						transfer_state = 664
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 73
+						}
+					}
+					HUN = {
+						transfer_state = 73
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 71
+						}
+					}
+					HUN = {
+						transfer_state = 71
+					}
+				}
+				if = {
+					limit = {
+						POL = {
+							owns_state = 70
+						}
+					}
+					HUN = {
+						transfer_state = 70
+					}
+				}
+				set_autonomy = {
+					target = HUN
+					autonomy_state = autonomy_personal_union
+					end_wars = yes
+					end_civil_wars = no
+				}
+				HUN = {
+					add_ideas = POL_HUN_cooperation
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 40
@@ -8848,14 +9773,22 @@ focus_tree = {
 		x = 0
 		y = 1
 		search_filters = {FOCUS_FILTER_INTERNAL_AFFAIRS}
-		cost = 1
+		cost = 5
 		prerequisite = { focus = POL_one_dynasty_two_institutions }
 		relative_position_id = POL_one_dynasty_two_institutions
 		available = {
 			
 		}
 		completion_reward = {
-			
+			swap_ideas = {
+				remove_idea = POL_HUN_cooperation
+				add_idea = POL_HUN_cooperation2
+			}
+			HUN = {
+				remove_idea = POL_HUN_cooperation
+				add_idea = POL_HUN_cooperation2
+			}
+			custom_effect_tooltip = POL_custom_effect_tooltip_259
 		}
 		ai_will_do = {
 			factor = 40

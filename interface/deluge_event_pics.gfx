@@ -478,4 +478,52 @@ spriteTypes = {
 		name = "GFX_news_event_polish_politicians_walking"
 		texturefile = "gfx/event_pictures/news_event_polish_politicians_walking.dds"
 	}
+	spriteType = {
+		name = "GFX_news_event_petrograd_parliament_meeting"
+		texturefile = "gfx/event_pictures/news_event_petrograd_parliament_meeting.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_polish_synarchist_newspaper"
+		texturefile = "gfx/event_pictures/news_event_polish_synarchist_newspaper.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_the_first_sejm_1182"
+		texturefile = "gfx/event_pictures/news_event_the_first_sejm_1182.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_old_town_square"
+		texturefile = "gfx/event_pictures/news_event_old_town_square.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_and_hungarian_emblems"
+		texturefile = "gfx/event_pictures/report_event_polish_and_hungarian_emblems.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_tymbark"
+		texturefile = "gfx/event_pictures/report_event_tymbark.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_smigus_dyngus"
+		texturefile = "gfx/event_pictures/report_event_smigus_dyngus.dds"
+	}
+	spriteType = {
+		name = "GFX_report_report_event_sarmatian"
+		texturefile = "gfx/event_pictures/report_event_sarmatian.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_pzpr_conference"
+		texturefile = "gfx/event_pictures/report_event_pzpr_conference.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_polish_independence_day"
+		texturefile = "gfx/event_pictures/report_event_polish_independence_day.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_onr_meeting"
+		texturefile = "gfx/event_pictures/report_event_onr_meeting.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_marzanna"
+		texturefile = "gfx/event_pictures/report_event_marzanna.dds"
+	}
 }

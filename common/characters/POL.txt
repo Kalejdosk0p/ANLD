@@ -368,6 +368,23 @@ characters={
 			desc = "POL_deluge_monarchist_consul_desc"
 		}
 	}
+	POL_deluge_sejm = {##sejm
+		name = POL_Character_deluge_sejm
+		portraits={
+			civilian={
+				large="gfx/leaders/POL/portrait_POL_the_sejm.dds"
+				
+			}
+		}
+		country_leader = {
+			ideology = reactionary_ideology
+			expire = "1969.1.1.1"
+			traits = {
+				szlachta_supermacy
+			}
+			desc = "POL_deluge_sejm_desc"
+		}
+	}
 	POL_deluge_christian_wettin = {##Friedrich Christian Wettin/Fryderyk II Wettyn
 		name = POL_Character_deluge_christian_wettin
 		portraits={
@@ -2821,18 +2838,25 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 				NOT = {
 					OR = {
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
+						has_completed_focus = POL_catholicism_state_religion
 					}
 				}
 			}
 			cost = 150
-			available = { 
-				has_completed_focus = POL_find_support_among_artists
+			available = {
+				OR = {
+					has_completed_focus = POL_find_support_among_artists
+					has_completed_focus = POL_cooperate_with_remnants_of_zadruga
+				}
 			}
 			traits = {
 				slavic_sculptor 
@@ -2857,18 +2881,25 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 				NOT = {
 					OR = {
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
+						has_completed_focus = POL_catholicism_state_religion
 					}
 				}
 			}
 			cost = 150
 			available = { 
-				has_completed_focus = POL_find_support_among_artists
+				OR = {
+					has_completed_focus = POL_find_support_among_artists
+					has_completed_focus = POL_cooperate_with_remnants_of_zadruga
+				}
 			}
 			traits = {
 				female_nationalist_painter 
@@ -2893,18 +2924,25 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 				NOT = {
 					OR = {
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
+						has_completed_focus = POL_catholicism_state_religion
 					}
 				}
 			}
 			cost = 150
 			available = { 
-				has_completed_focus = POL_find_support_among_artists
+				OR = {
+					has_completed_focus = POL_find_support_among_artists
+					has_completed_focus = POL_cooperate_with_remnants_of_zadruga
+				}
 				date > 1940.05.17
 			}
 			traits = {
@@ -2930,18 +2968,25 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 				NOT = {
 					OR = {
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
+						has_completed_focus = POL_catholicism_state_religion
 					}
 				}
 			}
 			cost = 150
 			available = { 
-				has_completed_focus = POL_establish_zadruga
+				OR = {
+					has_completed_focus = POL_establish_zadruga
+					has_completed_focus = POL_cooperate_with_remnants_of_zadruga
+				}
 			}
 			traits = {
 				effective_administrator
@@ -2966,18 +3011,25 @@ characters={
 			allowed = { tag = POL }
 			visible = {
 				tag = POL
-				has_government = fascism
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
 				NOT = {
 					OR = {
 						has_completed_focus = POL_sikorski_wins
 						has_completed_focus = POL_piasecki_wins
 						has_completed_focus = POL_smigly_wins
+						has_completed_focus = POL_catholicism_state_religion
 					}
 				}
 			}
 			cost = 150
 			available = { 
-				has_completed_focus = POL_establish_zadruga
+				OR = {
+					has_completed_focus = POL_establish_zadruga
+					has_completed_focus = POL_cooperate_with_remnants_of_zadruga
+				}
 			}
 			traits = {
 				agronomist_technician

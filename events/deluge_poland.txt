@@ -2884,7 +2884,7 @@ country_event = {##PKWN is disbanded, PZPR is new ruling party, now choosing it'
 	id = deluge_poland.89
 	title = deluge_poland.89.t
 	desc = deluge_poland.89.d
-	picture = GFX_report_event_SOV_young_builders_of_communism ##later change it to pzpr conference
+	picture = GFX_report_event_pzpr_conference
 	is_triggered_only = yes
 	option = {##Antoni Ciszak
 		name = deluge_poland.89.a
@@ -2956,6 +2956,50 @@ country_event = {##making dystopia is finished, player can choose between mergin
 		ai_chance = {
 			base = 1
 		}
+	}
+}
+news_event = {##Poland becomes socialist kingdom
+	id = deluge_poland.91
+	title = deluge_poland.91.t
+	desc = deluge_poland.91.d
+	picture = GFX_news_event_petrograd_parliament_meeting
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.91.a
+	}
+}
+news_event = {##Poland becomes bourgeoisie kingdom
+	id = deluge_poland.92
+	title = deluge_poland.92.t
+	desc = deluge_poland.92.d
+	picture = GFX_news_event_old_town_square
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.92.a
+	}
+}
+news_event = {##Poland becomes noble republic
+	id = deluge_poland.93
+	title = deluge_poland.93.t
+	desc = deluge_poland.93.d
+	picture = GFX_news_event_the_first_sejm_1182
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.93.a
+	}
+}
+news_event = {##Poland becomes synarchist kingdom
+	id = deluge_poland.94
+	title = deluge_poland.94.t
+	desc = deluge_poland.94.d
+	picture = GFX_news_event_polish_synarchist_newspaper
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = deluge_poland.94.a
 	}
 }
 country_event = {##POL proposes defense pact to UK
@@ -6620,5 +6664,424 @@ news_event = {#POL forms radical european union
 	is_triggered_only = yes
 	option = {
 		name = deluge_poland_foreign.74.a
+	}
+}
+country_event = {##HUN gets ultimatum to be in personal union with Poland
+	id = deluge_poland_foreign.75
+	title = deluge_poland_foreign.75.t
+	desc = {
+		text = deluge_poland_foreign.75.d1
+		trigger = {
+			HUN = {
+				HUN_deluge_andrassy_sandor = {
+					is_country_leader = no
+				}
+			}
+		}
+	}
+	desc = {
+		text = deluge_poland_foreign.75.d2
+		trigger = {
+			HUN = {
+				HUN_deluge_andrassy_sandor = {
+					is_country_leader = yes
+				}
+			}
+		}
+	}
+	picture = GFX_report_event_polish_monarchists
+	is_triggered_only = yes
+	option = {##accept fully
+		name = deluge_poland_foreign.75.a
+		POL = {
+			set_autonomy = {
+				target = HUN
+				autonomy_state = autonomy_personal_union
+				end_wars = yes
+				end_civil_wars = no
+			}
+		}
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland_foreign.76
+			}
+		}
+		ai_chance = {
+			base = 30
+			if = {
+				limit = {
+					HUN = {
+						HUN_deluge_andrassy_sandor = {
+							is_country_leader = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 1000
+					always = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						HUN = {
+							HUN_deluge_andrassy_sandor = {
+								is_country_leader = yes
+							}
+						}
+					}
+				}
+				modifier = {
+					add = 50
+					ROOT = {
+						strength_ratio = {
+							tag = FROM
+							ratio < 1.2
+						}
+					}
+				}
+				modifier = {
+					add = -50
+					ROOT = {
+						strength_ratio = {
+							tag = FROM 
+							ratio > 1.2
+						}
+					}
+				}
+				modifier = {
+					add = 20
+					has_opinion = {
+						target = FROM
+						value > 30
+					}
+				}
+				modifier = {
+					add = -20
+					has_opinion = {
+						target = FROM
+						value < 30
+					}
+				}
+				modifier = {
+					check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+					add = 40
+				}
+				modifier = {
+					check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+					add = -40
+				}
+			}
+		}
+	}
+	option = {##accept partially - POL will not be able to create real union
+		name = deluge_poland_foreign.75.b
+		hidden_effect = {
+			news_event = {
+				id = deluge_poland_foreign.77
+			}
+		}
+		POL = {
+			set_autonomy = {
+				target = HUN
+				autonomy_state = autonomy_personal_union
+				end_wars = yes
+				end_civil_wars = no
+			}
+			set_country_flag = POL_HUN_disallowed_real_union
+		}
+		ai_chance = {
+			base = 30
+			if = {
+				limit = {
+					HUN = {
+						HUN_deluge_andrassy_sandor = {
+							is_country_leader = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					always = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						HUN = {
+							HUN_deluge_andrassy_sandor = {
+								is_country_leader = yes
+							}
+						}
+					}
+				}
+				modifier = {
+					add = 50
+					ROOT = {
+						strength_ratio = {
+							tag = FROM
+							ratio < 0.9
+						}
+					}
+				}
+				modifier = {
+					add = -50
+					ROOT = {
+						strength_ratio = {
+							tag = FROM 
+							ratio > 0.9
+						}
+					}
+				}
+				modifier = {
+					add = 20
+					has_opinion = {
+						target = FROM
+						value > 30
+					}
+				}
+				modifier = {
+					add = -20
+					has_opinion = {
+						target = FROM
+						value < 30
+					}
+				}
+				modifier = {
+					check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+					add = 40
+				}
+				modifier = {
+					check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+					add = -40
+				}
+			}
+		}
+	}
+	option = {##reject
+		name = deluge_poland_foreign.73.c
+		hidden_effect = {
+			POL = {
+				country_event = {
+					id = deluge_poland_foreign.78
+				}
+			}
+		}
+		ai_chance = {
+			base = 10
+			if = {
+				limit = {
+					HUN = {
+						HUN_deluge_andrassy_sandor = {
+							is_country_leader = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					always = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						HUN = {
+							HUN_deluge_andrassy_sandor = {
+								is_country_leader = yes
+							}
+						}
+					}
+				}
+				modifier = {
+					add = -50
+					ROOT = {
+						strength_ratio = {
+							tag = FROM 
+							ratio < 1.2
+						}
+					}
+				}
+				modifier = {
+					add = 50
+					ROOT = {
+						strength_ratio = {
+							tag = FROM 
+							ratio > 1.2
+						}
+					}
+				}
+				modifier = {
+					add = -20
+					has_opinion = {
+						target = FROM
+						value > 30
+					}
+				}
+				modifier = {
+					add = 20
+					has_opinion = {
+						target = FROM
+						value < 30
+					}
+				}
+				modifier = {
+					check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+					add = -40
+				}
+				modifier = {
+					check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+					add = 40
+				}
+			}
+		}
+	}
+}
+news_event = {#POL and HUN form personal union fully
+	id = deluge_poland_foreign.76
+	title = deluge_poland_foreign.76.t 
+	desc = deluge_poland_foreign.76.d
+	picture = GFX_news_event_polish_and_hungarian_soldiers
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.76.a
+	}
+}
+news_event = {#POL and HUN form personal union partially
+	id = deluge_poland_foreign.77
+	title = deluge_poland_foreign.77.t 
+	desc = deluge_poland_foreign.77.d
+	picture = GFX_deluge_hungarian_parliament_building
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.77.a
+	}
+}
+country_event = {##HUN disagrees for personal union - POL perspective
+	id = deluge_poland_foreign.78
+	title = deluge_poland_foreign.78.t
+	desc = deluge_poland_foreign.78.d
+	picture = GFX_report_event_polish_and_hungarian_emblems
+	is_triggered_only = yes
+	option = {##declare war on HUN
+		name = deluge_poland_foreign.78.a
+		if = {
+			limit = {
+				HUN = {
+					is_in_faction_with = POL
+				}
+			}
+			HUN = {
+				leave_faction = yes
+			}
+		}
+		POL = {
+			declare_war_on = {
+				target = HUN 
+				type = puppet_wargoal_focus 
+			}
+		}
+		ai_chance = {
+			base = 30
+			modifier = {
+				add = 50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio < 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 20
+				has_opinion = {
+				    target = FROM
+				    value > 30
+				}
+			}
+			modifier = {
+				add = -20
+				has_opinion = {
+				    target = FROM
+				    value < 30
+				}
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+				add = 40
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+				add = -40
+			}
+		}
+	}
+	option = {##do nothing
+		name = deluge_poland_foreign.78.b
+		add_political_power = -100
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = -50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio < 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = 50
+				ROOT = {
+					strength_ratio = {
+						tag = FROM 
+						ratio > 1.5 
+					}
+				}
+			}
+			modifier = {
+				add = -20
+				has_opinion = {
+				    target = FROM
+				    value > 30
+				}
+			}
+			modifier = {
+				add = 20
+				has_opinion = {
+				    target = FROM
+				    value < 30
+				}
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories > ROOT.num_of_factories }
+				add = -40
+			}
+			modifier = {
+				check_variable = { FROM.num_of_factories < ROOT.num_of_factories }
+				add = 40
+			}
+		}
+	}
+}
+news_event = {#POL and HUN form real union
+	id = deluge_poland_foreign.79
+	title = deluge_poland_foreign.79.t 
+	desc = deluge_poland_foreign.79.d
+	picture = GFX_news_event_polish_hungarian_handshake
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_foreign.79.a
 	}
 }

@@ -332,6 +332,28 @@ POL_labour_reforms = {##POL_labour_reforms_
 POL_3rd_may_consitution_modifier = {##3rd_may_
 	enable = { always = yes }
 	icon = GFX_idea_POL_april_constitution
+	stability_factor = 3rd_may_stability_factor
+	war_support_factor = 3rd_may_war_support_factor
+	political_power_factor = 3rd_may_political_power_factor
+	consumer_goods_factor = 3rd_may_consumer_goods_factor
+	monthly_population = 3rd_may_monthly_population
+	conscription = 3rd_may_conscription
+	conscription_factor = 3rd_may_conscription_factor
+	training_time_army_factor = 3rd_may_training_time_army_factor
+	industrial_capacity_dockyard = 3rd_may_industrial_capacity_dockyard
+	industrial_capacity_factory = 3rd_may_industrial_capacity_factory
+	trade_opinion_factor = 3rd_may_trade_opinion_factor
+	production_speed_buildings_factor = 3rd_may_production_speed_buildings_factor
+	neutrality_drift = 3rd_may_neutrality_drift
+	communism_drift = 3rd_may_communism_drift
+	democratic_drift = 3rd_may_democratic_drift
+	fascism_drift = 3rd_may_fascism_drift
+	production_factory_max_efficiency_factor = 3rd_may_production_factory_max_efficiency_factor
+	production_factory_efficiency_gain_factor = 3rd_may_production_factory_efficiency_gain_factor
+	research_speed_factor = 3rd_may_research_speed_factor
+	special_forces_cap = 3rd_may_special_forces_cap
+	global_building_slots_factor = 3rd_may_global_building_slots_factor
+	min_export = 3rd_may_min_export
 }
 POL_religious_sect_of_wierszalin = {
 	enable = { always = yes }

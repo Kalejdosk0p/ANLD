@@ -6345,6 +6345,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_ETH_national_studs.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_ETH_peacekeeping_forces"
+		texturefile = "gfx/interface/ideas/idea_ETH_peacekeeping_forces.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ETH_corrupt_bureaucracy"
+		texturefile = "gfx/interface/ideas/idea_ETH_corrupt_bureaucracy.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_ITA_battaglie_per_la_nascite"
 		texturefile = "gfx/interface/ideas/idea_ITA_battaglie_per_la_nascite.dds"
 	}

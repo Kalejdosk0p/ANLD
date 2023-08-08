@@ -504,3 +504,4 @@ recruit_character = POL_deluge_stanislaw_radkiewicz
 recruit_character = POL_deluge_wladyslaw_studnicki
 recruit_character = POL_deluge_edward_gierek
 recruit_character = POL_deluge_andrassy_sandor
+recruit_character = POL_deluge_sejm

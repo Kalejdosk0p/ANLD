@@ -251,3 +251,7 @@ POM_kashubia = {
 	color = rgb { 66 245 149 }
 	color_ui = rgb { 66 245 149 }
 }
+POL_hungary = {
+	color = rgb { 129 86 111 }
+	color_ui = rgb { 129 86 111 }
+}
