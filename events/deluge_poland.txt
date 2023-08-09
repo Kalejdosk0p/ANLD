@@ -1,6 +1,7 @@
 ﻿###file for events for poland
 add_namespace = deluge_poland
 add_namespace = deluge_poland_foreign
+add_namespace = deluge_poland_cities
 country_event = {#Rydz wants to change flag and abolishes monarchy
 	id = deluge_poland.1
 	title = deluge_poland.1.t
@@ -7083,5 +7084,61 @@ news_event = {#POL and HUN form real union
 	is_triggered_only = yes
 	option = {
 		name = deluge_poland_foreign.79.a
+	}
+}
+
+news_event = { #Fall of Berlin
+	id = deluge_poland_cities.1
+	title = deluge_poland_cities.1.t
+	desc = deluge_poland_cities.1.d
+	picture = GFX_news_event_german_reichstag_ruins_02
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_cities.1.a
+	}
+}
+news_event = { #Fall of Instanbul
+	id = deluge_poland_cities.2
+	title = deluge_poland_cities.2.t
+	desc = deluge_poland_cities.2.d
+	picture = GFX_news_event_civil_war_turkey
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_cities.1.a
+	}
+}
+news_event = { #Fall of Vienna
+	id = deluge_poland_cities.3
+	title = deluge_poland_cities.3.t
+	desc = deluge_poland_cities.3.d
+	picture = GFX_news_event_civil_war_turkey
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_cities.1.a
+	}
+}
+news_event = { #Fall of Moscow
+	id = deluge_poland_cities.4
+	title = deluge_poland_cities.4.t
+	desc = deluge_poland_cities.4.d
+	picture = GFX_news_event_civil_war_turkey
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_cities.1.a
+	}
+}
+news_event = { #Fall of France
+	id = deluge_poland_cities.5
+	title = deluge_poland_cities.5.t
+	desc = deluge_poland_cities.5.d
+	picture = GFX_news_event_civil_war_turkey
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = deluge_poland_cities.1.a
 	}
 }
