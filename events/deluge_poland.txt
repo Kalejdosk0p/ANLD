@@ -7131,7 +7131,7 @@ news_event = { #Fall of Moscow
 		name = deluge_poland_cities.1.a
 	}
 }
-news_event = { #Fall of France
+news_event = { #Fall of Paris
 	id = deluge_poland_cities.5
 	title = deluge_poland_cities.5.t
 	desc = deluge_poland_cities.5.d
